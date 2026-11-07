@@ -42,7 +42,7 @@
   const getWeekTasks = (S, days) => active(S.pl).filter(t => days.includes(t.data)).sort(byOrder);
   const getDay = (S, day) => active(S.pl).filter(t => t.data === day).sort(byOrder);
 
-  function automaticReviews(S, today, proxDe, devidas) {
+  function automaticReviews(S, today, proxDe, devidas, cartRevHoje) {
     const due = { questoes: new Map(), cartoes: new Map() };
     for (const r of S.r.values()) {
       if (!r || (S.q.size && !S.q.has(r.qid))) continue;
@@ -62,6 +62,9 @@
       const d = devidas();
       due.questoes.set(today, d.fila.length);
     }
+    if (typeof cartRevHoje === "function") {
+      due.cartoes.set(today, Math.min(due.cartoes.get(today) || 0, Math.max(0, 50 - cartRevHoje())));
+    }
     return due;
   }
 
@@ -74,6 +77,7 @@
       <div class="qb-task-copy"><span class="qb-task-kind">${esc(KINDS[task.tipo] || "Estudo")}</span><strong>${title}</strong>
         <span class="qb-task-line">${details.join(" · ") || "Sem horário fixo"}</span>
         ${status === "executando" ? `<span class="qb-task-live">Em execução <b data-plan-timer="${esc(task.id)}">${clock(seconds(task))}</b></span>` : ""}
+        ${status === "pausada" ? `<span class="qb-task-line">Pausada · ${clock(seconds(task))} registrado(s)</span>` : ""}
         ${done(task) ? `<span class="qb-task-finished">Concluída${task.concluidaEm ? ` · ${short(task.concluidaEm.slice(0, 10))}` : ""}</span>` : ""}
       </div>
       <div class="qb-task-controls">
@@ -123,20 +127,22 @@
     </form>`;
   }
 
-  function render(S, { hoje, proxDe, devidas }) {
+  function render(S, { hoje, proxDe, devidas, cartRevHoje }) {
     initialize(S);
     const today = hoje();
     const days = currentWeek(S);
     if (!days.includes(S.planSelectedDay)) S.planSelectedDay = days[0];
     const tasks = getWeekTasks(S, days);
     const selected = getDay(S, S.planSelectedDay);
-    const due = automaticReviews(S, today, proxDe, devidas);
+    const due = automaticReviews(S, today, proxDe, devidas, cartRevHoje);
     const total = tasks.length;
     const completed = tasks.filter(done).length;
     const plannedMinutes = tasks.reduce((n, t) => n + (Number(t.minutos) || 0), 0);
     const usedMinutes = Math.round(tasks.reduce((n, t) => n + seconds(t), 0) / 60);
     const percent = total ? Math.round(completed / total * 100) : 0;
-    const outstanding = tasks.filter(t => !done(t) && t.data < today).length;
+    const overdue = active(S.pl).filter(t => !done(t) && t.data < today);
+    const backlog = overdue.filter(t => t.data < days[0]).sort(byOrder);
+    const outstanding = overdue.length;
     const selectedAuto = (due.questoes.get(S.planSelectedDay) || 0) + (due.cartoes.get(S.planSelectedDay) || 0);
     const recent = [...S.di].sort((a, b) => (b.data || "").localeCompare(a.data || "") || (b.registradoEm || "").localeCompare(a.registradoEm || ""));
     const nextSteps = [];
@@ -160,6 +166,7 @@
         <div class="qb-plan-kpi"><b>${hours(usedMinutes)}</b><small>tempo registrado${outstanding ? ` · ${outstanding} em atraso` : ""}</small></div>
       </div>
       <section class="qb-week-calendar" aria-label="Calendário de estudos da semana"><div class="qb-calendar-scroll"><div class="qb-week-grid">${days.map(d => dayColumn(S, d, today, due)).join("")}</div></div></section>
+      ${backlog.length ? `<details class="qb-plan-overdue"><summary><strong>${backlog.length} atividades pendentes de semanas anteriores</strong><span>Abra para reprogramar ou concluir</span></summary><div class="qb-plan-overdue-list">${backlog.map(t => `<div><div><strong>${esc(t.titulo)}</strong><small>${short(t.data)} · ${esc(KINDS[t.tipo] || "Estudo")}${t.materia ? ` · ${esc(t.materia)}` : ""}</small></div><button type="button" class="btn ghost small" data-plan-action="move" data-plan-id="${esc(t.id)}">Mover para ${short(S.planSelectedDay)}</button></div>`).join("")}</div></details>` : ""}
       <div class="qb-plan-bottom">
         <section class="qb-plan-day-detail"><div class="qb-plan-panel-head"><div><span class="qb-plan-eyebrow">EXECUÇÃO DO DIA</span><h3>${esc(DAY_LABELS[(parseDay(S.planSelectedDay).getDay() + 6) % 7])}, ${short(S.planSelectedDay)} ${S.planSelectedDay === today ? '<span class="qb-today-pill">Hoje</span>' : ""}</h3></div><button type="button" class="btn ghost small" data-plan-action="new">Adicionar</button></div>
           ${selected.length ? `<div class="qb-plan-task-list">${selected.map(t => taskCard(t)).join("")}</div>` : `<div class="qb-plan-empty"><strong>Nenhuma atividade manual planejada.</strong><span>Adicione um estudo, revisão, simulado ou meta de questões para este dia.</span></div>`}
@@ -220,6 +227,8 @@
         persist({ ...task, status: "concluida", segundos: pausedSeconds, iniciadoEm: null, concluidaEm: now, atualizadoEm: now });
       } else if (act === "reopen") {
         persist({ ...task, status: "planejada", iniciadoEm: null, concluidaEm: null, atualizadoEm: now });
+      } else if (act === "move") {
+        persist({ ...task, data: S.planSelectedDay, status: task.status === "executando" ? "executando" : "planejada", atualizadoEm: now });
       }
     }));
     const suggestions = [];
