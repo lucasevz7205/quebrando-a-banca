@@ -24,6 +24,7 @@
     const m = Math.max(0, Math.round(minutes || 0));
     return m >= 60 ? `${Math.floor(m / 60)}h${m % 60 ? ` ${pad(m % 60)}min` : ""}` : `${m}min`;
   };
+  const clock = value => { const s = Math.max(0, Math.floor(value || 0)); return s >= 3600 ? `${Math.floor(s / 3600)}:${pad(Math.floor(s / 60) % 60)}:${pad(s % 60)}` : `${pad(Math.floor(s / 60))}:${pad(s % 60)}`; };
   const byOrder = (a, b) => (a.horario || "99:99").localeCompare(b.horario || "99:99") || (a.criadoEm || "").localeCompare(b.criadoEm || "");
   let tick = null;
 
@@ -72,7 +73,7 @@
       ${compact ? `<span class="qb-task-name">${title}</span><span class="qb-task-line">${esc(KINDS[task.tipo] || "Estudo")}${task.horario ? ` · ${esc(task.horario)}` : ""}</span>` : `
       <div class="qb-task-copy"><span class="qb-task-kind">${esc(KINDS[task.tipo] || "Estudo")}</span><strong>${title}</strong>
         <span class="qb-task-line">${details.join(" · ") || "Sem horário fixo"}</span>
-        ${status === "executando" ? `<span class="qb-task-live">Em execução <b data-plan-timer="${esc(task.id)}">${hours(Math.floor(seconds(task) / 60))}</b></span>` : ""}
+        ${status === "executando" ? `<span class="qb-task-live">Em execução <b data-plan-timer="${esc(task.id)}">${clock(seconds(task))}</b></span>` : ""}
         ${done(task) ? `<span class="qb-task-finished">Concluída${task.concluidaEm ? ` · ${short(task.concluidaEm.slice(0, 10))}` : ""}</span>` : ""}
       </div>
       <div class="qb-task-controls">
@@ -186,7 +187,7 @@
       callbacks.enqueue(() => S.db.doc("planejamento/" + task.id).set(task));
       rerender();
     };
-    const openForm = (old = null) => { S.planEditing = old?.id || null; S.planFormOpen = true; rerender(); setTimeout(() => document.getElementById("qb-p-title")?.focus({ preventScroll: true }), 0); };
+    const openForm = (old = null) => { S.planEditing = old?.id || null; S.planFormOpen = true; rerender(); setTimeout(() => { document.getElementById("qb-plan-form")?.scrollIntoView({ behavior: "smooth", block: "start" }); document.getElementById("qb-p-title")?.focus({ preventScroll: true }); }, 0); };
     document.querySelectorAll("[data-plan-week]").forEach(b => b.addEventListener("click", () => {
       const delta = Number(b.dataset.planWeek);
       S.planWeekStart = delta ? shift(S.planWeekStart, delta * 7) : monday(today);
@@ -238,6 +239,7 @@
       const subject = document.getElementById("qb-p-mat");
       if (title) title.value = t.titulo;
       if (subject) subject.value = t.materia;
+      document.getElementById("qb-plan-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
       title?.focus({ preventScroll: true });
     }));
     const f = document.getElementById("qb-plan-form");
@@ -271,7 +273,7 @@
     if (!tick) tick = setInterval(() => {
       document.querySelectorAll("[data-plan-timer]").forEach(el => {
         const task = S.pl.find(t => t.id === el.dataset.planTimer);
-        if (task) el.textContent = hours(Math.floor(seconds(task) / 60));
+        if (task) el.textContent = clock(seconds(task));
       });
     }, 1000);
   }
