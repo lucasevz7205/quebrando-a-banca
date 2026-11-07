@@ -1,0 +1,6 @@
+import { Link } from "@tanstack/react-router";
+import { BookOpen, LayoutDashboard, ListChecks, GitPullRequest, History, FolderArchive, ChartNoAxesColumnIncreasing, LockKeyhole } from "lucide-react";
+import { useAuth } from "@/lib/AuthContext";
+import "./qb.css";
+const links=[["/","Visão geral",LayoutDashboard],["/questoes","Questões",BookOpen],["/propostas","Propostas",GitPullRequest],["/tarefas","Tarefas",ListChecks],["/historico","Histórico",History],["/rankings","Rankings",ChartNoAxesColumnIncreasing],["/arquivos","Fontes e arquivos",FolderArchive]];
+export default function Layout({children}){const {logout}=useAuth();return <div className="qb"><aside className="qb-side"><div className="qb-brand"><span>QB.</span><div>Quebrando<br/>a Banca</div></div><p className="qb-eyebrow">LABORATÓRIO DE QUESTÕES</p><nav>{links.map(([to,label,Icon])=><Link key={to} to={to} activeOptions={{exact:to==="/"}} activeProps={{className:"active"}}><Icon size={18}/>{label}</Link>)}</nav><div className="qb-private"><LockKeyhole size={16}/> Preparação privada<br/><small>ARR · Câmara · Cebraspe</small></div><button onClick={()=>logout()}>Sair da conta</button></aside><main className="qb-main"><header className="qb-top"><span>Base documental / versão 0.1</span><span className="qb-pill">● Acesso restrito</span></header>{children}</main></div>;}
