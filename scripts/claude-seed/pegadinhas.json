@@ -1,0 +1,3769 @@
+[
+ {
+  "id": "pg-da-2-1-01",
+  "armadilha": "Se a lei torna obrigatório o parecer, a autoridade fica adstrita às suas conclusões.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "parecer obrigatório",
+   "parecer vinculante"
+  ],
+  "qids": [
+   "da2-25",
+   "da2-22",
+   "da2-21",
+   "da2-23"
+  ],
+  "ref": "Lei 9.784/1999, art. 42, §§ 1º e 2º; STF, MS 24.631; Aula 7, §7.7",
+  "regra": "Parecer obrigatório significa que ele tem de ser pedido. A autoridade pode decidir contra a conclusão, mas, se quiser praticar ato diferente do que foi submetido, precisa de novo parecer. Ficar adstrita (presa) à conclusão é o efeito do parecer vinculante: ou decide nos termos dele, ou não decide. Se o parecer obrigatório e vinculante não vem no prazo, o processo para (art. 42, § 1º). Se o parecer é obrigatório e não vinculante, o processo pode seguir sem ele (§ 2º).",
+  "sigla": "DA",
+  "sinal": "'adstrita', 'obrigada a decidir conforme' ou 'vinculada às conclusões' ao lado de 'obrigatório'. Pergunte: a lei obriga a pedir ou obriga a seguir?",
+  "tipo": "troca",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-02",
+  "armadilha": "Decretos, resoluções e circulares são atos normativos.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "atos normativos",
+   "atos ordinatórios"
+  ],
+  "qids": [
+   "da2-27",
+   "da2-33"
+  ],
+  "ref": "Aula 7, §7.7 (classificação de Hely Lopes Meirelles)",
+  "regra": "Normativos têm comando geral e abstrato: decreto, regulamento, regimento, resolução, deliberação. Ordinatórios organizam o funcionamento interno e vêm do poder hierárquico, não do regulamentar: circular, portaria, instrução, ordem de serviço, aviso, ofício, despacho.",
+  "sigla": "DA",
+  "sinal": "Uma lista de espécies com um intruso (circular ou portaria entre os normativos), ou ordinatório associado a 'poder regulamentar'.",
+  "tipo": "troca",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-03",
+  "armadilha": "Ato administrativo é expressão mais ampla que ato da Administração, porque inclui os atos de direito privado do poder público.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "ato da Administração",
+   "ato administrativo"
+  ],
+  "qids": [
+   "da2-31"
+  ],
+  "ref": "Aula 7, §7.1; Di Pietro",
+  "regra": "O gênero é 'ato da Administração': abrange atos de direito privado, atos materiais, atos políticos, contratos e atos de opinião. 'Ato administrativo' é a espécie, sempre sob regime de direito público.",
+  "sigla": "DA",
+  "sinal": "'mais amplo', 'inclui os atos de direito privado' atribuídos a 'ato administrativo'.",
+  "tipo": "troca",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-04",
+  "armadilha": "É a legalidade, e não a tipicidade, que impede a Administração de praticar ato unilateral e coercitivo sem previsão legal.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "tipicidade (atributo do ato)",
+   "legalidade (princípio)"
+  ],
+  "qids": [
+   "da2-32"
+  ],
+  "ref": "Aula 7, §7.2; Di Pietro",
+  "regra": "A tipicidade (Di Pietro) é o desdobramento da legalidade no plano do ato: cada ato deve corresponder a uma figura definida em lei. Ela impede ato unilateral e coercitivo sem previsão legal e não se aplica aos contratos. Atribuir o efeito à tipicidade não nega a legalidade.",
+  "sigla": "DA",
+  "sinal": "Item que dá um fundamento correto sem dizer 'somente'. Não o marque Errado só porque outro fundamento também serviria. Ele erra quando estende a tipicidade aos contratos.",
+  "tipo": "troca",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-05",
+  "armadilha": "Fato inexistente vicia o objeto, não o motivo.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "vício de motivo",
+   "vício de objeto"
+  ],
+  "qids": [
+   "da2-35"
+  ],
+  "ref": "Aula 7, §7.4",
+  "regra": "O motivo está viciado quando o fato é inexistente, falso ou juridicamente inadequado (o fato existe, mas não autoriza aquele ato). O objeto está viciado quando o conteúdo é proibido, impossível, imoral ou indeterminado. Os dois vícios são insanáveis.",
+  "sigla": "DA",
+  "sinal": "'inexistência da matéria de fato', 'fato falso' ou 'inadequação jurídica' sempre apontam para o motivo. 'Conteúdo ilícito ou impossível' aponta para o objeto.",
+  "tipo": "troca",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-06",
+  "armadilha": "Na suspensão de servidor, a suspensão é a finalidade e o interesse disciplinar é o objeto.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "objeto (efeito imediato)",
+   "finalidade (efeito mediato)"
+  ],
+  "qids": [
+   "da2-41"
+  ],
+  "ref": "Aula 7, §7.3; Di Pietro",
+  "regra": "Objeto é o efeito jurídico imediato que o ato produz: a própria suspensão. Finalidade é o resultado mediato que se quer alcançar: o interesse público de disciplinar o serviço.",
+  "sigla": "DA",
+  "sinal": "Os dois termos aparecem no mesmo período com 'ao passo que'. Teste: o que o ato faz agora é o objeto; para que ele serve é a finalidade.",
+  "tipo": "troca",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-07",
+  "armadilha": "Ato vinculado pode conter termo, condição ou encargo fixados pelo agente.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": null,
+  "qids": [
+   "da2-42"
+  ],
+  "ref": "Aula 7, §7.3; Di Pietro",
+  "regra": "Todo ato tem objeto natural, que decorre da sua natureza. O objeto acidental (termo, condição, encargo) é acrescentado por quem pratica o ato, o que pressupõe margem de escolha. Por isso só existe em atos discricionários, e nem todo ato discricionário o tem.",
+  "sigla": "DA",
+  "sinal": "Cláusula acessória ligada a ato vinculado (licença, aposentadoria) ou a frase 'todo ato possui objeto acidental'.",
+  "tipo": "alcance",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-08",
+  "armadilha": "Autorização que vigora 'a partir de cinco dias da publicação' está sujeita a condição suspensiva.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "termo (evento futuro e certo)",
+   "condição (evento futuro e incerto)"
+  ],
+  "qids": [
+   "da2-43"
+  ],
+  "ref": "Aula 7, §7.3",
+  "regra": "Termo é evento futuro e certo que marca o início ou o fim da eficácia (decurso de prazo, data). Condição é evento futuro e incerto: suspensiva se a eficácia depende de ele ocorrer, resolutiva se ele faz a eficácia cessar. Encargo é ônus imposto ao beneficiário.",
+  "sigla": "DA",
+  "sinal": "Prazo ou data descritos como 'condição'. Se o evento com certeza vai acontecer, é termo.",
+  "tipo": "troca",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-09",
+  "armadilha": "A revogação, por ser juízo de conveniência e oportunidade, pode alcançar qualquer ato válido, inclusive o que gerou direito adquirido.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe · Câmara dos Deputados 2026 (Edital nº 1 de 30/12/2025, aplicação 08/03/2026) · Conhecimentos Gerais para todos os cargos · item 52 · gabarito definitivo C",
+  "origem": "prova",
+  "par": null,
+  "qids": [
+   "da2-48",
+   "da2-18",
+   "da2-19"
+  ],
+  "ref": "Lei 9.784/1999, art. 53; Súmula 473 do STF",
+  "regra": "A revogação retira ato válido com efeitos ex nunc, respeitados os direitos adquiridos (art. 53 da Lei 9.784; Súmula 473). Não se revogam atos que geraram direito adquirido, atos vinculados, consumados, ilegais e meros atos (certidões, pareceres).",
+  "sigla": "DA",
+  "sinal": "'qualquer ato válido', 'a qualquer tempo', 'inclusive' ao lado de 'direito adquirido' ou de 'ato vinculado'.",
+  "tipo": "excecao",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-10",
+  "armadilha": "O ato discricionário, por envolver mérito, escapa ao controle de legalidade do Judiciário.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe · Câmara dos Deputados 2026 (Edital nº 1 de 30/12/2025, aplicação 08/03/2026) · Conhecimentos Gerais para todos os cargos · item 53 · gabarito definitivo C",
+  "origem": "prova",
+  "par": [
+   "ato vinculado",
+   "ato discricionário"
+  ],
+  "qids": [
+   "da2-49"
+  ],
+  "ref": "Aula 7, §§7.5 e 7.6; CF, art. 5º, XXXV",
+  "regra": "Os dois diferem pela margem de liberdade no motivo e no objeto: nenhuma no vinculado, alguma no discricionário. Ambos se submetem ao controle de legalidade, que no discricionário inclui razoabilidade e proporcionalidade. O Judiciário não substitui o mérito, mas controla os limites da discricionariedade.",
+  "sigla": "DA",
+  "sinal": "'imune', 'não pode ser apreciado' ou 'apenas os vinculados' quando o assunto é controle judicial.",
+  "tipo": "alcance",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-11",
+  "armadilha": "Imperatividade e autoexecutoriedade estão presentes em todos os atos administrativos, independentemente de previsão legal.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe · Câmara dos Deputados 2026 (Edital nº 1 de 30/12/2025, aplicação 08/03/2026) · Conhecimentos Gerais para todos os cargos · item 54 · gabarito definitivo E",
+  "origem": "prova",
+  "par": null,
+  "qids": [
+   "da2-50",
+   "da2-05",
+   "da2-06",
+   "da2-07"
+  ],
+  "ref": "Aula 7, §7.2",
+  "regra": "Só a presunção de legitimidade e veracidade está em todos os atos. A imperatividade falta nos atos negociais (licença, autorização) e nos enunciativos (certidão, parecer). A autoexecutoriedade depende de previsão legal ou de urgência (a multa, por exemplo, não é autoexecutória).",
+  "sigla": "DA",
+  "sinal": "'todos os atos', 'independentemente de sua natureza', 'independentemente de previsão legal' ligados a um atributo que não seja a presunção.",
+  "tipo": "alcance",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-12",
+  "armadilha": "Constatado vício de legalidade, a Administração revoga o ato, respeitados os direitos adquiridos.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "anulação (ato ilegal, ex tunc)",
+   "revogação (ato válido, ex nunc)"
+  ],
+  "qids": [
+   "da2-51",
+   "da2-17"
+  ],
+  "ref": "Lei 9.784/1999, art. 53; Súmulas 346 e 473 do STF; Aula 7, §7.8",
+  "regra": "Ato ilegal se anula, com efeitos em regra ex tunc. A Administração anula de ofício e o Judiciário anula se provocado. Ato válido inconveniente se revoga, com efeitos ex nunc e só pela Administração que o praticou. Desvio de finalidade é ilegalidade e gera anulação, nunca revogação. O Judiciário só revoga os próprios atos administrativos.",
+  "sigla": "DA",
+  "sinal": "'revogar' perto de 'ilegal', 'vício', 'desvio de finalidade', ou 'Judiciário revoga ato do Executivo'.",
+  "tipo": "troca",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-13",
+  "armadilha": "Qualquer vício de competência pode ser convalidado por ratificação, desde que não haja prejuízo a terceiros.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "da2-52",
+   "da2-15",
+   "da2-16",
+   "da2-29"
+  ],
+  "ref": "Lei 9.784/1999, art. 55; Aula 7, §7.9",
+  "regra": "Só podem ser convalidados os defeitos sanáveis, desde que não haja lesão ao interesse público nem prejuízo a terceiros (art. 55): competência não exclusiva (por ratificação) e forma não essencial. A convalidação retroage (ex tunc). Competência exclusiva, finalidade, motivo e objeto (salvo objeto plúrimo) não se convalidam.",
+  "sigla": "DA",
+  "sinal": "'qualquer vício de competência', 'inclusive exclusiva', convalidação de finalidade ou motivo, ou 'efeitos a partir do ato convalidador'.",
+  "tipo": "excecao",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-14",
+  "armadilha": "A anulação pode ser determinada pela Administração ou pelo Judiciário, dispensada, neste caso, a provocação do interessado.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "da2-26",
+   "da2-13"
+  ],
+  "ref": "Lei 9.784/1999, art. 53; Súmula 473 do STF; Aula 7, §7.8",
+  "regra": "A Administração anula de ofício ou a pedido (autotutela, art. 53 e Súmula 473). O Judiciário anula ato administrativo apenas quando provocado (inércia da jurisdição). A revogação é privativa da Administração.",
+  "sigla": "DA",
+  "sinal": "Detalhe no fim do período: 'sem necessidade de provocação' ou 'de ofício' atribuídos ao Judiciário.",
+  "tipo": "alcance",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-2-1-15",
+  "armadilha": "Motivo e motivação são sinônimos. Se a lei dispensa a motivação, o motivo declarado não importa.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "motivo (pressuposto de fato e de direito)",
+   "motivação (exposição dos motivos, parte da forma)"
+  ],
+  "qids": [
+   "da2-53",
+   "da2-03",
+   "da2-04"
+  ],
+  "ref": "Lei 9.784/1999, art. 50; Aula 7, §7.3",
+  "regra": "Motivo é o elemento do ato: a situação de fato e de direito que autoriza praticá-lo. Motivação é a exposição escrita desse motivo e integra a forma, sendo obrigatória nas hipóteses do art. 50 da Lei 9.784. Pela teoria dos motivos determinantes, o motivo declarado vincula a validade do ato mesmo quando a motivação era dispensável.",
+  "sigla": "DA",
+  "sinal": "'sinônimos', 'ambos designam a exposição', ou exoneração ad nutum com motivo falso tratada como válida.",
+  "tipo": "troca",
+  "topico": "da-2-1"
+ },
+ {
+  "id": "pg-da-5-1-01",
+  "armadilha": "A polícia judiciária é repressiva e está adstrita aos órgãos do Poder Judiciário.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "polícia judiciária (polícias civil e federal)",
+   "Poder Judiciário"
+  ],
+  "qids": [
+   "da5-07"
+  ],
+  "ref": "Aula 6 (Herbert Almeida), §6.6; mapa da-5-1, Polícia administrativa × judiciária; erro com certeza em da5-07 em 28/10",
+  "regra": "A polícia judiciária cuida de ilícitos penais, incide sobre pessoas e é predominantemente repressiva; quem a exerce são as polícias civil e federal, na função administrativa, não o Judiciário. A polícia administrativa é predominantemente preventiva e espalhada por vários órgãos.",
+  "sigla": "da",
+  "sinal": "'judiciária' ligada a 'Poder Judiciário' ou 'juízes'. A primeira metade (repressiva × preventiva) está certa e serve de isca.",
+  "tipo": "troca",
+  "topico": "da-5-1"
+ },
+ {
+  "id": "pg-da-5-1-02",
+  "armadilha": "A multa aplicada por agente de trânsito é exemplo de exercício do poder disciplinar.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "poder disciplinar (vínculo especial)",
+   "poder de polícia (vínculo geral)"
+  ],
+  "qids": [
+   "da5-15",
+   "da5-14"
+  ],
+  "ref": "Aula 6, §6.4 e §6.6; mapa da-5-1, Disciplinar × polícia; acerto no chute em da5-15 em 28/10",
+  "regra": "O critério é o vínculo de quem é punido. Vínculo especial com a Administração (servidor, contratada, aluno, detento): disciplinar. Vínculo geral de toda a coletividade (motorista, comerciante): polícia. Multa à contratada é disciplinar (da5-14); multa de trânsito é polícia.",
+  "sigla": "da",
+  "sinal": "'multa' ou 'sanção' a particular: o punido tem contrato ou vínculo funcional? Se não, é poder de polícia.",
+  "tipo": "troca",
+  "topico": "da-5-1"
+ },
+ {
+  "id": "pg-da-5-1-03",
+  "armadilha": "Configura abuso do poder regulamentar o regulamento que dispõe obrigações diversas das da lei, ainda que sejam obrigações derivadas.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F1",
+  "origem": "registrada",
+  "par": null,
+  "qids": [
+   "da5-19"
+  ],
+  "ref": "Aula 6, §6.5; CF, art. 84, IV; mapa da-5-1, Regulamento executivo (trap); erro com certeza em da5-19 em 28/10",
+  "regra": "O regulamento executivo (CF, art. 84, IV) não inova (não cria obrigação primária), mas pode criar obrigações derivadas (secundárias), que decorrem da lei e detalham o seu cumprimento. Só há abuso quando cria obrigação sem base legal.",
+  "sigla": "da",
+  "sinal": "'ainda que' estendendo a ilegalidade a um caso legítimo; 'obrigação derivada/secundária' = lícita.",
+  "tipo": "alcance",
+  "topico": "da-5-1"
+ },
+ {
+  "id": "pg-da-5-1-04",
+  "armadilha": "No processo administrativo, observa-se o atendimento a fins de interesse geral, permitida a renúncia parcial de poderes ou competências, desde que autorizada por lei. (CERTO)",
+  "criadoEm": "2026-10-29",
+  "fonteProva": "Cebraspe 2026 · Câmara dos Deputados · Nível superior · Conhecimentos gerais · item 61 (gabarito definitivo C)",
+  "mecanismo": "V4",
+  "origem": "prova",
+  "par": null,
+  "qids": [
+   "b26ns-061"
+  ],
+  "ref": "Lei 9.784/1999, art. 2º, parágrafo único, II; Aula 6, §6.1",
+  "regra": "O poder administrativo é poder-dever e a competência é irrenunciável, mas a Lei 9.784/1999 (art. 2º, parágrafo único, II) veda a renúncia total ou parcial 'salvo autorização em lei'. A exceção é real.",
+  "sigla": "da",
+  "sinal": "Item que 'permite' a renúncia: procure a ressalva 'salvo/desde que autorizada por lei' antes de marcar E. Sem ela, ou 'por ato do agente', é errado.",
+  "tipo": "verdade",
+  "topico": "da-5-1"
+ },
+ {
+  "id": "pg-da-5-1-05",
+  "armadilha": "O poder hierárquico se manifesta no controle exercido pela administração direta sobre as empresas públicas.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": "Cebraspe 2026 · Câmara dos Deputados · Nível superior · Conhecimentos gerais · item 50 (gabarito definitivo C: 'sem subordinação hierárquica ao ente instituidor, estando sujeitas a controle finalístico')",
+  "mecanismo": "F3",
+  "origem": "prova",
+  "par": [
+   "hierarquia (mesma pessoa jurídica)",
+   "tutela / controle finalístico (entre pessoas jurídicas)"
+  ],
+  "qids": [
+   "b26ns-050",
+   "da5-12"
+  ],
+  "ref": "Aula 6, §6.3; DL 200/1967, arts. 4º e 26; mapa da-5-1, Onde não há hierarquia",
+  "regra": "Hierarquia só existe entre órgãos e agentes da mesma pessoa jurídica. Entre administração direta e indireta há vinculação (supervisão, tutela, controle finalístico), sem subordinação.",
+  "sigla": "da",
+  "sinal": "'controle', 'subordinação' ou 'hierarquia' ligando ente a autarquia, estatal ou fundação.",
+  "tipo": "troca",
+  "topico": "da-5-1"
+ },
+ {
+  "id": "pg-da-5-1-06",
+  "armadilha": "É lícita a avocação, por órgão superior, em caráter ordinário e por tempo indeterminado, de competência do órgão inferior.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F5",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "da5-11"
+  ],
+  "ref": "Lei 9.784/1999, arts. 12 e 15; Aula 6, §6.3; mapa da-5-1, Delegação e avocação (trap)",
+  "regra": "Lei 9.784/1999, art. 15: a avocação é excepcional, temporária e depende de motivos relevantes devidamente justificados. Pressupõe hierarquia (ao contrário da delegação, art. 12) e não alcança competência exclusiva do subordinado.",
+  "sigla": "da",
+  "sinal": "'ordinário', 'por tempo indeterminado', 'a critério do superior' ou 'sem motivação'. A banca acerta dois requisitos e erra o terceiro.",
+  "tipo": "excecao",
+  "topico": "da-5-1"
+ },
+ {
+  "id": "pg-da-5-1-07",
+  "armadilha": "O subordinado pode deixar de cumprir ordem superior que considere inconveniente ou ilegal.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "manifestamente ilegal",
+   "ilegal / inconveniente"
+  ],
+  "qids": [
+   "da5-13",
+   "da5-31"
+  ],
+  "ref": "Lei 8.112/1990, art. 116, IV; Aula 6, §6.3; mapa da-5-1, Ordens manifestamente ilegais (trap)",
+  "regra": "Lei 8.112/1990, art. 116, IV: o servidor deve cumprir as ordens superiores, exceto quando manifestamente ilegais. Ordem apenas inconveniente ou inoportuna deve ser cumprida; o mérito não cabe ao subordinado.",
+  "sigla": "da",
+  "sinal": "Some o 'manifestamente', ou entra 'inconveniente', 'inoportuna' ou 'de que discorde'.",
+  "tipo": "troca",
+  "topico": "da-5-1"
+ },
+ {
+  "id": "pg-da-5-1-08",
+  "armadilha": "O poder disciplinar é discricionário: a autoridade decide, por conveniência, se apura ou não a falta do subordinado.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "vinculado (dever de apurar e punir)",
+   "discricionário (gradação da pena)"
+  ],
+  "qids": [
+   "da5-32"
+  ],
+  "ref": "Aula 6, §6.4; Lei 8.112/1990, art. 143; CP, art. 320; mapa da-5-1, Vinculado ou discricionário? (trap)",
+  "regra": "O disciplinar é em parte vinculado e em parte discricionário. Apurar é obrigatório (Lei 8.112/1990, art. 143, 'apuração imediata'), e a omissão pode ser condescendência criminosa (CP, art. 320). Comprovada a infração, punir é obrigatório; a margem fica na gradação da pena.",
+  "sigla": "da",
+  "sinal": "'totalmente discricionário', 'a critério da autoridade' ou 'conveniência' para instaurar ou punir; também 'totalmente vinculado'.",
+  "tipo": "troca",
+  "topico": "da-5-1"
+ },
+ {
+  "id": "pg-da-5-2-01",
+  "armadilha": "Excesso de poder ocorre quando a Administração persegue uma finalidade legal, mas vai além do necessário para atingi-la. (CERTO)",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "V4",
+  "origem": "registrada",
+  "par": null,
+  "qids": [
+   "da5-27"
+  ],
+  "ref": "Aula 6, §6.7; mapa da-5-2, Excesso de poder: exemplos; erro com certeza em da5-27 em 28/10",
+  "regra": "Pela definição clássica (Hely Lopes Meirelles), há excesso quando a autoridade, embora competente, vai além do permitido e exorbita das atribuições. Cobre a falta de competência e a atuação desproporcional para um fim legítimo. No desvio, o fim é que está viciado.",
+  "sigla": "da",
+  "sinal": "Fim legal + atuação além do necessário = excesso, mesmo sem a palavra 'competência'. Não marque E só porque ela falta.",
+  "tipo": "verdade",
+  "topico": "da-5-2"
+ },
+ {
+  "id": "pg-da-5-2-02",
+  "armadilha": "O secretário que remove assessor por desavença partidária age com abuso de poder na modalidade excesso de poder.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "excesso de poder (vício de competência / extrapolação)",
+   "desvio de poder ou de finalidade (vício de finalidade)"
+  ],
+  "qids": [
+   "da5-26",
+   "da5-24",
+   "da5-23"
+  ],
+  "ref": "Aula 6, §6.7; mapa da-5-2, Abuso = excesso + desvio e Desvio de finalidade: exemplos (traps)",
+  "regra": "Abuso é o gênero. No excesso, o agente atua fora ou além da competência; no desvio, atua dentro dela, mas visando fim diverso do interesse público ou do fim específico da lei. Remoção punitiva ou por perseguição é o exemplo-padrão de desvio.",
+  "sigla": "da",
+  "sinal": "Remoção para punir, desapropriação para perseguir, motivação pessoal: competência existe e o fim está viciado = desvio. A banca também inverte as duas definições (da5-24).",
+  "tipo": "troca",
+  "topico": "da-5-2"
+ },
+ {
+  "id": "pg-da-5-2-03",
+  "armadilha": "O abuso de poder, que inclui o excesso e o desvio, não decorre de conduta omissiva do agente.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F2",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "da5-25"
+  ],
+  "ref": "Aula 6, §6.7; CF, art. 5º, XXXIV e LXIX; mapa da-5-2, Abuso por omissão (trap)",
+  "regra": "O abuso pode ser comissivo ou omissivo: deixar de agir quando há dever de agir também é abuso (poder-dever). Remédios: direito de petição (CF, art. 5º, XXXIV) e mandado de segurança (art. 5º, LXIX).",
+  "sigla": "da",
+  "sinal": "'só comissivo', 'não decorre de omissão' ou 'exige ato positivo'.",
+  "tipo": "alcance",
+  "topico": "da-5-2"
+ },
+ {
+  "id": "pg-da-5-2-04",
+  "armadilha": "Não configura excesso de poder a atuação fora da competência quando motivada por relevante interesse social.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F5",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "da5-33"
+  ],
+  "ref": "Aula 6, §6.7; mapa da-5-2, Excesso de poder: exemplos (trap)",
+  "regra": "A competência é elemento vinculado e decorre da lei. Nenhum interesse, por mais relevante, legitima atuar fora dela: o ato sem competência continua sendo excesso de poder.",
+  "sigla": "da",
+  "sinal": "'relevante interesse social/público', 'urgência' ou 'para atender à coletividade' justificando ultrapassar a competência.",
+  "tipo": "excecao",
+  "topico": "da-5-2"
+ },
+ {
+  "id": "pg-da-8-2-01",
+  "armadilha": "O acordo de cooperação, como o contrato de gestão da OS, formaliza parceria com repasse de recursos.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "acordo de cooperação (MROSC)",
+   "contrato de gestão (OS)"
+  ],
+  "qids": [
+   "ap82-08"
+  ],
+  "ref": "Lei 13.019/2014, art. 2º, VIII-A; Lei 9.637/1998, art. 5º",
+  "regra": "No MROSC, o acordo de cooperação é o instrumento das parcerias que não envolvem transferência de recursos financeiros (art. 2º, VIII-A). O contrato de gestão é o vínculo da OS, com fomento por recursos orçamentários, bens e cessão de servidores (Lei 9.637/1998, arts. 5º, 12 e 14).",
+  "sigla": "DA",
+  "sinal": "'acordo de cooperação' ao lado de 'transferência de recursos', ou instrumento de uma lei atribuído a outra lei",
+  "tipo": "troca",
+  "topico": "da-8-2"
+ },
+ {
+  "id": "pg-da-8-2-02",
+  "armadilha": "A qualificação como OSCIP é discricionária e depende de juízo de conveniência e oportunidade.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "qualificação de OSCIP (vinculada, Ministério da Justiça)",
+   "qualificação de OS (discricionária, ministro da área)"
+  ],
+  "qids": [
+   "ap82-10",
+   "ap82-25"
+  ],
+  "ref": "Lei 9.790/1999, arts. 1º, § 2º, 5º e 6º; Lei 9.637/1998, art. 2º, II",
+  "regra": "A qualificação de OSCIP é ato vinculado ao cumprimento dos requisitos (Lei 9.790/1999, art. 1º, § 2º). O pedido vai ao Ministério da Justiça, que decide em 30 dias (arts. 5º e 6º). A de OS depende de aprovação quanto à conveniência e oportunidade (Lei 9.637/1998, art. 2º, II).",
+  "sigla": "DA",
+  "sinal": "'vinculado' ou 'discricionário' junto de OS ou OSCIP; 'conveniência e oportunidade'",
+  "tipo": "troca",
+  "topico": "da-8-2"
+ },
+ {
+  "id": "pg-da-8-2-03",
+  "armadilha": "O vínculo entre o poder público e a organização social é formalizado por termo de parceria.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "termo de parceria (OSCIP)",
+   "contrato de gestão (OS)"
+  ],
+  "qids": [
+   "ap82-11"
+  ],
+  "ref": "Lei 9.637/1998, art. 5º; Lei 9.790/1999, art. 9º; material 8.2, p. 13",
+  "regra": "OS: contrato de gestão (Lei 9.637/1998, art. 5º). OSCIP: termo de parceria (Lei 9.790/1999, art. 9º), precedido de consulta aos Conselhos de Políticas Públicas (art. 10, § 1º).",
+  "sigla": "DA",
+  "sinal": "nome de instrumento ao lado de título (OS, OSCIP, OSC): confira o par título + instrumento",
+  "tipo": "troca",
+  "topico": "da-8-2"
+ },
+ {
+  "id": "pg-da-8-2-04",
+  "armadilha": "O termo de fomento formaliza parcerias propostas pela administração pública com transferência de recursos.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "termo de colaboração",
+   "termo de fomento"
+  ],
+  "qids": [
+   "ap82-07"
+  ],
+  "ref": "Lei 13.019/2014, art. 2º, VII e VIII",
+  "regra": "Os dois envolvem transferência de recursos. A diferença é quem propõe a finalidade: no termo de colaboração, a administração pública (art. 2º, VII); no termo de fomento, a OSC (art. 2º, VIII).",
+  "sigla": "DA",
+  "sinal": "'proposta pela administração' ou 'proposta pela OSC' junto do nome do termo",
+  "tipo": "troca",
+  "topico": "da-8-2"
+ },
+ {
+  "id": "pg-da-8-2-05",
+  "armadilha": "Como não há repasse financeiro, o acordo de cooperação dispensa chamamento público em qualquer hipótese.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "ap82-30"
+  ],
+  "ref": "Lei 13.019/2014, art. 29 (red. Lei 13.204/2015)",
+  "regra": "O acordo de cooperação é celebrado sem chamamento público, exceto quando o objeto envolver comodato, doação de bens ou outra forma de compartilhamento de recurso patrimonial (art. 29).",
+  "sigla": "DA",
+  "sinal": "'em qualquer hipótese' ou 'sempre' junto de acordo de cooperação e chamamento",
+  "tipo": "excecao",
+  "topico": "da-8-2"
+ },
+ {
+  "id": "pg-da-8-2-06",
+  "armadilha": "Na concessão administrativa, o parceiro privado recebe a tarifa dos usuários mais a contraprestação do parceiro público.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "concessão patrocinada",
+   "concessão administrativa"
+  ],
+  "qids": [
+   "ap82-31"
+  ],
+  "ref": "Lei 11.079/2004, art. 2º, §§ 1º a 3º",
+  "regra": "Patrocinada: concessão de serviço ou obra da Lei 8.987/1995 com tarifa mais contraprestação pecuniária do parceiro público (art. 2º, § 1º). Administrativa: prestação de serviços de que a Administração é usuária direta ou indireta (art. 2º, § 2º). Sem contraprestação pública é concessão comum, que não é PPP (art. 2º, § 3º).",
+  "sigla": "DA",
+  "sinal": "'tarifa' junto de 'administrativa'; 'usuária direta ou indireta' junto de 'patrocinada'",
+  "tipo": "troca",
+  "topico": "da-8-2"
+ },
+ {
+  "id": "pg-da-8-2-07",
+  "armadilha": "Ao adquirir personalidade de direito público, o consórcio se torna uma empresa pública.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe · Câmara dos Deputados 2026 (Edital nº 1 de 30/12/2025, aplicação 08/03/2026) · Conhecimentos Gerais para todos os cargos · item 89 · gabarito definitivo E",
+  "origem": "prova",
+  "par": [
+   "associação pública",
+   "empresa pública"
+  ],
+  "qids": [
+   "ap82-29"
+  ],
+  "ref": "Lei 11.107/2005, arts. 1º, § 1º, e 6º, I e § 1º",
+  "regra": "O consórcio público de direito público é associação pública (Lei 11.107/2005, art. 1º, § 1º, e art. 6º, I) e integra a administração indireta de todos os entes consorciados (art. 6º, § 1º). O de direito privado segue a legislação civil (art. 6º, II).",
+  "sigla": "DA",
+  "sinal": "forma jurídica errada numa frase em que o resto está certo ('integra a administração indireta de todos')",
+  "tipo": "troca",
+  "topico": "da-8-2"
+ },
+ {
+  "id": "pg-da-8-2-08",
+  "armadilha": "Os entes consorciados entregam recursos ao consórcio por meio de contrato de programa.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "contrato de rateio",
+   "contrato de programa"
+  ],
+  "qids": [
+   "ap82-20",
+   "ap82-06"
+  ],
+  "ref": "Lei 11.107/2005, arts. 3º, 5º, 8º e 13",
+  "regra": "Os recursos só são entregues ao consórcio mediante contrato de rateio (art. 8º). O contrato de programa constitui e regula as obrigações de um ente para com outro ou com o consórcio na gestão associada (art. 13). O protocolo de intenções vem antes e é ratificado por lei (arts. 3º e 5º).",
+  "sigla": "DA",
+  "sinal": "'recursos' ou 'repasse' junto de 'contrato de programa'; 'somente' junto de um dos três instrumentos",
+  "tipo": "troca",
+  "topico": "da-8-2"
+ },
+ {
+  "id": "pg-da-8-2-09",
+  "armadilha": "Mesmo após o MROSC, a administração pode celebrar convênios com OSC para executar projetos com repasse de recursos.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "ap82-32"
+  ],
+  "ref": "Lei 13.019/2014, arts. 3º, IV, 84, parágrafo único, e 84-A",
+  "regra": "Desde a Lei 13.019/2014, só se celebram convênios entre entes federados ou pessoas jurídicas a eles vinculadas, e com entidades filantrópicas e sem fins lucrativos complementares ao SUS (CF, art. 199, § 1º). As demais parcerias com OSC seguem os termos do MROSC (arts. 84, parágrafo único, e 84-A).",
+  "sigla": "DA",
+  "sinal": "'convênio' com OSC fora do SUS; 'somente' ou 'ainda' junto de convênio",
+  "tipo": "alcance",
+  "topico": "da-8-2"
+ },
+ {
+  "id": "pg-da-8-2-10",
+  "armadilha": "No MROSC, a OSC precisa de 2 anos de existência para parcerias estaduais e de 3 anos para parcerias federais.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "ap82-33"
+  ],
+  "ref": "Lei 13.019/2014, art. 33, V, a (red. Lei 13.204/2015)",
+  "regra": "O mínimo é de 1, 2 ou 3 anos de existência com CNPJ ativo, conforme a parceria seja celebrada pelos Municípios, pelo Distrito Federal ou pelos Estados e pela União, respectivamente. O ente pode reduzir o prazo se nenhuma organização o atingir (art. 33, V, a).",
+  "sigla": "DA",
+  "sinal": "número de anos associado a um ente; atenção ao par 'DF = 2' e 'Estados e União = 3'",
+  "tipo": "literalidade",
+  "topico": "da-8-2"
+ },
+ {
+  "id": "pg-da-8-2-11",
+  "armadilha": "A diretriz da indelegabilidade do poder de polícia na PPP está superada, pois o STF admite delegá-lo a pessoa jurídica de direito privado.",
+  "criadoEm": "2026-10-30",
+  "evidencia": "indelegabilidade das funções de regulação, jurisdicional e do exercício do poder de polícia",
+  "fonteProva": null,
+  "mecanismo": "V3",
+  "origem": "registrada",
+  "par": [
+   "parceiro privado da PPP (fora da Administração)",
+   "estatal de capital majoritariamente público do Tema 532"
+  ],
+  "qids": [
+   "ap82-14"
+  ],
+  "ref": "Lei 11.079/2004, art. 4º, III; STF, Tema 532 (RE 633.782), tese conferida só em fonte secundária",
+  "regra": "O art. 4º, III, da Lei 11.079/2004 mantém indelegáveis a regulação, a função jurisdicional, o poder de polícia e outras atividades exclusivas do Estado. O Tema 532 alcança só estatais de capital majoritariamente público, prestadoras exclusivas de serviço público próprio do Estado, em regime não concorrencial; o parceiro da PPP é empresa privada.",
+  "sigla": "DA",
+  "sinal": "'Indelegabilidade' em item de PPP: pergunte quem é o parceiro. É particular, não entidade da administração indireta.",
+  "tipo": "verdade",
+  "topico": "da-8-2",
+  "vacina": "Ao ver 'poder de polícia' com 'PPP', não aplique o Tema 532: ele vale para estatal, não para particular."
+ },
+ {
+  "id": "pg-da-8-2-12",
+  "armadilha": "O PMIS obriga a administração a realizar chamamento público sobre a proposta apresentada.",
+  "criadoEm": "2026-10-30",
+  "evidencia": "obriga a administração a realizar chamamento público",
+  "fonteProva": null,
+  "mecanismo": "F4",
+  "origem": "registrada",
+  "par": null,
+  "qids": [
+   "ap82-23"
+  ],
+  "ref": "Lei 13.019/2014, art. 21, caput e § 1º",
+  "regra": "A realização do PMIS não implica necessariamente a execução do chamamento (art. 21, caput) e não dispensa o chamamento (§ 1º). A proposta só leva a avaliar a abertura do procedimento.",
+  "sigla": "DA",
+  "sinal": "Verbo de dever ('obriga', 'vincula', 'implica') ligado ao PMIS.",
+  "tipo": "literalidade",
+  "topico": "da-8-2",
+  "vacina": "Ao ver PMIS, lembre: não obriga, não dispensa e não é condição do chamamento."
+ },
+ {
+  "id": "pg-da-8-2-13",
+  "armadilha": "A União pode consorciar-se apenas com municípios, independentemente da participação dos estados.",
+  "criadoEm": "2026-10-30",
+  "evidencia": "independentemente da participação dos estados",
+  "fonteProva": null,
+  "mecanismo": "F1",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "ap82-18"
+  ],
+  "ref": "Lei 11.107/2005, art. 1º, § 2º; trap do mapa",
+  "regra": "A União só integra consórcio com municípios se também participarem todos os estados em cujos territórios eles estejam situados (Lei 11.107/2005, art. 1º, § 2º).",
+  "sigla": "DA",
+  "sinal": "União + municípios sem menção aos estados; 'independentemente'.",
+  "tipo": "alcance",
+  "topico": "da-8-2",
+  "vacina": "Ao ver União e municípios em consórcio, confira se estão todos os estados envolvidos."
+ },
+ {
+  "id": "pg-da-8-2-14",
+  "armadilha": "Na atuação em rede, cada organização executante responde diretamente perante a administração pela parte que executar.",
+  "criadoEm": "2026-10-30",
+  "evidencia": "celebrante da parceria permanece integralmente responsável",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "OSC celebrante",
+   "OSC executante não celebrante"
+  ],
+  "qids": [
+   "ap82-24"
+  ],
+  "ref": "Lei 13.019/2014, art. 35-A; trap do mapa",
+  "regra": "Na atuação em rede fica mantida a integral responsabilidade da organização celebrante, que precisa de mais de cinco anos de CNPJ e de capacidade técnica e operacional para supervisionar e orientar a parceira (art. 35-A).",
+  "sigla": "DA",
+  "sinal": "Responsabilidade atribuída à executante, ou 'solidária' e 'dividida', em item de atuação em rede.",
+  "tipo": "troca",
+  "topico": "da-8-2",
+  "vacina": "Ao ver atuação em rede, a responsabilidade é de quem assinou com a administração."
+ },
+ {
+  "id": "pg-da-8-2-15",
+  "armadilha": "Börzel distingue as redes conforme a coordenação seja mediada ou não mediada.",
+  "criadoEm": "2026-10-30",
+  "evidencia": "tipologia de Börzel ... mediada ... não mediada",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "Börzel (cinco critérios de classificação)",
+   "Mandell (coordenação mediada × não mediada)"
+  ],
+  "qids": [
+   "ap82-34"
+  ],
+  "ref": "Material 8.2, Parte A, Fleury (2005); trap do mapa",
+  "regra": "A distinção entre coordenação mediada (imposta por autoridade legal ou agência designada) e não mediada (voluntária, entre iguais) é de Mandell. Börzel classifica por institucionalização, número de participantes, configuração da política, tipo de atores e função e equilíbrio de poder.",
+  "sigla": "DA",
+  "sinal": "Autor citado junto de 'mediada' ou 'não mediada'.",
+  "tipo": "troca",
+  "topico": "da-8-2",
+  "vacina": "Ao ver 'mediada', pense em Mandell; ao ver critérios, em Börzel."
+ },
+ {
+  "id": "pg-da-8-2-16",
+  "armadilha": "A entidade qualificada como organização social também pode obter a qualificação de OSCIP, pois ambas são privadas e sem fins lucrativos.",
+  "criadoEm": "2026-10-30",
+  "evidencia": "não podem ser qualificadas como OSCIP",
+  "fonteProva": null,
+  "mecanismo": "F5",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "ap82-35"
+  ],
+  "ref": "Lei 9.790/1999, art. 2º, IX; trap do mapa",
+  "regra": "As organizações sociais estão no rol do art. 2º da Lei 9.790/1999 (inciso IX): não são passíveis de qualificação como OSCIP, ainda que se dediquem às atividades do art. 3º.",
+  "sigla": "DA",
+  "sinal": "'Também pode', 'simultaneamente' ou 'cumular' com OS e OSCIP.",
+  "tipo": "excecao",
+  "topico": "da-8-2",
+  "vacina": "Ao ver entidade sem fins lucrativos pedindo OSCIP, confira o rol de vedações do art. 2º."
+ },
+ {
+  "id": "pg-dc-1-01",
+  "armadilha": "A Constituinte de 1987-1988 foi exclusiva e fechada à participação popular.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe · Câmara dos Deputados 2026 (Edital nº 1 de 30/12/2025, aplicação 08/03/2026) · Técnico Legislativo – Assistente Legislativo e Administrativo (CD-AL-026) · item 91 · gabarito definitivo C",
+  "origem": "prova",
+  "par": [
+   "constituinte congressual com participação popular",
+   "assembleia exclusiva"
+  ],
+  "qids": [
+   "dc1-22",
+   "dc1-01",
+   "dc1-04"
+  ],
+  "ref": "EC 26/1985; Câmara, Panorama da Constituinte; CD 2026 Técnico, item 91",
+  "regra": "A EC 26/1985 fez dos deputados e senadores eleitos em 1986 (mais os senadores de 1982) os constituintes, que seguiram como parlamentares ordinários. A Constituinte apreciou 122 emendas populares, com cerca de 12 milhões de assinaturas.",
+  "sigla": "DC",
+  "sinal": "\"exclusivamente\", \"dissolveu-se\", \"sem participação popular\"",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-02",
+  "armadilha": "A CF/88 é outorgada porque a Constituinte foi convocada por emenda à Constituição anterior.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "promulgada",
+   "outorgada"
+  ],
+  "qids": [
+   "dc1-23",
+   "dc1-05"
+  ],
+  "ref": "PDF do item 1 §1.11; preâmbulo da CF",
+  "regra": "Quanto à origem, a CF/88 é promulgada (democrática): foi feita por representantes eleitos. A convocação por emenda do regime anterior não muda a origem.",
+  "sigla": "DC",
+  "sinal": "Uma causa formal (\"convocada por emenda\") usada para justificar a classificação.",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-03",
+  "armadilha": "A Constituição submetida a plebiscito é democrática (promulgada).",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "cesarista (bonapartista)",
+   "promulgada (democrática)"
+  ],
+  "qids": [
+   "dc12-29",
+   "dc12-18"
+  ],
+  "ref": "PDF do item 1 §1.11",
+  "regra": "Cesarista é a Constituição feita pelo detentor do poder e depois submetida a plebiscito ou referendo para parecer legítima. A consulta popular não a torna democrática. A CF/88 não é cesarista.",
+  "sigla": "DC",
+  "sinal": "\"aprovada em plebiscito\" logo depois de \"grupo que tomou o poder\" ou \"comissão de notáveis\"; listas como \"escrita, analítica, cesarista...\"",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-04",
+  "armadilha": "A CF/88 é semirrígida, porque parte dela pode ser alterada por lei.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "rígida (super-rígida para Alexandre de Moraes)",
+   "semirrígida"
+  ],
+  "qids": [
+   "dc1-06",
+   "dc1-07",
+   "dc12-21",
+   "dc12-20"
+  ],
+  "ref": "CF, art. 60, §§ 2º e 4º; PDF do item 1 §1.11",
+  "regra": "A emenda exige 3/5 dos votos, em dois turnos, em cada Casa (art. 60, § 2º): a CF/88 é rígida. Alexandre de Moraes a chama de super-rígida por causa das cláusulas pétreas (art. 60, § 4º). Semirrígida foi a de 1824 (art. 178).",
+  "sigla": "DC",
+  "sinal": "\"semirrígida\", \"flexível\", \"parte por lei ordinária\"; ou \"super-rígida\" sem citar o autor",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-05",
+  "armadilha": "Por ser analítica, a CF/88 fica nos princípios gerais e na organização do Estado.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "analítica (prolixa)",
+   "sintética (concisa)"
+  ],
+  "qids": [
+   "dc1-08",
+   "dc12-23",
+   "dc12-31"
+  ],
+  "ref": "PDF do item 1 §1.11",
+  "regra": "A analítica detalha matérias que poderiam ficar para a lei (servidores, tributos, previdência). Ficar só nos princípios é traço da sintética, como a dos EUA. Estar num documento único é critério de sistemática (codificada), não de extensão.",
+  "sigla": "DC",
+  "sinal": "A definição da sintética colada no rótulo \"analítica\", ou \"instrumento único\" usado como argumento de extensão",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-06",
+  "armadilha": "Quanto ao conteúdo, a CF/88 é materialmente constitucional.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "formal",
+   "material"
+  ],
+  "qids": [
+   "dc12-28",
+   "dc1-09"
+  ],
+  "ref": "CF, art. 242, § 2º; PDF do item 1 §1.11",
+  "regra": "A CF/88 é formal: tudo o que está no texto é constitucional, qualquer que seja o assunto. O exemplo é o art. 242, § 2º (Colégio Pedro II na órbita federal).",
+  "sigla": "DC",
+  "sinal": "\"materialmente constitucional\" atribuído à CF/88 inteira",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-07",
+  "armadilha": "Quanto ao critério ontológico (Loewenstein), a CF/88 é semântica.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "normativa/nominal",
+   "semântica"
+  ],
+  "qids": [
+   "dc12-27",
+   "dc12-24",
+   "dc12-25",
+   "dc12-26"
+  ],
+  "ref": "PDF do item 1 §1.11",
+  "regra": "Normativa: regula de fato o processo político. Nominal: quer regular, mas não consegue. Semântica: só formaliza o poder de quem o detém. A CF/88 não é semântica (há divergência registrada entre normativa e nominal).",
+  "sigla": "DC",
+  "sinal": "\"perpetuação do poder\" ligado à normativa, ou \"perfeita sintonia\" ligado à semântica (definições trocadas)",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-08",
+  "armadilha": "\"É livre o exercício de qualquer trabalho... atendidas as qualificações que a lei estabelecer\" é norma de eficácia plena (ou limitada).",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "eficácia contida",
+   "eficácia limitada"
+  ],
+  "qids": [
+   "dc13-02",
+   "dc13-03",
+   "dc13-05",
+   "dc13-10",
+   "dc13-11"
+  ],
+  "ref": "CF, art. 5º, VIII, XIII, XV e XXXIII; PDF do item 1 §1.14",
+  "regra": "A norma de eficácia contida produz todos os efeitos desde já, e a lei pode restringi-los (art. 5º, XIII e XV; art. 5º, XXXIII). A limitada depende de lei para produzir os efeitos principais.",
+  "sigla": "DC",
+  "sinal": "\"nos termos da lei\" ou \"atendidas as qualificações que a lei estabelecer\" acompanhando um direito já exercível",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-09",
+  "armadilha": "A norma de eficácia plena pode ter os efeitos restringidos pelo legislador.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "eficácia plena",
+   "eficácia contida"
+  ],
+  "qids": [
+   "dc13-08",
+   "dc13-09",
+   "dc13-13"
+  ],
+  "ref": "PDF do item 1 §1.14",
+  "regra": "A plena tem aplicabilidade imediata e não admite restrição por lei. A contida também se aplica de imediato, mas é restringível. A banca costuma pôr a restringibilidade na plena, ou a imunidade a restrições na contida.",
+  "sigla": "DC",
+  "sinal": "\"plena... que podem ser restringidos\"; \"plena e contida... não admitem restrições\"",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-10",
+  "armadilha": "A norma programática não tem eficácia jurídica nenhuma.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc13-12",
+   "dc13-19"
+  ],
+  "ref": "PDF do item 1 §1.16",
+  "regra": "Toda norma constitucional tem pelo menos eficácia negativa: impede lei em sentido contrário. As programáticas orientam a interpretação e servem de parâmetro de controle de constitucionalidade.",
+  "sigla": "DC",
+  "sinal": "\"nenhuma eficácia\", \"meramente políticas\", \"não servem de parâmetro\"",
+  "tipo": "alcance",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-11",
+  "armadilha": "As normas de direitos fundamentais (inclusive a de acesso à educação básica) são programáticas.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "aplicação imediata/direito subjetivo",
+   "norma programática"
+  ],
+  "qids": [
+   "dc13-06",
+   "dc13-16",
+   "dc13-21"
+  ],
+  "ref": "CF, art. 5º, § 1º; STF, RE 1.008.166 (Tema 548)",
+  "regra": "O art. 5º, § 1º, diz que as normas definidoras de direitos e garantias fundamentais têm aplicação imediata. Para o STF (RE 1.008.166, Tema 548), o acesso à educação básica é direito de eficácia plena e aplicabilidade imediata. O direito social à educação, tomado em termos gerais (arts. 6º e 205), a banca já tratou como programático (divergência registrada: dc13-16 × dc13-21).",
+  "sigla": "DC",
+  "sinal": "\"são programáticas\" junto de \"direitos e garantias fundamentais\" ou de \"educação básica\"; \"segundo o STF\"",
+  "tipo": "jurisprudencia",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-12",
+  "armadilha": "O poder constituinte originário é ilimitado, mas, para a doutrina majoritária, submete-se ao direito natural.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe · Câmara dos Deputados 2026 (Edital nº 1 de 30/12/2025, aplicação 08/03/2026) · Técnico Legislativo – Assistente Legislativo e Administrativo (CD-AL-026) · item 92 · gabarito definitivo E",
+  "origem": "prova",
+  "par": [
+   "positivismo (majoritário)",
+   "jusnaturalismo (minoritário)"
+  ],
+  "qids": [
+   "dc15-03",
+   "dc11-19",
+   "dc11-20"
+  ],
+  "ref": "PDF do item 1 §1.20; CD 2026 Técnico, item 92",
+  "regra": "Para a corrente positivista, majoritária e adotada no Brasil, o poder originário é inicial, ilimitado e incondicionado. A limitação pelo direito natural é tese jusnaturalista, que é minoritária.",
+  "sigla": "DC",
+  "sinal": "\"doutrina majoritária\" ou \"o Brasil adotou\" ao lado de \"direito natural\"",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-13",
+  "armadilha": "O poder constituinte derivado não está previsto na CF, mas nela estão os seus limites.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe · Câmara dos Deputados 2026 (Edital nº 1 de 30/12/2025, aplicação 08/03/2026) · Técnico Legislativo – Assistente Legislativo e Administrativo (CD-AL-026) · item 93 · gabarito definitivo E",
+  "origem": "prova",
+  "par": null,
+  "qids": [
+   "dc15-04",
+   "dc15-09"
+  ],
+  "ref": "CF, arts. 25 e 60; ADCT, arts. 3º e 11; CD 2026 Técnico, item 93",
+  "regra": "O poder derivado é criado pela própria CF. O reformador está no art. 60, o revisor no art. 3º do ADCT e o decorrente no art. 25 da CF e no art. 11 do ADCT, junto com os respectivos limites.",
+  "sigla": "DC",
+  "sinal": "\"não está previsto na CF\"",
+  "tipo": "literalidade",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-14",
+  "armadilha": "O poder decorrente permite a estados e municípios elaborarem as próprias constituições.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "poder decorrente",
+   "poder reformador"
+  ],
+  "qids": [
+   "dc1-24",
+   "dc15-07",
+   "dc15-06"
+  ],
+  "ref": "CF, arts. 25 e 29; ADCT, art. 11",
+  "regra": "O poder decorrente é dos estados (e, para parte da doutrina, do DF): CF, art. 25, e ADCT, art. 11. O município se rege por lei orgânica (art. 29), que não é manifestação de poder constituinte decorrente na posição majoritária. O decorrente não abrange o poder de reformar a CF.",
+  "sigla": "DC",
+  "sinal": "\"estados e municípios\"; \"decorrente compreende o de reforma\"",
+  "tipo": "alcance",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-15",
+  "armadilha": "O poder revisor serve para revisar a CF a cada cinco anos.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc15-10",
+   "dc1-20"
+  ],
+  "ref": "ADCT, art. 3º",
+  "regra": "O art. 3º do ADCT previu uma única revisão, depois de cinco anos da promulgação, por maioria absoluta em sessão unicameral. Foi feita em 1993-1994 (seis emendas de revisão) e não pode ser repetida.",
+  "sigla": "DC",
+  "sinal": "\"a cada cinco anos\", \"periodicamente\", ou o quórum de 3/5 dado à revisão",
+  "tipo": "literalidade",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-16",
+  "armadilha": "O STF admite controlar norma constitucional originária (Bachof), e emenda constitucional não pode ser declarada inconstitucional.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "norma constitucional originária",
+   "emenda constitucional (derivada)"
+  ],
+  "qids": [
+   "dc14-02",
+   "dc14-05",
+   "dc15-08",
+   "dc14-12"
+  ],
+  "ref": "STF, ADI 815; CF, art. 60, § 4º",
+  "regra": "Não há hierarquia entre normas constitucionais originárias, e elas não se sujeitam a controle (STF, ADI 815): a tese de Bachof é rejeitada. A emenda é obra do poder derivado e pode ser declarada inconstitucional se ferir o art. 60.",
+  "sigla": "DC",
+  "sinal": "\"plenamente admitida pelo STF\"; \"princípios de justiça substantiva\"; \"emenda... não é possível declarar inconstitucional\"",
+  "tipo": "jurisprudencia",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-17",
+  "armadilha": "Todo tratado de direitos humanos ratificado tem status constitucional, qualquer que seja o quórum.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "equivalente a emenda (art. 5º, § 3º)",
+   "supralegal"
+  ],
+  "qids": [
+   "dc14-06",
+   "dc14-08",
+   "dc14-09",
+   "dc14-19",
+   "dc14-17",
+   "dc14-03"
+  ],
+  "ref": "CF, art. 5º, §§ 2º e 3º; STF, RE 466.343",
+  "regra": "Só o tratado de direitos humanos aprovado em cada Casa, em dois turnos, por 3/5 equivale a emenda (art. 5º, § 3º). O que foi aprovado pelo rito comum tem status supralegal (STF, RE 466.343). Os demais tratados têm status de lei ordinária.",
+  "sigla": "DC",
+  "sinal": "\"qualquer quórum\", \"todos os tratados\", ou o rito do § 3º apresentado como condição para o tratado valer no Brasil",
+  "tipo": "excecao",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-18",
+  "armadilha": "O preâmbulo tem força normativa e é de reprodução obrigatória nos estados (ou, ao contrário, não serve nem para interpretar).",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc12-09",
+   "dc12-02",
+   "dc1-17",
+   "dc12-04",
+   "dc12-11",
+   "dc12-06",
+   "dc12-07",
+   "dc12-03",
+   "dc1-18",
+   "dc12-01"
+  ],
+  "ref": "STF, ADI 2.076; PDF do item 1 §1.8",
+  "regra": "STF, ADI 2.076: o preâmbulo está no domínio da política, não tem força normativa, não é parâmetro de controle e não é de reprodução obrigatória. Mesmo assim, serve de vetor interpretativo, e o estado pode reproduzi-lo, se quiser.",
+  "sigla": "DC",
+  "sinal": "\"força normativa\", \"reprodução obrigatória\", \"norma central\", \"caráter dispositivo\"; ou o exagero \"não pode ser usado nem como vetor de interpretação\"",
+  "tipo": "jurisprudencia",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-19",
+  "armadilha": "Pelo caráter temporário, o ADCT (e a norma só formalmente constitucional) tem hierarquia inferior à parte permanente.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "parte permanente / norma materialmente constitucional",
+   "ADCT / norma só formalmente constitucional"
+  ],
+  "qids": [
+   "dc1-25",
+   "dc14-10",
+   "dc14-11",
+   "dc1-19"
+  ],
+  "ref": "PDF do item 1 §1.8",
+  "regra": "Não há hierarquia entre normas da Constituição. O ADCT tem a mesma hierarquia da parte permanente, é parâmetro de controle e só muda por emenda. A norma materialmente constitucional não vale mais que a só formal.",
+  "sigla": "DC",
+  "sinal": "\"pelo seu caráter temporário\"; \"hierarquicamente inferiores\"; \"maior valor hierárquico\"",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-20",
+  "armadilha": "O ADCT (ou o preâmbulo) é elemento de estabilização constitucional (ou orgânico).",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "elementos formais de aplicabilidade",
+   "elementos de estabilização constitucional"
+  ],
+  "qids": [
+   "dc12-05",
+   "dc12-10",
+   "dc12-08",
+   "dc12-14",
+   "dc1-16"
+  ],
+  "ref": "PDF do item 1 §1.8",
+  "regra": "Para José Afonso da Silva, preâmbulo, ADCT e art. 5º, § 1º, são elementos formais de aplicabilidade. Os de estabilização defendem a Constituição e o Estado: controle de constitucionalidade (ADI), intervenção, emendas, estados de defesa e de sítio.",
+  "sigla": "DC",
+  "sinal": "\"estabilização\" ao lado de \"disposições transitórias\", ou \"formal de aplicabilidade\" ao lado de \"ação direta de inconstitucionalidade\"",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-21",
+  "armadilha": "A CF/88 é histórica, pois resulta da lenta sedimentação de costumes e tradições.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "dogmática",
+   "histórica (costumeira)"
+  ],
+  "qids": [
+   "dc1-10",
+   "dc12-19",
+   "dc1-26"
+  ],
+  "ref": "Doutrina (classificação quanto ao modo de elaboração); chute em dc1-10 em 28/10",
+  "regra": "Quanto ao modo de elaboração, a CF/88 é dogmática: escrita de uma só vez por órgão constituinte, sistematizando as ideias dominantes da época. Histórica é a costumeira, formada lentamente, como a inglesa.",
+  "sigla": "dc",
+  "sinal": "'costumes', 'tradições' ou 'lenta sedimentação' aplicados à CF/88. Escrita = dogmática; costumeira = histórica.",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-22",
+  "armadilha": "A CF/88 é Constituição-garantia: só limita o poder, sem fixar programas para o Estado.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "Constituição dirigente (programática)",
+   "Constituição-garantia (negativa)"
+  ],
+  "qids": [
+   "dc1-11",
+   "dc1-27"
+  ],
+  "ref": "CF, art. 3º; doutrina (Canotilho); chute em dc1-11 em 28/10",
+  "regra": "A CF/88 é dirigente: além de limitar o poder, fixa metas e programas para o Estado, como os objetivos fundamentais do art. 3º. Constituição-garantia (negativa, liberal) só protege liberdades contra o Estado.",
+  "sigla": "dc",
+  "sinal": "'limita-se a', 'apenas' ou 'somente' assegurar liberdades. Objetivos, metas ou programas = dirigente.",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-23",
+  "armadilha": "Para Lassalle, a Constituição é a decisão política fundamental (ou, para Schmitt, a soma dos fatores reais de poder).",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "Lassalle: sentido sociológico, fatores reais de poder",
+   "Schmitt: sentido político, decisão política fundamental"
+  ],
+  "qids": [
+   "dc1-12",
+   "dc11-23",
+   "dc11-28",
+   "dc11-29",
+   "dc11-31",
+   "dc11-35",
+   "dc11-36",
+   "dc11-38",
+   "dc11-39",
+   "dc11-40"
+  ],
+  "ref": "Doutrina; PDF '1. Constituição Federal de 1988' (sentidos de Constituição); erro com certeza em dc1-12 em 28/10",
+  "regra": "Lassalle (sociológico): a Constituição real é a soma dos fatores reais de poder; a escrita é 'folha de papel'. Schmitt (político): decisão política fundamental; o resto do texto são leis constitucionais. Kelsen (jurídico): norma pura, dever-ser.",
+  "sigla": "dc",
+  "sinal": "Nome de autor ao lado de expressão-chave: confira o par (Lassalle-fatores reais; Schmitt-decisão política; Kelsen-dever-ser).",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-24",
+  "armadilha": "No sentido jurídico-positivo, a Constituição é a norma hipotética fundamental.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "lógico-jurídico (norma hipotética fundamental, pressuposta)",
+   "jurídico-positivo (norma suprema posta)"
+  ],
+  "qids": [
+   "dc1-13",
+   "dc11-26",
+   "dc11-32",
+   "dc11-37",
+   "dc11-41"
+  ],
+  "ref": "Kelsen, Teoria Pura do Direito; chute em dc1-13 em 28/10",
+  "regra": "Para Kelsen, no sentido lógico-jurídico a Constituição é a norma hipotética fundamental, pressuposta, que fundamenta a validade do sistema; no jurídico-positivo, é a norma positiva suprema, que regula a produção das demais.",
+  "sigla": "dc",
+  "sinal": "'hipotética' ou 'pressuposta' com 'positivo' ou 'posta'. Lógico vai com hipotético; positivo com posto.",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-25",
+  "armadilha": "O Título I da CF/88 trata dos direitos e garantias fundamentais.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F4",
+  "origem": "registrada",
+  "par": [
+   "Título I: Princípios Fundamentais",
+   "Título II: Direitos e Garantias Fundamentais"
+  ],
+  "qids": [
+   "dc1-14",
+   "dc1-15",
+   "dc1-28"
+  ],
+  "ref": "CF/88, estrutura dos títulos; erro com certeza em dc1-14 em 28/10",
+  "regra": "Nove títulos na parte permanente: I Princípios Fundamentais (arts. 1º a 4º); II Direitos e Garantias Fundamentais; III Organização do Estado; IV Organização dos Poderes; V Defesa do Estado e das Instituições Democráticas; VI Tributação e Orçamento; VII Ordem Econômica e Financeira; VIII Ordem Social; IX Disposições Constitucionais Gerais.",
+  "sigla": "dc",
+  "sinal": "Item sobre a ordem ou o número de um título: princípios, direitos, Estado, Poderes.",
+  "tipo": "literalidade",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-26",
+  "armadilha": "O marco histórico do neoconstitucionalismo no Brasil é a Constituição de 1946.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F4",
+  "origem": "registrada",
+  "par": [
+   "CF/88 (marco brasileiro)",
+   "CF/1946"
+  ],
+  "qids": [
+   "dc11-05",
+   "dc11-12",
+   "dc11-18",
+   "dc11-42"
+  ],
+  "ref": "PDF '1. Constituição Federal de 1988', §1.2; Barroso; erro em dc11-05 em 28/10",
+  "regra": "Para Barroso, o marco histórico do neoconstitucionalismo é, na Europa, o constitucionalismo do pós-guerra (Lei Fundamental de Bonn, 1949; Constituição italiana, 1947) e, no Brasil, a CF/88 e a redemocratização. O marco filosófico é o pós-positivismo.",
+  "sigla": "dc",
+  "sinal": "'1946' ou 'pós-guerra' aplicado ao Brasil: a proximidade com 1945 é a isca.",
+  "tipo": "literalidade",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-27",
+  "armadilha": "É de eficácia contida a norma segundo a qual a lei punirá qualquer discriminação atentatória dos direitos e liberdades fundamentais.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "lei que restringe (eficácia contida)",
+   "lei necessária para produzir o efeito (eficácia limitada)"
+  ],
+  "qids": [
+   "dc13-01"
+  ],
+  "ref": "CF, art. 5º, XLI; PDF '1. Constituição Federal de 1988', §1.14; erro com certeza em dc13-01 em 28/10",
+  "regra": "No art. 5º, XLI, a lei não restringe direito já exercível: é ela que cria a punição. Sem a lei não há efeito principal, logo a norma é de eficácia limitada (aplicabilidade mediata). Na contida, o direito existe desde já e a lei apenas pode restringi-lo.",
+  "sigla": "dc",
+  "sinal": "'será punida por lei', 'a lei disporá', 'lei criará'. Pergunte: sem a lei, a norma já produz o efeito principal?",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-28",
+  "armadilha": "A ressalva 'na forma da lei' torna a norma de eficácia limitada e de aplicabilidade mediata.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "V4",
+  "origem": "registrada",
+  "par": [
+   "contida: aplicabilidade imediata, possivelmente não integral",
+   "limitada: aplicabilidade mediata"
+  ],
+  "qids": [
+   "dc13-04"
+  ],
+  "ref": "CF, art. 26, I; PDF '1. Constituição Federal de 1988', §1.14; erro com certeza em dc13-04 em 28/10 (item FGV 2021 adaptado)",
+  "regra": "O art. 26, I, já atribui aos Estados as águas desde a promulgação; a lei apenas pode retirar as decorrentes de obras da União. Restrição futura de efeito já pleno é eficácia contida, de aplicabilidade direta e imediata. 'Mediata' é da limitada.",
+  "sigla": "dc",
+  "sinal": "'ressalvadas, na forma da lei' ou 'salvo disposição em lei' numa regra que já funciona: contida e imediata.",
+  "tipo": "verdade",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-1-29",
+  "armadilha": "Tem eficácia plena a norma do art. 227 que impõe à família, à sociedade e ao Estado o dever de assegurar à criança saúde, educação, lazer, cultura etc.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "eficácia plena",
+   "norma programática (eficácia limitada)"
+  ],
+  "qids": [
+   "dc13-14",
+   "dc13-18"
+  ],
+  "ref": "CF, art. 227, caput; PDF '1. Constituição Federal de 1988', §1.16; erro com certeza em dc13-14 em 28/10",
+  "regra": "Catálogo amplo de deveres do Estado a realizar por políticas públicas (art. 227, caput) é norma programática, espécie de eficácia limitada. Plena dispensa atuação posterior. Atenção: o acesso à educação básica tem eficácia plena (Tema 548 do STF), ver pg-dc-1-11.",
+  "sigla": "dc",
+  "sinal": "'dever do Estado assegurar/promover/garantir' + lista de direitos sociais: programa a cumprir.",
+  "tipo": "troca",
+  "topico": "dc-1"
+ },
+ {
+  "id": "pg-dc-2d-01",
+  "armadilha": "Todo nascido no território brasileiro é brasileiro nato.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-01"
+  ],
+  "ref": "CF, art. 12, I, a",
+  "regra": "São natos os nascidos no Brasil, ainda que de pais estrangeiros, desde que estes não estejam a serviço de seu país. Se o pai ou a mãe estrangeiros estiverem a serviço do país deles, o filho nascido aqui não é nato.",
+  "sigla": "DC",
+  "sinal": "Nascimento no Brasil combinado com pais estrangeiros diplomatas ou a serviço de governo estrangeiro.",
+  "tipo": "excecao",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-02",
+  "armadilha": "Filho de estrangeiros só é brasileiro nato se um dos pais tiver residência fixa no Brasil.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-02"
+  ],
+  "ref": "CF, art. 12, I, a",
+  "regra": "No ius soli, basta nascer no Brasil. A nacionalidade dos pais, a residência e o motivo da estada são irrelevantes, salvo se os pais estrangeiros estiverem a serviço do seu país.",
+  "sigla": "DC",
+  "sinal": "O item acrescenta requisitos (residência, visto, permanência) que o art. 12, I, a, não exige.",
+  "tipo": "alcance",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-03",
+  "armadilha": "O nascido no exterior de pai brasileiro a serviço do Brasil só é nato se for registrado ou optar pela nacionalidade.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-03"
+  ],
+  "ref": "CF, art. 12, I, b",
+  "regra": "É nato o nascido no estrangeiro de pai brasileiro ou de mãe brasileira, desde que qualquer deles esteja a serviço da República Federativa do Brasil. Não se exige registro, residência nem opção, e basta um dos genitores.",
+  "sigla": "DC",
+  "sinal": "Genitor a serviço da República (diplomata, servidor em missão) combinado com exigências extras ou com a exigência de que os dois pais sejam brasileiros.",
+  "tipo": "literalidade",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-04",
+  "armadilha": "O nascido no exterior de pai brasileiro, mesmo registrado no consulado, precisa vir morar no Brasil e optar pela nacionalidade.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe 2021 · TELEBRAS · Técnico em Gestão (comentada na Aula 6; número do item não informado)",
+  "origem": "prova",
+  "par": [
+   "registro em repartição brasileira competente",
+   "residência no Brasil seguida de opção"
+  ],
+  "qids": [
+   "dc23-04",
+   "dc23-19"
+  ],
+  "ref": "CF, art. 12, I, c (EC 54/2007)",
+  "regra": "Desde a EC 54/2007, o nascido no estrangeiro de pai ou mãe brasileiros é nato por dois caminhos alternativos: registro em repartição brasileira competente, ou residência no Brasil seguida de opção, em qualquer tempo, depois da maioridade. O registro basta.",
+  "sigla": "DC",
+  "sinal": "O conectivo “ou” da alínea c trocado por “e”, ou o registro tratado como insuficiente.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-05",
+  "armadilha": "A opção pela nacionalidade brasileira deve ser feita em prazo certo após a maioridade, sob pena de decadência.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-05"
+  ],
+  "ref": "CF, art. 12, I, c",
+  "regra": "Na hipótese de residência no Brasil, a opção pode ser feita “em qualquer tempo, depois de atingida a maioridade”. Não há prazo final, e ela não pode ser feita antes da maioridade.",
+  "sigla": "DC",
+  "sinal": "Prazos inventados (um ano, quatro anos após a maioridade) ou opção feita pelos pais antes da maioridade.",
+  "tipo": "literalidade",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-06",
+  "armadilha": "Para originários de países de língua portuguesa, a naturalização exige um ano de residência e ausência de condenação penal.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "1 ano + idoneidade moral (língua portuguesa)",
+   "mais de 15 anos + sem condenação penal (qualquer nacionalidade)"
+  ],
+  "qids": [
+   "dc23-06",
+   "dc23-25"
+  ],
+  "ref": "CF, art. 12, II, a e b",
+  "regra": "Originários de países de língua portuguesa: residência por um ano ininterrupto e idoneidade moral (alínea a). Estrangeiros de qualquer nacionalidade: residência há mais de quinze anos ininterruptos e sem condenação penal, desde que requeiram (alínea b).",
+  "sigla": "DC",
+  "sinal": "Requisitos de uma alínea do art. 12, II, misturados com os da outra.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-07",
+  "armadilha": "O português com residência permanente no Brasil, havendo reciprocidade, torna-se brasileiro naturalizado.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "quase-nacionalidade do português (§ 1º)",
+   "naturalização (art. 12, II)"
+  ],
+  "qids": [
+   "dc23-07"
+  ],
+  "ref": "CF, art. 12, § 1º (ECR 3/1994)",
+  "regra": "Aos portugueses com residência permanente no País, havendo reciprocidade em favor de brasileiros, são atribuídos os direitos inerentes ao brasileiro, salvo os casos previstos na CF. Eles continuam portugueses: recebem direitos, não a nacionalidade.",
+  "sigla": "DC",
+  "sinal": "O item diz que o português “adquire” ou “passa a ter” nacionalidade brasileira, ou omite a reciprocidade ou as ressalvas constitucionais.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-08",
+  "armadilha": "Lei complementar pode criar novas distinções entre brasileiros natos e naturalizados.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe 2023 · MEC · Técnico em Assuntos Educacionais (comentada na Aula 6; número do item não informado)",
+  "origem": "prova",
+  "par": null,
+  "qids": [
+   "dc23-08",
+   "dc23-34"
+  ],
+  "ref": "CF, art. 12, § 2º",
+  "regra": "A lei não pode estabelecer distinção entre natos e naturalizados, salvo nos casos previstos na própria Constituição. Só o texto constitucional cria distinções.",
+  "sigla": "DC",
+  "sinal": "Distinção atribuída a “lei”, “lei complementar”, “estatuto” ou “regimento”.",
+  "tipo": "alcance",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-09",
+  "armadilha": "Naturalizado não pode ser deputado federal nem senador, pois esses cargos são privativos de brasileiro nato.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe 2017 · TCE-PE · Analista de Gestão (comentada na Aula 6; número do item não informado)",
+  "origem": "prova",
+  "par": [
+   "Presidente da Câmara / Presidente do Senado",
+   "mandato de deputado federal / senador"
+  ],
+  "qids": [
+   "dc23-09",
+   "dc23-31"
+  ],
+  "ref": "CF, art. 12, § 3º, II e III",
+  "regra": "São privativos de nato os cargos de Presidente da Câmara e de Presidente do Senado (linha sucessória do Presidente da República), não os mandatos de deputado e senador. O naturalizado pode ser eleito parlamentar, mas não pode presidir as Casas.",
+  "sigla": "DC",
+  "sinal": "O item fala no mandato parlamentar em si, e não na presidência da Casa.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-10",
+  "armadilha": "São privativos de nato os cargos de Ministro do STJ, Procurador-Geral da República e Ministro da Justiça.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe 2023 · TJ-ES · Analista Judiciário (comentada na Aula 6; número do item não informado)",
+  "origem": "prova",
+  "par": [
+   "Ministro do STF / Ministro de Estado da Defesa",
+   "Ministro do STJ / PGR / Ministro da Justiça"
+  ],
+  "qids": [
+   "dc23-10",
+   "dc23-32"
+  ],
+  "ref": "CF, art. 12, § 3º (inciso VII pela EC 23/1999)",
+  "regra": "Rol taxativo do § 3º: Presidente e Vice-Presidente da República; Presidente da Câmara; Presidente do Senado; Ministro do STF; carreira diplomática; oficial das Forças Armadas; Ministro de Estado da Defesa. Ministro do STJ, PGR, Ministro da Justiça e os demais ministros de Estado não estão no rol.",
+  "sigla": "DC",
+  "sinal": "Cargo de tribunal superior que não seja o STF, chefia do MP ou ministério que não seja o da Defesa.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-11",
+  "armadilha": "As únicas distinções entre natos e naturalizados na CF são os cargos do art. 12, § 3º.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-11"
+  ],
+  "ref": "CF, arts. 5º, LI; 12, §§ 3º e 4º, I; 89, VII; 222",
+  "regra": "Há outras distinções constitucionais além do § 3º: a extradição (art. 5º, LI), o cancelamento judicial da naturalização (art. 12, § 4º, I), os seis cidadãos natos do Conselho da República (art. 89, VII) e a propriedade de empresa jornalística e de radiodifusão (art. 222).",
+  "sigla": "DC",
+  "sinal": "“Apenas”, “unicamente” ou “exclusivamente” ligados ao rol do § 3º.",
+  "tipo": "excecao",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-12",
+  "armadilha": "A propriedade de empresa jornalística e de radiodifusão é privativa de brasileiro nato.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-12"
+  ],
+  "ref": "CF, art. 222, caput",
+  "regra": "A propriedade de empresa jornalística e de radiodifusão sonora e de sons e imagens é privativa de brasileiros natos ou naturalizados há mais de dez anos, ou de pessoas jurídicas constituídas sob as leis brasileiras e com sede no País.",
+  "sigla": "DC",
+  "sinal": "Empresa jornalística ou de radiodifusão associada a “nato” sem a alternativa do naturalizado há mais de dez anos.",
+  "tipo": "alcance",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-13",
+  "armadilha": "O naturalizado só pode ser extraditado por fato anterior à naturalização.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-13"
+  ],
+  "ref": "CF, art. 5º, LI",
+  "regra": "O nato nunca é extraditado. O naturalizado pode sê-lo por crime comum praticado antes da naturalização ou por comprovado envolvimento em tráfico ilícito de entorpecentes, na forma da lei, a qualquer tempo, inclusive depois da naturalização.",
+  "sigla": "DC",
+  "sinal": "Tráfico de drogas associado a um limite temporal (“antes da naturalização”).",
+  "tipo": "excecao",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-14",
+  "armadilha": "O naturalizado pode ser extraditado por qualquer crime comum, praticado antes ou depois da naturalização.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe 2017 · TRF1 · Analista Judiciário (comentada na Aula 6; número do item não informado)",
+  "origem": "prova",
+  "par": [
+   "crime comum antes da naturalização",
+   "crime comum depois da naturalização"
+  ],
+  "qids": [
+   "dc23-14",
+   "dc23-35"
+  ],
+  "ref": "CF, art. 5º, LI",
+  "regra": "Pelo crime comum, o naturalizado só é extraditável se o fato for anterior à naturalização. Depois dela, a única hipótese é o tráfico ilícito de entorpecentes. O nato não é extraditado em nenhuma hipótese.",
+  "sigla": "DC",
+  "sinal": "Crime comum (homicídio, roubo, estelionato) praticado depois da naturalização.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-15",
+  "armadilha": "O estrangeiro casado com brasileira ou com filho brasileiro não pode ser extraditado.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-15"
+  ],
+  "ref": "STF, Súmula 421; CF, art. 5º, LI",
+  "regra": "Segundo a Súmula 421 do STF, não impede a extradição a circunstância de ser o extraditando casado com brasileira ou ter filho brasileiro.",
+  "sigla": "DC",
+  "sinal": "Vínculo familiar com brasileiros apresentado como obstáculo à extradição de estrangeiro.",
+  "tipo": "jurisprudencia",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-16",
+  "armadilha": "O brasileiro nato que adquire voluntariamente outra nacionalidade perde a brasileira, como decidiu o STF no caso Cláudia Hoerig.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe 2022 · FUB · Assistente em Administração (comentada na Aula 6; item anterior à EC 131/2023, gabarito E vale nos dois textos)",
+  "origem": "prova",
+  "par": null,
+  "qids": [
+   "dc23-16",
+   "dc23-36"
+  ],
+  "ref": "CF, art. 12, § 4º (EC 131/2023); STF, MS 33.864/DF e Ext 1.462 (anteriores à EC)",
+  "regra": "Depois da EC 131/2023, a perda só ocorre por cancelamento judicial da naturalização (fraude no processo de naturalização ou atentado contra a ordem constitucional e o Estado Democrático) ou por pedido expresso perante autoridade brasileira competente, ressalvada a apatridia. Adquirir outra nacionalidade não causa mais a perda. O caso Hoerig (MS 33.864 e Ext 1.462) aplicou a redação anterior.",
+  "sigla": "DC",
+  "sinal": "Aquisição de outra nacionalidade ou “atividade nociva ao interesse nacional” apresentadas como causas atuais de perda.",
+  "tipo": "jurisprudencia",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-17",
+  "armadilha": "Quem renuncia à nacionalidade brasileira nunca mais pode readquirir a nacionalidade originária.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe 2017 · DPU · Defensor Público (comentada na Aula 6; enunciado parte do texto anterior à EC 131/2023)",
+  "origem": "prova",
+  "par": null,
+  "qids": [
+   "dc23-17",
+   "dc23-38"
+  ],
+  "ref": "CF, art. 12, § 4º, II, e § 5º (EC 131/2023)",
+  "regra": "A perda a pedido não vale se gerar apatridia (§ 4º, II). A renúncia não impede o interessado de readquirir a nacionalidade brasileira originária, nos termos da lei (§ 5º, incluído pela EC 131/2023).",
+  "sigla": "DC",
+  "sinal": "Renúncia descrita como definitiva, irreversível ou possível mesmo que deixe a pessoa sem nacionalidade.",
+  "tipo": "excecao",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-18",
+  "armadilha": "Os símbolos nacionais são exclusivos da República, e Estados e Municípios não podem ter símbolos próprios.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-18"
+  ],
+  "ref": "CF, art. 13, caput e §§ 1º e 2º",
+  "regra": "A língua portuguesa é o idioma oficial. São símbolos da República a bandeira, o hino, as armas e o selo nacionais. Os Estados, o Distrito Federal e os Municípios poderão ter símbolos próprios.",
+  "sigla": "DC",
+  "sinal": "Vedação a símbolos estaduais ou municipais, ou rol de símbolos com troca de elementos.",
+  "tipo": "alcance",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-19",
+  "armadilha": "Nacionalidade e cidadania são sinônimos: todo nacional é cidadão.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "nacionalidade",
+   "cidadania"
+  ],
+  "qids": [
+   "dc23-39"
+  ],
+  "ref": "Aula 6 · §6.1; Mapa da Nacionalidade; CF, art. 14",
+  "regra": "Nacionalidade é o vínculo jurídico-político com o Estado e separa nacional de estrangeiro. Cidadania é o gozo dos direitos políticos. Todo cidadão brasileiro é nacional, mas nem todo nacional é cidadão.",
+  "sigla": "DC",
+  "sinal": "Item que trata os dois termos como equivalentes ou dá direitos políticos a quem só é nacional (criança, não alistado).",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-20",
+  "armadilha": "Quem opta pela nacionalidade brasileira após a maioridade torna-se naturalizado, porque houve ato de vontade.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "nacionalidade originária potestativa (opção)",
+   "naturalização"
+  ],
+  "qids": [
+   "dc23-40"
+  ],
+  "ref": "CF, art. 12, I, c, e II; Aula 6 · §6.1",
+  "regra": "A opção da alínea c gera nacionalidade ORIGINÁRIA: quem opta é brasileiro nato. A naturalização (art. 12, II) é a única via derivada.",
+  "sigla": "DC",
+  "sinal": "Ato de vontade posterior ao nascimento associado a “naturalizado” numa hipótese do art. 12, I, c.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-21",
+  "armadilha": "A CF/88 adota exclusivamente o critério do ius soli.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-41"
+  ],
+  "ref": "CF, art. 12, I, a a c; Aula 6 · §6.1",
+  "regra": "A regra é o ius soli (alínea a), mas as alíneas b e c admitem o ius sanguinis com requisitos adicionais (serviço do Brasil, registro ou residência e opção). O sistema é misto.",
+  "sigla": "DC",
+  "sinal": "“Exclusivamente”, “apenas” ou “unicamente” junto a ius soli ou a ius sanguinis.",
+  "tipo": "alcance",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-22",
+  "armadilha": "Não é nato o nascido no Brasil filho de estrangeiros a serviço de outro país (que não o deles).",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "a serviço de SEU país",
+   "a serviço de outro país"
+  ],
+  "qids": [
+   "dc23-24"
+  ],
+  "ref": "CF, art. 12, I, a; Aula 6 · §6.2",
+  "regra": "A ressalva da alínea a só alcança pais estrangeiros a serviço do PRÓPRIO país. Estrangeiros a serviço de um terceiro Estado não afastam o ius soli: o filho é nato.",
+  "sigla": "DC",
+  "sinal": "Nacionalidade dos pais diferente do Estado a que servem (argentinos a serviço do Uruguai).",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-23",
+  "armadilha": "Filho de diplomata estrangeiro a serviço de seu país, nascido no Brasil, nunca é nato, ainda que a mãe seja brasileira.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-23"
+  ],
+  "ref": "CF, art. 12, I, a (“pais estrangeiros”); Aula 6 · §6.1",
+  "regra": "A exclusão do ius soli exige duas condições cumulativas: AMBOS os pais estrangeiros e pelo menos um a serviço do próprio país. Se um dos genitores é brasileiro, vale a regra e o filho é nato.",
+  "sigla": "DC",
+  "sinal": "Caso com um dos pais brasileiro e o outro diplomata estrangeiro.",
+  "tipo": "excecao",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-24",
+  "armadilha": "“A serviço da República Federativa do Brasil” significa apenas a serviço da União.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-42"
+  ],
+  "ref": "CF, art. 12, I, b; Aula 6 · §6.1; Mapa da Nacionalidade (cartão 4)",
+  "regra": "Para a doutrina adotada na aula, o serviço da alínea b abrange União, Estados, DF e Municípios, inclusive as entidades da administração indireta.",
+  "sigla": "DC",
+  "sinal": "Genitor a serviço de estado-membro, município ou autarquia, e o item diz que não conta.",
+  "tipo": "alcance",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-25",
+  "armadilha": "Quem nasceu no exterior de pai ou mãe brasileiros e veio residir no Brasil adquire automaticamente a condição de nato ao atingir a maioridade.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe 2024 · MP-TO · Técnico Ministerial (comentada na Aula 6; número do item não informado)",
+  "origem": "prova",
+  "par": null,
+  "qids": [
+   "dc23-20"
+  ],
+  "ref": "CF, art. 12, I, c; Aula 6 · §6.1",
+  "regra": "Na via da residência, a alínea c exige também a OPÇÃO, feita em juízo depois da maioridade. A residência sozinha não basta.",
+  "sigla": "DC",
+  "sinal": "“Automaticamente”, “basta residir” ou “independentemente de opção”.",
+  "tipo": "alcance",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-26",
+  "armadilha": "A homologação da opção tem efeitos ex nunc: o optante só é nato a partir da sentença e pode ser extraditado por fatos anteriores.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe 2017 · DPU · Defensor Público e Cebraspe 2018 · ABIN · Agente de Inteligência (comentadas na Aula 6; números dos itens não informados)",
+  "origem": "prova",
+  "par": [
+   "ex tunc",
+   "ex nunc"
+  ],
+  "qids": [
+   "dc23-21",
+   "dc23-22"
+  ],
+  "ref": "CF, arts. 5º, LI, e 12, I, c; Aula 6 · §6.1",
+  "regra": "A sentença homologatória da opção tem efeitos EX TUNC: a pessoa é nata desde o nascimento. Por isso, o optante não pode ser extraditado (art. 5º, LI).",
+  "sigla": "DC",
+  "sinal": "“A partir da homologação”, “efeitos prospectivos” ou extradição de quem optou.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-27",
+  "armadilha": "A opção pela nacionalidade brasileira é feita por declaração em cartório ou perante a autoridade administrativa.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "opção judicial (Justiça Federal)",
+   "declaração administrativa ou cartorária"
+  ],
+  "qids": [
+   "dc23-43"
+  ],
+  "ref": "CF, arts. 12, I, c, e 109, X; Aula 6 · §6.1",
+  "regra": "A opção é feita em juízo, em jurisdição voluntária encerrada por sentença homologatória. A competência é da Justiça Federal (art. 109, X).",
+  "sigla": "DC",
+  "sinal": "Cartório, consulado, Ministério da Justiça ou Polícia Federal como local da opção.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-28",
+  "armadilha": "Quem veio residir no Brasil ainda menor só será brasileiro quando fizer a opção, depois da maioridade.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-44"
+  ],
+  "ref": "Aula 6 · §6.1; Mapa da Nacionalidade (cartão 6); STF (RE 418.096, citado pela doutrina, não conferido)",
+  "regra": "Para o STF, quem vem residir no Brasil ainda menor é brasileiro nato. Atingida a maioridade, essa condição fica SUSPENSA até a opção.",
+  "sigla": "DC",
+  "sinal": "Menor residente tratado como estrangeiro, ou maior que não optou tratado como nato pleno.",
+  "tipo": "jurisprudencia",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-29",
+  "armadilha": "Cumpridos os requisitos, o originário de país de língua portuguesa tem direito subjetivo à naturalização ordinária.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "naturalização ordinária (discricionária)",
+   "naturalização extraordinária (vinculada)"
+  ],
+  "qids": [
+   "dc23-27"
+  ],
+  "ref": "CF, art. 12, II, a; Aula 6 · §6.1",
+  "regra": "A naturalização ordinária, inclusive a de originários de língua portuguesa, é ato DISCRICIONÁRIO do Chefe do Executivo. Só a extraordinária gera direito subjetivo.",
+  "sigla": "DC",
+  "sinal": "“Direito subjetivo”, “ato vinculado” ou “deverá conceder” na naturalização ordinária.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-30",
+  "armadilha": "A naturalização extraordinária exige residência no Brasil há quinze anos ininterruptos.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-45"
+  ],
+  "ref": "CF, art. 12, II, b; Aula 6 · §6.1",
+  "regra": "O texto é “residentes na República Federativa do Brasil há MAIS DE quinze anos ininterruptos e sem condenação penal, desde que requeiram”. Quinze anos exatos não bastam.",
+  "sigla": "DC",
+  "sinal": "“Há quinze anos”, “por quinze anos” ou “no mínimo quinze anos” sem o “mais de”.",
+  "tipo": "literalidade",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-31",
+  "armadilha": "A resposta positiva ao requerimento de naturalização extraordinária tem efeitos constitutivos.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "efeito declaratório",
+   "efeito constitutivo"
+  ],
+  "qids": [
+   "dc23-26"
+  ],
+  "ref": "CF, art. 12, II, b; Aula 6 · §6.1 (STF); item adaptado pela aula de SEFAZ-PE 2014, banca não informada",
+  "regra": "Para o STF, o reconhecimento da naturalização extraordinária é DECLARATÓRIO e retroage à data do requerimento, o que permite, por exemplo, a posse em cargo público.",
+  "sigla": "DC",
+  "sinal": "“Constitutivo”, “a partir da concessão” ou “só após a portaria”.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-32",
+  "armadilha": "O casamento com brasileiro confere ao estrangeiro a nacionalidade brasileira.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-28"
+  ],
+  "ref": "CF, art. 12, II; Aula 6 · §6.1 (STF)",
+  "regra": "O STF não admite a aquisição da nacionalidade jure matrimonii, porque a Constituição não prevê essa hipótese. O cônjuge estrangeiro continua estrangeiro até se naturalizar.",
+  "sigla": "DC",
+  "sinal": "“Em razão do casamento”, “confere” ou “facilita automaticamente”.",
+  "tipo": "jurisprudencia",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-33",
+  "armadilha": "A quase-nacionalidade do português depende da vontade dele e da aquiescência do Chefe do Executivo.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe 2018 · ABIN · Agente de Inteligência (comentada na Aula 6; número do item não informado)",
+  "origem": "prova",
+  "par": [
+   "quase-nacionalidade do português (§ 1º)",
+   "naturalização ordinária"
+  ],
+  "qids": [
+   "dc23-29"
+  ],
+  "ref": "CF, art. 12, § 1º; Aula 6 · §6.1",
+  "regra": "O § 1º exige só residência permanente no Brasil e reciprocidade em favor dos brasileiros. Não há ato discricionário do Executivo nem atribuição de nacionalidade.",
+  "sigla": "DC",
+  "sinal": "“Aquiescência”, “deferimento” ou “concessão pelo Presidente” associados ao português equiparado.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-34",
+  "armadilha": "Ao português equiparado são atribuídos os direitos inerentes ao brasileiro nato.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "direitos inerentes ao brasileiro (tratamento de naturalizado)",
+   "direitos do brasileiro nato"
+  ],
+  "qids": [
+   "dc23-30"
+  ],
+  "ref": "CF, art. 12, § 1º; Aula 6 · §6.1; item adaptado pela aula de TJ-SP 2023, banca não informada",
+  "regra": "O § 1º fala em “direitos inerentes ao brasileiro, salvo os casos previstos nesta Constituição”. O tratamento é o de naturalizado, sem os cargos privativos de nato.",
+  "sigla": "DC",
+  "sinal": "A palavra “nato” inserida no texto do § 1º.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-35",
+  "armadilha": "A carreira militar das Forças Armadas é privativa de brasileiro nato.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe 2018 · PF · Perito Criminal (comentada na Aula 6; número do item não informado)",
+  "origem": "prova",
+  "par": null,
+  "qids": [
+   "dc23-33"
+  ],
+  "ref": "CF, art. 12, §§ 2º e 3º, VI e VII; Aula 6 · §6.2",
+  "regra": "O § 3º, VI, reserva ao nato só o cargo de OFICIAL das Forças Armadas. Entre os ministros de Estado, só o da Defesa (VII) é privativo.",
+  "sigla": "DC",
+  "sinal": "“Carreira militar”, “militar das Forças Armadas” ou “ministro de Estado” sem especificar a Defesa.",
+  "tipo": "alcance",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-36",
+  "armadilha": "Os cargos da Mesa da Câmara dos Deputados são privativos de brasileiro nato.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-46"
+  ],
+  "ref": "CF, arts. 12, § 3º, II, e 80; Mapa da Nacionalidade (ponto quente para a Câmara)",
+  "regra": "O § 3º, II, reserva ao nato apenas o cargo de PRESIDENTE da Câmara (linha sucessória do art. 80). Vice-presidentes, secretários e líderes podem ser naturalizados.",
+  "sigla": "DC",
+  "sinal": "“Membros da Mesa”, “Vice-Presidente da Câmara” ou “líder” como cargos privativos.",
+  "tipo": "alcance",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-37",
+  "armadilha": "Pelo menos metade do capital das empresas jornalísticas e de radiodifusão deve pertencer a brasileiros natos ou naturalizados há mais de dez anos.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-47"
+  ],
+  "ref": "CF, art. 222, caput e § 1º; Mapa da Nacionalidade",
+  "regra": "O art. 222, § 1º, exige pelo menos SETENTA POR CENTO do capital total e do capital votante, direta ou indiretamente, com brasileiros natos ou naturalizados há mais de dez anos, que exercem a gestão e definem a programação.",
+  "sigla": "DC",
+  "sinal": "Percentual diferente de 70% ou prazo diferente de “mais de dez anos”.",
+  "tipo": "literalidade",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-38",
+  "armadilha": "A vedação à extradição protege apenas o nato por ius soli, ou não alcança quem tem dupla nacionalidade.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-48"
+  ],
+  "ref": "CF, art. 5º, LI; Aula 6 · §6.1",
+  "regra": "O brasileiro NATO nunca é extraditado, qualquer que seja o critério da nacionalidade (alíneas a, b ou c) e mesmo que tenha outra nacionalidade.",
+  "sigla": "DC",
+  "sinal": "Restrição da vedação a um critério de aquisição ou ressalva para dupla nacionalidade.",
+  "tipo": "alcance",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-39",
+  "armadilha": "Comprovada a fraude, a naturalização pode ser cancelada por ato do Ministro da Justiça, em autotutela.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "cancelamento por sentença judicial",
+   "cancelamento administrativo (autotutela)"
+  ],
+  "qids": [
+   "dc23-37"
+  ],
+  "ref": "CF, art. 12, § 4º, I (EC 131/2023); STF, Inf. 694; Aula 6 · §6.2",
+  "regra": "O § 4º, I, exige SENTENÇA JUDICIAL, por fraude no processo de naturalização ou por atentado contra a ordem constitucional e o Estado Democrático. Nem a fraude autoriza a via administrativa (STF, Inf. 694). A hipótese só alcança o naturalizado.",
+  "sigla": "DC",
+  "sinal": "“Ato do Ministro”, “autotutela”, “via administrativa” ou “portaria” ligados ao cancelamento.",
+  "tipo": "troca",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2d-40",
+  "armadilha": "Pela redação atual, perde a nacionalidade quem tiver cancelada a naturalização, por sentença judicial, em virtude de atividade nociva ao interesse nacional.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "dc23-49"
+  ],
+  "ref": "CF, art. 12, § 4º, I (EC 131/2023, conferida no Planalto em 27/10/2026)",
+  "regra": "Desde a EC 131/2023, os motivos do cancelamento judicial são a fraude relacionada ao processo de naturalização e o atentado contra a ordem constitucional e o Estado Democrático. “Atividade nociva ao interesse nacional” era o texto anterior, que ainda aparece em comentários antigos de aula.",
+  "sigla": "DC",
+  "sinal": "“Atividade nociva ao interesse nacional” acompanhada de “redação atual”, “hoje” ou “conforme a CF vigente”.",
+  "tipo": "literalidade",
+  "topico": "dc-2d"
+ },
+ {
+  "id": "pg-dc-2e-01",
+  "armadilha": "O referendo é convocado antes do ato; o plebiscito, depois.",
+  "criadoEm": "2026-11-06",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "plebiscito",
+   "referendo"
+  ],
+  "qids": [
+   "dc24-02"
+  ],
+  "ref": "Lei 9.709/1998, art. 2º; CF, art. 49, XV",
+  "regra": "Plebiscito é prévio: o povo aprova ou nega a ideia antes do ato. Referendo é posterior: o povo ratifica ou rejeita o ato já editado. Os dois são convocados ou autorizados pelo Congresso (art. 49, XV).",
+  "sigla": "DC",
+  "sinal": "Definições de plebiscito e referendo lado a lado. Pergunte: o ato já existe?",
+  "tipo": "troca",
+  "topico": "dc-2e"
+ },
+ {
+  "id": "pg-dc-2e-02",
+  "armadilha": "O analfabeto é inalistável e por isso inelegível.",
+  "criadoEm": "2026-11-06",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "analfabeto alistável",
+   "inalistável"
+  ],
+  "qids": [
+   "dc24-08",
+   "dc24-09",
+   "dc24-29"
+  ],
+  "ref": "CF, art. 14, §§ 1º, 2º e 4º",
+  "regra": "O analfabeto se alista e vota (facultativamente), mas é inelegível. Inalistáveis são só os estrangeiros e os conscritos durante o serviço obrigatório.",
+  "sigla": "DC",
+  "sinal": "Analfabeto ao lado de “inalistável”, ou de “não vota”.",
+  "tipo": "troca",
+  "topico": "dc-2e"
+ },
+ {
+  "id": "pg-dc-2e-03",
+  "armadilha": "A falta de filiação partidária é inelegibilidade.",
+  "criadoEm": "2026-11-06",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "condição de elegibilidade",
+   "inelegibilidade"
+  ],
+  "qids": [
+   "dc24-13"
+  ],
+  "ref": "CF, art. 14, §§ 3º a 9º",
+  "regra": "Condições de elegibilidade (§ 3º) são requisitos positivos: nacionalidade, pleno exercício, alistamento, domicílio, filiação e idade. Inelegibilidades (§§ 4º a 9º) são impedimentos: inalistáveis, analfabetos, reeleição, parentesco, militar e as da LC 64/1990.",
+  "sigla": "DC",
+  "sinal": "“Inelegível por não ter filiação, domicílio ou idade.”",
+  "tipo": "troca",
+  "topico": "dc-2e"
+ },
+ {
+  "id": "pg-dc-2e-04",
+  "armadilha": "O chefe do Executivo precisa renunciar 6 meses antes para disputar a reeleição.",
+  "criadoEm": "2026-11-06",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "desincompatibilização",
+   "reeleição"
+  ],
+  "qids": [
+   "dc24-14",
+   "dc24-15"
+  ],
+  "ref": "CF, art. 14, §§ 5º e 6º",
+  "regra": "A renúncia até 6 meses antes é para concorrer a OUTROS cargos (§ 6º). Para a reeleição ao mesmo cargo, uma única vez (§ 5º), o titular concorre no exercício do mandato.",
+  "sigla": "DC",
+  "sinal": "“Renunciar” ou “afastar-se” ao lado de “reeleição”.",
+  "tipo": "troca",
+  "topico": "dc-2e"
+ },
+ {
+  "id": "pg-dc-2e-05",
+  "armadilha": "A lei eleitoral só entra em vigor um ano após a publicação.",
+  "criadoEm": "2026-11-06",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "vigência imediata",
+   "aplicação após um ano"
+  ],
+  "qids": [
+   "dc24-27"
+  ],
+  "ref": "CF, art. 16",
+  "regra": "Pelo art. 16, a lei entra em vigor na publicação; só não se aplica à eleição que ocorra até um ano da vigência.",
+  "sigla": "DC",
+  "sinal": "“Entrará em vigor um ano após”.",
+  "tipo": "troca",
+  "topico": "dc-2e"
+ },
+ {
+  "id": "pg-dc-2e-06",
+  "armadilha": "O cancelamento da naturalização gera cassação dos direitos políticos.",
+  "criadoEm": "2026-11-06",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "perda ou suspensão",
+   "cassação"
+  ],
+  "qids": [
+   "dc24-22",
+   "dc24-30"
+  ],
+  "ref": "CF, art. 15",
+  "regra": "A cassação é vedada (art. 15, caput). Há só perda (definitiva) e suspensão (temporária) nos cinco casos do art. 15; o cancelamento da naturalização é perda.",
+  "sigla": "DC",
+  "sinal": "A palavra “cassação” aplicada a direitos políticos.",
+  "tipo": "troca",
+  "topico": "dc-2e"
+ },
+ {
+  "id": "pg-dc-2e-07",
+  "armadilha": "Os partidos devem aplicar 30% do fundo partidário em programas de participação das mulheres.",
+  "criadoEm": "2026-11-06",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "5% para programas das mulheres",
+   "30% para campanhas"
+  ],
+  "qids": [
+   "dc25-11"
+  ],
+  "ref": "CF, art. 17, §§ 7º a 9º",
+  "regra": "§ 7º: 5% do fundo partidário em programas de promoção da participação política das mulheres. § 8º: 30% dos recursos de campanha e do tempo de rádio e TV para candidatas. § 9º: 30% para candidaturas de pessoas pretas e pardas.",
+  "sigla": "DC",
+  "sinal": "Percentual trocado entre “programas” e “campanhas”.",
+  "tipo": "troca",
+  "topico": "dc-2f"
+ },
+ {
+  "id": "pg-dc-2e-08",
+  "armadilha": "A Constituição exige três anos de residência do português, ou basta qualquer residência para ele se alistar.",
+  "criadoEm": "2026-11-07",
+  "fonteProva": "Cebraspe · ANA · 2006 (Q2917428)",
+  "origem": "registrada",
+  "par": [
+   "residência permanente (CF)",
+   "3 anos de residência habitual (tratado)"
+  ],
+  "qids": [
+   "dc24-35",
+   "dc24-36",
+   "dc24-37"
+  ],
+  "ref": "CF, art. 12, § 1º; Decreto 3.927/2001, art. 17",
+  "regra": "CF: residência permanente + reciprocidade. Tratado Brasil–Portugal: 3 anos de residência habitual + requerimento para os direitos políticos, cujo exercício no Brasil suspende o exercício em Portugal. Nove meses não bastam.",
+  "sigla": "DC",
+  "sinal": "Português com prazo curto de residência (meses) e “direito de se alistar”; ou “a Constituição exige três anos”.",
+  "tipo": "troca",
+  "topico": "dc-2e"
+ },
+ {
+  "id": "pg-lp-5-5-01",
+  "armadilha": "Em “cada um de nós vislumbra”, o plural vislumbramos também seria correto.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "cada um de nós / nenhum de nós (núcleo singular)",
+   "quais de nós / a maioria de nós (aceitam o plural)"
+  ],
+  "qids": [
+   "lp55-06"
+  ],
+  "ref": "Aula 9 §9.3; §9.8 (MP-SC 2023)",
+  "regra": "O núcleo de “cada um de nós” e de “nenhum de nós” é “cada um” ou “nenhum”, sempre singular. Só “quais/quantos de nós” e os partitivos aceitam o plural ou a 1ª pessoa.",
+  "sigla": "LP",
+  "sinal": "“cada”, “nenhum” ou “qualquer” antes de “de nós/de vós”: o pronome no plural é especificador e não manda no verbo.",
+  "tipo": "troca",
+  "topico": "lp-5-5"
+ },
+ {
+  "id": "pg-lp-5-5-02",
+  "armadilha": "A flexão do infinitivo é facultativa em “passam a decidir” e prejudicaria a correção em “É necessário compreender”.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "locução verbal: infinitivo principal invariável",
+   "infinitivo em oração própria (subjetiva, após preposição): flexão facultativa"
+  ],
+  "qids": [
+   "lp55-07",
+   "lp55-18"
+  ],
+  "ref": "Aula 9 §9.3 (Celso Cunha); MP-SC 2023; MPU 2018; MP-PI 2018",
+  "regra": "Na locução verbal só o auxiliar se flexiona (passam a decidir, devem ser). Fora da locução, sem sujeito explícito próprio, flexionar o infinitivo é facultativo e só dá ênfase ao agente (é necessário compreender/compreendermos).",
+  "sigla": "LP",
+  "sinal": "Verifique se o infinitivo forma locução com o verbo anterior (mesmo sujeito, auxiliar + principal) ou se é uma oração autônoma (substituível por “isto”). O Lucas inverteu as duas regras nos dois itens.",
+  "tipo": "troca",
+  "topico": "lp-5-5"
+ },
+ {
+  "id": "pg-lp-5-5-03",
+  "armadilha": "“Dispositivos legais foram adotados” pode virar adotou-se dispositivos legais.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": [
+   "se apassivador (VTD + se): o verbo concorda com o sujeito paciente",
+   "se indeterminador (VTI/VI/VL + se): verbo sempre no singular"
+  ],
+  "qids": [
+   "lp55-10",
+   "lp55-22",
+   "lp55-09",
+   "lp55-21",
+   "lp55-11"
+  ],
+  "ref": "Aula 9 §9.3; §9.8 (EBSERH 2018; CGE-CE 2019; STM 2017)",
+  "regra": "Ao passar a passiva analítica para a sintética, o verbo mantém o número do sujeito paciente: adotaram-se dispositivos. O singular obrigatório só vale quando há preposição (precisa-se de, trata-se de).",
+  "sigla": "LP",
+  "sinal": "Não há preposição depois do verbo + se e o verbo é transitivo direto: teste “dispositivos foram adotados”. Se a analítica funciona, é passiva e o verbo vai ao plural.",
+  "tipo": "troca",
+  "topico": "lp-5-5"
+ },
+ {
+  "id": "pg-lp-5-5-04",
+  "armadilha": "“A substituição preservaria a correção gramatical” é errado porque o sentido muda.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "registrada",
+  "par": null,
+  "qids": [
+   "lp55-16",
+   "lp55-15",
+   "lp55-05"
+  ],
+  "ref": "Aula 9 §9.6; §9.10 (SEPLAG-RR 2023; Petrobras 2021; MP-TO 2024)",
+  "regra": "Quando o comando pergunta só pela correção, mudar o referente ou o sentido não torna o item errado. A Cebraspe separa “correção” de “correção e sentidos”. “À credibilidade e à imagem públicas/pública” é correto nas duas formas: o adjetivo posposto concorda com todos ou com o mais próximo.",
+  "sigla": "LP",
+  "sinal": "Conte o que o comando avalia: “a correção” sozinha ou “a correção e o sentido/as relações coesivas”. Não acrescente um critério que o item não pediu.",
+  "tipo": "alcance",
+  "topico": "lp-5-5"
+ },
+ {
+  "id": "pg-lp-5-5-05",
+  "armadilha": "Adjetivo antes de dois substantivos pode ir ao plural para concordar com ambos.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "adjetivo posposto: plural ou o mais próximo",
+   "adjetivo anteposto: só o mais próximo"
+  ],
+  "qids": [
+   "lp55-28"
+  ],
+  "ref": "Aula 9 §9.6 (MP-GO 2018: “vermelhos rosas e cravos” é erro)",
+  "regra": "Depois dos substantivos, o adjetivo vai ao plural ou concorda com o mais próximo. Antes deles, concorda só com o mais próximo, salvo com nomes próprios ou de parentesco (plural) e quando é predicativo do objeto.",
+  "sigla": "LP",
+  "sinal": "Veja de que lado dos substantivos está o adjetivo antes de aplicar a dupla concordância.",
+  "tipo": "troca",
+  "topico": "lp-5-5"
+ },
+ {
+  "id": "pg-lp-5-5-06",
+  "armadilha": "O particípio que segue “um conjunto de técnicas” só pode concordar com “técnicas”.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": "Cebraspe · Câmara dos Deputados 2026 (Edital nº 1 de 30/12/2025, aplicação 08/03/2026) · Conhecimentos Gerais para todos os cargos · item 2 · gabarito definitivo C",
+  "origem": "prova",
+  "par": [
+   "núcleo coletivo (“conjunto”)",
+   "especificador (“de técnicas”)"
+  ],
+  "qids": [
+   "lp55-29"
+  ],
+  "ref": "Aula 9 §9.3 (coletivos especificados); §9.6",
+  "regra": "O adjetivo ou particípio que se refere a um coletivo seguido de especificador pode concordar com o núcleo (usado) ou com o especificador (usadas). As duas formas são corretas.",
+  "sigla": "LP",
+  "sinal": "Coletivo + “de” + plural seguido de particípio. O item pergunta só pela correção.",
+  "tipo": "troca",
+  "topico": "lp-5-5"
+ },
+ {
+  "id": "pg-lp-5-5-07",
+  "armadilha": "Todo sujeito com “de” + plural admite verbo no plural.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "lp55-30"
+  ],
+  "ref": "Aula 9 §9.3; §9.8 (MP-CE 2019; MP-TO 2024; Telebras 2021; ITEP 2018)",
+  "regra": "A dupla concordância vale só para partitivo, coletivo ou porcentagem seguidos de especificador (a maioria dos, grande parte das, um terço das). Fora disso, o verbo concorda com o núcleo. Se o núcleo e o especificador estão no singular, só cabe o singular.",
+  "sigla": "LP",
+  "sinal": "Pergunte se o núcleo é uma parte de um todo (maioria, parte, terço) ou um substantivo comum (integridade, presença, inclusão).",
+  "tipo": "excecao",
+  "topico": "lp-5-5"
+ },
+ {
+  "id": "pg-lp-5-5-08",
+  "armadilha": "Trocar “há” por existe, ou “há” por podem haver, mantém a correção.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "haver (existir/ocorrer): impessoal, o termo é objeto",
+   "existir/ocorrer: pessoal, o termo é sujeito"
+  ],
+  "qids": [
+   "lp55-02",
+   "lp55-03",
+   "lp55-04"
+  ],
+  "ref": "Aula 9 §9.3; §9.8 (TRF6 2025; INPI 2024; EMAP 2018; PF 2018)",
+  "regra": "“Haver” no sentido de existir ou ocorrer fica na 3ª do singular e contamina o auxiliar (pode haver). “Existir” e “ocorrer” concordam com o sujeito (existiam diferenças, ocorreu uma ampliação, podem existir).",
+  "sigla": "LP",
+  "sinal": "Substituição de “há/houve/havia” por sinônimo, ou locução com “haver”: refaça a concordância com o termo que vira sujeito.",
+  "tipo": "troca",
+  "topico": "lp-5-5"
+ },
+ {
+  "id": "pg-lp-5-5-09",
+  "armadilha": "O substantivo que vem depois do verbo é complemento, por isso o verbo pode ficar no singular.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "sujeito posposto",
+   "objeto/complemento"
+  ],
+  "qids": [
+   "lp55-31"
+  ],
+  "ref": "Aula 9 §9.3; mapa lp-5-5 “Sujeito posposto” (PC-PE 2024; SEMEF-AM 2019)",
+  "regra": "O sujeito depois do verbo continua mandando na concordância. Ponha a frase na ordem direta antes de julgar.",
+  "sigla": "LP",
+  "sinal": "Verbo no início da oração seguido de substantivo no plural, sobretudo com verbos intransitivos (chegar, findar, surgir, faltar).",
+  "tipo": "troca",
+  "topico": "lp-5-5"
+ },
+ {
+  "id": "pg-lp-5-5-10",
+  "armadilha": "Com sujeito composto, o verbo tem de ir ao plural em qualquer posição.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": [
+   "sujeito composto anteposto: plural obrigatório",
+   "sujeito composto posposto: plural ou o núcleo mais próximo"
+  ],
+  "qids": [
+   "lp55-32"
+  ],
+  "ref": "Aula 9 §9.4; §9.9 (Diplomata 2016; TRT-20 2016; IPHAN 2018)",
+  "regra": "Com o sujeito composto antes do verbo, o plural é obrigatório. Com ele depois do verbo, a concordância com o núcleo mais próximo também é abonada.",
+  "sigla": "LP",
+  "sinal": "Veja de que lado do verbo estão os núcleos. Verbo antes deles admite as duas concordâncias.",
+  "tipo": "troca",
+  "topico": "lp-5-5"
+ },
+ {
+  "id": "pg-lp-5-5-11",
+  "armadilha": "Em “um dos deputados que votaram”, o singular votou comprometeria a correção.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "lp55-26"
+  ],
+  "ref": "Aula 9 §9.3; Manual de Comunicação do Senado",
+  "regra": "Em “um dos que” e “uma das pessoas que”, o verbo pode ir ao plural (com o especificador) ou ficar no singular (com “um”). O Manual do Senado recomenda o plural, mas não declara o singular errado.",
+  "sigla": "LP",
+  "sinal": "Item que declara “obrigatório” ou “comprometeria a correção” numa estrutura de dupla concordância.",
+  "tipo": "alcance",
+  "topico": "lp-5-5"
+ },
+ {
+  "id": "pg-lp-5-5-12",
+  "armadilha": "“É necessário”, “é proibido” e “é bom” são sempre invariáveis.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "lp55-33"
+  ],
+  "ref": "Aula 9 §9.6 (UFPE 2019)",
+  "regra": "Sem artigo ou determinante, a expressão fica invariável (é necessário paciência, é proibido entrada). Com artigo, o adjetivo concorda com o substantivo (é necessária a compreensão, é proibida a entrada).",
+  "sigla": "LP",
+  "sinal": "Veja se há artigo ou pronome antes do substantivo que segue “é + adjetivo”.",
+  "tipo": "excecao",
+  "topico": "lp-5-5"
+ },
+ {
+  "id": "pg-lp-5-5-13",
+  "armadilha": "“anexo”, “meio” e “bastante” nunca variam.",
+  "criadoEm": "2026-10-27",
+  "fonteProva": null,
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "lp55-34"
+  ],
+  "ref": "Aula 9 §9.6 (FGV 2021 “meio-dia e meia”; MP-GO 2018)",
+  "regra": "Anexo, apenso, incluso, mesmo, próprio, quite e obrigado concordam com o substantivo. “Em anexo”, “menos” e “alerta” são invariáveis. “Meio” varia como numeral (meio-dia e meia) e não como advérbio (meio cansada). “Bastante” varia como pronome adjetivo (bastantes matérias).",
+  "sigla": "LP",
+  "sinal": "Descubra a classe da palavra: modifica um substantivo (varia) ou um adjetivo/verbo (advérbio, invariável)? E veja se há preposição (“em anexo”).",
+  "tipo": "literalidade",
+  "topico": "lp-5-5"
+ },
+ {
+  "id": "pg-lp-5-6-01",
+  "armadilha": "A assessoria informou-lhe do resultado da votação, pois informar exige objeto indireto de pessoa.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "informar alguém de algo (pessoa OD)",
+   "informar algo a alguém (pessoa OI)"
+  ],
+  "qids": [
+   "lp56-02",
+   "lp56-01",
+   "lp56-03"
+  ],
+  "ref": "Estratégia LDI cap. 8 §8.3; mapa lp-5-6, Informar, avisar, notificar; pré-teste de 28/10 (erro com certeza)",
+  "regra": "Informar leva um objeto direto e um indireto; qualquer um dos dois pode ser a pessoa, mas nunca os dois são indiretos: informou-o do resultado / informou-lhe o resultado. Vale também para avisar, notificar, cientificar, certificar e prevenir.",
+  "sigla": "lp",
+  "sinal": "'lhe' e 'de/sobre' no mesmo verbo (dois complementos preposicionados), ou o item afirmar que a pessoa só pode ser OI.",
+  "tipo": "troca",
+  "topico": "lp-5-6"
+ },
+ {
+  "id": "pg-lp-5-6-02",
+  "armadilha": "Os servidores obedecem as normas do Regimento Interno.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "obedecer a (VTI)",
+   "cumprir/respeitar (VTD)"
+  ],
+  "qids": [
+   "lp56-04"
+  ],
+  "ref": "Estratégia LDI cap. 8 §8.3; mapa lp-5-6, Obedecer e desobedecer a; pré-teste de 28/10 (erro com dúvida)",
+  "regra": "Obedecer e desobedecer são transitivos indiretos e regem a preposição a: obedecer às normas, obedecer ao pai.",
+  "sigla": "lp",
+  "sinal": "Obedecer/desobedecer seguido de artigo sem preposição ('obedece as', 'obedece o'), sobretudo sem crase antes de feminino.",
+  "tipo": "literalidade",
+  "topico": "lp-5-6"
+ },
+ {
+  "id": "pg-lp-5-6-03",
+  "armadilha": "'As normas regimentais são obedecidas pelos servidores' está correta, embora obedecer seja transitivo indireto.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "V4",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "lp56-05"
+  ],
+  "ref": "Estratégia LDI cap. 8 §8.3; mapa lp-5-6, VTI que aceitam voz passiva",
+  "regra": "Exceção real: obedecer, desobedecer, atender, pagar, perdoar, apelar e abusar, embora transitivos indiretos, admitem voz passiva.",
+  "sigla": "lp",
+  "sinal": "Item certo que parece errado, apoiado na regra geral de que só VTD vai para a passiva.",
+  "tipo": "verdade",
+  "topico": "lp-5-6"
+ },
+ {
+  "id": "pg-lp-5-6-04",
+  "armadilha": "O deputado assistiu a sessão inteira (sentido de ver); ou: 'não assisti a ele' pode ser trocado por 'assisti-lhe'.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "assistir a (ver/presenciar; caber)",
+   "assistir (ajudar, VTD)"
+  ],
+  "qids": [
+   "lp56-06",
+   "lp56-08",
+   "lp56-07"
+  ],
+  "ref": "Estratégia LDI cap. 8 §8.3; mapa lp-5-6, Assistir e 'Lhe' é só objeto indireto",
+  "regra": "No sentido de ver, assistir é VTI com a e não aceita lhe (assisti a ele). No sentido de caber também rege a (assiste razão ao réu). No sentido de ajudar, é VTD.",
+  "sigla": "lp",
+  "sinal": "Assistir (ver) sem preposição, ou troca de 'a ele' por 'lhe'. Identifique o sentido antes de julgar.",
+  "tipo": "troca",
+  "topico": "lp-5-6"
+ },
+ {
+  "id": "pg-lp-5-6-05",
+  "armadilha": "A troca de 'o cargo que pretende' por 'o cargo a que aspira' mantém a correção e o sentido.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "V1",
+  "origem": "analitica",
+  "par": [
+   "pretender/almejar (VTD)",
+   "aspirar a (VTI)"
+  ],
+  "qids": [
+   "lp56-09"
+  ],
+  "ref": "Estratégia LDI cap. 8 §8.3; mapa lp-5-6, Aspirar",
+  "regra": "Aspirar (almejar) é VTI com a e não aceita lhe. Ao trocar um sinônimo VTD por aspirar, a preposição entra, inclusive antes do relativo: a que aspira. Aspirar (sugar) é VTD.",
+  "sigla": "lp",
+  "sinal": "Reescrita com sinônimo seguida de oração adjetiva: verifique se a preposição foi para antes do 'que'.",
+  "tipo": "verdade",
+  "topico": "lp-5-6"
+ },
+ {
+  "id": "pg-lp-5-6-06",
+  "armadilha": "Em 'A aprovação implica a suspensão da sessão', a norma-padrão exigiria a preposição em após 'implica'.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "implicar (acarretar, VTD)",
+   "implicar-se em (envolver-se)"
+  ],
+  "qids": [
+   "lp56-10"
+  ],
+  "ref": "Estratégia LDI cap. 8 §8.3; mapa lp-5-6, Implicar",
+  "regra": "No sentido de acarretar, implicar é VTD (implica sacrifícios); a aula orienta evitar 'implicar em' na prova. Em é do sentido de envolver(-se); com, do sentido de hostilizar.",
+  "sigla": "lp",
+  "sinal": "Item que exige ou corrige para 'implica em' quando o sentido é acarretar.",
+  "tipo": "troca",
+  "topico": "lp-5-6"
+ },
+ {
+  "id": "pg-lp-5-6-07",
+  "armadilha": "Suprimir o acento de crase de 'visa à redução de custos' (visa a redução) não prejudica a correção, segundo o Cebraspe.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "V4",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "lp56-11"
+  ],
+  "ref": "Estratégia LDI cap. 8 §8.3; mapa lp-5-6, Visar (trap)",
+  "regra": "Visar (ter por objetivo) é tradicionalmente VTI com a, mas o Cebraspe aceita também a forma sem preposição; a supressão não gera erro. Visar (rubricar, mirar) é VTD.",
+  "sigla": "lp",
+  "sinal": "Item que diz que a supressão de 'a' em 'visa a' mantém a correção: parece errado, mas está certo para a banca.",
+  "tipo": "verdade",
+  "topico": "lp-5-6"
+ },
+ {
+  "id": "pg-lp-5-6-08",
+  "armadilha": "A comissão preferiu adiar a votação do que votar sem quórum.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "preferir X a Y",
+   "preferir (mais) X do que Y"
+  ],
+  "qids": [
+   "lp56-12"
+  ],
+  "ref": "Estratégia LDI cap. 8 §8.3 e §8.4; mapa lp-5-6, Preferir",
+  "regra": "Preferir rege a: prefere-se uma coisa a outra. Não se usa 'do que', 'mais' nem 'antes'. Vale para o adjetivo: preferível a.",
+  "sigla": "lp",
+  "sinal": "'Preferir' ou 'preferível' seguido de 'do que' ou com 'mais'.",
+  "tipo": "troca",
+  "topico": "lp-5-6"
+ },
+ {
+  "id": "pg-lp-5-6-09",
+  "armadilha": "A comitiva chegou na Câmara às nove horas; ou: o deputado reside à Asa Norte.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "verbos de movimento (a)",
+   "verbos de permanência (em)"
+  ],
+  "qids": [
+   "lp56-13",
+   "lp56-26"
+  ],
+  "ref": "Estratégia LDI cap. 8 §8.3 e §8.4; mapa lp-5-6, Chegar e ir a; Morar, residir, situar-se em",
+  "regra": "Verbos de movimento pedem a (chegar à Câmara, ir ao Congresso). Verbos e nomes de permanência pedem em (residir em, morador em, situado em).",
+  "sigla": "lp",
+  "sinal": "'Chegar em' ou 'ir em', ou 'residir à' / 'situado à'. Pergunte: deslocamento ou permanência?",
+  "tipo": "troca",
+  "topico": "lp-5-6"
+ },
+ {
+  "id": "pg-lp-5-6-10",
+  "armadilha": "O presidente lembrou do compromisso assumido na reunião.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "lembrar/esquecer (VTD, sem pronome)",
+   "lembrar-se/esquecer-se de (VTI, com pronome)"
+  ],
+  "qids": [
+   "lp56-16",
+   "lp56-17"
+  ],
+  "ref": "Estratégia LDI cap. 8 §8.3; mapa lp-5-6, Lembrar e esquecer: tudo ou nada",
+  "regra": "Tudo ou nada: sem pronome, sem preposição (esqueci os documentos); com pronome, entra de (esqueci-me dos documentos). Preposição sem pronome é erro na norma-padrão.",
+  "sigla": "lp",
+  "sinal": "'Lembrar de' ou 'esquecer de' sem pronome, ou pronome sem o de. Na reescrita, os dois saem ou entram juntos.",
+  "tipo": "troca",
+  "topico": "lp-5-6"
+ },
+ {
+  "id": "pg-lp-5-6-11",
+  "armadilha": "'O relator custou a aceitar o acordo' está correto, pois, no sentido de ser difícil, o sujeito de custar é a pessoa.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "sujeito = a coisa difícil (oração)",
+   "sujeito = a pessoa"
+  ],
+  "qids": [
+   "lp56-23"
+  ],
+  "ref": "Mapa lp-5-6, Custar (ser difícil): Ciberdúvidas (incremento, não está na aula)",
+  "regra": "Custar (ser difícil) tem como sujeito a coisa difícil, em geral uma oração infinitiva, e a pessoa é objeto indireto: Custou ao relator aceitar o acordo; custa-me crer.",
+  "sigla": "lp",
+  "sinal": "Pessoa como sujeito de custar seguido de 'a + infinitivo'.",
+  "tipo": "troca",
+  "topico": "lp-5-6"
+ },
+ {
+  "id": "pg-lp-5-6-12",
+  "armadilha": "'O presidente quis agradecê-lo pela presença': o pronome o está correto como complemento de agradecer.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "pessoa = objeto indireto (lhe)",
+   "pessoa = objeto direto (o)"
+  ],
+  "qids": [
+   "lp56-24",
+   "lp56-25"
+  ],
+  "ref": "Mapa lp-5-6, Agradecer algo a alguém e Pagar e perdoar (Gramatigalhas/Migalhas); LDI §8.3",
+  "regra": "Agradecer, pagar e perdoar têm a coisa como OD e a pessoa como OI: agradecer-lhe, pagou-lhes o reajuste, perdoar a falta ao réu. Luft tolera 'pagar os credores', mas na prova prefira o OI de pessoa.",
+  "sigla": "lp",
+  "sinal": "Agradecer, pagar ou perdoar com o, a, os, as referindo-se a pessoa.",
+  "tipo": "troca",
+  "topico": "lp-5-6"
+ },
+ {
+  "id": "pg-lp-5-6-13",
+  "armadilha": "'O relator se simpatiza com a proposta da oposição' está correta, pois simpatizar é verbo pronominal.",
+  "criadoEm": "2026-10-30",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "simpatizar com (não pronominal)",
+   "queixar-se de / arrepender-se de (pronominais)"
+  ],
+  "qids": [
+   "lp56-15"
+  ],
+  "ref": "Item lp56-15 (Estratégia LDI cap. 8 §8.3, a confirmar na aula); regra conferida só em fonte web",
+  "regra": "Simpatizar e antipatizar regem 'com' e, na norma-padrão, não levam pronome: simpatizo com a proposta. A preposição está certa; o erro é o 'se'.",
+  "sigla": "LP",
+  "sinal": "'me/se/nos' antes de simpatizar ou antipatizar, sobretudo com a justificativa 'pois é verbo pronominal'.",
+  "tipo": "troca",
+  "topico": "lp-5-6"
+ },
+ {
+  "id": "pg-pl-3-1-01",
+  "armadilha": "Matéria de competência exclusiva do Congresso não é promulgada pelo Presidente do Senado.",
+  "criadoEm": "2026-10-30",
+  "fonteProva": null,
+  "mecanismo": "V4",
+  "origem": "registrada",
+  "par": [
+   "competência exclusiva do CN",
+   "competência privativa"
+  ],
+  "qids": [
+   "pl31-17"
+  ],
+  "ref": "RCCN, art. 52, parágrafo único",
+  "regra": "Aprovado em definitivo, o texto vai à sanção. Se a matéria for da competência exclusiva do CN, será promulgada pelo Presidente do Senado.",
+  "sigla": "PL",
+  "sinal": "'exclusiva do Congresso Nacional' + promulgação: sem sanção. Não confundir com privativa.",
+  "tipo": "verdade",
+  "topico": "pl-3-1"
+ },
+ {
+  "id": "pg-pl-3-1-02",
+  "armadilha": "Se a finalidade da sessão secreta consta da proposta, ela é divulgada.",
+  "criadoEm": "2026-10-30",
+  "fonteProva": null,
+  "mecanismo": "V4",
+  "origem": "registrada",
+  "par": null,
+  "qids": [
+   "pl31-20"
+  ],
+  "ref": "RCCN, art. 27, caput e § 1º",
+  "regra": "O Plenário delibera sobre sessão secreta, mediante proposta da Presidência ou de Líder. A finalidade figura expressamente na proposta, mas não é divulgada.",
+  "sigla": "PL",
+  "sinal": "'Figurar na proposta' não significa 'divulgar'. Separe as duas partes.",
+  "tipo": "verdade",
+  "topico": "pl-3-1"
+ },
+ {
+  "id": "pg-pl-3-1-03",
+  "armadilha": "Os votos das duas Casas são somados e vence a maioria do total.",
+  "criadoEm": "2026-10-30",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "votos separados por Casa",
+   "soma dos congressistas"
+  ],
+  "qids": [
+   "pl31-01"
+  ],
+  "ref": "RCCN, art. 43, caput e § 1º",
+  "regra": "Os votos são sempre computados separadamente, e o voto contrário de uma das Casas importa a rejeição da matéria.",
+  "sigla": "PL",
+  "sinal": "'somados', 'total de congressistas'.",
+  "tipo": "troca",
+  "topico": "pl-3-1"
+ },
+ {
+  "id": "pg-pl-3-1-04",
+  "armadilha": "Em veto, a votação começa sempre pelo Senado.",
+  "criadoEm": "2026-10-30",
+  "fonteProva": null,
+  "mecanismo": "F5",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "pl31-02",
+   "pl31-03"
+  ],
+  "ref": "RCCN, art. 43, § 2º",
+  "regra": "A votação começa pela Câmara. Só em projeto de lei vetado de iniciativa de Senadores começa pelo Senado.",
+  "sigla": "PL",
+  "sinal": "'sempre' ao falar da Casa que vota primeiro. Pergunte: de quem é a iniciativa?",
+  "tipo": "excecao",
+  "topico": "pl-3-1"
+ },
+ {
+  "id": "pg-pl-3-1-05",
+  "armadilha": "A matéria pode ter a votação encaminhada por 4 Senadores e 6 Deputados.",
+  "criadoEm": "2026-10-30",
+  "fonteProva": null,
+  "mecanismo": "F4",
+  "origem": "analitica",
+  "par": [
+   "4+6 (mínimo para requerer encerrar a discussão)",
+   "4+4 (encaminhamento da matéria)"
+  ],
+  "qids": [
+   "pl31-11",
+   "pl31-12"
+  ],
+  "ref": "RCCN, arts. 39, § 1º, 41 e 49",
+  "regra": "Encerrar a discussão: após falarem no mínimo 4 Senadores e 6 Deputados. Encaminhar a matéria: 4 + 4. Encaminhar requerimento: 2 de cada Casa.",
+  "sigla": "PL",
+  "sinal": "Número de oradores: pergunte primeiro qual é a fase.",
+  "tipo": "literalidade",
+  "topico": "pl-3-1"
+ },
+ {
+  "id": "pg-pl-3-1-06",
+  "armadilha": "Os avulsos da Ordem do Dia são distribuídos com 48 horas de antecedência.",
+  "criadoEm": "2026-10-30",
+  "fonteProva": null,
+  "mecanismo": "F4",
+  "origem": "analitica",
+  "par": [
+   "24 h (avulsos)",
+   "48 h (adiamento de votação)"
+  ],
+  "qids": [
+   "pl31-21"
+  ],
+  "ref": "RCCN, arts. 33, 40 e 119",
+  "regra": "Avulsos: antecedência mínima de 24 horas. Adiamento de votação: até 48 horas. Sessão sobre proposta de delegação: dentro de 72 horas.",
+  "sigla": "PL",
+  "sinal": "Prazo em horas: associe cada número ao seu ato.",
+  "tipo": "literalidade",
+  "topico": "pl-3-1"
+ },
+ {
+  "id": "pg-pl-3-1-07",
+  "armadilha": "O Líder pode adiar a discussão por 48 horas.",
+  "criadoEm": "2026-10-30",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "adiamento de discussão",
+   "adiamento de votação"
+  ],
+  "qids": [
+   "pl31-10"
+  ],
+  "ref": "RCCN, art. 40",
+  "regra": "Não se admite adiamento de discussão. A votação pode ser adiada por até 48 horas, a requerimento de Líder, sem prejudicar o prazo constitucional.",
+  "sigla": "PL",
+  "sinal": "'adiar a discussão'.",
+  "tipo": "troca",
+  "topico": "pl-3-1"
+ },
+ {
+  "id": "pg-pl-3-1-08",
+  "armadilha": "A verificação de votação exige 1/6 de Senadores ou de Deputados.",
+  "criadoEm": "2026-10-30",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "5 Senadores ou 20 Deputados (verificação)",
+   "1/6 (pedido de votação nominal)"
+  ],
+  "qids": [
+   "pl31-13"
+  ],
+  "ref": "RCCN, arts. 44, parágrafo único, e 45, §§ 1º e 3º",
+  "regra": "Verificação: Líder, 5 Senadores ou 20 Deputados. Havendo número legal, nova verificação só após 1 hora.",
+  "sigla": "PL",
+  "sinal": "Quem pede o quê: verificação, nominal ou encerramento da discussão.",
+  "tipo": "troca",
+  "topico": "pl-3-1"
+ },
+ {
+  "id": "pg-pl-3-1-09",
+  "armadilha": "Qualquer Congressista pode requerer destaque ou preferência.",
+  "criadoEm": "2026-10-30",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "só Líder (preferência e destaque)",
+   "qualquer Congressista (prorrogação)"
+  ],
+  "qids": [
+   "pl31-14",
+   "pl31-07"
+  ],
+  "ref": "RCCN, arts. 23 e 50",
+  "regra": "Preferência e destaque: só Líder, até anunciada a votação. Prorrogação da sessão: qualquer Congressista ou proposta do Presidente.",
+  "sigla": "PL",
+  "sinal": "Legitimidade: 'qualquer Congressista' ou 'Líder'.",
+  "tipo": "troca",
+  "topico": "pl-3-1"
+ },
+ {
+  "id": "pg-pl-3-1-10",
+  "armadilha": "Sessão solene exige 1/6; a falta de quórum de deliberação encerra a sessão.",
+  "criadoEm": "2026-10-30",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "quórum de abertura e presença (1/6 de cada Casa)",
+   "quórum de deliberação"
+  ],
+  "qids": [
+   "pl31-04",
+   "pl31-05",
+   "pl31-09",
+   "pl31-18"
+  ],
+  "ref": "RCCN, arts. 28, 29, 35 e 53, parágrafo único",
+  "regra": "Abertura: 1/6 de cada Casa, com espera máxima de 30 minutos. Sessão solene: qualquer número. Sem número para votar, passa-se à matéria em discussão. Encerra-se a sessão se a presença cair abaixo de 1/6.",
+  "sigla": "PL",
+  "sinal": "Separe sessão comum e solene, e presença de deliberação.",
+  "tipo": "troca",
+  "topico": "pl-3-1"
+ },
+ {
+  "id": "pg-pl-3-1-11",
+  "armadilha": "Na posse, a comissão de recepção tem 3 Senadores e 3 Deputados.",
+  "criadoEm": "2026-10-30",
+  "fonteProva": null,
+  "mecanismo": "F4",
+  "origem": "analitica",
+  "par": [
+   "5+5 (posse)",
+   "3+3 (Chefe de Estado estrangeiro)"
+  ],
+  "qids": [
+   "pl31-19",
+   "pl31-22"
+  ],
+  "ref": "RCCN, arts. 60, 68 e 70",
+  "regra": "Posse: 5 Senadores e 5 Deputados. Chefe de Estado estrangeiro: 3 e 3, e o visitante, se quiser falar, fala após os oradores.",
+  "sigla": "PL",
+  "sinal": "Número da comissão de recepção: quem está sendo recebido?",
+  "tipo": "literalidade",
+  "topico": "pl-3-1"
+ },
+ {
+  "id": "pg-pl-3-1-12",
+  "armadilha": "Falecimento de Congressista leva à suspensão da sessão.",
+  "criadoEm": "2026-10-30",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "suspender (conveniência da ordem)",
+   "levantar (falecimento)"
+  ],
+  "qids": [
+   "pl31-23"
+  ],
+  "ref": "RCCN, arts. 24 e 25",
+  "regra": "A sessão pode ser suspensa por conveniência da ordem. Pode ser levantada, a qualquer momento, por falecimento de Congressista ou de Chefe de um dos Poderes da República.",
+  "sigla": "PL",
+  "sinal": "Motivo e verbo: ordem pede suspender; falecimento pede levantar.",
+  "tipo": "troca",
+  "topico": "pl-3-1"
+ },
+ {
+  "id": "pg-rf-1-2-01",
+  "armadilha": "Por exigir o trecho completo de áudio antes de emitir qualquer símbolo, a CTC é a família end-to-end menos adequada ao tempo real.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "CTC (um símbolo ou branco por quadro, boa para tempo real)",
+   "codificador-decodificador com atenção (precisa do trecho inteiro)"
+  ],
+  "qids": [
+   "c12-06",
+   "c12-10"
+  ],
+  "ref": "Etapa 03, p. 40-41 (1.2.2 a 1.2.4) e p. 44 (quadro 1.2.9); diário 2026-10-28-rf-1 (erro de evocação, origem leitura)",
+  "regra": "Quem precisa do trecho inteiro é o codificador-decodificador com atenção (o Whisper trabalha em janelas de 30 s). A CTC percorre o áudio quadro a quadro e tem boa vocação para tempo real; o transdutor, que herda esse ritmo, é o melhor dos três.",
+  "sigla": "rf",
+  "sinal": "'trecho inteiro', 'áudio completo' ou 'menos adequada ao tempo real' atribuídos à CTC ou ao transdutor: confira a linha 'Vocação para tempo real' do quadro 1.2.9.",
+  "tipo": "troca",
+  "topico": "rf-1-2"
+ },
+ {
+  "id": "pg-rf-1-2-02",
+  "armadilha": "Os modelos end-to-end dispensam dados rotulados, pois aprendem a transcrever a partir de áudio sem transcrição.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "end-to-end (treino conjunto com pares de áudio e texto)",
+   "autossupervisão (pré-treino do wav2vec 2.0 com áudio não rotulado)"
+  ],
+  "qids": [
+   "c12-01"
+  ],
+  "ref": "Etapa 03, p. 39 (1.2.1), p. 42 (1.2.6) e p. 45; diário 2026-10-28-rf-1 (erro de evocação, origem interferência)",
+  "regra": "End-to-end é rede única, com treino conjunto e um só objetivo, aprendida com pares de áudio e texto. Dispensar rótulos é próprio do pré-treino autossupervisionado do wav2vec 2.0, que ainda precisa de ajuste fino com fala transcrita.",
+  "sigla": "rf",
+  "sinal": "'dispensa dados rotulados', 'sem transcrição' ou 'em qualquer etapa' ligados à definição de E2E ou ao wav2vec 2.0.",
+  "tipo": "troca",
+  "topico": "rf-1-2"
+ },
+ {
+  "id": "pg-rf-1-2-03",
+  "armadilha": "O branco da CTC representa os trechos de silêncio do áudio.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "branco da CTC (símbolo de 'nenhum rótulo' que separa repetições)",
+   "silêncio (ausência de fala)"
+  ],
+  "qids": [
+   "c12-05",
+   "c12-19"
+  ],
+  "ref": "Etapa 03, p. 40 (1.2.2), p. 44 (Não confunda) e p. 45",
+  "regra": "O branco significa 'nenhum rótulo agora' e separa letras repetidas (sem ele, os dois 's' de 'sessão' se fundiriam). Não equivale a silêncio.",
+  "sigla": "rf",
+  "sinal": "'branco' igualado a 'silêncio' ou 'pausa', ou remoção dos brancos descrita como eliminação de pausas.",
+  "tipo": "troca",
+  "topico": "rf-1-2"
+ },
+ {
+  "id": "pg-rf-1-2-04",
+  "armadilha": "O Conformer é a quarta família de modelos end-to-end e usa exclusivamente convolução.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "família de saída (CTC, transdutor, atenção)",
+   "codificador (Conformer, Transformer)"
+  ],
+  "qids": [
+   "c12-13"
+  ],
+  "ref": "Etapa 03, p. 41 (1.2.5), p. 44 e p. 45",
+  "regra": "O Conformer é um codificador, não uma família: combina convolução (padrões locais) com autoatenção (relações globais) e pode alimentar qualquer das três famílias.",
+  "sigla": "rf",
+  "sinal": "'quarta família', 'ao lado da CTC, do transdutor...', 'exclusivamente convolução' ou 'substitui a atenção'.",
+  "tipo": "troca",
+  "topico": "rf-1-2"
+ },
+ {
+  "id": "pg-rf-1-2-05",
+  "armadilha": "O Whisper é autossupervisionado e recebe a forma de onda bruta; o wav2vec 2.0 é fracamente supervisionado.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "wav2vec 2.0 (autossupervisionado, forma de onda bruta, ajuste fino com CTC)",
+   "Whisper (fracamente supervisionado, 680.000 h, log-Mel, decodificador autorregressivo)"
+  ],
+  "qids": [
+   "c12-14"
+  ],
+  "ref": "Etapa 03, p. 42 (1.2.6), p. 44 e p. 46",
+  "regra": "Autossupervisão, forma de onda bruta e ajuste fino por CTC são do wav2vec 2.0; supervisão fraca em larga escala (680.000 h), log-Mel e decodificador autorregressivo são do Whisper.",
+  "sigla": "rf",
+  "sinal": "Atributo da tabela do 1.2.6 aparecendo com o modelo errado.",
+  "tipo": "troca",
+  "topico": "rf-1-2"
+ },
+ {
+  "id": "pg-rf-1-2-06",
+  "armadilha": "Na CTC, cada símbolo considera os já emitidos, o que lhe dá um modelo de linguagem interno e dispensa o externo.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "não autorregressivo (CTC, independência condicional)",
+   "autorregressivo (transdutor e atenção)"
+  ],
+  "qids": [
+   "c12-08",
+   "c12-11",
+   "c12-03"
+  ],
+  "ref": "Etapa 03, p. 40 (1.2.2), p. 41 (1.2.4) e p. 44",
+  "regra": "A CTC supõe independência condicional entre as saídas, dado o áudio; não tem modelo de linguagem interno e costuma ser combinada com um externo. Transdutor e atenção dependem do que já foi emitido. Nos E2E, o modelo de linguagem externo é opcional, não proibido.",
+  "sigla": "rf",
+  "sinal": "'depende dos símbolos anteriores' ou 'modelo de linguagem interno' atribuídos à CTC; 'não pode usar modelo de linguagem externo' dito de qualquer E2E.",
+  "tipo": "troca",
+  "topico": "rf-1-2"
+ },
+ {
+  "id": "pg-rf-1-2-07",
+  "armadilha": "A busca em feixe elimina a alucinação, e a revisão humana é defesa completa contra ela.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F1",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "c12-16",
+   "c12-18",
+   "c12-17"
+  ],
+  "ref": "Etapa 03, p. 43-44 (1.2.8) e p. 46",
+  "regra": "A busca em feixe só reduz os laços de repetição em relação à decodificação gulosa. Recuo de temperatura, VAD, ajuste fino e revisão humana também ajudam, mas nenhuma defesa automática é completa, e o texto alucinado é fluente, o que engana o revisor.",
+  "sigla": "rf",
+  "sinal": "'elimina', 'exclusivamente', 'defesa completa', 'identificado com facilidade' perto de alucinação.",
+  "tipo": "alcance",
+  "topico": "rf-1-2"
+ },
+ {
+  "id": "pg-rf-1-2-08",
+  "armadilha": "Como cada símbolo fica preso a um quadro de áudio, a CTC pura é menos propensa que os modelos autorregressivos a escrever texto sem fala correspondente.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "V1",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "c12-20"
+  ],
+  "ref": "Etapa 03, p. 40 (1.2.2), p. 43 (1.2.8) e p. 44",
+  "regra": "Verdadeira. A alucinação vem do decodificador autorregressivo, que se apoia no texto já escrito quando há pouca evidência acústica; na CTC 'não há um redator livre'.",
+  "sigla": "rf",
+  "sinal": "Comparação modalizada ('menos propensa') que parece contrariar a ideia de que todo E2E alucina.",
+  "tipo": "verdade",
+  "topico": "rf-1-2"
+ },
+ {
+  "id": "pg-ti-5-2-01",
+  "armadilha": "Agrupar discursos parlamentares por semelhança temática, sem categorias definidas previamente, é exemplo de aprendizado não supervisionado.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "V1",
+  "origem": "registrada",
+  "par": null,
+  "qids": [
+   "ti52-03"
+  ],
+  "ref": "LDI pós-edital Estratégia, TI e Dados, cap. 15.1 (clustering); mapa ti-5-2, Clusterização",
+  "regra": "Verdadeira. Quando os grupos não existem antes e nascem da semelhança entre os exemplos, a tarefa é clusterização, que é não supervisionada. Classificar exige classes prontas e dados rotulados.",
+  "sigla": "ti",
+  "sinal": "'sem categorias definidas previamente', 'por semelhança', 'agrupar': não há rótulo, logo não é classificação. Leia a negação antes de julgar.",
+  "tipo": "verdade",
+  "topico": "ti-5-2"
+ },
+ {
+  "id": "pg-ti-5-2-02",
+  "armadilha": "k-means e k-NN pertencem à mesma categoria de aprendizado, pois ambos usam um k definido previamente e calculam distâncias.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "k-means (não supervisionado, agrupa)",
+   "k-NN (supervisionado, classifica pelos rótulos dos vizinhos)"
+  ],
+  "qids": [
+   "ti52-07"
+  ],
+  "ref": "Mapa ti-5-2, Algoritmos supervisionados (trap); Russell & Norvig, cap. 19; Géron, cap. 1 (incremento)",
+  "regra": "O k-means divide dados sem rótulo em k grupos (não supervisionado); o k-NN classifica pelo rótulo dos k vizinhos mais próximos (supervisionado). Quem define a categoria é o sinal (rótulo ou não), não o nome.",
+  "sigla": "ti",
+  "sinal": "Semelhança superficial ('ambos usam k', 'ambos calculam distâncias') usada como causa para igualar a categoria.",
+  "tipo": "troca",
+  "topico": "ti-5-2"
+ },
+ {
+  "id": "pg-ti-5-2-03",
+  "armadilha": "No pré-treinamento de grandes modelos de linguagem, cada próxima palavra precisa ser rotulada manualmente por especialistas, razão pela qual essa etapa é supervisionada em sentido estrito.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "autossupervisionado / não supervisionado (alvo extraído do próprio texto)",
+   "supervisionado (rótulo humano)"
+  ],
+  "qids": [
+   "ti52-10"
+  ],
+  "ref": "LDI 15.1 (pré-treino não supervisionado); mapa ti-5-2, Autossupervisionado",
+  "regra": "No pré-treino, o alvo (a próxima palavra) sai do próprio texto, sem rotulagem manual. O LDI chama a etapa de não supervisionada; a literatura, de autossupervisionada. Errado é dizer que depende de rótulos humanos.",
+  "sigla": "ti",
+  "sinal": "'rotulada manualmente', 'por especialistas', 'em sentido estrito' aplicados a texto bruto.",
+  "tipo": "troca",
+  "topico": "ti-5-2"
+ },
+ {
+  "id": "pg-ti-5-2-04",
+  "armadilha": "No aprendizado por reforço, a recompensa informa ao agente, a cada passo, qual ação seria a correta, tal como o rótulo no supervisionado.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "recompensa (avalia o resultado da ação, pode chegar atrasada)",
+   "rótulo (diz qual é a resposta certa)"
+  ],
+  "qids": [
+   "ti52-12"
+  ],
+  "ref": "Mapa ti-5-2, Recompensa ≠ rótulo; Russell & Norvig, cap. 22 (incremento)",
+  "regra": "A recompensa só avalia o resultado da ação tomada e pode chegar com atraso (xadrez); não diz qual seria a ação correta. É isso que separa reforço de supervisionado.",
+  "sigla": "ti",
+  "sinal": "'qual ação seria a correta', 'a cada passo', 'tal como o rótulo'.",
+  "tipo": "troca",
+  "topico": "ti-5-2"
+ },
+ {
+  "id": "pg-ti-5-2-05",
+  "armadilha": "O objetivo da utilização de modelos supervisionados é o atendimento de tarefas como clusterização, redução de dimensionalidade e detecção de anomalias.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": "Cebraspe 2026 CD Técnico Legislativo – Assistente Legislativo e Administrativo, Específicos, item 151 (gabarito definitivo E, conferido em cd-2026-gabarito-tecnico.pdf)",
+  "mecanismo": "F3",
+  "origem": "prova",
+  "par": [
+   "supervisionado (classificação, regressão)",
+   "não supervisionado (clusterização, redução de dimensionalidade, anomalias, associação)"
+  ],
+  "qids": [
+   "b26tec-151",
+   "ti52-08"
+  ],
+  "ref": "Cebraspe 2026, Câmara dos Deputados, Técnico Legislativo (CD-AL-026), Específicos, item 151; LDI 15.1",
+  "regra": "Clusterização, redução de dimensionalidade e detecção de anomalias são tarefas típicas do não supervisionado; o supervisionado atende classificação e regressão.",
+  "sigla": "ti",
+  "sinal": "Lista de tarefas sem rótulo atribuída à categoria que usa rótulo.",
+  "tipo": "troca",
+  "topico": "ti-5-2"
+ },
+ {
+  "id": "pg-ti-5-2-06",
+  "armadilha": "Detecção de fraude é tarefa de anomalia; logo, é sempre aprendizado não supervisionado.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "V4",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "ti52-15"
+  ],
+  "ref": "Mapa ti-5-2, Que sinal orienta? e Detecção de anomalias (trap)",
+  "regra": "Quem decide a categoria é o sinal, não o nome da tarefa. Sem rótulos, detecção de anomalias é não supervisionada; treinada com exemplos já marcados como fraude ou legítimos, vira classificação supervisionada.",
+  "sigla": "ti",
+  "sinal": "Exemplos 'previamente marcados' numa tarefa que a aula lista como não supervisionada.",
+  "tipo": "verdade",
+  "topico": "ti-5-2"
+ },
+ {
+  "id": "pg-ti-5-2-07",
+  "armadilha": "No aprendizado por reforço, o agente deve sempre escolher a ação de maior recompensa já conhecida.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F1",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "ti52-11",
+   "ti52-16"
+  ],
+  "ref": "Mapa ti-5-2, Exploração × aproveitamento (trap); Russell & Norvig, cap. 22 (incremento)",
+  "regra": "O agente equilibra exploração (testar ações novas) e aproveitamento (repetir a que rende). Só aproveitar prende numa solução medíocre. O objetivo é a recompensa acumulada, não a imediata.",
+  "sigla": "ti",
+  "sinal": "'sempre', 'exclusivamente', 'a maior recompensa imediata' no reforço.",
+  "tipo": "alcance",
+  "topico": "ti-5-2"
+ },
+ {
+  "id": "pg-ti-5-2-08",
+  "armadilha": "Modelo que vai mal até nos dados de treino sofre de overfitting.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "overfitting (bom no treino, ruim no teste)",
+   "underfitting (ruim nos dois)"
+  ],
+  "qids": [
+   "ti52-13",
+   "ti52-17"
+  ],
+  "ref": "Mapa ti-5-2, Underfitting (trap); Géron, cap. 1 (incremento)",
+  "regra": "No overfitting, o modelo decorou: vai bem no treino e mal em dados novos. No underfitting, é simples demais e vai mal até no treino.",
+  "sigla": "ti",
+  "sinal": "Sintoma (desempenho no treino e no teste) descrito junto com um dos nomes: confira se bate.",
+  "tipo": "troca",
+  "topico": "ti-5-2"
+ },
+ {
+  "id": "pg-ti-5-2-09",
+  "armadilha": "O aprendizado semissupervisionado combina aprendizado supervisionado e aprendizado por reforço.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "semissupervisionado (rotulados + não rotulados)",
+   "mistura de supervisionado com reforço"
+  ],
+  "qids": [
+   "ti52-09",
+   "ti52-18"
+  ],
+  "ref": "Mapa ti-5-2, Semissupervisionado (trap); Géron, cap. 1 (incremento)",
+  "regra": "O semissupervisionado mistura poucos dados rotulados com muitos sem rótulo; compensa quando rotular é caro. Não envolve recompensa.",
+  "sigla": "ti",
+  "sinal": "'semissupervisionado' associado a 'recompensa', 'agente' ou 'reforço'.",
+  "tipo": "troca",
+  "topico": "ti-5-2"
+ },
+ {
+  "id": "pg-ti-5-2-10",
+  "armadilha": "Um filtro de spam que bloqueia mensagens por lista fixa de palavras escrita pelo programador é exemplo de aprendizado de máquina.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "ti52-19"
+  ],
+  "ref": "LDI 15.1 (definição de aprendizado de máquina); mapa ti-5-2, Aprender com dados, sem regras explícitas (trap)",
+  "regra": "Aprendizado de máquina extrai padrões dos dados, sem instruções explícitas. Sistema de regras fixas ('se-então') só executa o programado e não aprende.",
+  "sigla": "ti",
+  "sinal": "'regras definidas pelo programador', 'lista fixa': sistema de regras, não ML.",
+  "tipo": "extrapolacao",
+  "topico": "ti-5-2"
+ },
+ {
+  "id": "pg-ti-5-3-01",
+  "armadilha": "A IA generativa responde consultando, a cada pedido, um banco de respostas prontas formado no treinamento.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "geração probabilística token a token",
+   "recuperação de respostas prontas armazenadas"
+  ],
+  "qids": [
+   "ti53-20"
+  ],
+  "ref": "LDI pós-edital Estratégia, TI e Dados, cap. 15.1 (blocos 1 a 3); diário 2026-10-28-ti-1 (equívoco corrigido nas ideias-chave)",
+  "regra": "O modelo não guarda respostas: aprende padrões, gravados nos pesos, e gera cada saída por amostragem de uma distribuição de probabilidade sobre o próximo token. A variedade das saídas vem dessa amostragem, não de um banco.",
+  "sigla": "ti",
+  "sinal": "'banco de dados', 'respostas prontas' ou 'consulta' para explicar como o modelo gera o texto.",
+  "tipo": "troca",
+  "topico": "ti-5-3"
+ },
+ {
+  "id": "pg-ti-5-3-02",
+  "armadilha": "Toda IA generativa se baseia na arquitetura Transformer.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F1",
+  "origem": "registrada",
+  "par": null,
+  "qids": [
+   "ti53-21"
+  ],
+  "ref": "LDI 15.1; pontos-chave ti-5-3 (Famílias); diário 2026-10-28-ti-1",
+  "regra": "O Transformer (autoatenção) é uma das famílias de IA generativa e é a base dos LLMs. GANs, VAEs e modelos de difusão são arquiteturas distintas, não variações da atenção.",
+  "sigla": "ti",
+  "sinal": "'Toda', 'sempre' ou 'necessariamente' ligando IA generativa a uma única arquitetura.",
+  "tipo": "alcance",
+  "topico": "ti-5-3"
+ },
+ {
+  "id": "pg-ti-5-3-03",
+  "armadilha": "A tokenização por BPE divide as palavras segundo critérios linguísticos, como radicais, prefixos e sufixos.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "registrada",
+  "par": [
+   "critério estatístico (frequência no corpus)",
+   "critério linguístico (análise morfológica)"
+  ],
+  "qids": [
+   "ti53-22",
+   "ti53-24"
+  ],
+  "ref": "LDI 15.1, Large Language Model (LLM); diário 2026-10-28-ti-1 (equívoco corrigido)",
+  "regra": "O BPE parte de caracteres ou bytes e funde, passo a passo, os pares adjacentes mais frequentes no corpus. As subunidades resultam de frequência, não de análise morfológica, mesmo quando coincidem com um morfema.",
+  "sigla": "ti",
+  "sinal": "'morfológico', 'radical', 'sílaba' ou 'regras gramaticais' como critério de fragmentação.",
+  "tipo": "troca",
+  "topico": "ti-5-3"
+ },
+ {
+  "id": "pg-ti-5-3-04",
+  "armadilha": "Na IA generativa baseada em modelos de linguagem, a saída é gerada pela predição iterativa e autorregressiva de tokens, com distribuições de probabilidade condicionadas ao contexto e aos tokens já gerados.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": "Cebraspe 2026 CD Policial Legislativo Federal, Conhecimentos Gerais, item 90 (gabarito definitivo C, conferido em cd-2026-plf-gabarito-gerais.pdf)",
+  "mecanismo": "V1",
+  "origem": "prova",
+  "par": null,
+  "qids": [
+   "b26plf-090"
+  ],
+  "ref": "Cebraspe 2026, Câmara dos Deputados, Policial Legislativo Federal, Conhecimentos Gerais, item 90",
+  "regra": "Certo: LLMs geram um token por vez, amostrado da distribuição condicionada ao prompt e aos tokens anteriores.",
+  "sigla": "ti",
+  "sinal": "Descrição técnica longa e cheia de jargão; o jargão não torna o item errado. Confira o núcleo: predição do próximo token.",
+  "tipo": "verdade",
+  "topico": "ti-5-3"
+ },
+ {
+  "id": "pg-ti-5-3-05",
+  "armadilha": "Um LLM autorregressivo define previamente toda a resposta e a gera de uma só vez.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "geração token a token, condicionada aos anteriores",
+   "geração da resposta inteira de uma vez"
+  ],
+  "qids": [
+   "ti53-06"
+  ],
+  "ref": "Pontos-chave ti-5-3, 'Autorregressivo' (trap)",
+  "regra": "Na geração autorregressiva, cada token depende dos já gerados; a resposta não existe pronta antes de ser produzida.",
+  "sigla": "ti",
+  "sinal": "'De uma só vez', 'previamente' ou 'simultaneamente' associados a um LLM.",
+  "tipo": "troca",
+  "topico": "ti-5-3"
+ },
+ {
+  "id": "pg-ti-5-3-06",
+  "armadilha": "O modelo discriminativo aprende a distribuição conjunta P(X,Y), e o generativo modela apenas P(Y|X).",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "P(X,Y), generativo",
+   "P(Y|X), discriminativo"
+  ],
+  "qids": [
+   "ti53-02",
+   "ti53-18",
+   "ti53-25"
+  ],
+  "ref": "Pontos-chave ti-5-3, 'Generativa × discriminativa' (trap)",
+  "regra": "O generativo modela a distribuição dos dados (conjunta, P(X,Y)) e por isso amostra dados novos; o discriminativo modela P(Y|X), a fronteira entre classes, e só decide o rótulo.",
+  "sigla": "ti",
+  "sinal": "Fórmula de probabilidade atribuída a um tipo de modelo: confira qual 'gera' e qual 'decide'.",
+  "tipo": "troca",
+  "topico": "ti-5-3"
+ },
+ {
+  "id": "pg-ti-5-3-07",
+  "armadilha": "Na geração, o modelo de difusão acrescenta ruído progressivamente à imagem até chegar ao resultado pedido.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F6",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "ti53-04"
+  ],
+  "ref": "Pontos-chave ti-5-3, 'Difusão' (trap)",
+  "regra": "No treino, ruído é adicionado a imagens reais e o modelo aprende a removê-lo; na geração, parte de ruído puro e o remove passo a passo, guiado pelo pedido.",
+  "sigla": "ti",
+  "sinal": "A direção do processo: 'acrescentar' ruído descrito como a etapa de geração.",
+  "tipo": "relacao",
+  "topico": "ti-5-3"
+ },
+ {
+  "id": "pg-ti-5-3-08",
+  "armadilha": "A alucinação é eliminada quando o modelo recebe um prompt suficientemente detalhado.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F1",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "ti53-08"
+  ],
+  "ref": "Pontos-chave ti-5-3, 'Alucinação' (trap)",
+  "regra": "A alucinação vem da natureza probabilística do modelo (gera o provável, não o verdadeiro). Prompt bom, RAG e revisão humana reduzem o risco, mas não o eliminam. Não é falha de hardware.",
+  "sigla": "ti",
+  "sinal": "'Elimina', 'impede' ou 'garante' ligados a uma mitigação, ou causa externa (hardware) para a alucinação.",
+  "tipo": "alcance",
+  "topico": "ti-5-3"
+ },
+ {
+  "id": "pg-ti-5-3-09",
+  "armadilha": "O RAG atualiza os pesos do modelo com os documentos consultados, que passam a fazer parte do seu conhecimento.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F3",
+  "origem": "analitica",
+  "par": [
+   "RAG (documentos inseridos no contexto, pesos intactos)",
+   "ajuste fino ou treino (altera os pesos)"
+  ],
+  "qids": [
+   "ti53-10",
+   "ti53-09",
+   "c0-20"
+  ],
+  "ref": "Pontos-chave ti-5-3, 'RAG' (trap); Portaria DG nº 227/2025, art. 2º, IX (conforme c0-20)",
+  "regra": "O RAG busca documentos numa base e os insere no contexto antes de gerar a resposta; os pesos não mudam. Alterar pesos é treino ou ajuste fino.",
+  "sigla": "ti",
+  "sinal": "'pesos', 'permanentemente', 'aprende' ou 'retreina' associados ao RAG.",
+  "tipo": "troca",
+  "topico": "ti-5-3"
+ },
+ {
+  "id": "pg-ti-5-3-10",
+  "armadilha": "Com RAG sobre a base normativa da Casa, a validação humana do texto gerado é dispensável.",
+  "criadoEm": "2026-10-29",
+  "fonteProva": null,
+  "mecanismo": "F7",
+  "origem": "analitica",
+  "par": null,
+  "qids": [
+   "ti53-13"
+  ],
+  "ref": "Pontos-chave ti-5-3, 'Human-in-the-loop' (trap)",
+  "regra": "O RAG reduz a alucinação, mas não a elimina; a revisão por servidor (human-in-the-loop) continua obrigatória nos usos de IA generativa na Câmara.",
+  "sigla": "ti",
+  "sinal": "Técnica de mitigação apresentada como razão para dispensar o controle humano ('dispensável', 'substitui').",
+  "tipo": "extrapolacao",
+  "topico": "ti-5-3"
+ }
+]
