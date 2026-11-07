@@ -1,0 +1,54 @@
+{
+  "name": "TaskEvent",
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "assignee": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "question_ids": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "task_id",
+    "title",
+    "assignee",
+    "status",
+    "question_ids",
+    "notes",
+    "author"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "collaborator_role": "editor"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "collaborator_role": "editor"
+      }
+    },
+    "delete": false
+  }
+}

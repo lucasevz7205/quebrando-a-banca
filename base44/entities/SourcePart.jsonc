@@ -1,0 +1,38 @@
+{
+  "name": "SourcePart",
+  "type": "object",
+  "properties": {
+    "sha256": {
+      "type": "string"
+    },
+    "part": {
+      "type": "number"
+    },
+    "content_base64": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "sha256",
+    "part",
+    "content_base64"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "collaborator_role": "editor"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "collaborator_role": "editor"
+      }
+    },
+    "delete": false
+  }
+}

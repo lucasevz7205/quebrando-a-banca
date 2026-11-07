@@ -1,0 +1,38 @@
+{
+  "name": "Question",
+  "type": "object",
+  "properties": {
+    "stable_id": {
+      "type": "string"
+    },
+    "original_json": {
+      "type": "string"
+    },
+    "batch": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "stable_id",
+    "original_json",
+    "batch"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "collaborator_role": "editor"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "collaborator_role": "editor"
+      }
+    },
+    "delete": false
+  }
+}

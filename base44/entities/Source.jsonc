@@ -1,0 +1,46 @@
+{
+  "name": "Source",
+  "type": "object",
+  "properties": {
+    "path": {
+      "type": "string"
+    },
+    "sha256": {
+      "type": "string"
+    },
+    "content_base64": {
+      "type": "string"
+    },
+    "batch": {
+      "type": "string"
+    },
+    "bytes": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "path",
+    "sha256",
+    "content_base64",
+    "batch",
+    "bytes"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "collaborator_role": "editor"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "collaborator_role": "editor"
+      }
+    },
+    "delete": false
+  }
+}

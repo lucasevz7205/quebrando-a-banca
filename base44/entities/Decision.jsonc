@@ -1,0 +1,62 @@
+{
+  "name": "Decision",
+  "type": "object",
+  "properties": {
+    "proposal_id": {
+      "type": "string"
+    },
+    "question_id": {
+      "type": "string"
+    },
+    "field": {
+      "type": "string"
+    },
+    "before": {
+      "type": "string"
+    },
+    "after": {
+      "type": "string"
+    },
+    "outcome": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "proposal_id",
+    "question_id",
+    "field",
+    "before",
+    "after",
+    "outcome",
+    "reason",
+    "source",
+    "author"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "collaborator_role": "editor"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "collaborator_role": "editor"
+      }
+    },
+    "delete": false
+  }
+}
