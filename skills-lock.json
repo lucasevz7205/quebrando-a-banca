@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "skills": {
+    "base44-cli": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-cli/SKILL.md",
+      "computedHash": "4a93fd851a803758ba0003ecae321f85d21ec6824a1966f948bb91dbd1d7f16d"
+    },
+    "base44-platform-actors": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-platform-actors/SKILL.md",
+      "computedHash": "86c58665d16dc9692538dc69f5b8975788fc9fb8d8655b89d59aa69b2759778c"
+    },
+    "base44-platform-agents": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-platform-agents/SKILL.md",
+      "computedHash": "554abf690fb01f694bbf04bc50eaf0e3c5467ee3392da483619dd600c1800e40"
+    },
+    "base44-platform-backend-functions": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-platform-backend-functions/SKILL.md",
+      "computedHash": "6c2f3ed0834a21ad865015ea90287a29d8ffbc2d57c6a509f0aaaef513266379"
+    },
+    "base44-platform-connectors": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-platform-connectors/SKILL.md",
+      "computedHash": "22f673318f01b64208311b2eda57459c9b8126e6a4efcc40e15d964e7c6de76f"
+    },
+    "base44-platform-entities": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-platform-entities/SKILL.md",
+      "computedHash": "38a81c2c9e0a775362d4a6d5c9b07adeca075430e7c3f2badf0bbd25f4d9148c"
+    },
+    "base44-platform-frontend": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-platform-frontend/SKILL.md",
+      "computedHash": "42a95599ecabb1e965651bc37757a8cc763830b989dcc2fa90ab45f6dfcaec8f"
+    },
+    "base44-platform-integrations-sdk": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-platform-integrations-sdk/SKILL.md",
+      "computedHash": "f863acec3d2efe39ecf42f199a532f9df81e6d52bf10d72c4d638756f38fbb8a"
+    },
+    "base44-platform-platform": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-platform-platform/SKILL.md",
+      "computedHash": "20f6437fc0a1aa281a67e4248f1a1d147d784df448b6f73426cbe9b9b4af51ed"
+    },
+    "base44-platform-workflows": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-platform-workflows/SKILL.md",
+      "computedHash": "d5f775039f7039fac667b4e12f3872e1806601707ae96a45fb4345cc037553a9"
+    },
+    "base44-remote-dev": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-remote-dev/SKILL.md",
+      "computedHash": "99e7f5bd43df2b11c42c7a8c9dff235ad272112894d09bfd42bb1c3b754df7f7"
+    },
+    "base44-sandbox": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-sandbox/SKILL.md",
+      "computedHash": "963bf9c427692feb0ad0d59fea8487f944435df84d20d762fd7bde2704fe7405"
+    },
+    "base44-sdk": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-sdk/SKILL.md",
+      "computedHash": "29a96ab3c42d29a7048c7e414f747e19e235b1c1d4683e11c583042874113849"
+    },
+    "base44-troubleshooter": {
+      "source": "base44/skills",
+      "sourceType": "github",
+      "skillPath": "skills/base44-troubleshooter/SKILL.md",
+      "computedHash": "8330fa7749b8749242b6671aa47c75e70fa0a4aad4b8707d2b5a4223964e5130"
+    }
+  }
+}
