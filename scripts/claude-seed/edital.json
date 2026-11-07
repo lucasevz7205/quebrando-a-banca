@@ -1,0 +1,3977 @@
+[
+ {
+  "id": "cp-0",
+  "caps": [
+   "CP-00"
+  ],
+  "foraEdital": true,
+  "materia": "Ciência Política",
+  "materiaOrdem": 9,
+  "nota": "",
+  "num": "0",
+  "ordem": 151,
+  "prova": "P2",
+  "sigla": "CP",
+  "status": null,
+  "titulo": "Fundamentos: política, poder e teoria política (aula introdutória, sem item próprio no edital)",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Ciência Política (Específico ARR) · 1. Ciência Política",
+    "Ciência Política (Específico ARR) · 2. Teoria Política"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "cp-1",
+  "caps": [],
+  "materia": "Ciência Política",
+  "materiaOrdem": 9,
+  "nota": "",
+  "num": "1",
+  "obs": "Marcado como feito no Tutory, mas ainda não estudado (informado pelo aluno em 26/10/2026). O Controle desconsidera essa marcação.",
+  "ordem": 152,
+  "prova": "P2",
+  "sigla": "CP",
+  "status": null,
+  "titulo": "Regimes políticos",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Ciência Política (Específico ARR) · 1 Regimes políticos. (Aulas 11, 15-A, 15-B, 16 e 17)"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  },
+  "tutoryIgnorar": true
+ },
+ {
+  "id": "cp-10",
+  "caps": [],
+  "materia": "Ciência Política",
+  "materiaOrdem": 9,
+  "nota": "",
+  "num": "10",
+  "ordem": 161,
+  "prova": "P2",
+  "sigla": "CP",
+  "status": null,
+  "titulo": "Formação do Estado brasileiro",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Ciência Política (Específico ARR) · 10 Formação do Estado brasileiro."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "cp-11",
+  "caps": [],
+  "materia": "Ciência Política",
+  "materiaOrdem": 9,
+  "nota": "",
+  "num": "11",
+  "ordem": 162,
+  "prova": "P2",
+  "sigla": "CP",
+  "status": null,
+  "titulo": "História do voto e dos partidos no Brasil",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Ciência Política (Específico ARR) · 11 História do voto e dos partidos no Brasil."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "cp-2",
+  "caps": [],
+  "materia": "Ciência Política",
+  "materiaOrdem": 9,
+  "nota": "",
+  "num": "2",
+  "ordem": 153,
+  "prova": "P2",
+  "sigla": "CP",
+  "status": null,
+  "titulo": "Sistemas e formas de governo",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Ciência Política (Específico ARR) · 2 Sistemas e formas de governo. (Aulas 18, 2, 7 e 8)"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "cp-3",
+  "caps": [],
+  "materia": "Ciência Política",
+  "materiaOrdem": 9,
+  "nota": "",
+  "num": "3",
+  "ordem": 154,
+  "prova": "P2",
+  "sigla": "CP",
+  "status": null,
+  "titulo": "Representação política",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Ciência Política (Específico ARR) · 3 Representação política. (Aula 20, 21, 24 e 25)"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "cp-4",
+  "caps": [],
+  "materia": "Ciência Política",
+  "materiaOrdem": 9,
+  "nota": "",
+  "num": "4",
+  "ordem": 155,
+  "prova": "P2",
+  "sigla": "CP",
+  "status": null,
+  "titulo": "Poderes e relações entre poderes: Executivo, Legislativo e Judiciário",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Ciência Política (Específico ARR) · 4 Poderes e relações entre poderes: Executivo, Legislativo e Judiciário."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "cp-5",
+  "caps": [],
+  "materia": "Ciência Política",
+  "materiaOrdem": 9,
+  "nota": "",
+  "num": "5",
+  "ordem": 156,
+  "prova": "P2",
+  "sigla": "CP",
+  "status": null,
+  "titulo": "Sistemas eleitorais",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Ciência Política (Específico ARR) · 5 Sistemas eleitorais."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "cp-6",
+  "caps": [],
+  "materia": "Ciência Política",
+  "materiaOrdem": 9,
+  "nota": "",
+  "num": "6",
+  "ordem": 157,
+  "prova": "P2",
+  "sigla": "CP",
+  "status": null,
+  "titulo": "Teoria dos partidos políticos",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Ciência Política (Específico ARR) · 6 Teoria dos partidos políticos."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "cp-7",
+  "caps": [],
+  "materia": "Ciência Política",
+  "materiaOrdem": 9,
+  "nota": "",
+  "num": "7",
+  "ordem": 158,
+  "prova": "P2",
+  "sigla": "CP",
+  "status": null,
+  "titulo": "Organização política brasileira",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Ciência Política (Específico ARR) · 7 Organização política brasileira."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "cp-8",
+  "caps": [],
+  "materia": "Ciência Política",
+  "materiaOrdem": 9,
+  "nota": "",
+  "num": "8",
+  "ordem": 159,
+  "prova": "P2",
+  "sigla": "CP",
+  "status": null,
+  "titulo": "Temas relevantes de política internacional e brasileira contemporânea",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Ciência Política (Específico ARR) · 8 Temas relevantes de política internacional e brasileira contemporânea."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "cp-9",
+  "caps": [
+   "CP-9",
+   "CP-9-QC"
+  ],
+  "materia": "Ciência Política",
+  "materiaOrdem": 9,
+  "nota": "",
+  "num": "9",
+  "ordem": 160,
+  "prova": "P2",
+  "sigla": "CP",
+  "status": null,
+  "titulo": "Teoria do Estado e formação dos Estados nacionais",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Ciência Política (Específico ARR) · 9 Teoria do Estado e formação dos Estados nacionais."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-1-1",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "1.1",
+  "ordem": 22,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Princípios constitucionais e doutrinários da Administração Pública",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Administrativo · 1.1 Princípios constitucionais e doutrinários da Administração Pública."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-1-2",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "1.2",
+  "ordem": 23,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Organização administrativa: direta e indireta; centralização, descentralização, concentração e desconcentração",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Administrativo · 1 Noções de organização do Estado: 1.2.1 centralização, descentralização, concentração e desconcentração. 1.2.",
+    "Direito Administrativo · 1.2.4 Fundações, empresas públicas e sociedades de economia mista."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-1",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "1",
+  "ordem": 21,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Estado, governo e Administração Pública: conceito, elementos, poderes e organização do Estado",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Administrativo · 1 Noções de organização do Estado: 1.2.1 centralização, descentralização, concentração e desconcentração. 1.2."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-10-1",
+  "caps": [
+   "DA-10.1"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "10.1",
+  "ordem": 51,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Licitação pública: conceito, princípios, finalidade, modalidades, dispensa e inexigibilidade (Lei 14.133/2021)",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 10.1 Licitação Pública: conceito, princípios, finalidade do procedimento licitatório, modalidades, dispensa e "
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-10-2",
+  "caps": [
+   "DA-10.2"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "10.2",
+  "ordem": 52,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Contratos administrativos",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 10.2 Contratos administrativos.10.3 Características.10.4 Formalização, gestão e fiscalização. 10.5 Planejament"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-10-3",
+  "caps": [
+   "DA-10.3"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "10.3",
+  "ordem": 53,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Características do contrato administrativo",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 10.2 Contratos administrativos.10.3 Características.10.4 Formalização, gestão e fiscalização. 10.5 Planejament"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-10-4",
+  "caps": [
+   "DA-10.4"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "10.4",
+  "ordem": 54,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Formalização, gestão e fiscalização do contrato",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 10.2 Contratos administrativos.10.3 Características.10.4 Formalização, gestão e fiscalização. 10.5 Planejament"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-10-5",
+  "caps": [
+   "DA-10.5"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "10.5",
+  "ordem": 55,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Planejamento e fiscalização contratual",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 10.2 Contratos administrativos.10.3 Características.10.4 Formalização, gestão e fiscalização. 10.5 Planejament"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-10-6",
+  "caps": [
+   "DA-10.6"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "10.6",
+  "ordem": 56,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Papel do fiscalizador do contrato",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 10.2 Contratos administrativos.10.3 Características.10.4 Formalização, gestão e fiscalização. 10.5 Planejament"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-10-7",
+  "caps": [
+   "DA-10.7"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "10.7",
+  "ordem": 57,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Estudo Técnico Preliminar e Termo de Referência",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 10.2 Contratos administrativos.10.3 Características.10.4 Formalização, gestão e fiscalização. 10.5 Planejament"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-11",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "11",
+  "ordem": 58,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Lei de Acesso à Informação (Lei 12.527/2011)",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 11 Lei de Acesso à Informação (Lei nº 12.527/2011 e suas alterações)."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-12",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "12",
+  "ordem": 59,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Lei Geral de Proteção de Dados Pessoais (Lei 13.709/2018)",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 12 Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 e suas alterações)."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-2-1",
+  "caps": [
+   "DA-2"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "2.1",
+  "ordem": 24,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Ato administrativo: conceito, requisitos, atributos, classificação e espécies, extinção, nulidades e revogação",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Administrativo · 2 Ato administrativo. 2.1 Conceito, requisitos, atributos, classificação e espécies, extinção, nulidades e rev"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-2-2",
+  "caps": [
+   "DA-2"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "2.2",
+  "ordem": 25,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Parecer: responsabilidade do emissor do parecer",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Administrativo · 2 Ato administrativo. 2.1 Conceito, requisitos, atributos, classificação e espécies, extinção, nulidades e rev"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-3-1",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "3.1",
+  "ordem": 26,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Agentes públicos: disposições constitucionais aplicáveis",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 3 Agentes públicos. 3.1 Disposições constitucionais aplicáveis.3.2 Cargo, emprego e função pública.3.3 Requisi"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-3-2",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "3.2",
+  "ordem": 27,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Cargo, emprego e função pública",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 3 Agentes públicos. 3.1 Disposições constitucionais aplicáveis.3.2 Cargo, emprego e função pública.3.3 Requisi"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-3-3",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "3.3",
+  "ordem": 28,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Requisição",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 3 Agentes públicos. 3.1 Disposições constitucionais aplicáveis.3.2 Cargo, emprego e função pública.3.3 Requisi"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-3-4",
+  "caps": [
+   "JUR-DA3.4"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "3.4",
+  "ordem": 29,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Regime jurídico dos servidores públicos federais (Lei 8.112/1990)",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 3.4 Regime jurídico dos servidores públicos federais (Lei 8.112/1990 e suas alterações)."
+   ],
+   "resumo": null,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-4-1",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "4.1",
+  "ordem": 30,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Direito administrativo disciplinar: fontes e princípios",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 4 Direito administrativo disciplinar. 4.1 Fontes e princípios.4.2 Ilícito de direito administrativo disciplina"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-4-2",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "4.2",
+  "ordem": 31,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Ilícito de direito administrativo disciplinar",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 4 Direito administrativo disciplinar. 4.1 Fontes e princípios.4.2 Ilícito de direito administrativo disciplina"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-4-3",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "4.3",
+  "ordem": 32,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Procedimentos disciplinares da administração pública",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 4 Direito administrativo disciplinar. 4.1 Fontes e princípios.4.2 Ilícito de direito administrativo disciplina"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-4-4",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "4.4",
+  "ordem": 33,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Processo Administrativo Federal (Lei 9.784/1999)",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Direito Administrativo · 4 Direito administrativo disciplinar. 4.1 Fontes e princípios.4.2 Ilícito de direito administrativo disciplina"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-5-1",
+  "caps": [
+   "DA-5"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "5.1",
+  "ordem": 34,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Poderes administrativos: discricionário, hierárquico, disciplinar, regulamentar e de polícia",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Administrativo · 5 Poderes administrativos. 5.1 Discricionário, hierárquico, disciplinar, regulamentar e de polícia. 5.2 Uso e "
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-5-2",
+  "caps": [
+   "DA-5"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "5.2",
+  "ordem": 35,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Uso e abuso do poder",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Administrativo · 5 Poderes administrativos. 5.1 Discricionário, hierárquico, disciplinar, regulamentar e de polícia. 5.2 Uso e "
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-6-1",
+  "caps": [
+   "DA-6"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "6.1",
+  "ordem": 36,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Responsabilidade civil do Estado no direito brasileiro",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Administrativo · 6 Responsabilidade civil do Estado. 6.1 Responsabilidade civil do Estado no direito brasileiro. 6.2 Responsabi"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-6-2",
+  "caps": [
+   "DA-6"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "6.2",
+  "ordem": 37,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Responsabilidade por ato comissivo do Estado",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Administrativo · 6 Responsabilidade civil do Estado. 6.1 Responsabilidade civil do Estado no direito brasileiro. 6.2 Responsabi"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-6-3",
+  "caps": [
+   "DA-6"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "6.3",
+  "ordem": 38,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Responsabilidade por omissão do Estado",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Administrativo · 6 Responsabilidade civil do Estado. 6.1 Responsabilidade civil do Estado no direito brasileiro. 6.2 Responsabi"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-6-4",
+  "caps": [
+   "DA-6"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "6.4",
+  "ordem": 39,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Requisitos para a demonstração da responsabilidade do Estado",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Administrativo · 6 Responsabilidade civil do Estado. 6.1 Responsabilidade civil do Estado no direito brasileiro. 6.2 Responsabi"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-6-5",
+  "caps": [
+   "DA-6"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "6.5",
+  "ordem": 40,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Causas excludentes e atenuantes da responsabilidade do Estado",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Administrativo · 6 Responsabilidade civil do Estado. 6.1 Responsabilidade civil do Estado no direito brasileiro. 6.2 Responsabi"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-7",
+  "caps": [
+   "DA-7"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "7",
+  "ordem": 41,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Improbidade administrativa (Lei 8.429/1992)",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Administrativo · 7 Improbidade Administrativa (Lei nº 8.429/1992 e suas alterações)."
+   ],
+   "resumo": null,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-8-1",
+  "caps": [
+   "AP-8.1"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "8.1",
+  "ordem": 43,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Nova Governança Pública (New Public Governance): conceito, fundamentos e evolução",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Administração Pública · 8.1 Nova Governança Pública (New Public Governance): conceito, fundamentos e evolução."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-8-2",
+  "caps": [
+   "AP-8.2"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "8.2",
+  "ordem": 44,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Ação pública em redes de cooperação, articulação interinstitucional e parcerias com o setor privado e terceiro setor",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Administração Pública · 8.2 Ação pública em redes de cooperação, articulação interinstitucional e parcerias com o setor privado e terc"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-8-3",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "8.3",
+  "ordem": 45,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Coprodução do bem público, participação cidadã e transparência ativa",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Administração Pública · 8.3 Coprodução do bem público, participação cidadã e transparência ativa."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-8-4",
+  "caps": [
+   "AP-8.4"
+  ],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "8.4",
+  "ordem": 46,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Valor público, cadeia de valor público",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Administração Pública · 8.4 Valor Público, cadeia de valor público."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-8",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "8",
+  "ordem": 42,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Evolução dos modelos de gestão pública: patrimonialismo, administração burocrática e nova gestão pública (New Public Management)",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Administração Pública · 8 Evolução dos modelos de gestão pública: patrimonialismo, administração burocrática e nova gestão pública (Ne"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-9-1",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "9.1",
+  "ordem": 47,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Governança pública: conceito, governança × governabilidade e alinhamento estratégico",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Administração Pública · 9 Governança na Administração Pública.9.1 Governança pública: conceito, distinção entre governança e governabi"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-9-2",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "9.2",
+  "ordem": 48,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Mecanismos de governança: liderança, estratégia e controle",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Administração Pública · 9 Governança na Administração Pública.9.1 Governança pública: conceito, distinção entre governança e governabi"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-9-3",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "9.3",
+  "ordem": 49,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Valor público: geração de valor, entrega de resultados, sustentabilidade e avaliação de impactos de políticas públicas",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Administração Pública · 9 Governança na Administração Pública.9.1 Governança pública: conceito, distinção entre governança e governabi"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "da-9-4",
+  "caps": [],
+  "materia": "Direito Administrativo e Administração Pública",
+  "materiaOrdem": 3,
+  "nota": "",
+  "num": "9.4",
+  "ordem": 50,
+  "prova": "P1",
+  "sigla": "DA",
+  "status": null,
+  "titulo": "Decreto 9.203/2017 (política de governança da administração pública federal)",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Administração Pública · 9.4 Decreto Federal nº 9.203/2017 e suas alterações (política de governança da administração pública federal d"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-1",
+  "caps": [
+   "DC-1",
+   "DC-1.1",
+   "DC-1.2",
+   "DC-1.3",
+   "DC-1.4",
+   "DC-1.5"
+  ],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "1",
+  "ordem": 60,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "Constituição Federal de 1988: conceito, contexto histórico, características, estrutura do texto",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Constitucional · 1 Constituição Federal de 1988: conceito, contexto histórico, características, estrutura do texto."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-2a",
+  "caps": [],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "2a",
+  "obs": "Item 2 do edital dividido em partes para acompanhamento.",
+  "ordem": 61,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "Princípios fundamentais",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Direito Constitucional · 2 Princípios fundamentais."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-2b",
+  "caps": [
+   "JUR-DC2b"
+  ],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "2b",
+  "obs": "Item 2 do edital dividido em partes para acompanhamento.",
+  "ordem": 62,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "Direitos e deveres individuais e coletivos",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Direito Constitucional · 2.1 Direitos e garantias fundamentais: direitos e deveres individuais e coletivos (Parte I)",
+    "Direito Constitucional · 2.1 Direitos e garantias fundamentais: direitos e deveres individuais e coletivos (Parte II)",
+    "Direito Constitucional · 2.1.2 Remédios Constitucionais"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-2c",
+  "caps": [
+   "DC-2.2"
+  ],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "2c",
+  "obs": "Item 2 do edital dividido em partes para acompanhamento.",
+  "ordem": 63,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "Direitos sociais",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Constitucional · 2.2 Direitos sociais."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-2d",
+  "caps": [
+   "DC-2.3"
+  ],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "2d",
+  "obs": "Item 2 do edital dividido em partes para acompanhamento.",
+  "ordem": 64,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "Nacionalidade",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Direito Constitucional · 2.3 nacionalidade"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-2e",
+  "caps": [
+   "DC-2.4"
+  ],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "2e",
+  "obs": "Item 2 do edital dividido em partes para acompanhamento. Partidos políticos separados em dc-2f (06/11/2026).",
+  "ordem": 65,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "Direitos políticos",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Direito Constitucional · 2.4 Direitos políticos"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-2f",
+  "caps": [
+   "DC-2.5"
+  ],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "2f",
+  "obs": "Item 2 do edital dividido em partes para acompanhamento. Separado de dc-2e em 06/11/2026.",
+  "ordem": 65.5,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "Partidos políticos",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Direito Constitucional · 2.5 Partidos políticos."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-3",
+  "caps": [],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "3",
+  "ordem": 66,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "Organização do Estado: organização político-administrativa, União, estados, municípios, DF e territórios; intervenção federal",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Direito Constitucional · 3 Organização do Estado: organização político-administrativa, União, estados, municípios, Distrito Federal e t"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-4",
+  "caps": [],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "4",
+  "ordem": 67,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "Administração pública: disposições gerais, servidores públicos civis e militares",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Direito Constitucional · 4 Administração pública: disposições gerais, servidores públicos civis e militares."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-5",
+  "caps": [
+   "JUR-DC5"
+  ],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "5",
+  "ordem": 68,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "Poder Legislativo: o Congresso Nacional e suas Casas (atribuições, competências, reuniões e comissões)",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Direito Constitucional · 5 Poder Legislativo: o Congresso Nacional e suas Casas (atribuições, competências, reuniões e comissões)."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-6",
+  "caps": [],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "6",
+  "ordem": 69,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "Regime jurídico-constitucional dos parlamentares",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Direito Constitucional · 6 Regime jurídico-constitucional dos parlamentares."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-7-1",
+  "caps": [],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "7.1",
+  "ordem": 70,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "RICD: disposições preliminares e órgãos da Câmara (arts. 1º a 24)",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Regimento Interno da Câmara dos Deputados (Básico) · 7 Regimento Interno da Câmara dos Deputados - 7.1 Disposições preliminares e Órgãos da Câmara (arts. 1º a 24 e",
+    "Regimento Interno da Câmara dos Deputados (Básico) · Comissões"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-7-2",
+  "caps": [],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "7.2",
+  "ordem": 71,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "RICD: sessões da Câmara (arts. 65 a 94)",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Regimento Interno da Câmara dos Deputados (Básico) · 7.2 Sessões da Câmara (arts. 65 a 94 e suas alterações)."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-7-3",
+  "caps": [
+   "DC-7.3"
+  ],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "7.3",
+  "ordem": 72,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "RICD: deputados (arts. 226 a 251)",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Regimento Interno da Câmara dos Deputados (Básico) · 7.3 Deputados (arts. 226 a 251 e suas alterações)."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-7-4",
+  "caps": [
+   "DC-7.4"
+  ],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "",
+  "num": "7.4",
+  "ordem": 73,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "RICD: administração e economia interna (arts. 262 a 273)",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Regimento Interno da Câmara dos Deputados (Básico) · 7.4 Administração e economia interna (arts. 262 a 273 e suas alterações)."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-8-1",
+  "caps": [
+   "DC-8.1"
+  ],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "Mesmo conteúdo do PL 3.1. Título I (arts. 1º a 3º): mapa, revisão ativa e 6 itens C/E (capítulo DC-8.1).",
+  "num": "8.1",
+  "ordem": 74,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "statusEm": "2026-10-30T13:16:16.482Z",
+  "titulo": "Regimento Comum do Congresso Nacional: Título I",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Regimento Comum do Congresso Nacional · RCCN Aula 10 - Artigo 1 ao 21"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "dc-8-2",
+  "caps": [],
+  "materia": "Direito Constitucional e Regimento Interno",
+  "materiaOrdem": 4,
+  "nota": "Cap. II (sessões solenes, arts. 53 a 71) feito no Mapa do Regimento Comum. Cap. III (matérias legislativas, arts. 72 a 103) ainda sem material. Itens C/E das solenes: pl31-18 e pl31-19, no capítulo PL-3.1.",
+  "num": "8.2",
+  "ordem": 75,
+  "prova": "P1",
+  "sigla": "DC",
+  "status": null,
+  "titulo": "Regimento Comum: Título IV, Capítulos II e III (até art. 103)",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Regimento Comum do Congresso Nacional · 8.2 Título IV, Capítulo II e Capítulo III (até art. 103)."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "jur-1",
+  "caps": [
+   "JUR-DC5",
+   "JUR-PL1.5"
+  ],
+  "foraEdital": true,
+  "materia": "Jurisprudência (STF)",
+  "materiaOrdem": 10,
+  "nota": "",
+  "num": "1",
+  "ordem": 163,
+  "prova": "P1",
+  "sigla": "JUR",
+  "status": null,
+  "titulo": "Poder Legislativo e processo legislativo: interna corporis, poder de emenda, iniciativa reservada (itens também em DC-5 e PL-1.5)"
+ },
+ {
+  "id": "jur-2",
+  "caps": [
+   "JUR-DC2b"
+  ],
+  "foraEdital": true,
+  "materia": "Jurisprudência (STF)",
+  "materiaOrdem": 10,
+  "nota": "",
+  "num": "2",
+  "ordem": 164,
+  "prova": "P1",
+  "sigla": "JUR",
+  "status": null,
+  "titulo": "Direito Constitucional: direitos fundamentais e administração pública (itens também em DC-2b)"
+ },
+ {
+  "id": "jur-3",
+  "caps": [
+   "JUR-DA3.4"
+  ],
+  "foraEdital": true,
+  "materia": "Jurisprudência (STF)",
+  "materiaOrdem": 10,
+  "nota": "",
+  "num": "3",
+  "ordem": 165,
+  "prova": "P1",
+  "sigla": "JUR",
+  "status": null,
+  "titulo": "Direito Administrativo: agentes públicos e servidores (itens também em DA-3.4)"
+ },
+ {
+  "id": "lg-1",
+  "caps": [
+   "LG-1"
+  ],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "1",
+  "ordem": 94,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Teoria do signo linguístico: linguagem, língua e fala; significante e significado; arbitrariedade e motivação; linearidade; referente, referência, sentido; denotação e conotação",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Linguística · 1 Teoria do signo linguístico. Linguagem, língua e fala. Significante e significado; significação. Arbitraried"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-10",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "10",
+  "ordem": 116,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Retórica e figuras de linguagem",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 10 Retórica e figuras de linguagem."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-11",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "11",
+  "ordem": 117,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Comunicações oficiais: introduções e fechos, pronomes de tratamento, reduções ortográficas, estrutura de documentos oficiais",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 11 Comunicações oficiais, introduções e fechos apropriados. Pronomes de Tratamento. Reduções Ortográficas. Con"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-12",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "12",
+  "ordem": 118,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Noções básicas de lógica: conectivos, argumentos e notação",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 12 Noções básicas de lógica: conectivos, argumentos e notação."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-13",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "13",
+  "ordem": 119,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Técnica legislativa: LC 95/1998 (elaboração, redação, alteração e consolidação das leis)",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 13 Técnica Legislativa: Lei Complementar Federal nº 95/1998 e suas alterações (dispõe sobre a elaboração, a re"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-2",
+  "caps": [
+   "LG-2"
+  ],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "2",
+  "ordem": 95,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Categorias semânticas: gênero, número, pessoa, tempo, modo, aspecto e papéis semânticos",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 2 Categorias semânticas: gênero, número, pessoa, tempo, modo, aspecto e papéis semânticos."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-3-1",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "3.1",
+  "ordem": 96,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Leitura: compreensão literal, coesão e coerência textual",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 3.1 Compreensão literal, coesão e coerência textual."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-3-2",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "3.2",
+  "ordem": 97,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Ideia principal e detalhes de apoio",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 3.2 Ideia principal e detalhes de apoio."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-3-3",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "3.3",
+  "ordem": 98,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Relações de comparação, causa e efeito e contraste",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 3.3 Relações de comparação, relações de causa e efeito e de contraste."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-3-4",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "3.4",
+  "ordem": 99,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Relações coesivas: referência, substituição, elipse, repetição",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 3.4 Relações coesivas: referência, substituição, elipse, repetição."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-3-5",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "3.5",
+  "ordem": 100,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Estrutura e formação de palavras; homônimas, parônimas e cognatas; sinonímia, antonímia, hiperonímia, hiponímia, campo semântico",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 3.5 Grupos vocálicos e estrutura e formação de palavras. Palavras homônimas, parônimas e cognatas. Relações de"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-3-6",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "3.6",
+  "ordem": 101,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Compreensão interpretativa: propósito do autor, implícitos, fato e opinião",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 3.6 Compreensão interpretativa: propósito do autor, informações implícitas, distinção entre fato e opinião."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-3-7",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "3.7",
+  "ordem": 102,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Compreensão crítica: seleção de inferência",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 3.7 Compreensão crítica: seleção de inferência."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-3-8",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "3.8",
+  "ordem": 103,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Organização retórica: generalização, exemplificação, descrição, definição, especificação",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 3.8 Organização retórica: generalização, exemplificação, descrição, definição, especificação."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-4-1",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "4.1",
+  "ordem": 104,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Recursos estilísticos e estruturais na elaboração de tipos e gêneros textuais",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 4.1 Recursos estilísticos e estruturais na elaboração de tipos e gêneros textuais variados."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-4-2",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "4.2",
+  "ordem": 105,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Adequação da linguagem ao gênero e às convenções da escrita",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 4.2 Adequação da linguagem ao gênero e às convenções da escrita."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-5-1",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "5.1",
+  "ordem": 106,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Situação de comunicação; enunciação e enunciado; teoria da enunciação na produção do texto escrito",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 5.1 Situação de comunicação; enunciação e enunciado; a teoria da enunciação na produção do texto escrito."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-5-2",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "5.2",
+  "ordem": 107,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Texto e discurso; dialogismo e polifonia; esferas sociais de comunicação",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 5.2 Conceitos de texto e discurso; dialogismo e polifonia; esferas sociais de comunicação."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-5-3",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "5.3",
+  "ordem": 108,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Retórica e oratória parlamentar",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 5.3 Retórica e oratória parlamentar."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-6-1",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "6.1",
+  "ordem": 109,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Gêneros do discurso e tipos textuais; macro e microestrutura; construção composicional, conteúdo temático e estilo",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 6.1 Gêneros do discurso e tipos textuais; aspectos de macro e microestrutura; construção composicional, conteú"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-6-2",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "6.2",
+  "ordem": 110,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Intertextualidade; retextualização; reescritura e paráfrase",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 6.2 Intertextualidade; processos de retextualização; reescritura e paráfrase."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-7-1",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "7.1",
+  "ordem": 111,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Tipos de variação linguística; dialetos e registros",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 7.1 Tipos de variação linguística; dialetos e registros."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-7-2",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "7.2",
+  "ordem": 112,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Oralidade e escrita; formalidade e informalidade; normas linguísticas",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 7.2 Oralidade e escrita. Formalidade e informalidade. Normas linguísticas."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-7-3",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "7.3",
+  "ordem": 113,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "A variação linguística no português do Brasil e a construção do texto escrito",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 7.3 A variação linguística no português do Brasil. A variação linguística e a construção do texto escrito."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-8",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "8",
+  "ordem": 114,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Língua e gramática: concepções e tipos de gramática; correção e incorreção; propriedade e impropriedade",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 8 Língua e gramática: Concepções de gramática; tipos de gramática. Correção e incorreção. Propriedade e improp"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lg-9",
+  "caps": [],
+  "materia": "Linguística",
+  "materiaOrdem": 6,
+  "nota": "",
+  "num": "9",
+  "ordem": 115,
+  "prova": "P2",
+  "sigla": "LG",
+  "status": null,
+  "titulo": "Funções da linguagem",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Linguística · 9 Funções da linguagem."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "li-1",
+  "caps": [
+   "LI-1"
+  ],
+  "materia": "Língua Inglesa",
+  "materiaOrdem": 2,
+  "nota": "",
+  "num": "1",
+  "ordem": 18,
+  "prova": "P1",
+  "sigla": "LI",
+  "status": null,
+  "titulo": "Compreensão de textos variados: vocabulário, estrutura, ideias principais e secundárias, explícitas e implícitas, relações intratextuais e intertextuais",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Língua Inglesa · 1 Compreensão de textos variados: domínio do vocabulário e da estrutura da língua, ideias principais e secundá"
+   ],
+   "resumo": null,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "li-2",
+  "caps": [],
+  "materia": "Língua Inglesa",
+  "materiaOrdem": 2,
+  "nota": "",
+  "num": "2",
+  "ordem": 19,
+  "prova": "P1",
+  "sigla": "LI",
+  "status": null,
+  "titulo": "Itens gramaticais relevantes para compreensão de conteúdos semânticos",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Língua Inglesa · 2 Itens gramaticais relevantes para compreensão de conteúdos semânticos."
+   ],
+   "resumo": null,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "li-3",
+  "caps": [],
+  "materia": "Língua Inglesa",
+  "materiaOrdem": 2,
+  "nota": "",
+  "num": "3",
+  "ordem": 20,
+  "prova": "P1",
+  "sigla": "LI",
+  "status": null,
+  "titulo": "Conhecimento e uso das formas contemporâneas da linguagem inglesa",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Língua Inglesa · 3 Conhecimento e uso das formas contemporâneas da linguagem inglesa."
+   ],
+   "resumo": null,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-1",
+  "caps": [],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "1",
+  "ordem": 1,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Compreensão e interpretação de textos de gêneros variados",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Língua Portuguesa · 1 Compreensão e interpretação de textos de gêneros variados."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-2",
+  "caps": [],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "2",
+  "ordem": 2,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Reconhecimento de tipos e gêneros textuais",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Língua Portuguesa · 2 Reconhecimento de tipos e gêneros textuais."
+   ],
+   "resumo": null,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-3",
+  "caps": [],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "3",
+  "ordem": 3,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Domínio da ortografia",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Língua Portuguesa · 3 Domínio da ortografia."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-4-1",
+  "caps": [
+   "LP-4.1"
+  ],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "4.1",
+  "ordem": 4,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Coesão: referenciação, substituição e repetição, conectores e outros elementos de sequenciação textual",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Língua Portuguesa · 4.1 Emprego de elementos de referenciação, substituição e repetição, de conectores e de outros elementos de se"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-4-2",
+  "caps": [],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "4.2",
+  "ordem": 5,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Coesão: emprego de tempos e modos verbais",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Língua Portuguesa · 4.2 Emprego de tempos e modos verbais."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-5-1",
+  "caps": [],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "5.1",
+  "ordem": 6,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Emprego das classes de palavras",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Língua Portuguesa · 5.1 Emprego das classes de palavras."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-5-2",
+  "caps": [],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "5.2",
+  "ordem": 7,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Relações de coordenação entre orações e entre termos da oração",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Língua Portuguesa · 5.2 Relações de coordenação entre orações e entre termos da oração."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-5-3",
+  "caps": [],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "5.3",
+  "ordem": 8,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Relações de subordinação entre orações e entre termos da oração",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 50,
+   "itens": [
+    "Língua Portuguesa · 5.3 Relações de subordinação entre orações e entre termos da oração."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-5-4",
+  "caps": [
+   "LP-5.4"
+  ],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "5.4",
+  "ordem": 9,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Emprego dos sinais de pontuação",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Língua Portuguesa · 5.4 Emprego dos sinais de pontuação."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-5-5",
+  "caps": [
+   "LP-5.5"
+  ],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "5.5",
+  "ordem": 10,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Concordância verbal e nominal",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Língua Portuguesa · 5.5 Concordância verbal e nominal."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-5-6",
+  "caps": [
+   "LP-5.6"
+  ],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "5.6",
+  "ordem": 11,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Regência verbal e nominal",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Língua Portuguesa · 5.6 Regência verbal e nominal."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-5-7",
+  "caps": [],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "5.7",
+  "ordem": 12,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Emprego do sinal indicativo de crase",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Língua Portuguesa · 5.7 Emprego do sinal indicativo de crase."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-5-8",
+  "caps": [],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "5.8",
+  "ordem": 13,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Colocação dos pronomes átonos",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Língua Portuguesa · 5.8 Colocação dos pronomes átonos."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-6-1",
+  "caps": [],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "6.1",
+  "ordem": 14,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Reescrita: significação das palavras",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Língua Portuguesa · 6 Reescrita de frases e parágrafos do texto. 6.1 Significação das palavras. 6.2 Substituição de palavras ou de"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-6-2",
+  "caps": [],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "6.2",
+  "ordem": 15,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Reescrita: substituição de palavras ou de trechos de texto",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Língua Portuguesa · 6 Reescrita de frases e parágrafos do texto. 6.1 Significação das palavras. 6.2 Substituição de palavras ou de"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-6-3",
+  "caps": [],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "6.3",
+  "ordem": 16,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Reescrita: reorganização da estrutura de orações e de períodos do texto",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Língua Portuguesa · 6 Reescrita de frases e parágrafos do texto. 6.1 Significação das palavras. 6.2 Substituição de palavras ou de"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "lp-6-4",
+  "caps": [],
+  "materia": "Língua Portuguesa",
+  "materiaOrdem": 1,
+  "nota": "",
+  "num": "6.4",
+  "ordem": 17,
+  "prova": "P1",
+  "sigla": "LP",
+  "status": null,
+  "titulo": "Reescrita de textos de diferentes gêneros e níveis de formalidade",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Língua Portuguesa · 6 Reescrita de frases e parágrafos do texto. 6.1 Significação das palavras. 6.2 Substituição de palavras ou de"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "pl-1-1",
+  "caps": [],
+  "materia": "Processo Legislativo e Regimentos",
+  "materiaOrdem": 8,
+  "nota": "",
+  "num": "1.1",
+  "ordem": 144,
+  "prova": "P2",
+  "sigla": "PL",
+  "status": null,
+  "titulo": "Tipos de procedimento: ordinário, abreviado, sumário, sumaríssimo, especial e concentrado; etapas e noções básicas",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Processo Legislativo (Específico) · 1 Procedimento Legislativo: 1.1 Tipos de procedimento, ordinário, abreviado, sumário, sumaríssimo, especial e "
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "pl-1-2",
+  "caps": [],
+  "materia": "Processo Legislativo e Regimentos",
+  "materiaOrdem": 8,
+  "nota": "",
+  "num": "1.2",
+  "ordem": 145,
+  "prova": "P2",
+  "sigla": "PL",
+  "status": null,
+  "titulo": "Comissões, pareceres, deliberação, votação, sanção e veto",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Processo Legislativo (Específico) · 1.2 Comissões, pareceres, deliberação, votação, sanção e veto."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "pl-1-3",
+  "caps": [],
+  "materia": "Processo Legislativo e Regimentos",
+  "materiaOrdem": 8,
+  "nota": "",
+  "num": "1.3",
+  "ordem": 146,
+  "prova": "P2",
+  "sigla": "PL",
+  "status": null,
+  "titulo": "Matérias legislativas: PL ordinária, complementar e delegada; MP; PDL e PRC; PEC",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Processo Legislativo (Específico) · 1.3 Matérias Legislativas: Projeto de lei ordinária, complementar e delegada. Medida provisória. Projeto de de"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "pl-1-4",
+  "caps": [],
+  "materia": "Processo Legislativo e Regimentos",
+  "materiaOrdem": 8,
+  "nota": "",
+  "num": "1.4",
+  "ordem": 147,
+  "prova": "P2",
+  "sigla": "PL",
+  "status": null,
+  "titulo": "Indicações, pareceres, requerimentos e vetos",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Processo Legislativo (Específico) · 1.4 Indicações, pareceres, requerimentos e vetos."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "pl-1-5",
+  "caps": [
+   "JUR-PL1.5"
+  ],
+  "materia": "Processo Legislativo e Regimentos",
+  "materiaOrdem": 8,
+  "nota": "",
+  "num": "1.5",
+  "ordem": 148,
+  "prova": "P2",
+  "sigla": "PL",
+  "status": null,
+  "titulo": "Iniciativa legislativa: Presidência da República, Congresso Nacional, tribunais e cidadãos",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Processo Legislativo (Específico) · 1.5 Iniciativa Legislativa: Presidência da República, Congresso Nacional, tribunais e cidadãos."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "pl-2-1",
+  "caps": [
+   "PL-2.1"
+  ],
+  "materia": "Processo Legislativo e Regimentos",
+  "materiaOrdem": 8,
+  "nota": "",
+  "num": "2.1",
+  "ordem": 149,
+  "prova": "P2",
+  "sigla": "PL",
+  "status": null,
+  "titulo": "RICD (Resolução 17/1989): arts. 25 a 64 e 95 a 200",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Regimento Interno da Câmara dos Deputados · 2 Regimento Interno da Câmara dos Deputados. 2.1 Resolução nº 17/1989 da Câmara dos Deputados e suas alteraçõe"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "pl-3-1",
+  "caps": [
+   "PL-3.1",
+   "DC-8.1"
+  ],
+  "materia": "Processo Legislativo e Regimentos",
+  "materiaOrdem": 8,
+  "nota": "Arts. 1º a 71 estudados no chat do RCCN em 29 e 30/10 (mapa e cartões). Falta a rodada C/E do PL-3.1.",
+  "num": "3.1",
+  "ordem": 150,
+  "prova": "P2",
+  "sigla": "PL",
+  "status": "estudo",
+  "statusEm": "2026-10-30T13:20:00.000Z",
+  "titulo": "Regimento Comum (Resolução 1/1970-CN): arts. 1º a 71",
+  "tutory": {
+   "estudo": 33,
+   "exercicio": 0,
+   "itens": [
+    "Regimento Comum do Congresso Nacional · RCCN Aula 10 - Artigo 1 ao 21",
+    "Regimento Comum do Congresso Nacional · RCCN: Arts 22º ao 71º"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-0",
+  "caps": [
+   "0"
+  ],
+  "foraEdital": true,
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "0",
+  "ordem": 120,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Fundamentos: áudio digital, espectrograma, aprendizado de máquina e métricas (base do curso, sem item próprio no edital)",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 1 Reconhecimento de Fala e Transcrição de Áudio."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-1-1",
+  "caps": [
+   "1.1"
+  ],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "1.1",
+  "ordem": 121,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Reconhecimento automático de fala (ASR)",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 1.1 Reconhecimento automático de fala (ASR – Automatic Speech Recognition)."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-1-2",
+  "caps": [
+   "1.2"
+  ],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "1.2",
+  "ordem": 122,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Modelos de fala end-to-end",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 1.2 Modelos de fala end-to-end."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-1-3",
+  "caps": [
+   "1.3"
+  ],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "1.3",
+  "ordem": 123,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "LLMs multimodais de áudio nativo",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 1.3 LLMs multimodais de áudio nativo."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-1-4",
+  "caps": [
+   "1.4"
+  ],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "1.4",
+  "ordem": 124,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Diarização de falantes: identificação e separação de múltiplos oradores",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 1.4 Diarização de falantes: identificação e separação de múltiplos oradores."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-1-5",
+  "caps": [
+   "1.5"
+  ],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "1.5",
+  "ordem": 125,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Pontuação automática e capitalização em transcrições",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 1.5 Pontuação automática e capitalização em transcrições."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-1-6",
+  "caps": [
+   "1.6"
+  ],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "1.6",
+  "ordem": 126,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Desafios do ASR em português brasileiro: sotaques, vocabulário técnico e parlamentar",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 1.6 Desafios do ASR em Português Brasileiro: sotaques, vocabulário técnico e parlamentar."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-1-7",
+  "caps": [
+   "1.7"
+  ],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "1.7",
+  "ordem": 127,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Transcrição em tempo real",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 1.7 Transcrição em tempo real."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-1-8",
+  "caps": [
+   "1.8"
+  ],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "1.8",
+  "ordem": 128,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Ferramentas e APIs: Whisper, Google Speech-to-Text, Azure Speech, AWS Transcribe",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 1.8 Ferramentas e APIs: Whisper (Open AI), Google Speech-to-text, Azure Speech, AWS Transcribe."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-2-1",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "2.1",
+  "ordem": 129,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Transcrição automática × degravação × revisão humana",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 2.1 Diferença entre transcrição automática, degravação e revisão humana."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-2-2",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "2.2",
+  "ordem": 130,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Fluxo de degravação assistida por IA (human in the loop)",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 2.2 Fluxo de trabalho de degravação assistida por IA (Human in the loop)."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-2-3",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "2.3",
+  "ordem": 131,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Revisão e edição de transcrições: critérios de qualidade e fidelidade",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 2.3 Revisão e edição de transcrições: critérios de qualidade e fidelidade."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-2-4",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "2.4",
+  "ordem": 132,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Formatação de transcrições parlamentares: oradores, pausa, ruído",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 2.4 Formatação de transcrições parlamentares: identificação de oradores, marcação de pausa ruído, etc."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-2-5",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "2.5",
+  "ordem": 133,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Normalização de texto: números, siglas, abreviações e termos técnicos",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 2.5 Normalização de texto: números, siglas, abreviações e termos técnicos."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-2-6",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "2.6",
+  "ordem": 134,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Ferramentas de CAT (Computer Assisted Transcription) e editores de transcrição",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 2.6 Ferramentas de CAT (Computer Assisted Transcription) e editores de transcrição."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-2-7",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "2.7",
+  "ordem": 135,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Controle de qualidade: revisão em dupla, auditorias de amostras, SLA",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 2.7 Controle de qualidade: revisão em dupla, auditorias de amostras, SLA."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-2-8",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "2.8",
+  "ordem": 136,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Vocabulário técnico parlamentar e adaptação de modelo de linguagem",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 2.8 Vocabulário técnico parlamentar e vocabulário adaptado (language model adaptation)."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-3-1",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "3.1",
+  "ordem": 137,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "IA em parlamentos: transcrição de sessões, sumarização, indexação e busca",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 3.1 Aplicações de IA em parlamentos: transcrição de sessões, sumarização, indexação e busca."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-3-2",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "3.2",
+  "ordem": 138,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Busca semântica em acervos parlamentares",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 3.2 Sistemas de busca semântica em acervos parlamentares."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-3-3",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "3.3",
+  "ordem": 139,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Geração automática de atas e resumos de sessões",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 3.3 Geração automática de atas e resumos de sessões."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-3-4",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "3.4",
+  "ordem": 140,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Modelos de IA multilíngues e especializados em português",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 3.4 Modelos de IA multilíngues e especializados em português."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-4-1",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "4.1",
+  "ordem": 141,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "LGPD e proteção de dados em sistemas de transcrição e IA",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 4.1 LGPD e proteção de dados em sistemas de transcrição e IA."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-4-2",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "4.2",
+  "ordem": 142,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Direitos autorais e ética no uso de IA para conteúdo gerado",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 4.2 Direitos autorais e ética no uso de IA para conteúdo gerado."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "rf-4-3",
+  "caps": [],
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "materiaOrdem": 7,
+  "nota": "",
+  "num": "4.3",
+  "ordem": 143,
+  "prova": "P2",
+  "sigla": "RF",
+  "status": null,
+  "titulo": "Segurança da informação em pipelines de áudio e transcrição",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Reconhecimento de fala, transcrição e Inteligência Artificial · 4.3 Segurança da informação em pipelines de áudio e transcrição."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-1-4",
+  "caps": [
+   "TI-1.4"
+  ],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "1.4",
+  "ordem": 76.4,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "MS Office 365 (OneDrive)",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Tecnologia da Informação e Dados · 1.4 MSOffice 365 (OneDrive)."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-1",
+  "caps": [
+   "TI-1.1"
+  ],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "1",
+  "ordem": 76,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "MS Office 365 (Word, Excel, PowerPoint e OneDrive)",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Tecnologia da Informação e Dados · 1.1 MSOffice 365 (Word).",
+    "Tecnologia da Informação e Dados · 1.2 MSOffice 365 ( Excel).",
+    "Tecnologia da Informação e Dados · 1.3 MSOffice 365 (PowerPoint ).",
+    "Tecnologia da Informação e Dados · 1.4 MSOffice 365 (OneDrive)."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-2-1",
+  "caps": [],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "2.1",
+  "ordem": 78,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Conceitos básicos, ferramentas, aplicativos e procedimentos de internet e intranet",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Tecnologia da Informação e Dados · 2.1 Conceitos básicos, ferramentas, aplicativos e procedimentos de Internet e intranet."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-2",
+  "caps": [
+   "TI-2"
+  ],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "2",
+  "ordem": 77,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Redes de computadores",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 25,
+   "itens": [
+    "Tecnologia da Informação e Dados · 2 Redes de computadores. (Parte I)",
+    "Tecnologia da Informação e Dados · 2 Redes de computadores. (Parte II)"
+   ],
+   "resumo": 50,
+   "revisao": 25,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-3",
+  "caps": [],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "3",
+  "ordem": 79,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Comunicação e colaboração: correio eletrônico, Microsoft Teams, Google Meet",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Tecnologia da Informação e Dados · 3 Ferramentas de comunicação e colaboração: correio eletrônico (webmail, cliente de e-mail), aplicativos de co"
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-4-1",
+  "caps": [
+   "TI-4.1"
+  ],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "4.1",
+  "ordem": 81,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Segurança da informação: backup, vírus, worms e pragas virtuais",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Tecnologia da Informação e Dados · 4.1 Segurança da informação: procedimentos de cópia de segurança (backup)",
+    "Tecnologia da Informação e Dados · 4.1.2 Noções de vírus, worms e pragas virtuais."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-4-2",
+  "caps": [
+   "TI-4.2"
+  ],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "4.2",
+  "ordem": 82,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Programas de proteção: antivírus, firewall, antispyware",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Tecnologia da Informação e Dados · 4.2 Programas de proteção (antivírus, firewall, antispyware). 4.3 Ameaças digitais (phishing, pharming)."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-4-3",
+  "caps": [
+   "TI-4.3"
+  ],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "4.3",
+  "ordem": 83,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Ameaças digitais: phishing, pharming",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Tecnologia da Informação e Dados · 4.2 Programas de proteção (antivírus, firewall, antispyware). 4.3 Ameaças digitais (phishing, pharming)."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-4",
+  "caps": [
+   "TI-4"
+  ],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "4",
+  "ordem": 80,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Conceitos gerais de segurança e governança digital",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Tecnologia da Informação e Dados · 4 Conceitos gerais de segurança e governança digital."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-5-1",
+  "caps": [],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "5.1",
+  "ordem": 85,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Engenharia de prompts",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Tecnologia da Informação e Dados · 5.1 Engenharia de prompts."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-5-2",
+  "caps": [
+   "TI-5.2"
+  ],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "5.2",
+  "ordem": 86,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Aprendizado supervisionado, não supervisionado e por reforço",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Tecnologia da Informação e Dados · 5.2 Aprendizado supervisionado, não supervisionado e por reforço."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-5-3",
+  "caps": [
+   "TI-5.3"
+  ],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "5.3",
+  "ordem": 87,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "IA generativa: conceitos, exemplos e casos de uso",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Tecnologia da Informação e Dados · 5.3 IA generativa: conceitos, exemplos e casos de uso."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-5",
+  "caps": [],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "5",
+  "ordem": 84,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Conceitos básicos de inteligência artificial",
+  "tutory": {
+   "estudo": 100,
+   "exercicio": 50,
+   "itens": [
+    "Tecnologia da Informação e Dados · 5 Conceitos básicos de inteligência artificial."
+   ],
+   "resumo": 100,
+   "revisao": 50,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-6",
+  "caps": [
+   "TI-6"
+  ],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "6",
+  "ordem": 88,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Ética e responsabilidade digital no serviço público",
+  "tutory": {
+   "estudo": 0,
+   "exercicio": 0,
+   "itens": [
+    "Tecnologia da Informação e Dados · 6 Ética e responsabilidade digital no serviço público."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-7-1",
+  "caps": [],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "7.1",
+  "ordem": 89,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Dados: conceitos, atributos, métricas, transformação de dados",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Tecnologia da Informação e Dados · 7 Dados. 7.1 Conceitos, atributos, métricas, transformação de dados."
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-8-1",
+  "caps": [],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "8.1",
+  "ordem": 90,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Visualização de dados: princípios",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Tecnologia da Informação e Dados · 8 Visualização de dados. 8.1 Princípios de visualização de dados.8.2 Tipos de gráficos (histograma, linha, bar"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-8-2",
+  "caps": [],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "8.2",
+  "ordem": 91,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Tipos de gráficos: histograma, linha, barra, dispersão, box plot",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Tecnologia da Informação e Dados · 8 Visualização de dados. 8.1 Princípios de visualização de dados.8.2 Tipos de gráficos (histograma, linha, bar"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-8-3",
+  "caps": [],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "8.3",
+  "ordem": 92,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Ferramentas de visualização: Power BI, Tableau e Data Studio",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Tecnologia da Informação e Dados · 8 Visualização de dados. 8.1 Princípios de visualização de dados.8.2 Tipos de gráficos (histograma, linha, bar"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ },
+ {
+  "id": "ti-8-4",
+  "caps": [],
+  "materia": "Tecnologia da Informação e Dados",
+  "materiaOrdem": 5,
+  "nota": "",
+  "num": "8.4",
+  "ordem": 93,
+  "prova": "P1",
+  "sigla": "TI",
+  "status": null,
+  "titulo": "Storytelling para visualização de dados",
+  "tutory": {
+   "estudo": null,
+   "exercicio": 0,
+   "itens": [
+    "Tecnologia da Informação e Dados · 8 Visualização de dados. 8.1 Princípios de visualização de dados.8.2 Tipos de gráficos (histograma, linha, bar"
+   ],
+   "resumo": 0,
+   "revisao": 0,
+   "sinc": "2026-10-26"
+  }
+ }
+]
