@@ -133,26 +133,45 @@ function Estudar() {
     return () => window.removeEventListener("message", receive);
   }, [user?.role]);
 
-  if (user?.role !== "admin") return <section className="qb-card"><h1>Acesso restrito</h1><p>Este histórico de estudos é privativo do administrador.</p></section>;
+  if (user?.role !== "admin") {
+    return <main style={{ padding: 32, fontFamily: "system-ui, sans-serif" }}>
+      <h1>Acesso restrito</h1>
+      <p>Este histórico de estudos é privativo do administrador.</p>
+    </main>;
+  }
+
   return (
-    <section aria-label="Ambiente de estudo importado do Claude" style={{ width: "100%" }}>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, marginBottom: 12, flexWrap: "wrap" }}>
-        <div>
-          <h1 style={{ margin: 0, fontSize: 24 }}>Ambiente de estudo</h1>
-          <p style={{ margin: "4px 0", opacity: 0.75, fontSize: 13 }}>Artefato Claude preservado · dados privados no Base44 · IA automática desativada</p>
+    <main aria-label="Quebrando a Banca · Ambiente de estudo"
+      style={{ width: "100%", minHeight: "100dvh", background: "#F3F6F5" }}>
+      {error && (
+        <div role="alert" style={{
+          position: "fixed", zIndex: 100, bottom: 16, left: 16,
+          maxWidth: "calc(100vw - 32px)", border: "1px solid #b97054",
+          borderRadius: 8, padding: 12, background: "#fff",
+          color: "#8f2b24", boxShadow: "0 4px 24px #0002",
+          fontFamily: "system-ui, sans-serif"
+        }}>
+          Falha na comunicação com o banco: {error}. Os dados anteriores continuam preservados.
+          <button type="button" onClick={() => {
+            setError("");
+            if (frameRef.current) frameRef.current.src = "/claude-export/index.html";
+          }} style={{ marginLeft: 10, textDecoration: "underline" }}>Recarregar</button>
         </div>
-        <a href="/questoes" style={{ fontWeight: 600 }}>Voltar ao laboratório de questões</a>
-      </div>
-      {error && <div role="alert" style={{ border: "1px solid #b97054", borderRadius: 8, padding: 12, marginBottom: 12 }}>
-        Falha na comunicação com o banco: {error}. Os dados anteriores continuam preservados.
-        <button type="button" onClick={() => { setError(""); if (frameRef.current) frameRef.current.src = "/claude-export/index.html"; }} style={{ marginLeft: 10 }}>Recarregar</button>
-      </div>}
-      {ready ? <iframe
-        ref={frameRef}
-        title="Quebrando a Banca: treino, revisão, edital e simulado"
-        src="/claude-export/index.html"
-        style={{ display: "block", width: "100%", minHeight: "85vh", height: "calc(100vh - 140px)", border: "1px solid #d3ddda", borderRadius: 12, background: "#f3f6f5" }}
-      /> : <p>Preparando ambiente de estudo...</p>}
-    </section>
+      )}
+      {ready ? (
+        <iframe ref={frameRef}
+          title="Quebrando a Banca: Hoje, Edital, Treinar, Estudo, Simulado e Desempenho"
+          src="/claude-export/index.html"
+          style={{
+            display: "block", width: "100%", height: "100dvh",
+            border: 0, borderRadius: 0, background: "#F3F6F5"
+          }}
+        />
+      ) : (
+        <div style={{ padding: 24, fontFamily: "system-ui, sans-serif" }}>
+          Preparando ambiente de estudo...
+        </div>
+      )}
+    </main>
   );
 }
