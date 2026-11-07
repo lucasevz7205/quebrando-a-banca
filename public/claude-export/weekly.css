@@ -44,6 +44,17 @@
 .qb-kind-revisao { --qb-task-accent:#D39139; }
 .qb-kind-mapa { --qb-task-accent:#9B6FE1; }
 .qb-kind-simulado { --qb-task-accent:#CE6288; }
+.qb-plan-overdue { background:var(--surface); border:1px solid var(--line); border-radius:13px; overflow:hidden; }
+.qb-plan-overdue > summary { cursor:pointer; padding:14px 17px; display:flex; justify-content:space-between; gap:10px; align-items:center; flex-wrap:wrap; }
+.qb-plan-overdue > summary:hover { background:var(--pen-soft); }
+.qb-plan-overdue > summary strong { font-size:12.5px; color:var(--ink); }
+.qb-plan-overdue > summary span { color:var(--muted); font-size:11px; }
+.qb-plan-overdue[open] > summary { border-bottom:1px solid var(--line); }
+.qb-plan-overdue-list { padding:13px; display:flex; flex-direction:column; gap:8px; }
+.qb-plan-overdue-list > div { display:flex; align-items:center; justify-content:space-between; gap:12px; border:1px solid var(--line); border-radius:10px; padding:11px 13px; }
+.qb-plan-overdue-list > div > div { display:flex; flex-direction:column; gap:3px; min-width:0; }
+.qb-plan-overdue-list strong { font-size:12px; overflow-wrap:anywhere; }
+.qb-plan-overdue-list small { font-size:11px; color:var(--muted); }
 .qb-plan-bottom { display:grid; grid-template-columns:minmax(0,1.65fr) minmax(270px,1fr); align-items:start; gap:14px; }
 .qb-plan-day-detail,.qb-plan-tips,.qb-plan-form { background:var(--surface); border:1px solid var(--line); border-radius:15px; padding:22px; min-width:0; }
 .qb-plan-panel-head { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-bottom:16px; }
