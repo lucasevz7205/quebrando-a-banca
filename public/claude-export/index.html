@@ -410,6 +410,7 @@ details.diario .feed{margin-top:10px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 <link rel="stylesheet" href="/claude-export/experience.css">
+<link rel="stylesheet" href="/claude-export/weekly.css">
 
 <div class="wrap">
   <header class="top">
@@ -432,6 +433,7 @@ details.diario .feed{margin-top:10px}
 <div class="toast" id="toast" hidden></div>
 
 <script src="/claude-export/bridge.js"></script>
+<script src="/claude-export/planner.js"></script>
 <script>
 (function(){
 const S = {
@@ -444,6 +446,7 @@ const S = {
   fMat:'', fSt:'', abertos:new Set(), ptsAbertos:new Set(), evocar:false, revelados:new Set(),
   rv:new Map(), cfg:new Map(), cartAbertos:new Set(),
   pg:new Map(), fPgMat:'', fPgTipo:'',
+  pl:[], // planejamento semanal; nunca mistura com o histórico de respostas
   an:new Map(), mecQ:new Map(), pgModo:'mec', fMecMat:''
 };
 const VIEWS=['cartoes','mapa','simulado','painel','edital','revisao','pegadinhas','conteudo','treinar','caderno','historico','metodo'];
@@ -596,7 +599,7 @@ const multiCap=cap=>cap==='MIX'||cap==='PEG';
 /* ---------- navegação ---------- */
 /* 5 abas; Estudo agrupa Revisão, Pegadinhas e Conteúdo; Treinar inclui o caderno de erros; Desempenho inclui o Método */
 const PAI={cartoes:'estudo',mapa:'estudo',revisao:'estudo',pegadinhas:'estudo',conteudo:'estudo',caderno:'treinar',metodo:'historico'};
-const SUBS={estudo:[['revisao','Revisão ativa'],['pegadinhas','Pegadinhas'],['conteudo','Conteúdo']],treinar:[['treinar','Treinar'],['caderno','Caderno de erros']],historico:[['historico','Desempenho'],['metodo','Método']]};
+const SUBS={estudo:[['revisao','Revisão'],['mapa','Mapas mentais'],['cartoes','Flashcards'],['pegadinhas','Pegadinhas'],['conteudo','Materiais']],treinar:[['treinar','Treinar'],['caderno','Caderno de erros']],historico:[['historico','Desempenho'],['metodo','Método']]};
 function subnav(){
   const pai=PAI[S.view]||S.view, l=SUBS[pai]; if(!l) return '';
   const cnt={caderno:cadernoItens().length,pegadinhas:S.pg.size};
@@ -1232,6 +1235,10 @@ function linhaProva(){
     <p class="rule">Cada bolinha é um dia com revisões daquela matéria (maior = mais itens; vencidas aparecem em hoje). A faixa vermelha é a reta final: a partir de 10/01 tudo vira revisão diária.</p></section>`;
 }
 function viewPainel(){
+  return window.QBPlanner ? window.QBPlanner.render(S,{hoje,proxDe,devidas}) : viewPanorama();
+}
+/* Métricas anteriores preservadas, sem substituir o calendário principal. */
+function viewPanorama(){
   if(!S.edLoaded) return `<div class="wrap" style="gap:18px">${dueBox()}<div class="notice">Carregando o edital…</div></div>`;
   const gs=porMateria();
   const tot={nao:0,estudo:0,revisao:0,dominado:0}; let nTop=0;
@@ -1921,6 +1928,7 @@ function viewMetodo(){
 
 /* ---------- ações ---------- */
 function wire(){
+  if(S.view==="painel" && window.QBPlanner) window.QBPlanner.wire(S,{render,enqueue,toast,hoje,startRevisao,iniciarMix});
   document.querySelectorAll('[data-cap]').forEach(b=>b.addEventListener('click',()=>{S.cap=b.dataset.cap;S.capEscolhido=true;render(true)}));
   document.querySelectorAll('input[name="modo"]').forEach(i=>i.addEventListener('change',()=>{S.modo=i.value;render(true)}));
   const sh=$('#shuffle'); if(sh) sh.addEventListener('change',()=>{S.shuffle=sh.checked});
@@ -2183,6 +2191,10 @@ function subscribe(){
   central('materiais',ds=>{S.mat=new Map(ds.map(d=>[d.id,d]));});
   central('pontos',ds=>{S.pt=new Map(ds.map(d=>[d.id,d]));});
   central('diario',ds=>{S.di=ds;});
+  db.collection('planejamento').onSnapshot(snap=>{
+    S.pl=snap.docs.map(d=>Object.assign({id:d.id},d.data()));
+    if(S.view==='painel')render();
+  },err=>{console.warn('O planejamento não pôde ser carregado.',err)});
   db.collection('textos').onSnapshot(snap=>{S.tx=new Map(snap.docs.map(d=>[d.id,Object.assign({id:d.id},d.data())]));if(['simulado','treinar'].includes(S.view))render();},()=>{});
   db.collection('simulados').onSnapshot(snap=>{S.sims=snap.docs.map(d=>Object.assign({id:d.id},d.data()));if(S.view==='simulado'&&!simLS('obj')&&!simLS('disc'))render();},()=>{});
 }
