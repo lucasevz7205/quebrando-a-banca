@@ -1,0 +1,855 @@
+[
+ {
+  "id": "doc-cf88-contexto",
+  "chat": "Direito Constitucional",
+  "criadoEm": "2026-10-27",
+  "descricao": "Complemento ao PDF do item 1: quadro de cobertura, a Constituinte de 1987–1988 (que o PDF não traz) e o detalhe da estrutura do texto, com divergências registradas.",
+  "secoes": [
+   "Cobertura",
+   "Conceito",
+   "Contexto histórico",
+   "Características",
+   "Estrutura do texto",
+   "Preâmbulo",
+   "ADCT",
+   "Recuperação"
+  ],
+  "tipo": "cobertura",
+  "titulo": "CF/88 em contexto",
+  "topicos": [
+   "dc-1"
+  ],
+  "url": "https://claude.ai/artifact/XA5EtPH5h7PDYhB11s8s3g"
+ },
+ {
+  "id": "doc-cobertura-82",
+  "chat": "Administração Pública",
+  "criadoEm": "2026-10-26",
+  "descricao": "Quanto do 8.2 o curso cobre (4 de 15 subtópicos) e histórico do tema em 17 editais e provas do Cebraspe de 2016 a 2026, incluindo a prova da Câmara de março de 2026.",
+  "tipo": "cobertura",
+  "titulo": "Tópico 8.2 — cobertura das fontes e histórico na banca",
+  "topicos": [
+   "da-8-2"
+  ],
+  "url": "https://claude.ai/artifact/UfwvqLvbEyFdt1pumRBBah"
+ },
+ {
+  "id": "doc-concordancia-55",
+  "chat": "Língua Portuguesa",
+  "criadoEm": "2026-10-26",
+  "descricao": "Cobertura do item 5.5 pela Aula 9 e material paralelo com os cinco pontos que faltam ou estão rasos.",
+  "secoes": [
+   "Cobertura: edital × Aula 9",
+   "“Se”: passiva × indeterminação",
+   "Dar, bater e soar com horas",
+   "Um e outro · nem um nem outro · um ou outro",
+   "Um dos que",
+   "Haja vista; dado, visto",
+   "Perguntas de recuperação"
+  ],
+  "tipo": "cobertura",
+  "titulo": "Concordância: complemento ao edital",
+  "topicos": [
+   "lp-5-5"
+  ],
+  "url": "https://claude.ai/artifact/QmbnTW4bis41M1UpSb88UZ"
+ },
+ {
+  "id": "doc-coproducao-83",
+  "chat": "Administração Pública",
+  "criadoEm": "2026-10-30",
+  "descricao": "Cobre a lacuna das aulas de Stefan Fantini: conceito, tipologias (Brudney e England, Bovaird, quatro 'co'), modelos de Salm e Menegasso, exemplos e pegadinhas.",
+  "secoes": [
+   "Conceito e autores clássicos",
+   "Coprodução × conceitos vizinhos",
+   "Tipologias internacionais",
+   "Salm e Menegasso",
+   "Exemplos brasileiros",
+   "Ligação com 8.1 e 8.2",
+   "Pegadinhas prováveis",
+   "Fontes"
+  ],
+  "tipo": "material",
+  "titulo": "Coprodução do bem público — material de estudo (tópico 8.3)",
+  "topicos": [
+   "da-8-3"
+  ],
+  "url": "https://claude.ai/artifact/Gx9Wbh9NTpR6mmDKd3vh6T"
+ },
+ {
+  "id": "doc-estado-cp9",
+  "chat": "Ciência Política",
+  "criadoEm": "2026-10-28",
+  "descricao": "Lacunas da apostila do Cap. 11 e da Aula 01 do LDI: soberania, território e elevação do mar, autonomia do Estado (Skocpol, Evans, Mann), fronteiras Estado-sociedade, Bresser-Pereira e Estado regulador.",
+  "secoes": [
+   "Mapa de cobertura",
+   "Soberania: atributos e limites",
+   "Território e continuidade do Estado",
+   "Autonomia e capacidade do Estado",
+   "Fronteiras entre Estado e sociedade",
+   "Onde nasce o Estado moderno",
+   "Do Estado provedor ao regulador",
+   "Perguntas de recuperação",
+   "Fontes"
+  ],
+  "tipo": "material",
+  "titulo": "CP-9 · Teoria do Estado: o que o Cebraspe cobra além da apostila e do LDI",
+  "topicos": [
+   "cp-9"
+  ],
+  "url": "https://claude.ai/artifact/CpcdkhhT8KD6aXiPSxeHBX"
+ },
+ {
+  "id": "doc-etica-6",
+  "chat": "TI e IA",
+  "criadoEm": "2026-10-30",
+  "descricao": "Cobertura LDI × edital e complemento: LGPD no serviço público, LAI × LGPD, POSIC (Ato da Mesa 231/2025), Portaria DG 227/2025 e conduta do servidor (Lei 8.112).",
+  "secoes": [
+   "Cobertura: LDI × edital",
+   "LGPD no serviço público",
+   "Transparência (LAI) × proteção de dados (LGPD)",
+   "Regras da Câmara",
+   "Conduta do servidor no ambiente digital",
+   "Pegadinhas do Cebraspe",
+   "Perguntas de recuperação",
+   "Fontes"
+  ],
+  "tipo": "material",
+  "titulo": "TI 6 — Ética e responsabilidade digital: complemento ao LDI",
+  "topicos": [
+   "ti-6"
+  ],
+  "url": "https://claude.ai/artifact/DwdcmzciY14aZ3dxZGMNaC"
+ },
+ {
+  "id": "doc-ia-52-53",
+  "chat": "TI e IA",
+  "criadoEm": "2026-10-26",
+  "descricao": "Cobertura do LDI pós-edital (cap. 15) × edital e complemento: algoritmos, meios-termos, overfitting, temperatura, RAG × ajuste fino, Portaria DG 227/2025 e PL 2338.",
+  "secoes": [
+   "Como usar",
+   "Cobertura: LDI × edital",
+   "Complemento 5.2 — tipos de aprendizado",
+   "Complemento 5.3 — IA generativa",
+   "IA na Câmara",
+   "Pegadinhas do Cebraspe",
+   "Perguntas de recuperação",
+   "Fontes"
+  ],
+  "tipo": "material",
+  "titulo": "IA 5.2 e 5.3 — material complementar ao LDI",
+  "topicos": [
+   "ti-5-2",
+   "ti-5-3"
+  ],
+  "url": "https://claude.ai/artifact/HKyuwo1mjPi95KjBwivZCE"
+ },
+ {
+  "id": "doc-linguistica-fontes",
+  "chat": "Estudo de Linguística",
+  "criadoEm": "2026-10-25",
+  "descricao": "Cruzamento dos itens de Linguística do edital com as fontes disponíveis.",
+  "tipo": "cobertura",
+  "titulo": "Linguística — edital × fontes de estudo",
+  "topicos": [
+   "lg-1"
+  ],
+  "url": "https://claude.ai/artifact/9D5SEtffB2JUA8sZ2QXphE"
+ },
+ {
+  "id": "doc-ngp-81",
+  "chat": "Administração Pública",
+  "criadoEm": "2026-10-25",
+  "descricao": "Conceito, três regimes de Osborne, fundamentos, quadro comparativo, pegadinhas e 12 itens com gabarito.",
+  "secoes": [
+   "Como usar este material",
+   "1. Conceito: o que é governança",
+   "2. Evolução: os três regimes de Osborne",
+   "3. Fundamentos da Nova Governança Pública",
+   "4. Quadro comparativo dos três regimes",
+   "5. Papel do Estado, do cidadão e limites do modelo",
+   "6. Pegadinhas típicas do Cebraspe",
+   "7. Resumo para revisão",
+   "8. Treino no estilo Cebraspe (12 itens com gabarito)",
+   "Fontes"
+  ],
+  "tipo": "material",
+  "titulo": "Nova Governança Pública — material de estudo (tópico 8.1)",
+  "topicos": [
+   "da-8-1"
+  ],
+  "url": "https://claude.ai/artifact/Fg5HqWy8G4ZHVGD6QZmzxx"
+ },
+ {
+  "id": "doc-redes-82",
+  "chat": "Administração Pública",
+  "criadoEm": "2026-10-26",
+  "descricao": "Redes (Fleury), articulação interinstitucional, PPP, OS, OSCIP, MROSC, consórcios e pegadinhas.",
+  "secoes": [
+   "Como usar este material",
+   "Mapa do tópico",
+   "Parte A — Redes de cooperação",
+   "Parte B — Articulação interinstitucional",
+   "Parte C — Parcerias com o setor privado (PPP)",
+   "Parte D — Parcerias com o terceiro setor (OS, OSCIP, MROSC)",
+   "Pegadinhas do Cebraspe",
+   "Perguntas de recuperação",
+   "Fontes"
+  ],
+  "tipo": "material",
+  "titulo": "Redes de cooperação, articulação e parcerias — material de estudo (tópico 8.2)",
+  "topicos": [
+   "da-8-2"
+  ],
+  "url": "https://claude.ai/artifact/Q5rE7X7ArphNucS28L6Znu"
+ },
+ {
+  "id": "doc-regencia-56",
+  "chat": "Língua Portuguesa",
+  "criadoEm": "2026-10-28",
+  "descricao": "Cobertura do item 5.6 pelo capítulo 8 do LDI e material paralelo com custar, pagar/perdoar, agradecer e verbos de permanência.",
+  "secoes": [
+   "Cobertura: edital × capítulo 8",
+   "Custar",
+   "Pagar e perdoar",
+   "Agradecer",
+   "Permanência × movimento",
+   "Perguntas de recuperação"
+  ],
+  "tipo": "cobertura",
+  "titulo": "Regência: complemento ao edital",
+  "topicos": [
+   "lp-5-6"
+  ],
+  "url": "https://claude.ai/artifact/UDP1uojvBGrPgm472XCFiS"
+ },
+ {
+  "id": "doc-valor-publico-84",
+  "chat": "Direito Administrativo",
+  "criadoEm": "2026-11-04",
+  "descricao": "Complementar: Moore e triângulo estratégico, Decreto 9.203/2017, cadeia de valor e 6Es (Gespública), pegadinhas.",
+  "tipo": "material",
+  "titulo": "Valor público e cadeia de valor público — material de estudo (tópico 8.4)",
+  "topicos": [
+   "da-8-4"
+  ],
+  "url": "https://claude.ai/artifact/UUroH6X8hw6FFNtcXqzPMp"
+ },
+ {
+  "id": "fonte-ebook-discursiva-rr",
+  "chat": "Simulados dominicais",
+  "criadoEm": "2026-11-05",
+  "descricao": "Presente da mentoria: orientações Cebraspe, 20 propostas de questão com gabarito, 6 peças de retextualização e 3 peças tradicionais com texto-modelo. Texto no projeto em CD - ARR/Discursiva/.",
+  "secoes": [
+   "Orientações para questões discursivas",
+   "Propostas 1 a 10 (revisão de pronunciamento e conteúdo) e gabarito",
+   "Propostas 11 a 20 (ASR, diarização, HITL, textualidade, enunciação, retórica, ética) e gabarito",
+   "Orientações sobre a peça técnica (retextualização e situação-problema)",
+   "Propostas de peça com texto-modelo"
+  ],
+  "tipo": "fonte",
+  "titulo": "E-book de discursiva — Registro e Redação (Profa. Rosana Moura)",
+  "topicos": [
+   "lg-6-2",
+   "lg-7-2",
+   "rf-1-1",
+   "rf-2-1"
+  ],
+  "url": ""
+ },
+ {
+  "id": "fonte-flashcards-rccn",
+  "chat": "Regimento Comum do Congresso Nacional",
+  "criadoEm": "2026-10-29",
+  "descricao": "Flash cards de lei seca do RCCN enviados pelo Lucas (também no caderno RICD do NotebookLM).",
+  "secoes": [],
+  "tipo": "fonte",
+  "titulo": "Flash Cards · Regimento Comum do Congresso Nacional",
+  "topicos": [
+   "pl-3-1",
+   "dc-8-1",
+   "dc-8-2"
+  ],
+  "url": ""
+ },
+ {
+  "id": "fonte-ldi-cp-aula01",
+  "chat": "Ciência Política",
+  "criadoEm": "2026-10-28",
+  "descricao": "Aula inteira do tópico 9 (1h46 de leitura): origem do Estado, formação do Estado moderno, absolutistas e liberais, Marx/Weber e marxistas, modelos de Estado, elementos, unitário × federal.",
+  "secoes": [
+   "2.2 Introdução",
+   "2.3 Perspectivas sobre a origem do Estado",
+   "2.4 Formação do Estado Moderno",
+   "2.5 Teoria Clássica do Estado",
+   "2.6 O Estado para Marx e Weber",
+   "2.7 Modelos de Estados",
+   "2.8 Elementos constitutivos",
+   "2.9 Formas de organização política",
+   "Resumos",
+   "Questões Comentadas"
+  ],
+  "tipo": "fonte",
+  "titulo": "LDI Estratégia · Ciência Política p/ Câmara (ARR) · Aula 01 — Teoria do Estado e formação dos Estados nacionais",
+  "topicos": [
+   "cp-9"
+  ],
+  "url": "https://concursos.estrategia.com/ldi/ciencia-politica-para-camara-dos-deputados-analista-legislativo-registro-e-redacao-pos-edital"
+ },
+ {
+  "id": "fonte-ldi-lp-cap8",
+  "chat": "Língua Portuguesa",
+  "criadoEm": "2026-10-28",
+  "descricao": "Aula de regência (8.1 a 8.4) e crase (8.5 a 8.8) no livro digital; não está no NotebookLM.",
+  "secoes": [
+   "8.1 Considerações iniciais",
+   "8.2 Regência verbal",
+   "8.3 Principais regências",
+   "8.4 Regência nominal",
+   "8.5 a 8.8 Crase"
+  ],
+  "tipo": "fonte",
+  "titulo": "Estratégia LDI · Língua Portuguesa p/ Câmara (pós-edital) · cap. 8 Regência e Crase",
+  "topicos": [
+   "lp-5-6",
+   "lp-5-7"
+  ],
+  "url": "https://concursos.estrategia.com/ldi/lingua-portuguesa-para-camara-de-deputados-pos-edital"
+ },
+ {
+  "id": "fonte-ldi-ti-cap15",
+  "chat": "TI e IA",
+  "criadoEm": "2026-10-26",
+  "descricao": "Capítulo do livro digital do Estratégia que cobre os itens 5 a 5.3 do edital; o LDI pré-edital (Informática e Dados) não tem IA.",
+  "tipo": "fonte",
+  "titulo": "LDI pós-edital Estratégia — TI e Dados para Câmara, cap. 15 (IA, prompts, IA generativa, aprendizado de máquina)",
+  "topicos": [
+   "ti-5",
+   "ti-5-1",
+   "ti-5-2",
+   "ti-5-3"
+  ],
+  "url": "https://concursos.estrategia.com/ldi/tecnologia-da-informacao-e-dados-para-camara-de-deputados-pos-edital"
+ },
+ {
+  "id": "fonte-lf-cp-cap11",
+  "chat": "Ciência Política",
+  "criadoEm": "2026-10-28",
+  "descricao": "PDF no NotebookLM de Ciência Política: 11.1 a 11.5, quadros, pegadinhas, 18 itens inéditos e 25 questões de concursos com gabarito. Resume bem, mas 10 das 25 questões exigem LDI ou o material complementar.",
+  "secoes": [
+   "11.1 O que é o Estado",
+   "11.2 Origem e justificação",
+   "11.3 Formação do Estado moderno",
+   "11.4 Nação e nacionalismo",
+   "11.5 Do Estado liberal ao social"
+  ],
+  "tipo": "fonte",
+  "titulo": "Apostila Legislativo Facilitado · Etapa 13 · Cap. 11 · Teoria do Estado e formação dos Estados nacionais",
+  "topicos": [
+   "cp-9"
+  ],
+  "url": "https://notebook.google.com/notebook/c9e3e8ae-439b-4491-8ef3-d2ec25215724"
+ },
+ {
+  "id": "fonte-metodo",
+  "chat": "Método de estudo",
+  "criadoEm": "2026-10-26",
+  "descricao": "Método do projeto com a base científica. Arquivo claude/Metodo_de_Estudo.md do projeto.",
+  "tipo": "metodo",
+  "titulo": "Metodo_de_Estudo.md (versão 2)",
+  "topicos": [],
+  "url": ""
+ },
+ {
+  "id": "fonte-pdf-dc1",
+  "chat": "Direito Constitucional",
+  "criadoEm": "2026-10-27",
+  "descricao": "Direito Constitucional para Câmara de Deputados, 155 p., enviado pelo Lucas em 27/10/2026 (também no notebook). Cobre constitucionalismo, sentidos, estrutura e elementos, classificação, aplicabilidade, hierarquia e poder constituinte; não traz a Constituinte de 1987–1988. 120 questões C/E comentadas importadas para DC-1.1 a DC-1.5.",
+  "secoes": [
+   "1.1–1.4 Constitucionalismo",
+   "1.5–1.7 Sentidos",
+   "1.8–1.10 Estrutura e elementos",
+   "1.11–1.13 Classificação",
+   "1.14–1.16 Aplicabilidade",
+   "1.17–1.19 Hierarquia",
+   "1.20–1.22 Poder constituinte"
+  ],
+  "tipo": "fonte",
+  "titulo": "PDF “1. Constituição Federal de 1988: conceito, contexto histórico, características, estrutura do texto”",
+  "topicos": [
+   "dc-1"
+  ],
+  "url": ""
+ },
+ {
+  "id": "fonte-rf-goodnotes",
+  "chat": "Reconhecimento de fala e IA",
+  "criadoEm": "2026-10-25",
+  "descricao": "Anotações do curso no GoodNotes: Capítulo 0 (Fundamentos) e 1.1 (ASR).",
+  "tipo": "fonte",
+  "titulo": "Reconhecimento de Fala: Etapas 01 e 02 (GoodNotes)",
+  "topicos": [
+   "rf-0",
+   "rf-1-1"
+  ],
+  "url": ""
+ },
+ {
+  "id": "fonte-rf-vborges-aula1",
+  "chat": "Reconhecimento de Fala",
+  "criadoEm": "2026-10-30",
+  "descricao": "PDF de 76 páginas que cobre o item 1 inteiro do edital (1.1 a 1.8), com resumo e 39 questões inéditas do autor; adicionado ao NotebookLM em 30/10/2026.",
+  "latente": true,
+  "obs": "LATENTE por decisão do Lucas (30/10/2026): usar só na revisão futura de cada tópico do item 1, não no primeiro estudo. Para o 1.1 a apostila do Legislativo Facilitado é mais funda. Pontos a aproveitar no 1.2: datas e autoria das famílias; risco de alucinação por família; HuBERT e XLS-R; Whisper com tokens especiais, large-v3 (1 mi h fracas + 4 mi h pseudo-rotuladas), turbo (decodificador 32→4), tamanhos, 438 mil h inglês × ~8,5 mil h português; limite 'menos transparentes'; exemplo 'Obrigado por assistir'; escada de adaptação (lista de frases → prompt → modelo de linguagem personalizado → ajuste fino; organização do autor). Divergências com a apostila: 'CTC não alucina' (absoluto) × 'menos sujeito'; RTF '< 1' × 'no máximo 1'; 'escala' vantagem × 'fome de dados' limite.",
+  "secoes": [
+   "ASR",
+   "Modelos end-to-end",
+   "LLMs multimodais de áudio nativo",
+   "Diarização",
+   "Pontuação, capitalização e ITN",
+   "Desafios do PT-BR e do plenário",
+   "Transcrição em tempo real",
+   "Ferramentas e APIs",
+   "Resumo",
+   "Questões comentadas"
+  ],
+  "tipo": "fonte",
+  "titulo": "Reconhecimento de Fala e Transcrição de Áudio · Aula 1 (Prof. Vinicius Borges)",
+  "topicos": [
+   "rf-1-1",
+   "rf-1-2",
+   "rf-1-3",
+   "rf-1-4",
+   "rf-1-5",
+   "rf-1-6",
+   "rf-1-7",
+   "rf-1-8"
+  ],
+  "url": ""
+ },
+ {
+  "id": "fonte-ricd-rcd34-2026",
+  "chat": "Processo Legislativo · RICD arts. 25 a 64",
+  "criadoEm": "2026-11-04",
+  "descricao": "Texto oficial compilado do RICD; fonte de referência das Partes 1 a 4 do PL-2.1 (os Flash Cards não trazem a Res. 33/2026).",
+  "secoes": [
+   "Arts. 25 a 64 conferidos em 04/11/2026: idênticos aos Flash Cards",
+   "Art. 14, §§ 5º e 7º (Res. 33/2026)"
+  ],
+  "tipo": "fonte",
+  "titulo": "RICD atualizado até a RCD 34/2026 (Câmara, texto oficial)",
+  "topicos": [
+   "pl-2-1"
+  ],
+  "url": "https://www2.camara.leg.br/atividade-legislativa/legislacao/regimento-interno-da-camara-dos-deputados/arquivos-1/RICDatualizadoatRCD342026.pdf"
+ },
+ {
+  "id": "fonte-stf-legislativo",
+  "chat": "",
+  "criadoEm": "2026-10-25",
+  "descricao": "Arquivo do projeto (CD - ARR/Processo Legislativo). Usado no ramo Parecer do Mapa do Ato Administrativo (MS 24.631 e MS 24.584).",
+  "tipo": "fonte",
+  "titulo": "Do Poder Legislativo STF",
+  "topicos": [
+   "dc-5",
+   "dc-6",
+   "da-2-2"
+  ],
+  "url": ""
+ },
+ {
+  "id": "fonte-ti-redes",
+  "chat": "",
+  "criadoEm": "2026-10-25",
+  "descricao": "Arquivos do projeto, pasta CD - ARR/TI e Dados (versões completa, grifada e simplificada, mais resumos e mapa mental).",
+  "tipo": "fonte",
+  "titulo": "Redes de computadores: aulas 00 e 01 (Diego Carvalho e Renato da Costa) e resumos",
+  "topicos": [
+   "ti-2",
+   "ti-2-1"
+  ],
+  "url": ""
+ },
+ {
+  "id": "mapa-ato-adm",
+  "chat": "Direito Administrativo",
+  "criadoEm": "2026-10-25",
+  "descricao": "Mapa mental da Aula 7 (Herbert Almeida): conceito, atributos, elementos, vícios, classificação, espécies, extinção, anulação, revogação e parecer.",
+  "tipo": "mapa",
+  "titulo": "Mapa do Ato Administrativo",
+  "topicos": [
+   "da-2-1",
+   "da-2-2"
+  ],
+  "url": "https://claude.ai/artifact/Q9TNHB8B1fUvSCFJVuNrsi"
+ },
+ {
+  "id": "mapa-categorias-semanticas",
+  "chat": "Estudo de Linguística",
+  "criadoEm": "2026-10-31",
+  "descricao": "Mapa mental do item 2 de Linguística a partir das Etapas 05, 06 e 07 do Legislativo Facilitado: 44 palavras-chave em 8 ramos e 34 cartões de revisão ativa.",
+  "secoes": [
+   "Categoria",
+   "Gênero",
+   "Número",
+   "Pessoa",
+   "Tempo",
+   "Modo e modalidade",
+   "Aspecto",
+   "Papéis semânticos",
+   "Revisão ativa"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa das Categorias Semânticas",
+  "topicos": [
+   "lg-2"
+  ],
+  "url": "https://claude.ai/artifact/RoD2JoD2SmAfYCiNTjwc5P"
+ },
+ {
+  "id": "mapa-cf88",
+  "chat": "Direito Constitucional",
+  "criadoEm": "2026-10-27",
+  "descricao": "Mapa mental do item 1, alinhado ao PDF do curso: 7 ramos, 32 palavras-chave e 20 cartões de revisão ativa.",
+  "secoes": [
+   "Conceito",
+   "Constitucionalismo",
+   "Contexto histórico",
+   "Características",
+   "Estrutura do texto",
+   "Preâmbulo",
+   "ADCT"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa da CF/88",
+  "topicos": [
+   "dc-1"
+  ],
+  "url": "https://claude.ai/artifact/Gq5s7heyo1EU6JuXYb5g54"
+ },
+ {
+  "id": "mapa-concordancia",
+  "chat": "Língua Portuguesa",
+  "criadoEm": "2026-10-26",
+  "descricao": "Mapa mental da Aula 9 (Estratégia): regra geral, partitivos, impessoais, “se”, infinitivo, sujeito composto, verbo ser e concordância nominal. 40 palavras-chave e 18 cartões de revisão ativa.",
+  "secoes": [
+   "Regra geral e sujeito",
+   "Partitivos e números",
+   "Impessoais",
+   "Que, quem e predicativo",
+   "Voz passiva e “se”",
+   "Infinitivo",
+   "Sujeito composto",
+   "Verbo ser",
+   "Concordância nominal",
+   "Complemento ao material"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa da Concordância",
+  "topicos": [
+   "lp-5-5"
+  ],
+  "url": "https://claude.ai/artifact/WjJz7tDB3zLAvwWzXsJ2fM"
+ },
+ {
+  "id": "mapa-coproducao-83",
+  "chat": "Direito Administrativo",
+  "criadoEm": "2026-10-31",
+  "descricao": "3 ramos, 11 folhas, 11 cartões; exemplos inéditos Claude.",
+  "tipo": "mapa",
+  "titulo": "Mapa da Coprodução e Transparência",
+  "topicos": [
+   "da-8-3"
+  ],
+  "url": "https://claude.ai/artifact/8RMtHsEvEKb2cmZULLWgVj"
+ },
+ {
+  "id": "mapa-direitos-sociais",
+  "chat": "Direito Constitucional",
+  "criadoEm": "2026-10-25",
+  "descricao": "Mapa mental da Aula 5 (Nádia Carolina e Ricardo Vale), arts. 6º a 11 da CF, já com a EC 141/2026.",
+  "tipo": "mapa",
+  "titulo": "Mapa dos Direitos Sociais",
+  "topicos": [
+   "dc-2c"
+  ],
+  "url": "https://claude.ai/artifact/GaCEDzZupZkz7KznZmv4Fw"
+ },
+ {
+  "id": "mapa-etica-6",
+  "chat": "TI e IA",
+  "criadoEm": "2026-10-31",
+  "descricao": "Árvore de 22 palavras-chave com evocação antes de ler e 19 cartões de revisão ativa.",
+  "secoes": [
+   "Riscos da IA generativa",
+   "Princípios",
+   "LGPD no serviço público",
+   "LAI × LGPD",
+   "Normas da Câmara",
+   "Conduta do servidor",
+   "Revisão ativa"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa mental — Ética e responsabilidade digital no serviço público (6)",
+  "topicos": [
+   "ti-6"
+  ],
+  "url": "https://claude.ai/artifact/Sqx8yD7gLyuaC9Zzk1sSsg"
+ },
+ {
+  "id": "mapa-ia-53",
+  "chat": "TI e IA",
+  "criadoEm": "2026-10-29",
+  "descricao": "Árvore de 24 palavras-chave com evocação antes de ler e 20 cartões de revisão ativa; base LDI 15.1 + Portaria DG 227/2025, incrementos marcados.",
+  "secoes": [
+   "IA generativa",
+   "Características",
+   "Generativo × discriminativo",
+   "LLM por dentro",
+   "Famílias e arquiteturas",
+   "Riscos e casos de uso",
+   "Revisão ativa"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa mental — IA generativa: conceitos, exemplos e casos de uso (5.3)",
+  "topicos": [
+   "ti-5-3"
+  ],
+  "url": "https://claude.ai/artifact/5tDg6HeQeZu8Q9tVHk5E4h"
+ },
+ {
+  "id": "mapa-improbidade",
+  "chat": "Direito Administrativo",
+  "criadoEm": "2026-10-30",
+  "descricao": "Mapa mental da Lei 8.429/1992 com a Lei 14.230/2021, o Tema 1.199 e o julgamento do STF de julho de 2026, com questões Cebraspe e revisão ativa.",
+  "secoes": [
+   "Noções gerais",
+   "Sujeitos",
+   "Espécies",
+   "Sanções",
+   "Investigação e ação",
+   "Prescrição e tempo"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa da Improbidade Administrativa",
+  "topicos": [
+   "da-7"
+  ],
+  "url": "https://claude.ai/artifact/K9Kx4eRHCmv7peUPr3Zb7S"
+ },
+ {
+  "id": "mapa-ml-52",
+  "chat": "TI e IA",
+  "criadoEm": "2026-10-27",
+  "descricao": "Árvore de 22 palavras-chave com evocação antes de ler e 17 cartões de revisão ativa; base LDI 15.1 + incrementos marcados.",
+  "secoes": [
+   "Aprendizado de máquina",
+   "Supervisionado",
+   "Não supervisionado",
+   "Por reforço",
+   "Meios-termos",
+   "Generalização",
+   "Revisão ativa"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa mental — Aprendizado supervisionado, não supervisionado e por reforço (5.2)",
+  "topicos": [
+   "ti-5-2"
+  ],
+  "url": "https://claude.ai/artifact/8BTHpn89v2NRUUpd4SWRik"
+ },
+ {
+  "id": "mapa-nacionalidade",
+  "chat": "Direito Constitucional",
+  "criadoEm": "2026-10-27",
+  "descricao": "Mapa mental da Aula 6 (Nádia Carolina e Ricardo Vale), arts. 12 e 13 da CF, já com a EC 131/2023, com 20 palavras-chave e 16 cartões de revisão ativa.",
+  "secoes": [
+   "Conceitos",
+   "Brasileiros natos",
+   "Naturalizados",
+   "Português equiparado",
+   "Nato × naturalizado",
+   "Perda e reaquisição",
+   "Língua e símbolos"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa da Nacionalidade",
+  "topicos": [
+   "dc-2d"
+  ],
+  "url": "https://claude.ai/artifact/Gc8LfqLnDqW3YvqZVMz2xc"
+ },
+ {
+  "id": "mapa-poderes",
+  "chat": "Direito Administrativo",
+  "criadoEm": "2026-10-27",
+  "descricao": "Mapa mental recolhível dos poderes administrativos e do uso e abuso do poder, com questões Cebraspe da aula 6 do Herbert Almeida e revisão ativa.",
+  "secoes": [
+   "Noções gerais",
+   "Vinculado e discricionário",
+   "Poder hierárquico",
+   "Poder disciplinar",
+   "Poder regulamentar",
+   "Poder de polícia",
+   "Uso e abuso do poder"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa dos Poderes Administrativos",
+  "topicos": [
+   "da-5-1",
+   "da-5-2"
+  ],
+  "url": "https://claude.ai/artifact/BSuoozPkZrsGCYyR8b9SN2"
+ },
+ {
+  "id": "mapa-pontuacao",
+  "atualizadoEm": "2026-10-26",
+  "chat": "Língua Portuguesa",
+  "criadoEm": "2026-10-25",
+  "descricao": "Mapa mental da Aula 8 (Estratégia): ordem direta, vírgula, ponto e vírgula, dois-pontos, travessão, parênteses, aspas. 36 palavras-chave, 22 cartões de revisão ativa; folhas “errei” com os erros do Qconcursos de 26/10.",
+  "tipo": "mapa",
+  "titulo": "Mapa da Pontuação",
+  "topicos": [
+   "lp-5-4"
+  ],
+  "url": "https://claude.ai/artifact/KTLWbnvT5udayyKFputnxX"
+ },
+ {
+  "id": "mapa-rccn-22-71",
+  "chat": "Regimento Comum do Congresso Nacional",
+  "criadoEm": "2026-10-29",
+  "descricao": "Mapa mental (55 palavras-chave) e 49 cartões de revisão ativa do RCCN, arts. 1º a 71, a partir do texto oficial.",
+  "secoes": [
+   "Sessões conjuntas",
+   "Líderes",
+   "Comissões mistas: composição",
+   "Comissões mistas: funcionamento",
+   "CPMI",
+   "Duração da sessão",
+   "Publicidade e quórum",
+   "Ordem do Dia",
+   "Apreciação das matérias",
+   "Modalidades de votação",
+   "Processamento da votação",
+   "Redação final e autógrafos",
+   "Sessões solenes"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa do Regimento Comum · arts. 1º a 71",
+  "topicos": [
+   "pl-3-1",
+   "dc-8-1",
+   "dc-8-2"
+  ],
+  "url": "https://claude.ai/artifact/F5QLmamTRqCcYHcrgdGos4"
+ },
+ {
+  "id": "mapa-redes-82",
+  "chat": "Administração Pública",
+  "criadoEm": "2026-10-29",
+  "descricao": "Mapa mental recolhível do 8.2: redes (Fleury), articulação e consórcios, concessão e PPP, OS/OSCIP/MROSC e Sistema S, com 15 cartões de revisão ativa.",
+  "secoes": [
+   "A · Redes de cooperação",
+   "B · Articulação interinstitucional",
+   "C · Parcerias com o setor privado",
+   "D · Terceiro setor"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa das Redes e Parcerias",
+  "topicos": [
+   "da-8-2"
+  ],
+  "url": "https://claude.ai/artifact/2uMFXvo6MifujpUi9uR3dW"
+ },
+ {
+  "id": "mapa-regencia",
+  "chat": "Língua Portuguesa",
+  "criadoEm": "2026-10-28",
+  "descricao": "Mapa mental do capítulo 8 do LDI (Estratégia pós-edital): fundamentos, dupla regência, preposições, pronominais, bitransitivos, regência nominal e complemento. 31 palavras-chave e 18 cartões.",
+  "secoes": [
+   "Fundamentos",
+   "Muda a preposição, muda o sentido",
+   "Preposição que o uso erra",
+   "Pronominais",
+   "Bitransitivos",
+   "Regência nominal",
+   "Complemento ao material"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa da Regência",
+  "topicos": [
+   "lp-5-6"
+  ],
+  "url": "https://claude.ai/artifact/83EqcsVRjxrUGCJKUZcHwR"
+ },
+ {
+  "id": "mapa-responsabilidade",
+  "chat": "Direito Administrativo",
+  "criadoEm": "2026-10-31",
+  "descricao": "6 ramos, 19 folhas, 15 cartões de revisão ativa; base aula 13 (Herbert Almeida).",
+  "tipo": "mapa",
+  "titulo": "Mapa da Responsabilidade Civil do Estado",
+  "topicos": [
+   "da-6-1",
+   "da-6-2",
+   "da-6-3",
+   "da-6-4",
+   "da-6-5"
+  ],
+  "url": "https://claude.ai/artifact/5c3YwU4uL8zFKkQb2GVj56"
+ },
+ {
+  "id": "mapa-rf-1-2",
+  "chat": "Reconhecimento de Fala",
+  "criadoEm": "2026-10-29",
+  "descricao": "Mapa mental do 1.2 com 28 palavras-chave, evocação antes de ler e 20 cartões de revisão ativa.",
+  "secoes": [
+   "O que é end-to-end",
+   "CTC",
+   "Transdutor",
+   "Codificador-decodificador com atenção",
+   "Conformer",
+   "wav2vec 2.0 × Whisper",
+   "Vantagens e limites",
+   "Alucinação",
+   "Na prática da Câmara"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa dos Modelos End-to-End",
+  "topicos": [
+   "rf-1-2"
+  ],
+  "url": "https://claude.ai/artifact/QAqrQY7fcQya7JckKALBRS"
+ },
+ {
+  "id": "mapa-rf-1-3",
+  "chat": "Reconhecimento de Fala",
+  "criadoEm": "2026-10-31",
+  "descricao": "Mapa mental do 1.3 com 25 palavras-chave, evocação antes de ler e 20 cartões de revisão ativa.",
+  "secoes": [
+   "O que é",
+   "Cascata × nativo",
+   "Ganhos do nativo",
+   "Riscos e limites",
+   "Exemplos e distinções",
+   "Na prática da Câmara"
+  ],
+  "tipo": "mapa",
+  "titulo": "Mapa dos LLMs de Áudio Nativo",
+  "topicos": [
+   "rf-1-3"
+  ],
+  "url": "https://claude.ai/artifact/Bfr9ukHwjYkrfwfrmrJ4cw"
+ },
+ {
+  "id": "pestana-cap35-coesao",
+  "chat": "Língua Portuguesa",
+  "descricao": "A Gramática para Concursos Públicos, pp. 913–936: teoria (referencial por classes, sequencial, recorrencial, fatores de coerência) e 54 questões com gabarito na p. 936. Comentários das questões no Material Complementar (orelha do livro). O site oferece curso pago de 4.000 questões comentadas.",
+  "tipo": "livro",
+  "titulo": "Pestana — Coesão e Coerência (cap. 35)",
+  "topicos": [
+   "lp-4-1"
+  ],
+  "url": "https://www.portuguescompestana.com.br"
+ }
+]
