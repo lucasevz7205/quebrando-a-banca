@@ -1,0 +1,1284 @@
+[
+ {
+  "id": "2026-10-25-cp",
+  "chat": "Ciência Política",
+  "chatUrl": "https://claude.ai/chat/4e0bf6e0-8b60-4773-9016-bb0574ded9f9",
+  "data": "2026-10-25",
+  "feito": "Aula 00 (LDI): política, poder e teoria política. 20 itens no Caderno; rodada com 19 certos e 1 errado (Foucault). Baralho Anki com 83 notas.",
+  "materia": "Ciência Política",
+  "proximo": "Começar o item 1 do edital (regimes políticos).",
+  "questoes": 20,
+  "registradoEm": "2026-10-26",
+  "topicos": [
+   "cp-0"
+  ]
+ },
+ {
+  "id": "2026-10-25-da",
+  "chat": "Direito Administrativo",
+  "chatUrl": "https://claude.ai/chat/beff83a5-a434-4798-a8f7-767819694674",
+  "data": "2026-10-25",
+  "feito": "Ato administrativo e parecer (Aula 7). Mapa do Ato Administrativo. 47 itens no Caderno, com reais do Cebraspe. Esclarecido: delegação e as vedações do art. 13 da Lei 9.784 (CENORA).",
+  "materia": "Direito Administrativo e Administração Pública",
+  "proximo": "Fazer a rodada do DA-2.",
+  "questoes": 47,
+  "registradoEm": "2026-10-26",
+  "topicos": [
+   "da-2-1",
+   "da-2-2"
+  ]
+ },
+ {
+  "id": "2026-10-25-dc",
+  "chat": "Direito Constitucional",
+  "chatUrl": "https://claude.ai/chat/11b8255c-a079-48f1-932a-a877b232863d",
+  "data": "2026-10-25",
+  "feito": "Direitos sociais (arts. 6º a 11). Mapa dos Direitos Sociais, já com a EC 141/2026 e a Lei 15.371/2026 conferidas. 22 itens no Caderno. Baralho Anki com 47 cartões.",
+  "materia": "Direito Constitucional e Regimento Interno",
+  "proximo": "Fazer a rodada do DC-2.2.",
+  "questoes": 22,
+  "registradoEm": "2026-10-26",
+  "topicos": [
+   "dc-2c"
+  ]
+ },
+ {
+  "id": "2026-10-25-lg",
+  "chat": "Estudo de Linguística",
+  "chatUrl": "https://claude.ai/chat/54bb299d-07a6-4df9-8c06-0bdf3da3dd31",
+  "data": "2026-10-25",
+  "feito": "Item 1 (teoria do signo). Página \"Linguística — edital × fontes\". 20 itens no Caderno; rodada com 15 certos e 5 errados, 3 deles marcando Errado em item Certo. Baralho Anki com 48 notas.",
+  "materia": "Linguística",
+  "proximo": "Item 2 (categorias semânticas).",
+  "questoes": 20,
+  "registradoEm": "2026-10-26",
+  "topicos": [
+   "lg-1"
+  ]
+ },
+ {
+  "id": "2026-10-25-lp",
+  "chat": "Língua Portuguesa",
+  "chatUrl": "https://claude.ai/chat/f4b63006-4453-42ea-a5b2-acc53191169b",
+  "data": "2026-10-25",
+  "feito": "Item 5.4 (pontuação). Mapa da Pontuação a partir da Aula 8 do NotebookLM, que virou o modelo dos mapas do projeto. 20 itens no Caderno. Baralho Anki com 75 cartões.",
+  "materia": "Língua Portuguesa",
+  "proximo": "Fazer a rodada do LP-5.4. Pestana e Bechara ficaram pendentes por falta das obras.",
+  "questoes": 20,
+  "registradoEm": "2026-10-26",
+  "topicos": [
+   "lp-5-4"
+  ]
+ },
+ {
+  "id": "2026-10-25-rf",
+  "chat": "Reconhecimento de fala e IA",
+  "chatUrl": "https://claude.ai/chat/4be523c3-9d37-4fc3-b179-802e55e30d95",
+  "data": "2026-10-25",
+  "feito": "Extraiu os capítulos 0 (Fundamentos) e 1.1 (ASR) do curso e do NotebookLM. Criou o Caderno de Questões com 20 itens inéditos de cada capítulo. Rodada do 1.1: 15 certos e 5 errados. Baralho Anki com 71 cartões.",
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "proximo": "Fazer as 20 questões do capítulo 0 e revisar os 5 erros do 1.1.",
+  "questoes": 40,
+  "registradoEm": "2026-10-26",
+  "topicos": [
+   "rf-0",
+   "rf-1-1"
+  ]
+ },
+ {
+  "id": "2026-10-26-ap-banca",
+  "chat": "Administração Pública",
+  "chatUrl": "",
+  "data": "2026-10-26",
+  "feito": "Levantamento do 8.2 em 17 editais do Cebraspe (2016–2026): redação inédita, mas subtemas cobrados há 10 anos. A prova da própria Câmara (08/03/2026) cobrou redes e intersetorialidade, NGP x NGovP e consórcios. Seção nova no doc de cobertura; 3 itens reais no Caderno (ap81-19, ap82-28, ap82-29).",
+  "materia": "Direito Administrativo e Administração Pública",
+  "proximo": "Resolver os itens reais ap82-28, ap82-29 e ap81-19 com confiança; depois treinar no Qconcursos com filtro Cebraspe em terceiro setor, consórcios públicos e gestão de redes.",
+  "questoes": 3,
+  "registradoEm": "2026-10-26",
+  "topicos": [
+   "da-8-1",
+   "da-8-2"
+  ]
+ },
+ {
+  "id": "2026-10-26-ap",
+  "chat": "Administração Pública",
+  "chatUrl": "https://claude.ai/chat/ca21865a-d5a4-4362-a60e-aff1d7b6ff11",
+  "data": "2026-10-26",
+  "feito": "8.1: o curso não tem aula própria; material de estudo baseado em Osborne (2006) e baralho Anki com 92 cartões. 8.2: análise de cobertura (4 de 15 subtópicos bem cobertos) e material de estudo com leis e textos acadêmicos. 45 itens no Caderno (18 + 27).",
+  "materia": "Direito Administrativo e Administração Pública",
+  "proximo": "Pré-teste do AP-8.2 no Caderno e leitura do material.",
+  "questoes": 45,
+  "registradoEm": "2026-10-26",
+  "topicos": [
+   "da-8-1",
+   "da-8-2"
+  ]
+ },
+ {
+  "id": "2026-10-26-da",
+  "chat": "Direito Administrativo",
+  "data": "2026-10-26",
+  "feito": "Revisado o item da2-02 (erro com certeza): o enunciado antigo era ambíguo sobre delegar ato normativo. Reescrito para testar regra × exceção: na Lei 9.784 ato normativo não se delega (art. 13, I); lei específica pode autorizar (art. 69). Cartão de revisão e mapa ajustados.",
+  "materia": "Direito Administrativo e Administração Pública",
+  "proximo": "Revisão espaçada de amanhã (27/10): refazer o da2-02 e o da2-38 lado a lado e terminar a rodada do DA-2.",
+  "registradoEm": "2026-10-26",
+  "topicos": [
+   "da-2-1"
+  ]
+ },
+ {
+  "id": "2026-10-26-geral-1",
+  "chat": "Língua Portuguesa",
+  "data": "2026-10-26",
+  "feito": "Regra aprovada pelo Lucas: quando a aula estiver no NotebookLM, o tutor abre o notebook no navegador interno, lê a fonte e conduz o estudo ativo no chat, em blocos curtos com o trecho-chave (seção e página), perguntas-guia e evocação de 3 ideias-chave ao fim de cada bloco. O resumo continua sendo do Lucas. Na sessão LP-5.5, a revisão espaçada foi pulada porque não havia itens para o dia.",
+  "materia": "geral",
+  "proximo": "Lucas copia a regra para REGRAS APRENDIDAS nas instruções do projeto.",
+  "questoes": 0,
+  "registradoEm": "2026-10-26",
+  "topicos": [
+   "lp-5-5"
+  ]
+ },
+ {
+  "id": "2026-10-26-lp-1",
+  "chat": "Língua Portuguesa",
+  "data": "2026-10-26",
+  "feito": "Bloco de 12 itens Cebraspe de pontuação no Qconcursos: 9 acertos, 3 erros (Q4338607 e Q4350509, dois-pontos; Q4250216, vírgula depois do “mas” e ênfase na reescrita). Mapa da Pontuação ganhou 4 folhas marcadas “errei” e 4 cartões; 12 itens novos no LP-5.4 focados nesses erros.",
+  "materia": "Língua Portuguesa",
+  "proximo": "Treinar no Controle os itens 21 a 32 do LP-5.4, marcando a confiança; depois novo bloco no Qconcursos misturando vírgula, dois-pontos e travessão.",
+  "questoes": 12,
+  "registradoEm": "2026-10-26",
+  "topicos": [
+   "lp-5-4"
+  ]
+ },
+ {
+  "id": "2026-10-26-lp-2",
+  "chat": "Língua Portuguesa",
+  "data": "2026-10-26",
+  "feito": "Comando mestre: 5.5 está no Tutory desta semana (resumo, revisão e exercício, 0%). Aula 9 cobre a maior parte do item; criados o Mapa da Concordância (40 palavras-chave, 18 cartões) e um material paralelo com 5 lacunas (“se”, horas, um e outro, um dos que, haja vista/dado). 27 itens no LP-5.5 (20 Cebraspe adaptados da aula e 7 inéditos).",
+  "materia": "Língua Portuguesa",
+  "proximo": "Fazer o resumo próprio guiado pelo mapa (meta Resumo/Mapa Mental do Tutory), ler o complemento com os pré-testes e treinar o LP-5.5 marcando a confiança.",
+  "questoes": 27,
+  "registradoEm": "2026-10-26",
+  "topicos": [
+   "lp-5-5"
+  ]
+ },
+ {
+  "id": "2026-10-26-metodo",
+  "chat": "Método de estudo",
+  "chatUrl": "",
+  "data": "2026-10-26",
+  "feito": "Metodo_de_Estudo.md (v1 e v2, com a base científica). Caderno com confiança antes do gabarito, agenda espaçada com teto, repescagem, regra de decisão do Cebraspe e esta central. Skill metodo-estudo-concurso.",
+  "materia": "Método",
+  "proximo": "Começar cada dia pela revisão espaçada de hoje.",
+  "questoes": 0,
+  "registradoEm": "2026-10-26",
+  "topicos": []
+ },
+ {
+  "id": "2026-10-26-sinc-tutory",
+  "chat": "Método de estudo",
+  "chatUrl": "",
+  "data": "2026-10-26",
+  "feito": "Progresso do Tutory (Meu Desempenho: estudo, resumo, revisão e exercício) gravado nos 162 tópicos do edital. Plano no Tutory: 20,76%. Ciência Política 1 (regimes políticos) está marcado no Tutory, mas ainda não foi estudado: o Controle desconsidera essa marcação. Aulas em vídeo da plataforma ficaram de fora, por decisão do aluno.",
+  "materia": "Controle de Estudo",
+  "proximo": "Estudar Ciência Política 1 (regimes políticos) e pôr em dia as metas do Tutory atrasadas desde 25/10.",
+  "questoes": 0,
+  "registradoEm": "2026-10-26",
+  "topicos": []
+ },
+ {
+  "id": "2026-10-26-ti-1",
+  "chat": "TI e IA",
+  "chatUrl": "",
+  "data": "2026-10-26",
+  "feito": "Primeira sessão de TI. Pré-teste de 5 itens (4 acertos; errou clusterização). Tutory confirma a meta atrasada de 25/10: TI 5.2. Conferiu o LDI pós-edital (cap. 15): cobre bem o 5.3 e só as definições do 5.2. Criou o material complementar e 28 itens em TI-5.2/5.3; corrigiu o ti52-10 para alinhar ao LDI.",
+  "materia": "Tecnologia da Informação e Dados",
+  "proximo": "Ler o LDI cap. 15.1 (Aprendizado de Máquina, IA Generativa, Principais Modelos), depois o material complementar; fazer os 28 itens com confiança e responder as perguntas de recuperação.",
+  "questoes": 28,
+  "registradoEm": "2026-10-26",
+  "topicos": [
+   "ti-5-2",
+   "ti-5-3"
+  ]
+ },
+ {
+  "id": "2026-10-27-dc-1",
+  "chat": "Code · Tutor ARR",
+  "data": "2026-10-27",
+  "feito": "Criado o caderno de pegadinhas (aba Pegadinhas e comando /pegadinhas). Primeiro tópico: nacionalidade, com 18 pegadinhas analíticas a partir da CF (arts. 5º, LI, 12 e 13, na redação da EC 131/2023) e da Súmula 421 do STF, e 18 itens inéditos no DC-2.3 (9 C e 9 E). A prova Cebraspe da Câmara de 2026 não tem item de nacionalidade. Divergência: os arquivos cd-2014-cespe-consultor e cd-2014-cespe-policia-legislativa são o Edital nº 1-CD/2014, não provas.",
+  "materia": "Direito Constitucional e Regimento Interno",
+  "proximo": "Fazer a revisão de nacionalidade no chat de Direito Constitucional; depois, na aba Pegadinhas, ligar \"Evocar antes de ler\" e treinar os 18 itens do DC-2.3 marcando a confiança.",
+  "questoes": 18,
+  "registradoEm": "2026-10-27",
+  "topicos": [
+   "dc-2d"
+  ]
+ },
+ {
+  "id": "2026-10-27-dc-2",
+  "chat": "Direito Constitucional",
+  "chatUrl": "https://claude.ai/chat/11b8255c-a079-48f1-932a-a877b232863d",
+  "data": "2026-10-27",
+  "feito": "Nacionalidade (arts. 12 e 13, com a EC 131/2023) a partir da Aula 6 do notebook. Mapa da Nacionalidade com 20 palavras-chave e 16 cartões, gravado em Revisão e Conteúdo. 20 itens novos no DC-2.3 (dc23-19 a 38), 12 deles questões Cebraspe comentadas na aula, 3 adaptadas pela aula de outras bancas e 5 inéditos, sem repetir os 18 da aba Pegadinhas. Divergência: três comentários da aula ainda usam o texto anterior à EC 131 (MPT 2015, PC-DF 2015 e TRE-PE 2016, letra D).",
+  "materia": "Direito Constitucional e Regimento Interno",
+  "proximo": "Responder o pré-teste no chat, fazer os 16 cartões do Mapa da Nacionalidade com Evocar antes de ler e depois a rodada do DC-2.3 (38 itens) com confiança. Antes, a revisão espaçada de hoje no Painel (40 itens, com 9 do DC-2.2).",
+  "questoes": 20,
+  "registradoEm": "2026-10-27",
+  "topicos": [
+   "dc-2d"
+  ]
+ },
+ {
+  "id": "2026-10-27-dc-3",
+  "chat": "Vigia de pegadinhas",
+  "data": "2026-10-27",
+  "feito": "Primeira varredura do vigia, a partir da revisão de nacionalidade (Mapa da Nacionalidade e itens dc23-19 a 38). Entraram 22 pegadinhas novas (pg-dc-2d-19 a 40; 4 com origem prova e 18 analíticas) e 11 itens inéditos (dc23-39 a 49). 20 itens da aula foram ligados às pegadinhas, e 7 pegadinhas antigas passaram a ter origem prova. Divergências: dc23-38 (DPU 2017) parte do texto anterior à EC 131/2023, mas o gabarito E se mantém; dc23-25 também omite o “mais de” dos 15 anos.",
+  "materia": "Direito Constitucional e Regimento Interno",
+  "proximo": "Na aba Pegadinhas, ligar \"Evocar antes de ler\" no tópico 2d (40 pegadinhas) e treinar os itens com confiança; depois, ao encerrar cada revisão, rodar o vigia do tópico.",
+  "questoes": 11,
+  "registradoEm": "2026-10-27",
+  "topicos": [
+   "dc-2d"
+  ]
+ },
+ {
+  "id": "2026-10-27-dc-4",
+  "chat": "Vigia de pegadinhas",
+  "data": "2026-10-27",
+  "feito": "Varredura diária automática desde 27/10 às 12h. Entraram 58 pegadinhas e 21 itens novos (5 reais da CD 2026 com gabarito definitivo conferido e 16 inéditos, 13 C e 8 E no total), e 116 itens existentes foram ligados. Por tópico: dc-1 tem 20 pegadinhas (3 de prova e 17 analíticas), 4 itens novos e 68 ligados; da-2-1 tem 15 (8 registradas, 3 de prova e 4 analíticas), 6 itens e 25 ligados; lp-5-5 tem 13 (4 registradas, 1 de prova e 8 analíticas), 7 itens e 15 ligados; da-8-2 tem 10 (2 registradas, 1 de prova e 7 analíticas), 4 itens e 8 ligados. Em dc-2d, os 4 erros de hoje (dc23-03, 04, 07 e 12) já tinham pegadinha. Divergências: MROSC, art. 33, V, a (Estado exige 3 anos, mas o material 8.2 diz 2); Aula 9, p. 139 (comentário MP-SC 2023 diz plural com 'cada um de nós'); Aula 9, p. 105 (gabarito contraditório); lp55-26 (remissão TJ-ES 2023 extrapolada); da2-01 ('sempre vinculados' contra 'em regra'); da2-25 (origem CD 2014 não conferível, a pasta só tem o edital); dc13-16 × dc13-21 (educação básica × direito genérico); dc12-20 (super-rígida, banca não indicada); e as já registradas em dc-1 (1967, normativa × nominal). A config marcava ultimaVarredura 12:00-03:00, mas foi gravada às 06:29-03:00.",
+  "materia": "Direito Constitucional; Direito Administrativo e Administração Pública; Língua Portuguesa",
+  "proximo": "Na aba Pegadinhas, ligar 'Evocar antes de ler' e começar pelas vermelhas (erros dele): da-2-1 (pg 01 a 08), lp-5-5 (pg 01 a 04) e da-8-2 (pg 01 e 02); depois Treinar nesses tópicos. Em dc-1, evocar as 20 pegadinhas antes da rodada do DC-1. Pendentes do vigia (nunca varridos, com trap): da-5-1, da-5-2, ti-5-2, ti-5-3, lp-5-4, dc-2c e da-8-1.",
+  "questoes": 21,
+  "registradoEm": "2026-10-27T22:17:27-03:00",
+  "topicos": [
+   "dc-1",
+   "da-2-1",
+   "da-8-2",
+   "lp-5-5",
+   "dc-2d"
+  ]
+ },
+ {
+  "id": "2026-10-27-dc-cf88",
+  "chat": "Direito Constitucional",
+  "data": "2026-10-27",
+  "feito": "Item 1 (CF/88: conceito, contexto histórico, características, estrutura). Primeiro, sem fonte no projeto, fiz o complemento “CF/88 em contexto” e o Mapa da CF/88, e 21 itens inéditos no DC-1. Depois o Lucas enviou o PDF do item 1 (155 p.): alinhei mapa e complemento a ele (agora 7 ramos, 32 palavras-chave, 20 cartões; novo ramo Constitucionalismo; sentido cultural, Hesse, Canotilho, outras classificações) e importei 120 questões C/E comentadas (94 Cebraspe, 26 de banca não indicada ou outras) em DC-1.1 a DC-1.5. O PDF não traz a Constituinte de 1987–1988 nem o detalhe dos 9 títulos; isso ficou no complemento. Divergências registradas: 1967 outorgada (PDF) × semioutorgada; CF/88 normativa (PDF) × nominal; rígida × super-rígida. Tutory não alterado.",
+  "materia": "Direito Constitucional e Regimento Interno",
+  "proximo": "Pré-teste do complemento sem consulta; depois os 20 cartões do Mapa da CF/88 com Evocar antes de ler; rodadas com confiança na ordem DC-1 (21 inéditos), DC-1.1 e DC-1.2 (itens do edital) e, por último, DC-1.3 a DC-1.5 (aplicabilidade, hierarquia, poder constituinte). Rodada do DC-2.3 segue pendente.",
+  "questoes": 141,
+  "registradoEm": "2026-10-27",
+  "topicos": [
+   "dc-1"
+  ]
+ },
+ {
+  "id": "2026-10-27-geral-1",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-10-27",
+  "feito": "Melhoria aprovada pelo Lucas: \"dominado\" passa a exigir retenção. Regra: ≥80% das questões do tópico respondidas, ≥85% de acerto na última resposta, nada no caderno de erros e cada questão acertada (sem chute) numa revisão feita 7+ dias após o primeiro contato. Motivo: todas as respostas registradas eram de 25/10, e acerto no mesmo dia pode ser só fluência de curto prazo (Rawson & Dunlosky, 2022; Cepeda et al., 2008). A aba Edital mostra quantas questões ainda faltam passar por essa prova de retenção.",
+  "materia": "geral",
+  "proximo": "Copiar a regra para REGRAS APRENDIDAS nas instruções do projeto e salvar a atualização da skill metodo-estudo-concurso.",
+  "questoes": 0,
+  "registradoEm": "2026-10-27",
+  "topicos": []
+ },
+ {
+  "id": "2026-10-28-geral-1",
+  "chat": "Code · Tutor ARR",
+  "data": "2026-10-28",
+  "feito": "Taxonomia de falsificação do Cebraspe v1 (F1 a F10 e V1 a V4), a partir do pacote Quebrando a Banca. Foram classificados 461 itens reais válidos: provas da Câmara de 2026 (nível superior, Técnico e Policial Legislativo, baixadas do site do Cebraspe com as justificativas da banca) e 130 itens das aulas. Entraram 142 itens reais no Treinar (capítulos BANCA-*), e a aba Pegadinhas ganhou a visão Mecanismos da banca, com ranking por matéria, exemplos e treino por mecanismo. F3 (troca de conceito) lidera em todas as matérias (22%), seguido de V1 (paráfrase fiel, 16%). Divergências: a prova específica de Analista 2026 da pasta está sem gabarito, e o dc13-21 conflita com o dc13-16 (Tema 548).",
+  "materia": "geral",
+  "proximo": "Na aba Pegadinhas → Mecanismos da banca, treinar primeiro o F3 e o V1, intercalando as matérias; depois o mecanismo líder de cada matéria (F7 em Português e Inglês, V4 em Direito).",
+  "questoes": 142,
+  "registradoEm": "2026-10-28",
+  "topicos": []
+ },
+ {
+  "id": "2026-10-28-lp-1",
+  "chat": "Língua Portuguesa",
+  "data": "2026-10-28",
+  "feito": "Comando mestre: 5.6 está no Tutory desta semana (resumo, revisão e exercício, 0%). A aula de regência não está no NotebookLM; foi lida no LDI do Estratégia (Língua Portuguesa p/ Câmara, pós-edital, cap. 8). Criados o Mapa da Regência (31 palavras-chave, 18 cartões) e um material paralelo (custar, pagar/perdoar, agradecer, permanência × movimento). 26 itens inéditos no LP-5.6. Pré-teste: 3 de 5; erros em obedecer (dúvida) e informar (com certeza).",
+  "materia": "Língua Portuguesa",
+  "proximo": "Escrever com as próprias palavras a regra do “informar” (erro com certeza no pré-teste), estudar os blocos do cap. 8 guiado no chat, fazer o resumo pelo mapa e treinar o LP-5.6. Sugestão: subir o PDF do cap. 8 para o NotebookLM.",
+  "questoes": 26,
+  "registradoEm": "2026-10-28",
+  "topicos": [
+   "lp-5-6"
+  ]
+ },
+ {
+  "id": "2026-10-28-rf-1",
+  "chat": "Reconhecimento de Fala",
+  "data": "2026-10-28",
+  "feito": "Estudo ativo do 1.2 (Etapa 03, p. 39–44, lida no NotebookLM): pré-teste, blocos 1.2.1, 1.2.2–1.2.3 e 1.2.4–1.2.8 com evocação de ideias-chave; material julgado suficiente para o edital, sem complemento. Erros de evocação: atribuir à CTC a necessidade do trecho inteiro (origem: leitura) e associar end-to-end a aprendizado sem rótulos (interferência com a autossupervisão do wav2vec 2.0). Sessão interrompida por fadiga antes do 1.2.9 e das questões; 18 itens do 1.2 entraram no Quebrando a banca.",
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "proximo": "Recuperar de memória o 1.2.8 (gatilhos, defesas e por que a CTC alucina menos) e os 2 pares do 'Não confunda' do 1.2.9; depois rodada dos 18 itens do 1.2 (c12) com confiança e repescagem.",
+  "questoes": 18,
+  "registradoEm": "2026-10-28",
+  "topicos": [
+   "rf-1-2"
+  ]
+ },
+ {
+  "id": "2026-10-28-ti-1",
+  "chat": "TI e IA",
+  "chatUrl": "",
+  "data": "2026-10-28",
+  "feito": "Meta atrasada do Tutory: estudo de TI 5.3. Pré-teste 5/5 (itens 1, 2 e 4 no chute). Leitura ativa dos blocos 1 a 3 do LDI 15.1; correção das ideias-chave: equívoco de que a IA generativa consulta banco de respostas, 'toda IA generativa é Transformer', tokenização por critério linguístico (é estatístico, BPE). 9 itens novos em TI-5.3.",
+  "materia": "Tecnologia da Informação e Dados",
+  "proximo": "Responder as 2 perguntas de recuperação; ler o bloco 4 (Principais Aplicações e IA na Administração Pública) e o material complementar (5.3 e IA na Câmara); fazer os 23 itens de TI-5.3 com confiança.",
+  "questoes": 9,
+  "registradoEm": "2026-10-28",
+  "topicos": [
+   "ti-5-3"
+  ]
+ },
+ {
+  "id": "2026-10-29-ap-mapa82",
+  "chat": "Administração Pública",
+  "data": "2026-10-29",
+  "feito": "Resumo em mapa mental do 8.2 (4 ramos, 25 palavras-chave) feito a partir do Material 8.2 com as edições do Lucas; 25 itens e 15 cartões lançados na aba Revisão. Antes, a aba Treinar passou a agrupar os capítulos por matéria, na ordem do edital.",
+  "materia": "Direito Administrativo e Administração Pública",
+  "proximo": "Responder os 15 cartões de revisão ativa com o mapa fechado; depois, rodada AP-8.2 no Treinar (itens ainda não feitos) e marcar a origem de cada erro.",
+  "questoes": 0,
+  "registradoEm": "2026-10-29T11:30:00Z",
+  "topicos": [
+   "da-8-2"
+  ]
+ },
+ {
+  "id": "2026-10-29-dc-1",
+  "chat": "Vigia de pegadinhas",
+  "data": "2026-10-29",
+  "feito": "Varredura automática desde 27/10 às 22:17. Entraram 61 pegadinhas e 18 itens inéditos (11 C e 7 E), e 92 itens existentes foram ligados. Por tópico: dc-1 tem 9 novas, todas registradas (erros e chutes da rodada de 28/10), com 6 itens e 25 ligados; da-5-1 tem 8 (3 registradas, 2 de prova CD 2026 e 3 analíticas) e da-5-2 tem 4 (1 registrada e 3 analíticas), com 3 itens e 14 ligados; ti-5-2 tem 10 (4 registradas, 1 de prova e 5 analíticas), com 5 itens e 9 ligados; ti-5-3 tem 10 (3 registradas, 1 de prova e 6 analíticas), com 2 itens e 13 ligados; lp-5-6 tem 12 (2 registradas do pré-teste e 10 analíticas), sem item novo e com 19 ligados; rf-1-2 tem 8 (2 registradas das evocações e 6 analíticas), com 2 itens e 12 ligados. Em dc-1, os demais erros de 28/10 (dc1-18, dc1-19, dc12-01/06/08/10/11, dc13-03/09/10/11/16/19/21) já tinham pegadinha. Divergências: da5-27 (TCDF 2023, C) adota o conceito amplo de excesso de poder (Hely), mas o mapa da-5-2 define excesso só como vício de competência; dc13-14 (art. 227 programático) entra na tensão já registrada com o Tema 548 (dc13-16 × dc13-21); ti53-02 cita Cebraspe 2025 ANM sem prova nem gabarito na pasta; os gabaritos de da5-01 a da5-27 vêm da Aula 6, sem gabarito oficial na pasta; lp56-26 ('reside à' = E) tem variação cartorial admitida por alguns gramáticos; mapa lp-5-6 diz que o Cebraspe não aceita 'implicar em' sem item real citado; ti-5-2 tem nomenclatura LDI (não supervisionado) × literatura (autossupervisionado) no pré-treino; os PDFs grandes (LDI 15.1, cap. 8 de regência, prova de gerais) não abriram por falta do Poppler.",
+  "materia": "Direito Constitucional; Direito Administrativo e Administração Pública; Tecnologia da Informação e Dados; Língua Portuguesa; Reconhecimento de Fala, Transcrição e IA",
+  "proximo": "Na aba Pegadinhas, ligar 'Evocar antes de ler' e começar pelas vermelhas: dc-1 (pg 21 a 29), da-5-1 (pg 01 a 03), da-5-2 (pg 01), ti-5-2 (pg 01 a 04); depois Treinar nesses tópicos. Antes da primeira rodada de lp-5-6, ti-5-3 e rf-1-2, evocar as pegadinhas do tópico. Pendentes do vigia (nunca varridos, com trap): lp-5-4, dc-2c e da-8-1.",
+  "questoes": 18,
+  "registradoEm": "2026-10-29T05:50:41-03:00",
+  "topicos": [
+   "dc-1",
+   "da-5-1",
+   "da-5-2",
+   "ti-5-2",
+   "ti-5-3",
+   "lp-5-6",
+   "rf-1-2"
+  ]
+ },
+ {
+  "id": "2026-10-29-geral-1",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-10-29",
+  "feito": "Agenda reorganizada a pedido do Lucas (107 itens vencidos em 29/10). Erros e chutes continuam em 1 dia e entram primeiro; acerto com certeza volta em 7 dias no mínimo (depois 15 e 30), acerto com dúvida em 3; limite de 40 revisões por dia, e os acertos que sobram passam para os dias seguintes. A regra vale também para as respostas antigas, só no cálculo da página, sem alterar 'respostas'.",
+  "materia": "geral",
+  "proximo": "Fazer a revisão de hoje (40 itens, quase todos do caderno de erros) e avaliar em uma semana se 40 por dia é sustentável.",
+  "questoes": 0,
+  "registradoEm": "2026-10-29",
+  "topicos": []
+ },
+ {
+  "id": "2026-10-29-geral-anki",
+  "chat": "Flashcards",
+  "data": "2026-10-29",
+  "feito": "Levantamento dos baralhos Anki: já existiam para lp-5-4, dc-2c, lg-1, rf-0/rf-1-1, cp-0 e da-8-1. Gerado um .apkg com 699 cartões para os 12 tópicos restantes, a partir dos itens e cartões da aba Revisão (rf-1-2 a partir dos itens C/E c12).",
+  "materia": "geral",
+  "proximo": "Importar o .apkg no Anki e fazer os cartões novos diariamente (limite de 20 novos/dia), sempre tentando responder antes de virar.",
+  "questoes": 0,
+  "registradoEm": "2026-10-29",
+  "topicos": [
+   "da-2-1",
+   "da-2-2",
+   "da-5-1",
+   "da-5-2",
+   "da-8-2",
+   "dc-1",
+   "dc-2d",
+   "lp-5-5",
+   "lp-5-6",
+   "ti-5-2",
+   "ti-5-3",
+   "rf-1-2"
+  ]
+ },
+ {
+  "id": "2026-10-29-jurisprudencia",
+  "chat": "Guia de jurisprudência",
+  "data": "2026-10-29",
+  "feito": "Primeira varredura da Jurisprudência Facilitada (260 julgados, Infos 1222 a 1233 + acervo). Filtrados 6 julgados de Poder Legislativo e processo legislativo, enquadrados no edital DC-5 (classificação do Claude). 6 itens C/E inéditos no capítulo JUR-DC5 e pontos-chave no DC-5. Monitoramento semanal agendado para as quartas às 10h30.",
+  "materia": "jurisprudencia",
+  "proximo": "Fazer a rodada JUR-DC5 (cumpre a meta atrasada do Tutory 'Jurisprudências atuais do STF'). Próxima varredura: 04/11.",
+  "questoes": 6,
+  "registradoEm": "2026-10-29",
+  "topicos": [
+   "dc-5"
+  ]
+ },
+ {
+  "id": "2026-10-29-pl-1",
+  "chat": "Regimento Comum do Congresso Nacional",
+  "data": "2026-10-29",
+  "feito": "Primeira sessão de RCCN. O notebook 'Processo Legislativo' não tem o RCCN, então os arts. 22 a 71 foram extraídos do texto oficial (Res. 1/1970-CN, portal da Câmara) e conferidos com os flash cards enviados pelo Lucas. Criados o mapa mental (33 palavras-chave) e 23 cartões de revisão ativa; pré-teste de 4 perguntas lançado, ainda sem respostas.",
+  "materia": "Processo Legislativo e Regimentos",
+  "proximo": "Rodada C/E do capítulo PL-3.1 (20 itens, arts. 22 a 71) na aba Treinar, com confiança; antes, evocação no mapa e nos 23 cartões. Atenção aos números parecidos (4+4 × 4+6 × 2+2; 5+5 × 3+3; 24h × 48h).",
+  "questoes": 20,
+  "registradoEm": "2026-10-29",
+  "topicos": [
+   "pl-3-1"
+  ]
+ },
+ {
+  "id": "2026-10-30-da-1",
+  "chat": "Direito Administrativo",
+  "data": "2026-10-30",
+  "feito": "Improbidade: pré-teste (erros em dolo, espécies/sanções, legitimidade e prescrição). Mapa da Improbidade (6 ramos, 19 palavras-chave, 10 cartões) com a Aula 9 e o julgamento do STF de 01/07/2026 (ADIs 7156 e 7236: regra da metade da prescrição inconstitucional, teto de 20 anos). 28 itens no DA-7 (23 reais da aula).",
+  "materia": "Direito Administrativo e Administração Pública",
+  "proximo": "Evocação no mapa com \"Evocar antes de ler\" (começar por Espécies e Sanções), cartões da Revisão ativa e rodada do DA-7.",
+  "questoes": 28,
+  "registradoEm": "2026-10-30",
+  "topicos": [
+   "da-7"
+  ]
+ },
+ {
+  "id": "2026-10-30-da-2",
+  "chat": "Administração Pública",
+  "data": "2026-10-30",
+  "feito": "8.3: pré-teste (inverteu transparência ativa × passiva; instrumentos de participação incompletos). Cobertura: aulas 4 (Transparência) e 9 (Processos Participativos) de Stefan Fantini cobrem transparência e participação; coprodução não aparece. Criado material complementar sobre coprodução (Docs).",
+  "materia": "Direito Administrativo e Administração Pública",
+  "proximo": "Bloco 1 (aula 4, Transparência, seções 10.1 a 10.5) com as perguntas-guia; depois aula 9 e o material de coprodução; em seguida mapa mental e capítulo AP-8.3.",
+  "questoes": 0,
+  "registradoEm": "2026-10-30",
+  "topicos": [
+   "da-8-3"
+  ]
+ },
+ {
+  "id": "2026-10-30-geral-raiox",
+  "chat": "Raio-x lei seca + Cebraspe",
+  "data": "2026-10-30",
+  "feito": "Levantamento, pelo edital (item 14.2, cargo 11), de toda a lei seca cobrada por matéria. Constatado que a prova Cebraspe da Câmara de 08/03/2026 não está nos arquivos do projeto, o que impede medir incidência real.",
+  "materia": "geral",
+  "proximo": "Lucas envia o caderno da prova de 08/03/2026 (cargo 11) e gabarito definitivo; com isso, raio-x de incidência começando por Direito Constitucional + RICD.",
+  "questoes": 0,
+  "registradoEm": "2026-10-30",
+  "topicos": []
+ },
+ {
+  "id": "2026-10-30-geral-status",
+  "chat": "Regimento Comum do Congresso Nacional",
+  "data": "2026-10-30",
+  "feito": "Regra aprovada pelo Lucas (30/10): o Claude passa a atualizar o campo 'status' do Edital com base nas tarefas feitas no chat (estudo, mapa, revisão, treino), sem esperar a marcação manual. Aplicada no PL 3.1: status fixado em 'Em estudo'. Mapa mental, Revisão ativa e Treinar já aparecem ligados ao tópico.",
+  "materia": "geral",
+  "proximo": "Lucas copia a regra para REGRAS APRENDIDAS nas instruções do projeto, porque a skill ainda diz para não mexer em 'status'.",
+  "questoes": 0,
+  "registradoEm": "2026-10-30",
+  "topicos": [
+   "pl-3-1"
+  ]
+ },
+ {
+  "id": "2026-10-30-pl-1",
+  "chat": "Regimento Comum do Congresso Nacional",
+  "data": "2026-10-30",
+  "feito": "Arts. 1º a 21 do RCCN (sessões conjuntas, Líderes, Comissões Mistas e CPMI) extraídos do texto oficial e acrescentados ao Mapa do Regimento Comum: 22 palavras-chave e 26 cartões novos, escritos pelas Regras de Perguntas de 30/10. O mapa agora cobre os arts. 1º a 71. A rodada C/E dos 20 itens do PL-3.1 (arts. 22 a 71) segue pendente.",
+  "materia": "Processo Legislativo e Regimentos",
+  "proximo": "Evocação dos ramos novos (arts. 1º a 21) com 'Evocar antes de ler' e cartões n1 a n26; depois rodada C/E do PL-3.1 e criação de itens dos arts. 1º a 21, contrastando 1/3 (comissão) × 1/6 (sessão), 15/30 min × 20 min, 11+11 × CPMI.",
+  "questoes": 0,
+  "registradoEm": "2026-10-30",
+  "topicos": [
+   "pl-3-1"
+  ]
+ },
+ {
+  "id": "2026-10-30-pl-2",
+  "chat": "Regimento Comum do Congresso Nacional",
+  "data": "2026-10-30",
+  "feito": "26 itens C/E inéditos dos arts. 1º a 21 do RCCN (13 C, 13 E): 6 do Título I no capítulo DC-8.1 (ligado ao DC 8.1 e ao PL 3.1) e 20 dos arts. 4º a 21 no PL-3.1 (pl31-24 a 43). Os itens pl31-21 a 23 e as marcações de pegadinha vindas de outro chat foram preservados. DC 8.1 e DC 8.2 passaram a ter mapa e revisão ligados.",
+  "materia": "Processo Legislativo e Regimentos",
+  "proximo": "Rodada C/E: DC-8.1 (6 itens) e PL-3.1 (43 itens, começando pelos arts. 4º a 21). Depois, Capítulo III do Título IV (arts. 72 a 103) para completar o DC 8.2.",
+  "questoes": 26,
+  "registradoEm": "2026-10-30",
+  "topicos": [
+   "pl-3-1",
+   "dc-8-1",
+   "dc-8-2"
+  ]
+ },
+ {
+  "id": "2026-10-30-rf-1",
+  "chat": "Reconhecimento de Fala",
+  "data": "2026-10-30",
+  "feito": "Analisado o PDF novo do Prof. Vinicius Borges (Aula 1, item 1 inteiro, 76 p., 39 questões inéditas do autor), comparado com a apostila do Legislativo Facilitado. Registrado em materiais como fonte, marcado como latente: será usado só nas revisões futuras de cada tópico do item 1, com os pontos e divergências anotados no campo obs.",
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "proximo": "Rodada dos 18 itens do 1.2 (c12) com confiança e repescagem; ao revisar o 1.2 no futuro, consultar materiais/fonte-rf-vborges-aula1 e acrescentar os pontos ao mapa como incremento.",
+  "questoes": 0,
+  "registradoEm": "2026-10-30",
+  "topicos": [
+   "rf-1-1",
+   "rf-1-2"
+  ]
+ },
+ {
+  "id": "2026-10-30-ti-1",
+  "chat": "TI e IA",
+  "chatUrl": "",
+  "data": "2026-10-30",
+  "feito": "Início do item 6 (Ética e responsabilidade digital). O LDI só cobre ética da IA (cap. 15.1, Riscos e Desafios, FAT, Responsible AI); criado material complementar com LGPD, LAI × LGPD, POSIC da Câmara (Ato da Mesa 231/2025), Portaria DG 227/2025 e Lei 8.112. Pré-teste de 5 itens enviado.",
+  "materia": "Tecnologia da Informação e Dados",
+  "proximo": "Responder o pré-teste; ler LDI 15.1 · Riscos e Desafios e Responsible AI; depois o complemento; em seguida mapa mental e itens de TI-6.",
+  "questoes": 0,
+  "registradoEm": "2026-10-30",
+  "topicos": [
+   "ti-6"
+  ]
+ },
+ {
+  "id": "2026-10-30-vp-1",
+  "chat": "Vigia de pegadinhas",
+  "data": "2026-10-30",
+  "feito": "Varredura autorizada: 19 pegadinhas novas (da-8-2: 6; lp-5-6: 1; pl-3-1: 12), 5 itens inéditos e 21 itens existentes ligados. Pendências: itens 102 e 103 da prova de Analista 2026 (RCCN) ficaram fora por falta de gabarito oficial; aula de simpatizar não conferida (Poppler ausente); escopo do pl-3-1 (arts. 1º a 21 sem pegadinha); mapa da-8-2 × art. 33, V, a, do MROSC; art. 27, § 5º, do RCCN.",
+  "materia": "Pegadinhas",
+  "proximo": "Aba Pegadinhas: ligar Evocar antes de ler e treinar pl-3-1, da-8-2 e lp-5-6, começando pelas vermelhas.",
+  "questoes": 5,
+  "registradoEm": "2026-10-30T09:11:13Z",
+  "topicos": [
+   "da-8-2",
+   "lp-5-6",
+   "pl-3-1"
+  ]
+ },
+ {
+  "id": "2026-10-31-da-1",
+  "chat": "Direito Administrativo",
+  "data": "2026-10-31",
+  "feito": "Mapa mental do tópico 6 publicado; capítulo DA-6 com 50 itens Cebraspe resumidos da aula 13; revisão e 15 cartões.",
+  "materia": "DA",
+  "proximo": "Fazer o pré-teste de 5 itens do tópico 6 com confiança; depois tutor-treino DA-6.",
+  "questoes": 50,
+  "registradoEm": "2026-10-31",
+  "topicos": [
+   "da-6-1",
+   "da-6-2",
+   "da-6-3",
+   "da-6-4",
+   "da-6-5"
+  ]
+ },
+ {
+  "id": "2026-10-31-da-2",
+  "chat": "Direito Administrativo",
+  "data": "2026-10-31",
+  "feito": "Resumo, mapa mental e revisão ativa (11 cartões) do tópico 8.3.",
+  "materia": "DA",
+  "proximo": "Responder as 4 perguntas de recuperação do 8.3 com confiança; depois itens reais das aulas 4 e 9 (Stefan Fantini) para o capítulo AP-8.3.",
+  "questoes": 0,
+  "registradoEm": "2026-10-31",
+  "topicos": [
+   "da-8-3"
+  ]
+ },
+ {
+  "id": "2026-10-31-geral-1",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-10-31",
+  "feito": "Regra aprovada pelo Lucas para mapas mentais: quando um ramo de um assunto reúne vários conceitos (referência: mais de 3 ou 4, ou folha que precisa de mais de uma regra), desdobrá-lo em derivações e microtópicos; cada folha final com um conceito; conceitos que a banca troca ficam em microtópicos irmãos. Também analisados os conectores causais e de dependência: aparecem em 1,8% dos itens Certos e 10,4% dos Errados do banco (amostra pequena).",
+  "materia": "geral",
+  "proximo": "Aplicar a granularidade nos próximos mapas mentais e, quando revisar um mapa existente com ramos carregados, desdobrá-lo.",
+  "questoes": 0,
+  "registradoEm": "2026-10-31",
+  "topicos": []
+ },
+ {
+  "id": "2026-10-31-geral-2",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-10-31",
+  "feito": "Regra do Lucas: citações sempre entre aspas e o contexto (texto de apoio, tabela, proposição) antes da assertiva. Corrigidos 40 enunciados no banco: 31 itens das provas de 2026 tinham o trecho do texto entre colchetes no fim e passaram ao formato 'Texto de apoio: “…” Assertiva: …'; o b26plf-039 (lógica) foi reescrito com a proposição R antes da assertiva; 12 itens de reescrita ganharam aspas na forma proposta. A página passou a mostrar o contexto em bloco separado, inclusive no Simulado. Regra 9 acrescentada em claude/Regras_de_Perguntas.md.",
+  "materia": "geral",
+  "proximo": "Todos os chats: aplicar a regra 9 ao gravar itens novos.",
+  "questoes": 0,
+  "registradoEm": "2026-10-31",
+  "topicos": []
+ },
+ {
+  "id": "2026-10-31-geral-simulado",
+  "chat": "Simulados dominicais",
+  "data": "2026-10-31",
+  "feito": "Criada a aba Simulado: objetiva de 300 min (90 P1 + 90 P2, +1/−1, cortes 18 e 27) montada só com itens dos tópicos estudados, e discursiva de 180 min (2 questões + peça técnica) com correção pelas fórmulas do edital. Distribuição por matéria em config/simulado: LP e LI apoiadas na prova da Câmara de 2026; demais são estimativa até registrar a incidência da MentoriaAA.",
+  "materia": "geral",
+  "proximo": "Domingo 01/11: fazer o 1º simulado (objetiva de manhã, discursiva à tarde). Lucas envia a tabela de incidência do portal MentoriaAA para substituir a estimativa em config/simulado.",
+  "questoes": 0,
+  "registradoEm": "2026-10-31",
+  "topicos": []
+ },
+ {
+  "id": "2026-10-31-lg-1",
+  "chat": "Estudo de Linguística",
+  "chatUrl": "https://claude.ai/chat/54bb299d-07a6-4df9-8c06-0bdf3da3dd31",
+  "data": "2026-10-31",
+  "feito": "Resumo e revisão do item 2 (categorias semânticas) a partir das Etapas 05, 06 e 07 do Legislativo Facilitado: Mapa das Categorias Semânticas com 44 palavras-chave e 34 cartões de revisão ativa, também gravados na aba Revisão. Entraram 30 itens inéditos no capítulo LG-2 (13 certos, 17 errados). A sessão de 27/10 parou no bloco 1 (gênero) sem registro no diário; o pré-teste mostrou lacuna em Benveniste (não pessoa).",
+  "materia": "Linguística",
+  "proximo": "Evocar o mapa com \"Evocar antes de ler\" ligado e responder os 34 cartões; depois rodada LG-2 no Treinar, com confiança, priorizando Benveniste, Vossa × Sua Excelência e agente × causa.",
+  "questoes": 30,
+  "registradoEm": "2026-10-31",
+  "topicos": [
+   "lg-2"
+  ]
+ },
+ {
+  "id": "2026-11-01-geral-simulado1",
+  "chat": "Simulados dominicais",
+  "data": "2026-11-01",
+  "feito": "1º simulado objetivo: P1 54 e P2 71 líquidos (cortes 18 e 27), em 62 de 300 min. Itens já vistos no Treinar: 86 certos e 7 errados; itens inéditos para ele: 65 certos e 19 errados. Certeza 90% de acerto (15 erros com certeza), dúvida 65%. Maiores perdas: LP-5.4 (dois-pontos e travessão, −3), RCCN comissões mistas e CPMI (4 erros com certeza), AP-8.1 e LI-1 (−1 cada).",
+  "materia": "geral",
+  "proximo": "Treinar os 26 erros do simulado, começando pelos 15 com certeza (escrever a regra com as próprias palavras); rodada de LP-5.4 dois-pontos × travessão; próxima objetiva com tempo-alvo de pelo menos 200 min.",
+  "questoes": 0,
+  "registradoEm": "2026-11-01",
+  "topicos": [
+   "lp-5-4",
+   "pl-3-1",
+   "da-8-1",
+   "li-1",
+   "dc-2d"
+  ]
+ },
+ {
+  "id": "2026-11-01-geral-textos",
+  "chat": "Simulados dominicais",
+  "data": "2026-11-01",
+  "feito": "Nova coleção textos com os 6 textos integrais do caderno oficial Cebraspe Câmara 2026 (Nível superior, CG), extraídos do PDF do Cebraspe com os parágrafos preservados. 21 itens ligados por textoId (b26ns LP e LI, lp55-29). Simulado e Treinar exibem o texto completo acima do item, e o simulado agrupa os itens do mesmo texto em sequência.",
+  "materia": "geral",
+  "proximo": "Falta o caderno do Policial Legislativo 2026 (itens b26plf de LP e LI) e a tabela do b26tec-156. Atualizar config/simulado com a incidência já registrada em analise/incidencia-banca-cargo11.",
+  "questoes": 0,
+  "registradoEm": "2026-11-01",
+  "topicos": []
+ },
+ {
+  "id": "2026-11-04-da-1",
+  "chat": "Direito Administrativo",
+  "data": "2026-11-04",
+  "feito": "Material complementar do 8.4 (valor público e cadeia de valor) criado a partir do Decreto 9.203/2017, Guia Gespública 2009 e Moore.",
+  "materia": "DA",
+  "proximo": "Estudar o material, responder o pré-teste do 8.4 com confiança; depois mapa mental e revisão do 8.4.",
+  "questoes": 0,
+  "registradoEm": "2026-11-04",
+  "topicos": [
+   "da-8-4"
+  ]
+ },
+ {
+  "id": "2026-11-04-geral-1",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-04",
+  "feito": "Regras de economia de créditos aprovadas: navegador só sob demanda; leitura mínima e filtrada do Controle; chats de matéria gravam só dados (código da página só no chat do Code); treino e revisão na página; chats curtos com tutor-encerrar; mapa mental passa a ser o documento revisao/<id>, exibido no Quebrando a banca como árvore ramo → microtópico → folha (atalho Mapa mental no Edital), sem artefato HTML separado.",
+  "materia": "geral",
+  "proximo": "Salvar a skill atualizada e colar o novo texto nas instruções do projeto.",
+  "questoes": 0,
+  "registradoEm": "2026-11-04",
+  "topicos": []
+ },
+ {
+  "id": "2026-11-04-geral-2",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-04",
+  "feito": "Modelo de mapa mental do Lucas (Modelo End-to-End) adotado como padrão: regras em claude/Modelo_Mapa_Mental.md; a página ganhou a visão de mapa (nó central, ramos coloridos, etiquetas, tabela, caixa, ligações cruzadas, Evocar); o mapa foi gravado em revisao/rf-1-2 com 3 cartões novos (alinhamento, wav2vec 2.0, Whisper).",
+  "materia": "geral",
+  "proximo": "Abrir Edital → RF 1.2 → Mapa mental com Evocar ligado; nos próximos tópicos, os chats gravam o mapa nesse formato.",
+  "questoes": 0,
+  "registradoEm": "2026-11-04",
+  "topicos": [
+   "rf-1-2"
+  ]
+ },
+ {
+  "id": "2026-11-04-geral-3",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-04",
+  "feito": "Regra do Lucas: tocar num ramo do mapa abre explicação detalhada. Modelo mestre (claude/Modelo_Mapa_Mental.md) passou a exigir o campo x (explicação, exemplo, pegadinha, fonte) em todo nó com filhos; a página mostra a explicação ao tocar (ⓘ). Explicações gravadas em 91 ramos dos mapas RF 1.2, 1.4, 1.5, 1.6, 1.7 e 1.8.",
+  "materia": "geral",
+  "proximo": "Nos próximos mapas, todo ramo com filhos leva explicação; conferir os mapas de RF tocando nos ramos.",
+  "questoes": 0,
+  "registradoEm": "2026-11-04",
+  "topicos": [
+   "rf-1-2",
+   "rf-1-4",
+   "rf-1-5",
+   "rf-1-6",
+   "rf-1-7",
+   "rf-1-8"
+  ]
+ },
+ {
+  "id": "2026-11-04-geral-4",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-04",
+  "feito": "Revisão ativa voltou ao formato anterior: cada cartão pede Lembrei, Parcial ou Não lembrei antes de virar a resposta; a marcação fica salva (coleção cartoes_aval) e aparece como última avaliação. Vale para todos os cartões, inclusive os de hoje (RF 1.2 a 1.8), e entrou como regra em claude/Modelo_Mapa_Mental.md.",
+  "materia": "geral",
+  "proximo": "Fazer a revisão ativa dos mapas de RF com Evocar ligado, marcando a autoavaliação.",
+  "questoes": 0,
+  "registradoEm": "2026-11-04",
+  "topicos": []
+ },
+ {
+  "id": "2026-11-04-geral-5",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-04",
+  "feito": "Regra do Lucas: todo nó do mapa, inclusive folha, tem explicação sucinta que decodifica os termos-chave (ex.: Verificação · \"um para um\"). Modelo mestre atualizado; 209 explicações de folha gravadas nos mapas RF 1.2 e 1.4 a 1.8 (todos os nós agora têm ⓘ).",
+  "materia": "geral",
+  "proximo": "Conferir os mapas de RF tocando nas folhas; apontar qualquer explicação que não bata com a aula.",
+  "questoes": 0,
+  "registradoEm": "2026-11-04",
+  "topicos": [
+   "rf-1-2",
+   "rf-1-4",
+   "rf-1-5",
+   "rf-1-6",
+   "rf-1-7",
+   "rf-1-8"
+  ]
+ },
+ {
+  "id": "2026-11-04-geral-6",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-04",
+  "feito": "Regra do Lucas: todo pacote de resumo + revisão ativa gera no mínimo 20 questões C/E no Treinar (capítulo existente com menos de 20 é completado). Modelo_Mapa_Mental.md atualizado.",
+  "materia": "geral",
+  "proximo": "Se o Lucas aprovar: completar os capítulos RF 1.4 a 1.8 (hoje com 10 itens cada) até 20.",
+  "questoes": 0,
+  "registradoEm": "2026-11-04",
+  "topicos": []
+ },
+ {
+  "id": "2026-11-04-geral-jur",
+  "chat": "Guia de jurisprudência",
+  "data": "2026-11-04",
+  "feito": "A pedido do Lucas, Jurisprudência virou matéria própria no Edital (sigla JUR, materiaOrdem 10, foraEdital, como rf-0/cp-0): jur-1 Poder Legislativo e processo legislativo (JUR-DC5, JUR-PL1.5), jur-2 Direito Constitucional (JUR-DC2b), jur-3 Direito Administrativo (JUR-DA3.4). Os capítulos continuam também nos tópicos específicos (dc-5, pl-1-5, dc-2b, da-3-4): a mesma questão aparece nas duas matérias, sem duplicar documentos.",
+  "materia": "geral",
+  "proximo": "Pedido ao chat do Code da página: conferir se a matéria JUR aparece com nome e cor próprios e se fica fora da contagem dos 162 tópicos; se a sigla nova não tiver cor, definir uma. Regra para as próximas varreduras: cada capítulo JUR-* novo entra em caps do tópico jur-N da área e do tópico específico.",
+  "questoes": 0,
+  "registradoEm": "2026-11-04",
+  "topicos": [
+   "jur-1",
+   "jur-2",
+   "jur-3"
+  ]
+ },
+ {
+  "id": "2026-11-04-jurisprudencia-2",
+  "chat": "Guia de jurisprudência",
+  "data": "2026-11-04",
+  "feito": "Pacote completo do jur-1 (Poder Legislativo e processo legislativo): mapa em revisao/jur-1 com 6 ramos por tese (interna corporis, emenda jabuti, emenda em projeto de iniciativa reservada, reserva de iniciativa na emenda estadual, orçamento, quadro formal × material), 3 ligações, 12 itens e 14 cartões. Fontes: Infos 1223, 1227, 1228, 1230 e 1234 e Tema 1.120. 12 itens inéditos novos (JUR-DC5 07–14; JUR-PL1.5 03–06): o tópico chega a 20 itens, 10 C e 10 E. 'Sanção não convalida vício de iniciativa' entrou como incremento.",
+  "materia": "jurisprudencia",
+  "proximo": "Lucas: abrir o mapa do jur-1 com 'Evocar antes de ler', fazer os 14 cartões e depois o Treinar do jur-1 (20 itens), registrando a confiança. Quando houver mais julgados, montar o pacote do jur-2 e do jur-3.",
+  "questoes": 12,
+  "registradoEm": "2026-11-04",
+  "topicos": [
+   "jur-1",
+   "dc-5",
+   "pl-1-5"
+  ]
+ },
+ {
+  "id": "2026-11-04-jurisprudencia",
+  "chat": "Guia de jurisprudência (varredura agendada)",
+  "data": "2026-11-04",
+  "feito": "Varredura pelo site travou no login (Tutory e MentoriaAA; nenhuma senha digitada). Lucas enviou os PDFs da Jurisprudência Facilitada 1222–1234; só o Informativo 1234 (STF, 26/10/2026, publicado em 31/10) é novo. Tratados os 4 julgados: ADI 3.159 (emenda parlamentar em projeto de iniciativa reservada; aumento de despesa não se presume) → PL-1.5/DC-4; RE 590.880 (RJU, fim da competência trabalhista; Tema 106 cancelado) → DA-3.4/DC-4; RE 1.141.156 (Tema 1.016, depósito judicial sem expurgos; reformou o STJ) → DC-2b, periférico; ADI 4.395 (FUNRURAL até 2017) → fora do edital ARR, sem itens. Classificação do Claude. 5 itens inéditos nos capítulos JUR-PL1.5, JUR-DA3.4 e JUR-DC2b.",
+  "materia": "jurisprudencia",
+  "proximo": "Fazer as rodadas JUR-DC5 (6 itens) e JUR-PL1.5 em sequência, para intercalar as regras do poder de emenda (pertinência temática × aumento de despesa). Meta da semana do Tutory não lida: depende de login. Próxima varredura: 11/11 (Informativo 1235 em diante).",
+  "questoes": 5,
+  "registradoEm": "2026-11-04",
+  "topicos": [
+   "pl-1-5",
+   "dc-4",
+   "da-3-4",
+   "dc-2b"
+  ]
+ },
+ {
+  "id": "2026-11-04-pl-1",
+  "chat": "Processo Legislativo · RICD arts. 25 a 64",
+  "data": "2026-11-04",
+  "feito": "RICD arts. 25 a 64 (Comissões) extraídos do texto oficial compilado nos Flash Cards enviados pelo Lucas (com Res. 1/2023 e 11/2024). Criados o mapa mental (8 ramos, 58 folhas, ênfase em prazos, terminativo × conclusivo e recurso de 1/10), 28 cartões de revisão ativa e o capítulo PL-2.1 com 26 itens C/E inéditos (14 C, 12 E). Pré-teste de 4 perguntas lançado, sem respostas ainda.",
+  "materia": "Processo Legislativo e Regimentos",
+  "proximo": "Evocação no mapa PL-2.1 ('Evocar antes de ler') e 28 cartões; depois rodada C/E do PL-2.1 no Treinar. Atenção: 5/10/40 sessões × Relator metade; 1/3 (CPI) × 1/10 (recurso); 120 + metade; 8 × 30 sessões; terminativo × conclusivo. Em seguida, Parte 3: arts. 95 a 150. Pendentes antigos: rodadas PL-3.1 e DC-8.1.",
+  "questoes": 26,
+  "registradoEm": "2026-11-04",
+  "topicos": [
+   "pl-2-1"
+  ]
+ },
+ {
+  "id": "2026-11-04-pl-2",
+  "chat": "Processo Legislativo · RICD arts. 25 a 64",
+  "data": "2026-11-04",
+  "feito": "Complemento do mapa PL-2.1 com os pontos de processo legislativo (arts. 44, 50, 51, 57 I-V, IX-A, XX, XXI). Correção: os Flash Cards estavam desatualizados quanto à Res. 33/2026 (22/4/2026), que alterou o art. 14, § 5º, e criou o § 7º: membros da Mesa, salvo o Presidente, podem integrar comissões, vedado presidi-las. Mapa com 71 folhas, 35 cartões; 7 itens novos (pl21-27 a 33). Res. 34/2026 só acrescentou o Cap. III-K do Título II (fora dos arts. 25-64).",
+  "materia": "Processo Legislativo e Regimentos",
+  "proximo": "Evocação no mapa PL-2.1 e 34 cartões; rodada C/E do PL-2.1 (32 itens) no Treinar. Depois, Parte 3: RICD arts. 95 a 150.",
+  "questoes": 7,
+  "registradoEm": "2026-11-04",
+  "topicos": [
+   "pl-2-1"
+  ]
+ },
+ {
+  "id": "2026-11-04-rf-1",
+  "chat": "Reconhecimento de Fala",
+  "data": "2026-11-04",
+  "feito": "Mapas mentais dos tópicos 1.4 a 1.8 gravados direto no Quebrando a banca (revisao/<id>, campo mapa, no padrão de claude/Modelo_Mapa_Mental.md), a partir das Etapas 05 a 09 em PDF. Cada documento traz o mapa (6 a 8 ramos, com tabelas, caixas e ligações cruzadas), itens com pegadinha e fonte e cartões de revisão ativa (67 no total). Nenhum artefato novo e nenhuma questão C/E criada.",
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "proximo": "Fazer, na página, a evocação de cada mapa (Evocar antes de ler) e os cartões de revisão ativa de 1.4 a 1.8; depois pedir os itens C/E desses capítulos.",
+  "questoes": 0,
+  "registradoEm": "2026-11-04",
+  "topicos": [
+   "rf-1-4",
+   "rf-1-5",
+   "rf-1-6",
+   "rf-1-7",
+   "rf-1-8"
+  ]
+ },
+ {
+  "id": "2026-11-04-rf-9",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-04",
+  "feito": "Regra do Lucas: pedido de resumo + revisão ativa gera também um capítulo de questões no Treinar (pacote completo do tópico), registrada em claude/Modelo_Mapa_Mental.md e na skill. Aplicada aos mapas de hoje que não tinham questões: 50 itens inéditos C/E (10 por tópico, capítulos 1.4 a 1.8), ligados aos tópicos do edital.",
+  "materia": "Reconhecimento de Fala, Transcrição e IA",
+  "proximo": "Treinar RF 1.4 a 1.8 no Treinar (Edital → atalho Treinar de cada tópico), com confiança.",
+  "questoes": 50,
+  "registradoEm": "2026-11-04",
+  "topicos": [
+   "rf-1-4",
+   "rf-1-5",
+   "rf-1-6",
+   "rf-1-7",
+   "rf-1-8"
+  ]
+ },
+ {
+  "id": "2026-11-05-cp-1",
+  "chat": "Ciência Política",
+  "data": "2026-11-05",
+  "feito": "Pacote completo do item 9 (Teoria do Estado): mapa mental com 85 nós explicados, 24 itens de revisão e 38 cartões em 6 temas, e capítulo CP-9 com 30 itens C/E inéditos (16 C, 14 E). Fontes: Aula 01 do LDI, apostila Etapa 13 (LF) e o material complementar de 28/10. Na sessão de 28/10, o pré-teste teve 2 certos, 2 parciais e 1 erro (Westfália confundida com a Revolução Francesa).",
+  "materia": "Ciência Política",
+  "proximo": "Revisão ativa do CP-9 com “Evocar antes de ler” ligado, depois a rodada do CP-9 no Treinar; fazer as 25 questões da apostila Etapa 13 com confiança antes do gabarito.",
+  "questoes": 30,
+  "registradoEm": "2026-11-05",
+  "topicos": [
+   "cp-9"
+  ]
+ },
+ {
+  "id": "2026-11-05-da-1",
+  "chat": "Administração Pública",
+  "data": "2026-11-05",
+  "feito": "Pacote 8.4 (valor público e cadeia de valor): mapa com 5 ramos (conceito do Decreto 9.203, Moore e triângulo estratégico, cadeia insumos→impactos, 6Es, ligações com 9.3/9.4), 10 cartões e capítulo AP-8.4 com 20 itens (11 C, 9 E). Sem aula do curso no projeto: base no Decreto 9.203, em Moore e no Guia de 2009.",
+  "materia": "Direito Administrativo e Administração Pública",
+  "proximo": "Enviar o PDF da aula do Estratégia sobre valor público para conferir cobertura; enquanto isso, evocar no mapa, responder os 10 cartões e fazer a rodada AP-8.4 no Treinar.",
+  "questoes": 20,
+  "registradoEm": "2026-11-05T21:20:00Z",
+  "topicos": [
+   "da-8-4"
+  ]
+ },
+ {
+  "id": "2026-11-05-geral-1",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-05",
+  "feito": "Método v3 aprovado (pacotes A-D), a partir das referências de Fixe o Conhecimento e Otimize seu Aprendizado e dos dados do Controle (82% dos erros com certeza; interferência = 45 de 116 origens). Página: campo 'Como ficaria certo?' ao marcar E; erro com certeza pergunta 'o que te deu certeza?'; calibração de 14 dias na aba Hoje (meta 90%); simulado com escrita expressiva opcional, registro e saldo das trocas de resposta e classificação dos erros. Regras de Perguntas 10 (item E traz versão correta) e 11 (pares de contraste para interferência). Metodo_de_Estudo.md v3 (seções 2.12 a 2.17).",
+  "materia": "geral",
+  "proximo": "Hoje, na revisão espaçada: marcar certeza só quando souber dizer por quê e usar o campo de correção nos itens E; no domingo, simulado com escrita antes e classificação dos erros.",
+  "questoes": 0,
+  "registradoEm": "2026-11-05",
+  "topicos": []
+ },
+ {
+  "id": "2026-11-05-geral-2",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-05",
+  "feito": "Revisão ativa refeita (regra do Lucas): escrever a resposta de memória no espaço do cartão, tocar em Ver resposta, comparar e só então marcar Lembrei, Parcial ou Não lembrei. A resposta escrita fica salva com a marcação. Modelo_Mapa_Mental.md atualizado.",
+  "materia": "geral",
+  "proximo": "Na próxima revisão ativa, escrever todas as respostas antes de virar e avisar se o espaço de resposta precisa de ajuste.",
+  "questoes": 0,
+  "registradoEm": "2026-11-05",
+  "topicos": []
+ },
+ {
+  "id": "2026-11-05-geral-3",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-05",
+  "feito": "Caderno de erros reorganizado como o Edital: prova → matéria → assunto (tópico do edital) → itens, com blocos que abrem e fecham, contagem de itens e de revisões de hoje, e botão Revisar por capítulo dentro de cada assunto.",
+  "materia": "geral",
+  "proximo": "Usar o caderno por assunto na próxima revisão de erros e apontar ajustes.",
+  "questoes": 0,
+  "registradoEm": "2026-11-05",
+  "topicos": []
+ },
+ {
+  "id": "2026-11-05-geral-4",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-05",
+  "feito": "Diagnóstico da calibração (certeza 83% em 14 dias; meta 90%). Pontos fracos com certeza: DC-1.3 (60%), AP-8.2 (69%), DC-1 e DC-1.2 (70%), DA-2 (80%), RF 1.3 (50%). Criados 42 itens de contraste (regra 11) para os 21 erros de interferência de DA-2, DC-1.3, DC-1.2 e AP-8.2, e 21 cartões 'Contrastes (interferência)' na revisão ativa de da-2-1, dc-1 e da-8-2. Página: capítulos SIM-… fora dos percentuais e da calibração (itens seguem no caderno de erros).",
+  "materia": "geral",
+  "proximo": "Amanhã, depois da revisão espaçada: Treinar os itens novos de DC-1.3, DA-2 e AP-8.2 (capítulos já existentes, modo 'novos'), marcando certeza só quando souber dizer por quê; em seguida, cartões de contraste.",
+  "questoes": 42,
+  "registradoEm": "2026-11-05",
+  "topicos": [
+   "da-2-1",
+   "dc-1",
+   "da-8-2"
+  ]
+ },
+ {
+  "id": "2026-11-05-geral-5",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-05",
+  "feito": "Visual que facilita o estudo: aba Hoje com três anéis (revisões do dia × meta, acerto com certeza em 14 dias × meta de 90%, dias até a prova com a fase do método); aba Edital com mapa de calor (um quadrado por tópico, cor pelo aproveitamento; toque abre o tópico).",
+  "materia": "geral",
+  "proximo": "Usar por alguns dias; depois escolher a próxima melhoria visual (tema, feedback ao responder, treino no celular ou gráficos com toque).",
+  "questoes": 0,
+  "registradoEm": "2026-11-05",
+  "topicos": []
+ },
+ {
+  "id": "2026-11-05-geral-6",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-05",
+  "feito": "Alinhamento entre as instruções do Projeto e a pasta concurso-camara: 11 regras aprendidas copiadas para a seção 6 do CLAUDE.md da pasta; Aprimoramentos.md atualizado com as mudanças de 30/10 a 05/11; comandos da pasta (/sessao, /treino, /encerrar…) definidos como padrão, com as skills tutor-* só para chats sem a pasta vinculada. Versões novas de /treino e /sessao (treino na página, mínimo de 20 itens) entregues ao Lucas para substituir à mão (a pasta .claude não aceita escrita remota).",
+  "materia": "geral",
+  "proximo": "Lucas: substituir os dois SKILL.md em .claude/skills e trocar, nas instruções do Projeto, a linha dos comandos tutor-* pelos comandos da pasta; vincular a pasta concurso-camara em cada chat de matéria.",
+  "questoes": 0,
+  "registradoEm": "2026-11-05",
+  "topicos": []
+ },
+ {
+  "id": "2026-11-05-geral-7",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-05",
+  "feito": "Inspiração Mentoris aplicada na aba Hoje: 'Sua memória por intervalo' (acerto real ao reencontrar itens por dias desde a resposta anterior; meta 90%), calendário de constância com sequência e nível por dias de estudo, linha do tempo das revisões agendadas por matéria até 17/01 (faixa da reta final a partir de 10/01) e tema escuro azul-marinho com botão Tema (automático/escuro/claro). Anel de calibração mostra os pontos que faltam até 90%.",
+  "materia": "geral",
+  "proximo": "Lucas: usar alguns dias e dizer o que ajustar; acompanhar a curva de memória (se cair nos intervalos longos, rever o espaçamento).",
+  "questoes": 0,
+  "registradoEm": "2026-11-05",
+  "topicos": []
+ },
+ {
+  "id": "2026-11-05-geral-discursiva-2",
+  "chat": "Simulados dominicais",
+  "data": "2026-11-05",
+  "feito": "Guia da discursiva criado e atualizado com o e-book da mentoria (Rosana Moura): 3 formatos prováveis (revisão de pronunciamento, expositiva, peça de retextualização ou parecer). 1ª questão expositiva (apreciação conclusiva): 6,68/15. 14 itens novos no PL-2.1.",
+  "materia": "geral",
+  "proximo": "Amanhã (06/11): rodada dos 14 itens novos do PL-2.1 (pl21-34 a 47, apreciação conclusiva, exceções, terminativo × conclusivo, recurso) no Treinar, com confiança; os erros entram na revisão. Hoje: revisão espaçada, DC-7.4, LP-4.1, TI-2. Terça 10/11: refazer a questão discursiva de memória. Domingo 08/11: simulado objetivo + discursiva.",
+  "questoes": 14,
+  "registradoEm": "2026-11-05",
+  "topicos": [
+   "pl-2-1"
+  ]
+ },
+ {
+  "id": "2026-11-05-geral-discursiva",
+  "chat": "Simulados dominicais",
+  "data": "2026-11-05",
+  "feito": "Criado o método de treino de discursiva no padrão Cebraspe (claude/Discursiva_Metodo.md; coleção discursivas). Corrigidas 3 questões do sábado: imunidades 3,84/15; retextualização 6,89/15; transcrição/ASR 6,10/15 (estimativas, comandos reconstruídos pelas anotações).",
+  "materia": "geral",
+  "proximo": "Revisar o art. 53 da CF (imunidades) por evocação; retextualização só quando LG-6/7 entrar na trilha. Domingo: discursiva nova no formato Cebraspe (2 questões + peça), só com tópicos já estudados, padrão e quesitos fechados antes. Método atualizado com o que conta como erro (claude/Discursiva_Metodo.md, seção 6).",
+  "questoes": 0,
+  "registradoEm": "2026-11-05",
+  "topicos": [
+   "dc-6",
+   "lg-7-2",
+   "rf-1-1"
+  ]
+ },
+ {
+  "id": "2026-11-05-lp-1",
+  "chat": "Língua Portuguesa",
+  "data": "2026-11-05",
+  "feito": "Revisão do item 4 (coesão). Mapa em revisao/lp-4-1 no formato do modelo do Lucas (6 ramos, explicação em todos os nós), 16 cartões e capítulo LP-4.1 com 22 itens inéditos. Fonte: Aula 9 do Estratégia (NotebookLM) e o mapa-modelo do Lucas. Koch pendente.",
+  "materia": "Língua Portuguesa",
+  "proximo": "Evocar o mapa com “Evocar antes de ler”, fazer a revisão ativa e treinar o LP-4.1 na página. Enviar fotos de Koch para incorporar como fonte.",
+  "questoes": 22,
+  "registradoEm": "2026-11-05",
+  "topicos": [
+   "lp-4-1"
+  ]
+ },
+ {
+  "id": "2026-11-05-lp-2",
+  "chat": "Língua Portuguesa",
+  "data": "2026-11-05",
+  "feito": "Mapa 4.1 ampliado com Koch (A coesão textual, pp. 15–27, fotos do Lucas): ramo 7 \"Teoria da coesão (Koch)\" com 13 nós, 7 cartões e itens lp41-23..32. Depois, caps. 2 e 3 (pp. 30–73): ramos 'Koch: coesão referencial' e 'Koch: coesão sequencial' (inclui paralelismo, paráfrase, tempo verbal, progressão temática, operadores argumentativos), 9 cartões e itens lp41-33..48. Pestana cap. 35 (fotos): ramo 10, 4 cartões, 7 itens Cebraspe reais (lp41-49..55) e material registrado.",
+  "materia": "Língua Portuguesa",
+  "proximo": "Fazer as 54 questões do cap. 35 do Pestana no livro (as Cebraspe já estão no Caderno), depois treinar os 55 itens LP-4.1 na página.",
+  "questoes": 33,
+  "registradoEm": "2026-11-05",
+  "topicos": [
+   "lp-4-1"
+  ]
+ },
+ {
+  "id": "2026-11-05-pl-1",
+  "chat": "Processo Legislativo · RICD",
+  "data": "2026-11-05",
+  "feito": "Meta de revisão Tutory DC 7.4: RICD arts. 262 a 273 (Administração e Economia Interna), item 7.4 de Direito Constitucional e Regimento Interno no edital. Mapa do Lucas conferido com o texto oficial (RCD 34/2026); mapa em revisao/dc-7-4 (4 ramos), 17 cartões e capítulo DC-7.4 com 19 itens C/E (14 inéditos Claude + 5 do livro de Yuri Moraes). Inicialmente gravado por engano como fora do edital (pl-ri-7-4/PL-RI-7.4) e depois movido. Correções ao mapa do Lucas: art. 263 exige parecer (não aprovação nem iniciativa privativa) da Mesa; policiamento por segurança própria/contratada ou PCDF/PMDF.",
+  "materia": "Direito Constitucional e Regimento Interno",
+  "proximo": "Evocação do mapa DC 7.4 e 17 cartões; rodada de 19 itens do DC-7.4 no Treinar.",
+  "questoes": 14,
+  "registradoEm": "2026-11-05",
+  "topicos": [
+   "dc-7-4"
+  ]
+ },
+ {
+  "id": "2026-11-05-rf-1",
+  "data": "2026-11-05",
+  "materia": "rf",
+  "proximoPasso": "Rodadas de 20 itens na aba Treinar, um capítulo por vez, começando pelo 1.4 (há erros com confiança 3 em c14-02 e c14-03) e depois pelo 1.5 (refazer c15-03 e c15-07, que mudaram).",
+  "resumo": "Itens dos capítulos 1.4 a 1.8 completados até 20 por capítulo (c1X-11 a c1X-20, total de 50 novos), com base na apostila do Legislativo Facilitado (Etapas 05 a 09) e com 7 questões reais da Cebraspe (IBAMA 2022, SEFAZ-AL 2021, PG-DF 2021, FUB 2025, TCE-RN 2026, Telebras 2022). c15-03 reescrito (o 'imunes' deixava o item ambíguo; agora é C) e c18-06 trocado (duplicava o c17-08 sobre gRPC).",
+  "topico": "1.4 a 1.8"
+ },
+ {
+  "id": "2026-11-05-ti-1",
+  "chat": "TI e IA",
+  "chatUrl": "",
+  "data": "2026-11-05",
+  "feito": "Pacote de Redes de computadores (2 e 2.1) montado a partir do mapa do Lucas e do LDI: mapa em revisao/ti-2 (9 ramos, explicação em todos os nós), 24 cartões de revisão ativa e 26 itens C/E no capítulo TI-2.",
+  "materia": "Tecnologia da Informação e Dados",
+  "proximo": "Fazer os cartões de revisão ativa e os 26 itens de TI-2 no Treinar, com confiança.",
+  "questoes": 26,
+  "registradoEm": "2026-11-05",
+  "topicos": [
+   "ti-2",
+   "ti-2-1"
+  ]
+ },
+ {
+  "id": "2026-11-05-ti-2",
+  "chat": "TI e IA",
+  "chatUrl": "",
+  "data": "2026-11-05",
+  "feito": "Pacote de 1.1 (Word) e 1.4 (OneDrive) em revisao/ti-1: mapa de 8 ramos com explicação em todos os nós, 21 cartões, 22 itens em TI-1.1 e 20 em TI-1.4. Fonte: LDI pós-edital cap. 11 (Word); OneDrive sem capítulo próprio, complementado com documentação Microsoft (incremento).",
+  "materia": "Tecnologia da Informação e Dados",
+  "proximo": "Fazer os 21 cartões e os 42 itens de TI-1.1 e TI-1.4 no Treinar, com confiança.",
+  "questoes": 42,
+  "registradoEm": "2026-11-05",
+  "topicos": [
+   "ti-1"
+  ]
+ },
+ {
+  "id": "2026-11-06-da-1",
+  "chat": "Direito Administrativo",
+  "data": "2026-11-06",
+  "feito": "Reescritos os 50 itens do DA-6 (e a cópia sim01-06) no padrão das Regras de Perguntas: contexto antes da assertiva, comentário próprio por item, origem marcada como adaptada. Gabaritos e respostas mantidos.",
+  "materia": "DA",
+  "proximo": "Refazer na página os itens do DA-6 já respondidos, para conferir se a nova redação ficou clara.",
+  "questoes": 0,
+  "registradoEm": "2026-11-06",
+  "topicos": [
+   "da-6-1",
+   "da-6-2",
+   "da-6-3",
+   "da-6-4",
+   "da-6-5"
+  ]
+ },
+ {
+  "id": "2026-11-06-da-2",
+  "chat": "Direito Administrativo",
+  "data": "2026-11-06",
+  "feito": "Licitações (10.1): mapa com 8 ramos, 16 cartões, capítulo DA-10.1 com 25 itens. Contratos (10.2 a 10.7): mapa com 6 ramos, 16 cartões, capítulo DA-10.2 com 25 itens. Base: mapas do Lucas + Lei 14.133 + Decreto 12.807/2025. 8.4: mapa existente complementado com a aula 9 (economicidade, execução, excelência transversal, Bennett/Wholey), +4 cartões, +7 itens (4 reais Cebraspe da aula 9).",
+  "materia": "DA",
+  "proximo": "Treinar DA-10.1 e DA-10.2 na página; revisar AP-8.4 itens 21 a 27.",
+  "questoes": 57,
+  "registradoEm": "2026-11-06",
+  "topicos": [
+   "da-10-1",
+   "da-10-2",
+   "da-10-3",
+   "da-10-4",
+   "da-10-5",
+   "da-10-6",
+   "da-10-7",
+   "da-8-4"
+  ]
+ },
+ {
+  "id": "2026-11-06-da-3",
+  "chat": "Direito Administrativo",
+  "data": "2026-11-06",
+  "feito": "Licitações e contratos destrinchados por subtópico: mapas e cartões próprios em 10.2 a 10.7; capítulos DA-10.2 (23), DA-10.3 (25), DA-10.4 (25), DA-10.5 (20), DA-10.6 (20), DA-10.7 (21); DA-10.1 passou a 40 itens. Fonte principal: aulas 7, 8 e 9 de Herbert Almeida (pasta), mais Lei 14.133 e Decreto 11.246/2022.",
+  "materia": "DA",
+  "proximo": "Amanhã de manhã, na aba Treinar → farei DA-10.6 e DA-10.7 (os menores) e depois DA-10.3.",
+  "questoes": 124,
+  "registradoEm": "2026-11-06",
+  "topicos": [
+   "da-10-1",
+   "da-10-2",
+   "da-10-3",
+   "da-10-4",
+   "da-10-5",
+   "da-10-6",
+   "da-10-7"
+  ]
+ },
+ {
+  "id": "2026-11-06-dc-1",
+  "chat": "Processo Legislativo · RICD",
+  "data": "2026-11-06",
+  "feito": "Revisão Tutory DC 7.3 (RICD arts. 226 a 251, Deputados) a partir do texto oficial atualizado até a RCD 34/2026. Criados mapa (6 ramos, com tabelas de vedações e de perda do mandato), 21 cartões e capítulo DC-7.3 com 20 itens C/E inéditos (10 C, 10 E). Divergência anotada: art. 251 fala em voto secreto, a CF art. 53, § 2º (EC 35/2001) não.",
+  "materia": "Direito Constitucional e Regimento Interno",
+  "proximo": "Evocação do mapa DC 7.3 e 21 cartões; rodada de 20 itens do DC-7.3. Atenção: diploma × posse; Câmara decide (I, II, VI) × Mesa declara (III a V); 24 h × 72 h; 3 médicos da Câmara × junta de fora.",
+  "questoes": 20,
+  "registradoEm": "2026-11-06",
+  "topicos": [
+   "dc-7-3"
+  ]
+ },
+ {
+  "id": "2026-11-06-dc-dp",
+  "chat": "Direito Constitucional",
+  "data": "2026-11-06",
+  "feito": "Direitos políticos e partidos políticos, no modelo do mapa do Lucas. Conferido no edital que são assuntos distintos do item 2: separados em dois tópicos (dc-2e Direitos políticos; dc-2f Partidos políticos, novo). Direitos políticos: 6 ramos, 72 nós, 31 itens de resumo, 27 cartões, 34 itens C/E (DC-2.4; 32 inéditos e 2 Cebraspe com gabarito conferido pela CF). Partidos: 7 ramos (natureza, limites, autonomia, cláusula de desempenho, fidelidade, financiamento, ações afirmativas), 32 nós, 25 itens, 16 cartões, 21 itens C/E (DC-2.5). Fontes: CF (EC 97, 111, 117, 133), STF, TSE, LC 64 e LC 219/2025, Leis 9.096 e 9.504. Divergência: escusa de consciência como perda ou suspensão. A conferir: vetos à LC 219/2025.",
+  "materia": "Direito Constitucional e Regimento Interno",
+  "proximo": "Mapa mental e Revisão ativa de dc-2e, depois Treinar DC-2.4 (34 itens); em seguida o mesmo para dc-2f e DC-2.5 (21 itens). Enviar o PDF da aula de direitos políticos e partidos, se houver.",
+  "questoes": 55,
+  "registradoEm": "2026-11-06",
+  "topicos": [
+   "dc-2e",
+   "dc-2f"
+  ]
+ },
+ {
+  "id": "2026-11-06-geral-1",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-06",
+  "feito": "Revisão ativa ganhou 'Corrigir com IA' (Claude da conta do Lucas, sem chave na página): compara a resposta escrita com a esperada e sugere Lembrei/Parcial/Não lembrei, com acertou/faltou/errado; limite de 40 s, uma nova tentativa no modelo rápido, sem IA a autoavaliação manual segue igual; a decisão final é do Lucas. Pasta concurso-camara: CLAUDE.md aponta para um único gerador-de-questoes (destinos controle e caderno) e cita a trava proteger_respostas; arquivos do agente unificado, do hook e do settings.json entregues para cópia em .claude. Tarefa semanal criada para avisar quando as rodadas se aproximarem de 500.",
+  "materia": "geral",
+  "proximo": "Lucas: copiar os 3 arquivos para .claude e apagar agents/gerador-questoes.md; testar 'Corrigir com IA' na próxima revisão ativa.",
+  "questoes": 0,
+  "registradoEm": "2026-11-06",
+  "topicos": []
+ },
+ {
+  "id": "2026-11-06-geral-anki",
+  "chat": "Flashcards",
+  "data": "2026-11-06",
+  "feito": "Rodada 2 do Anki: comparados os documentos de revisao/ e pontos/ com os da rodada de 29/10. Gerado um .apkg com 1.931 cartões em 34 tópicos, só com palavras-chave, pegadinhas e cartões novos ou que não estavam na rodada anterior (24 tópicos novos e acréscimos em 10 já existentes).",
+  "materia": "geral",
+  "proximo": "Importar o .apkg no Anki com limite de 20 novos por dia, priorizando os tópicos da semana; na próxima rodada, comparar com os documentos desta data.",
+  "questoes": 0,
+  "registradoEm": "2026-11-06",
+  "topicos": [
+   "cp-9",
+   "da-2-1",
+   "da-2-2",
+   "da-5-1",
+   "da-5-2",
+   "da-6-1",
+   "da-6-2",
+   "da-6-3",
+   "da-6-4",
+   "da-6-5",
+   "da-7",
+   "da-8-2",
+   "da-8-3",
+   "da-8-4",
+   "dc-1",
+   "dc-5",
+   "dc-7-4",
+   "dc-8-1",
+   "dc-8-2",
+   "jur-1",
+   "lg-2",
+   "lp-4-1",
+   "pl-2-1",
+   "pl-3-1",
+   "rf-1-2",
+   "rf-1-3",
+   "rf-1-4",
+   "rf-1-5",
+   "rf-1-6",
+   "rf-1-7",
+   "rf-1-8",
+   "ti-1",
+   "ti-2",
+   "ti-6"
+  ]
+ },
+ {
+  "id": "2026-11-06-geral-srs",
+  "chat": "Flashcards (exceção à regra do chat do Code, autorizada pelo Lucas)",
+  "data": "2026-11-06",
+  "feito": "Melhoria aprovada pelo Lucas: os cartões de revisão ativa passaram a usar repetição espaçada estilo Anki (Novamente, Difícil, Bom, Fácil; SM-2 com facilidade 2,5, teto de 20% dos dias até a prova, revisão diária a partir de 10/01/2027, até 20 cartões novos por dia). Em seguida, a pedido dele (Fixe o Conhecimento, rebatedor com arremessos aleatórios), 'Revisar cartões' virou sessão intercalada: cartões de todos os tópicos, sorteados, um por vez, sem dois seguidos do mesmo tópico e com o assunto oculto até virar; Novamente volta no fim da sessão. Estado em cartoes_aval (facil, intervalo, prox). Página alterada fora do chat do Code: lá, partir da versão publicada 43.",
+  "materia": "geral",
+  "proximo": "Usar a caixa 'Cartões de revisão ativa' da aba Hoje todo dia; parar de gerar .apkg, salvo pedido do Lucas.",
+  "questoes": 0,
+  "registradoEm": "2026-11-06",
+  "topicos": []
+ },
+ {
+  "id": "2026-11-06-lg-1",
+  "chat": "Code · Quebrando a banca",
+  "data": "2026-11-06",
+  "feito": "Decisão do Lucas: o tópico 12 de Linguística ('Noções básicas de lógica: conectivos, argumentos e notação') deve ser estudado no nível do edital: notação (¬, ∧, ∨, →, ↔), conectivos, valor-verdade básico e argumentos válidos/falácias. Equivalências e negação de proposições compostas ficam de fora, salvo item do cargo 11 que as cobre. Item b26plf-039 (Policial Legislativo 2026, negação de condicional com bicondicional) e sua cópia sim01-21 marcados foraNivel: saíram do simulado, da revisão espaçada e dos percentuais. O item b26plf-041 (argumentos) continua válido.",
+  "materia": "lg",
+  "proximo": "Quando chegar a vez de LG-12, montar o pacote completo (mapa, cartões e no mínimo 20 itens) nesse nível básico.",
+  "questoes": 0,
+  "registradoEm": "2026-11-06",
+  "topicos": [
+   "lg-12"
+  ]
+ },
+ {
+  "id": "2026-11-06-ti-1",
+  "chat": "TI e IA",
+  "chatUrl": "",
+  "data": "2026-11-06",
+  "feito": "Mapas separados e ampliados: Word em revisao/ti-1 (8 ramos, 138 nós, 31 cartões, todas as guias do LDI cap. 11) e OneDrive em revisao/ti-1-4 (6 ramos, 50 nós, 19 cartões, com páginas de suporte da Microsoft). +14 itens em TI-1.1 (36) e +10 em TI-1.4 (30).",
+  "materia": "Tecnologia da Informação e Dados",
+  "proximo": "Decidir se cria entradas ti-1-1 a ti-1-4 no Edital para o atalho abrir o mapa do OneDrive; depois fazer cartões e itens de TI-1.1 e TI-1.4.",
+  "questoes": 24,
+  "registradoEm": "2026-11-06",
+  "topicos": [
+   "ti-1"
+  ]
+ },
+ {
+  "id": "2026-11-06-ti-2",
+  "chat": "TI e IA",
+  "chatUrl": "",
+  "data": "2026-11-06",
+  "feito": "Mapa de Redes comparado com as faixas de incidência do LDI (Parte 1 e Protocolos). Acrescentados: barramento, cabos, padrões IEEE 802, camadas OSI detalhadas, camadas da web, URL e um ramo de protocolos (IP, TCP/UDP, portas, e-mail, DHCP, DNS, HTTP/HTTPS, FTP, SSH, SNMP, VoIP). Mapa com 103 nós, 39 cartões; +17 itens em TI-2 (43).",
+  "materia": "Tecnologia da Informação e Dados",
+  "proximo": "Fazer os cartões novos (protocolos e portas) e os 43 itens de TI-2 no Treinar.",
+  "questoes": 17,
+  "registradoEm": "2026-11-06",
+  "topicos": [
+   "ti-2",
+   "ti-2-1"
+  ]
+ },
+ {
+  "id": "2026-11-07-lp-1",
+  "chat": "Língua Portuguesa",
+  "data": "2026-11-07",
+  "feito": "Conferência da meta 'Revisão LP pós-edital CD — 4.1' contra o material: referenciação, substituição e repetição cobertas; conectores incompletos. Acrescentados ao ramo 2 do mapa: adição, alternância, condição, finalidade, consequência, proporção, tempo e equivalências; 3 cartões; itens lp41-56..67 (troca de conectores).",
+  "materia": "Língua Portuguesa",
+  "proximo": "Treinar LP-4.1 na página começando pelos itens 56–67 (conectores) e os reais 49–55; depois fazer as 54 questões do cap. 35 do Pestana.",
+  "questoes": 12,
+  "topicos": [
+   "lp-4-1"
+  ]
+ },
+ {
+  "id": "2026-11-07-ti-1",
+  "data": "2026-11-07",
+  "materia": "ti",
+  "proximo": "Rodar os cartões e o Treinar de TI-4.1 (malwares e backup, maior incidência) e depois TI-4 (criptografia e certificado).",
+  "texto": "Pacote TI-4/4.1/4.2/4.3 criado a partir dos 3 mapas do Lucas + LDI: mapas revisao/ti-4..ti-4-3, cartões e 85 itens C/E (ti4, ti41, ti42, ti43).",
+  "topico": "ti-4"
+ }
+]
