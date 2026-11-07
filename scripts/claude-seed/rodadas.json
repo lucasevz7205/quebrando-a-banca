@@ -1,0 +1,11010 @@
+[
+ {
+  "id": "r-mvnlci4w",
+  "brancos": 0,
+  "cap": "1.1",
+  "capNome": "Reconhecimento automático de fala (ASR)",
+  "certos": 15,
+  "errados": 5,
+  "fim": "2026-10-25T09:04:11.521Z",
+  "inicio": "2026-10-25T08:53:59.888Z",
+  "itens": [
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "c11-01"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "c11-02"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "c11-03"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "c11-04"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "c11-05"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "c11-06"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "c11-07"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "c11-08"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "c11-09"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "c11-10"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "c11-11"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "c11-12"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "c11-13"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "c11-14"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "c11-15"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "c11-16"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "c11-17"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "c11-18"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "c11-19"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "c11-20"
+   }
+  ],
+  "modo": "novos",
+  "total": 20
+ },
+ {
+  "id": "r-mvnm2sd8",
+  "brancos": 0,
+  "cap": "CP-00",
+  "capNome": "Ciência Política · Aula 00 (LDI): política, poder e teoria política",
+  "certos": 19,
+  "errados": 1,
+  "fim": "2026-10-25T09:22:16.780Z",
+  "inicio": "2026-10-25T09:14:26.204Z",
+  "itens": [
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "cp00-01"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "cp00-02"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "cp00-03"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "cp00-04"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "cp00-05"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "cp00-06"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "cp00-07"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "cp00-08"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "cp00-09"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "cp00-10"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "cp00-11"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "cp00-12"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "cp00-13"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "cp00-14"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "cp00-15"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "cp00-16"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "cp00-17"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "cp00-18"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "cp00-19"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "cp00-20"
+   }
+  ],
+  "modo": "novos",
+  "total": 20
+ },
+ {
+  "id": "r-mvnmoatk",
+  "brancos": 0,
+  "cap": "LG-1",
+  "capNome": "Linguística · 1 Teoria do signo linguístico",
+  "certos": 15,
+  "errados": 5,
+  "fim": "2026-10-25T09:37:29.735Z",
+  "inicio": "2026-10-25T09:31:09.896Z",
+  "itens": [
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "lg1-01"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "lg1-02"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "lg1-03"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "lg1-04"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "lg1-05"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "lg1-06"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "lg1-07"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "lg1-08"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "lg1-09"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "lg1-10"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "lg1-11"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "lg1-12"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "lg1-13"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "lg1-14"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "lg1-15"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "lg1-16"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "lg1-17"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "lg1-18"
+   },
+   {
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "lg1-19"
+   },
+   {
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "lg1-20"
+   }
+  ],
+  "modo": "todos",
+  "total": 20
+ },
+ {
+  "id": "r-mvp9j4ed",
+  "brancos": 0,
+  "cap": "LP-5.4",
+  "capNome": "Língua Portuguesa · 5.4 Emprego dos sinais de pontuação",
+  "certos": 19,
+  "errados": 1,
+  "fim": "2026-10-26T13:08:12.830Z",
+  "inicio": "2026-10-26T12:58:45.637Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "lp54-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "lp54-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "lp54-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "lp54-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "lp54-05"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "lp54-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "lp54-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "lp54-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "lp54-09"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "lp54-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "lp54-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "lp54-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "lp54-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "lp54-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "lp54-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "lp54-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "lp54-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "lp54-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "lp54-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "lp54-20"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "lp54-20"
+   }
+  ],
+  "total": 20
+ },
+ {
+  "id": "r-mvp9x2o4",
+  "brancos": 0,
+  "cap": "DC-2.2",
+  "capNome": "Direito Constitucional · 2.2 Direitos sociais (arts. 6º a 11)",
+  "certos": 3,
+  "errados": 0,
+  "fim": null,
+  "inicio": "2026-10-26T13:09:36.580Z",
+  "itens": [
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "dc22-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "dc22-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "dc22-03"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 22
+ },
+ {
+  "id": "r-mvpa4ymq",
+  "brancos": 0,
+  "cap": "DC-2.2",
+  "capNome": "Direito Constitucional · 2.2 Direitos sociais (arts. 6º a 11)",
+  "certos": 15,
+  "errados": 4,
+  "fim": "2026-10-26T13:30:56.033Z",
+  "inicio": "2026-10-26T13:15:44.594Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "dc22-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "dc22-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "dc22-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "dc22-07"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "dc22-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "dc22-09"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "dc22-10"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "dc22-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "dc22-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "dc22-13"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "dc22-14"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "dc22-15"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "dc22-16"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "dc22-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "dc22-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "dc22-19"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "dc22-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "dc22-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 22,
+    "qid": "dc22-22"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 19
+ },
+ {
+  "id": "r-mvpap2la",
+  "brancos": 1,
+  "cap": "DC-2.2",
+  "capNome": "Direito Constitucional · 2.2 Direitos sociais (arts. 6º a 11)",
+  "certos": 0,
+  "errados": 0,
+  "fim": "2026-10-26T13:31:55.840Z",
+  "inicio": "2026-10-26T13:31:22.847Z",
+  "itens": [
+   {
+    "conf": null,
+    "gabarito": "C",
+    "marcada": "B",
+    "ordem": 10,
+    "qid": "dc22-10"
+   }
+  ],
+  "modo": "caderno",
+  "repescagem": [],
+  "total": 6
+ },
+ {
+  "id": "r-mvpasdp0",
+  "brancos": 0,
+  "cap": "DA-2",
+  "capNome": "Direito Administrativo · 2 Ato administrativo (2.1 e 2.2)",
+  "certos": 32,
+  "errados": 15,
+  "fim": "2026-10-26T14:00:00.032Z",
+  "inicio": "2026-10-26T13:33:57.204Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "da2-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "da2-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "da2-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "da2-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "da2-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "da2-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "da2-07"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "da2-08"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "da2-09"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "da2-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "da2-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "da2-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "da2-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "da2-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "da2-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "da2-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "da2-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "da2-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "da2-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "da2-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "da2-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 22,
+    "qid": "da2-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 23,
+    "qid": "da2-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "da2-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 25,
+    "qid": "da2-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "da2-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 27,
+    "qid": "da2-27"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 28,
+    "qid": "da2-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 29,
+    "qid": "da2-29"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 30,
+    "qid": "da2-30"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 31,
+    "qid": "da2-31"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 32,
+    "qid": "da2-32"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 33,
+    "qid": "da2-33"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 34,
+    "qid": "da2-34"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 35,
+    "qid": "da2-35"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 36,
+    "qid": "da2-36"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 37,
+    "qid": "da2-37"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 38,
+    "qid": "da2-38"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 39,
+    "qid": "da2-39"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 40,
+    "qid": "da2-40"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 41,
+    "qid": "da2-41"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 42,
+    "qid": "da2-42"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 43,
+    "qid": "da2-43"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 44,
+    "qid": "da2-44"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 45,
+    "qid": "da2-45"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 46,
+    "qid": "da2-46"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 47,
+    "qid": "da2-47"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 47
+ },
+ {
+  "id": "r-mvpjydkl",
+  "brancos": 0,
+  "cap": "AP-8.2",
+  "capNome": "Administração Pública · 8.2 Redes de cooperação, articulação interinstitucional e parcerias",
+  "certos": 8,
+  "errados": 2,
+  "fim": "2026-10-26T17:53:57.527Z",
+  "inicio": "2026-10-26T17:50:33.525Z",
+  "itens": [
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "ap82-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "ap82-02"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "ap82-03"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "ap82-04"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "ap82-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "ap82-06"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "ap82-07"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "ap82-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "ap82-09"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "ap82-10"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [],
+  "total": 27
+ },
+ {
+  "id": "r-mvpmrmy3",
+  "brancos": 0,
+  "cap": "0",
+  "capNome": "Fundamentos",
+  "certos": 1,
+  "errados": 0,
+  "fim": "2026-10-26T19:10:26.301Z",
+  "inicio": "2026-10-26T19:09:17.931Z",
+  "itens": [
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "c0-01"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 20
+ },
+ {
+  "id": "r-mvqgltwi",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 12,
+  "errados": 0,
+  "fim": null,
+  "inicio": "2026-10-27T09:04:35.490Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "dc22-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "c11-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "da2-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "ap82-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "c0-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "cp00-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "lp54-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "lg1-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "dc22-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "c11-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "da2-05"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "ap82-09"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [],
+  "total": 51
+ },
+ {
+  "id": "r-mvqgw2sd",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 7,
+  "errados": 3,
+  "fim": "2026-10-27T09:16:26.764Z",
+  "inicio": "2026-10-27T09:12:33.565Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "dc22-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "lp54-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "lg1-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "da2-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "c11-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "ap82-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "dc22-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "lp54-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "lg1-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "da2-09"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [],
+  "total": 39
+ },
+ {
+  "id": "r-mvqjbn87",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 9,
+  "errados": 2,
+  "fim": "2026-10-27T10:26:34.235Z",
+  "inicio": "2026-10-27T10:20:39.127Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "ap82-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "lg1-12"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "c11-13"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "da2-10"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "dc22-17"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "ap82-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "lg1-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "c11-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "da2-13"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "dc22-19"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "ap82-05"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [],
+  "total": 29
+ },
+ {
+  "id": "r-mvqydt3k",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 9,
+  "errados": 1,
+  "fim": "2026-10-27T17:27:19.241Z",
+  "inicio": "2026-10-27T17:22:14.288Z",
+  "itens": [
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "ap82-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "dc22-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "da2-19"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "ap82-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "dc22-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 21,
+    "qid": "da2-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "dc22-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 25,
+    "qid": "da2-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "dc22-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 27,
+    "qid": "da2-27"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [],
+  "total": 18
+ },
+ {
+  "id": "r-mvqympx9",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 8,
+  "errados": 0,
+  "fim": "2026-10-27T17:32:17.930Z",
+  "inicio": "2026-10-27T17:29:10.077Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 28,
+    "qid": "da2-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 31,
+    "qid": "da2-31"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 32,
+    "qid": "da2-32"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 33,
+    "qid": "da2-33"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 35,
+    "qid": "da2-35"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 41,
+    "qid": "da2-41"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 42,
+    "qid": "da2-42"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 43,
+    "qid": "da2-43"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [],
+  "total": 8
+ },
+ {
+  "id": "r-mvr46gei",
+  "brancos": 0,
+  "cap": "LP-5.5",
+  "capNome": "Língua Portuguesa · 5.5 Concordância verbal e nominal",
+  "certos": 22,
+  "errados": 5,
+  "fim": "2026-10-27T20:17:51.202Z",
+  "inicio": "2026-10-27T20:04:28.938Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "lp55-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "lp55-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "lp55-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "lp55-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "lp55-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "lp55-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "lp55-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "lp55-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "lp55-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "lp55-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "lp55-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "lp55-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "lp55-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "lp55-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "lp55-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "lp55-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "lp55-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "lp55-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "lp55-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "lp55-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 21,
+    "qid": "lp55-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 22,
+    "qid": "lp55-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 23,
+    "qid": "lp55-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "lp55-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 25,
+    "qid": "lp55-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 26,
+    "qid": "lp55-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 27,
+    "qid": "lp55-27"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "lp55-06"
+   },
+   {
+    "m": "C",
+    "ok": false,
+    "qid": "lp55-07"
+   },
+   {
+    "m": "C",
+    "ok": false,
+    "qid": "lp55-10"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "lp55-16"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "lp55-18"
+   }
+  ],
+  "total": 27
+ },
+ {
+  "id": "r-mvr52tia",
+  "brancos": 0,
+  "cap": "DC-2.3",
+  "capNome": "Direito Constitucional · 2.3 Nacionalidade",
+  "certos": 19,
+  "errados": 3,
+  "fim": null,
+  "inicio": "2026-10-27T20:29:38.914Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "dc23-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "dc23-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "dc23-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "dc23-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "dc23-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "dc23-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "dc23-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "dc23-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "dc23-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "dc23-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "dc23-11"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "dc23-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "dc23-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "dc23-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "dc23-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "dc23-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "dc23-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "dc23-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "dc23-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "dc23-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 21,
+    "qid": "dc23-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 22,
+    "qid": "dc23-22"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [],
+  "total": 49
+ },
+ {
+  "id": "r-mvryokex",
+  "brancos": 0,
+  "cap": "DA-5",
+  "capNome": "Direito Administrativo · 5 Poderes administrativos (5.1 e 5.2)",
+  "certos": 4,
+  "errados": 0,
+  "fim": null,
+  "inicio": "2026-10-28T10:18:22.425Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "da5-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "da5-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "da5-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "da5-04"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 30
+ },
+ {
+  "id": "r-mvrysiaq",
+  "brancos": 0,
+  "cap": "DA-5",
+  "capNome": "Direito Administrativo · 5 Poderes administrativos (5.1 e 5.2)",
+  "certos": 23,
+  "errados": 3,
+  "fim": "2026-10-28T10:34:28.307Z",
+  "inicio": "2026-10-28T10:21:26.306Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "da5-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "da5-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "da5-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "da5-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "da5-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "da5-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "da5-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "da5-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "da5-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "da5-14"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "da5-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "da5-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "da5-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "da5-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "da5-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "da5-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 21,
+    "qid": "da5-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 22,
+    "qid": "da5-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "da5-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 24,
+    "qid": "da5-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 25,
+    "qid": "da5-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "da5-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 27,
+    "qid": "da5-27"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 28,
+    "qid": "da5-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 29,
+    "qid": "da5-29"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 30,
+    "qid": "da5-30"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "da5-07"
+   },
+   {
+    "m": "C",
+    "ok": false,
+    "qid": "da5-15"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "da5-19"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "da5-27"
+   }
+  ],
+  "total": 26
+ },
+ {
+  "id": "r-mvs041lf",
+  "brancos": 0,
+  "cap": "TI-5.2",
+  "capNome": "Tecnologia da Informação e Dados · 5.2 Aprendizado supervisionado, não supervisionado e por reforço",
+  "certos": 12,
+  "errados": 2,
+  "fim": "2026-10-28T11:07:40.216Z",
+  "inicio": "2026-10-28T10:58:24.147Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "ti52-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "ti52-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "ti52-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "ti52-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "ti52-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "ti52-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "ti52-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "ti52-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "ti52-09"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "ti52-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "ti52-11"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "ti52-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "ti52-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "ti52-14"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": false,
+    "qid": "ti52-03"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ti52-07"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ti52-10"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ti52-12"
+   }
+  ],
+  "total": 14
+ },
+ {
+  "id": "r-mvs0n8k9",
+  "brancos": 0,
+  "cap": "DC-1",
+  "capNome": "Direito Constitucional · 1 CF/88: conceito, contexto, características e estrutura",
+  "certos": 16,
+  "errados": 4,
+  "fim": "2026-10-28T11:19:36.482Z",
+  "inicio": "2026-10-28T11:13:19.641Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "dc1-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "dc1-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "dc1-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "dc1-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "dc1-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "dc1-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "dc1-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "dc1-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "dc1-09"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "dc1-10"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "dc1-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "dc1-12"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "dc1-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "dc1-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "dc1-15"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "dc1-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "dc1-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "dc1-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "dc1-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "dc1-20"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [],
+  "total": 25
+ },
+ {
+  "id": "r-mvs0vicd",
+  "brancos": 0,
+  "cap": "DC-1.1",
+  "capNome": "Direito Constitucional · 1.1 Constitucionalismo e sentidos de Constituição",
+  "certos": 10,
+  "errados": 1,
+  "fim": "2026-10-28T11:23:19.310Z",
+  "inicio": "2026-10-28T11:19:45.565Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "dc11-01"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "dc11-02"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "dc11-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "dc11-04"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "dc11-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "dc11-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "dc11-07"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "dc11-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "dc11-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "dc11-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "dc11-11"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [],
+  "total": 39
+ },
+ {
+  "id": "r-mvs109d5",
+  "brancos": 0,
+  "cap": "DC-1.2",
+  "capNome": "Direito Constitucional · 1.2 Estrutura, elementos e classificação",
+  "certos": 6,
+  "errados": 5,
+  "fim": "2026-10-28T11:26:05.417Z",
+  "inicio": "2026-10-28T11:23:27.209Z",
+  "itens": [
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "dc12-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "dc12-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "dc12-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "dc12-04"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "dc12-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "dc12-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "dc12-07"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "dc12-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "dc12-09"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "dc12-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "dc12-11"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [],
+  "total": 31
+ },
+ {
+  "id": "r-mvs13v40",
+  "brancos": 0,
+  "cap": "DC-1.3",
+  "capNome": "Direito Constitucional · 1.3 Aplicabilidade das normas constitucionais",
+  "certos": 11,
+  "errados": 10,
+  "fim": "2026-10-28T11:38:52.189Z",
+  "inicio": "2026-10-28T11:26:15.360Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "dc13-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "dc13-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "dc13-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "dc13-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "dc13-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "dc13-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "dc13-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "dc13-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "dc13-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "dc13-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "dc13-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "dc13-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "dc13-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "dc13-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "dc13-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "dc13-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "dc13-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "dc13-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "dc13-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "dc13-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "dc13-21"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "dc13-01"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "dc13-03"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "dc13-04"
+   },
+   {
+    "m": "C",
+    "ok": false,
+    "qid": "dc13-09"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "dc13-10"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "dc13-11"
+   },
+   {
+    "m": "C",
+    "ok": false,
+    "qid": "dc13-14"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "dc13-16"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "dc13-19"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "dc13-21"
+   }
+  ],
+  "total": 21
+ },
+ {
+  "id": "r-mvtgjg8a",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 16,
+  "errados": 1,
+  "fim": "2026-10-29T11:32:48.053Z",
+  "inicio": "2026-10-29T11:26:02.986Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "cp00-01"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "dc11-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "ap82-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "lp54-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "dc12-01"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "dc13-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "dc22-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "lp55-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "c11-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "dc23-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "da2-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "ti52-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "lg1-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "dc1-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "da5-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "cp00-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "dc11-02"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [],
+  "total": 170
+ },
+ {
+  "id": "r-mvtp6r2p",
+  "brancos": 0,
+  "cap": "LP-5.6",
+  "capNome": "Língua Portuguesa · 5.6 Regência verbal e nominal",
+  "certos": 3,
+  "errados": 2,
+  "fim": null,
+  "inicio": "2026-10-29T15:28:07.057Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "lp56-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "lp56-02"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "lp56-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "lp56-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "lp56-05"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 26
+ },
+ {
+  "id": "r-mvtpbg8v",
+  "brancos": 0,
+  "cap": "LP-5.6",
+  "capNome": "Língua Portuguesa · 5.6 Regência verbal e nominal",
+  "certos": 17,
+  "errados": 4,
+  "fim": "2026-10-29T15:39:05.492Z",
+  "inicio": "2026-10-29T15:31:46.303Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "lp56-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "lp56-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "lp56-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "lp56-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "lp56-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "lp56-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "lp56-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "lp56-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "lp56-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "lp56-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "lp56-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "lp56-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "lp56-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "lp56-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "lp56-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "lp56-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 22,
+    "qid": "lp56-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "lp56-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 24,
+    "qid": "lp56-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 25,
+    "qid": "lp56-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "lp56-26"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "lp56-07"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "lp56-11"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "lp56-15"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "lp56-23"
+   }
+  ],
+  "total": 21
+ },
+ {
+  "id": "r-mvtpzejy",
+  "brancos": 0,
+  "cap": "AP-8.2",
+  "capNome": "Administração Pública · 8.2 Redes de cooperação, articulação interinstitucional e parcerias",
+  "certos": 1,
+  "errados": 0,
+  "fim": null,
+  "inicio": "2026-10-29T15:50:23.854Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "ap82-11"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 23
+ },
+ {
+  "id": "r-mvtq1c6h",
+  "brancos": 0,
+  "cap": "AP-8.2",
+  "capNome": "Administração Pública · 8.2 Redes de cooperação, articulação interinstitucional e parcerias",
+  "certos": 16,
+  "errados": 6,
+  "fim": null,
+  "inicio": "2026-10-29T15:51:54.089Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "ap82-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "ap82-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "ap82-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "ap82-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "ap82-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "ap82-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "ap82-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "ap82-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "ap82-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 21,
+    "qid": "ap82-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 22,
+    "qid": "ap82-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "ap82-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "ap82-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 25,
+    "qid": "ap82-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "ap82-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 27,
+    "qid": "ap82-27"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 28,
+    "qid": "ap82-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 29,
+    "qid": "ap82-29"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 30,
+    "qid": "ap82-30"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 31,
+    "qid": "ap82-31"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 32,
+    "qid": "ap82-32"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 33,
+    "qid": "ap82-33"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 22
+ },
+ {
+  "id": "r-mvttfy4a",
+  "brancos": 0,
+  "cap": "TI-5.3",
+  "capNome": "Tecnologia da Informação e Dados · 5.3 IA generativa: conceitos, exemplos e casos de uso",
+  "certos": 23,
+  "errados": 2,
+  "fim": "2026-10-29T17:42:23.380Z",
+  "inicio": "2026-10-29T17:27:14.554Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "ti53-01"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "ti53-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "ti53-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "ti53-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "ti53-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "ti53-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "ti53-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "ti53-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "ti53-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "ti53-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "ti53-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "ti53-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "ti53-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "ti53-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "ti53-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "ti53-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "ti53-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "ti53-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "ti53-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "ti53-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "ti53-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 22,
+    "qid": "ti53-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "ti53-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 24,
+    "qid": "ti53-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 25,
+    "qid": "ti53-25"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "ti53-02"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ti53-10"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "ti53-24"
+   }
+  ],
+  "total": 25
+ },
+ {
+  "id": "r-mvu0pv3a",
+  "brancos": 0,
+  "cap": "1.2",
+  "capNome": "Modelos de fala end-to-end",
+  "certos": 17,
+  "errados": 3,
+  "fim": "2026-10-29T20:57:39.434Z",
+  "inicio": "2026-10-29T20:50:54.502Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "c12-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "c12-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "c12-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "c12-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "c12-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "c12-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "c12-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "c12-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "c12-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "c12-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "c12-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "c12-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "c12-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "c12-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "c12-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "c12-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "c12-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "c12-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "c12-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "c12-20"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "C",
+    "ok": false,
+    "qid": "c12-01"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "c12-06"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "c12-19"
+   }
+  ],
+  "total": 20
+ },
+ {
+  "id": "r-mvu15vu8",
+  "brancos": 0,
+  "cap": "PL-3.1",
+  "capNome": "Processo Legislativo e Regimentos · 3.1 Regimento Comum (Res. 1/1970-CN), arts. 22 a 71",
+  "certos": 18,
+  "errados": 2,
+  "fim": "2026-10-29T21:08:18.446Z",
+  "inicio": "2026-10-29T21:03:21.968Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "pl31-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "pl31-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "pl31-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "pl31-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "pl31-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "pl31-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "pl31-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "pl31-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "pl31-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "pl31-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "pl31-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "pl31-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "pl31-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "pl31-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "pl31-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "pl31-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "pl31-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "pl31-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "pl31-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "pl31-20"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "pl31-17"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "pl31-20"
+   }
+  ],
+  "total": 20
+ },
+ {
+  "id": "r-mvur101l",
+  "brancos": 1,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 28,
+  "errados": 11,
+  "fim": "2026-10-30T09:25:52.688Z",
+  "inicio": "2026-10-30T09:07:24.153Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "dc22-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "dc13-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "lp55-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "da5-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 25,
+    "qid": "da2-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "dc23-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "dc1-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "ap82-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "dc12-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "dc22-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "dc13-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "lp55-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "da5-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 42,
+    "qid": "da2-42"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "dc23-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "dc1-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "ap82-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "dc12-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "dc13-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "lp55-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 27,
+    "qid": "da5-27"
+   },
+   {
+    "conf": null,
+    "gabarito": "E",
+    "marcada": "B",
+    "ordem": 43,
+    "qid": "da2-43"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "dc23-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "dc1-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "ap82-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "dc12-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "dc13-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "lp55-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "dc1-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "ap82-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "dc12-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "dc13-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "dc1-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "ap82-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "dc13-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "dc1-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "ap82-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "dc13-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "dc1-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "dc13-19"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "dc1-11"
+   },
+   {
+    "m": "E",
+    "ok": false,
+    "qid": "dc13-04"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "dc1-12"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "dc12-08"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "lp55-16"
+   },
+   {
+    "m": "C",
+    "ok": false,
+    "qid": "da2-43"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "dc12-10"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "ap82-08"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "dc1-16"
+   },
+   {
+    "m": "C",
+    "ok": false,
+    "qid": "ap82-09"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "dc13-14"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "ap82-10"
+   }
+  ],
+  "total": 40
+ },
+ {
+  "id": "r-mvutx55i",
+  "brancos": 0,
+  "cap": "DA-7",
+  "capNome": "Direito Administrativo · 7 Improbidade administrativa (Lei 8.429/1992)",
+  "certos": 25,
+  "errados": 3,
+  "fim": "2026-10-30T10:37:23.513Z",
+  "inicio": "2026-10-30T10:28:22.998Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "da7-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "da7-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "da7-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "da7-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "da7-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "da7-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "da7-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "da7-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "da7-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "da7-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "da7-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "da7-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "da7-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "da7-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "da7-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "da7-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "da7-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "da7-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "da7-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "da7-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "da7-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 22,
+    "qid": "da7-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 23,
+    "qid": "da7-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 24,
+    "qid": "da7-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 25,
+    "qid": "da7-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "da7-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 27,
+    "qid": "da7-27"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 28,
+    "qid": "da7-28"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "da7-13"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "da7-14"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "da7-20"
+   }
+  ],
+  "total": 28
+ },
+ {
+  "id": "r-mvv09cf4",
+  "brancos": 0,
+  "cap": "DC-8.1",
+  "capNome": "Direito Constitucional e Regimento Interno · 8.1 Regimento Comum: Título I (arts. 1º a 3º)",
+  "certos": 6,
+  "errados": 0,
+  "fim": "2026-10-30T13:28:37.791Z",
+  "inicio": "2026-10-30T13:25:49.984Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "dc81-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "dc81-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "dc81-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "dc81-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "dc81-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "dc81-06"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 6
+ },
+ {
+  "id": "r-mvv0d5h7",
+  "brancos": 0,
+  "cap": "PL-3.1",
+  "capNome": "Processo Legislativo e Regimentos · 3.1 Regimento Comum (Res. 1/1970-CN), arts. 4º a 71",
+  "certos": 20,
+  "errados": 3,
+  "fim": "2026-10-30T13:41:54.992Z",
+  "inicio": "2026-10-30T13:28:47.611Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "pl31-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 22,
+    "qid": "pl31-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "pl31-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "pl31-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 25,
+    "qid": "pl31-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "pl31-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 27,
+    "qid": "pl31-27"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 28,
+    "qid": "pl31-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 29,
+    "qid": "pl31-29"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 30,
+    "qid": "pl31-30"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 31,
+    "qid": "pl31-31"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 32,
+    "qid": "pl31-32"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 33,
+    "qid": "pl31-33"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 34,
+    "qid": "pl31-34"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 35,
+    "qid": "pl31-35"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 36,
+    "qid": "pl31-36"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 37,
+    "qid": "pl31-37"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 38,
+    "qid": "pl31-38"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 39,
+    "qid": "pl31-39"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 40,
+    "qid": "pl31-40"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 41,
+    "qid": "pl31-41"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 42,
+    "qid": "pl31-42"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 43,
+    "qid": "pl31-43"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "pl31-32"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "pl31-37"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "pl31-42"
+   }
+  ],
+  "total": 23
+ },
+ {
+  "id": "r-mvvizb2b",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 14,
+  "errados": 2,
+  "fim": null,
+  "inicio": "2026-10-30T22:09:54.371Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "cp00-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "dc22-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "c0-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "dc11-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "c12-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "ap82-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "da2-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "dc13-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "lg1-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "c11-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "ti52-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "dc22-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "c12-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "ap82-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "da2-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "dc13-01"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [],
+  "total": 40
+ },
+ {
+  "id": "r-mvvjcl25",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 20,
+  "errados": 1,
+  "fim": "2026-10-30T22:26:06.049Z",
+  "inicio": "2026-10-30T22:20:13.853Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "lp54-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "c12-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "ti52-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "c11-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "pl31-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "da2-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "lp56-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "ap82-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "ti53-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "lg1-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "dc22-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "ti52-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "c11-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "pl31-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "da2-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "lp56-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 23,
+    "qid": "ap82-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "ti53-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "lg1-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "ti52-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "c11-20"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [],
+  "total": 40
+ },
+ {
+  "id": "r-mvw7ig0i",
+  "brancos": 0,
+  "cap": "PEG",
+  "capNome": "Mecanismo F6 · Relação lógica alterada",
+  "certos": 9,
+  "errados": 1,
+  "fim": "2026-10-31T09:42:08.361Z",
+  "inicio": "2026-10-31T09:36:38.034Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "b26tec-154"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "b26tec-097"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "dc14-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "b26plf-042"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "dc14-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "da5-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 41,
+    "qid": "b26tec-138"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "b26tec-093"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 42,
+    "qid": "b26tec-139"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "b26ns-065"
+   }
+  ],
+  "modo": "pegadinhas",
+  "repescagem": [],
+  "total": 18
+ },
+ {
+  "id": "r-mvwokq8c",
+  "brancos": 0,
+  "cap": "LG-2",
+  "capNome": "Linguística · 2 Categorias semânticas: gênero, número, pessoa, tempo, modo, aspecto e papéis semânticos",
+  "certos": 20,
+  "errados": 4,
+  "fim": null,
+  "inicio": "2026-10-31T17:34:18.060Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "lg2-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "lg2-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "lg2-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "lg2-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "lg2-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "lg2-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "lg2-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "lg2-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "lg2-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "lg2-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "lg2-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "lg2-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "lg2-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "lg2-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "lg2-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "lg2-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "lg2-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "lg2-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "lg2-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "lg2-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "lg2-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 22,
+    "qid": "lg2-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "lg2-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 24,
+    "qid": "lg2-24"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [],
+  "total": 30
+ },
+ {
+  "id": "r-mvwovomk",
+  "brancos": 0,
+  "cap": "LG-2",
+  "capNome": "Linguística · 2 Categorias semânticas: gênero, número, pessoa, tempo, modo, aspecto e papéis semânticos",
+  "certos": 2,
+  "errados": 1,
+  "fim": null,
+  "inicio": "2026-10-31T17:42:49.196Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 25,
+    "qid": "lg2-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "lg2-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 27,
+    "qid": "lg2-27"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 6
+ },
+ {
+  "id": "r-mvwox6y2",
+  "brancos": 0,
+  "cap": "LG-2",
+  "capNome": "Linguística · 2 Categorias semânticas: gênero, número, pessoa, tempo, modo, aspecto e papéis semânticos",
+  "certos": 3,
+  "errados": 0,
+  "fim": "2026-10-31T17:45:12.194Z",
+  "inicio": "2026-10-31T17:43:59.594Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 28,
+    "qid": "lg2-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 29,
+    "qid": "lg2-29"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 30,
+    "qid": "lg2-30"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 3
+ },
+ {
+  "id": "r-mvwp2awd",
+  "brancos": 0,
+  "cap": "TI-6",
+  "capNome": "Tecnologia da Informação e Dados · 6 Ética e responsabilidade digital no serviço público",
+  "certos": 27,
+  "errados": 1,
+  "fim": "2026-10-31T17:54:26.468Z",
+  "inicio": "2026-10-31T17:47:57.997Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "ti6-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "ti6-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "ti6-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "ti6-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "ti6-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "ti6-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "ti6-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "ti6-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "ti6-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "ti6-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "ti6-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "ti6-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "ti6-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "ti6-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "ti6-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "ti6-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "ti6-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "ti6-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "ti6-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "ti6-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "ti6-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 22,
+    "qid": "ti6-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "ti6-23"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "ti6-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 25,
+    "qid": "ti6-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "ti6-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 27,
+    "qid": "ti6-27"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 28,
+    "qid": "ti6-28"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ti6-24"
+   }
+  ],
+  "total": 28
+ },
+ {
+  "id": "r-mvwpty5z",
+  "brancos": 0,
+  "cap": "1.3",
+  "capNome": "LLMs multimodais de áudio nativo",
+  "certos": 3,
+  "errados": 4,
+  "fim": "2026-10-31T18:12:59.434Z",
+  "inicio": "2026-10-31T18:09:27.863Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "c13-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "c13-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "c13-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "c13-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "c13-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "c13-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "c13-07"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [],
+  "total": 18
+ },
+ {
+  "id": "r-mvz9rot7",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 30,
+  "errados": 10,
+  "fim": "2026-11-02T13:20:00.787Z",
+  "inicio": "2026-11-02T13:03:07.099Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "lg1-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 32,
+    "qid": "pl31-32"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "dc12-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "ti53-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "dc1-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "dc13-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "da2-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "lp56-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "lp55-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "da7-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 30,
+    "qid": "ap82-30"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "lg1-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 37,
+    "qid": "pl31-37"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "dc12-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "dc1-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "dc13-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "da2-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "lp56-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "da7-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 31,
+    "qid": "ap82-31"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 42,
+    "qid": "pl31-42"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "dc1-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "dc13-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 21,
+    "qid": "da2-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "lp56-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "da7-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 32,
+    "qid": "ap82-32"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 27,
+    "qid": "da2-27"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 23,
+    "qid": "lp56-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "ap82-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 28,
+    "qid": "da2-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "ap82-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 31,
+    "qid": "da2-31"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "ap82-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 32,
+    "qid": "da2-32"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "ap82-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 33,
+    "qid": "da2-33"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 35,
+    "qid": "da2-35"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 41,
+    "qid": "da2-41"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 43,
+    "qid": "da2-43"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [],
+  "total": 40
+ },
+ {
+  "id": "r-mvze918w",
+  "brancos": 0,
+  "cap": "PEG",
+  "capNome": "Mecanismo F3 · Troca de conceito",
+  "certos": 0,
+  "errados": 1,
+  "fim": "2026-11-02T15:09:04.256Z",
+  "inicio": "2026-11-02T15:08:34.832Z",
+  "itens": [
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "lp56-15"
+   }
+  ],
+  "modo": "pegadinhas",
+  "repescagem": [],
+  "total": 78
+ },
+ {
+  "id": "r-mvze9y19",
+  "brancos": 0,
+  "cap": "PEG",
+  "capNome": "Mecanismo F6 · Relação lógica alterada",
+  "certos": 1,
+  "errados": 0,
+  "fim": "2026-11-02T15:10:33.995Z",
+  "inicio": "2026-11-02T15:09:17.325Z",
+  "itens": [
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "b26tec-148"
+   }
+  ],
+  "modo": "pegadinhas",
+  "repescagem": [],
+  "total": 18
+ },
+ {
+  "id": "r-mw0qshfh",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 35,
+  "errados": 5,
+  "fim": "2026-11-03T14:00:19.501Z",
+  "inicio": "2026-11-03T13:47:23.837Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "da2-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "lg2-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "c12-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "ti52-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 24,
+    "qid": "ti6-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "lp54-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "ap82-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "b26tec-154"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "dc23-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "lp55-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "dc22-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "c13-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "c11-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "da5-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "dc1-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "dc12-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 25,
+    "qid": "da2-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "lg2-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "c12-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "ap82-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "c13-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "da5-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "dc1-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 42,
+    "qid": "da2-42"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "lg2-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "c12-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "ap82-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "c13-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "da5-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "dc1-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "lg2-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "ap82-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "c13-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 27,
+    "qid": "da5-27"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "dc1-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 25,
+    "qid": "lg2-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "ap82-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "dc1-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "ap82-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "ap82-23"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "lp55-06"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "c13-02"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "ap82-04"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "c13-07"
+   },
+   {
+    "m": "C",
+    "ok": false,
+    "qid": "ap82-23"
+   }
+  ],
+  "total": 40
+ },
+ {
+  "id": "r-mw20r4hh",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 32,
+  "errados": 8,
+  "fim": "2026-11-04T11:27:16.033Z",
+  "inicio": "2026-11-04T11:14:02.741Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "dc23-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "lp55-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "dc22-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "dc12-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "pl31-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "dc13-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "b26tec-148"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "dc11-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 33,
+    "qid": "da2-33"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "da7-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "ti52-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "lp56-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "dc1-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "ti53-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "ap82-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "dc23-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "lp55-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "dc22-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "dc12-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "pl31-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "dc13-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "ti52-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "lp56-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "dc1-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "ti53-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 32,
+    "qid": "ap82-32"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "dc23-12"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "lp55-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "dc12-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 42,
+    "qid": "pl31-42"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "dc13-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "ti52-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "lp56-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "ap82-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "dc13-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "dc13-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "dc13-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "dc13-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "dc13-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "dc13-21"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [],
+  "total": 40
+ },
+ {
+  "id": "r-mw2l7gk7",
+  "brancos": 0,
+  "cap": "JUR-DC5",
+  "capNome": "Jurisprudência · Poder Legislativo e processo legislativo (STF)",
+  "certos": 5,
+  "errados": 1,
+  "fim": "2026-11-04T20:49:47.491Z",
+  "inicio": "2026-11-04T20:46:37.207Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "jur-dc5-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "jur-dc5-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "jur-dc5-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "jur-dc5-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "jur-dc5-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "jur-dc5-06"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "jur-dc5-04"
+   }
+  ],
+  "total": 6
+ },
+ {
+  "id": "r-mw2lbw5r",
+  "brancos": 0,
+  "cap": "JUR-DC2b",
+  "capNome": "Jurisprudência · DC 2b Direitos e deveres individuais e coletivos — direito adquirido (STF)",
+  "certos": 1,
+  "errados": 0,
+  "fim": "2026-11-04T20:50:42.507Z",
+  "inicio": "2026-11-04T20:50:04.047Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "jur-dc2b-01"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 1
+ },
+ {
+  "id": "r-mw2ld05d",
+  "brancos": 0,
+  "cap": "JUR-DA3.4",
+  "capNome": "Jurisprudência · DA 3.4 Regime jurídico dos servidores federais — Lei 8.112/1990 (STF)",
+  "certos": 1,
+  "errados": 1,
+  "fim": "2026-11-04T20:51:38.099Z",
+  "inicio": "2026-11-04T20:50:55.873Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "jur-da34-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "jur-da34-02"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "jur-da34-01"
+   }
+  ],
+  "total": 2
+ },
+ {
+  "id": "r-mw3af4dy",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 9,
+  "errados": 1,
+  "fim": null,
+  "inicio": "2026-11-05T08:32:25.078Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "da7-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 43,
+    "qid": "da2-43"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "c13-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "dc13-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "lp56-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "dc12-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "ap82-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "c11-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "jur-da34-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "ti53-24"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [],
+  "total": 40
+ },
+ {
+  "id": "r-mw3an8pr",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 8,
+  "errados": 1,
+  "fim": null,
+  "inicio": "2026-11-05T08:38:43.935Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "dc1-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "dc12-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "lp55-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "jur-dc5-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "ap82-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 32,
+    "qid": "pl31-32"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "dc13-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "dc22-19"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "c13-07"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [],
+  "total": 30
+ },
+ {
+  "id": "r-mw3audn4",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 19,
+  "errados": 2,
+  "fim": "2026-11-05T08:54:46.234Z",
+  "inicio": "2026-11-05T08:44:16.912Z",
+  "itens": [
+   {
+    "conf": 3,
+    "corr": "O acordo de cooperação foi retirado pelos art iniciais do MROSC",
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "ap82-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "lp56-11"
+   },
+   {
+    "conf": 3,
+    "corr": "Deveria ser \"Adotaram-se\" por tratar de VTD",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "lp55-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "c11-02"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "da7-20"
+   },
+   {
+    "conf": 3,
+    "corr": "Somente quando não for paritário",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 37,
+    "qid": "pl31-37"
+   },
+   {
+    "conf": 3,
+    "corr": "É outro mano que escreveu isso",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "dc1-12"
+   },
+   {
+    "conf": 3,
+    "corr": "São de eficácia plena",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "dc13-16"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "ap82-10"
+   },
+   {
+    "conf": 3,
+    "corr": "O sujeito é o que torna a coisa difícil",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 23,
+    "qid": "lp56-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "lp55-16"
+   },
+   {
+    "conf": 3,
+    "corr": "O debate tende a apresentar um WER maior",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "c11-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "dc1-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 21,
+    "qid": "dc13-21"
+   },
+   {
+    "conf": 3,
+    "corr": "Depende",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 30,
+    "qid": "ap82-30"
+   },
+   {
+    "conf": 3,
+    "corr": "Não, somente mudaria a pessoa do sujeito",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "lp55-18"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "c11-05"
+   },
+   {
+    "conf": 1,
+    "corr": "Só sei que nada sei",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 31,
+    "qid": "ap82-31"
+   },
+   {
+    "conf": 2,
+    "corr": "É outra ferramenta",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "c11-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "c11-08"
+   },
+   {
+    "conf": 3,
+    "corr": "Examina parcialmente",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "c11-09"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "ap82-08"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "da7-20"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ap82-31"
+   }
+  ],
+  "total": 21
+ },
+ {
+  "id": "r-mw3m01h8",
+  "brancos": 0,
+  "cap": "LP-4.1",
+  "capNome": "Língua Portuguesa · 4.1 Coesão: referenciação, substituição, repetição e conectores",
+  "certos": 1,
+  "errados": 1,
+  "fim": "2026-11-05T13:57:46.830Z",
+  "inicio": "2026-11-05T13:56:36.860Z",
+  "itens": [
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "lp41-01"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "lp41-02"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [],
+  "total": 55
+ },
+ {
+  "id": "r-mw3m4ll1",
+  "brancos": 0,
+  "cap": "PEG",
+  "capNome": "Mecanismo F1 · Generalização",
+  "certos": 1,
+  "errados": 0,
+  "fim": null,
+  "inicio": "2026-11-05T14:00:09.541Z",
+  "itens": [
+   {
+    "conf": 3,
+    "corr": "Depende do regime jurídico",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "b26ns-049"
+   }
+  ],
+  "modo": "pegadinhas",
+  "repescagem": [],
+  "total": 16
+ },
+ {
+  "id": "r-mw3m5ryr",
+  "brancos": 0,
+  "cap": "PEG",
+  "capNome": "Mecanismo F3 · Troca de conceito",
+  "certos": 0,
+  "errados": 1,
+  "fim": "2026-11-05T14:01:35.243Z",
+  "inicio": "2026-11-05T14:01:04.467Z",
+  "itens": [
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "b26ns-072"
+   }
+  ],
+  "modo": "pegadinhas",
+  "repescagem": [],
+  "total": 78
+ },
+ {
+  "id": "r-mw3oce25",
+  "brancos": 0,
+  "cap": "LP-4.1",
+  "capNome": "Língua Portuguesa · 4.1 Coesão: referenciação, substituição, repetição e conectores",
+  "certos": 3,
+  "errados": 0,
+  "fim": null,
+  "inicio": "2026-11-05T15:02:12.269Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "lp41-03"
+   },
+   {
+    "conf": 3,
+    "corr": "Trocaria os referentes originais",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "lp41-04"
+   },
+   {
+    "conf": 3,
+    "corr": "Onde somente é utilizado para referências virtuais e físicas",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "lp41-05"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 53
+ },
+ {
+  "id": "r-mw3ofeur",
+  "brancos": 0,
+  "cap": "LP-4.1",
+  "capNome": "Língua Portuguesa · 4.1 Coesão: referenciação, substituição, repetição e conectores",
+  "certos": 39,
+  "errados": 6,
+  "fim": "2026-11-05T16:38:56.454Z",
+  "inicio": "2026-11-05T15:04:33.267Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "lp41-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "lp41-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "lp41-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "lp41-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "lp41-10"
+   },
+   {
+    "conf": 3,
+    "corr": "Planeta é hipônimo",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "lp41-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "lp41-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "lp41-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "lp41-14"
+   },
+   {
+    "conf": 3,
+    "corr": "Mas é adversativo e embora é concessivo",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "lp41-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "lp41-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "lp41-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "lp41-18"
+   },
+   {
+    "conf": 3,
+    "corr": "A coesão não é condição suficiente para a coerência",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "lp41-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "lp41-20"
+   },
+   {
+    "conf": 3,
+    "corr": "Muda o referente",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "lp41-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 22,
+    "qid": "lp41-22"
+   },
+   {
+    "conf": 3,
+    "corr": "Já falei isso",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 23,
+    "qid": "lp41-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "lp41-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 25,
+    "qid": "lp41-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "lp41-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 27,
+    "qid": "lp41-27"
+   },
+   {
+    "conf": 3,
+    "corr": "Referência não há mudança de sentido, na substituição há",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 28,
+    "qid": "lp41-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 29,
+    "qid": "lp41-29"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 30,
+    "qid": "lp41-30"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 31,
+    "qid": "lp41-31"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 32,
+    "qid": "lp41-32"
+   },
+   {
+    "conf": 3,
+    "corr": "Correferente da gravata apenas",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 33,
+    "qid": "lp41-33"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 34,
+    "qid": "lp41-34"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 35,
+    "qid": "lp41-35"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 36,
+    "qid": "lp41-36"
+   },
+   {
+    "conf": 3,
+    "corr": "Não é possível identificar",
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 37,
+    "qid": "lp41-37"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 38,
+    "qid": "lp41-38"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 39,
+    "qid": "lp41-39"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 40,
+    "qid": "lp41-40"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 41,
+    "qid": "lp41-41"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 42,
+    "qid": "lp41-42"
+   },
+   {
+    "conf": 3,
+    "corr": "Paráfrase tem alteração",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 43,
+    "qid": "lp41-43"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 44,
+    "qid": "lp41-44"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 45,
+    "qid": "lp41-45"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 46,
+    "qid": "lp41-46"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 47,
+    "qid": "lp41-47"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 48,
+    "qid": "lp41-48"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 49,
+    "qid": "lp41-49"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 50,
+    "qid": "lp41-50"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 50
+ },
+ {
+  "id": "r-mw3yicsk",
+  "brancos": 0,
+  "cap": "1.4",
+  "capNome": "Diarização de falantes",
+  "certos": 8,
+  "errados": 2,
+  "fim": "2026-11-05T20:21:48.014Z",
+  "inicio": "2026-11-05T19:46:46.724Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "c14-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "c14-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "c14-03"
+   },
+   {
+    "conf": 3,
+    "corr": "Vem antes",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "c14-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "c14-05"
+   },
+   {
+    "conf": 3,
+    "corr": "Ao contrário",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "c14-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "c14-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "c14-08"
+   },
+   {
+    "conf": 3,
+    "corr": "Divide pelo tempo",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "c14-09"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "c14-10"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "c14-02"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "c14-03"
+   }
+  ],
+  "total": 10
+ },
+ {
+  "id": "r-mw40gf9c",
+  "brancos": 0,
+  "cap": "1.5",
+  "capNome": "Pontuação automática e capitalização",
+  "certos": 3,
+  "errados": 1,
+  "fim": null,
+  "inicio": "2026-11-05T20:41:15.840Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "c15-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "c15-02"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "c15-03"
+   },
+   {
+    "conf": 3,
+    "corr": "Dependem do ASR",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "c15-04"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [],
+  "total": 10
+ },
+ {
+  "id": "r-mw40mvmv",
+  "brancos": 0,
+  "cap": "1.5",
+  "capNome": "Pontuação automática e capitalização",
+  "certos": 5,
+  "errados": 1,
+  "fim": "2026-11-05T20:51:10.023Z",
+  "inicio": "2026-11-05T20:46:16.999Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "c15-05"
+   },
+   {
+    "conf": 3,
+    "corr": "Diferem a orientação",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "c15-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "c15-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "c15-08"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "c15-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "c15-10"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "c15-07"
+   }
+  ],
+  "total": 6
+ },
+ {
+  "id": "r-mw40wiqw",
+  "brancos": 0,
+  "cap": "DC-7.4",
+  "capNome": "Direito Constitucional e Regimento Interno · 7.4 RICD: administração e economia interna (arts. 262 a 273)",
+  "certos": 15,
+  "errados": 4,
+  "fim": "2026-11-05T21:03:40.544Z",
+  "inicio": "2026-11-05T20:53:46.856Z",
+  "itens": [
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "dc74-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "dc74-02"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "dc74-03"
+   },
+   {
+    "conf": 2,
+    "corr": "Diretor Geral",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "dc74-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "dc74-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "dc74-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "dc74-07"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "dc74-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "dc74-09"
+   },
+   {
+    "conf": 3,
+    "corr": "ao PCD",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "dc74-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "dc74-11"
+   },
+   {
+    "conf": 3,
+    "corr": "Somente ao pessoal de segurança",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "dc74-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "dc74-13"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "dc74-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "dc74-15"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "dc74-16"
+   },
+   {
+    "conf": 3,
+    "corr": "Mensalmente",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "dc74-17"
+   },
+   {
+    "conf": 3,
+    "corr": "Poderá sim",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "dc74-18"
+   },
+   {
+    "conf": 3,
+    "corr": "Salvo com expressa autorização da mesa",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "dc74-19"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "dc74-01"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "dc74-03"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "dc74-08"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "dc74-14"
+   }
+  ],
+  "total": 19
+ },
+ {
+  "id": "r-mw44lhbg",
+  "brancos": 0,
+  "cap": "0",
+  "capNome": "Fundamentos",
+  "certos": 1,
+  "errados": 0,
+  "fim": "2026-11-05T22:37:35.730Z",
+  "inicio": "2026-11-05T22:37:10.252Z",
+  "itens": [
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "c0-02"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 19
+ },
+ {
+  "id": "r-mw4ol08d",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 23,
+  "errados": 17,
+  "fim": "2026-11-06T08:22:41.328Z",
+  "inicio": "2026-11-06T07:56:40.429Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "c13-03"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "sim01-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "b26tec-154"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "c14-02"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "b26ns-072"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "c15-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "dc13-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "ap82-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "da7-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "c13-06"
+   },
+   {
+    "conf": 3,
+    "corr": "Mas entre vírgulas",
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "sim01-02"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "c14-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "c15-07"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "ap82-23"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "c13-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "sim01-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 31,
+    "qid": "ap82-31"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "sim01-04"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "sim01-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "sim01-06"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "sim01-07"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "sim01-08"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "sim01-09"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "sim01-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "sim01-11"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "sim01-12"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "sim01-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "sim01-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "sim01-15"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "sim01-16"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "sim01-17"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "sim01-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "sim01-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "sim01-20"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 21,
+    "qid": "sim01-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 22,
+    "qid": "sim01-22"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "sim01-23"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 24,
+    "qid": "sim01-24"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 25,
+    "qid": "sim01-25"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "sim01-26"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [],
+  "total": 40
+ },
+ {
+  "id": "r-mw6dtedr",
+  "brancos": 0,
+  "cap": "MIX",
+  "capNome": "Revisão intercalada",
+  "certos": 44,
+  "errados": 6,
+  "fim": "2026-11-07T12:47:17.802Z",
+  "inicio": "2026-11-07T12:30:48.591Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "sim01-02"
+   },
+   {
+    "conf": 3,
+    "corr": "Poder Hierárquico",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 33,
+    "qid": "da2-33"
+   },
+   {
+    "conf": 3,
+    "corr": "DIretor Geral",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 24,
+    "qid": "ti6-24"
+   },
+   {
+    "conf": 3,
+    "corr": "Simpatizar não é verbo pronominal",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "lp56-15"
+   },
+   {
+    "conf": 3,
+    "corr": "Catáfora",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "lp41-02"
+   },
+   {
+    "conf": 3,
+    "corr": "GMM é estatístico.",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "c11-11"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "dc74-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "b26tec-148"
+   },
+   {
+    "conf": 3,
+    "corr": "Inversão",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "b26ns-072"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "ti52-03"
+   },
+   {
+    "conf": 3,
+    "corr": "Cascata",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "c13-06"
+   },
+   {
+    "conf": 3,
+    "corr": "COmuns",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "lg2-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "ap82-04"
+   },
+   {
+    "conf": 3,
+    "corr": "Programática",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "dc13-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "da7-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 42,
+    "qid": "pl31-42"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "dc12-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "c14-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "sim01-06"
+   },
+   {
+    "conf": 3,
+    "corr": "Sujeito indeterminado, mesmo referente",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "lp41-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "c11-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "dc74-03"
+   },
+   {
+    "conf": 3,
+    "corr": "Ele = não pessoa",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "lg2-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "ap82-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "sim01-07"
+   },
+   {
+    "conf": 3,
+    "corr": "Adversativo",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "lp41-14"
+   },
+   {
+    "conf": 3,
+    "corr": "DNN substitui o GMM",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "c11-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "dc74-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "lg2-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 23,
+    "qid": "ap82-23"
+   },
+   {
+    "conf": 3,
+    "corr": "Inversão de conceito",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "sim01-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 29,
+    "qid": "lp41-29"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "c11-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "dc74-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "lg2-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 32,
+    "qid": "ap82-32"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "sim01-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 30,
+    "qid": "lp41-30"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "c11-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 25,
+    "qid": "lg2-25"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "sim01-10"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 36,
+    "qid": "lp41-36"
+   },
+   {
+    "conf": 3,
+    "corr": "Jurisprudência",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "sim01-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 37,
+    "qid": "lp41-37"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "sim01-12"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "sim01-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "sim01-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "sim01-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 22,
+    "qid": "sim01-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 25,
+    "qid": "sim01-25"
+   }
+  ],
+  "modo": "revisao",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "pl31-42"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "c14-03"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "lp41-30"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "sim01-10"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "lp41-36"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "sim01-22"
+   }
+  ],
+  "total": 50
+ },
+ {
+  "id": "r-mw6em7nw",
+  "brancos": 0,
+  "cap": "DC-2.4",
+  "capNome": "Direito Constitucional · 2.4 Direitos políticos",
+  "certos": 32,
+  "errados": 2,
+  "fim": "2026-11-07T13:03:28.268Z",
+  "inicio": "2026-11-07T12:53:12.908Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "dc24-01"
+   },
+   {
+    "conf": 3,
+    "corr": "Inversão",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "dc24-02"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "dc24-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "dc24-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "dc24-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "dc24-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "dc24-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "dc24-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "dc24-09"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "dc24-10"
+   },
+   {
+    "conf": 3,
+    "corr": "Senador é de 35 anos",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "dc24-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "dc24-12"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "dc24-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "dc24-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "dc24-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "dc24-16"
+   },
+   {
+    "conf": 3,
+    "corr": "2 grau",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "dc24-17"
+   },
+   {
+    "conf": 3,
+    "corr": "Não afasta",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "dc24-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "dc24-19"
+   },
+   {
+    "conf": 3,
+    "corr": "Lei Complementar",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "dc24-20"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 21,
+    "qid": "dc24-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 22,
+    "qid": "dc24-22"
+   },
+   {
+    "conf": 3,
+    "corr": "Ocorre sim (jurisprudência)",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 23,
+    "qid": "dc24-23"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "dc24-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 25,
+    "qid": "dc24-25"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "dc24-26"
+   },
+   {
+    "conf": 3,
+    "corr": "Em vigor imediatamente",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 27,
+    "qid": "dc24-27"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 28,
+    "qid": "dc24-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 29,
+    "qid": "dc24-29"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 30,
+    "qid": "dc24-30"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 31,
+    "qid": "dc24-31"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 32,
+    "qid": "dc24-32"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 33,
+    "qid": "dc24-33"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 34,
+    "qid": "dc24-34"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "dc24-05"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "dc24-26"
+   }
+  ],
+  "total": 34
+ },
+ {
+  "id": "r-mw6fo903",
+  "brancos": 0,
+  "cap": "1.6",
+  "capNome": "Desafios do ASR em português brasileiro",
+  "certos": 20,
+  "errados": 0,
+  "fim": "2026-11-07T13:27:06.936Z",
+  "inicio": "2026-11-07T13:22:47.571Z",
+  "itens": [
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "c16-01"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "c16-02"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "c16-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "c16-04"
+   },
+   {
+    "conf": 3,
+    "corr": "Invertido",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "c16-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "c16-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "c16-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "c16-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "c16-09"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "c16-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "c16-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "c16-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "c16-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "c16-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "c16-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "c16-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "c16-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "c16-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "c16-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "c16-20"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [],
+  "total": 20
+ },
+ {
+  "id": "r-mw6futtz",
+  "brancos": 0,
+  "cap": "1.7",
+  "capNome": "Transcrição em tempo real",
+  "certos": 19,
+  "errados": 1,
+  "fim": "2026-11-07T13:34:23.928Z",
+  "inicio": "2026-11-07T13:27:54.503Z",
+  "itens": [
+   {
+    "conf": 3,
+    "corr": "Inversão",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "c17-01"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "c17-02"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "c17-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "c17-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "c17-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "c17-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "c17-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "c17-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "c17-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "c17-10"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "c17-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "c17-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "c17-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "c17-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "c17-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "c17-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "c17-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "c17-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "c17-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "c17-20"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "c17-03"
+   }
+  ],
+  "total": 20
+ },
+ {
+  "id": "r-mw6g4lks",
+  "brancos": 0,
+  "cap": "TI-1.1",
+  "capNome": "Tecnologia da Informação e Dados · 1.1 MSOffice 365 (Word)",
+  "certos": 30,
+  "errados": 6,
+  "fim": "2026-11-07T13:43:20.164Z",
+  "inicio": "2026-11-07T13:35:30.364Z",
+  "itens": [
+   {
+    "conf": 2,
+    "corr": "docx",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "ti11-01"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "ti11-02"
+   },
+   {
+    "conf": 3,
+    "corr": "rtf",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "ti11-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "ti11-04"
+   },
+   {
+    "conf": 3,
+    "corr": "ctrl+B",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "ti11-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "ti11-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "ti11-07"
+   },
+   {
+    "conf": 3,
+    "corr": "Ctrl+Q",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "ti11-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "ti11-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "ti11-10"
+   },
+   {
+    "conf": 3,
+    "corr": "Somente no Word",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "ti11-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "ti11-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "ti11-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "ti11-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "ti11-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "ti11-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "ti11-17"
+   },
+   {
+    "conf": 3,
+    "corr": "Fim do documento",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "ti11-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "ti11-19"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "ti11-20"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "ti11-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 22,
+    "qid": "ti11-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 23,
+    "qid": "ti11-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "ti11-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 25,
+    "qid": "ti11-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 26,
+    "qid": "ti11-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 27,
+    "qid": "ti11-27"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 28,
+    "qid": "ti11-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 29,
+    "qid": "ti11-29"
+   },
+   {
+    "conf": 2,
+    "corr": "Inversão",
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 30,
+    "qid": "ti11-30"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 31,
+    "qid": "ti11-31"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 32,
+    "qid": "ti11-32"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 33,
+    "qid": "ti11-33"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 34,
+    "qid": "ti11-34"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 35,
+    "qid": "ti11-35"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 36,
+    "qid": "ti11-36"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ti11-12"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ti11-17"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ti11-25"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ti11-29"
+   },
+   {
+    "m": "E",
+    "ok": false,
+    "qid": "ti11-30"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ti11-34"
+   }
+  ],
+  "total": 36
+ },
+ {
+  "id": "r-mw6gosoa",
+  "brancos": 0,
+  "cap": "TI-1.4",
+  "capNome": "Tecnologia da Informação e Dados · 1.4 MSOffice 365 (OneDrive)",
+  "certos": 25,
+  "errados": 5,
+  "fim": "2026-11-07T13:58:01.812Z",
+  "inicio": "2026-11-07T13:51:12.682Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "ti14-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "ti14-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "ti14-03"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "ti14-04"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "ti14-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "ti14-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "ti14-07"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "ti14-08"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "ti14-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "ti14-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "ti14-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "ti14-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "ti14-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "ti14-14"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "ti14-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "ti14-16"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "ti14-17"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "ti14-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "ti14-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "ti14-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "ti14-21"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 22,
+    "qid": "ti14-22"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "ti14-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "ti14-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 25,
+    "qid": "ti14-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 26,
+    "qid": "ti14-26"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 27,
+    "qid": "ti14-27"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 28,
+    "qid": "ti14-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 29,
+    "qid": "ti14-29"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 30,
+    "qid": "ti14-30"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "ti14-03"
+   },
+   {
+    "m": "C",
+    "ok": true,
+    "qid": "ti14-08"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ti14-18"
+   },
+   {
+    "m": "C",
+    "ok": false,
+    "qid": "ti14-23"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ti14-28"
+   }
+  ],
+  "total": 30
+ },
+ {
+  "id": "r-mw6hafl3",
+  "brancos": 0,
+  "cap": "AP-8.4",
+  "capNome": "Administração Pública · 8.4 Valor público e cadeia de valor público",
+  "certos": 25,
+  "errados": 2,
+  "fim": "2026-11-07T14:15:26.280Z",
+  "inicio": "2026-11-07T14:08:02.151Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "ap84-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "ap84-02"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "ap84-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "ap84-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "ap84-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "ap84-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 7,
+    "qid": "ap84-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "ap84-08"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "ap84-09"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "ap84-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 11,
+    "qid": "ap84-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "ap84-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "ap84-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "ap84-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "ap84-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "ap84-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "ap84-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "ap84-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 19,
+    "qid": "ap84-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "ap84-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 21,
+    "qid": "ap84-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 22,
+    "qid": "ap84-22"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "ap84-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "ap84-24"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 25,
+    "qid": "ap84-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "ap84-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 27,
+    "qid": "ap84-27"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ap84-24"
+   },
+   {
+    "m": "E",
+    "ok": true,
+    "qid": "ap84-25"
+   }
+  ],
+  "total": 27
+ },
+ {
+  "id": "r-mw6hoim9",
+  "brancos": 0,
+  "cap": "DA-10.1",
+  "capNome": "Licitação pública (Lei 14.133/2021)",
+  "certos": 29,
+  "errados": 11,
+  "fim": "2026-11-07T14:33:01.807Z",
+  "inicio": "2026-11-07T14:18:59.265Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "da101-01"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "da101-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "da101-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "da101-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "da101-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "da101-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "da101-07"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "da101-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "da101-09"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 10,
+    "qid": "da101-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "da101-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "da101-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "da101-13"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "da101-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "da101-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "da101-16"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "da101-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 18,
+    "qid": "da101-18"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "da101-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "da101-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 21,
+    "qid": "da101-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 22,
+    "qid": "da101-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "da101-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "da101-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 25,
+    "qid": "da101-25"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "da101-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 27,
+    "qid": "da101-27"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 28,
+    "qid": "da101-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 29,
+    "qid": "da101-29"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 30,
+    "qid": "da101-30"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 31,
+    "qid": "da101-31"
+   },
+   {
+    "conf": 3,
+    "corr": "Tomada de preços saiu",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 32,
+    "qid": "da101-32"
+   },
+   {
+    "conf": 3,
+    "corr": "Credenciamento não",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 33,
+    "qid": "da101-33"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 34,
+    "qid": "da101-34"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 35,
+    "qid": "da101-35"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 36,
+    "qid": "da101-36"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 37,
+    "qid": "da101-37"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 38,
+    "qid": "da101-38"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 39,
+    "qid": "da101-39"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 40,
+    "qid": "da101-40"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 40
+ },
+ {
+  "id": "r-mw6rtkqq",
+  "brancos": 0,
+  "cap": "CP-9",
+  "capNome": "Ciência Política · 9 Teoria do Estado e formação dos Estados nacionais",
+  "certos": 26,
+  "errados": 4,
+  "fim": "2026-11-07T20:45:41.983Z",
+  "inicio": "2026-11-07T19:02:51.458Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "cp9-01"
+   },
+   {
+    "conf": 3,
+    "corr": "Defini-se sobre os meios",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 2,
+    "qid": "cp9-02"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 3,
+    "qid": "cp9-03"
+   },
+   {
+    "conf": 3,
+    "corr": "Integra a população",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 4,
+    "qid": "cp9-04"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 5,
+    "qid": "cp9-05"
+   },
+   {
+    "conf": 3,
+    "corr": "Exclusive das leis divinas e naturais",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 6,
+    "qid": "cp9-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "cp9-07"
+   },
+   {
+    "conf": 3,
+    "corr": "Isso é para Hobbes",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 8,
+    "qid": "cp9-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 9,
+    "qid": "cp9-09"
+   },
+   {
+    "conf": 3,
+    "corr": "Isso é para Locke",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "cp9-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "cp9-11"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 12,
+    "qid": "cp9-12"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 13,
+    "qid": "cp9-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 14,
+    "qid": "cp9-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 15,
+    "qid": "cp9-15"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 16,
+    "qid": "cp9-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 17,
+    "qid": "cp9-17"
+   },
+   {
+    "conf": 2,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "cp9-18"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "cp9-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 20,
+    "qid": "cp9-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 21,
+    "qid": "cp9-21"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 22,
+    "qid": "cp9-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 23,
+    "qid": "cp9-23"
+   },
+   {
+    "conf": 1,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 24,
+    "qid": "cp9-24"
+   },
+   {
+    "conf": 1,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 25,
+    "qid": "cp9-25"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 26,
+    "qid": "cp9-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 27,
+    "qid": "cp9-27"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 28,
+    "qid": "cp9-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 29,
+    "qid": "cp9-29"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 30,
+    "qid": "cp9-30"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 30
+ },
+ {
+  "id": "r-mw6w37jx",
+  "brancos": 0,
+  "cap": "DC-7.3",
+  "capNome": "Direito Constitucional e Regimento Interno · 7.3 RICD: deputados (arts. 226 a 251)",
+  "certos": 15,
+  "errados": 3,
+  "fim": null,
+  "inicio": "2026-11-07T21:02:19.389Z",
+  "itens": [
+   {
+    "conf": 3,
+    "corr": "Intermédio da mesa",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 1,
+    "qid": "dc73-01"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 2,
+    "qid": "dc73-02"
+   },
+   {
+    "conf": 3,
+    "corr": "Ciência",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 3,
+    "qid": "dc73-03"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 4,
+    "qid": "dc73-04"
+   },
+   {
+    "conf": 3,
+    "corr": "Desde a diplomação",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 5,
+    "qid": "dc73-05"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 6,
+    "qid": "dc73-06"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "C",
+    "ordem": 7,
+    "qid": "dc73-07"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 8,
+    "qid": "dc73-08"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 9,
+    "qid": "dc73-09"
+   },
+   {
+    "conf": 3,
+    "corr": "Caberá ao plenário",
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 10,
+    "qid": "dc73-10"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 11,
+    "qid": "dc73-11"
+   },
+   {
+    "conf": 3,
+    "corr": "De fora do CN",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 12,
+    "qid": "dc73-12"
+   },
+   {
+    "conf": 3,
+    "corr": "Não depende.",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 13,
+    "qid": "dc73-13"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 14,
+    "qid": "dc73-14"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 15,
+    "qid": "dc73-15"
+   },
+   {
+    "conf": 2,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 16,
+    "qid": "dc73-16"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 17,
+    "qid": "dc73-17"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 18,
+    "qid": "dc73-18"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [],
+  "total": 33
+ },
+ {
+  "id": "r-mw6x801y",
+  "brancos": 0,
+  "cap": "DC-7.3",
+  "capNome": "Direito Constitucional e Regimento Interno · 7.3 RICD: deputados (arts. 226 a 251)",
+  "certos": 11,
+  "errados": 4,
+  "fim": "2026-11-07T21:43:56.640Z",
+  "inicio": "2026-11-07T21:34:02.566Z",
+  "itens": [
+   {
+    "conf": 3,
+    "corr": "48",
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 19,
+    "qid": "dc73-19"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 20,
+    "qid": "dc73-20"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 21,
+    "qid": "dc73-21"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 22,
+    "qid": "dc73-22"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 23,
+    "qid": "dc73-23"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 24,
+    "qid": "dc73-24"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 25,
+    "qid": "dc73-25"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 26,
+    "qid": "dc73-26"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 27,
+    "qid": "dc73-27"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 28,
+    "qid": "dc73-28"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 29,
+    "qid": "dc73-29"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 30,
+    "qid": "dc73-30"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 31,
+    "qid": "dc73-31"
+   },
+   {
+    "conf": 3,
+    "gabarito": "E",
+    "marcada": "E",
+    "ordem": 32,
+    "qid": "dc73-32"
+   },
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "E",
+    "ordem": 33,
+    "qid": "dc73-33"
+   }
+  ],
+  "modo": "novos",
+  "repescagem": [],
+  "total": 15
+ },
+ {
+  "id": "r-mw6xm1b5",
+  "brancos": 0,
+  "cap": "TI-2",
+  "capNome": "Tecnologia da Informação e Dados · 2 Redes de computadores (2.1 Internet e intranet)",
+  "certos": 1,
+  "errados": 0,
+  "fim": null,
+  "inicio": "2026-11-07T21:44:57.377Z",
+  "itens": [
+   {
+    "conf": 3,
+    "gabarito": "C",
+    "marcada": "C",
+    "ordem": 1,
+    "qid": "ti2-01"
+   }
+  ],
+  "modo": "todos",
+  "repescagem": [],
+  "total": 43
+ }
+]
