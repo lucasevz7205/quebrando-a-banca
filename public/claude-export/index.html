@@ -1253,7 +1253,7 @@ function linhaProva(){
     <p class="rule">Cada bolinha é um dia com revisões daquela matéria (maior = mais itens; vencidas aparecem em hoje). A faixa vermelha é a reta final: a partir de 10/01 tudo vira revisão diária.</p></section>`;
 }
 function viewPainel(){
-  return window.QBPlanner ? window.QBPlanner.render(S,{hoje,proxDe,devidas}) : viewPanorama();
+  return window.QBPlanner ? window.QBPlanner.render(S,{hoje,proxDe,devidas,cartRevHoje}) : viewPanorama();
 }
 /* Métricas anteriores preservadas, sem substituir o calendário principal. */
 function viewPanorama(){
