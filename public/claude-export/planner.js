@@ -4,7 +4,7 @@
  */
 (() => {
   "use strict";
-  const DAY_LABELS = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"];
+  const DAY_LABELS = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
   const MONTHS = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
   const KINDS = { estudo: "Estudo", questoes: "Questões", revisao: "Revisão", mapa: "Mapa ou resumo", simulado: "Simulado" };
   const esc = text => String(text ?? "").replace(/[&<>"']/g, chr => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[chr]));
@@ -12,7 +12,7 @@
   const dateLocal = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
   const parseDay = date => { const [y, m, d] = String(date).split("-").map(Number); return new Date(y, m - 1, d, 12); };
   const shift = (date, delta) => { const d = parseDay(date); d.setDate(d.getDate() + delta); return dateLocal(d); };
-  const monday = date => { const d = parseDay(date); d.setDate(d.getDate() - (d.getDay() + 6) % 7); return dateLocal(d); };
+  const weekStart = date => { const d = parseDay(date); d.setDate(d.getDate() - d.getDay()); return dateLocal(d); };
   const short = date => { const d = parseDay(date); return `${pad(d.getDate())}/${pad(d.getMonth() + 1)}`; };
   const longRange = (start, end) => {
     const a = parseDay(start), b = parseDay(end);
@@ -29,7 +29,7 @@
   let tick = null;
 
   function initialize(S) {
-    if (!S.planWeekStart) S.planWeekStart = monday(dateLocal(new Date()));
+    if (!S.planWeekStart) S.planWeekStart = weekStart(dateLocal(new Date()));
     if (!S.planSelectedDay) S.planSelectedDay = dateLocal(new Date());
     if (!S.planMode) S.planMode = "semana";
     if (!Array.isArray(S.pl)) S.pl = [];
@@ -94,8 +94,8 @@
     const automatic = (due.questoes.get(day) || 0) + (due.cartoes.get(day) || 0);
     const classes = ["qb-week-day", day === today ? "is-today" : "", day === S.planSelectedDay ? "is-selected" : ""].filter(Boolean).join(" ");
     return `<div class="${classes}">
-      <button type="button" class="qb-week-day-head" data-plan-day="${day}" aria-pressed="${day === S.planSelectedDay}" aria-label="Mostrar tarefas de ${esc(DAY_LABELS[(parseDay(day).getDay() + 6) % 7])}, ${short(day)}">
-        <span>${esc(DAY_LABELS[(parseDay(day).getDay() + 6) % 7].slice(0, 3))}</span><strong>${parseDay(day).getDate()}</strong>
+      <button type="button" class="qb-week-day-head" data-plan-day="${day}" aria-pressed="${day === S.planSelectedDay}" aria-label="Mostrar tarefas de ${esc(DAY_LABELS[parseDay(day).getDay()])}, ${short(day)}">
+        <span>${esc(DAY_LABELS[parseDay(day).getDay()].slice(0, 3))}</span><strong>${parseDay(day).getDate()}</strong>
         <small>${nDone}/${tasks.length} tarefas</small>
       </button>
       <div class="qb-week-day-content">
@@ -168,7 +168,7 @@
       <section class="qb-week-calendar" aria-label="Calendário de estudos da semana"><div class="qb-calendar-scroll"><div class="qb-week-grid">${days.map(d => dayColumn(S, d, today, due)).join("")}</div></div></section>
       ${backlog.length ? `<details class="qb-plan-overdue"><summary><strong>${backlog.length} atividades pendentes de semanas anteriores</strong><span>Abra para reprogramar ou concluir</span></summary><div class="qb-plan-overdue-list">${backlog.map(t => `<div><div><strong>${esc(t.titulo)}</strong><small>${short(t.data)} · ${esc(KINDS[t.tipo] || "Estudo")}${t.materia ? ` · ${esc(t.materia)}` : ""}</small></div><button type="button" class="btn ghost small" data-plan-action="move" data-plan-id="${esc(t.id)}">Mover para ${short(S.planSelectedDay)}</button></div>`).join("")}</div></details>` : ""}
       <div class="qb-plan-bottom">
-        <section class="qb-plan-day-detail"><div class="qb-plan-panel-head"><div><span class="qb-plan-eyebrow">EXECUÇÃO DO DIA</span><h3>${esc(DAY_LABELS[(parseDay(S.planSelectedDay).getDay() + 6) % 7])}, ${short(S.planSelectedDay)} ${S.planSelectedDay === today ? '<span class="qb-today-pill">Hoje</span>' : ""}</h3></div><button type="button" class="btn ghost small" data-plan-action="new">Adicionar</button></div>
+        <section class="qb-plan-day-detail"><div class="qb-plan-panel-head"><div><span class="qb-plan-eyebrow">EXECUÇÃO DO DIA</span><h3>${esc(DAY_LABELS[parseDay(S.planSelectedDay).getDay()])}, ${short(S.planSelectedDay)} ${S.planSelectedDay === today ? '<span class="qb-today-pill">Hoje</span>' : ""}</h3></div><button type="button" class="btn ghost small" data-plan-action="new">Adicionar</button></div>
           ${selected.length ? `<div class="qb-plan-task-list">${selected.map(t => taskCard(t)).join("")}</div>` : `<div class="qb-plan-empty"><strong>Nenhuma atividade manual planejada.</strong><span>Adicione um estudo, revisão, simulado ou meta de questões para este dia.</span></div>`}
           <div class="qb-auto-reviews"><div><strong>Revisões automáticas</strong><p>Geradas pelas respostas e avaliações anteriores. Não são alteradas ao reorganizar as tarefas.</p></div><div class="qb-auto-counts"><span>${due.questoes.get(S.planSelectedDay) || 0} questões</span><span>${due.cartoes.get(S.planSelectedDay) || 0} cartões</span></div>
             ${S.planSelectedDay === today && selectedAuto ? `<div class="qb-auto-actions"><button type="button" class="btn small" data-plan-auto="questoes" ${due.questoes.get(today) ? "" : "disabled"}>Revisar questões</button><button type="button" class="btn ghost small" data-plan-auto="cartoes" ${due.cartoes.get(today) ? "" : "disabled"}>Revisar flashcards</button></div>` : ""}
@@ -197,8 +197,8 @@
     const openForm = (old = null) => { S.planEditing = old?.id || null; S.planFormOpen = true; rerender(); setTimeout(() => { document.getElementById("qb-plan-form")?.scrollIntoView({ behavior: "smooth", block: "start" }); document.getElementById("qb-p-title")?.focus({ preventScroll: true }); }, 0); };
     document.querySelectorAll("[data-plan-week]").forEach(b => b.addEventListener("click", () => {
       const delta = Number(b.dataset.planWeek);
-      S.planWeekStart = delta ? shift(S.planWeekStart, delta * 7) : monday(today);
-      S.planSelectedDay = S.planWeekStart === monday(today) ? today : S.planWeekStart;
+      S.planWeekStart = delta ? shift(S.planWeekStart, delta * 7) : weekStart(today);
+      S.planSelectedDay = S.planWeekStart === weekStart(today) ? today : S.planWeekStart;
       S.planFormOpen = false;
       rerender();
     }));
@@ -272,7 +272,7 @@
         status: old?.status || "planejada", segundos: old?.segundos || 0,
         criadoEm: old?.criadoEm || now, atualizadoEm: now,
       };
-      S.planFormOpen = false; S.planEditing = null; S.planSelectedDay = data; S.planWeekStart = monday(data);
+      S.planFormOpen = false; S.planEditing = null; S.planSelectedDay = data; S.planWeekStart = weekStart(data);
       persist(next);
     });
     document.querySelectorAll("[data-plan-auto]").forEach(b => b.addEventListener("click", () => {
