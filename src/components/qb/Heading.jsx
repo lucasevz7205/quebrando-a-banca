@@ -1,0 +1,1 @@
+export default function Heading({eyebrow="QUEBRANDO A BANCA",title,children}){return <div className="qb-heading"><p className="qb-eyebrow">{eyebrow}</p><h1>{title}</h1>{children&&<p>{children}</p>}</div>;}
