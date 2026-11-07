@@ -1,0 +1,2042 @@
+[
+ {
+  "id": "da-2-1",
+  "atualizadoEm": "2026-10-26",
+  "fontes": [
+   {
+    "titulo": "Mapa do Ato Administrativo",
+    "url": "https://claude.ai/artifact/Q9TNHB8B1fUvSCFJVuNrsi"
+   }
+  ],
+  "itens": [
+   {
+    "d": "Di Pietro: declaração do Estado, ou de quem o represente, que produz efeitos jurídicos imediatos, com observância da lei, sob regime jurídico de direito público e sujeita a controle pelo Poder Judiciário.",
+    "grupo": "Conceito",
+    "k": "Declaração do Estado sob regime público",
+    "src": "Aula 7 · §7.1 (Herbert Almeida) · Di Pietro",
+    "trap": "A banca troca o regime: ato administrativo é sempre de direito público. Ato de direito privado da Administração (ex.: locação de imóvel como locatária) não é ato administrativo."
+   },
+   {
+    "d": "“Ato da Administração” é o gênero: inclui atos de direito privado, atos materiais, atos políticos, contratos e atos de opinião.",
+    "grupo": "Conceito",
+    "k": "Ato da Administração × ato administrativo",
+    "src": "Aula 7 · §7.1",
+    "trap": "Inversão de gênero e espécie. Quem é mais amplo é “ato da Administração”."
+   },
+   {
+    "d": "Fato administrativo: atividade material (ex.: demolição executada) ou evento que produz efeitos indiretamente.",
+    "grupo": "Conceito",
+    "k": "Fato administrativo · silêncio",
+    "src": "Aula 7 · §7.1",
+    "trap": "Dizer que o silêncio é ato administrativo tácito em qualquer caso, ou que escapa ao controle judicial."
+   },
+   {
+    "d": "Único atributo presente em todos os atos.",
+    "grupo": "Atributos",
+    "k": "Presunção de legitimidade e veracidade",
+    "src": "Aula 7 · §7.2",
+    "trap": "Trocar os nomes dos atributos. A banca descreve um e dá o nome de outro."
+   },
+   {
+    "d": "Impõe obrigações a terceiros independentemente de sua concordância (poder extroverso).",
+    "grupo": "Atributos",
+    "k": "Imperatividade",
+    "src": "Aula 7 · §7.2",
+    "trap": "“Todos os atos são imperativos.” Falso."
+   },
+   {
+    "d": "Execução direta pela própria Administração, sem ir ao Judiciário, até com uso da força.",
+    "grupo": "Atributos",
+    "k": "Autoexecutoriedade",
+    "src": "Aula 7 · §7.2",
+    "trap": "Multa: tem exigibilidade (pode-se exigir o pagamento como condição, por meio indireto), mas não executoriedade."
+   },
+   {
+    "d": "Atributo citado por Di Pietro: o ato deve corresponder a uma figura definida em lei.",
+    "grupo": "Atributos",
+    "k": "Tipicidade",
+    "src": "Aula 7 · §7.2 · Di Pietro",
+    "trap": "Estender a tipicidade aos contratos."
+   },
+   {
+    "d": "Competência (ou sujeito), finalidade, forma, motivo e objeto (Lei 4.717/1965, art. 2º).",
+    "grupo": "Elementos",
+    "k": "Os cinco elementos · vinculados × mérito",
+    "src": "Aula 7 · §7.3; §7.5",
+    "trap": "Misturar atributos (PATI) com elementos (CFFMO)."
+   },
+   {
+    "d": "Decorre de lei, é irrenunciável, mas admite delegação e avocação.",
+    "grupo": "Elementos",
+    "k": "Competência · delegação e avocação",
+    "src": "Aula 7 · §7.3 · Lei 9.784, arts. 11 a 15",
+    "trap": "Dois lados: dizer que ato normativo é delegável como regra (errado) ou que nunca é, “nem mesmo quando a lei prevê” (errado). Competência exclusiva continua indelegável. Responde pelo ato o delegado, não o delegante."
+   },
+   {
+    "d": "Forma é a exteriorização do ato, em regra escrita.",
+    "grupo": "Elementos",
+    "k": "Forma e motivação",
+    "src": "Aula 7 · §7.3 · Lei 9.784, art. 50",
+    "trap": "Confundir motivo (elemento, pressuposto de fato e de direito) com motivação (exposição, parte da forma)."
+   },
+   {
+    "d": "O motivo declarado vincula a validade do ato, mesmo quando a motivação era dispensável.",
+    "grupo": "Elementos",
+    "k": "Teoria dos motivos determinantes",
+    "src": "Aula 7 · §7.3",
+    "trap": "“Exoneração ad nutum dispensa motivação, logo o motivo falso não importa.” Importa."
+   },
+   {
+    "d": "Finalidade geral: interesse público. Finalidade específica: a prevista em lei para aquele ato.",
+    "grupo": "Elementos",
+    "k": "Finalidade · desvio de finalidade",
+    "src": "Aula 7 · §7.3; §7.4",
+    "trap": "Dizer que o desvio de finalidade gera revogação, ou que pode ser convalidado."
+   },
+   {
+    "d": "Objeto é o efeito jurídico imediato que o ato produz; a finalidade é o efeito mediato (o resultado que se quer alcançar).",
+    "grupo": "Elementos",
+    "k": "Objeto (conteúdo)",
+    "src": "Aula 7 · §7.3 (Herbert Almeida) · Di Pietro",
+    "trap": "Trocar objeto (efeito imediato) por finalidade (efeito mediato). Objeto ilícito, impossível, incerto ou imoral é vício insanável: não se convalida."
+   },
+   {
+    "d": "Natural: o efeito que decorre da própria natureza do ato, presente em todo ato (a exoneração extingue o vínculo).",
+    "grupo": "Elementos",
+    "k": "Objeto natural × acidental",
+    "src": "Aula 7 · §7.3 · Di Pietro",
+    "trap": "Trocar termo (certo) por condição (incerta) e afirmar que ato vinculado pode ter cláusula acessória."
+   },
+   {
+    "d": "Vícios de competência: excesso de poder (agente vai além da sua competência; ex.: aplica demissão podendo só suspender), função de fato (investidura irregular, mas aparência de legalidade; atos válidos perante terceiros de…",
+    "grupo": "Vícios e mérito",
+    "k": "Excesso de poder · função de fato · usurpação",
+    "src": "Aula 7 · §7.4",
+    "trap": "Usurpação gera ato inexistente, não anulável."
+   },
+   {
+    "d": "Motivo viciado: fato inexistente, falso ou juridicamente inadequado.",
+    "grupo": "Vícios e mérito",
+    "k": "Vício de motivo e de objeto",
+    "src": "Aula 7 · §7.4",
+    "trap": "Achar que só a falsidade do fato vicia o motivo."
+   },
+   {
+    "d": "Teoria dualista (adotada no Brasil): anulável tem vício sanável e pode ser convalidado; nulo tem vício insanável e deve ser anulado; inexistente tem aparência de ato (usurpador, objeto impossível); irregular tem defeito…",
+    "grupo": "Vícios e mérito",
+    "k": "Válido · anulável · nulo · inexistente · irregular",
+    "src": "Aula 7 · §7.4; §7.9",
+    "trap": "Classificar como nulo o vício de competência não exclusiva."
+   },
+   {
+    "d": "Mérito é a conveniência e a oportunidade na escolha do motivo e do objeto.",
+    "grupo": "Vícios e mérito",
+    "k": "Mérito e controle judicial",
+    "src": "Aula 7 · §7.5",
+    "trap": "“Ato discricionário é imune ao controle judicial.” Falso: o controle é de legalidade."
+   },
+   {
+    "d": "Vinculado: a lei define todos os elementos; preenchidos os requisitos, a Administração deve praticar (ex.: licença, aposentadoria compulsória).",
+    "grupo": "Classificação",
+    "k": "Vinculado × discricionário",
+    "src": "Aula 7 · §7.6",
+    "trap": "Discricionariedade não é arbitrariedade."
+   },
+   {
+    "d": "Simples: vontade de um órgão (singular ou colegiado).",
+    "grupo": "Classificação",
+    "k": "Simples · complexo · composto",
+    "src": "Aula 7 · §7.6; §7.10 · STF",
+    "trap": "Trocar as definições de complexo e composto."
+   },
+   {
+    "d": "Constitutivo cria, modifica ou extingue situação jurídica (nomeação, licença).",
+    "grupo": "Classificação",
+    "k": "Constitutivo × declaratório",
+    "src": "Aula 7 · §7.6",
+    "trap": "Definição do constitutivo atribuída ao declaratório."
+   },
+   {
+    "d": "Perfeito: completou o ciclo de formação. Eficaz: apto a produzir efeitos.",
+    "grupo": "Classificação",
+    "k": "Perfeito · eficaz · pendente · consumado",
+    "src": "Aula 7 · §7.6",
+    "trap": "Perfeição (formação), validade (conformidade com a lei) e eficácia (aptidão) são planos distintos."
+   },
+   {
+    "d": "Normativos: comando geral e abstrato para a fiel execução da lei (decretos, regulamentos, regimentos, resoluções, deliberações).",
+    "grupo": "Espécies",
+    "k": "Normativos × ordinatórios",
+    "src": "Aula 7 · §7.7",
+    "trap": "Circular e portaria caem como “normativos”. Para o Cebraspe, são ordinatórios."
+   },
+   {
+    "d": "Negociais (de consentimento): a vontade da Administração coincide com o pedido do particular.",
+    "grupo": "Espécies",
+    "k": "Licença × autorização × permissão",
+    "src": "Aula 7 · §7.7",
+    "trap": "Trocar as características de licença e autorização. Dica: Licença = Lei manda; Autorização = Administração escolhe."
+   },
+   {
+    "d": "Aprovação: discricionária, examina legalidade e conveniência, prévia ou posterior.",
+    "grupo": "Espécies",
+    "k": "Aprovação · homologação · visto",
+    "src": "Aula 7 · §7.7",
+    "trap": "Atribuir à homologação o exame de conveniência, que é da aprovação."
+   },
+   {
+    "d": "Enunciativos atestam, certificam ou opinam, sem manifestar vontade de produzir efeito: certidão (registro existente), atestado (situação não registrada), parecer (opinião), apostila (averbação).",
+    "grupo": "Espécies",
+    "k": "Enunciativos · punitivos",
+    "src": "Aula 7 · §7.7",
+    "trap": "Certidão dá fé (presunção de veracidade), mas não cria direito novo: é declaratória."
+   },
+   {
+    "d": "Natural: cumpriu os efeitos (férias gozadas, demolição executada, termo final).",
+    "grupo": "Extinção",
+    "k": "Natural · subjetiva · objetiva · renúncia",
+    "src": "Aula 7 · §7.8",
+    "trap": "Confundir extinção subjetiva (sujeito) com objetiva (objeto)."
+   },
+   {
+    "d": "Retirada de ato VÁLIDO porque o beneficiário descumpriu as condições que deveria manter para continuar gozando dele.",
+    "grupo": "Extinção",
+    "k": "Cassação",
+    "src": "Aula 7 · §7.8",
+    "trap": "Trocar com caducidade."
+   },
+   {
+    "d": "Caducidade: lei superveniente torna inadmissível a situação antes permitida (zoneamento novo proíbe o que a licença permitia).",
+    "grupo": "Extinção",
+    "k": "Caducidade · contraposição",
+    "src": "Aula 7 · §7.8",
+    "trap": "Caducidade decorre de NORMA superveniente; cassação, de CONDUTA do beneficiário."
+   },
+   {
+    "d": "Ab-rogação: revogação total. Derrogação: parcial.",
+    "grupo": "Extinção",
+    "k": "Ab-rogação × derrogação",
+    "src": "Aula 7 · §7.8",
+    "trap": "Estender a revogação aos efeitos impróprios."
+   },
+   {
+    "d": "Desfaz ato ilegal, em regra com efeitos ex tunc.",
+    "grupo": "Anulação e convalidação",
+    "k": "Anulação: quem e efeitos",
+    "src": "Aula 7 · §7.8 · Súmula 473",
+    "trap": "Detalhe final do item ABIN: o Judiciário não age de ofício."
+   },
+   {
+    "d": "Art. 54 da Lei 9.784: decai em 5 anos o direito de anular atos com efeitos favoráveis ao destinatário, contados da prática, salvo comprovada má-fé.",
+    "grupo": "Anulação e convalidação",
+    "k": "Decadência de 5 anos",
+    "src": "Aula 7 · §7.8; §7.10 · Lei 9.784, art. 54",
+    "trap": "Contar o prazo da ciência da ilegalidade, ou aplicá-lo mesmo com má-fé."
+   },
+   {
+    "d": "Art. 55: atos com defeitos sanáveis, sem lesão ao interesse público nem prejuízo a terceiros, podem ser convalidados pela própria Administração.",
+    "grupo": "Anulação e convalidação",
+    "k": "Convalidação",
+    "src": "Aula 7 · §7.9 · Lei 9.784, art. 55",
+    "trap": "Convalidar vício de finalidade, motivo ou objeto; dar efeito ex nunc à convalidação."
+   },
+   {
+    "d": "Carvalho Filho: três espécies de convalidação.",
+    "grupo": "Anulação e convalidação",
+    "k": "Ratificação · reforma · conversão",
+    "src": "Aula 7 · §7.9 (slides anotados) · Di Pietro",
+    "trap": "Leia a definição que o item usa. “Retira a parte inválida e mantém a válida”: reforma como convalidação. “Altera ato válido por conveniência, efeitos futuros”: reforma de Di Pietro, que não é convalidação. Vício de competência se corrige por ratificação, nunca por reforma."
+   },
+   {
+    "d": "Retira ato VÁLIDO por conveniência e oportunidade.",
+    "grupo": "Revogação",
+    "k": "Ato válido · ex nunc",
+    "src": "Aula 7 · §7.8 · Súmula 473",
+    "trap": "“Revogar ato ilegal” é sempre errado."
+   },
+   {
+    "d": "Só a Administração que praticou o ato (simetria: a autoridade competente para editá-lo, STJ MS 14.731).",
+    "grupo": "Revogação",
+    "k": "Quem revoga",
+    "src": "Aula 7 · §7.8; §7.10",
+    "trap": "Judiciário “revogando” ato do Executivo."
+   },
+   {
+    "d": "Não se revogam: atos ilegais; consumados; vinculados (salvo a licença para construir antes do início da obra, segundo a jurisprudência); que geraram direito adquirido; integrantes de procedimento já superado (preclusão); quando…",
+    "grupo": "Revogação",
+    "k": "Atos irrevogáveis",
+    "src": "Aula 7 · §7.8 (slides anotados)",
+    "trap": "Lista longa: a banca tira um item e afirma que ele pode ser revogado."
+   }
+  ],
+  "topico": "da-2-1"
+ },
+ {
+  "id": "da-2-2",
+  "atualizadoEm": "2026-10-26",
+  "fontes": [
+   {
+    "titulo": "Mapa do Ato Administrativo",
+    "url": "https://claude.ai/artifact/Q9TNHB8B1fUvSCFJVuNrsi"
+   }
+  ],
+  "itens": [
+   {
+    "d": "Ato enunciativo pelo qual órgãos consultivos emitem opinião sobre assuntos técnicos ou jurídicos de sua competência.",
+    "grupo": "Parecer",
+    "k": "O que é o parecer",
+    "src": "Aula 7 · §7.7",
+    "trap": "Dizer que o parecer, por si, concede ou nega o direito."
+   },
+   {
+    "d": "Facultativo: a autoridade pede se quiser e não fica vinculada.",
+    "grupo": "Parecer",
+    "k": "Facultativo · obrigatório · vinculante",
+    "src": "Aula 7 · §7.7 · STF, MS 24.631 (documento do projeto)",
+    "trap": "A própria Câmara cobrou: obrigatório ≠ vinculante. O item descreveu o vinculante e chamou de obrigatório."
+   },
+   {
+    "d": "Aprovado pela autoridade competente, o parecer pode ganhar efeito interno (passa a orientar os subordinados, como ato ordinatório) ou externo (parecer normativo, vincula Administração e particulares, interpreta a lei e depende de…",
+    "grupo": "Parecer",
+    "k": "Parecer normativo",
+    "src": "Aula 7 · §7.7",
+    "trap": "O parecer normativo não inova na ordem jurídica: apenas interpreta."
+   },
+   {
+    "d": "STF, MS 24.631: parecer meramente opinativo não torna o parecerista parte do ato; é abusivo responsabilizá-lo por nexo causal alargado.",
+    "grupo": "Parecer",
+    "k": "Responsabilidade do parecerista",
+    "src": "STF, MS 24.631 e MS 24.584 (documento “Do Poder Legislativo STF” do projeto) · incremento: a aula não trata",
+    "trap": "Responsabilização automática do parecerista. A regra é a irresponsabilidade pelo conteúdo opinativo, salvo dolo, culpa ou erro grosseiro."
+   },
+   {
+    "d": "LINDB, art. 28: o agente público responde pessoalmente por suas decisões ou opiniões técnicas em caso de dolo ou erro grosseiro.",
+    "grupo": "Parecer",
+    "k": "LINDB art. 28 · Lei 9.784 art. 42",
+    "src": "Lei seca · incremento (a aula de atos não trata)",
+    "trap": "Trocar os §§ 1º e 2º do art. 42."
+   }
+  ],
+  "topico": "da-2-2"
+ },
+ {
+  "id": "da-8-1",
+  "atualizadoEm": "2026-10-26",
+  "fontes": [
+   {
+    "titulo": "Nova Governança Pública — material de estudo (tópico 8.1)",
+    "url": "https://claude.ai/artifact/Fg5HqWy8G4ZHVGD6QZmzxx"
+   }
+  ],
+  "itens": [
+   {
+    "d": "Governança é coordenar instituições e atores rumo a objetivos coletivos; é mais ampla que governo, porque inclui mercado e sociedade civil.",
+    "grupo": "Conceito",
+    "k": "Governança × governo",
+    "src": "Seção 1",
+    "trap": "O Cebraspe mistura três sentidos: capacidade de governar (PDRAE), boa governança (Banco Mundial, 1992) e governança em rede (NGovP)."
+   },
+   {
+    "d": "Stephen P. Osborne batizou a Nova Governança Pública no artigo \"The New Public Governance?\" (2006) e no livro de 2010.",
+    "grupo": "Conceito",
+    "k": "Osborne (2006)",
+    "src": "Seção 1",
+    "trap": ""
+   },
+   {
+    "d": "Administração Pública tradicional → Nova Gestão Pública → Nova Governança Pública; mecanismos: hierarquia → mercado → redes.",
+    "grupo": "Evolução",
+    "k": "Três regimes",
+    "src": "Seção 2",
+    "trap": ""
+   },
+   {
+    "d": "Para Osborne, a Nova Gestão Pública foi uma fase breve e transitória entre a tradição burocrática e a pluralista.",
+    "grupo": "Evolução",
+    "k": "NGP como transição",
+    "src": "Seção 2",
+    "trap": ""
+   },
+   {
+    "d": "A Nova Gestão Pública fragmentou o Estado e multiplicou as redes que pretendia substituir; a crítica central é o seu foco intraorganizacional.",
+    "grupo": "Evolução",
+    "k": "Por que a NGovP surgiu",
+    "src": "Seção 2",
+    "trap": ""
+   },
+   {
+    "d": "Marco da Nova Gestão Pública no Brasil, não da NGovP; usa \"governança\" no sentido de capacidade gerencial.",
+    "grupo": "Evolução",
+    "k": "PDRAE (1995)",
+    "src": "Seção 2",
+    "trap": "Item dizendo que a NGovP foi introduzida pelo PDRAE está errado."
+   },
+   {
+    "d": "Plural = vários atores entregam os serviços; pluralista = vários processos informam as políticas.",
+    "grupo": "Fundamentos",
+    "k": "Estado plural × pluralista",
+    "src": "Seção 3",
+    "trap": "A banca inverte as definições."
+   },
+   {
+    "d": "Sociologia organizacional e teoria de redes.",
+    "grupo": "Fundamentos",
+    "k": "Raízes teóricas",
+    "src": "Seção 3",
+    "trap": "Escolha pública e economia são raízes da Nova Gestão Pública."
+   },
+   {
+    "d": "Foco interorganizacional; ênfase em processos e resultados finais (outcomes).",
+    "grupo": "Fundamentos",
+    "k": "Foco e ênfase",
+    "src": "Seção 4",
+    "trap": "Inputs/outputs e foco intraorganizacional são da Nova Gestão Pública."
+   },
+   {
+    "d": "Confiança ou contratos relacionais; parceiros são fornecedores preferenciais e agentes interdependentes; valores neocorporativistas.",
+    "grupo": "Fundamentos",
+    "k": "Mecanismo e valores",
+    "src": "Seção 4",
+    "trap": "Mercado e contratos clássicos são da Nova Gestão Pública."
+   },
+   {
+    "d": "Na NGovP o cidadão é parceiro e a interação é colaborativa; cidadão-cliente é da Nova Gestão Pública.",
+    "grupo": "Papéis",
+    "k": "Cidadão-parceiro",
+    "src": "Seção 5",
+    "trap": ""
+   },
+   {
+    "d": "O Estado define as regras do jogo e dirige \"à sombra da hierarquia\", com instrumentos indiretos.",
+    "grupo": "Papéis",
+    "k": "O Estado não some",
+    "src": "Seção 5",
+    "trap": "Item dizendo que o Estado perde toda função de coordenação está errado."
+   },
+   {
+    "d": "Mais conflitos e lentidão, responsabilidades sobrepostas e accountability mais difusa; na prática, arranjos híbridos.",
+    "grupo": "Papéis",
+    "k": "Limites",
+    "src": "Seção 5",
+    "trap": "Item dizendo que a rede torna a accountability mais clara está errado."
+   }
+  ],
+  "topico": "da-8-1"
+ },
+ {
+  "id": "da-8-2",
+  "atualizadoEm": "2026-10-26",
+  "fontes": [
+   {
+    "titulo": "Redes de cooperação, articulação e parcerias — material de estudo (tópico 8.2)",
+    "url": "https://claude.ai/artifact/Q5rE7X7ArphNucS28L6Znu"
+   },
+   {
+    "titulo": "Tópico 8.2 — cobertura das fontes e histórico na banca",
+    "url": "https://claude.ai/artifact/UfwvqLvbEyFdt1pumRBBah"
+   }
+  ],
+  "itens": [
+   {
+    "d": "Estrutura sem chefe único, com atores públicos e privados ligados por objetivos comuns e relações horizontais de interdependência (Fleury, 2005).",
+    "grupo": "Redes",
+    "k": "Rede policêntrica",
+    "src": "Parte A",
+    "trap": "Redes não são hierárquicas com centro único."
+   },
+   {
+    "d": "Redes são o mecanismo de coordenação da NGovP, distinto de hierarquia e mercado.",
+    "grupo": "Redes",
+    "k": "Terceiro tipo de estrutura",
+    "src": "Parte A",
+    "trap": ""
+   },
+   {
+    "d": "A desigualdade de poder persiste e a accountability fica mais difícil; o Estado se transforma, mas não perde a coordenação.",
+    "grupo": "Redes",
+    "k": "Limites das redes",
+    "src": "Parte A",
+    "trap": "\"As redes eliminam a desigualdade de poder\" está errado."
+   },
+   {
+    "d": "Vigência de 5 a 35 anos com prorrogação; SPE antes do contrato; contraprestação só depois da disponibilização do serviço.",
+    "grupo": "Setor privado",
+    "k": "PPP: números",
+    "src": "Parte C · Lei 11.079/2004",
+    "trap": "\"PPP pode ter vigência de 40 anos\" está errado."
+   },
+   {
+    "d": "Vedado o objeto único de fornecimento de mão de obra, de equipamentos ou de execução de obra pública.",
+    "grupo": "Setor privado",
+    "k": "PPP: vedações",
+    "src": "Parte C · art. 2º, § 4º",
+    "trap": ""
+   },
+   {
+    "d": "Licitação por concorrência ou diálogo competitivo; União limitada a 1% da RCL com PPP.",
+    "grupo": "Setor privado",
+    "k": "PPP: modalidades",
+    "src": "Parte C · arts. 10 e 22",
+    "trap": ""
+   },
+   {
+    "d": "OS: contrato de gestão; OSCIP: termo de parceria; OSC (MROSC): termo de colaboração, termo de fomento ou acordo de cooperação.",
+    "grupo": "Terceiro setor",
+    "k": "Título + instrumento",
+    "src": "Parte D",
+    "trap": "É a maior fonte de pegadinhas do 8.2: a banca troca os instrumentos."
+   },
+   {
+    "d": "Qualificação discricionária pelo ministro da área; conselho com 20% a 40% de Poder Público e 20% a 30% de sociedade civil; cessão de servidores com ônus para a origem.",
+    "grupo": "Terceiro setor",
+    "k": "OS (Lei 9.637/1998)",
+    "src": "Parte D",
+    "trap": ""
+   },
+   {
+    "d": "Qualificação vinculada, pelo Ministério da Justiça, em 30 dias; exige 3 anos de funcionamento regular.",
+    "grupo": "Terceiro setor",
+    "k": "OSCIP (Lei 9.790/1999)",
+    "src": "Parte D",
+    "trap": "\"A qualificação como OSCIP é discricionária\" está errado; OS não pode ser OSCIP."
+   },
+   {
+    "d": "Termo de colaboração: proposta da administração; termo de fomento: proposta da OSC; acordo de cooperação: sem repasse de recursos.",
+    "grupo": "Terceiro setor",
+    "k": "Colaboração × fomento",
+    "src": "Parte D · Lei 13.019/2014",
+    "trap": ""
+   },
+   {
+    "d": "O chamamento tem exceções (emenda parlamentar, dispensa, inexigibilidade); o PMIS não obriga nem substitui o chamamento.",
+    "grupo": "Terceiro setor",
+    "k": "Chamamento público e PMIS",
+    "src": "Parte D",
+    "trap": "\"O chamamento público é sempre obrigatório\" está errado."
+   },
+   {
+    "d": "As OS são constitucionais, mas contrato de gestão, contratações e seleção de pessoal seguem procedimento público, objetivo e impessoal.",
+    "grupo": "Terceiro setor",
+    "k": "STF, ADI 1923",
+    "src": "Parte D",
+    "trap": ""
+   },
+   {
+    "d": "Contrato de rateio repassa recursos; contrato de programa regula as obrigações; a União só se consorcia com municípios se os estados deles também participarem.",
+    "grupo": "Articulação",
+    "k": "Consórcios públicos",
+    "src": "Pegadinhas",
+    "trap": "A banca troca contrato de rateio, contrato de programa e protocolo de intenções."
+   },
+   {
+    "d": "A redação do 8.2 é inédita, mas o Cebraspe cobra os subtemas há 10 anos (gestão de redes organizacionais; OS, OSCIP e consórcios; terceiro setor). A prova da Câmara de 08/03/2026 já trouxe redes e intersetorialidade (item 76, C), NGP x NGovP (item 81, E) e consórcio de direito público (item 89, E).",
+    "grupo": "Banca",
+    "k": "Histórico no Cebraspe",
+    "src": "Cobertura das fontes · Histórico",
+    "trap": "Consórcio de direito público é associação pública, não empresa pública."
+   }
+  ],
+  "topico": "da-8-2"
+ },
+ {
+  "id": "dc-1",
+  "atualizadoEm": "2026-10-27",
+  "fontes": [
+   {
+    "titulo": "Mapa da CF/88",
+    "url": "https://claude.ai/artifact/Gq5s7heyo1EU6JuXYb5g54"
+   },
+   {
+    "titulo": "CF/88 em contexto",
+    "url": "https://claude.ai/artifact/XA5EtPH5h7PDYhB11s8s3g"
+   }
+  ],
+  "itens": [
+   {
+    "d": "Ferdinand Lassalle (1862): a Constituição real é a soma dos fatores reais de poder que regem a sociedade.",
+    "grupo": "Conceito",
+    "k": "Sociológico · Lassalle",
+    "src": "PDF do item 1 §1.5 · Lassalle, A essência da Constituição",
+    "trap": "Atribuir a Lassalle a “decisão política fundamental” (é Schmitt) ou a norma hipotética fundamental (é Kelsen)."
+   },
+   {
+    "d": "Carl Schmitt: Constituição é a decisão política fundamental do titular do poder constituinte (forma de Estado, de governo, direitos, organização dos poderes).",
+    "grupo": "Conceito",
+    "k": "Político · Schmitt",
+    "src": "PDF do item 1 §1.5 · Schmitt, Teoria da Constituição",
+    "trap": "Inverter: Constituição é a decisão; lei constitucional é o que está no texto sem ser decisão fundamental."
+   },
+   {
+    "d": "Hans Kelsen: Constituição é norma pura, do mundo do dever-ser, sem apoio na sociologia ou na política.",
+    "grupo": "Conceito",
+    "k": "Jurídico · Kelsen",
+    "src": "PDF do item 1 §1.5 · Kelsen, Teoria Pura do Direito",
+    "trap": "Trocar os planos: a norma hipotética fundamental é pressuposta (lógico-jurídico), não escrita."
+   },
+   {
+    "d": "Material: é constitucional o que trata de matéria tipicamente constitucional (Estado, poderes, direitos), esteja ou não no texto.",
+    "grupo": "Conceito",
+    "k": "Material × formal",
+    "src": "PDF do item 1 §1.11 · CF, art. 242, § 2º",
+    "trap": "Dizer que norma formalmente constitucional, sem conteúdo constitucional, tem hierarquia menor ou pode ser alterada por lei."
+   },
+   {
+    "d": "Sentido cultural (Meirelles Teixeira): o Direito é objeto cultural, produto da atividade humana, e a Constituição reúne os aspectos sociológico, político e jurídico, formando a “Constituição total”.",
+    "grupo": "Conceito",
+    "k": "Cultural · Hesse",
+    "src": "PDF do item 1 §1.5",
+    "trap": "Atribuir a Hesse a soma dos fatores reais de poder (é Lassalle), ou dizer que, para Hesse, Constituição real e jurídica são autônomas."
+   },
+   {
+    "d": "Para Canotilho, a Constituição ideal, de viés liberal, é escrita, tem um sistema de direitos fundamentais individuais (liberdades negativas), consagra a separação de poderes e adota um sistema democrático.",
+    "grupo": "Conceito",
+    "k": "Constituição ideal · Canotilho",
+    "src": "PDF do item 1 §1.5",
+    "trap": "Dizer que a Constituição ideal pode ser costumeira ou dispensar a separação de poderes."
+   },
+   {
+    "d": "Não foi um movimento homogêneo: Canotilho fala em “movimentos constitucionais”.",
+    "grupo": "Constitucionalismo",
+    "k": "Constitucionalismo antigo",
+    "src": "PDF do item 1 §1.2",
+    "trap": "“O constitucionalismo antigo começou com a Magna Carta de 1215.” Falso."
+   },
+   {
+    "d": "Surge no século XVIII com as primeiras Constituições escritas: EUA (1787) e França (1791).",
+    "grupo": "Constitucionalismo",
+    "k": "Constitucionalismo moderno",
+    "src": "PDF do item 1 §1.2",
+    "trap": "Dizer que o constitucionalismo moderno nasceu com o Estado social ou com documentos não escritos."
+   },
+   {
+    "d": "Fundamento: dignidade da pessoa humana.",
+    "grupo": "Constitucionalismo",
+    "k": "Neoconstitucionalismo",
+    "src": "PDF do item 1 §1.2",
+    "trap": "Trocar os marcos: pós-positivismo é o filosófico, não o teórico."
+   },
+   {
+    "d": "A Nova República começou em 15/3/1985.",
+    "grupo": "Contexto histórico",
+    "k": "EC 26/1985 · constituinte congressual",
+    "src": "Complemento DC-1 · Câmara, Panorama da Constituinte; EC 26/1985",
+    "trap": "“Assembleia exclusiva, dissolvida após a promulgação.” Falso: foi congressual. Também é falso dizer que ela surgiu de ruptura revolucionária: foi convocada por emenda à Constituição anterior."
+   },
+   {
+    "d": "Instalada em 1º/2/1987, com 559 membros: 487 deputados e 72 senadores (49 eleitos em 1986 e 23 eleitos em 1982, que também votaram).",
+    "grupo": "Contexto histórico",
+    "k": "1º/2/1987 · 559 constituintes",
+    "src": "Complemento DC-1 · Câmara, Panorama da Constituinte",
+    "trap": "Trocar Ulysses (presidente) e Bernardo Cabral (relator)."
+   },
+   {
+    "d": "Não houve anteprojeto oficial: o texto da Comissão Afonso Arinos (Comissão Provisória de Estudos Constitucionais, 1986) não foi enviado à Constituinte.",
+    "grupo": "Contexto histórico",
+    "k": "Comissões e emendas populares",
+    "src": "Complemento DC-1 · Câmara, Panorama da Constituinte",
+    "trap": "Dizer que a Constituinte votou um anteprojeto enviado pelo Executivo."
+   },
+   {
+    "d": "Promulgada em 5/10/1988, foi chamada por Ulysses Guimarães de “Constituição Cidadã”, pela ampliação de direitos e pela participação popular.",
+    "grupo": "Contexto histórico",
+    "k": "5/10/1988 · Constituição Cidadã",
+    "src": "Complemento DC-1 · Câmara, Panorama da Constituinte",
+    "trap": "Errar a data (5 de outubro, não 5 de novembro) ou o ano da instalação (1987)."
+   },
+   {
+    "d": "Promulgadas (democráticas): 1891, 1934, 1946 e 1988, as quatro feitas por Constituinte.",
+    "grupo": "Contexto histórico",
+    "k": "Sete Constituições",
+    "src": "PDF do item 1 §1.11 · doutrina diverge sobre 1967",
+    "trap": "Classificar a de 1891 ou a de 1946 como outorgada; dizer que a CF/88 é a primeira promulgada."
+   },
+   {
+    "d": "Quanto à forma, é escrita (instrumental): está num documento solene.",
+    "grupo": "Características",
+    "k": "Escrita · codificada",
+    "src": "PDF do item 1 §1.11 · doutrina",
+    "trap": "Chamar a CF/88 de costumeira ou não escrita."
+   },
+   {
+    "d": "Quanto à origem, é promulgada (democrática, popular ou votada): foi elaborada por representantes eleitos pelo povo.",
+    "grupo": "Características",
+    "k": "Promulgada",
+    "src": "PDF do item 1 §1.11 · CF, preâmbulo",
+    "trap": "“É outorgada porque foi convocada por emenda do regime anterior.” A forma de convocação não muda a origem democrática."
+   },
+   {
+    "d": "Quanto ao modo de elaboração, é dogmática: foi escrita de uma vez, por um órgão constituinte, a partir das ideias dominantes no momento.",
+    "grupo": "Características",
+    "k": "Dogmática",
+    "src": "PDF do item 1 §1.11 · doutrina",
+    "trap": "Dizer que a CF/88 é histórica por refletir a história do país."
+   },
+   {
+    "d": "Quanto à estabilidade, é rígida: emenda exige processo mais difícil que o das leis (art.",
+    "grupo": "Características",
+    "k": "Rígida (super-rígida?)",
+    "src": "PDF do item 1 §1.11 · CF, art. 60; Aula 1 (Teoria Geral)",
+    "trap": "Chamar a CF/88 de semirrígida ou flexível. Se o item citar Alexandre de Moraes, “super-rígida” está certo."
+   },
+   {
+    "d": "Quanto à extensão, é analítica: trata em detalhe de muitos temas que poderiam ficar para a lei (servidores, tributação, previdência, ordem social).",
+    "grupo": "Características",
+    "k": "Analítica (prolixa)",
+    "src": "PDF do item 1 §1.11 · doutrina",
+    "trap": "Associar analítica a “limita-se a princípios gerais”."
+   },
+   {
+    "d": "Quanto ao conteúdo, é formal: toda norma do texto é constitucional, qualquer que seja o assunto, e tem a mesma hierarquia.",
+    "grupo": "Características",
+    "k": "Formal",
+    "src": "PDF do item 1 §1.11 · CF, art. 242, § 2º",
+    "trap": "“A CF/88 é material porque só contém matéria constitucional.”"
+   },
+   {
+    "d": "Quanto à finalidade, é dirigente: além de garantir direitos, traça diretrizes e metas para a ação estatal, por normas programáticas (art.",
+    "grupo": "Características",
+    "k": "Dirigente · social · eclética",
+    "src": "PDF do item 1 §1.11 · CF, arts. 1º, 3º e 170",
+    "trap": "Chamar a CF/88 de Constituição-garantia, liberal ou ortodoxa (de uma só ideologia)."
+   },
+   {
+    "d": "Classificação quanto à correspondência com a realidade (Karl Loewenstein).",
+    "grupo": "Características",
+    "k": "Normativa (Loewenstein)",
+    "src": "PDF do item 1 §1.11 (há autores que a chamam de nominal)",
+    "trap": "Chamar a CF/88 de semântica, ou trocar as definições de nominativa e semântica."
+   },
+   {
+    "d": "Quanto ao local da decretação, a CF/88 é autoconstituição (feita no próprio Estado); heteroconstituição é feita fora dele.",
+    "grupo": "Características",
+    "k": "Outras classificações",
+    "src": "PDF do item 1 §1.11",
+    "trap": "Confundir cesarista com democrática por causa do referendo, ou usar “plástica” num só sentido."
+   },
+   {
+    "d": "Preâmbulo; parte dogmática (corpo permanente, arts.",
+    "grupo": "Estrutura do texto",
+    "k": "Três partes",
+    "src": "Complemento DC-1 · Congresso Nacional, sessão de 16/10/2026",
+    "trap": "Contar o ADCT como um dos nove títulos, ou dizer que o preâmbulo integra a parte permanente."
+   },
+   {
+    "d": "I Princípios Fundamentais (1º a 4º); II Direitos e Garantias Fundamentais (5º a 17); III Organização do Estado (18 a 43); IV Organização dos Poderes (44 a 135); V Defesa do Estado e das Instituições (136 a 144); VI Tributação e Orçamento (145 a 169); VII Ordem Econômica e Financeira (170 a 192); VIII Ordem Social (193 a 232); IX Disposições Constitucionais Gerais (233 a 250).",
+    "grupo": "Estrutura do texto",
+    "k": "Os 9 títulos, na ordem",
+    "src": "Complemento DC-1 · CF/88",
+    "trap": "Inverter Estado e Poderes, ou dizer que o Título I trata dos direitos fundamentais (a CF/88 pôs os direitos antes da organização do Estado, ao contrário das anteriores)."
+   },
+   {
+    "d": "O texto se agrupa em títulos, capítulos, seções e subseções.",
+    "grupo": "Estrutura do texto",
+    "k": "Título → capítulo → … → item",
+    "src": "Complemento DC-1 · LC 95/1998, art. 10",
+    "trap": "Chamar de “inciso” o que é alínea. Para quem vai redigir e revisar textos legislativos, essa nomenclatura também cai na prova de Redação."
+   },
+   {
+    "d": "Orgânicos: estrutura do Estado e dos poderes (Títulos III e IV, tributação e orçamento).",
+    "grupo": "Estrutura do texto",
+    "k": "Elementos (José Afonso)",
+    "src": "PDF do item 1 §1.8 · José Afonso da Silva",
+    "trap": "Chamar os direitos sociais de elementos limitativos (são socioideológicos)."
+   },
+   {
+    "d": "STF, ADI 2.076 (2002): o preâmbulo não é norma jurídica, situa-se no domínio da política e não tem força normativa.",
+    "grupo": "Preâmbulo",
+    "k": "ADI 2.076 · irrelevância jurídica",
+    "src": "PDF do item 1 §1.8 · STF, ADI 2.076",
+    "trap": "“O preâmbulo tem força normativa e é de reprodução obrigatória.” Falso nas duas partes."
+   },
+   {
+    "d": "Anuncia quem fez a Constituição (representantes do povo, em Assembleia Nacional Constituinte), o que se institui (um Estado Democrático) e os valores (direitos sociais e individuais, liberdade, segurança, bem-estar, desenvolvimento, igualdade, justiça, sociedade fraterna, pluralista e sem preconceitos), promulgando-a “sob a proteção de Deus”.",
+    "grupo": "Preâmbulo",
+    "k": "O que o preâmbulo diz",
+    "src": "Complemento DC-1 · CF, preâmbulo e art. 19, I",
+    "trap": "Dizer que a invocação de Deus torna o Brasil um Estado confessional."
+   },
+   {
+    "d": "As normas do ADCT são apenas formalmente constitucionais (PDF §1.8): têm a mesma hierarquia da parte permanente, servem de parâmetro de controle e só mudam por emenda.",
+    "grupo": "ADCT",
+    "k": "Mesma hierarquia",
+    "src": "Complemento DC-1 · doutrina e STF",
+    "trap": "“O ADCT tem hierarquia inferior e não é parâmetro de controle.” Falso."
+   },
+   {
+    "d": "O art.",
+    "grupo": "ADCT",
+    "k": "Art. 2º · plebiscito de 1993",
+    "src": "Complemento DC-1 · ADCT, art. 2º; EC 2/1992",
+    "trap": "Trocar forma de governo (república) por forma de Estado (federação), que não foi votada e é cláusula pétrea."
+   },
+   {
+    "d": "O art.",
+    "grupo": "ADCT",
+    "k": "Art. 3º · revisão de 1994",
+    "src": "Complemento DC-1 · ADCT, art. 3º",
+    "trap": "Dizer que a revisão pode ser convocada de novo, ou dar à revisão o quórum de 3/5."
+   }
+  ],
+  "topico": "dc-1"
+ },
+ {
+  "id": "dc-2c",
+  "atualizadoEm": "2026-10-26",
+  "fontes": [
+   {
+    "titulo": "Mapa dos Direitos Sociais",
+    "url": "https://claude.ai/artifact/GaCEDzZupZkz7KznZmv4Fw"
+   }
+  ],
+  "itens": [
+   {
+    "d": "São direitos sociais: educação, saúde, alimentação, trabalho, moradia, transporte, lazer, segurança, previdência social, proteção à maternidade e à infância e assistência aos desamparados, na forma da Constituição.",
+    "grupo": "Rol e natureza",
+    "k": "Os 11 direitos do art. 6º",
+    "src": "Aula 5 · §5.1 · CF, art. 6º",
+    "trap": "A banca tira um item da lista ou inclui algo que não está nela. Monte a lista de memória antes de cada prova: são 11."
+   },
+   {
+    "d": "Os três não estavam no texto original. Entraram pelo poder constituinte derivado: moradia (EC 26/2000), alimentação (EC 64/2010) e transporte (EC 90/2015).",
+    "grupo": "Rol e natureza",
+    "k": "Moradia · alimentação · transporte",
+    "src": "Aula 5 · §5.1",
+    "trap": "A aula avisa que as bancas adoram cobrar esses três exatamente por não serem do texto original. Item que diz “o texto originário já previa o transporte” é errado."
+   },
+   {
+    "d": "Parágrafo único (EC 114/2021): todo BRASILEIRO em situação de VULNERABILIDADE social tem direito a renda básica FAMILIAR, garantida pelo poder público em programa permanente de transferência de renda.",
+    "grupo": "Rol e natureza",
+    "k": "Renda básica familiar",
+    "src": "Aula 5 · §5.1 · CF, art. 6º, parágrafo único",
+    "trap": "Trocar “familiar” por “universal”, “brasileiro” por “residente” ou dispensar a vulnerabilidade."
+   },
+   {
+    "d": "Direitos de 2ª geração: impõem ao Estado uma obrigação de fazer, de prestar, para realizar a igualdade material.",
+    "grupo": "Rol e natureza",
+    "k": "2ª geração · prestação positiva",
+    "src": "Aula 5 · §5.1; §5.2 (art. 9º)",
+    "trap": "Exceção que a aula destaca: a greve é direito social, mas não exige prestação do Estado. Ele deve se abster."
+   },
+   {
+    "d": "Há divergência. Pedro Lenza: aplicação imediata (art. 5º, § 1º), com mandado de injunção e ADO contra a omissão.",
+    "grupo": "Rol e natureza",
+    "k": "Eficácia dos direitos sociais",
+    "src": "Aula 5 · §5.1 · Pedro Lenza",
+    "trap": "O Cebraspe já deu como certa a tese da eficácia limitada. Leia o item inteiro: se disser que são “meramente programáticas”, sem força normativa, desconfie."
+   },
+   {
+    "d": "O Estado efetiva os direitos sociais na medida do financeiramente possível.",
+    "grupo": "Concretização",
+    "k": "Reserva do possível",
+    "src": "Aula 5 · §5.1",
+    "trap": "Absolutizar qualquer lado: nem “independentemente de recursos”, nem “integralmente aceita”."
+   },
+   {
+    "d": "Conjunto de prestações essenciais a uma existência digna.",
+    "grupo": "Concretização",
+    "k": "Mínimo existencial",
+    "src": "Aula 5 · §5.1",
+    "trap": "A ordem é essa. Item que diga que o mínimo existencial depende da reserva do possível inverte a lógica."
+   },
+   {
+    "d": "Conquistas sociais já alcançadas não podem ser desconstituídas sem esquema alternativo ou compensatório (Canotilho).",
+    "grupo": "Concretização",
+    "k": "Vedação ao retrocesso",
+    "src": "Aula 5 · §5.1 · Canotilho",
+    "trap": "Restringir o princípio ao Executivo."
+   },
+   {
+    "d": "Formular políticas é tarefa primária do Legislativo e do Executivo.",
+    "grupo": "Concretização",
+    "k": "Judiciário e políticas públicas",
+    "src": "Aula 5 · §5.1",
+    "trap": "“Inadmissível”, “nunca”, “livre invasão”: o STF admite a intervenção, mas excepcional."
+   },
+   {
+    "d": "Inciso I: relação de emprego protegida contra despedida arbitrária ou sem justa causa, nos termos de LEI COMPLEMENTAR, com indenização compensatória (eficácia limitada).",
+    "grupo": "Emprego e salário",
+    "k": "Despedida arbitrária · LC",
+    "src": "Aula 5 · §5.2 · ADCT, art. 10",
+    "trap": "Trocar LC por lei ordinária; dizer que a CF proíbe a despedida sem justa causa."
+   },
+   {
+    "d": "Seguro-desemprego só no desemprego INVOLUNTÁRIO.",
+    "grupo": "Emprego e salário",
+    "k": "Seguro-desemprego · FGTS",
+    "src": "Aula 5 · §5.2",
+    "trap": "A aula avisa: as bancas trocam “involuntário” por “voluntário”."
+   },
+   {
+    "d": "Fixado em lei, nacionalmente unificado (não há mínimo regional; piso salarial é outra coisa), vedada a vinculação para qualquer fim.",
+    "grupo": "Emprego e salário",
+    "k": "Salário mínimo",
+    "src": "Aula 5 · §5.2 · SV 4 e 6",
+    "trap": "Pensão alimentícia em salários mínimos é admitida (RE 842.157); adicional de insalubridade continua sobre o mínimo até lei ou convenção. A banca explora essas exceções."
+   },
+   {
+    "d": "Inciso VI: irredutibilidade do salário, SALVO convenção ou acordo coletivo.",
+    "grupo": "Emprego e salário",
+    "k": "Irredutibilidade",
+    "src": "Aula 5 · §5.2",
+    "trap": "Dizer que a irredutibilidade é absoluta."
+   },
+   {
+    "d": "IX: noturno superior ao diurno; a CF não fixa o percentual (Súmula 213 do STF: devido mesmo em revezamento).",
+    "grupo": "Emprego e salário",
+    "k": "Noturno · 13º · salário-família",
+    "src": "Aula 5 · §5.2",
+    "trap": "Salário-família para qualquer trabalhador; percentual de adicional noturno fixado pela CF."
+   },
+   {
+    "d": "XIII, na redação da EC 141, de 16/10/2026: duração normal não superior a 8 h diárias e 40 h semanais, facultadas a compensação de horários e a redução da jornada por acordo ou convenção coletiva.",
+    "grupo": "Jornada e licenças",
+    "k": "8 h diárias · 40 h semanais (EC 141)",
+    "src": "CF, art. 7º, XIII (EC 141/2026) · incremento; Aula 5 · §5.2 (texto anterior)",
+    "trap": "A emenda é posterior ao edital. A banca costuma cobrar a legislação vigente na data do edital (44 h), mas pode cobrar a nova (40 h). Leia se o item fala em “texto atual” ou cita a EC 141. Outra pegadinha: dizer que a emenda permite reduzir o salário na proporção da jornada."
+   },
+   {
+    "d": "XIV: 6 h para turnos ininterruptos de revezamento (alternância de horários), SALVO negociação coletiva, que pode aumentar.",
+    "grupo": "Jornada e licenças",
+    "k": "Turnos de revezamento · 6 h",
+    "src": "Aula 5 · §5.2",
+    "trap": "Domésticos NÃO têm esse direito."
+   },
+   {
+    "d": "XVI: serviço extraordinário superior, NO MÍNIMO, em 50% ao normal.",
+    "grupo": "Jornada e licenças",
+    "k": "Hora extra ≥ 50% · repouso de 2 dias",
+    "src": "Aula 5 · §5.2; CF, art. 7º, XV e § 2º (EC 141/2026) · incremento",
+    "trap": "As palavras “no mínimo” e “preferencialmente” são o alvo. Com a EC 141, a banca pode trocar “um dos quais” por “ambos”."
+   },
+   {
+    "d": "XVII: férias anuais remuneradas com, PELO MENOS, 1/3 a mais.",
+    "grupo": "Jornada e licenças",
+    "k": "Férias + 1/3",
+    "src": "Aula 5 · §5.2",
+    "trap": "Limitar o adicional a 30 dias; dizer que a CF fixa 30 dias."
+   },
+   {
+    "d": "XVIII: 120 dias, sem prejuízo do emprego e do salário (também para servidoras).",
+    "grupo": "Jornada e licenças",
+    "k": "Licença-gestante · 120 dias",
+    "src": "Aula 5 · §5.2",
+    "trap": "Confundir a duração constitucional (120) com a legal (até 180)."
+   },
+   {
+    "d": "XIX: nos termos da lei (eficácia limitada).",
+    "grupo": "Jornada e licenças",
+    "k": "Licença-paternidade",
+    "src": "Aula 5 · §5.2 · ADCT, art. 10, § 1º; Lei 15.371/2026",
+    "trap": "Atenção à data de corte do edital: a banca pode cobrar o ADCT (5 dias) ou a lei nova (10 dias em 2027)."
+   },
+   {
+    "d": "XXI: aviso prévio proporcional ao tempo de serviço, NO MÍNIMO 30 dias, nos termos da lei.",
+    "grupo": "Jornada e licenças",
+    "k": "Aviso prévio · creche",
+    "src": "Aula 5 · §5.2",
+    "trap": "A aula pede atenção ao limite de idade: 5 anos (a banca troca por 6)."
+   },
+   {
+    "d": "XXIX: 5 anos para urbanos e rurais, até o limite de 2 anos após a extinção do contrato.",
+    "grupo": "Prazos e isonomia",
+    "k": "Prescrição 5 anos / 2 anos",
+    "src": "Aula 5 · §5.2",
+    "trap": "Inverter os números (2 durante, 5 depois)."
+   },
+   {
+    "d": "XXXIII: nenhum trabalho antes dos 16, salvo aprendiz a partir dos 14.",
+    "grupo": "Prazos e isonomia",
+    "k": "Menor: 14 · 16 · 18",
+    "src": "Aula 5 · §5.2",
+    "trap": "Exceção paga com dinheiro (adicional) não existe para o menor."
+   },
+   {
+    "d": "XXVIII: a cargo do empregador, sem excluir a indenização quando houver dolo ou culpa.",
+    "grupo": "Prazos e isonomia",
+    "k": "Seguro contra acidentes",
+    "src": "Aula 5 · §5.2",
+    "trap": "Dizer que o seguro dispensa a indenização."
+   },
+   {
+    "d": "XXX: sem diferença por sexo, idade, cor ou estado civil.",
+    "grupo": "Prazos e isonomia",
+    "k": "Não discriminação · avulso",
+    "src": "Aula 5 · §5.2",
+    "trap": "Domésticos não têm XXXII nem XXXIV."
+   },
+   {
+    "d": "IV, VI, VII, VIII, X, XIII, XV, XVI, XVII, XVIII, XIX, XXI, XXII, XXIV, XXVI, XXX, XXXI e XXXIII, mais a integração à previdência.",
+    "grupo": "Domésticos",
+    "k": "Direitos de exercício imediato",
+    "src": "Aula 5 · §5.3",
+    "trap": "A banca cita a EC 72/2013 como se tivesse dado igualdade total. Não deu."
+   },
+   {
+    "d": "Despedida arbitrária, seguro-desemprego, FGTS, adicional noturno, salário-família, creche e seguro contra acidentes: atendidas as condições da lei e com simplificação tributária.",
+    "grupo": "Domésticos",
+    "k": "Dependentes de lei: I II III IX XII XXV XXVIII",
+    "src": "Aula 5 · §5.3 · LC 150/2015",
+    "trap": "Dizer que o adicional noturno do doméstico é de aplicação imediata pelo texto da CF."
+   },
+   {
+    "d": "Piso salarial (V); PLR (XI); turnos de 6 h (XIV); proteção do mercado da mulher (XX); adicional penoso, insalubre ou perigoso (XXIII); proteção contra automação (XXVII); prescrição do XXIX; não distinção…",
+    "grupo": "Domésticos",
+    "k": "O que o doméstico não tem",
+    "src": "Aula 5 · §5.3",
+    "trap": "A aula lista esses nove justamente porque são poucos e a banca os usa como pegadinha."
+   },
+   {
+    "d": "I: a lei não pode exigir autorização do Estado; ressalva só o registro no órgão competente.",
+    "grupo": "Sindicatos",
+    "k": "Fundação sem autorização",
+    "src": "Aula 5 · §5.2",
+    "trap": "Confundir registro (exigido) com autorização (proibida)."
+   },
+   {
+    "d": "II: uma organização por categoria, em qualquer grau, na mesma base territorial, definida pelos interessados e não inferior a um Município.",
+    "grupo": "Sindicatos",
+    "k": "Unicidade · base ≥ Município",
+    "src": "Aula 5 · §5.2",
+    "trap": "Trocar Município por Estado; dizer que o poder público define a base."
+   },
+   {
+    "d": "III: cabe ao sindicato a defesa dos direitos coletivos OU INDIVIDUAIS da categoria, inclusive judicial ou administrativa.",
+    "grupo": "Sindicatos",
+    "k": "Defesa coletiva ou individual",
+    "src": "Aula 5 · §5.2",
+    "trap": "A palavra “exclusivamente”."
+   },
+   {
+    "d": "Confederativa (art. 8º, IV): fixada pela assembleia, só dos FILIADOS (SV 40), sem natureza tributária.",
+    "grupo": "Sindicatos",
+    "k": "Três contribuições",
+    "src": "Aula 5 · §5.2 · SV 40",
+    "trap": "Misturar as três. Quem alcança não filiados (com oposição) é a assistencial, não a confederativa."
+   },
+   {
+    "d": "V: ninguém é obrigado a filiar-se ou a manter-se filiado.",
+    "grupo": "Sindicatos",
+    "k": "Filiação · negociação · aposentado",
+    "src": "Aula 5 · §5.2",
+    "trap": "Tornar dispensável o que é obrigatório."
+   },
+   {
+    "d": "VIII: do REGISTRO DA CANDIDATURA até 1 ANO após o fim do mandato, se eleito, ainda que suplente, salvo falta grave.",
+    "grupo": "Sindicatos",
+    "k": "Estabilidade do dirigente",
+    "src": "Aula 5 · §5.2",
+    "trap": "Começar na posse ou na eleição; esquecer o suplente."
+   },
+   {
+    "d": "Art. 9º: compete aos TRABALHADORES decidir a oportunidade e os interesses a defender.",
+    "grupo": "Greve e representação",
+    "k": "Greve: quem decide",
+    "src": "Aula 5 · §5.2",
+    "trap": "Trocar “trabalhadores” por “empregadores”; dizer que a greve é absoluta."
+   },
+   {
+    "d": "Militares: vedada pelo art. 142, § 3º, IV.",
+    "grupo": "Greve e representação",
+    "k": "Greve na segurança pública",
+    "src": "STF, Tema 541 · incremento (não está na aula)",
+    "trap": "Restringir a vedação aos militares."
+   },
+   {
+    "d": "Participação dos trabalhadores E empregadores nos colegiados dos órgãos públicos em que seus interesses profissionais ou previdenciários sejam discutidos e deliberados.",
+    "grupo": "Greve e representação",
+    "k": "Art. 10 · colegiados",
+    "src": "Aula 5 · §5.2",
+    "trap": "Deixar só um dos lados ou trocar “previdenciários” por outro interesse."
+   },
+   {
+    "d": "Empresas com MAIS DE DUZENTOS empregados: eleição de UM representante, com finalidade EXCLUSIVA de entendimento direto com os empregadores.",
+    "grupo": "Greve e representação",
+    "k": "Art. 11 · mais de 200",
+    "src": "Aula 5 · §5.2",
+    "trap": "Trocar o número (100) ou a finalidade (“entre outras”)."
+   }
+  ],
+  "topico": "dc-2c"
+ },
+ {
+  "id": "dc-2e",
+  "atualizadoEm": "2026-11-06",
+  "fontes": [
+   {
+    "titulo": "Constituição Federal, arts. 14 a 17 e 55 (texto vigente, com as EC 97/2017, 111/2021, 117/2022 e 133/2024)",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+   },
+   {
+    "titulo": "LC 219/2025 (texto compilado no TSE)",
+    "url": "https://www.tse.jus.br/legislacao/compilada/lei/complementar/lei-complementar-no-219-de-29-de-setembro-de-2025"
+   },
+   {
+    "titulo": "STF valida cota de 30% para pessoas pretas e pardas (ADI 7.707), Correio Braziliense, 08/07/2026",
+    "url": "https://www.correiobraziliense.com.br/politica/2026/07/7457275-stf-valida-cota-de-30-dos-fundos-eleitorais-para-candidatos-pretos-e-pardos.html"
+   }
+  ],
+  "itens": [
+   {
+    "d": "Em sentido estrito, cidadão é o nacional alistado como eleitor, apto a exercer direitos políticos.",
+    "grupo": "Conceitos e soberania popular",
+    "k": "Cidadania",
+    "src": "CF, arts. 1º, parágrafo único, e 14, caput",
+    "trap": ""
+   },
+   {
+    "d": "O português com residência permanente no Brasil, havendo reciprocidade em favor de brasileiros, recebe os direitos de brasileiro naturalizado, inclusive os políticos, salvo os casos previstos na CF.",
+    "grupo": "Conceitos e soberania popular",
+    "k": "Português equiparado",
+    "src": "CF, arts. 1º, parágrafo único, e 14, caput",
+    "trap": "Dizer que o português equiparado precisa se naturalizar para votar."
+   },
+   {
+    "d": "Sufrágio é o direito de participar (votar e ser votado).",
+    "grupo": "Conceitos e soberania popular",
+    "k": "Sufrágio ≠ voto ≠ escrutínio",
+    "src": "CF, arts. 1º, parágrafo único, e 14, caput",
+    "trap": "Trocar os termos: “o sufrágio é secreto” mistura direito com modo de exercício; secreto é o voto (ou o escrutínio)."
+   },
+   {
+    "d": "Universal quer dizer que o direito não depende de renda (sufrágio censitário) nem de grau de instrução (sufrágio capacitário).",
+    "grupo": "Conceitos e soberania popular",
+    "k": "Sufrágio universal",
+    "src": "CF, arts. 1º, parágrafo único, e 14, caput",
+    "trap": ""
+   },
+   {
+    "d": "Se o cargo de Presidente e o de Vice ficarem vagos nos últimos dois anos do mandato, a eleição para os dois cargos é indireta, feita pelo Congresso Nacional, 30 dias depois da última vaga.",
+    "grupo": "Conceitos e soberania popular",
+    "k": "Exceção ao voto direto",
+    "src": "CF, arts. 1º, parágrafo único, e 14, caput",
+    "trap": "“O voto direto não admite exceção na CF.” Admite: art. 81, § 1º."
+   },
+   {
+    "d": "O art.",
+    "grupo": "Conceitos e soberania popular",
+    "k": "Cláusula pétrea",
+    "src": "CF, art. 60, § 4º, II",
+    "trap": "Dizer que o voto obrigatório é cláusula pétrea. Emenda pode tornar o voto facultativo."
+   },
+   {
+    "d": "Além de eleger, o povo decide diretamente por três instrumentos do art.",
+    "grupo": "Conceitos e soberania popular",
+    "k": "Democracia semidireta",
+    "src": "CF, arts. 14, I a III, 49, XV, e 61, § 2º; Lei 9.709/1998",
+    "trap": "Trocar plebiscito (prévio) por referendo (posterior). Mnemônico: PRÉbiscito vem antes."
+   },
+   {
+    "d": "As consultas sobre questões locais aprovadas pelas Câmaras Municipais são feitas no mesmo dia das eleições municipais, se enviadas à Justiça Eleitoral até 90 dias antes.",
+    "grupo": "Conceitos e soberania popular",
+    "k": "Consultas populares municipais",
+    "src": "CF, art. 14, §§ 12 e 13 (EC 111/2021)",
+    "trap": "Dizer que as consultas municipais têm horário eleitoral gratuito próprio."
+   },
+   {
+    "d": "O alistamento e o voto são facultativos para três grupos.",
+    "grupo": "Alistamento e voto",
+    "k": "Facultativo",
+    "src": "CF, art. 14, §§ 1º e 2º",
+    "trap": ""
+   },
+   {
+    "d": "Quem tem mais de 70 anos escolhe se vota.",
+    "grupo": "Alistamento e voto",
+    "k": "Maiores de 70",
+    "src": "CF, art. 14, §§ 1º e 2º",
+    "trap": "Trocar 70 por 65 ou 60."
+   },
+   {
+    "d": "Conscrito é quem presta o serviço militar obrigatório (incluídos médicos, dentistas, farmacêuticos e veterinários do serviço obrigatório).",
+    "grupo": "Alistamento e voto",
+    "k": "Conscritos",
+    "src": "CF, art. 14, §§ 1º e 2º",
+    "trap": "Dizer que todo militar é inalistável. Só o conscrito, e só durante o serviço obrigatório."
+   },
+   {
+    "d": "Só perde o direito de votar quem tem os direitos políticos suspensos ou perdidos.",
+    "grupo": "Alistamento e voto",
+    "k": "Quem continua votando",
+    "src": "CF, art. 15, III · incremento",
+    "trap": "Dizer que toda pessoa presa fica sem direitos políticos. A suspensão exige condenação criminal transitada em julgado."
+   },
+   {
+    "d": "Nacionalidade brasileira; pleno exercício dos direitos políticos; alistamento eleitoral; domicílio eleitoral na circunscrição; filiação partidária; idade mínima.",
+    "grupo": "Condições de elegibilidade",
+    "k": "As seis condições",
+    "src": "CF, art. 14, § 3º; Lei 9.504/1997, arts. 9º e 11, § 2º",
+    "trap": ""
+   },
+   {
+    "d": "O candidato precisa ser eleitor no lugar da disputa (o município, para prefeito; o estado, para deputado).",
+    "grupo": "Condições de elegibilidade",
+    "k": "Domicílio eleitoral",
+    "src": "Lei 9.504/1997, art. 9º · incremento",
+    "trap": "Domicílio eleitoral é mais amplo que o civil: basta vínculo político, familiar, profissional ou comunitário."
+   },
+   {
+    "d": "Como o militar da ativa não pode se filiar (art.",
+    "grupo": "Condições de elegibilidade",
+    "k": "Militar da ativa",
+    "src": "TSE, jurisprudência · incremento",
+    "trap": "Exigir do militar da ativa filiação 6 meses antes."
+   },
+   {
+    "d": "A idade varia com o cargo e, em regra, é verificada na data da posse.",
+    "grupo": "Condições de elegibilidade",
+    "k": "Idade mínima",
+    "src": "CF, art. 14, § 3º, VI; Lei 9.504/1997, art. 11, § 2º",
+    "trap": "Pôr o senador nos 30 anos, ou o prefeito nos 18. Para deputado federal, 21 anos na posse."
+   },
+   {
+    "d": "Valem para qualquer cargo, em qualquer lugar: são inelegíveis os inalistáveis (estrangeiros e conscritos) e os analfabetos.",
+    "grupo": "Inelegibilidades",
+    "k": "Absolutas",
+    "src": "CF, art. 14, §§ 4º a 9º; LC 64/1990",
+    "trap": "Item: “o analfabeto é inalistável”. Falso: ele se alista e vota; só não pode ser eleito."
+   },
+   {
+    "d": "Presidente, governadores e prefeitos, e quem os sucedeu ou substituiu no curso do mandato, podem ser reeleitos uma vez para o período seguinte (EC 16/1997).",
+    "grupo": "Inelegibilidades",
+    "k": "Reeleição",
+    "src": "CF, art. 14, §§ 4º a 9º; LC 64/1990",
+    "trap": "Dizer que o limite de uma reeleição alcança deputados e senadores."
+   },
+   {
+    "d": "Para concorrer a OUTROS cargos, Presidente, governadores e prefeitos devem renunciar ao mandato até 6 meses antes da eleição.",
+    "grupo": "Inelegibilidades",
+    "k": "Desincompatibilização",
+    "src": "CF, art. 14, §§ 4º a 9º; LC 64/1990",
+    "trap": "Exigir renúncia para disputar a reeleição, ou falar em “licença” em vez de renúncia."
+   },
+   {
+    "d": "No território de jurisdição do titular, são inelegíveis o cônjuge e os parentes consanguíneos ou afins até o segundo grau, ou por adoção, do Presidente, de governador, de prefeito ou de quem os substituiu nos 6 meses anteriores.",
+    "grupo": "Inelegibilidades",
+    "k": "Reflexa",
+    "src": "CF, art. 14, §§ 4º a 9º; LC 64/1990",
+    "trap": ""
+   },
+   {
+    "d": "O militar alistável é elegível.",
+    "grupo": "Inelegibilidades",
+    "k": "Militar",
+    "src": "CF, art. 14, §§ 4º a 9º; LC 64/1990",
+    "trap": "Trocar as consequências: o afastamento definitivo é para quem tem menos de 10 anos; a agregação, para quem tem mais."
+   },
+   {
+    "d": "Mudou a contagem: a inelegibilidade por perda de mandato ou renúncia passa a correr da decisão ou da renúncia (não mais do fim do mandato); condenações pelos mesmos fatos ou fatos conexos contam da primeira decisão colegiada; condenações sucessivas por improbidade se unificam com teto de 12 anos.",
+    "grupo": "Inelegibilidades",
+    "k": "LC 219/2025",
+    "src": "LC 219/2025 · incremento; conferir a situação dos vetos",
+    "trap": "Lei nova, cobrança provável em itens de atualidade. Não confunda com mudança no texto da CF."
+   },
+   {
+    "d": "Cancelamento da naturalização; Incapacidade civil absoluta; Condenação criminal transitada em julgado; REcusa de cumprir obrigação a todos imposta (escusa de consciência); IMprobidade administrativa.",
+    "grupo": "Perda e suspensão",
+    "k": "Cinco hipóteses",
+    "src": "CF, art. 15",
+    "trap": ""
+   },
+   {
+    "d": "Quem recusa obrigação legal a todos imposta (como o serviço militar) e também a prestação alternativa perde os direitos políticos para boa parte da doutrina; a Lei 8.239/1991 fala em suspensão, que cessa quando a pessoa cumpre a obrigação.",
+    "grupo": "Perda e suspensão",
+    "k": "Escusa de consciência",
+    "src": "CF, arts. 5º, VIII, e 15, IV; Lei 8.239/1991, art. 4º, § 2º",
+    "trap": "Divergência registrada: num item, siga a fonte que ele citar. Escusa só gera restrição se a pessoa recusar também a prestação alternativa."
+   },
+   {
+    "d": "A suspensão vale mesmo quando a prisão é substituída por pena restritiva de direitos (prestação de serviços, multa).",
+    "grupo": "Perda e suspensão",
+    "k": "Pena restritiva também suspende",
+    "src": "STF, RE 601.182 (Tema 370)",
+    "trap": "“Pena substituída por restritiva de direitos não suspende direitos políticos.” Falso."
+   },
+   {
+    "d": "O parlamentar que tem os direitos políticos perdidos ou suspensos perde o mandato.",
+    "grupo": "Perda e suspensão",
+    "k": "Efeito no mandato",
+    "src": "CF, art. 55, IV e VI, §§ 2º e 3º",
+    "trap": "Trocar quem decide: condenação criminal → Plenário decide; direitos políticos → Mesa declara."
+   },
+   {
+    "d": "A lei que altera o processo eleitoral entra em vigor na data da publicação, mas não se aplica à eleição que ocorra até um ano da data de sua vigência.",
+    "grupo": "Processo eleitoral e controle",
+    "k": "Anualidade eleitoral",
+    "src": "CF, arts. 14, §§ 10 e 11, e 16",
+    "trap": "“A lei eleitoral só entra em vigor um ano após a publicação.” Falso: entra em vigor na publicação; o que se adia é a aplicação."
+   },
+   {
+    "d": "A ação de impugnação de mandato eletivo é proposta na Justiça Eleitoral em até 15 dias contados da diplomação, instruída com provas de abuso do poder econômico, corrupção ou fraude.",
+    "grupo": "Processo eleitoral e controle",
+    "k": "AIME",
+    "src": "CF, arts. 14, §§ 10 e 11, e 16",
+    "trap": "Trocar o termo inicial (diplomação, não posse nem eleição) ou o prazo (15 dias)."
+   },
+   {
+    "d": "O brasileiro naturalizado vota e pode ser eleito para quase todos os cargos; só não pode ocupar os privativos de brasileiro nato do art.",
+    "grupo": "Conceitos e soberania popular",
+    "k": "Elegibilidade do naturalizado",
+    "src": "CF, art. 12, § 3º",
+    "trap": "Dizer que o naturalizado não pode ser eleito deputado federal."
+   },
+   {
+    "d": "As alíneas do art.",
+    "grupo": "Inelegibilidades",
+    "k": "Hipóteses mais cobradas da LC 64",
+    "src": "LC 64/1990, art. 1º, I · incremento",
+    "trap": ""
+   },
+   {
+    "d": "Suspensão acaba sozinha quando cessa a causa (fim da pena, fim do prazo da improbidade, cumprimento da obrigação na escusa).",
+    "grupo": "Perda e suspensão",
+    "k": "Reaquisição",
+    "src": "CF, arts. 12, § 4º, I, e 15 · incremento",
+    "trap": "Dizer que o naturalizado com naturalização cancelada pode se naturalizar de novo para recuperar os direitos políticos."
+   }
+  ],
+  "topico": "dc-2e"
+ },
+ {
+  "id": "dc-2f",
+  "atualizadoEm": "2026-11-06",
+  "fontes": [
+   {
+    "titulo": "Constituição Federal, arts. 14 a 17 e 55 (texto vigente, com as EC 97/2017, 111/2021, 117/2022 e 133/2024)",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+   },
+   {
+    "titulo": "LC 219/2025 (texto compilado no TSE)",
+    "url": "https://www.tse.jus.br/legislacao/compilada/lei/complementar/lei-complementar-no-219-de-29-de-setembro-de-2025"
+   },
+   {
+    "titulo": "STF valida cota de 30% para pessoas pretas e pardas (ADI 7.707), Correio Braziliense, 08/07/2026",
+    "url": "https://www.correiobraziliense.com.br/politica/2026/07/7457275-stf-valida-cota-de-30-dos-fundos-eleitorais-para-candidatos-pretos-e-pardos.html"
+   }
+  ],
+  "itens": [
+   {
+    "d": "O Estado não autoriza a criação de partidos: ela é livre, como a fusão (dois viram um novo), a incorporação (um absorve outro) e a extinção.",
+    "grupo": "Natureza e criação",
+    "k": "Liberdade partidária",
+    "src": "CF, art. 17, caput e § 2º; Lei 9.096/1995",
+    "trap": "Dizer que a criação depende de autorização do Poder Executivo."
+   },
+   {
+    "d": "O partido adquire personalidade jurídica na forma da lei civil (registro em cartório) e depois registra o estatuto no TSE.",
+    "grupo": "Natureza e criação",
+    "k": "Natureza e registro",
+    "src": "CF, art. 17, caput e § 2º; Lei 9.096/1995",
+    "trap": "Dizer que o partido é pessoa jurídica de direito público ou que adquire personalidade com o registro no TSE."
+   },
+   {
+    "d": "Para registrar o estatuto no TSE, a lei exige assinaturas de eleitores não filiados equivalentes a 0,5% dos votos válidos da última eleição para a Câmara, em pelo menos um terço dos estados, com no mínimo 0,1% em cada, colhidas em até 2 anos.",
+    "grupo": "Natureza e criação",
+    "k": "Apoiamento mínimo",
+    "src": "Lei 9.096/1995, art. 7º, § 1º · incremento",
+    "trap": ""
+   },
+   {
+    "d": "O pluralismo político é fundamento da República (art.",
+    "grupo": "Natureza e criação",
+    "k": "Pluripartidarismo",
+    "src": "CF, arts. 1º, V, e 17",
+    "trap": ""
+   },
+   {
+    "d": "Não se admite partido só de um estado ou região: a lei exige apoio de eleitores distribuídos em pelo menos um terço dos estados para o registro.",
+    "grupo": "Limites e vedações",
+    "k": "Caráter nacional",
+    "src": "CF, art. 17, caput, I a IV, e § 4º",
+    "trap": ""
+   },
+   {
+    "d": "O partido não pode receber recursos financeiros de entidade ou governo estrangeiros nem se subordinar a eles.",
+    "grupo": "Limites e vedações",
+    "k": "Sem dinheiro estrangeiro",
+    "src": "CF, art. 17, caput, I a IV, e § 4º",
+    "trap": ""
+   },
+   {
+    "d": "É vedado aos partidos usar organização paramilitar (grupo armado com estrutura militar).",
+    "grupo": "Limites e vedações",
+    "k": "Sem organização paramilitar",
+    "src": "CF, art. 17, caput, I a IV, e § 4º",
+    "trap": ""
+   },
+   {
+    "d": "O partido presta contas anuais e de campanha à Justiça Eleitoral, não ao Tribunal de Contas da União, porque gere dinheiro público do fundo partidário e do fundo eleitoral.",
+    "grupo": "Limites e vedações",
+    "k": "Prestação de contas",
+    "src": "CF, art. 17, caput, I a IV, e § 4º",
+    "trap": "Dizer que as contas dos partidos são julgadas pelo TCU."
+   },
+   {
+    "d": "É a atuação do partido dentro das Casas legislativas, por bancadas e líderes.",
+    "grupo": "Limites e vedações",
+    "k": "Funcionamento parlamentar",
+    "src": "CF, art. 17, caput, I a IV, e § 4º",
+    "trap": ""
+   },
+   {
+    "d": "A EC 97/2017 garantiu ao partido escolher a duração dos órgãos provisórios (comissões que dirigem o partido onde não há diretório eleito).",
+    "grupo": "Autonomia interna",
+    "k": "Órgãos provisórios",
+    "src": "CF, art. 17, § 1º (EC 97/2017)",
+    "trap": ""
+   },
+   {
+    "d": "O partido define estrutura interna, órgãos permanentes e provisórios e normas de fidelidade.",
+    "grupo": "Autonomia interna",
+    "k": "Autonomia e coligações",
+    "src": "CF, art. 17, § 1º",
+    "trap": "Dizer que a CF ainda permite coligação para deputado ou vereador."
+   },
+   {
+    "d": "Dois ou mais partidos se unem por no mínimo 4 anos, com abrangência nacional, e atuam como se fossem um só, inclusive no Parlamento.",
+    "grupo": "Autonomia interna",
+    "k": "Federação partidária",
+    "src": "Lei 9.096/1995, art. 11-A; STF, ADI 7.021 · incremento",
+    "trap": "Dizer que federação é coligação proporcional disfarçada e por isso inconstitucional."
+   },
+   {
+    "d": "O eleito por partido que não atingiu a cláusula mantém o mandato e pode se filiar a outro que a atingiu, sem perda do mandato; a migração não conta para dividir fundo e tempo de TV.",
+    "grupo": "Cláusula de desempenho",
+    "k": "Eleito por partido sem cláusula",
+    "src": "CF, art. 17, §§ 3º e 5º; EC 97/2017, art. 3º",
+    "trap": ""
+   },
+   {
+    "d": "A cláusula só corta o acesso ao fundo partidário e ao tempo gratuito de rádio e TV.",
+    "grupo": "Cláusula de desempenho",
+    "k": "O que se perde",
+    "src": "CF, art. 17, §§ 3º e 5º; EC 97/2017, art. 3º",
+    "trap": ""
+   },
+   {
+    "d": "Em 2006, o STF derrubou a cláusula de barreira criada só por lei (Lei 9.096/1995, art.",
+    "grupo": "Cláusula de desempenho",
+    "k": "STF em 2006",
+    "src": "STF, ADI 1.351 · incremento",
+    "trap": ""
+   },
+   {
+    "d": "Nos MS 26.602, 26.603 e 26.604 (2007), o STF decidiu que, no sistema proporcional, o mandato pertence ao partido, e o TSE regulou a perda por infidelidade.",
+    "grupo": "Fidelidade partidária",
+    "k": "Mandato pertence ao partido",
+    "src": "STF, MS 26.602 · incremento",
+    "trap": ""
+   },
+   {
+    "d": "A perda por troca de partido não alcança Presidente, governador, prefeito e senador, eleitos pelo sistema majoritário, em que o voto é dado à pessoa.",
+    "grupo": "Fidelidade partidária",
+    "k": "Majoritários fora",
+    "src": "STF, ADI 5.081",
+    "trap": "Estender a perda ao senador ou ao prefeito."
+   },
+   {
+    "d": "Hipóteses legais: mudança substancial ou desvio reiterado do programa, grave discriminação pessoal e a janela de 30 dias antes do fim do prazo de filiação, no fim do mandato.",
+    "grupo": "Fidelidade partidária",
+    "k": "Justa causa",
+    "src": "Lei 9.096/1995, art. 22-A · incremento",
+    "trap": ""
+   },
+   {
+    "d": "Desde a EC 111/2021, o parlamentar também pode sair sem perder o mandato se o partido concordar.",
+    "grupo": "Fidelidade partidária",
+    "k": "Anuência do partido",
+    "src": "CF, art. 17, § 6º (EC 111/2021)",
+    "trap": ""
+   },
+   {
+    "d": "Dinheiro público distribuído todo ano para manter o partido.",
+    "grupo": "Financiamento",
+    "k": "Fundo partidário",
+    "src": "Lei 9.096/1995, art. 38 · incremento",
+    "trap": ""
+   },
+   {
+    "d": "O Fundo Especial de Financiamento de Campanha, criado pela Lei 13.487/2017, paga as campanhas no ano da eleição.",
+    "grupo": "Financiamento",
+    "k": "FEFC",
+    "src": "Lei 9.504/1997, art. 16-C · incremento",
+    "trap": ""
+   },
+   {
+    "d": "O STF declarou inconstitucional a doação de pessoas jurídicas a campanhas e partidos, por desequilibrar a disputa.",
+    "grupo": "Financiamento",
+    "k": "Doação de empresas proibida",
+    "src": "STF, ADI 4.650 · incremento",
+    "trap": "Dizer que empresas podem doar até um teto."
+   },
+   {
+    "d": "Cada partido deve lançar ao menos 30% e no máximo 70% de candidaturas de cada sexo nas eleições proporcionais.",
+    "grupo": "Ações afirmativas",
+    "k": "Cota de candidaturas",
+    "src": "Lei 9.504/1997, art. 10, § 3º · incremento",
+    "trap": ""
+   },
+   {
+    "d": "Antes da EC 117/2022, o STF já havia exigido que ao menos 30% dos recursos fossem para candidatas, na proporção das candidaturas.",
+    "grupo": "Ações afirmativas",
+    "k": "Origem judicial",
+    "src": "STF, ADI 5.617 · incremento",
+    "trap": ""
+   },
+   {
+    "d": "A EC 133/2024 perdoou sanções a partidos que não cumpriram as cotas em eleições anteriores e mandou compensar os valores nas quatro eleições a partir de 2026.",
+    "grupo": "Ações afirmativas",
+    "k": "Anistia e compensação",
+    "src": "EC 133/2024; STF, ADI 7.706 e 7.707",
+    "trap": ""
+   }
+  ],
+  "topico": "dc-2f"
+ },
+ {
+  "id": "dc-5",
+  "atualizadoEm": "2026-10-29",
+  "fontes": [
+   {
+    "titulo": "Jurisprudência Facilitada (MentoriaAA)",
+    "url": "https://legislativofacilitado.com.br/jurisprudencia/"
+   }
+  ],
+  "itens": [
+   {
+    "d": "O parecer de relator especial supre a omissão da comissão; o Judiciário não interfere (interna corporis).",
+    "grupo": "Jurisprudência STF",
+    "k": "Comissão perdeu o prazo → relator especial",
+    "src": "ADPF 637/SP · Info 1230",
+    "trap": "Afirmar que a falta de parecer da comissão anula a votação."
+   },
+   {
+    "d": "Emenda sem pertinência temática, incluída de carona em outro projeto, é vício formal; o STF suspendeu a regra de sucessão assim aprovada.",
+    "grupo": "Jurisprudência STF",
+    "k": "Emenda jabuti",
+    "src": "ADI 7.984 MC-Ref/AM · Info 1227",
+    "trap": "Dizer que a aprovação pelo Plenário convalida a falta de pertinência."
+   },
+   {
+    "d": "Emenda à constituição estadual também respeita a reserva de iniciativa do governador.",
+    "grupo": "Jurisprudência STF",
+    "k": "Reserva de iniciativa × emenda estadual",
+    "src": "ADI 7.832/RR · Info 1227",
+    "trap": "Usar a emenda constitucional estadual para driblar a iniciativa privativa."
+   },
+   {
+    "d": "A Assembleia não pode obrigar o governador a repassar a verba da saúde em duodécimos até o dia 15.",
+    "grupo": "Jurisprudência STF",
+    "k": "Duodécimos da saúde",
+    "src": "ADI 6.081/SC · Info 1228",
+    "trap": "Tratar como válida a imposição legislativa de cronograma ao Executivo."
+   },
+   {
+    "d": "Emenda parlamentar não pode reajustar sozinha a verba dos Poderes.",
+    "grupo": "Jurisprudência STF",
+    "k": "Orçamento no piloto automático",
+    "src": "ADI 7.868/PB · Info 1223",
+    "trap": "Afirmar que o Legislativo pode fixar reajuste automático das dotações."
+   },
+   {
+    "d": "Controle judicial só se houver ofensa às regras do processo legislativo previstas na CF.",
+    "grupo": "Jurisprudência STF",
+    "k": "Interna corporis (Tema 1.120)",
+    "src": "RE 1.297.884/DF · Tema 1.120 RG",
+    "trap": "\"Sempre que violado o regimento\" → Errado."
+   }
+  ],
+  "topico": "dc-5"
+ },
+ {
+  "id": "lp-5-4",
+  "atualizadoEm": "2026-10-26",
+  "fontes": [
+   {
+    "titulo": "Mapa da Pontuação",
+    "url": "https://claude.ai/artifact/KTLWbnvT5udayyKFputnxX"
+   }
+  ],
+  "itens": [
+   {
+    "d": "Na ordem direta (SuVeCA), a vírgula não separa: sujeito e verbo; verbo e complemento; verbo e predicativo; nome e seu complemento ou adjunto; objeto e seu predicativo.",
+    "grupo": "Ordem direta",
+    "k": "Sujeito · verbo · complemento",
+    "src": "Aula 8 · §8.1 Noções iniciais",
+    "trap": "A banca alonga o sujeito para você não perceber a vírgula antes do verbo. Telebras 2021: inserir vírgula após “Acho” em “Acho que não podia ser mais claro” prejudica a correção (verbo e objeto oracional)."
+   },
+   {
+    "d": "Sujeito oracional com “quem”. A ABL, apoiada na análise de Rocha Lima, diz que a vírgula é de regra (são duas orações).",
+    "grupo": "Ordem direta",
+    "k": "“Quem compra, compra”",
+    "src": "Aula 8 · §8.1 · ABL; Rocha Lima; Sacconi",
+    "trap": "Item que trata a vírgula como “obrigatória” ou “proibida” aqui é arriscado. Marque a regra geral, salvo se o item citar expressamente a posição da ABL."
+   },
+   {
+    "d": "A aula fala em dois princípios: adjuntos deslocados costumam ser pontuados; esclarecimentos (aposto, oração explicativa, comentário) são separados.",
+    "grupo": "Ordem direta",
+    "k": "Princípios, não regras",
+    "src": "Aula 8 · §8.1",
+    "trap": "A prova quase sempre cobra o erro grosseiro (separar termos da ordem direta), não a exceção estilística."
+   },
+   {
+    "d": "Na ordem direta o adjunto vem no fim. Deslocado (anteposto ou intercalado), em regra é pontuado.",
+    "grupo": "Vírgula nos termos",
+    "k": "Adjunto adverbial deslocado",
+    "src": "Aula 8 · §8.3 · ABL; Kury",
+    "trap": "UFTM 2019: o item dizia que suprimir a vírgula após “Nos dias atuais” (três palavras) preservaria a correção, e foi julgado errado. PM-BA 2020: em “Agora, a segurança é completa”, a vírgula é facultativa."
+   },
+   {
+    "d": "Separa elementos coordenados de uma série enumerativa (mesma função sintática).",
+    "grupo": "Vírgula nos termos",
+    "k": "Enumeração",
+    "src": "Aula 8 · §8.3; §8.13",
+    "trap": "A banca chama a lista de “elementos coordenados de uma série enumerativa”. PC-DF 2025: a vírgula depois do último item não pertence à enumeração."
+   },
+   {
+    "d": "Expressões explicativas, retificativas e palavras de situação são isoladas por vírgula: isto é, ou seja, a saber, ou melhor, por exemplo, aliás, afinal, enfim, ora.",
+    "grupo": "Vírgula nos termos",
+    "k": "Isto é · ou seja · por exemplo",
+    "src": "Aula 8 · §8.3",
+    "trap": "Retirar uma só vírgula do par. O comentário da aula diz que essas expressões são isoladas “obrigatoriamente”."
+   },
+   {
+    "d": "Aposto explicativo vem entre vírgulas e pode ser retirado.",
+    "grupo": "Vírgula nos termos",
+    "k": "Aposto explicativo × especificativo",
+    "src": "Aula 8 · §8.3",
+    "trap": "Confundir aposto com vocativo. Pref. Cariacica 2019: as vírgulas em “Jean M. Twenge, professora de psicologia…” isolam aposto, não vocativo."
+   },
+   {
+    "d": "O termo de chamamento é sempre isolado por vírgula, em qualquer posição.",
+    "grupo": "Vírgula nos termos",
+    "k": "Vocativo",
+    "src": "Aula 8 · §8.2; §8.3",
+    "trap": "“João, o Auditor multou a empresa” (João é vocativo) × “João, o Auditor, multou a empresa” (o Auditor é aposto)."
+   },
+   {
+    "d": "A vírgula marca a omissão de um verbo. Zeugma: o termo omitido já apareceu.",
+    "grupo": "Vírgula nos termos",
+    "k": "Vírgula vicária (zeugma)",
+    "src": "Aula 8 · §8.3",
+    "trap": "Em frases como a última, uma vírgula separa orações e a outra marca o verbo omitido. A banca pergunta se “todas as vírgulas têm a mesma justificativa”."
+   },
+   {
+    "d": "O objeto repetido por ênfase é separado por vírgula.",
+    "grupo": "Vírgula nos termos",
+    "k": "Objeto pleonástico",
+    "src": "Aula 8 · §8.3",
+    "trap": "Pouco cobrado. Serve para reconhecer a justificativa quando a banca pergunta “por que a vírgula?”."
+   },
+   {
+    "d": "Oração subordinada adverbial anteposta ou intercalada leva vírgula; posposta (ordem direta), vírgula facultativa.",
+    "grupo": "Vírgula entre orações",
+    "k": "Oração adverbial anteposta",
+    "src": "Aula 8 · §8.3; §8.4",
+    "trap": "TJ-PA 2020: “para não pensar” intercalada exige as duas vírgulas. UFPB: com oração proporcional anteposta a vírgula é obrigatória e não pode virar ponto e vírgula."
+   },
+   {
+    "d": "Com vírgulas: explicativa (vale para todo o grupo, comentário retirável).",
+    "grupo": "Vírgula entre orações",
+    "k": "Adjetiva explicativa × restritiva",
+    "src": "Aula 8 · §8.2; §8.3; §8.5",
+    "trap": "A frase-padrão do Cebraspe: “manteria a correção gramatical, mas alteraria o sentido”. Se o item mexe em só uma vírgula de um par, a correção cai (IBAMA 2021, SEFAZ-AC 2024)."
+   },
+   {
+    "d": "Obrigatória no polissíndeto e para desfazer ambiguidade.",
+    "grupo": "Vírgula entre orações",
+    "k": "Vírgula antes do “e”",
+    "src": "Aula 8 · §8.3 · Kury (1999)",
+    "trap": "A banca raramente diz que a vírgula é “proibida”. Ela pergunta se foi usada por sujeitos diferentes ou por valor adversativo. PGE-PE 2018: com sujeitos diferentes, a vírgula não marca oposição."
+   },
+   {
+    "d": "Porém, contudo, todavia, entretanto, portanto, logo, pois (conclusivo) fora do início da oração ficam entre vírgulas.",
+    "grupo": "Vírgula entre orações",
+    "k": "Conjunção deslocada",
+    "src": "Aula 8 · §8.3",
+    "trap": "SEFAZ-BA 2019: isolar “no entanto” por vírgulas apenas corrige a pontuação, sem mudar o sentido."
+   },
+   {
+    "d": "Orações coordenadas são separadas por vírgula, como uma enumeração.",
+    "grupo": "Vírgula entre orações",
+    "k": "Coordenadas (com ou sem conjunção)",
+    "src": "Aula 8 · §8.3",
+    "trap": "Se a questão pede só correção e coerência, trocar “e” por vírgula passa. Se pede sentido, o valor aditivo explícito se perde."
+   },
+   {
+    "d": "Comentário do autor que interrompe o período.",
+    "grupo": "Vírgula entre orações",
+    "k": "Oração interferente",
+    "src": "Aula 8 · §8.3",
+    "trap": "Sem verbo, não é oração: é comentário interferente (São José do Cerrito 2017)."
+   },
+   {
+    "d": "Separa orações coordenadas, especialmente antes de adversativas e conclusivas.",
+    "grupo": "Ponto e vírgula",
+    "k": "Coordenadas extensas",
+    "src": "Aula 8 · §8.4; §8.12",
+    "trap": "Petrobras 2021: ponto final trocado por ponto e vírgula, com minúscula, mantém a correção."
+   },
+   {
+    "d": "Função principal: separar itens de enumeração que já têm vírgulas, ou agrupar subconjuntos.",
+    "grupo": "Ponto e vírgula",
+    "k": "Enumeração com vírgulas internas",
+    "src": "Aula 8 · §8.4",
+    "trap": "A posição do “;” muda quem fica agrupado com quem."
+   },
+   {
+    "d": "Não se usa ponto e vírgula para separar oração subordinada da principal nem para fazer intercalação (isso é papel de vírgulas, travessões ou parênteses em par).",
+    "grupo": "Ponto e vírgula",
+    "k": "Não separa subordinada",
+    "src": "Aula 8 · §8.4; §8.12",
+    "trap": "MJSP 2021: o “;” não decorre de intercalação de oração; separa orações independentes."
+   },
+   {
+    "d": "Liga orações em relação de explicação ou desenvolvimento.",
+    "grupo": "Dois-pontos",
+    "k": "Explicação (= pois)",
+    "src": "Aula 8 · §8.6; §8.13",
+    "trap": "TRF6 2025: trocar dois-pontos por “, assim” mantém a correção mas muda o sentido (explicação vira consequência)."
+   },
+   {
+    "d": "Introduz aposto explicativo ou enumerativo e a oração substantiva apositiva.",
+    "grupo": "Dois-pontos",
+    "k": "Aposto e oração apositiva",
+    "src": "Aula 8 · §8.6; §8.13",
+    "trap": "TJ-PA 2020: trocar os dois-pontos antes de “a culinária” por vírgula mantém correção e sentido."
+   },
+   {
+    "d": "Introduz discurso direto (com verbo dicendi, em geral com aspas) e enumerações.",
+    "grupo": "Dois-pontos",
+    "k": "Citação e enumeração",
+    "src": "Aula 8 · §8.6; §8.13",
+    "trap": "PF 2018: dois-pontos de esclarecimento e de discurso direto não têm a mesma justificativa."
+   },
+   {
+    "d": "Dois-pontos não podem separar o sujeito do verbo.",
+    "grupo": "Dois-pontos",
+    "k": "Nunca entre sujeito e verbo",
+    "src": "Aula 8 · §8.13",
+    "trap": "O item diz “introduz um esclarecimento”, mas a pontuação cai entre sujeito posposto e verbo."
+   },
+   {
+    "d": "Indica, nos diálogos, a troca de quem fala.",
+    "grupo": "Travessão",
+    "k": "Mudança de interlocutor",
+    "src": "Aula 8 · §8.9; §8.14 · Celso Cunha",
+    "trap": "SEFAZ-AC 2024: no mesmo texto, travessão de diálogo e travessão de destaque têm regras diferentes."
+   },
+   {
+    "d": "O travessão duplo isola termos acessórios, como vírgulas ou parênteses.",
+    "grupo": "Travessão",
+    "k": "Intercalação = vírgulas = parênteses",
+    "src": "Aula 8 · §8.9; §8.14",
+    "trap": "PF 2018: vírgulas de enumeração NÃO podem virar travessões. Só as de termo acessório."
+   },
+   {
+    "d": "Leia a frase sem o trecho entre travessões: a vírgula que sobra pertence a outra regra e não pode ser retirada.",
+    "grupo": "Travessão",
+    "k": "Vírgula depois do travessão",
+    "src": "Aula 8 · §8.9",
+    "trap": "Item diz que omitir essa vírgula “preserva a correção”. Errado."
+   },
+   {
+    "d": "Isolam esclarecimentos acessórios. Em regra, seguem as mesmas regras do travessão duplo e das vírgulas que isolam termos.",
+    "grupo": "Parênteses",
+    "k": "Adendo, sigla, referência",
+    "src": "Aula 8 · §8.10; §8.14",
+    "trap": "InoversaSul 2025: trocar travessões por parênteses preserva coesão e correção."
+   },
+   {
+    "d": "Reticências entre parênteses indicam trecho suprimido de uma citação.",
+    "grupo": "Parênteses",
+    "k": "(…) supressão",
+    "src": "Aula 8 · §8.7",
+    "trap": "Não confundir com reticências de interrupção."
+   },
+   {
+    "d": "Citação literal entre aspas. Se a frase inteira começa e termina nas aspas, o ponto fica dentro.",
+    "grupo": "Aspas",
+    "k": "Citação: ponto dentro ou fora",
+    "src": "Aula 8 · §8.8",
+    "trap": "Aspas de citação (fala literal) × aspas de ironia: a banca pede a função."
+   },
+   {
+    "d": "Marcam estrangeirismo, neologismo, gíria, expressão popular, ironia ou sentido figurado.",
+    "grupo": "Aspas",
+    "k": "Estrangeirismo, gíria, ironia",
+    "src": "Aula 8 · §8.8",
+    "trap": "Identificar a função: fala literal, termo especial ou ironia."
+   },
+   {
+    "d": "Encerra o período; a frase seguinte começa com maiúscula.",
+    "grupo": "Ponto e reticências",
+    "k": "Ponto final",
+    "src": "Aula 8 · §8.11",
+    "trap": "Contar períodos = contar pontos finais."
+   },
+   {
+    "d": "Indicam interrupção, algo deixado em suspenso.",
+    "grupo": "Ponto e reticências",
+    "k": "Reticências",
+    "src": "Aula 8 · §8.7",
+    "trap": "FUNCAB 2015: “Você será amada...” marca interrupção da frase."
+   }
+  ],
+  "topico": "lp-5-4"
+ },
+ {
+  "id": "ti-5-2",
+  "atualizadoEm": "2026-10-26",
+  "fontes": [
+   {
+    "titulo": "LDI pós-edital Estratégia — TI e Dados para Câmara, cap. 15.1",
+    "url": "https://concursos.estrategia.com/ldi/tecnologia-da-informacao-e-dados-para-camara-de-deputados-pos-edital"
+   },
+   {
+    "titulo": "Russell & Norvig, Inteligência Artificial, 4ª ed. (incremento Claude)",
+    "url": ""
+   },
+   {
+    "titulo": "Notebook TI e Noções de Dados (Gemini Notebook)",
+    "url": "https://notebook.google.com/notebook/8ffb1b56-b356-47b9-b257-7a1ce826034a"
+   }
+  ],
+  "itens": [
+   {
+    "d": "Que sinal orienta o aprendizado? Rótulo = supervisionado; nenhum = não supervisionado; recompensa = reforço.",
+    "grupo": "Critério",
+    "k": "Pergunta-chave",
+    "src": "incremento Claude",
+    "trap": "Classificar pelo algoritmo ou pelo tema, e não pelo sinal."
+   },
+   {
+    "d": "Aprende a função entrada → saída a partir de exemplos rotulados.",
+    "grupo": "Supervisionado",
+    "k": "Definição",
+    "src": "incremento Claude",
+    "trap": "Dados 'já marcados pelos usuários' são rótulos."
+   },
+   {
+    "d": "Saída é categoria (spam/não spam, tema da proposição).",
+    "grupo": "Supervisionado",
+    "k": "Classificação",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "Saída é número contínuo (duração de sessão, custo).",
+    "grupo": "Supervisionado",
+    "k": "Regressão",
+    "src": "incremento Claude",
+    "trap": "Prever valor numérico não é classificação."
+   },
+   {
+    "d": "Estima probabilidade de classe: é classificação, apesar do nome.",
+    "grupo": "Supervisionado",
+    "k": "Regressão logística",
+    "src": "incremento Claude",
+    "trap": "O nome engana."
+   },
+   {
+    "d": "Regressão linear e logística, árvores de decisão, SVM, k-NN, redes neurais.",
+    "grupo": "Supervisionado",
+    "k": "Algoritmos",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "Sem rótulo: o modelo descobre a estrutura dos dados.",
+    "grupo": "Não supervisionado",
+    "k": "Definição",
+    "src": "incremento Claude",
+    "trap": "'Sem categorias definidas previamente' = não supervisionado."
+   },
+   {
+    "d": "Agrupar por semelhança (k-means).",
+    "grupo": "Não supervisionado",
+    "k": "Clusterização",
+    "src": "incremento Claude",
+    "trap": "k-means (não supervisionado) × k-NN (supervisionado)."
+   },
+   {
+    "d": "Redução de dimensionalidade (PCA), regras de associação, detecção de anomalias.",
+    "grupo": "Não supervisionado",
+    "k": "Outras tarefas",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "Poucos dados rotulados + muitos sem rótulo.",
+    "grupo": "Meios-termos",
+    "k": "Semissupervisionado",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "O alvo sai dos próprios dados (prever a próxima palavra), sem rotulagem manual. O LDI chama o pré-treino dos LLMs de 'não supervisionado'; a literatura técnica, de 'autossupervisionado'. As duas formas estão certas.",
+    "grupo": "Meios-termos",
+    "k": "Autossupervisionado",
+    "src": "incremento Claude",
+    "trap": "Errado é dizer que o pré-treino usa rótulos humanos (supervisionado)."
+   },
+   {
+    "d": "Agente age no ambiente e aprende por tentativa e erro com recompensas.",
+    "grupo": "Reforço",
+    "k": "Definição",
+    "src": "incremento Claude",
+    "trap": "Não usa rótulos de especialistas."
+   },
+   {
+    "d": "Agente, ambiente, estado, ação, recompensa, política; maximiza recompensa acumulada.",
+    "grupo": "Reforço",
+    "k": "Elementos",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "Testar ações novas × repetir as que funcionam.",
+    "grupo": "Reforço",
+    "k": "Exploração × aproveitamento",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "A recompensa avalia o resultado e pode chegar atrasada; não diz qual ação seria a correta.",
+    "grupo": "Reforço",
+    "k": "Recompensa ≠ rótulo",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "Ajuste de LLMs por preferência humana usa aprendizado por reforço.",
+    "grupo": "Reforço",
+    "k": "RLHF",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "Bom no treino, ruim em dados novos: memorizou. Separar treino, validação e teste.",
+    "grupo": "Generalização",
+    "k": "Overfitting",
+    "src": "incremento Claude",
+    "trap": ""
+   }
+  ],
+  "topico": "ti-5-2"
+ },
+ {
+  "id": "ti-5-3",
+  "atualizadoEm": "2026-10-26",
+  "fontes": [
+   {
+    "titulo": "Goodfellow et al., Deep Learning; Vaswani et al. 2017; Lewis et al. 2020 (incremento Claude)",
+    "url": ""
+   },
+   {
+    "titulo": "Notebook TI e Noções de Dados (Gemini Notebook)",
+    "url": "https://notebook.google.com/notebook/8ffb1b56-b356-47b9-b257-7a1ce826034a"
+   }
+  ],
+  "itens": [
+   {
+    "d": "Discriminativa modela P(Y|X) e decide categorias; generativa aprende a distribuição (P(X,Y)) e gera amostras novas.",
+    "grupo": "Conceito",
+    "k": "Generativa × discriminativa",
+    "src": "incremento Claude",
+    "trap": "Atribuir P(X,Y) à discriminativa."
+   },
+   {
+    "d": "Gerador × discriminador em competição.",
+    "grupo": "Famílias",
+    "k": "GAN",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "Codifica em espaço latente e gera a partir dele.",
+    "grupo": "Famílias",
+    "k": "VAE",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "Treino adiciona ruído; geração parte do ruído e o remove passo a passo.",
+    "grupo": "Famílias",
+    "k": "Difusão",
+    "src": "incremento Claude",
+    "trap": "Inverter a direção do ruído."
+   },
+   {
+    "d": "Autoatenção pondera a relevância de todos os tokens da sequência.",
+    "grupo": "Famílias",
+    "k": "Transformer",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "Gera um token por vez, condicionado aos anteriores.",
+    "grupo": "LLM",
+    "k": "Autorregressivo",
+    "src": "incremento Claude",
+    "trap": "Não gera a resposta 'de uma só vez'."
+   },
+   {
+    "d": "Alta = respostas mais variadas; baixa = mais previsíveis.",
+    "grupo": "LLM",
+    "k": "Temperatura",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "Pré-treinado em dados gerais e adaptável por ajuste fino ou prompt.",
+    "grupo": "LLM",
+    "k": "Modelo de fundação",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "Processa ou gera mais de uma modalidade (texto, imagem, áudio).",
+    "grupo": "LLM",
+    "k": "Multimodal",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "Texto fluente e falso: o modelo gera o provável, não o verdadeiro.",
+    "grupo": "Riscos",
+    "k": "Alucinação",
+    "src": "incremento Claude",
+    "trap": "Prompt bom reduz, não elimina; não é falha de hardware."
+   },
+   {
+    "d": "Viés dos dados, vazamento de dados sigilosos, deepfakes, direito autoral.",
+    "grupo": "Riscos",
+    "k": "Outros riscos",
+    "src": "incremento Claude",
+    "trap": ""
+   },
+   {
+    "d": "Busca documentos confiáveis e os põe no contexto antes de gerar; reduz alucinação.",
+    "grupo": "Mitigação",
+    "k": "RAG",
+    "src": "incremento Claude",
+    "trap": "Não altera os pesos do modelo (isso é treino ou ajuste fino)."
+   },
+   {
+    "d": "Revisão humana obrigatória dos usos de IA generativa na Câmara.",
+    "grupo": "Mitigação",
+    "k": "Human-in-the-loop",
+    "src": "incremento Claude",
+    "trap": "RAG não dispensa a revisão."
+   },
+   {
+    "d": "Triagem e resumo de proposições, apoio à redação de minutas, sempre com validação de servidor.",
+    "grupo": "Câmara",
+    "k": "Casos de uso",
+    "src": "incremento Claude",
+    "trap": ""
+   }
+  ],
+  "topico": "ti-5-3"
+ }
+]
