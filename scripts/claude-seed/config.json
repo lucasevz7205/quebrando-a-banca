@@ -1,0 +1,102 @@
+[
+ {
+  "id": "simulado",
+  "atualizadoEm": "2026-10-31",
+  "disc": {
+   "min": 180
+  },
+  "fonte": "Edital (7.1, 8.11.6, 9.1): 90+90 itens, cortes 18/27, P3 = 2 questões de 20 linhas (15 pts) + peça de 50 linhas (30 pts). LP 26 e LI 10: numeração do bloco Nível superior da prova Câmara 08/03/2026 no Caderno (b26ns). Demais: estimativa Claude, pendente de incidência MentoriaAA.",
+  "obj": {
+   "blocos": [
+    {
+     "corte": 18,
+     "mats": [
+      [
+       "lp",
+       "Língua Portuguesa",
+       26
+      ],
+      [
+       "li",
+       "Língua Inglesa",
+       10
+      ],
+      [
+       "da",
+       "Dir. Administrativo e Adm. Pública",
+       24
+      ],
+      [
+       "dc",
+       "Dir. Constitucional e RICD",
+       18
+      ],
+      [
+       "ti",
+       "Tecnologia da Informação e Dados",
+       12
+      ]
+     ],
+     "nome": "Conhecimentos básicos",
+     "prova": "P1"
+    },
+    {
+     "corte": 27,
+     "mats": [
+      [
+       "pl",
+       "Processo Legislativo e Regimentos",
+       30
+      ],
+      [
+       "lg",
+       "Linguística",
+       25
+      ],
+      [
+       "rf",
+       "Reconhecimento de fala, transcrição e IA",
+       20
+      ],
+      [
+       "cp",
+       "Ciência Política",
+       15
+      ]
+     ],
+     "nome": "Conhecimentos específicos",
+     "prova": "P2"
+    }
+   ],
+   "min": 300
+  }
+ },
+ {
+  "id": "tutory",
+  "fimPlanejamento": "2027-01-11",
+  "fonte": "legislativofacilitado.tutory.com.br/painel/desempenho",
+  "metasAtrasadasDesde": "2026-10-25",
+  "progressoEstudo": "16,0%",
+  "progressoPlano": "20,76%",
+  "sincEm": "2026-10-26",
+  "taxaAcertos": "83,3%"
+ },
+ {
+  "id": "vigia-pegadinhas",
+  "topicos": {
+   "da-2-1": "2026-10-27",
+   "da-5-1": "2026-10-29",
+   "da-5-2": "2026-10-29",
+   "da-8-2": "2026-10-30",
+   "dc-1": "2026-10-29",
+   "dc-2d": "2026-10-27",
+   "lp-5-5": "2026-10-27",
+   "lp-5-6": "2026-10-30",
+   "pl-3-1": "2026-10-30",
+   "rf-1-2": "2026-10-29",
+   "ti-5-2": "2026-10-29",
+   "ti-5-3": "2026-10-29"
+  },
+  "ultimaVarredura": "2026-10-30T06:11:13-03:00"
+ }
+]
