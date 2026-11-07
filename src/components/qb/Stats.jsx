@@ -1,0 +1,2 @@
+import {valid} from "@/lib/qb-domain";
+export default function Stats({originals}){const v=originals.filter(valid);return <div className="qb-stats">{[[originals.length,"Registros preservados"],[v.length,"Itens válidos"],[originals.filter(q=>q.anulado).length,"Anulados"],[originals.filter(q=>q.duplicataProva).length,"Duplicatas marcadas"]].map(([n,t])=><article key={t}><span>{t}</span><strong>{n}</strong></article>)}</div>;}
