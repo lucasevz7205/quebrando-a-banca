@@ -1,0 +1,5 @@
+import {createFileRoute} from "@tanstack/react-router";
+import {getData} from "@/lib/qb-server";
+import Heading from "@/components/qb/Heading";
+export const Route=createFileRoute("/_authed/historico")({loader:()=>getData(),head:()=>({meta:[{title:"Histórico · Quebrando a Banca"}]}),component:History});
+function History(){const s=Route.useLoaderData();return <><Heading title="Histórico de decisões">Registros acrescentados em sequência. Originais e decisões anteriores permanecem disponíveis.</Heading>{[...s.decisions].reverse().map(d=><article className="qb-card" key={d.id}><span className="qb-pill">{d.outcome}</span><h2>{d.question_id} · {d.field}</h2><p>{d.before||"(vazio)"} → {d.after}</p><p>{d.reason}</p><p><strong>Fonte:</strong> {d.source}</p><small>{d.author} · {new Date(d.created_date).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo"})}</small></article>)}<h2>Eventos de tarefas</h2>{[...s.tasks].reverse().map(t=><article className="qb-card" key={t.id}><strong>{t.title}</strong><p>{t.assignee} · {t.status} · {t.author}</p><p>{t.notes}</p></article>)}</>;}
