@@ -1,0 +1,5746 @@
+[
+ {
+  "id": "cp-9@0",
+  "atualizadoEm": "2026-11-07T18:30:17.851Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:30:17.851Z",
+    "int": 3,
+    "resp": "Pelos meios (legitimidade do uso da força)",
+    "rev": false,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "cp-9@0",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "cp-9@1",
+  "atualizadoEm": "2026-11-07T18:30:38.464Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:30:38.464Z",
+    "int": 1,
+    "resp": "Território / Povo / Governo soberano",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@1",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "cp-9@10",
+  "atualizadoEm": "2026-11-07T18:33:12.654Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:33:12.654Z",
+    "int": 1,
+    "resp": "Liberdade",
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@10",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@11",
+  "atualizadoEm": "2026-11-07T18:33:19.966Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:33:19.966Z",
+    "int": 7,
+    "resp": "Locke",
+    "rev": false,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "cp-9@11",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "cp-9@12",
+  "atualizadoEm": "2026-11-07T18:33:30.179Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:33:30.179Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@12",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@13",
+  "atualizadoEm": "2026-11-07T18:33:39.481Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:33:39.481Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@13",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@14",
+  "atualizadoEm": "2026-11-07T18:33:54.128Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:33:54.128Z",
+    "int": 1,
+    "resp": "Política /",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@14",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "cp-9@15",
+  "atualizadoEm": "2026-11-07T18:34:15.514Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:34:15.514Z",
+    "int": 3,
+    "resp": "Paz de Westfalia (XVII)",
+    "rev": false,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "cp-9@15",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "cp-9@16",
+  "atualizadoEm": "2026-11-07T18:34:30.109Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:34:30.109Z",
+    "int": 7,
+    "resp": "Força e tributação",
+    "rev": false,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "cp-9@16",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "cp-9@17",
+  "atualizadoEm": "2026-11-07T18:34:37.691Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:34:37.691Z",
+    "int": 7,
+    "resp": "Estado / Estado",
+    "rev": false,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "cp-9@17",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "cp-9@18",
+  "atualizadoEm": "2026-11-07T18:34:58.226Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:34:58.226Z",
+    "int": 1,
+    "resp": "Árbitro",
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@18",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@19",
+  "atualizadoEm": "2026-11-07T18:35:10.056Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:35:10.056Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@19",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@2",
+  "atualizadoEm": "2026-11-07T18:31:25.584Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:31:25.584Z",
+    "int": 7,
+    "resp": "XIII e XVIII (XIX)",
+    "rev": false,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "cp-9@2",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "cp-9@20",
+  "atualizadoEm": "2026-11-07T18:35:24.436Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:35:24.436Z",
+    "int": 1,
+    "resp": "Revolução Francesa",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@20",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "cp-9@21",
+  "atualizadoEm": "2026-11-07T18:36:02.084Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:36:02.084Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@21",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@22",
+  "atualizadoEm": "2026-11-07T18:36:10.851Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:36:10.851Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@22",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@23",
+  "atualizadoEm": "2026-11-07T18:36:22.535Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:36:22.535Z",
+    "int": 1,
+    "resp": "Poulantzas",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@23",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "cp-9@24",
+  "atualizadoEm": "2026-11-07T18:36:31.393Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:36:31.393Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@24",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@25",
+  "atualizadoEm": "2026-11-07T18:36:40.593Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:36:40.593Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@25",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@26",
+  "atualizadoEm": "2026-11-07T18:36:53.326Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:36:53.326Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@26",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@27",
+  "atualizadoEm": "2026-11-07T18:37:11.527Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:37:11.527Z",
+    "int": 7,
+    "resp": "Dominação tradicional / Racional-Legal",
+    "rev": false,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "cp-9@27",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "cp-9@28",
+  "atualizadoEm": "2026-11-07T18:42:45.745Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:42:45.744Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@28",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@29",
+  "atualizadoEm": "2026-11-07T18:42:55.828Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:42:55.828Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@29",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@3",
+  "atualizadoEm": "2026-11-07T18:31:41.193Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:31:41.193Z",
+    "int": 7,
+    "resp": "Território, Povo e Governo Soberano",
+    "rev": false,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "cp-9@3",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "cp-9@30",
+  "atualizadoEm": "2026-11-07T18:43:04.383Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:43:04.383Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@30",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@31",
+  "atualizadoEm": "2026-11-07T18:43:15.276Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:43:15.276Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@31",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@32",
+  "atualizadoEm": "2026-11-07T18:43:22.093Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:43:22.093Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@32",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@33",
+  "atualizadoEm": "2026-11-07T18:43:29.522Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:43:29.522Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@33",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@34",
+  "atualizadoEm": "2026-11-07T18:43:44.350Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:43:44.350Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@34",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@35",
+  "atualizadoEm": "2026-11-07T18:43:51.287Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:43:51.287Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@35",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@36",
+  "atualizadoEm": "2026-11-07T18:43:56.294Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:43:56.294Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@36",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@37",
+  "atualizadoEm": "2026-11-07T18:44:08.167Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:44:08.167Z",
+    "int": 7,
+    "resp": "Federal",
+    "rev": false,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "cp-9@37",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "cp-9@4",
+  "atualizadoEm": "2026-11-07T18:31:47.154Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:31:47.154Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@4",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@5",
+  "atualizadoEm": "2026-11-07T18:31:59.068Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:31:59.068Z",
+    "int": 7,
+    "resp": "População",
+    "rev": false,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "cp-9@5",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "cp-9@6",
+  "atualizadoEm": "2026-11-07T18:32:07.879Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:32:07.879Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@6",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@7",
+  "atualizadoEm": "2026-11-07T18:32:26.415Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:32:26.415Z",
+    "int": 1,
+    "resp": "Absoluta / Relativa",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@7",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "cp-9@8",
+  "atualizadoEm": "2026-11-07T18:32:35.113Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:32:35.113Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "cp-9@8",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "cp-9@9",
+  "atualizadoEm": "2026-11-07T18:32:58.623Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T18:32:58.623Z",
+    "int": 7,
+    "resp": "civis / naturais e divinas",
+    "rev": false,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "cp-9@9",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "da-10-1@0",
+  "atualizadoEm": "2026-11-07T15:12:56.452Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T16:47:42.685Z",
+    "int": 1,
+    "resp": "Não.\nLei 13233",
+    "v": "d"
+   },
+   {
+    "em": "2026-11-07T15:12:56.452Z",
+    "int": 7,
+    "resp": "Não;\n13303",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "da-10-1@0",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "da-10-1@1",
+  "atualizadoEm": "2026-11-06T16:48:10.847Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T16:48:10.847Z",
+    "int": 1,
+    "resp": "Em 2021",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-1@1",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "da-10-1@10",
+  "atualizadoEm": "2026-11-06T16:57:15.842Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T16:57:15.842Z",
+    "int": 1,
+    "resp": "Exemplificativo\nTaxativo",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-1@10",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "da-10-1@11",
+  "atualizadoEm": "2026-11-06T16:57:34.546Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T16:57:34.546Z",
+    "int": 1,
+    "resp": "Sim",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-1@11",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "da-10-1@12",
+  "atualizadoEm": "2026-11-06T16:58:03.164Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T16:58:03.164Z",
+    "int": 4,
+    "resp": "100 mil\n50 mil",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "da-10-1@12",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "da-10-1@13",
+  "atualizadoEm": "2026-11-06T16:59:26.852Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T16:59:26.852Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-1@13",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "da-10-1@14",
+  "atualizadoEm": "2026-11-06T16:59:47.568Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T16:59:47.568Z",
+    "int": 1,
+    "resp": "1 ano",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-1@14",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "da-10-1@15",
+  "atualizadoEm": "2026-11-06T17:00:13.466Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T17:00:13.466Z",
+    "int": 4,
+    "resp": "Procedimento Auxiliar",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "da-10-1@15",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "da-10-1@2",
+  "atualizadoEm": "2026-11-06T16:49:57.445Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T16:49:57.445Z",
+    "int": 1,
+    "resp": "Opção a",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-1@2",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "da-10-1@3",
+  "atualizadoEm": "2026-11-06T16:50:18.417Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T16:50:18.417Z",
+    "int": 1,
+    "resp": "valor",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-1@3",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "da-10-1@4",
+  "atualizadoEm": "2026-11-06T16:51:02.831Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T16:51:02.831Z",
+    "int": 1,
+    "resp": "Após ao julgamento",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-1@4",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "da-10-1@5",
+  "atualizadoEm": "2026-11-06T16:51:47.981Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T16:51:47.981Z",
+    "int": 1,
+    "resp": "Pregão, leilão, Concurso, Debate",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-1@5",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "da-10-1@6",
+  "atualizadoEm": "2026-11-06T16:52:23.609Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T16:52:23.609Z",
+    "int": 4,
+    "resp": "a) Pregão\nb) Concorrência\nc) Concurso\nd) Leilão\ne) Dialogo competitivo",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "da-10-1@6",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "da-10-1@7",
+  "atualizadoEm": "2026-11-06T16:52:37.749Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T16:52:37.749Z",
+    "int": 1,
+    "resp": "3 membros",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-1@7",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "da-10-1@8",
+  "atualizadoEm": "2026-11-06T16:52:54.461Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T16:52:54.460Z",
+    "int": 1,
+    "resp": "Maior lance",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-1@8",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "da-10-1@9",
+  "atualizadoEm": "2026-11-06T16:56:48.754Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T16:56:48.754Z",
+    "int": 1,
+    "resp": "Inexigilibdade\nDispensa",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-1@9",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "da-10-3@0",
+  "atualizadoEm": "2026-11-07T15:47:52.911Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:47:52.911Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-3@0",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "da-10-5@0",
+  "atualizadoEm": "2026-11-07T15:47:02.958Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:36:32.759Z",
+    "int": 1,
+    "resp": "Contrato de gestão e termo de fomento",
+    "rev": false,
+    "v": "n"
+   },
+   {
+    "em": "2026-11-07T15:47:02.958Z",
+    "int": 1,
+    "resp": "Lei de orçamentos",
+    "rev": true,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-10-5@0",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "da-10-6@0",
+  "atualizadoEm": "2026-11-07T15:33:55.153Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:33:55.153Z",
+    "int": 7,
+    "resp": "Não, pode ser temporário",
+    "rev": false,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "da-10-6@0",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "da-2-1@0",
+  "atualizadoEm": "2026-11-07T15:50:17.128Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:50:17.128Z",
+    "int": 3,
+    "resp": "Ato da administração",
+    "rev": false,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "da-2-1@0",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "da-2-2@0",
+  "atualizadoEm": "2026-11-06T10:45:33.436Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T10:45:33.436Z",
+    "int": 4,
+    "resp": "Parecer obrigatório: deve solicitar o parecer, mas não é obrigado a segui-lo;\nVinculante: obrigado a seguir ou deixar de decidir.",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "da-2-2@0",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "da-2-2@1",
+  "atualizadoEm": "2026-11-07T15:34:57.203Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:34:57.203Z",
+    "int": 1,
+    "resp": "Não",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-2-2@1",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "da-5-1@0",
+  "atualizadoEm": "2026-11-07T15:15:16.805Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:15:16.805Z",
+    "int": 1,
+    "resp": "Poder Dever /",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-5-1@0",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "da-5-2@0",
+  "atualizadoEm": "2026-11-07T15:32:15.674Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:32:15.674Z",
+    "int": 1,
+    "resp": "Competência = desvio de poder\nFinalidade = desvio de finalidade",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-5-2@0",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "da-6-3@0",
+  "atualizadoEm": "2026-11-07T15:16:29.472Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:16:29.472Z",
+    "int": 1,
+    "resp": "Objetiva\nSubjetiva",
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-6-3@0",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "da-6-5@0",
+  "atualizadoEm": "2026-11-07T15:39:00.436Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:39:00.436Z",
+    "int": 7,
+    "resp": "Exclui \nAtenua \nExclui\nExclui",
+    "rev": false,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "da-6-5@0",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "da-7@0",
+  "atualizadoEm": "2026-11-07T15:41:33.155Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:38:13.600Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   },
+   {
+    "em": "2026-11-07T15:41:33.155Z",
+    "int": 3,
+    "resp": "De alcançar o objetivo (enriquecimento ilícito, lesão ao erário)\nVoluntariedade",
+    "rev": true,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "da-7@0",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "da-8-2@0",
+  "atualizadoEm": "2026-11-07T15:31:31.193Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:31:31.192Z",
+    "int": 1,
+    "resp": "Não possuem hierarquia e as decisões não são centralizadas",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-8-2@0",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "da-8-4@0",
+  "atualizadoEm": "2026-11-07T11:27:15.362Z",
+  "facil": 2.15,
+  "hist": [
+   {
+    "em": "2026-11-06T10:34:02.733Z",
+    "int": 1,
+    "v": "n"
+   },
+   {
+    "em": "2026-11-07T11:27:15.358Z",
+    "int": 1,
+    "resp": "Resultados e mudanças",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-8-4@0",
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "da-8-4@1",
+  "atualizadoEm": "2026-11-07T11:27:46.818Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-07T11:27:46.818Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-8-4@1",
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "da-8-4@10",
+  "atualizadoEm": "2026-11-07T11:30:57.566Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-07T11:30:57.566Z",
+    "int": 4,
+    "resp": "Excelência",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "da-8-4@10",
+  "prox": "2026-11-11",
+  "ult": "f"
+ },
+ {
+  "id": "da-8-4@11",
+  "atualizadoEm": "2026-11-07T11:31:22.084Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-07T11:31:22.084Z",
+    "int": 4,
+    "resp": "Economicidade - Insumos\nExecução - Ações",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "da-8-4@11",
+  "prox": "2026-11-11",
+  "ult": "f"
+ },
+ {
+  "id": "da-8-4@12",
+  "atualizadoEm": "2026-11-07T11:31:34.386Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-07T11:31:34.385Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-8-4@12",
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "da-8-4@13",
+  "atualizadoEm": "2026-11-07T11:31:57.669Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-07T11:31:57.669Z",
+    "int": 4,
+    "resp": "Eficiência / Efetividade",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "da-8-4@13",
+  "prox": "2026-11-11",
+  "ult": "f"
+ },
+ {
+  "id": "da-8-4@2",
+  "atualizadoEm": "2026-11-07T11:28:05.452Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-07T11:28:05.452Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-8-4@2",
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "da-8-4@3",
+  "atualizadoEm": "2026-11-07T11:28:19.876Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T11:28:19.876Z",
+    "int": 1,
+    "resp": "Cidadão",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-8-4@3",
+  "prox": "2026-11-08",
+  "ult": "b"
+ },
+ {
+  "id": "da-8-4@4",
+  "atualizadoEm": "2026-11-07T11:28:47.402Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-07T11:28:47.402Z",
+    "int": 4,
+    "resp": "Insumos, ações, produtos, resultados e impactos",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "da-8-4@4",
+  "prox": "2026-11-11",
+  "ult": "f"
+ },
+ {
+  "id": "da-8-4@5",
+  "atualizadoEm": "2026-11-07T11:29:19.518Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-07T11:29:19.518Z",
+    "int": 1,
+    "resp": "Eficiência / Eficácia / Efetividade",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-8-4@5",
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "da-8-4@6",
+  "atualizadoEm": "2026-11-07T11:30:02.370Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T11:30:02.370Z",
+    "int": 1,
+    "resp": "E: Excelência, Economicidade\nR: Eficiência, Efetividade, Eficácia",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-8-4@6",
+  "prox": "2026-11-08",
+  "ult": "b"
+ },
+ {
+  "id": "da-8-4@7",
+  "atualizadoEm": "2026-11-07T11:30:44.394Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-07T11:30:44.394Z",
+    "int": 4,
+    "resp": "Eficácia\nEficiência\nEfetividade",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "da-8-4@7",
+  "prox": "2026-11-11",
+  "ult": "f"
+ },
+ {
+  "id": "da-8-4@8",
+  "atualizadoEm": "2026-11-07T11:32:35.475Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-07T11:32:35.475Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "da-8-4@8",
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "da-8-4@9",
+  "atualizadoEm": "2026-11-07T11:32:41.265Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-07T11:32:41.265Z",
+    "int": 4,
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "da-8-4@9",
+  "prox": "2026-11-11",
+  "ult": "f"
+ },
+ {
+  "id": "dc-2c@0",
+  "atualizadoEm": "2026-11-07T15:22:48.911Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:22:48.911Z",
+    "int": 1,
+    "resp": "Moradia/ transporte / trabalho / maternidade / segurança /",
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2c@0",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2e@0",
+  "atualizadoEm": "2026-11-06T17:03:37.160Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T17:03:37.160Z",
+    "int": 4,
+    "resp": "Plebiscito é antes\nReferendo é depois",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "dc-2e@0",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "dc-2e@1",
+  "atualizadoEm": "2026-11-06T17:04:33.212Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T17:04:33.212Z",
+    "int": 4,
+    "resp": "1%\n5\n0,3%",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "dc-2e@1",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "dc-2e@10",
+  "atualizadoEm": "2026-11-06T17:09:11.577Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:09:11.577Z",
+    "int": 1,
+    "resp": "Conscritos\nEstrangeiros",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@10",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2e@11",
+  "atualizadoEm": "2026-11-06T17:09:50.816Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T17:09:50.816Z",
+    "int": 1,
+    "resp": "se afastar do cargo até 6 meses antes da eleição\nPara o mesmo cargo, não",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@11",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "dc-2e@12",
+  "atualizadoEm": "2026-11-06T17:10:34.484Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:10:34.484Z",
+    "int": 1,
+    "resp": "Até 3 grau.\nSalvo se já ocuparem cargo eletivo.",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@12",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2e@13",
+  "atualizadoEm": "2026-11-06T17:11:02.215Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T17:11:02.215Z",
+    "int": 4,
+    "resp": "Não",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "dc-2e@13",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "dc-2e@14",
+  "atualizadoEm": "2026-11-06T17:11:50.005Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T17:11:50.005Z",
+    "int": 1,
+    "resp": "Passa para a reserva;\nFica agregado a autoridade superior e se for eleito, passa a inatividade na posse.",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@14",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "dc-2e@15",
+  "atualizadoEm": "2026-11-06T17:12:17.115Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T17:12:17.115Z",
+    "int": 1,
+    "resp": "Lei complementar",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@15",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "dc-2e@16",
+  "atualizadoEm": "2026-11-06T17:12:54.207Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:12:54.207Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@16",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2e@17",
+  "atualizadoEm": "2026-11-06T17:13:45.261Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T17:13:45.261Z",
+    "int": 4,
+    "resp": "Não",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "dc-2e@17",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "dc-2e@18",
+  "atualizadoEm": "2026-11-06T17:16:16.471Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:16:16.471Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@18",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2e@19",
+  "atualizadoEm": "2026-11-06T17:16:35.221Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:16:35.221Z",
+    "int": 1,
+    "resp": "Quando acabar a pena (Sim)",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@19",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2e@2",
+  "atualizadoEm": "2026-11-06T17:05:02.432Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T17:05:02.432Z",
+    "int": 1,
+    "resp": "Voto direto, secreto, periódico e universal",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@2",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "dc-2e@20",
+  "atualizadoEm": "2026-11-06T17:16:56.855Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:16:56.855Z",
+    "int": 1,
+    "resp": "O TSE\nO STF",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@20",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2e@21",
+  "atualizadoEm": "2026-11-06T17:13:37.333Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T17:13:37.333Z",
+    "int": 1,
+    "resp": "Na data de sua publicação, mas aplica-se a eleição que ocorra até 1 ano de sua vigência",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@21",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "dc-2e@22",
+  "atualizadoEm": "2026-11-06T17:15:01.257Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T17:15:01.257Z",
+    "int": 1,
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@22",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "dc-2e@23",
+  "atualizadoEm": "2026-11-06T17:12:32.903Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:12:32.903Z",
+    "int": 1,
+    "resp": "10 anos",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@23",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2e@24",
+  "atualizadoEm": "2026-11-06T17:17:15.529Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T17:17:15.529Z",
+    "int": 1,
+    "resp": "Ação recisória",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@24",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "dc-2e@25",
+  "atualizadoEm": "2026-11-06T17:17:50.379Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T17:17:50.379Z",
+    "int": 4,
+    "resp": "Não. Cidadania.",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "dc-2e@25",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "dc-2e@26",
+  "atualizadoEm": "2026-11-06T17:10:44.875Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T17:10:44.875Z",
+    "int": 4,
+    "resp": "Sim e Não",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "dc-2e@26",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "dc-2e@3",
+  "atualizadoEm": "2026-11-06T17:05:48.029Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:05:48.029Z",
+    "int": 1,
+    "resp": "Caso o PR e o VP sejam impeachados faltando mais de 2 anos para o término do mandato",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@3",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2e@4",
+  "atualizadoEm": "2026-11-06T17:06:20.253Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T17:06:20.253Z",
+    "int": 1,
+    "resp": "Relativamente incapazes\nIdosos",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@4",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "dc-2e@5",
+  "atualizadoEm": "2026-11-06T17:06:45.568Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:06:45.568Z",
+    "int": 1,
+    "resp": "Sem direitos políticos / Analfabetos",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@5",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2e@6",
+  "atualizadoEm": "2026-11-07T15:36:46.604Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:36:46.604Z",
+    "int": 7,
+    "resp": "Sim, não",
+    "rev": false,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "dc-2e@6",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "dc-2e@7",
+  "atualizadoEm": "2026-11-06T17:07:33.420Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:07:33.420Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@7",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2e@8",
+  "atualizadoEm": "2026-11-06T17:09:07.375Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T17:09:07.375Z",
+    "int": 4,
+    "resp": "35\n30\n21\n18",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "dc-2e@8",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "dc-2e@9",
+  "atualizadoEm": "2026-11-06T17:10:07.214Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T17:10:07.214Z",
+    "int": 1,
+    "resp": "Na data da posse",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2e@9",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "dc-2f@0",
+  "atualizadoEm": "2026-11-07T17:10:49.994Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:10:49.993Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2f@0",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2f@1",
+  "atualizadoEm": "2026-11-07T17:15:17.681Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:15:17.667Z",
+    "int": 1,
+    "resp": "3 / 2 /",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2f@1",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "dc-2f@10",
+  "atualizadoEm": "2026-11-07T17:15:49.571Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:15:49.571Z",
+    "int": 1,
+    "resp": "2 / 1,5 / 13",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2f@10",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "dc-2f@11",
+  "atualizadoEm": "2026-11-07T17:16:14.200Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:16:14.200Z",
+    "int": 1,
+    "resp": "Liderança ...\nNão",
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2f@11",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2f@12",
+  "atualizadoEm": "2026-11-07T17:17:19.461Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:17:19.461Z",
+    "int": 1,
+    "resp": "Justa Causa ou não atingimento da cláusula de desempenho",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2f@12",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "dc-2f@13",
+  "atualizadoEm": "2026-11-07T17:17:37.296Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:17:37.296Z",
+    "int": 1,
+    "resp": "Perseguição política",
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2f@13",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2f@15",
+  "atualizadoEm": "2026-11-07T17:18:21.561Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:18:21.561Z",
+    "int": 1,
+    "resp": "15 / 30",
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2f@15",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2f@2",
+  "atualizadoEm": "2026-11-07T17:16:52.056Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:16:52.056Z",
+    "int": 3,
+    "resp": "Deputados federais e estaduais / Não",
+    "rev": false,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "dc-2f@2",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "dc-2f@3",
+  "atualizadoEm": "2026-11-07T17:18:05.291Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:18:05.291Z",
+    "int": 1,
+    "resp": "15 \n30\n5",
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2f@3",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2f@4",
+  "atualizadoEm": "2026-11-07T17:18:54.563Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:18:54.563Z",
+    "int": 1,
+    "resp": "privado / complementar / TSE",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2f@4",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "dc-2f@5",
+  "atualizadoEm": "2026-11-07T17:19:12.995Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:19:12.995Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2f@5",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2f@6",
+  "atualizadoEm": "2026-11-07T17:12:38.820Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:12:38.820Z",
+    "int": 1,
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2f@6",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "dc-2f@7",
+  "atualizadoEm": "2026-11-07T17:12:50.730Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:12:50.730Z",
+    "int": 3,
+    "resp": "Justiça Eleitoral",
+    "rev": false,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "dc-2f@7",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "dc-2f@8",
+  "atualizadoEm": "2026-11-07T17:20:58.801Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:20:58.800Z",
+    "int": 3,
+    "resp": "Majoritárias / Proporcionais /",
+    "rev": false,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "dc-2f@8",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "dc-2f@9",
+  "atualizadoEm": "2026-11-07T17:21:13.795Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T17:21:13.795Z",
+    "int": 1,
+    "resp": "Como um só partido",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-2f@9",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "dc-7-3@0",
+  "atualizadoEm": "2026-11-06T17:19:57.954Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T17:19:57.954Z",
+    "int": 1,
+    "resp": "Requerimento pela Mesa (2 Sec)",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@0",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "dc-7-3@1",
+  "atualizadoEm": "2026-11-06T17:20:22.500Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T17:20:22.500Z",
+    "int": 1,
+    "resp": "30 semana e até 180 dias",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@1",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "dc-7-3@10",
+  "atualizadoEm": "2026-11-06T17:24:38.760Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T17:24:38.760Z",
+    "int": 4,
+    "resp": "LTIP / Saúde",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "dc-7-3@10",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "dc-7-3@11",
+  "atualizadoEm": "2026-11-06T17:25:08.706Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T17:25:08.706Z",
+    "int": 1,
+    "resp": "3 médicos da casa; 3 médicos de fora da casa",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@11",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "dc-7-3@12",
+  "atualizadoEm": "2026-11-06T17:24:00.232Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T17:24:00.232Z",
+    "int": 4,
+    "resp": "Falecimento, renúncia, perda",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "dc-7-3@12",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "dc-7-3@13",
+  "atualizadoEm": "2026-11-06T17:25:30.718Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T17:25:30.718Z",
+    "int": 1,
+    "resp": "Não; a partir da apreciação do plenário",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@13",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "dc-7-3@14",
+  "atualizadoEm": "2026-11-07T15:20:03.441Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:20:03.441Z",
+    "int": 3,
+    "resp": "Quebra de decoro;\nProibições do Art 54, IV\nCrime comum;\nMaioria absoluta",
+    "rev": false,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "dc-7-3@14",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "dc-7-3@15",
+  "atualizadoEm": "2026-11-06T17:27:36.464Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:27:36.464Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@15",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-7-3@16",
+  "atualizadoEm": "2026-11-06T17:28:04.058Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:28:04.058Z",
+    "int": 1,
+    "resp": "5 / 10",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@16",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-7-3@17",
+  "atualizadoEm": "2026-11-06T17:28:49.438Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:28:49.438Z",
+    "int": 1,
+    "resp": "48 (Licença de 120 dias; falecimento; renúncia)",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@17",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-7-3@18",
+  "atualizadoEm": "2026-11-06T17:30:13.980Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:30:13.980Z",
+    "int": 1,
+    "resp": "24",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@18",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-7-3@19",
+  "atualizadoEm": "2026-11-06T17:30:35.712Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:30:35.712Z",
+    "int": 1,
+    "resp": "48",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@19",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-7-3@2",
+  "atualizadoEm": "2026-11-06T17:20:39.086Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T17:20:39.086Z",
+    "int": 1,
+    "resp": "Autorização do PCD",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@2",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "dc-7-3@20",
+  "atualizadoEm": "2026-11-06T17:30:33.565Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:30:33.565Z",
+    "int": 1,
+    "resp": "48\n5",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@20",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-7-3@3",
+  "atualizadoEm": "2026-11-06T17:21:00.222Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:21:00.222Z",
+    "int": 1,
+    "resp": "5 dias, sob pena de perda de mandato",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@3",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-7-3@4",
+  "atualizadoEm": "2026-11-06T17:21:30.659Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T17:21:30.659Z",
+    "int": 1,
+    "resp": "a diplomação; Flagrante delito",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@4",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "dc-7-3@5",
+  "atualizadoEm": "2026-11-06T17:21:59.016Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T17:21:59.016Z",
+    "int": 4,
+    "resp": "2/3 cada/ secreto / fora",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "dc-7-3@5",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "dc-7-3@6",
+  "atualizadoEm": "2026-11-06T17:22:39.800Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T17:22:39.800Z",
+    "int": 1,
+    "resp": "Não ocupar cargo público nem receber benefícios de entidades estatais",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@6",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "dc-7-3@7",
+  "atualizadoEm": "2026-11-06T17:22:53.636Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T17:22:53.636Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "dc-7-3@7",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "dc-7-3@8",
+  "atualizadoEm": "2026-11-06T17:23:42.690Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T17:23:42.690Z",
+    "int": 4,
+    "resp": "sem remuneração / 120 dias",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "dc-7-3@8",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "dc-7-3@9",
+  "atualizadoEm": "2026-11-06T17:24:14.952Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T17:24:14.952Z",
+    "int": 4,
+    "resp": "PCD / Mesa",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "dc-7-3@9",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "dc-8-1@0",
+  "atualizadoEm": "2026-11-07T15:14:35.554Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:14:35.554Z",
+    "int": 3,
+    "resp": "Presidente do Senado",
+    "rev": false,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "dc-8-1@0",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "lp-4-1@0",
+  "atualizadoEm": "2026-11-06T10:23:56.475Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T09:05:49.033Z",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-06T10:23:56.475Z",
+    "int": 1,
+    "resp": "Anterior\nPosterior \nFora",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "lp-4-1@0",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "lp-4-1@1",
+  "atualizadoEm": "2026-11-06T10:24:29.704Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-05T09:06:18.519Z",
+    "v": "p"
+   },
+   {
+    "em": "2026-11-06T10:24:29.704Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "lp-4-1@1",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "lp-4-1@10",
+  "atualizadoEm": "2026-11-07T15:41:02.942Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T09:12:40.523Z",
+    "resp": "Mas (adversidade)",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-07T15:41:02.942Z",
+    "int": 7,
+    "resp": "Mas",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "lp-4-1@10",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "lp-4-1@11",
+  "atualizadoEm": "2026-11-07T15:42:26.966Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T09:13:19.259Z",
+    "resp": "ligação / lógica / referência",
+    "v": "p"
+   },
+   {
+    "em": "2026-11-07T15:42:26.966Z",
+    "int": 3,
+    "resp": "Ligação \nLógica \nReferência",
+    "rev": true,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "lp-4-1@11",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "lp-4-1@12",
+  "atualizadoEm": "2026-11-07T15:47:41.146Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T09:14:32.260Z",
+    "resp": "O conectivo \"mas\" indica adversidade, no entanto, a ideia da segunda oração exprime adição",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-07T15:47:41.146Z",
+    "int": 7,
+    "resp": "Uso indevido de conectivo (duas ideias iguais com um conectivo de adversidade)",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "lp-4-1@12",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "lp-4-1@13",
+  "atualizadoEm": "2026-11-07T15:49:56.716Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T09:14:46.159Z",
+    "resp": "coesão e coerência",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-07T15:49:56.716Z",
+    "int": 1,
+    "resp": "Léxico e sentido",
+    "rev": true,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "lp-4-1@13",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "lp-4-1@14",
+  "atualizadoEm": "2026-11-05T09:15:15.564Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:15:15.564Z",
+    "resp": "hiperônimo",
+    "v": "s"
+   }
+  ],
+  "k": "lp-4-1@14",
+  "ult": "s"
+ },
+ {
+  "id": "lp-4-1@15",
+  "atualizadoEm": "2026-11-05T09:15:46.699Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:15:46.699Z",
+    "resp": "Mantém a correção mas muda o sentido (passa a ser restritiva, falando de uma parte de um todo apenas)",
+    "v": "s"
+   }
+  ],
+  "k": "lp-4-1@15",
+  "ult": "s"
+ },
+ {
+  "id": "lp-4-1@16",
+  "atualizadoEm": "2026-11-05T09:27:00.109Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:27:00.109Z",
+    "v": "p"
+   }
+  ],
+  "k": "lp-4-1@16",
+  "ult": "p"
+ },
+ {
+  "id": "lp-4-1@17",
+  "atualizadoEm": "2026-11-05T09:27:29.357Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:27:29.357Z",
+    "resp": "Endofórica\nExofórica",
+    "v": "p"
+   }
+  ],
+  "k": "lp-4-1@17",
+  "ult": "p"
+ },
+ {
+  "id": "lp-4-1@18",
+  "atualizadoEm": "2026-11-06T10:35:44.363Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T09:27:51.477Z",
+    "v": "p"
+   },
+   {
+    "em": "2026-11-06T10:35:44.363Z",
+    "int": 1,
+    "resp": "Preservada / redefinição total",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "lp-4-1@18",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "lp-4-1@19",
+  "atualizadoEm": "2026-11-05T09:28:00.791Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:28:00.791Z",
+    "resp": "omissão",
+    "v": "s"
+   }
+  ],
+  "k": "lp-4-1@19",
+  "ult": "s"
+ },
+ {
+  "id": "lp-4-1@2",
+  "atualizadoEm": "2026-11-06T10:24:46.193Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-05T09:06:38.755Z",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-06T10:24:46.193Z",
+    "int": 4,
+    "resp": "Maria / João",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "lp-4-1@2",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "lp-4-1@20",
+  "atualizadoEm": "2026-11-05T09:28:25.995Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:28:25.995Z",
+    "resp": "similaridade e semântica",
+    "v": "n"
+   }
+  ],
+  "k": "lp-4-1@20",
+  "ult": "n"
+ },
+ {
+  "id": "lp-4-1@23",
+  "atualizadoEm": "2026-11-05T13:56:13.305Z",
+  "hist": [
+   {
+    "em": "2026-11-05T13:56:13.305Z",
+    "resp": "rolha",
+    "v": "n"
+   }
+  ],
+  "k": "lp-4-1@23",
+  "ult": "n"
+ },
+ {
+  "id": "lp-4-1@3",
+  "atualizadoEm": "2026-11-06T10:26:10.028Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-05T09:07:36.221Z",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-06T10:26:10.028Z",
+    "int": 1,
+    "resp": "Por locais físicos (ou virtuais) / na qual, o qual",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "lp-4-1@3",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "lp-4-1@4",
+  "atualizadoEm": "2026-11-06T10:27:31.124Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T09:08:08.999Z",
+    "v": "n"
+   },
+   {
+    "em": "2026-11-06T10:27:31.124Z",
+    "int": 1,
+    "resp": "A qual",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "lp-4-1@4",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "lp-4-1@5",
+  "atualizadoEm": "2026-11-06T10:27:50.475Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-05T09:08:25.803Z",
+    "v": "p"
+   },
+   {
+    "em": "2026-11-06T10:27:50.475Z",
+    "int": 4,
+    "resp": "Zeugma",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "lp-4-1@5",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "lp-4-1@6",
+  "atualizadoEm": "2026-11-07T15:14:52.694Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T09:08:44.905Z",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-07T15:10:31.041Z",
+    "int": 1,
+    "resp": "Referencial",
+    "rev": true,
+    "v": "n"
+   },
+   {
+    "em": "2026-11-07T15:14:52.694Z",
+    "int": 3,
+    "resp": "Nominalização",
+    "rev": true,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "lp-4-1@6",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "lp-4-1@7",
+  "atualizadoEm": "2026-11-07T15:12:42.210Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T09:10:21.159Z",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-05T09:10:35.437Z",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-07T15:12:42.210Z",
+    "int": 7,
+    "resp": "Concessão, causa, adversidade, conclusão",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "lp-4-1@7",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "lp-4-1@8",
+  "atualizadoEm": "2026-11-06T10:34:34.298Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-05T09:10:45.545Z",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-06T10:34:34.297Z",
+    "int": 4,
+    "resp": "Causal / conclusivo",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "lp-4-1@8",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "lp-4-1@9",
+  "atualizadoEm": "2026-11-07T15:33:29.597Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T09:11:38.501Z",
+    "resp": "Subjuntivo",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-07T15:33:29.597Z",
+    "int": 7,
+    "resp": "Subjuntivo",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "lp-4-1@9",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "lp-5-4@0",
+  "atualizadoEm": "2026-11-07T15:16:05.828Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:16:05.828Z",
+    "int": 1,
+    "resp": "Sujeito e educado, deslocado entre vírgulas",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "lp-5-4@0",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "lp-5-5@0",
+  "atualizadoEm": "2026-11-07T15:20:38.402Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:20:38.402Z",
+    "int": 1,
+    "resp": "Seta / não tem determinante",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "lp-5-5@0",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "lp-5-6@0",
+  "atualizadoEm": "2026-11-06T10:35:13.433Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T10:35:13.433Z",
+    "int": 4,
+    "resp": "Verificando a regência",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "lp-5-6@0",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "lp-5-6@1",
+  "atualizadoEm": "2026-11-07T15:48:32.693Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:48:32.693Z",
+    "int": 3,
+    "resp": "Porque a regência não se admite o pronome lhe",
+    "rev": false,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "lp-5-6@1",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "pl-2-1@0",
+  "atualizadoEm": "2026-11-06T14:16:55.144Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:16:55.144Z",
+    "int": 4,
+    "resp": "no máximo 13% e no mínimo 3,5%",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@0",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@1",
+  "atualizadoEm": "2026-11-06T14:17:20.039Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:17:20.039Z",
+    "int": 4,
+    "resp": "Ato da câmara, ouvido o colégio de líderes",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@1",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@10",
+  "atualizadoEm": "2026-11-06T14:24:39.372Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T14:24:39.372Z",
+    "int": 1,
+    "resp": "1/3 fato certo e por tempo determinado",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@10",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "pl-2-1@11",
+  "atualizadoEm": "2026-11-06T14:25:13.211Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T14:25:13.211Z",
+    "int": 1,
+    "resp": "120 + 120 / plenário",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@11",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "pl-2-1@12",
+  "atualizadoEm": "2026-11-06T14:25:29.767Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T14:25:29.767Z",
+    "int": 1,
+    "resp": "5 salvo por resolução",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@12",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "pl-2-1@13",
+  "atualizadoEm": "2026-11-06T14:25:42.196Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:25:42.196Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@13",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "pl-2-1@14",
+  "atualizadoEm": "2026-11-06T14:26:14.294Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:26:14.294Z",
+    "int": 4,
+    "resp": "1 Presidente e 3 Vice-Presidentes; é vedada",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@14",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@15",
+  "atualizadoEm": "2026-11-06T14:26:31.654Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:26:31.654Z",
+    "int": 4,
+    "resp": "1 vez por no máximo 1 hora",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@15",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@16",
+  "atualizadoEm": "2026-11-06T14:26:58.642Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T14:26:58.642Z",
+    "int": 1,
+    "resp": "5 ou 1/3",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@16",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "pl-2-1@17",
+  "atualizadoEm": "2026-11-06T14:27:21.366Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:27:21.366Z",
+    "int": 1,
+    "resp": "Presidente da Comissão / 5 sessões",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@17",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "pl-2-1@18",
+  "atualizadoEm": "2026-11-06T14:30:07.492Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:30:07.492Z",
+    "int": 1,
+    "resp": "Deliberação do plenário /",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@18",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "pl-2-1@19",
+  "atualizadoEm": "2026-11-06T14:30:41.804Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:30:41.804Z",
+    "int": 1,
+    "resp": "Maioria absoluta",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@19",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "pl-2-1@2",
+  "atualizadoEm": "2026-11-06T14:17:38.617Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T14:17:38.617Z",
+    "int": 1,
+    "resp": "Sim; a vaga segue o PPP",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@2",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "pl-2-1@20",
+  "atualizadoEm": "2026-11-06T14:31:04.578Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T14:31:04.578Z",
+    "int": 1,
+    "resp": "5 / 20 / 40",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@20",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "pl-2-1@21",
+  "atualizadoEm": "2026-11-06T14:31:32.793Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:31:32.793Z",
+    "int": 4,
+    "resp": "metade + metade / exceto regime de urgência",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@21",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@22",
+  "atualizadoEm": "2026-11-06T14:31:57.718Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:31:57.718Z",
+    "int": 4,
+    "resp": "Maioria simples dos votos / maioria absoluta / presidente",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@22",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@23",
+  "atualizadoEm": "2026-11-06T14:32:17.527Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:32:17.527Z",
+    "int": 1,
+    "resp": "5 / urgência",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@23",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "pl-2-1@24",
+  "atualizadoEm": "2026-11-06T14:35:20.618Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T14:35:20.618Z",
+    "int": 1,
+    "resp": "Constitucionalidade / financeiro / mérito",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@24",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "pl-2-1@25",
+  "atualizadoEm": "2026-11-06T14:36:02.402Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:36:02.402Z",
+    "int": 4,
+    "resp": "1/10 das assinaturas / 5 sessões",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@25",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@26",
+  "atualizadoEm": "2026-11-06T14:36:21.713Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:36:21.713Z",
+    "int": 1,
+    "resp": "48h",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@26",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "pl-2-1@27",
+  "atualizadoEm": "2026-11-06T14:36:44.959Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:36:44.959Z",
+    "int": 1,
+    "resp": "5 / 3",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@27",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "pl-2-1@28",
+  "atualizadoEm": "2026-11-06T14:32:37.707Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:32:37.707Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@28",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "pl-2-1@29",
+  "atualizadoEm": "2026-11-06T14:33:27.646Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T14:33:27.645Z",
+    "int": 1,
+    "resp": "Projetos que dispensam plenário",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@29",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "pl-2-1@3",
+  "atualizadoEm": "2026-11-06T14:18:05.778Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:18:05.778Z",
+    "int": 1,
+    "resp": "Suplentes",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@3",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "pl-2-1@30",
+  "atualizadoEm": "2026-11-06T14:33:45.738Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:33:45.738Z",
+    "int": 4,
+    "resp": "Sim / Não",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@30",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@31",
+  "atualizadoEm": "2026-11-06T14:34:07.873Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:34:07.873Z",
+    "int": 4,
+    "resp": "Papéis sim / proposições não",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@31",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@32",
+  "atualizadoEm": "2026-11-06T14:34:26.239Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:34:26.239Z",
+    "int": 4,
+    "resp": "Todas as apensadas",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@32",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@33",
+  "atualizadoEm": "2026-11-06T14:34:50.017Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T14:34:50.017Z",
+    "int": 1,
+    "resp": "PCD por indicação dos líderes",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@33",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "pl-2-1@34",
+  "atualizadoEm": "2026-11-06T14:23:15.230Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T14:23:15.230Z",
+    "int": 1,
+    "resp": "o PCD / Presidência",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@34",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "pl-2-1@4",
+  "atualizadoEm": "2026-11-06T14:21:14.317Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:21:14.317Z",
+    "int": 4,
+    "resp": "5",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@4",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@5",
+  "atualizadoEm": "2026-11-06T14:22:14.211Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:22:14.211Z",
+    "int": 4,
+    "resp": "3 e 3",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@5",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@6",
+  "atualizadoEm": "2026-11-06T14:22:32.374Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T14:22:32.374Z",
+    "int": 1,
+    "resp": "Não, produzem pareceres",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "pl-2-1@6",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "pl-2-1@7",
+  "atualizadoEm": "2026-11-06T14:23:44.165Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:23:44.165Z",
+    "int": 4,
+    "resp": "Inquérito, especiais e externas",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@7",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@8",
+  "atualizadoEm": "2026-11-06T14:23:52.395Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:23:52.395Z",
+    "int": 4,
+    "resp": "4",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@8",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-2-1@9",
+  "atualizadoEm": "2026-11-06T14:24:08.608Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:24:08.608Z",
+    "int": 4,
+    "resp": "8 sessões e 30 sessões",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "pl-2-1@9",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "pl-ri-7-4@0",
+  "atualizadoEm": "2026-11-05T09:32:15.107Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:32:15.107Z",
+    "resp": "Pelo PCD / pela mesa",
+    "v": "p"
+   }
+  ],
+  "k": "pl-ri-7-4@0",
+  "ult": "p"
+ },
+ {
+  "id": "pl-ri-7-4@1",
+  "atualizadoEm": "2026-11-05T09:32:31.537Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:32:31.537Z",
+    "resp": "despacho",
+    "v": "p"
+   }
+  ],
+  "k": "pl-ri-7-4@1",
+  "ult": "p"
+ },
+ {
+  "id": "pl-ri-7-4@10",
+  "atualizadoEm": "2026-11-05T09:35:42.381Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:35:42.381Z",
+    "resp": "PCD",
+    "v": "s"
+   }
+  ],
+  "k": "pl-ri-7-4@10",
+  "ult": "s"
+ },
+ {
+  "id": "pl-ri-7-4@11",
+  "atualizadoEm": "2026-11-05T09:36:23.939Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:36:23.939Z",
+    "resp": "Polícia Legislativa\nPCD",
+    "v": "p"
+   }
+  ],
+  "k": "pl-ri-7-4@11",
+  "ult": "p"
+ },
+ {
+  "id": "pl-ri-7-4@12",
+  "atualizadoEm": "2026-11-05T09:38:45.401Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:38:45.401Z",
+    "resp": "Somente PL",
+    "v": "p"
+   }
+  ],
+  "k": "pl-ri-7-4@12",
+  "ult": "p"
+ },
+ {
+  "id": "pl-ri-7-4@13",
+  "atualizadoEm": "2026-11-05T09:39:06.572Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:39:06.572Z",
+    "resp": "Vestes adequadas e crachá",
+    "v": "s"
+   }
+  ],
+  "k": "pl-ri-7-4@13",
+  "ult": "s"
+ },
+ {
+  "id": "pl-ri-7-4@14",
+  "atualizadoEm": "2026-11-05T09:40:12.372Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:40:12.372Z",
+    "resp": "Autorização da mesa",
+    "v": "s"
+   }
+  ],
+  "k": "pl-ri-7-4@14",
+  "ult": "s"
+ },
+ {
+  "id": "pl-ri-7-4@15",
+  "atualizadoEm": "2026-11-05T09:40:55.507Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:40:55.507Z",
+    "resp": "1 vez ao mês",
+    "v": "s"
+   }
+  ],
+  "k": "pl-ri-7-4@15",
+  "ult": "s"
+ },
+ {
+  "id": "pl-ri-7-4@16",
+  "atualizadoEm": "2026-11-05T09:40:40.170Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:40:40.170Z",
+    "v": "n"
+   }
+  ],
+  "k": "pl-ri-7-4@16",
+  "ult": "n"
+ },
+ {
+  "id": "pl-ri-7-4@2",
+  "atualizadoEm": "2026-11-05T09:32:51.171Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:32:51.171Z",
+    "resp": "48h\nPlenário",
+    "v": "p"
+   }
+  ],
+  "k": "pl-ri-7-4@2",
+  "ult": "p"
+ },
+ {
+  "id": "pl-ri-7-4@3",
+  "atualizadoEm": "2026-11-05T09:33:10.255Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:33:10.255Z",
+    "resp": "O 1 Sec",
+    "v": "n"
+   }
+  ],
+  "k": "pl-ri-7-4@3",
+  "ult": "n"
+ },
+ {
+  "id": "pl-ri-7-4@4",
+  "atualizadoEm": "2026-11-05T09:33:21.625Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:33:21.625Z",
+    "resp": "BB e Caixa",
+    "v": "s"
+   }
+  ],
+  "k": "pl-ri-7-4@4",
+  "ult": "s"
+ },
+ {
+  "id": "pl-ri-7-4@5",
+  "atualizadoEm": "2026-11-05T09:33:40.605Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:33:40.605Z",
+    "resp": "a Mesa \n30 de Junho",
+    "v": "p"
+   }
+  ],
+  "k": "pl-ri-7-4@5",
+  "ult": "p"
+ },
+ {
+  "id": "pl-ri-7-4@6",
+  "atualizadoEm": "2026-11-05T09:34:03.957Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:34:03.957Z",
+    "resp": "Durante a legislatura\nRICD",
+    "v": "p"
+   }
+  ],
+  "k": "pl-ri-7-4@6",
+  "ult": "p"
+ },
+ {
+  "id": "pl-ri-7-4@7",
+  "atualizadoEm": "2026-11-05T09:34:41.079Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:34:41.079Z",
+    "resp": "Corregedoria \nSindicância / Inquérito",
+    "v": "s"
+   }
+  ],
+  "k": "pl-ri-7-4@7",
+  "ult": "s"
+ },
+ {
+  "id": "pl-ri-7-4@8",
+  "atualizadoEm": "2026-11-05T09:35:04.169Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:35:04.169Z",
+    "resp": "Diretor de Polícia Legislativa\nCorregedor",
+    "v": "p"
+   }
+  ],
+  "k": "pl-ri-7-4@8",
+  "ult": "p"
+ },
+ {
+  "id": "pl-ri-7-4@9",
+  "atualizadoEm": "2026-11-05T09:35:23.263Z",
+  "hist": [
+   {
+    "em": "2026-11-05T09:35:23.263Z",
+    "resp": "Servidor estável",
+    "v": "s"
+   }
+  ],
+  "k": "pl-ri-7-4@9",
+  "ult": "s"
+ },
+ {
+  "id": "rf-1-4@0",
+  "atualizadoEm": "2026-11-07T15:11:54.004Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T16:44:29.927Z",
+    "resp": "Identificação",
+    "v": "n"
+   },
+   {
+    "em": "2026-11-07T15:11:54.004Z",
+    "int": 7,
+    "resp": "Diarização",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "rf-1-4@0",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-4@1",
+  "atualizadoEm": "2026-11-07T15:19:25.387Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T16:44:59.381Z",
+    "resp": "um para todos;\ntodos para um",
+    "v": "p"
+   },
+   {
+    "em": "2026-11-07T15:19:25.387Z",
+    "int": 1,
+    "resp": "Específico / um",
+    "rev": true,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-4@1",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "rf-1-4@10",
+  "atualizadoEm": "2026-11-07T15:50:51.322Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T19:41:42.354Z",
+    "resp": "15/100",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-07T15:50:51.322Z",
+    "int": 7,
+    "resp": "15",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "rf-1-4@10",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-4@11",
+  "atualizadoEm": "2026-11-05T19:41:57.710Z",
+  "hist": [
+   {
+    "em": "2026-11-05T19:41:57.710Z",
+    "resp": "Agrupamento",
+    "v": "n"
+   }
+  ],
+  "k": "rf-1-4@11",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-4@12",
+  "atualizadoEm": "2026-11-05T19:42:11.366Z",
+  "hist": [
+   {
+    "em": "2026-11-05T19:42:11.366Z",
+    "v": "n"
+   }
+  ],
+  "k": "rf-1-4@12",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-4@13",
+  "atualizadoEm": "2026-11-05T19:42:21.608Z",
+  "hist": [
+   {
+    "em": "2026-11-05T19:42:21.608Z",
+    "v": "n"
+   }
+  ],
+  "k": "rf-1-4@13",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-4@14",
+  "atualizadoEm": "2026-11-05T19:42:27.892Z",
+  "hist": [
+   {
+    "em": "2026-11-05T19:42:27.892Z",
+    "v": "n"
+   }
+  ],
+  "k": "rf-1-4@14",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-4@15",
+  "atualizadoEm": "2026-11-05T19:42:52.188Z",
+  "hist": [
+   {
+    "em": "2026-11-05T19:42:52.188Z",
+    "resp": "rótulo / sensível",
+    "v": "p"
+   }
+  ],
+  "k": "rf-1-4@15",
+  "ult": "p"
+ },
+ {
+  "id": "rf-1-4@2",
+  "atualizadoEm": "2026-11-07T15:40:08.136Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T16:45:28.710Z",
+    "resp": "Separação",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-07T15:23:16.561Z",
+    "int": 1,
+    "rev": true,
+    "v": "n"
+   },
+   {
+    "em": "2026-11-07T15:40:08.136Z",
+    "int": 1,
+    "resp": "Identificacao",
+    "rev": true,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-4@2",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-4@3",
+  "atualizadoEm": "2026-11-07T15:34:38.565Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T17:11:51.114Z",
+    "resp": "VDA;\nSegmentação;\nEmbedding;\nAgrupamento.",
+    "v": "p"
+   },
+   {
+    "em": "2026-11-07T15:34:38.565Z",
+    "int": 3,
+    "resp": "VDA-Segmentação-Embedding-Agrupamento",
+    "rev": true,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "rf-1-4@3",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "rf-1-4@4",
+  "atualizadoEm": "2026-11-07T15:36:02.843Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T16:46:49.432Z",
+    "resp": "Não supervisionado",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-07T15:36:02.843Z",
+    "int": 7,
+    "resp": "Não supervisionado",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "rf-1-4@4",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-4@5",
+  "atualizadoEm": "2026-11-07T15:37:06.254Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T16:47:11.321Z",
+    "resp": "estático / neural",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-07T15:37:06.254Z",
+    "int": 7,
+    "resp": "I-vector",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "rf-1-4@5",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-4@6",
+  "atualizadoEm": "2026-11-07T15:38:35.811Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T19:40:36.148Z",
+    "resp": "Ruídos",
+    "v": "n"
+   },
+   {
+    "em": "2026-11-07T15:38:35.811Z",
+    "int": 3,
+    "resp": "Ruídos, canais",
+    "rev": true,
+    "v": "b"
+   }
+  ],
+  "intervalo": 3,
+  "k": "rf-1-4@6",
+  "nivel": 1,
+  "prox": "2026-11-10",
+  "ult": "b"
+ },
+ {
+  "id": "rf-1-4@7",
+  "atualizadoEm": "2026-11-07T15:39:22.720Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T19:40:54.372Z",
+    "resp": "De menos",
+    "v": "n"
+   },
+   {
+    "em": "2026-11-07T15:39:22.720Z",
+    "int": 7,
+    "resp": "De mais",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "rf-1-4@7",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-4@8",
+  "atualizadoEm": "2026-11-07T15:41:55.152Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T19:41:02.918Z",
+    "v": "n"
+   },
+   {
+    "em": "2026-11-07T15:41:55.152Z",
+    "int": 1,
+    "resp": "E2E",
+    "rev": true,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-4@8",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-4@9",
+  "atualizadoEm": "2026-11-07T15:42:46.084Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T19:41:21.580Z",
+    "resp": "Tempo perdido",
+    "v": "p"
+   },
+   {
+    "em": "2026-11-07T15:42:46.084Z",
+    "int": 1,
+    "resp": "Fora do tempo / invenção",
+    "rev": true,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-4@9",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-5@0",
+  "atualizadoEm": "2026-11-07T15:11:07.381Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T20:24:34.648Z",
+    "v": "n"
+   },
+   {
+    "em": "2026-11-07T15:11:07.381Z",
+    "int": 7,
+    "resp": "Truecasing",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "rf-1-5@0",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-5@1",
+  "atualizadoEm": "2026-11-07T15:33:18.134Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T20:24:41.477Z",
+    "v": "n"
+   },
+   {
+    "em": "2026-11-07T15:33:18.133Z",
+    "int": 1,
+    "resp": "Siglas, nomes",
+    "rev": true,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-5@1",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "rf-1-5@10",
+  "atualizadoEm": "2026-11-05T20:37:09.423Z",
+  "hist": [
+   {
+    "em": "2026-11-05T20:37:09.423Z",
+    "resp": "Normalização",
+    "v": "s"
+   }
+  ],
+  "k": "rf-1-5@10",
+  "ult": "s"
+ },
+ {
+  "id": "rf-1-5@11",
+  "atualizadoEm": "2026-11-05T20:37:22.062Z",
+  "hist": [
+   {
+    "em": "2026-11-05T20:37:22.062Z",
+    "resp": "O sentido",
+    "v": "s"
+   }
+  ],
+  "k": "rf-1-5@11",
+  "ult": "s"
+ },
+ {
+  "id": "rf-1-5@2",
+  "atualizadoEm": "2026-11-07T15:42:05.053Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T20:31:56.704Z",
+    "resp": "Maiúsculas",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-07T15:42:05.053Z",
+    "int": 7,
+    "resp": "Maiúsculas",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "rf-1-5@2",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-5@3",
+  "atualizadoEm": "2026-11-07T15:48:07.271Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T20:32:35.360Z",
+    "resp": "Predição",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-07T15:48:07.271Z",
+    "int": 7,
+    "resp": "Predição",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "rf-1-5@3",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-5@4",
+  "atualizadoEm": "2026-11-07T15:50:34.134Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-05T20:33:35.016Z",
+    "resp": "Prosódicas",
+    "v": "s"
+   },
+   {
+    "em": "2026-11-07T15:50:34.134Z",
+    "int": 7,
+    "resp": "Prosodicas",
+    "rev": true,
+    "v": "f"
+   }
+  ],
+  "intervalo": 7,
+  "k": "rf-1-5@4",
+  "nivel": 2,
+  "prox": "2026-11-14",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-5@5",
+  "atualizadoEm": "2026-11-06T10:32:56.110Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-05T20:33:47.558Z",
+    "resp": "Regionalismos",
+    "v": "n"
+   },
+   {
+    "em": "2026-11-06T10:32:56.110Z",
+    "int": 1,
+    "resp": "Elas dependem de tradução do ASR",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-5@5",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "rf-1-5@6",
+  "atualizadoEm": "2026-11-05T20:34:01.372Z",
+  "hist": [
+   {
+    "em": "2026-11-05T20:34:01.372Z",
+    "resp": "Regionalismos e sotaques",
+    "v": "n"
+   }
+  ],
+  "k": "rf-1-5@6",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-5@7",
+  "atualizadoEm": "2026-11-05T20:35:43.883Z",
+  "hist": [
+   {
+    "em": "2026-11-05T20:35:43.883Z",
+    "resp": "Whisper",
+    "v": "s"
+   }
+  ],
+  "k": "rf-1-5@7",
+  "ult": "s"
+ },
+ {
+  "id": "rf-1-5@8",
+  "atualizadoEm": "2026-11-05T20:35:56.897Z",
+  "hist": [
+   {
+    "em": "2026-11-05T20:35:56.897Z",
+    "v": "n"
+   }
+  ],
+  "k": "rf-1-5@8",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-5@9",
+  "atualizadoEm": "2026-11-05T20:36:54.745Z",
+  "hist": [
+   {
+    "em": "2026-11-05T20:36:54.745Z",
+    "resp": "20 para 10",
+    "v": "s"
+   }
+  ],
+  "k": "rf-1-5@9",
+  "ult": "s"
+ },
+ {
+  "id": "rf-1-6@0",
+  "atualizadoEm": "2026-11-06T14:00:56.157Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T14:00:56.157Z",
+    "int": 1,
+    "resp": "já conhce",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-6@0",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "rf-1-6@1",
+  "atualizadoEm": "2026-11-06T14:01:13.527Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:01:13.527Z",
+    "int": 4,
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "rf-1-6@1",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-6@10",
+  "atualizadoEm": "2026-11-06T14:08:12.468Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:08:12.468Z",
+    "int": 4,
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "rf-1-6@10",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-6@2",
+  "atualizadoEm": "2026-11-06T14:01:26.861Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:01:26.861Z",
+    "int": 4,
+    "resp": "20 / 10",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "rf-1-6@2",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-6@3",
+  "atualizadoEm": "2026-11-06T14:01:36.674Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:01:36.674Z",
+    "int": 4,
+    "resp": "Não",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "rf-1-6@3",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-6@4",
+  "atualizadoEm": "2026-11-06T14:01:47.672Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:01:47.672Z",
+    "int": 4,
+    "resp": "Não",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "rf-1-6@4",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-6@5",
+  "atualizadoEm": "2026-11-06T14:03:19.401Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:03:19.401Z",
+    "int": 4,
+    "resp": "Fala lida / fala preparada / fala espontânea",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "rf-1-6@5",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-6@6",
+  "atualizadoEm": "2026-11-06T14:05:59.300Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:05:59.299Z",
+    "int": 1,
+    "resp": "Nomes;\nJur",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-6@6",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-6@7",
+  "atualizadoEm": "2026-11-06T14:06:26.712Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:06:26.712Z",
+    "int": 4,
+    "resp": "Vocabulário técnico",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "rf-1-6@7",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-6@8",
+  "atualizadoEm": "2026-11-06T14:06:37.517Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:06:37.517Z",
+    "int": 4,
+    "resp": "Femininos",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "rf-1-6@8",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-6@9",
+  "atualizadoEm": "2026-11-06T14:08:04.570Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:08:04.570Z",
+    "int": 1,
+    "resp": "Baixo reconhecimento",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-6@9",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-7@0",
+  "atualizadoEm": "2026-11-06T14:09:22.683Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T14:09:22.683Z",
+    "int": 1,
+    "resp": "Streaming",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-7@0",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "rf-1-7@1",
+  "atualizadoEm": "2026-11-06T14:09:39.237Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:09:39.237Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-7@1",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-7@10",
+  "atualizadoEm": "2026-11-06T14:14:23.932Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:14:23.932Z",
+    "int": 4,
+    "resp": "Ao vivo: 98%\nGravada: 100%",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "rf-1-7@10",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-7@11",
+  "atualizadoEm": "2026-11-06T14:14:45.875Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:14:45.875Z",
+    "int": 4,
+    "resp": "Escrita em máquina / Taquigrafia é manual",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "rf-1-7@11",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-7@12",
+  "atualizadoEm": "2026-11-06T14:15:19.764Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:15:19.764Z",
+    "int": 1,
+    "resp": "Streaming para ao vivo. Lote para as redações oficiais.",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-7@12",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-7@2",
+  "atualizadoEm": "2026-11-06T14:10:53.516Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:10:53.516Z",
+    "int": 4,
+    "resp": "Parcial",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "rf-1-7@2",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-7@3",
+  "atualizadoEm": "2026-11-06T14:11:39.338Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T14:11:39.338Z",
+    "int": 1,
+    "resp": "Reduz",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-7@3",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "rf-1-7@4",
+  "atualizadoEm": "2026-11-06T14:12:34.323Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T14:12:34.323Z",
+    "int": 4,
+    "resp": "Endpointing",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "rf-1-7@4",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "rf-1-7@5",
+  "atualizadoEm": "2026-11-06T14:13:21.936Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T14:13:21.936Z",
+    "int": 1,
+    "resp": "Fim precoce; muda a identificação",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-7@5",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "rf-1-7@8",
+  "atualizadoEm": "2026-11-06T14:13:36.657Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:13:36.657Z",
+    "int": 1,
+    "resp": "AWS",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-7@8",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "rf-1-7@9",
+  "atualizadoEm": "2026-11-06T14:13:59.235Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T14:13:59.235Z",
+    "int": 1,
+    "resp": "Libras, legenda,",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "rf-1-7@9",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1-4@0",
+  "atualizadoEm": "2026-11-07T15:16:41.205Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:16:41.205Z",
+    "int": 1,
+    "resp": "Nuvem /",
+    "rev": false,
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1-4@0",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "d"
+ },
+ {
+  "id": "ti-1@0",
+  "atualizadoEm": "2026-11-06T11:23:00.426Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T11:23:00.426Z",
+    "int": 4,
+    "resp": "Docx",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-1@0",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-1@1",
+  "atualizadoEm": "2026-11-06T11:23:13.052Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:23:13.052Z",
+    "int": 1,
+    "resp": "Docx",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@1",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@10",
+  "atualizadoEm": "2026-11-06T11:27:00.625Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:27:00.625Z",
+    "int": 1,
+    "resp": "Copiar estilo",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@10",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@11",
+  "atualizadoEm": "2026-11-06T11:27:20.707Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T11:27:20.707Z",
+    "int": 4,
+    "resp": "Fim / final",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-1@11",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-1@12",
+  "atualizadoEm": "2026-11-06T11:27:32.671Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:27:32.671Z",
+    "int": 1,
+    "resp": "Remissivo",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@12",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@13",
+  "atualizadoEm": "2026-11-06T11:27:42.739Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:27:42.739Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@13",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@14",
+  "atualizadoEm": "2026-11-06T11:28:49.629Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:28:49.629Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@14",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@15",
+  "atualizadoEm": "2026-11-06T11:28:56.851Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:28:56.851Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@15",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@16",
+  "atualizadoEm": "2026-11-06T11:29:45.293Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T11:29:45.293Z",
+    "int": 1,
+    "resp": "Nuvem",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@16",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "ti-1@17",
+  "atualizadoEm": "2026-11-06T11:29:56.311Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:29:56.311Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@17",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@18",
+  "atualizadoEm": "2026-11-06T11:30:52.773Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:30:52.773Z",
+    "int": 1,
+    "resp": "Backup",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@18",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@19",
+  "atualizadoEm": "2026-11-06T11:31:44.616Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:31:44.616Z",
+    "int": 1,
+    "resp": "Segura",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@19",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@2",
+  "atualizadoEm": "2026-11-06T11:23:21.969Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T11:23:21.969Z",
+    "int": 4,
+    "resp": "Rtf",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-1@2",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-1@20",
+  "atualizadoEm": "2026-11-06T11:32:05.568Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:32:05.568Z",
+    "int": 1,
+    "resp": "Corporativa",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@20",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@3",
+  "atualizadoEm": "2026-11-06T11:23:54.820Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T11:23:54.820Z",
+    "int": 1,
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@3",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "ti-1@4",
+  "atualizadoEm": "2026-11-06T11:24:05.919Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:24:05.919Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@4",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@5",
+  "atualizadoEm": "2026-11-06T11:24:26.154Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T11:24:26.154Z",
+    "int": 1,
+    "resp": "Ctrl+B / Não sei",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@5",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "ti-1@6",
+  "atualizadoEm": "2026-11-06T11:24:42.396Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:24:42.396Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@6",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@7",
+  "atualizadoEm": "2026-11-06T11:25:05.978Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:25:05.978Z",
+    "int": 1,
+    "resp": "F",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@7",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@8",
+  "atualizadoEm": "2026-11-06T11:25:16.446Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:25:16.446Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@8",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-1@9",
+  "atualizadoEm": "2026-11-06T11:25:21.487Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T11:25:21.487Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-1@9",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@0",
+  "atualizadoEm": "2026-11-06T12:00:16.553Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T12:00:16.553Z",
+    "int": 4,
+    "resp": "Hosts",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-2@0",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-2@1",
+  "atualizadoEm": "2026-11-06T12:00:28.813Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T12:00:28.813Z",
+    "int": 1,
+    "resp": "Switch",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@1",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@10",
+  "atualizadoEm": "2026-11-06T12:06:34.960Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T12:06:34.960Z",
+    "int": 4,
+    "resp": "Cliente / servidor",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-2@10",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-2@11",
+  "atualizadoEm": "2026-11-06T12:04:03.856Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T12:04:03.856Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@11",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@12",
+  "atualizadoEm": "2026-11-06T12:04:09.697Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T12:04:09.697Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@12",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@13",
+  "atualizadoEm": "2026-11-06T12:04:52.598Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T12:04:52.598Z",
+    "int": 4,
+    "resp": "Half-Duplex",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-2@13",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-2@14",
+  "atualizadoEm": "2026-11-06T12:05:12.901Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T12:05:12.900Z",
+    "int": 1,
+    "resp": "Um / um grupo / todos",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@14",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "ti-2@15",
+  "atualizadoEm": "2026-11-06T12:05:21.689Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T12:05:21.689Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@15",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@16",
+  "atualizadoEm": "2026-11-06T12:07:08.307Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T12:07:08.307Z",
+    "int": 4,
+    "resp": "ARPAnet",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-2@16",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-2@17",
+  "atualizadoEm": "2026-11-06T12:07:15.396Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T12:07:15.396Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@17",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@18",
+  "atualizadoEm": "2026-11-06T12:07:29.123Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T12:07:29.123Z",
+    "int": 1,
+    "resp": "HTTPS",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@18",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@19",
+  "atualizadoEm": "2026-11-06T12:07:37.178Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T12:07:37.178Z",
+    "int": 4,
+    "resp": "Falso",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-2@19",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-2@2",
+  "atualizadoEm": "2026-11-06T12:00:49.063Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T12:00:49.063Z",
+    "int": 1,
+    "resp": "Estela, Bus…",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@2",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@20",
+  "atualizadoEm": "2026-11-06T12:08:16.864Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T12:08:16.864Z",
+    "int": 4,
+    "resp": "Não",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-2@20",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-2@21",
+  "atualizadoEm": "2026-11-06T12:08:27.747Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T12:08:27.747Z",
+    "int": 4,
+    "resp": "VPN",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-2@21",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-2@22",
+  "atualizadoEm": "2026-11-06T12:08:43.589Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T12:08:43.589Z",
+    "int": 1,
+    "resp": "Intranet / registrados e confiáveis",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@22",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "ti-2@23",
+  "atualizadoEm": "2026-11-07T15:11:31.807Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:11:31.807Z",
+    "int": 1,
+    "resp": "Anel",
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@23",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@27",
+  "atualizadoEm": "2026-11-06T12:04:24.674Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T12:04:24.674Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@27",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@28",
+  "atualizadoEm": "2026-11-06T12:04:37.389Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T12:04:37.389Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@28",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@29",
+  "atualizadoEm": "2026-11-06T12:09:56.596Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T12:09:56.596Z",
+    "int": 1,
+    "resp": "4 bits \n6 bits",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@29",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@3",
+  "atualizadoEm": "2026-11-06T12:02:09.457Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T12:02:09.457Z",
+    "int": 1,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@3",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@30",
+  "atualizadoEm": "2026-11-06T12:10:26.029Z",
+  "facil": 2.1,
+  "hist": [
+   {
+    "em": "2026-11-06T12:10:09.674Z",
+    "int": 1,
+    "v": "n"
+   },
+   {
+    "em": "2026-11-06T12:10:26.029Z",
+    "int": 1,
+    "resp": "Me responda",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@30",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@31",
+  "atualizadoEm": "2026-11-06T12:10:41.288Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T12:10:41.288Z",
+    "int": 4,
+    "resp": "TCP / UDP",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-2@31",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-2@37",
+  "atualizadoEm": "2026-11-06T12:07:47.563Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-06T12:07:47.563Z",
+    "int": 1,
+    "resp": "Deep web",
+    "v": "b"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@37",
+  "prox": "2026-11-07",
+  "ult": "b"
+ },
+ {
+  "id": "ti-2@38",
+  "atualizadoEm": "2026-11-06T12:07:58.592Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T12:07:58.592Z",
+    "int": 1,
+    "resp": "Dark",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@38",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "ti-2@4",
+  "atualizadoEm": "2026-11-06T12:02:31.722Z",
+  "facil": 2.3,
+  "hist": [
+   {
+    "em": "2026-11-06T12:02:31.722Z",
+    "int": 1,
+    "resp": "Half duplex e full duplex",
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@4",
+  "prox": "2026-11-07",
+  "ult": "n"
+ },
+ {
+  "id": "ti-2@5",
+  "atualizadoEm": "2026-11-06T12:02:52.140Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T12:02:52.140Z",
+    "int": 4,
+    "resp": "Malha",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-2@5",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-2@6",
+  "atualizadoEm": "2026-11-06T12:03:02.906Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T12:03:02.906Z",
+    "int": 4,
+    "resp": "Switch",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-2@6",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-2@7",
+  "atualizadoEm": "2026-11-06T12:03:23.872Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T12:03:23.872Z",
+    "int": 4,
+    "resp": "PAN\nLAN\nMAN\nWAN",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-2@7",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-2@8",
+  "atualizadoEm": "2026-11-06T12:03:33.357Z",
+  "facil": 2.65,
+  "hist": [
+   {
+    "em": "2026-11-06T12:03:33.356Z",
+    "int": 4,
+    "resp": "MAN",
+    "v": "f"
+   }
+  ],
+  "intervalo": 4,
+  "k": "ti-2@8",
+  "prox": "2026-11-10",
+  "ult": "f"
+ },
+ {
+  "id": "ti-2@9",
+  "atualizadoEm": "2026-11-06T12:05:41.276Z",
+  "facil": 2.35,
+  "hist": [
+   {
+    "em": "2026-11-06T12:05:41.276Z",
+    "int": 1,
+    "resp": "Host e cliente / dedicado",
+    "v": "d"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-2@9",
+  "prox": "2026-11-07",
+  "ult": "d"
+ },
+ {
+  "id": "ti-4@0",
+  "atualizadoEm": "2026-11-07T15:23:38.659Z",
+  "facil": 2.5,
+  "hist": [
+   {
+    "em": "2026-11-07T15:23:38.659Z",
+    "int": 1,
+    "resp": "Confidencialidade",
+    "rev": false,
+    "v": "n"
+   }
+  ],
+  "intervalo": 1,
+  "k": "ti-4@0",
+  "nivel": 0,
+  "prox": "2026-11-08",
+  "ult": "n"
+ }
+]
