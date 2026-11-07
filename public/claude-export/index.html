@@ -409,6 +409,7 @@ details.diario .feed{margin-top:10px}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--surface);padding:10px 16px;border-radius:8px;font-size:14px;max-width:calc(100% - 32px);z-index:20}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
+<link rel="stylesheet" href="/claude-export/experience.css">
 
 <div class="wrap">
   <header class="top">
@@ -1236,6 +1237,17 @@ function viewPainel(){
   const tot={nao:0,estudo:0,revisao:0,dominado:0}; let nTop=0;
   for(const g of gs) for(const k of ST_ORD){tot[k]+=g.cont[k]; nTop+=g.cont[k];}
   const iniciados=nTop-tot.nao;
+  const prioridades=devidas();
+  const dataTexto=new Intl.DateTimeFormat('pt-BR',{weekday:'long',day:'numeric',month:'long'}).format(new Date(hoje()+'T12:00:00'));
+  const boasVindas=`<section class="qb-welcome" aria-label="Prioridade dos estudos de hoje">
+    <div class="qb-welcome-copy">
+      <span class="qb-kicker">Plano de estudo · ${esc(dataTexto)}</span>
+      <h2>${prioridades.fila.length?'Suas revisões vêm primeiro.':'Revisões em dia. Hora de avançar.'}</h2>
+      <p>${prioridades.fila.length?'Comece pelos itens programados e depois avance nos tópicos do edital.':'Use este momento para treinar questões novas, consolidar mapas e revisar seus cartões.'}
+      ${prioridades.feitasHoje?`Você já revisou ${prioridades.feitasHoje} ${prioridades.feitasHoje===1?'item':'itens'} hoje.`:''}</p>
+    </div>
+    <div class="qb-welcome-number"><b>${prioridades.fila.length}</b><small>${prioridades.fila.length===1?'questão pendente':'questões pendentes'} para hoje</small></div>
+  </section>`;
   let rows='';
   for(const p of ['P1','P2']){
     rows+=`<div class="prova-h">${esc(PROVAS[p])}</div>`;
@@ -1257,9 +1269,10 @@ function viewPainel(){
   const mats=[...S.mat.values()].filter(m=>m.url).sort((a,b)=>(b.criadoEm||'').localeCompare(a.criadoEm||''));
   const matHtml=mats.length?`<div class="mat-l">${mats.map(m=>`<div class="mat"><span class="mt"><a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a></span><span class="mtype">${esc(MTIPO[m.tipo]||m.tipo||'')} · ${(m.topicos||[]).map(id=>esc(lblT(S.ed.get(id))||id)).join(', ')}</span></div>`).join('')}</div>`:'';
   return `<div class="wrap" style="gap:18px">
-    ${anelBox()}
+    ${boasVindas}
     ${dueBox()}
     ${cartDueBox()}
+    ${anelBox()}
     <div class="duo">${memoria()}${constancia()}</div>
     ${linhaProva()}
     <div class="summary">
