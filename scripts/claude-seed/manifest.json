@@ -1,0 +1,288 @@
+{
+ "projeto": "Quebrando a Banca",
+ "exportadoEm": "2026-11-07",
+ "origem": {
+  "artefato": "claude.ai artifact 210c9bf8-2910-413a-bd44-7e1fb2908b56",
+  "versao": "1794052457-12b5"
+ },
+ "registros_por_colecao": {
+  "questoes": 1812,
+  "respostas": 964,
+  "rodadas": 78,
+  "simulados": 1,
+  "cartoes_aval": 327,
+  "revisao": 55,
+  "edital": 167,
+  "materiais": 45,
+  "pontos": 12,
+  "textos": 6,
+  "pegadinhas": 186,
+  "analise": 7,
+  "config": 3,
+  "diario": 92
+ },
+ "questoes": {
+  "total": 1812,
+  "por_prefixo_de_capitulo": {
+   "AP": 89,
+   "BANCA-LP": 19,
+   "BANCA-LI": 7,
+   "BANCA-DA": 63,
+   "BANCA-DC": 25,
+   "BANCA-CP": 2,
+   "BANCA-LG": 3,
+   "BANCA-PL": 2,
+   "BANCA-TI": 21,
+   "RF": 178,
+   "CP": 68,
+   "DA": 358,
+   "DC": 352,
+   "JUR": 23,
+   "LG": 50,
+   "LI": 3,
+   "LP": 159,
+   "PL": 90,
+   "TI": 274,
+   "SIM": 26
+  },
+  "ineditas_Claude": 1121,
+  "outras_origens": 691,
+  "gabaritos": {
+   "C": 904,
+   "E": 908
+  },
+  "foraNivel": [
+   "b26plf-039",
+   "sim01-21"
+  ],
+  "copias_sinalizadas": 26
+ },
+ "analise_por_prova": {
+  "CD26-NS-CG": {
+   "itens": 90,
+   "anulados": 2,
+   "duplicataProva": 0
+  },
+  "CD26-PLF-CE": {
+   "itens": 90,
+   "anulados": 9,
+   "duplicataProva": 0
+  },
+  "CD26-PLF-CG": {
+   "itens": 90,
+   "anulados": 6,
+   "duplicataProva": 0
+  },
+  "CD26-TEC-CE": {
+   "itens": 90,
+   "anulados": 2,
+   "duplicataProva": 0
+  },
+  "CONTROLE": {
+   "itens": 130,
+   "anulados": 0,
+   "duplicataProva": 10
+  }
+ },
+ "arquivos": [
+  {
+   "arquivo": "_stats.json",
+   "bytes": 46289,
+   "sha256": "8ff6966c8564a47e",
+   "finalidade": "índice/estatísticas"
+  },
+  {
+   "arquivo": "recursos/regras_do_projeto/Concurso_Contexto.md",
+   "bytes": 11766,
+   "sha256": "113e18774efbc1fa",
+   "finalidade": "regras, métodos e critérios do projeto (documentos do Projeto claude.ai)"
+  },
+  {
+   "arquivo": "recursos/regras_do_projeto/claude__Regras_de_Perguntas.md",
+   "bytes": 5061,
+   "sha256": "eadbd3b37936160b",
+   "finalidade": "regras, métodos e critérios do projeto (documentos do Projeto claude.ai)"
+  },
+  {
+   "arquivo": "recursos/regras_do_projeto/claude__Modelo_Mapa_Mental.md",
+   "bytes": 8019,
+   "sha256": "0ab7c6c7850ee8d1",
+   "finalidade": "regras, métodos e critérios do projeto (documentos do Projeto claude.ai)"
+  },
+  {
+   "arquivo": "recursos/regras_do_projeto/claude__Discursiva_Metodo.md",
+   "bytes": 4364,
+   "sha256": "c14af9be47fbf64e",
+   "finalidade": "regras, métodos e critérios do projeto (documentos do Projeto claude.ai)"
+  },
+  {
+   "arquivo": "recursos/regras_do_projeto/claude__Discursiva_Guia.md",
+   "bytes": 5980,
+   "sha256": "d0c05caff6e8f60f",
+   "finalidade": "regras, métodos e critérios do projeto (documentos do Projeto claude.ai)"
+  },
+  {
+   "arquivo": "recursos/regras_do_projeto/claude__Metodo_de_Estudo.md",
+   "bytes": 32462,
+   "sha256": "4675ba7da543057c",
+   "finalidade": "regras, métodos e critérios do projeto (documentos do Projeto claude.ai)"
+  },
+  {
+   "arquivo": "documentacao/FUNCIONALIDADES.md",
+   "bytes": 1633,
+   "sha256": "84ed734b9b4592d3",
+   "finalidade": "documentação para migração"
+  },
+  {
+   "arquivo": "documentacao/GUIA_MIGRACAO_BASE44.md",
+   "bytes": 1385,
+   "sha256": "b5e1dfdfbaf9a2b9",
+   "finalidade": "documentação para migração"
+  },
+  {
+   "arquivo": "documentacao/PENDENCIAS.md",
+   "bytes": 897,
+   "sha256": "59648f973c56468c",
+   "finalidade": "documentação para migração"
+  },
+  {
+   "arquivo": "documentacao/REGRAS_DE_NEGOCIO.md",
+   "bytes": 2529,
+   "sha256": "30da5fe20d4a878b",
+   "finalidade": "documentação para migração"
+  },
+  {
+   "arquivo": "documentacao/MODELO_DE_DADOS.md",
+   "bytes": 2950,
+   "sha256": "ad74ca934cf74d55",
+   "finalidade": "documentação para migração"
+  },
+  {
+   "arquivo": "documentacao/ARQUITETURA.md",
+   "bytes": 2838,
+   "sha256": "9236e34f0eb3d065",
+   "finalidade": "documentação para migração"
+  },
+  {
+   "arquivo": "codigo_fonte/servicos/app.js",
+   "bytes": 186689,
+   "sha256": "b00969eaf7e4079e",
+   "finalidade": "extração literal do original"
+  },
+  {
+   "arquivo": "codigo_fonte/original/index.html",
+   "bytes": 222646,
+   "sha256": "adf1993389c44729",
+   "finalidade": "código original, fonte de verdade"
+  },
+  {
+   "arquivo": "codigo_fonte/estilos/app.css",
+   "bytes": 34327,
+   "sha256": "56befaa222ec4c14",
+   "finalidade": "extração literal do original"
+  },
+  {
+   "arquivo": "codigo_fonte/estilos/markup_shell.html",
+   "bytes": 1016,
+   "sha256": "08248a95838d21ff",
+   "finalidade": "extração literal do original"
+  },
+  {
+   "arquivo": "banco_de_dados/_schema_inferido.json",
+   "bytes": 14491,
+   "sha256": "cb29e84f421aa4d6",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/pegadinhas.json",
+   "bytes": 154994,
+   "sha256": "75a4505bd2d6b639",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/materiais.json",
+   "bytes": 27982,
+   "sha256": "bc4737f9a28e9c2d",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/respostas.json",
+   "bytes": 553330,
+   "sha256": "7d29248b5981d99b",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/pontos.json",
+   "bytes": 92250,
+   "sha256": "29d1560d66e99c48",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/rodadas.json",
+   "bytes": 171136,
+   "sha256": "cc76a169e1b1f5ab",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/diario.json",
+   "bytes": 74039,
+   "sha256": "676c45fca4f3384c",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/questoes.json",
+   "bytes": 1404407,
+   "sha256": "b1553ade4226553b",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/edital.json",
+   "bytes": 92475,
+   "sha256": "57508dc39795931b",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/analise.json",
+   "bytes": 311865,
+   "sha256": "7e4b66bc8192b8ab",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/config.json",
+   "bytes": 2062,
+   "sha256": "ab16eed45fafd748",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/simulados.json",
+   "bytes": 18748,
+   "sha256": "562298729204b537",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/textos.json",
+   "bytes": 11401,
+   "sha256": "ad6d1edd66342100",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/revisao.json",
+   "bytes": 1377760,
+   "sha256": "1eece341ab735558",
+   "finalidade": "dados exportados (array de documentos com id)"
+  },
+  {
+   "arquivo": "banco_de_dados/cartoes_aval.json",
+   "bytes": 97636,
+   "sha256": "7a10f94d1062848e",
+   "finalidade": "dados exportados (array de documentos com id)"
+  }
+ ],
+ "limitacoes": [
+  "Banco acessado pela API do artefato; coleções não referenciadas pela página não podem ser listadas e, se existirem, não estão aqui.",
+  "Versões internas e histórico de alterações dos documentos não são exportáveis; só o estado atual.",
+  "Arquivos originais do Projeto (PDFs de aulas, edital, goodnotes, imagens) não estão no pacote: são material de terceiros e não fazem parte do app.",
+  "Pasta local concurso-camara e NotebookLM não acessados.",
+  "O app depende do runtime do claude.ai (db e sample); no Base44 esses serviços precisam ser reimplementados."
+ ]
+}
