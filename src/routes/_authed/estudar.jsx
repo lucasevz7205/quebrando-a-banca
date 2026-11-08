@@ -72,7 +72,9 @@ function StudyScreen({ account }) {
 
   useEffect(() => {
     async function receive(event) {
-      if (event.origin !== window.location.origin || event.source !== frameRef.current?.contentWindow) return;
+      const frameOrigin = preview ? "null" : window.location.origin;
+      if (event.origin !== frameOrigin || event.source !== frameRef.current?.contentWindow) return;
+      const replyOrigin = preview ? "*" : frameOrigin;
       const msg = event.data;
       if (!msg || msg.flag !== FLAG || !msg.id) return;
       const frame = frameRef.current?.contentWindow;
@@ -81,7 +83,7 @@ function StudyScreen({ account }) {
         if (!user?.id || (!legacy && !accountId)) throw new Error("Ambiente de estudo indisponível.");
         let result;
         if (preview && msg.action === "write") {
-          frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: false, error: "Visualização somente leitura." }, event.origin);
+          frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: false, error: "Visualização somente leitura." }, replyOrigin);
           return;
         }
         if (msg.action === "logout" && !preview) {
@@ -95,9 +97,9 @@ function StudyScreen({ account }) {
           else if (preview) result = await listStudyPreview({ data: { accountId, args: msg.args || {} } });
           else result = await accessStudyAccount({ data: { action: msg.action, accountId, args: msg.args || {} } });
         } else throw new Error("Ação indisponível para esta conta.");
-        frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: true, value: result }, event.origin);
+        frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: true, value: result }, replyOrigin);
       } catch (err) {
-        frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: false, error: err?.message || "Erro de leitura." }, event.origin);
+        frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: false, error: err?.message || "Erro de leitura." }, replyOrigin);
         if (msg.action !== "assistantLLM") setError(err?.message || "Erro de conexão com os dados.");
       }
     }
@@ -139,6 +141,7 @@ function StudyScreen({ account }) {
         <iframe key={`${accountId || user?.id}:${frameVersion}`} ref={frameRef}
           title="Quebrando a Banca: Hoje, Edital, Treinar, Estudo, Simulado e Desempenho"
           srcDoc={account.markup}
+          sandbox={preview ? "allow-scripts allow-popups allow-popups-to-escape-sandbox" : undefined}
           style={{
             display: "block", width: "100%", height: preview ? "calc(100dvh - 3.5rem)" : "100dvh",
             border: 0, borderRadius: 0, background: "#F3F6F5"

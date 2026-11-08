@@ -5,8 +5,9 @@
 (() => {
   "use strict";
   const FLAG = "__qb44_bridge_v1__";
-  // about:srcdoc inherits its effective origin from the study page.
-  const origin = window.origin;
+  // A sandboxed preview has an opaque origin, but resolves relative assets
+  // against the embedding document's base URL.
+  const origin = window.origin === "null" ? new URL(document.baseURI).origin : window.origin;
   let seq = 0;
   const pending = new Map();
   const listeners = new Map();
