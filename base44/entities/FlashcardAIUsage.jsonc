@@ -1,0 +1,42 @@
+{
+  "name": "FlashcardAIUsage",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "day": {
+      "type": "string"
+    },
+    "requests": {
+      "type": "number"
+    },
+    "last_request_at": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "user_id",
+    "day",
+    "requests",
+    "last_request_at"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": false
+  }
+}
