@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import StudyOnboarding from "@/components/qb/StudyOnboarding";
 import { base44 } from "@/api/base44Client";
 import { useAuth } from "@/lib/AuthContext";
 import { accessStudyAccount, getStudyAccount } from "@/lib/study-account";
@@ -89,11 +90,7 @@ function Estudar() {
   }, [user?.id, legacy, accountId, account?.name, account?.date, logout]);
 
   if (!legacy && !accountId) {
-    return <main style={{ padding: 32, fontFamily: "system-ui, sans-serif" }}>
-      <h1>Concurso aguardando vinculação</h1>
-      <p>O administrador precisa vincular este login a um concurso para liberar seu ambiente de estudo.</p>
-      <button type="button" onClick={() => logout()}>Sair da conta</button>
-    </main>;
+    return <StudyOnboarding key={user?.id} pending={account?.pending} logout={logout} />;
   }
 
   return (

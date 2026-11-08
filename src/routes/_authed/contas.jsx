@@ -78,28 +78,34 @@ function StudyAccountsPage() {
     <Heading title="Contas e concursos">
       Um único Quebrando a Banca, com materiais, questões e desempenho separados por login.
     </Heading>
-    <section className="qb-card">
-      <h2>Ambientes cadastrados</h2>
-      {!accounts.length?<p>Nenhum ambiente adicional cadastrado. Sua preparação original permanece independente.</p>:
+    {[
+      { title:"Solicitações pendentes", rows:accounts.filter(a=>a.pending), empty:"Nenhuma solicitação aguardando atendimento." },
+      { title:"Ambientes cadastrados", rows:accounts.filter(a=>!a.pending), empty:"Nenhum ambiente adicional cadastrado." }
+    ].map(({title,rows,empty})=><section className="qb-card" key={title}>
+      <h2>{title}</h2>
+      {!rows.length?<p>{empty}</p>:
       <div style={{display:"grid",gap:12}}>
-        {accounts.map(a=><article key={a.id} style={{border:"1px solid #d5dce7",borderRadius:12,padding:14,display:"flex",flexWrap:"wrap",justifyContent:"space-between",alignItems:"center",gap:12}}>
+        {rows.map(a=><article key={a.id} style={{border:"1px solid #d5dce7",borderRadius:12,padding:14,display:"flex",flexWrap:"wrap",justifyContent:"space-between",alignItems:"center",gap:12}}>
           <div>
-            <strong>{a.examName}</strong> <span className="qb-pill">{a.active?"Ativo":"Desativado"}</span>
+            <strong>{a.examName}</strong> <span className="qb-pill">{a.pending?"Pendente":a.active?"Ativo":"Desativado"}</span>
             <p style={{fontSize:13,overflowWrap:"anywhere"}}>Login (ID): {a.userId}<br/>
             {a.examDate?"Prova: "+a.examDate+" · ":""}
             Edital: {a.ready.edital?"cadastrado":"pendente"} · Questões: {a.ready.questoes?"cadastradas":"pendentes"}</p>
           </div>
-          <button className="qb-primary" type="button" disabled={busy||!a.active&&(!a.ready.edital||!a.ready.questoes)}
-            onClick={()=>run(async()=>{
-              await change({data:{accountId:a.id,active:!a.active}});
-              setStatus(a.active?"Ambiente desativado; dados preservados.":"Ambiente ativado para o login vinculado.");
-            })}>{a.active?"Desativar":"Ativar"}</button>
+          <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
+            {a.pending&&<a href="#importar-materiais" onClick={()=>setTarget(a.id)}>Providenciar materiais</a>}
+            <button className="qb-primary" type="button" disabled={busy||!a.active&&(!a.ready.edital||!a.ready.questoes)}
+              onClick={()=>run(async()=>{
+                await change({data:{accountId:a.id,active:!a.active}});
+                setStatus(a.active?"Ambiente desativado; dados preservados.":"Ambiente ativado para o login vinculado.");
+              })}>{a.active?"Desativar":"Ativar"}</button>
+          </div>
         </article>)}
       </div>}
-    </section>
+    </section>)}
     <section className="qb-card">
       <h2>Vincular login a um concurso</h2>
-      <p>O usuário já deve existir no Base44 com papel <code>user</code>. Informe seu ID exato. O ambiente começa desativado e vazio.</p>
+      <p>Use o vínculo manual para um login existente. Candidatos que se cadastram por conta própria aparecem em Solicitações pendentes.</p>
       <form onSubmit={createAccount} style={{display:"grid",gap:12}}>
         <label>ID do usuário no Base44
           <input required value={form.userId} onChange={e=>setForm(v=>({...v,userId:e.target.value}))} placeholder="ID do login cadastrado" maxLength={160}/></label>
@@ -110,7 +116,7 @@ function StudyAccountsPage() {
         <button className="qb-primary" type="submit" disabled={busy}>Criar vínculo desativado</button>
       </form>
     </section>
-    <section className="qb-card">
+    <section className="qb-card" id="importar-materiais">
       <h2>Importar materiais do concurso</h2>
       <p>Importe um JSON por coleção. Os IDs existentes não são sobrescritos, e respostas, rodadas e Caderno de Erros não podem ser importados por esta tela.</p>
       <form onSubmit={importFile} style={{display:"grid",gap:12}}>
