@@ -1,0 +1,1447 @@
+{
+  "topic": "fiscal-t50",
+  "source": "5. Análise de Informações - Modelagem Conceitual.pdf",
+  "questions": [
+    {
+      "id": "fiscal-t50-ce02",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "A modelagem conceitual parte de um recorte da realidade, denominado minimundo, e dos requisitos de informações que se deseja representar.",
+      "gabarito": "C",
+      "comentario": "O capítulo relaciona minimundo, levantamento de requisitos e projeto conceitual como etapas encadeadas.",
+      "ordem": 5002,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 5",
+      "tema": "Minimundo",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-minimundo",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 5,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce03",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "O levantamento de requisitos deve ocorrer apenas depois do projeto físico, quando já estão fixados os índices e as estruturas do SGBD.",
+      "gabarito": "E",
+      "comentario": "A coleta das necessidades do usuário antecede a modelagem conceitual, lógica e física, conforme o fluxo da apostila.",
+      "ordem": 5003,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 5",
+      "tema": "Levantamento de requisitos",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-levantamento",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 5,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce04",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "O MER é uma abordagem conceitual e o DER é sua representação diagramática por entidades, atributos e relacionamentos.",
+      "gabarito": "C",
+      "comentario": "MER fornece conceitos e o DER emprega símbolos para comunicar o modelo entre analistas e interessados.",
+      "ordem": 5004,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 8",
+      "tema": "MER × DER",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-mer-der",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce05",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "O modelo conceitual é dependente de índices e recursos próprios de um SGBD porque descreve diretamente a distribuição física dos registros.",
+      "gabarito": "E",
+      "comentario": "O projeto conceitual é abstrato e independente da tecnologia escolhida; índices e particionamento pertencem ao físico.",
+      "ordem": 5005,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 5",
+      "tema": "Abstração conceitual",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-niveis",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 5,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce06",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Entidades, atributos e relacionamentos constituem componentes centrais do Modelo Entidade-Relacionamento.",
+      "gabarito": "C",
+      "comentario": "O texto emprega esses elementos para representar objetos, características e associações do domínio.",
+      "ordem": 5006,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+      "tema": "Tríade do MER",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-tres-elementos",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 9,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce07",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Aluno pode constituir entidade no modelo de uma escola, enquanto seu número de matrícula pode ser atributo dessa entidade.",
+      "gabarito": "C",
+      "comentario": "Entidade representa objeto/conceito do domínio; atributo descreve suas propriedades.",
+      "ordem": 5007,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+      "tema": "Entidade",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-entidade",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 9,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce08",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "O conjunto de entidades Aluno é equivalente a um aluno individual cadastrado, não admitindo múltiplas ocorrências.",
+      "gabarito": "E",
+      "comentario": "Tipo/conjunto de entidades descreve a categoria, enquanto cada aluno concreto é uma instância/ocorrência.",
+      "ordem": 5008,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 11",
+      "tema": "Entidade × ocorrência",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-instancia",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 11,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce09",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Na notação Chen apresentada, entidades são representadas por retângulos, diferentemente de atributos e relacionamentos.",
+      "gabarito": "C",
+      "comentario": "O esquema gráfico da apostila distingue retângulos para entidades, elipses para atributos e losangos para relações.",
+      "ordem": 5009,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+      "tema": "Retângulo Chen",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-chen-ret",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 9,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce10",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Uma entidade forte pode ser identificada por seus próprios atributos e não depende de outra entidade para sua identificação.",
+      "gabarito": "C",
+      "comentario": "O material associa entidade forte a identificador próprio e representação por retângulo simples.",
+      "ordem": 5010,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 79",
+      "tema": "Entidade forte",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-forte",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 79,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce11",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Uma entidade fraca é identificada somente por um atributo discriminador próprio, sem depender da chave da entidade proprietária.",
+      "gabarito": "E",
+      "comentario": "A identidade utiliza chave parcial mais a chave da entidade forte relacionada.",
+      "ordem": 5011,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 82",
+      "tema": "Entidade fraca",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-fraca",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 82,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce12",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Uma entidade fraca é geralmente representada por retângulo duplo na notação Chen, não por triângulo.",
+      "gabarito": "C",
+      "comentario": "O padrão gráfico da seção de tipos de entidades associa borda dupla à entidade fraca.",
+      "ordem": 5012,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 84",
+      "tema": "Retângulo duplo",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-ret-duplo",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 84,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce13",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Uma entidade que dependa conceitualmente de outra será necessariamente fraca, mesmo que possua identificador global único independente.",
+      "gabarito": "E",
+      "comentario": "O material alerta que dependência existencial isolada não basta; é crucial depender também para identificação.",
+      "ordem": 5013,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 82",
+      "tema": "Dependência e identidade",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-fraca-nao-toda-depend",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 82,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce14",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Uma entidade associativa pode ser usada quando uma associação possui dados próprios, como a data de uma matrícula entre Aluno e Curso.",
+      "gabarito": "C",
+      "comentario": "O capítulo destaca entidade associativa para representar detalhes próprios de relações entre entidades.",
+      "ordem": 5014,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 79",
+      "tema": "Entidade associativa",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-associativa",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 79,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce15",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Nome e data de nascimento podem descrever uma entidade Pessoa, sem constituírem necessariamente entidades independentes.",
+      "gabarito": "C",
+      "comentario": "São propriedades de ocorrências no modelo, em vez de associações entre objetos.",
+      "ordem": 5015,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+      "tema": "Atributos descritivos",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-atributo",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 9,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce16",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Na notação Chen estudada, a elipse representa relacionamentos, enquanto o losango descreve atributos de entidades.",
+      "gabarito": "E",
+      "comentario": "A assertiva inverte símbolos: elipse para atributos; losango para relacionamentos.",
+      "ordem": 5016,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+      "tema": "Elipse Chen",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-ellipse",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 9,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce17",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Um atributo identificador serve para distinguir univocamente ocorrências da mesma entidade, conforme as regras do domínio.",
+      "gabarito": "C",
+      "comentario": "Identificação permite referenciar cada instância com ausência de ambiguidade.",
+      "ordem": 5017,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 79",
+      "tema": "Identificador",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-identificador",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 79,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce18",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Um relacionamento descreve uma associação entre ocorrências de entidades, como Cliente realiza Pedido.",
+      "gabarito": "C",
+      "comentario": "O MER utiliza relacionamentos para expressar vínculos e regras do domínio.",
+      "ordem": 5018,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 19",
+      "tema": "Relacionamento",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-relacionamento",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 19,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce19",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Na notação Chen, relacionamentos convencionais costumam ser desenhados como losangos conectados às entidades.",
+      "gabarito": "C",
+      "comentario": "O material apresenta o losango como símbolo convencional da associação.",
+      "ordem": 5019,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 20",
+      "tema": "Losango Chen",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-losango",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 20,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce20",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Um relacionamento recursivo exige a participação de ao menos duas entidades de tipos distintos, como Aluno e Disciplina.",
+      "gabarito": "E",
+      "comentario": "Na recursão, o mesmo tipo participa em papéis diferentes, como Funcionário supervisiona Funcionário.",
+      "ordem": 5020,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 20",
+      "tema": "Relacionamento recursivo",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-recursivo",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 20,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce21",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "No autorrelacionamento Funcionário supervisiona Funcionário, explicitar os papéis supervisor e subordinado evita ambiguidade.",
+      "gabarito": "C",
+      "comentario": "Papéis distinguem a função das ocorrências da mesma entidade em uma associação recursiva.",
+      "ordem": 5021,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 21",
+      "tema": "Papéis em recursão",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-papeis",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 21,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce22",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "O relacionamento que permite identificar uma entidade fraca é convencionalmente representado por losango duplo.",
+      "gabarito": "C",
+      "comentario": "A seção associa relação identificadora à dependência de chave e representação em duplo losango.",
+      "ordem": 5022,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 21",
+      "tema": "Relacionamento identificador",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-identificador-rel",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 21,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce23",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Grau de relacionamento e cardinalidade são sinônimos: ambos informam apenas a quantidade máxima de vínculos possíveis.",
+      "gabarito": "E",
+      "comentario": "Grau indica quantos tipos de entidade participam; cardinalidade indica quantas ocorrências podem associar-se.",
+      "ordem": 5023,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 62",
+      "tema": "Grau de relacionamento",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-grau-bin",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 62,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce24",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "O relacionamento entre Aluno e Curso é binário quando envolve esses dois tipos de entidade na associação.",
+      "gabarito": "C",
+      "comentario": "Binário corresponde à participação de dois tipos de entidade.",
+      "ordem": 5024,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 62",
+      "tema": "Relacionamento binário",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-binario",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 62,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce25",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "O relacionamento um para um limita cada ocorrência a no máximo uma correspondente no outro conjunto, sem impor sozinho participação obrigatória.",
+      "gabarito": "C",
+      "comentario": "A razão máxima 1:1 não determina necessariamente o mínimo: a participação pode ser zero em um dos lados.",
+      "ordem": 5025,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 65",
+      "tema": "Cardinalidade 1:1",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-um-um",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 65,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce26",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "No exemplo professor-turma, um professor pode orientar várias turmas enquanto uma turma se associa a no máximo um professor.",
+      "gabarito": "C",
+      "comentario": "Esse é um padrão 1:N conforme as regras particulares do domínio proposto.",
+      "ordem": 5026,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 65",
+      "tema": "Cardinalidade 1:N",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-um-n",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 65,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce27",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Em associação muitos para muitos, ocorrências de ambos os lados podem conectar-se a diversas ocorrências do outro lado.",
+      "gabarito": "C",
+      "comentario": "O exemplo Autor escreve Livro ilustra máximos múltiplos nos dois sentidos.",
+      "ordem": 5027,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 65",
+      "tema": "Cardinalidade N:M",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-nm",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 65,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce28",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "A notação de cardinalidade máxima indica se o limite é um ou muitos, enquanto a mínima indica participação opcional ou obrigatória.",
+      "gabarito": "C",
+      "comentario": "Apostila utiliza mínima 0/1 e máxima 1/N para compor restrições por papel.",
+      "ordem": 5028,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 65",
+      "tema": "Máximo e mínimo",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-max-um-n",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 65,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce29",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Cardinalidade mínima zero significa participação total e obrigatória, pois toda ocorrência da entidade precisa estar associada.",
+      "gabarito": "E",
+      "comentario": "Zero na posição mínima permite ausência de vínculo, caracterizando participação parcial/opcional.",
+      "ordem": 5029,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 69",
+      "tema": "Mínimo zero",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-min-zero",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 69,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce30",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Participação total exige cardinalidade mínima de pelo menos um, conforme a regra de negócio e a notação do capítulo.",
+      "gabarito": "C",
+      "comentario": "Uma ocorrência deve participar de ao menos uma associação quando a participação é total.",
+      "ordem": 5030,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 71",
+      "tema": "Mínimo um",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-min-um",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 71,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t50-ce31",
+      "cap": "FISCAL-TI-50",
+      "capNome": "Trilha 02 · Tarefa 50 · Modelagem conceitual: MER, entidades e relacionamentos",
+      "enunciado": "Na convenção de Chen do capítulo, uma linha dupla pode indicar participação total em relacionamento, ao contrário de linha simples em contraste explícito.",
+      "gabarito": "C",
+      "comentario": "Apostila adverte que bancas podem usar apenas linhas simples; a distinção é conclusiva quando a notação é aplicada explicitamente.",
+      "ordem": 5031,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 70",
+      "tema": "Linha dupla",
+      "topico": "fiscal-t50",
+      "assuntoId": "fiscal-ti-modelagem-conceitual-mer",
+      "mapaNoId": "mer-linha-dupla",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 70,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Minimundo",
+      "q": "Qual a ligação entre minimundo e modelo conceitual?",
+      "a": [
+        "O minimundo delimita a realidade; o modelo representa suas entidades, atributos e associações."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 5",
+      "mapaNoId": "mer-minimundo",
+      "questaoIds": [
+        "fiscal-t50-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Levantamento de requisitos",
+      "q": "O levantamento de requisitos precede qual projeto?",
+      "a": [
+        "O projeto conceitual, que serve de base aos modelos lógico e físico."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 5",
+      "mapaNoId": "mer-levantamento",
+      "questaoIds": [
+        "fiscal-t50-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "MER × DER",
+      "q": "Qual diferença entre MER e DER?",
+      "a": [
+        "MER: modelo conceitual; DER: diagrama que o representa visualmente."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 8",
+      "mapaNoId": "mer-mer-der",
+      "questaoIds": [
+        "fiscal-t50-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Abstração conceitual",
+      "q": "Em que nível são selecionados índices físicos?",
+      "a": [
+        "No modelo físico, e não no conceitual."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 5",
+      "mapaNoId": "mer-niveis",
+      "questaoIds": [
+        "fiscal-t50-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Tríade do MER",
+      "q": "Quais são os três componentes fundamentais do MER?",
+      "a": [
+        "Entidades, atributos e relacionamentos."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+      "mapaNoId": "mer-tres-elementos",
+      "questaoIds": [
+        "fiscal-t50-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Entidade",
+      "q": "Diferencie entidade Aluno de atributo matrícula.",
+      "a": [
+        "Aluno é o tipo de objeto modelado; matrícula é propriedade ou identificador."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+      "mapaNoId": "mer-entidade",
+      "questaoIds": [
+        "fiscal-t50-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Entidade × ocorrência",
+      "q": "Qual diferença entre tipo de entidade e instância?",
+      "a": [
+        "Tipo descreve a classe de objetos; instância é um objeto individual."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 11",
+      "mapaNoId": "mer-instancia",
+      "questaoIds": [
+        "fiscal-t50-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Retângulo Chen",
+      "q": "Que símbolo representa entidade em Chen?",
+      "a": [
+        "Retângulo."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+      "mapaNoId": "mer-chen-ret",
+      "questaoIds": [
+        "fiscal-t50-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Entidade forte",
+      "q": "O que distingue entidade forte de fraca?",
+      "a": [
+        "Forte possui identidade suficiente por seus próprios atributos; fraca depende da chave de outra."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 79",
+      "mapaNoId": "mer-forte",
+      "questaoIds": [
+        "fiscal-t50-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Entidade fraca",
+      "q": "Como uma entidade fraca costuma ser identificada?",
+      "a": [
+        "Pela combinação da chave do proprietário com sua chave parcial/discriminador."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 82",
+      "mapaNoId": "mer-fraca",
+      "questaoIds": [
+        "fiscal-t50-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Retângulo duplo",
+      "q": "Como representar entidade fraca na notação Chen?",
+      "a": [
+        "Retângulo com borda dupla."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 84",
+      "mapaNoId": "mer-ret-duplo",
+      "questaoIds": [
+        "fiscal-t50-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dependência e identidade",
+      "q": "Por que um apartamento com matrícula própria pode ser entidade forte?",
+      "a": [
+        "Porque sua identificação independe da chave do edifício, apesar da relação existencial."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 82",
+      "mapaNoId": "mer-fraca-nao-toda-depend",
+      "questaoIds": [
+        "fiscal-t50-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Entidade associativa",
+      "q": "Quando é útil uma entidade associativa?",
+      "a": [
+        "Quando o relacionamento tem atributos próprios e precisa ser representado de modo detalhado."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 79",
+      "mapaNoId": "mer-associativa",
+      "questaoIds": [
+        "fiscal-t50-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Atributos descritivos",
+      "q": "Cite dois atributos de Pessoa.",
+      "a": [
+        "Nome e data de nascimento, por exemplo."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+      "mapaNoId": "mer-atributo",
+      "questaoIds": [
+        "fiscal-t50-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Elipse Chen",
+      "q": "Qual símbolo representa atributo e relacionamento?",
+      "a": [
+        "Elipse representa atributo; losango representa relacionamento."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+      "mapaNoId": "mer-ellipse",
+      "questaoIds": [
+        "fiscal-t50-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Identificador",
+      "q": "Para que serve atributo identificador?",
+      "a": [
+        "Para distinguir cada ocorrência de entidade de todas as demais."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 79",
+      "mapaNoId": "mer-identificador",
+      "questaoIds": [
+        "fiscal-t50-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Relacionamento",
+      "q": "O que é relacionamento no MER?",
+      "a": [
+        "Associação entre entidades ou entre suas ocorrências segundo uma regra de negócio."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 19",
+      "mapaNoId": "mer-relacionamento",
+      "questaoIds": [
+        "fiscal-t50-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Losango Chen",
+      "q": "Qual símbolo usual de relacionamento em Chen?",
+      "a": [
+        "Losango."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 20",
+      "mapaNoId": "mer-losango",
+      "questaoIds": [
+        "fiscal-t50-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Relacionamento recursivo",
+      "q": "Qual exemplo de relacionamento recursivo?",
+      "a": [
+        "Funcionário supervisiona Funcionário, com papéis de supervisor e supervisionado."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 20",
+      "mapaNoId": "mer-recursivo",
+      "questaoIds": [
+        "fiscal-t50-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Papéis em recursão",
+      "q": "Por que especificar papéis no relacionamento recursivo?",
+      "a": [
+        "Para distinguir funções de ocorrências do mesmo tipo."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 21",
+      "mapaNoId": "mer-papeis",
+      "questaoIds": [
+        "fiscal-t50-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Relacionamento identificador",
+      "q": "Qual desenho indica relação identificadora em Chen?",
+      "a": [
+        "Losango duplo."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 21",
+      "mapaNoId": "mer-identificador-rel",
+      "questaoIds": [
+        "fiscal-t50-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Grau de relacionamento",
+      "q": "Grau e cardinalidade representam a mesma coisa?",
+      "a": [
+        "Não. Grau = número de tipos participantes; cardinalidade = limites de associações por ocorrência."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 62",
+      "mapaNoId": "mer-grau-bin",
+      "questaoIds": [
+        "fiscal-t50-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Relacionamento binário",
+      "q": "O que define um relacionamento binário?",
+      "a": [
+        "Participação de dois tipos de entidades."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 62",
+      "mapaNoId": "mer-binario",
+      "questaoIds": [
+        "fiscal-t50-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Cardinalidade 1:1",
+      "q": "1:1 implica obrigatoriedade?",
+      "a": [
+        "Não. Máxima 1 não define a cardinalidade mínima."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 65",
+      "mapaNoId": "mer-um-um",
+      "questaoIds": [
+        "fiscal-t50-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Cardinalidade 1:N",
+      "q": "Qual razão máxima no caso um professor para muitas turmas?",
+      "a": [
+        "1:N, com muitos exemplares de turma ligados a um professor."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 65",
+      "mapaNoId": "mer-um-n",
+      "questaoIds": [
+        "fiscal-t50-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Cardinalidade N:M",
+      "q": "Qual exemplo de muitos para muitos?",
+      "a": [
+        "Autor–Livro, quando autores escrevem vários livros e livros têm vários autores."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 65",
+      "mapaNoId": "mer-nm",
+      "questaoIds": [
+        "fiscal-t50-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Máximo e mínimo",
+      "q": "O que expressam mínima e máxima?",
+      "a": [
+        "Mínima 0/1: opcional/obrigatória; máxima 1/N: quantos vínculos são admitidos."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 65",
+      "mapaNoId": "mer-max-um-n",
+      "questaoIds": [
+        "fiscal-t50-ce28"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Mínimo zero",
+      "q": "O que significa mínimo 0?",
+      "a": [
+        "Participação opcional/parcial: a ocorrência pode não estar associada."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 69",
+      "mapaNoId": "mer-min-zero",
+      "questaoIds": [
+        "fiscal-t50-ce29"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Mínimo um",
+      "q": "O que expressa participação total?",
+      "a": [
+        "Todas as ocorrências devem ter vínculo, representado por mínimo 1 na abordagem usada."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 71",
+      "mapaNoId": "mer-min-um",
+      "questaoIds": [
+        "fiscal-t50-ce30"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Linha dupla",
+      "q": "Qual o cuidado com linha simples/dupla em questões?",
+      "a": [
+        "Dupla pode representar participação total; duas simples sem convenção explícita não provam participação parcial."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 70",
+      "mapaNoId": "mer-linha-dupla",
+      "questaoIds": [
+        "fiscal-t50-ce31"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Modelagem conceitual MER: entidades, atributos e relacionamentos · T50",
+    "versao": 2,
+    "fonte": "5. Análise de Informações - Modelagem Conceitual.pdf, pp. 3–23,59–85",
+    "ramos": [
+      {
+        "id": "conceito-1",
+        "t": "Minimundo e MER",
+        "n": "Levantamento de requisitos, modelo conceitual e diferença MER/DER.",
+        "cor": 1,
+        "x": {
+          "e": "Levantamento de requisitos, modelo conceitual e diferença MER/DER.",
+          "src": "5. Análise de Informações - Modelagem Conceitual.pdf"
+        },
+        "f": [
+          {
+            "id": "mer-minimundo",
+            "t": "Minimundo",
+            "n": "O minimundo delimita a realidade; o modelo representa suas entidades, atributos e associações.",
+            "x": {
+              "e": "O capítulo relaciona minimundo, levantamento de requisitos e projeto conceitual como etapas encadeadas.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 5",
+              "questaoIds": [
+                "fiscal-t50-ce02"
+              ]
+            }
+          },
+          {
+            "id": "mer-levantamento",
+            "t": "Levantamento de requisitos",
+            "n": "O projeto conceitual, que serve de base aos modelos lógico e físico.",
+            "x": {
+              "e": "A coleta das necessidades do usuário antecede a modelagem conceitual, lógica e física, conforme o fluxo da apostila.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 5",
+              "questaoIds": [
+                "fiscal-t50-ce03"
+              ]
+            }
+          },
+          {
+            "id": "mer-mer-der",
+            "t": "MER × DER",
+            "n": "MER: modelo conceitual; DER: diagrama que o representa visualmente.",
+            "x": {
+              "e": "MER fornece conceitos e o DER emprega símbolos para comunicar o modelo entre analistas e interessados.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-t50-ce04"
+              ]
+            }
+          },
+          {
+            "id": "mer-niveis",
+            "t": "Abstração conceitual",
+            "n": "No modelo físico, e não no conceitual.",
+            "x": {
+              "e": "O projeto conceitual é abstrato e independente da tecnologia escolhida; índices e particionamento pertencem ao físico.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 5",
+              "questaoIds": [
+                "fiscal-t50-ce05"
+              ]
+            }
+          },
+          {
+            "id": "mer-tres-elementos",
+            "t": "Tríade do MER",
+            "n": "Entidades, atributos e relacionamentos.",
+            "x": {
+              "e": "O texto emprega esses elementos para representar objetos, características e associações do domínio.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+              "questaoIds": [
+                "fiscal-t50-ce06"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-entidades",
+        "t": "Entidades e tipos",
+        "n": "Conjuntos e ocorrências; entidades fortes, fracas e associativas.",
+        "cor": 2,
+        "x": {
+          "e": "Conjuntos e ocorrências; entidades fortes, fracas e associativas.",
+          "src": "5. Análise de Informações - Modelagem Conceitual.pdf"
+        },
+        "f": [
+          {
+            "id": "mer-entidade",
+            "t": "Entidade",
+            "n": "Aluno é o tipo de objeto modelado; matrícula é propriedade ou identificador.",
+            "x": {
+              "e": "Entidade representa objeto/conceito do domínio; atributo descreve suas propriedades.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+              "questaoIds": [
+                "fiscal-t50-ce07"
+              ]
+            }
+          },
+          {
+            "id": "mer-instancia",
+            "t": "Entidade × ocorrência",
+            "n": "Tipo descreve a classe de objetos; instância é um objeto individual.",
+            "x": {
+              "e": "Tipo/conjunto de entidades descreve a categoria, enquanto cada aluno concreto é uma instância/ocorrência.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 11",
+              "questaoIds": [
+                "fiscal-t50-ce08"
+              ]
+            }
+          },
+          {
+            "id": "mer-chen-ret",
+            "t": "Retângulo Chen",
+            "n": "Retângulo.",
+            "x": {
+              "e": "O esquema gráfico da apostila distingue retângulos para entidades, elipses para atributos e losangos para relações.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+              "questaoIds": [
+                "fiscal-t50-ce09"
+              ]
+            }
+          },
+          {
+            "id": "mer-forte",
+            "t": "Entidade forte",
+            "n": "Forte possui identidade suficiente por seus próprios atributos; fraca depende da chave de outra.",
+            "x": {
+              "e": "O material associa entidade forte a identificador próprio e representação por retângulo simples.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 79",
+              "questaoIds": [
+                "fiscal-t50-ce10"
+              ]
+            }
+          },
+          {
+            "id": "mer-fraca",
+            "t": "Entidade fraca",
+            "n": "Pela combinação da chave do proprietário com sua chave parcial/discriminador.",
+            "x": {
+              "e": "A identidade utiliza chave parcial mais a chave da entidade forte relacionada.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 82",
+              "questaoIds": [
+                "fiscal-t50-ce11"
+              ]
+            }
+          },
+          {
+            "id": "mer-ret-duplo",
+            "t": "Retângulo duplo",
+            "n": "Retângulo com borda dupla.",
+            "x": {
+              "e": "O padrão gráfico da seção de tipos de entidades associa borda dupla à entidade fraca.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 84",
+              "questaoIds": [
+                "fiscal-t50-ce12"
+              ]
+            }
+          },
+          {
+            "id": "mer-fraca-nao-toda-depend",
+            "t": "Dependência e identidade",
+            "n": "Porque sua identificação independe da chave do edifício, apesar da relação existencial.",
+            "x": {
+              "e": "O material alerta que dependência existencial isolada não basta; é crucial depender também para identificação.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 82",
+              "questaoIds": [
+                "fiscal-t50-ce13"
+              ]
+            }
+          },
+          {
+            "id": "mer-associativa",
+            "t": "Entidade associativa",
+            "n": "Quando o relacionamento tem atributos próprios e precisa ser representado de modo detalhado.",
+            "x": {
+              "e": "O capítulo destaca entidade associativa para representar detalhes próprios de relações entre entidades.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 79",
+              "questaoIds": [
+                "fiscal-t50-ce14"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-atributos",
+        "t": "Atributos e identificação",
+        "n": "Propriedades e identificadores de ocorrências; elipses de Chen.",
+        "cor": 3,
+        "x": {
+          "e": "Propriedades e identificadores de ocorrências; elipses de Chen.",
+          "src": "5. Análise de Informações - Modelagem Conceitual.pdf"
+        },
+        "f": [
+          {
+            "id": "mer-atributo",
+            "t": "Atributos descritivos",
+            "n": "Nome e data de nascimento, por exemplo.",
+            "x": {
+              "e": "São propriedades de ocorrências no modelo, em vez de associações entre objetos.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+              "questaoIds": [
+                "fiscal-t50-ce15"
+              ]
+            }
+          },
+          {
+            "id": "mer-ellipse",
+            "t": "Elipse Chen",
+            "n": "Elipse representa atributo; losango representa relacionamento.",
+            "x": {
+              "e": "A assertiva inverte símbolos: elipse para atributos; losango para relacionamentos.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 9",
+              "questaoIds": [
+                "fiscal-t50-ce16"
+              ]
+            }
+          },
+          {
+            "id": "mer-identificador",
+            "t": "Identificador",
+            "n": "Para distinguir cada ocorrência de entidade de todas as demais.",
+            "x": {
+              "e": "Identificação permite referenciar cada instância com ausência de ambiguidade.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 79",
+              "questaoIds": [
+                "fiscal-t50-ce17"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-relacionamentos",
+        "t": "Relacionamentos e papéis",
+        "n": "Losangos, grau, recursão, associações identificadoras e regras de negócio.",
+        "cor": 4,
+        "x": {
+          "e": "Losangos, grau, recursão, associações identificadoras e regras de negócio.",
+          "src": "5. Análise de Informações - Modelagem Conceitual.pdf"
+        },
+        "f": [
+          {
+            "id": "mer-relacionamento",
+            "t": "Relacionamento",
+            "n": "Associação entre entidades ou entre suas ocorrências segundo uma regra de negócio.",
+            "x": {
+              "e": "O MER utiliza relacionamentos para expressar vínculos e regras do domínio.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 19",
+              "questaoIds": [
+                "fiscal-t50-ce18"
+              ]
+            }
+          },
+          {
+            "id": "mer-losango",
+            "t": "Losango Chen",
+            "n": "Losango.",
+            "x": {
+              "e": "O material apresenta o losango como símbolo convencional da associação.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 20",
+              "questaoIds": [
+                "fiscal-t50-ce19"
+              ]
+            }
+          },
+          {
+            "id": "mer-recursivo",
+            "t": "Relacionamento recursivo",
+            "n": "Funcionário supervisiona Funcionário, com papéis de supervisor e supervisionado.",
+            "x": {
+              "e": "Na recursão, o mesmo tipo participa em papéis diferentes, como Funcionário supervisiona Funcionário.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 20",
+              "questaoIds": [
+                "fiscal-t50-ce20"
+              ]
+            }
+          },
+          {
+            "id": "mer-papeis",
+            "t": "Papéis em recursão",
+            "n": "Para distinguir funções de ocorrências do mesmo tipo.",
+            "x": {
+              "e": "Papéis distinguem a função das ocorrências da mesma entidade em uma associação recursiva.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 21",
+              "questaoIds": [
+                "fiscal-t50-ce21"
+              ]
+            }
+          },
+          {
+            "id": "mer-identificador-rel",
+            "t": "Relacionamento identificador",
+            "n": "Losango duplo.",
+            "x": {
+              "e": "A seção associa relação identificadora à dependência de chave e representação em duplo losango.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 21",
+              "questaoIds": [
+                "fiscal-t50-ce22"
+              ]
+            }
+          },
+          {
+            "id": "mer-grau-bin",
+            "t": "Grau de relacionamento",
+            "n": "Não. Grau = número de tipos participantes; cardinalidade = limites de associações por ocorrência.",
+            "x": {
+              "e": "Grau indica quantos tipos de entidade participam; cardinalidade indica quantas ocorrências podem associar-se.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 62",
+              "questaoIds": [
+                "fiscal-t50-ce23"
+              ]
+            }
+          },
+          {
+            "id": "mer-binario",
+            "t": "Relacionamento binário",
+            "n": "Participação de dois tipos de entidades.",
+            "x": {
+              "e": "Binário corresponde à participação de dois tipos de entidade.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 62",
+              "questaoIds": [
+                "fiscal-t50-ce24"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-2",
+        "t": "Cardinalidade e participação",
+        "n": "Máximos 1/N, mínimos 0/1, opcionalidade e participação total/parcial.",
+        "cor": 5,
+        "x": {
+          "e": "Máximos 1/N, mínimos 0/1, opcionalidade e participação total/parcial.",
+          "src": "5. Análise de Informações - Modelagem Conceitual.pdf"
+        },
+        "f": [
+          {
+            "id": "mer-um-um",
+            "t": "Cardinalidade 1:1",
+            "n": "Não. Máxima 1 não define a cardinalidade mínima.",
+            "x": {
+              "e": "A razão máxima 1:1 não determina necessariamente o mínimo: a participação pode ser zero em um dos lados.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 65",
+              "questaoIds": [
+                "fiscal-t50-ce25"
+              ]
+            }
+          },
+          {
+            "id": "mer-um-n",
+            "t": "Cardinalidade 1:N",
+            "n": "1:N, com muitos exemplares de turma ligados a um professor.",
+            "x": {
+              "e": "Esse é um padrão 1:N conforme as regras particulares do domínio proposto.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 65",
+              "questaoIds": [
+                "fiscal-t50-ce26"
+              ]
+            }
+          },
+          {
+            "id": "mer-nm",
+            "t": "Cardinalidade N:M",
+            "n": "Autor–Livro, quando autores escrevem vários livros e livros têm vários autores.",
+            "x": {
+              "e": "O exemplo Autor escreve Livro ilustra máximos múltiplos nos dois sentidos.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 65",
+              "questaoIds": [
+                "fiscal-t50-ce27"
+              ]
+            }
+          },
+          {
+            "id": "mer-max-um-n",
+            "t": "Máximo e mínimo",
+            "n": "Mínima 0/1: opcional/obrigatória; máxima 1/N: quantos vínculos são admitidos.",
+            "x": {
+              "e": "Apostila utiliza mínima 0/1 e máxima 1/N para compor restrições por papel.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 65",
+              "questaoIds": [
+                "fiscal-t50-ce28"
+              ]
+            }
+          },
+          {
+            "id": "mer-min-zero",
+            "t": "Mínimo zero",
+            "n": "Participação opcional/parcial: a ocorrência pode não estar associada.",
+            "x": {
+              "e": "Zero na posição mínima permite ausência de vínculo, caracterizando participação parcial/opcional.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 69",
+              "questaoIds": [
+                "fiscal-t50-ce29"
+              ]
+            }
+          },
+          {
+            "id": "mer-min-um",
+            "t": "Mínimo um",
+            "n": "Todas as ocorrências devem ter vínculo, representado por mínimo 1 na abordagem usada.",
+            "x": {
+              "e": "Uma ocorrência deve participar de ao menos uma associação quando a participação é total.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 71",
+              "questaoIds": [
+                "fiscal-t50-ce30"
+              ]
+            }
+          },
+          {
+            "id": "mer-linha-dupla",
+            "t": "Linha dupla",
+            "n": "Dupla pode representar participação total; duas simples sem convenção explícita não provam participação parcial.",
+            "x": {
+              "e": "Apostila adverte que bancas podem usar apenas linhas simples; a distinção é conclusiva quando a notação é aplicada explicitamente.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 70",
+              "questaoIds": [
+                "fiscal-t50-ce31"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": [
+      [
+        "conceito-1",
+        "g-entidades",
+        "Requisitos delimitam objetos do domínio"
+      ],
+      [
+        "g-entidades",
+        "g-atributos",
+        "Atributos descrevem entidade"
+      ],
+      [
+        "g-entidades",
+        "g-relacionamentos",
+        "Entidades associadas segundo regras"
+      ],
+      [
+        "g-relacionamentos",
+        "conceito-2",
+        "Cardinalidade limita associações"
+      ]
+    ]
+  }
+}
