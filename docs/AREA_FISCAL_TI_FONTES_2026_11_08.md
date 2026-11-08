@@ -4,11 +4,11 @@ Recebidas nesta conversa em **08/11/2026**: 20 apostilas em PDF do curso regular
 
 | Nº | Conteúdo da apostila | Páginas | Situação editorial |
 |---:|---|---:|---|
-| 1 | Análise de Informações — Pirâmide DIKW, Dados Abertos e Metadados de Arquivos | 81 | T05, T11, T17 (concluída a estrutura) |
+| 1 | Análise de Informações — Pirâmide DIKW, Dados Abertos e Metadados de Arquivos | 81 | T05, T11, T17 e T71 (revisão com banco compartilhado) |
 | 2 | Governança de Dados | 193 | T21, T26, T32 (concluída a estrutura) |
 | 3 | Qualidade de Dados | 52 | Fonte recebida; detalhamento editorial pendente |
-| 4 | Conceitos Básicos de Bancos de Dados | 199 | Fonte recebida; detalhamento editorial pendente |
-| 5 | Modelagem Conceitual | 217 | Fonte recebida; detalhamento editorial pendente |
+| 4 | Conceitos Básicos de Bancos de Dados | 199 | T35, T38 e T44 (bateria compartilhada) com cobertura estrutural |
+| 5 | Modelagem Conceitual | 217 | T50, T59 e T65 (bateria compartilhada) com cobertura estrutural |
 | 6 | Modelagem Lógica | 209 | Fonte recebida; detalhamento editorial pendente |
 | 7 | Normalização | 153 | Fonte recebida; detalhamento editorial pendente |
 | 8 | Noções de SQL | 476 | Fonte recebida; detalhamento editorial pendente |
@@ -25,7 +25,7 @@ Recebidas nesta conversa em **08/11/2026**: 20 apostilas em PDF do curso regular
 | 19 | Ciência de Dados — Machine Learning (Algoritmos) | 399 | Fonte recebida; detalhamento editorial pendente |
 | 20 | Ciência de Dados — Processamento de Linguagem Natural (PLN) | 142 | Fonte recebida; detalhamento editorial pendente |
 
-**Escopo real de trabalho até este registro:** o PDF 1 fundamentou a T05 (p. 3–20, 41–43) e a T11 (p. 51–58, 78–79), cujos itens são acessíveis pela bateria T17. O PDF 2 fundamentou a T21 (p. 5–29) e T26 (p. 34–71), acessíveis pela bateria T32. Os demais PDFs foram recebidos, mas seus conteúdos não foram editorialmente transformados em questões e mapas neste lote.
+**Escopo efetivamente estudado até este registro:** PDF 1 fundamenta T05/T11, bateria T17 e revisão T71; PDF 2 fundamenta T21/T26 e bateria T32; PDF 4 fundamenta T35 (pp. 3–24 e 67–78), T38 (pp. 25–66) e bateria T44; PDF 5 fundamenta T50 (pp. 3–23 e 59–85), T59 (pp. 39–57) e bateria T65. As demais apostilas permanecem disponíveis, mas ainda não foram aprofundadas em seu recorte editorial.
 
 **Proveniência:** os exercícios importados são **autorais** baseados nas apostilas, não reproduções de questões históricas das bancas. As apostilas são fornecidas pelo usuário nesta conversa; **não foram publicadas como arquivos baixáveis no site Base44**, o que evita exposição indevida do material de estudo. Manter referência bibliográfica em cada questão e cartão; não marcar tópicos como concluídos apenas porque existe fonte.
 
