@@ -14,7 +14,8 @@ const fileNames=[
   "t26-governanca-arquitetura-controles",
   "t35-banco-sgbd-transacoes",
   "t38-ansi-sparc-papeis-projetos",
-  "t50-mer-entidades-relacionamentos"
+  "t50-mer-entidades-relacionamentos",
+  "t59-atributos-estendido-crowfoot"
 ];
 
 for(const file of fileNames){
