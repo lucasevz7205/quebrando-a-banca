@@ -2,10 +2,35 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { requireUser } from "@/lib/auth-middleware";
 import { project, validateProposal, planImport, fields } from "./qb-domain";
+import { listDocuments } from "./study-documents";
+import { proofCatalog, studyCatalog } from "./qb-catalog";
 function client(context){if(context.user.role!=="admin")throw new Error("Acesso restrito ao administrador durante a preparação.");return context.getBase44().asServiceRole;}
 async function all(entity){const out=[];for(let skip=0;;skip+=500){const page=await entity.list("created_date",500,skip);out.push(...page);if(page.length<500)return out;if(skip>50000)throw new Error("Limite de leitura excedido.");}}
 async function snapshot(b){const [questions,proposals,decisions,tasks,sources]=await Promise.all(["Question","Proposal","Decision","TaskEvent","Source"].map(n=>all(b.entities[n])));return {originals:questions.map(q=>JSON.parse(q.original_json)),proposals,decisions,tasks,sources:sources.map(({content_base64,...s})=>s)};}
 export const getData=createServerFn({method:"GET"}).middleware([requireUser]).handler(({context})=>snapshot(client(context)));
+async function catalogScope(documents, parts, scope, label) {
+ const storage = { documents, parts, scope };
+ const [questions, edital] = await Promise.all(
+  ["questoes", "edital"].map(collection => listDocuments(storage, { collection }))
+ );
+ return { items: studyCatalog(questions, edital, label), edital };
+}
+
+export const getQuestionLab = createServerFn({ method: "GET" })
+ .middleware([requireUser])
+ .handler(async ({ context }) => {
+  const b = client(context);
+  const { ClaudeDocument, ClaudeDocumentPart, StudyDocument, StudyDocumentPart } = b.entities;
+  const [data, camara, fiscal] = await Promise.all([
+   snapshot(b),
+   catalogScope(ClaudeDocument, ClaudeDocumentPart, {}, "Câmara dos Deputados"),
+   // Ambiente que contém as Trilhas 00–03; não inclui respostas nem progresso.
+   catalogScope(StudyDocument, StudyDocumentPart, { study_account_id: "6af069aa28e43e39f27bd73c" }, "Área Fiscal"),
+  ]);
+  const analyzed = proofCatalog(project(data.originals, data.decisions), camara.edital);
+  return { ...data, catalog: [...camara.items, ...fiscal.items, ...analyzed] };
+ });
+
 const proposalSchema=z.object({question_id:z.string().min(1).max(300),field:z.enum(fields),before:z.string().max(12000),after:z.string().trim().min(1).max(12000),source:z.string().trim().min(1).max(2000),evidence:z.string().trim().min(1).max(6000),responsible:z.string().trim().min(1).max(100)});
 export const propose=createServerFn({method:"POST"}).middleware([requireUser]).validator(proposalSchema).handler(async({context,data})=>{const b=client(context),s=await snapshot(b);validateProposal(data,project(s.originals,s.decisions).find(q=>q.id===data.question_id));return b.entities.Proposal.create({...data,author:context.user.email});});
 export const decide=createServerFn({method:"POST"}).middleware([requireUser]).validator(z.object({proposal_id:z.string().max(100),outcome:z.enum(["aprovada","rejeitada"]),reason:z.string().trim().min(5).max(2000)})).handler(async({context,data})=>{const b=client(context),s=await snapshot(b);if(s.decisions.some(d=>d.proposal_id===data.proposal_id))throw new Error("Esta proposta já tem decisão.");const p=s.proposals.find(p=>p.id===data.proposal_id);if(!p)throw new Error("Proposta não encontrada.");if(data.outcome==="aprovada")validateProposal(p,project(s.originals,s.decisions).find(q=>q.id===p.question_id));return b.entities.Decision.create({proposal_id:p.id,question_id:p.question_id,field:p.field,before:p.before,after:p.after,outcome:data.outcome,reason:data.reason,source:p.source+" | "+p.evidence,author:context.user.email});});

@@ -72,7 +72,7 @@ export default function QuestionCatalog({ items }) {
         <button type="button" disabled={!stats.rows.length} onClick={() => download("quebrando-a-banca-pauta.json", {
           versao: 1, materia, assunto, cargo, ano: ano || null, base: "amostra de provas analisadas", ...stats,
           orientacao: "Crie itens inéditos de Certo/Errado. Priorize os mecanismos com maior frequência observada. Use novos cenários e redação própria. Inclua gabarito, justificativa, fonte e mecanismo. Submeta os itens à revisão editorial.",
-          evidencias: results.filter(q => q.valido && q.gabarito === "E" && q.mecanismo)
+          evidencias: results.filter(q => stats.rows.some(row => row.referencias.includes(q.id)))
             .map(({ id, prova, item, evidencia, mecanismo, vacina }) => ({ id, prova, item, evidencia, mecanismo, vacina })),
         })}>Exportar pauta de criação</button>
       </> : <p>Selecione matéria, assunto e cargo com itens válidos para calcular a incidência observada.</p>}

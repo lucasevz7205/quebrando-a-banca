@@ -1,4 +1,4 @@
-import { valid } from "./qb-domain.js";
+import { knownPending, valid } from "./qb-domain.js";
 
 const proofs = {
   "analise/CD26-NS-CG": ["Nível superior · prova comum", "CD26-NS-CG"],
@@ -54,7 +54,7 @@ export function proofCatalog(questions, edital) {
       fonte: q.fonte || q.documento, enunciado: q.enunciado || null,
       evidencia: q.evidencia, gabarito: q.gabarito, comentario: q.justificativa,
       vacina: q.vacina,
-      valido: valid(q) && !q.pending?.includes("gabarito") && ["C", "E"].includes(q.gabarito),
+      valido: valid(q) && !(knownPending.includes(q.id) && q.pending?.length) && !q.pending?.includes("gabarito") && ["C", "E"].includes(q.gabarito),
       mecanismo: !q.pending?.includes("mecanismo") && /^F(?:10|[1-9])$/.test(q.mecanismo) ? q.mecanismo : null,
     };
   });
