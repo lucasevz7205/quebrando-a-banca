@@ -9,7 +9,8 @@ const fileNames=[
   "t08-tributo-conceito-natureza",
   "t09-aspectos-introdutorios",
   "t11-metadados",
-  "t12-principios-implicitos"
+  "t12-principios-implicitos",
+  "t21-governanca-dados-fundamentos"
 ];
 
 for(const file of fileNames){
