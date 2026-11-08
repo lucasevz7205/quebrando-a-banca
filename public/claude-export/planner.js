@@ -144,16 +144,6 @@
     const backlog = overdue.filter(t => t.data < days[0]).sort(byOrder);
     const outstanding = overdue.length;
     const selectedAuto = (due.questoes.get(S.planSelectedDay) || 0) + (due.cartoes.get(S.planSelectedDay) || 0);
-    const recent = [...S.di].sort((a, b) => (b.data || "").localeCompare(a.data || "") || (b.registradoEm || "").localeCompare(a.registradoEm || ""));
-    const nextSteps = [];
-    const materiasSeen = new Set();
-    for (const item of recent) {
-      if (!item.proximo || materiasSeen.has(item.materia || "Geral")) continue;
-      const materia = item.materia || "Geral";
-      materiasSeen.add(materia);
-      nextSteps.push({ materia, title: String(item.proximo).slice(0, 180) });
-      if (nextSteps.length === 4) break;
-    }
     return `<div class="wrap qb-week-planner" style="gap:18px">
       <section class="qb-plan-intro"><div><span class="qb-plan-eyebrow">CENTRAL DE EXECUÇÃO · CÂMARA DOS DEPUTADOS</span><h2>Planejamento semanal</h2><p>Organize sua semana, execute as tarefas e acompanhe as revisões que o sistema programa para você.</p></div><button type="button" class="btn" data-plan-action="new">+ Nova atividade</button></section>
       <div class="qb-week-toolbar"><div class="qb-week-title"><h3>${esc(longRange(days[0], days[6]))}</h3><span>Semana de estudos</span></div>
@@ -175,7 +165,7 @@
           </div>
         </section>
         <aside class="qb-plan-side"><section class="qb-plan-tips"><h3>Tipos de atividade</h3><div class="qb-plan-legend">${Object.entries(KINDS).map(([id, name]) => `<span><i class="qb-kind-dot qb-kind-${id}"></i>${esc(name)}</span>`).join("")}</div><p>Marque as tarefas concluídas, inicie uma sessão para contar o tempo ou edite o dia de execução quando necessário.</p></section>
-          ${nextSteps.length ? `<section class="qb-plan-tips"><h3>Próximos passos do diário</h3><p>Sugestões já registradas no seu histórico, ainda não adicionadas ao calendário.</p><div class="qb-plan-suggestions">${nextSteps.map((t, i) => `<button type="button" data-plan-suggestion="${i}"><strong>${esc(t.materia)}</strong><span>${esc(t.title)}</span><small>Planejar +</small></button>`).join("")}</div></section>` : ""}
+          ${window.QBInsights ? window.QBInsights.compact(S, S.planSelectedDay) : ""}
         </aside>
       </div>
       ${form(S)}
@@ -231,25 +221,9 @@
         persist({ ...task, data: S.planSelectedDay, status: task.status === "executando" ? "executando" : "planejada", atualizadoEm: now });
       }
     }));
-    const suggestions = [];
-    const seen = new Set();
-    const diary = [...S.di].sort((a, b) => (b.data || "").localeCompare(a.data || "") || (b.registradoEm || "").localeCompare(a.registradoEm || ""));
-    for (const entry of diary) {
-      const m = entry.materia || "Geral";
-      if (!entry.proximo || seen.has(m)) continue;
-      seen.add(m); suggestions.push({ materia: m, titulo: String(entry.proximo).slice(0, 180) });
-      if (suggestions.length === 4) break;
-    }
-    document.querySelectorAll("[data-plan-suggestion]").forEach(b => b.addEventListener("click", () => {
-      const t = suggestions[Number(b.dataset.planSuggestion)];
-      if (!t) return;
-      S.planEditing = null; S.planFormOpen = true; rerender();
-      const title = document.getElementById("qb-p-title");
-      const subject = document.getElementById("qb-p-mat");
-      if (title) title.value = t.titulo;
-      if (subject) subject.value = t.materia;
-      document.getElementById("qb-plan-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
-      title?.focus({ preventScroll: true });
+    document.querySelectorAll("[data-qb-go-daily]").forEach(b => b.addEventListener("click", () => {
+      S.insightsDay = S.planSelectedDay;
+      callbacks.setView("analiseDia");
     }));
     const f = document.getElementById("qb-plan-form");
     if (f) f.addEventListener("submit", event => {
