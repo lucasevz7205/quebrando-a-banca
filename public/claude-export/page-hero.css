@@ -1,0 +1,203 @@
+/* Quebrando a Banca | Sistema de cabeçalhos reutilizável
+   Referência visual: hero da aba Análise diária, aprovado pelo estudante.
+   Aplica-se a todas as seções sem alterar nenhuma regra de negócio. */
+:root {
+  --qb-hero-gradient: linear-gradient(116deg, #182B4E 0%, #294D89 58%, #3478C8 100%);
+  --qb-hero-hairline: rgba(216, 232, 255, .20);
+  --qb-hero-copy: #E5EDFA;
+  --qb-hero-muted: #C8DCF9;
+}
+.qb-page-hero,
+.qb-section-intro.qb-page-hero,
+.qb-plan-intro.qb-page-hero,
+.qb-analytics-intro.qb-page-hero {
+  background: var(--qb-hero-gradient);
+  border: 1px solid var(--qb-hero-hairline);
+  color: white;
+  border-radius: 28px;
+  box-shadow: 0 20px 46px -30px rgba(29,76,153,.62);
+  padding: clamp(25px, 4vw, 46px);
+  margin: 0 auto 24px;
+  width: 100%;
+  max-width: 1160px;
+  min-width: 0;
+  min-height: 196px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px 26px;
+}
+.qb-page-hero-copy { min-width: 0; max-width: 780px; }
+.qb-page-hero .qb-page-kicker,
+.qb-section-intro.qb-page-hero .qb-section-kicker,
+.qb-plan-intro.qb-page-hero .qb-plan-eyebrow,
+.qb-analytics-intro.qb-page-hero span:not(.count) {
+  display: block;
+  color: var(--qb-hero-muted);
+  font: 700 clamp(10px,1.1vw,12px)/1.5 var(--mono);
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  white-space: normal;
+}
+.qb-page-hero h2,
+.qb-section-intro.qb-page-hero h2,
+.qb-plan-intro.qb-page-hero h2,
+.qb-analytics-intro.qb-page-hero h2 {
+  color: #FFF;
+  font: 800 clamp(26px, 3.9vw, 40px)/1.12 var(--display);
+  letter-spacing: -.045em;
+  margin: 16px 0 14px;
+  text-wrap: balance;
+  max-width: 21ch;
+}
+.qb-page-hero p,
+.qb-section-intro.qb-page-hero p,
+.qb-plan-intro.qb-page-hero p,
+.qb-analytics-intro.qb-page-hero p {
+  color: var(--qb-hero-copy);
+  margin: 0;
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.65;
+  max-width: 730px;
+}
+.qb-page-hero-actions { display: flex; gap: 10px; align-items: center; justify-content: flex-end; }
+.qb-page-hero-actions .btn {
+  border: 1px solid rgba(255,255,255,.36) !important;
+  color: white !important;
+  background: rgba(255,255,255,.15) !important;
+  border-radius: 13px;
+  box-shadow: none !important;
+  white-space: nowrap;
+  font-size: 13px;
+  min-height: 40px;
+}
+.qb-page-hero-actions .btn:hover {background: rgba(255,255,255,.23) !important;}
+.qb-page-hero-footer {
+  grid-column: 1 / -1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,.115);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 17px;
+}
+.qb-page-hero-footer .qb-week-title h3,
+.qb-page-hero-footer .qb-week-title > span {
+  color: white;
+}
+.qb-page-hero-footer .qb-week-title > span {opacity: .8;}
+.qb-page-hero-footer .qb-week-title {min-width: 0; flex: 1;}
+.qb-page-hero-footer .qb-week-nav {background: transparent; border-color: rgba(255,255,255,.26); border-radius: 13px;}
+.qb-page-hero-footer .qb-week-nav button {
+  color: #FFF;
+  background: transparent;
+  border-radius: 10px;
+  min-height: 35px;
+}
+.qb-page-hero-footer .qb-week-nav button:hover {
+  background: rgba(255,255,255,.22);
+  color: white;
+}
+.qb-page-hero .qb-analytics-filter,
+.qb-analytics-intro.qb-page-hero .qb-analytics-filter {
+  grid-column: 1 / -1;
+  justify-self: start;
+  background: rgba(255,255,255,.115);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 17px;
+  padding: 13px 15px;
+  gap: 12px;
+}
+.qb-page-hero .qb-analytics-filter label {color:#FFF;font-weight:750;}
+.qb-page-hero .qb-analytics-filter input {background:#FFF;border-radius:12px;min-height:40px;}
+.qb-page-hero .qb-analytics-filter button {min-height:40px;border-radius:11px;}
+/* Abas de contexto padronizadas, imediatamente antes do hero. */
+.qb-tab-shell {
+  max-width: 1160px;
+  padding: 0;
+  margin: 0 auto 18px;
+  width: 100%;
+  min-width: 0;
+}
+.qb-tab-shell > .subnav,
+.seg.subnav.qb-header-tabs {
+  width: max-content;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px;
+  background: #132441;
+  border: 1px solid #2A4266;
+  border-radius: 19px;
+  box-shadow: 0 4px 16px -12px rgba(0,0,0,.25);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.qb-tab-shell > .subnav button {
+  color: #AEBED5;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  padding: 12px 18px;
+  min-height: 44px;
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 750;
+  white-space: nowrap;
+  transition: background .15s ease, color .15s ease;
+}
+.qb-tab-shell > .subnav button:hover {background:rgba(92,149,233,.18);color:#EEF5FF;}
+.qb-tab-shell > .subnav button[aria-pressed="true"] {
+  color: #79AEFF;
+  background: #233F67;
+  box-shadow: 0 2px 9px -8px #000A;
+}
+.qb-tab-shell > .subnav .count {color:#E7F1FF;background:#2B4A70;}
+.qb-tab-shell > .subnav .count.hot {color:#FFF;background:#B93D42;}
+@media(max-width: 800px){
+  .qb-page-hero,
+  .qb-section-intro.qb-page-hero,
+  .qb-plan-intro.qb-page-hero,
+  .qb-analytics-intro.qb-page-hero {
+    grid-template-columns: minmax(0,1fr);
+    padding: 28px 25px;
+    min-height: 0;
+    border-radius: 24px;
+    gap: 16px;
+  }
+  .qb-page-hero h2,.qb-section-intro.qb-page-hero h2,
+  .qb-plan-intro.qb-page-hero h2,.qb-analytics-intro.qb-page-hero h2{
+    margin: 12px 0;
+    font-size: clamp(27px,5vw,34px);
+  }
+  .qb-page-hero-actions {justify-content:flex-start;}
+}
+@media(max-width: 520px){
+  .qb-page-hero,
+  .qb-section-intro.qb-page-hero,
+  .qb-plan-intro.qb-page-hero,
+  .qb-analytics-intro.qb-page-hero {
+    border-radius: 22px;
+    padding: 24px 20px;
+    margin-bottom: 19px;
+  }
+  .qb-page-hero h2,.qb-section-intro.qb-page-hero h2,
+  .qb-plan-intro.qb-page-hero h2,.qb-analytics-intro.qb-page-hero h2 {
+    font-size: clamp(27px, 8vw, 33px);
+    letter-spacing: -.04em;
+  }
+  .qb-page-hero p,.qb-section-intro.qb-page-hero p,
+  .qb-plan-intro.qb-page-hero p,.qb-analytics-intro.qb-page-hero p {font-size: 14px;}
+  .qb-page-hero-footer {align-items:stretch;flex-direction:column;padding:12px;}
+  .qb-page-hero-footer .qb-week-nav {align-self:flex-start;}
+  .qb-page-hero .qb-analytics-filter {align-self:stretch;justify-self:stretch;width:100%;}
+  .qb-tab-shell {margin-bottom:14px;}
+  .qb-tab-shell > .subnav {width:100%;padding:5px;border-radius:16px;}
+  .qb-tab-shell > .subnav button {min-height:42px;padding:10px 13px;font-size:12px;}
+}
+@media(prefers-reduced-motion:reduce) {.qb-tab-shell > .subnav button{transition:none;}}
