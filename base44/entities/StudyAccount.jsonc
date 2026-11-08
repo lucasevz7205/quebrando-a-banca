@@ -1,0 +1,43 @@
+{
+  "name": "StudyAccount",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "exam_name": {
+      "type": "string"
+    },
+    "exam_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "user_id",
+    "exam_name",
+    "active"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": false
+  }
+}

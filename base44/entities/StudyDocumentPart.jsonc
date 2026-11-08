@@ -1,0 +1,46 @@
+{
+  "name": "StudyDocumentPart",
+  "type": "object",
+  "properties": {
+    "study_account_id": {
+      "type": "string"
+    },
+    "collection": {
+      "type": "string"
+    },
+    "legacy_id": {
+      "type": "string"
+    },
+    "part": {
+      "type": "number"
+    },
+    "payload_chunk": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "study_account_id",
+    "collection",
+    "legacy_id",
+    "part",
+    "payload_chunk"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": false
+  }
+}
