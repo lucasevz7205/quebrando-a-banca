@@ -7,9 +7,10 @@ Data de auditoria: 2026-11-08. Ambiente de estudo: 6af069aa28e43e39f27bd73c. Fon
 - Tópicos cadastrados: 75; distribuição {"00":20,"01":16,"02":20,"03":19}.
 - Questões comentadas cadastradas: 72. Procedência declarada: {"Autoral · adaptação para treino":72}.
 - Cartões: 150, em 75 documentos. Mapas: 75; nós existentes no total: 297 (não mede profundidade/qualidade).
-- Vínculos explícitos cartão → nó de mapa: 0/150 antes do piloto.
+- Vínculos explícitos cartão → nó de mapa: 0/150 na auditoria inicial. **Piloto T04:** após o levantamento, foram vinculados os dois cartões aos nós `conceito-1` e `conceito-2`, elevando o total para **2/150** (demais cartões não modificados).
 - Déficit matemático de questões para atingir 20 por tópico sem reaproveitamento: 1428. **Esta cifra não é meta de geração definitiva**: questões do mesmo assunto devem formar um banco único e compartilhado entre teoria/bateria, após normalização.
 - A contagem de nós não prova cobertura dos subtópicos das apostilas. Status de cobertura semântica: **não auditável sem o PDF integral**.
+- Revisão ativa: os 150 flashcards existentes usam o mecanismo de autoavaliação e espaçamento do app, porém a coleção `cartoes_aval` não tinha registros nesse ambiente durante o inventário: **0 avaliações registradas por assunto**. Material disponível não equivale a revisão efetivamente realizada.
 
 ## Status por assunto
 
@@ -97,7 +98,7 @@ As linhas abaixo são tópicos operacionais da trilha e ainda não foram fundida
 
 **Assunto:** Constitucionalismo e neoconstitucionalismo. Fonte de leitura indicada no roteiro: `DIREITO CONSTITUCIONAL.zip › 1. Conceito. Classificação. Aplicab.pdf`.
 
-A trilha disponível no Base44 descreve: (a) constitucionalismo como limitação do poder, (b) força normativa da Constituição, (c) centralidade dos direitos fundamentais, (d) papel dos princípios no neoconstitucionalismo. Ela **não contém o PDF** nem a extensão e as ressalvas de cada tópico. Uma questão autoral comentada, dois cartões e um mapa preliminar já existem para esta tarefa. **Não marcar como completo.**
+A trilha disponível no Base44 descreve: (a) constitucionalismo como limitação do poder, (b) força normativa da Constituição, (c) centralidade dos direitos fundamentais, (d) papel dos princípios no neoconstitucionalismo. Ela **não contém o PDF** nem a extensão e as ressalvas de cada tópico. Uma questão autoral comentada, dois cartões e um mapa preliminar (4 nós) já existem para esta tarefa. Os dois cartões receberam `mapaNoId` explícito, conferido contra os nós existentes; a questão original, o gabarito e os históricos permanecem intactos. **Não marcar como completo:** faltam 19 questões distintas e cobertura editorial dos subtópicos da apostila.
 
 **Critérios para homologação:** (1) fonte PDF efetivamente lida e páginas/seções rastreáveis, (2) pelo menos 20 itens independentes com C/E, comentário e prova de origem, (3) mapa multinível cobrindo conceitos, autores, fases históricas, diferenciações e armadilhas realmente tratados na apostila, (4) cartões por subtópico com perguntas de recuperação e aplicação, (5) mapaNoId individual válido em cada cartão, (6) associação das questões ao mesmo assunto e reutilização por baterias sem duplicação, (7) testes do app e conferência editorial de exemplos.
 
