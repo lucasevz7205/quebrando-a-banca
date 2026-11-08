@@ -1,0 +1,1435 @@
+{
+  "topic": "fiscal-t38",
+  "source": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+  "questions": [
+    {
+      "id": "fiscal-t38-ce02",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "A arquitetura ANSI/SPARC busca separar níveis de abstração e favorecer independência entre dados e programas usuários.",
+      "gabarito": "C",
+      "comentario": "O modelo de três esquemas organiza visões, estrutura lógica global e armazenamento, viabilizando evolução com menos impacto.",
+      "ordem": 3802,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 25",
+      "tema": "Finalidade ANSI/SPARC",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "ansi-proposito",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 25,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce03",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "A arquitetura ANSI/SPARC compreende os níveis externo, conceitual e interno, respectivamente ligados a visões, estrutura global e armazenamento.",
+      "gabarito": "C",
+      "comentario": "A apostila distingue visão individual do usuário, esquema lógico global e detalhes físicos.",
+      "ordem": 3803,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 27",
+      "tema": "Três níveis",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "ansi-tres",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 27,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce04",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "O nível externo é composto de visões que mostram ao usuário o subconjunto relevante do banco, ocultando dados que ele não necessita.",
+      "gabarito": "C",
+      "comentario": "Visões de RH e financeiro podem exibir informações diferentes da mesma base.",
+      "ordem": 3804,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 27",
+      "tema": "Esquema externo",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "ansi-externo",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 27,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce05",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "O esquema conceitual representa a visão lógica integrada do banco para a comunidade de usuários, sem precisar detalhar meios físicos.",
+      "gabarito": "C",
+      "comentario": "O nível conceitual descreve entidades, atributos e relações do domínio de modo global.",
+      "ordem": 3805,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 30",
+      "tema": "Esquema conceitual",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "ansi-conceitual",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 30,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce06",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "O nível interno é o responsável pela visão do usuário final, independentemente de técnicas de armazenamento e índices.",
+      "gabarito": "E",
+      "comentario": "É o contrário: interno preocupa-se com representação física e acesso, não com visões personalizadas.",
+      "ordem": 3806,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 31",
+      "tema": "Esquema interno",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "ansi-interno",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 31,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce07",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "A arquitetura ANSI/SPARC exige um único esquema externo compartilhado por todos os usuários, embora admita vários esquemas conceituais para a mesma base.",
+      "gabarito": "E",
+      "comentario": "O modelo admite diversas visões externas e, tipicamente, um esquema conceitual integrado.",
+      "ordem": 3807,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 27",
+      "tema": "Um ou vários externos",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "ansi-varias-externas",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 27,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce08",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "A instância é o conjunto atual de registros, enquanto o esquema descreve a estrutura e as restrições do banco.",
+      "gabarito": "C",
+      "comentario": "O esquema tende a sofrer alterações infrequentes, e a instância muda com inserções, exclusões e atualizações.",
+      "ordem": 3808,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 26",
+      "tema": "Esquema × instância",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "ansi-esquema",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 26,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce09",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "Modificar a organização de armazenamento sem alterar o esquema conceitual caracteriza independência física de dados.",
+      "gabarito": "C",
+      "comentario": "A separação interno/conceitual permite ajustes físicos sem mudar o modelo lógico exposto à aplicação.",
+      "ordem": 3809,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 35",
+      "tema": "Independência física",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "ansi-ind-fis",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 35,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce10",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "Modificar o esquema conceitual sem alterar visões externas utilizadas por programas caracteriza independência lógica de dados.",
+      "gabarito": "C",
+      "comentario": "A separação conceitual/externo protege as visões do usuário de certas mudanças lógicas globais.",
+      "ordem": 3810,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 35",
+      "tema": "Independência lógica",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "ansi-ind-log",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 35,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce11",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "A independência de dados elimina qualquer necessidade futura de adaptar programas, mesmo diante de mudanças incompatíveis com as visões existentes.",
+      "gabarito": "E",
+      "comentario": "A independência reduz impactos e depende de mapeamentos viáveis; não garante compatibilidade universal com toda mudança.",
+      "ordem": 3811,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 39",
+      "tema": "Independência não absoluta",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "ansi-nao-total",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 39,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce12",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "O modelo relacional representa dados por tabelas com linhas e colunas, incluindo chaves que permitem representar relacionamentos.",
+      "gabarito": "C",
+      "comentario": "O capítulo associa o modelo a relações, tuplas, atributos e chaves.",
+      "ordem": 3812,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 41",
+      "tema": "SGBD relacional",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "tip-relacional",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 41,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce13",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "No modelo hierárquico tradicional, um registro filho pode ter vários pais distintos na mesma árvore de relacionamento.",
+      "gabarito": "E",
+      "comentario": "O capítulo descreve árvore pai–filho: cada filho tem um pai na hierarquia tradicional.",
+      "ordem": 3813,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 42",
+      "tema": "Modelo hierárquico",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "tip-hierarquico",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 42,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce14",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "O modelo em rede admite associação de registros com múltiplos pais, diferentemente da hierarquia rígida do modelo em árvore.",
+      "gabarito": "C",
+      "comentario": "O modelo em rede representa estrutura mais flexível, com conexões entre registros.",
+      "ordem": 3814,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 43",
+      "tema": "Modelo de rede",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "tip-rede",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 43,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce15",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "O modelo orientado a objetos pode armazenar estruturas com identidade, atributos e comportamento, usando conceitos como herança e encapsulamento.",
+      "gabarito": "C",
+      "comentario": "O material o distingue do armazenamento tabular exclusivamente relacional.",
+      "ordem": 3815,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 44",
+      "tema": "Orientado a objetos",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "tip-objetos",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 44,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce16",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "O termo NoSQL representa, no contexto de classificação, sistemas não relacionais que podem organizar dados em documentos, colunas, grafos e pares chave–valor.",
+      "gabarito": "C",
+      "comentario": "A apostila compara paradigmas e organiza famílias de bancos não relacionais.",
+      "ordem": 3816,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 46",
+      "tema": "NoSQL",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "tip-nosql",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 46,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce17",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "O armazenamento orientado a colunas pode favorecer consultas analíticas que processam atributos selecionados de grandes volumes.",
+      "gabarito": "C",
+      "comentario": "A categoria de armazenamento colunar é associada a leitura eficiente de colunas específicas.",
+      "ordem": 3817,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 50",
+      "tema": "Orientação a colunas",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "tip-coluna",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 50,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce18",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "Um banco temporal pode manter histórico de alterações e versões, útil para consultar estados passados dos registros.",
+      "gabarito": "C",
+      "comentario": "A listagem de bancos temporais destaca histórico de alterações e rastreio de versões.",
+      "ordem": 3818,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 53",
+      "tema": "Banco temporal",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "tip-temporal",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 53,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce19",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "Um SGBD espacial é direcionado ao tratamento de informações geográficas e a operações de distância, área e localização.",
+      "gabarito": "C",
+      "comentario": "O material o vincula a dados georreferenciados e geoprocessamento.",
+      "ordem": 3819,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 53",
+      "tema": "Banco espacial",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "tip-espacial",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 53,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce20",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "Um sistema de banco de dados de tempo real considera prazos de resposta como parte crítica da correção, principalmente em sistemas de controle.",
+      "gabarito": "C",
+      "comentario": "A apostila enfatiza limites rígidos de tempo, não apenas respostas normalmente rápidas.",
+      "ordem": 3820,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 53",
+      "tema": "Tempo real",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "tip-real-time",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 53,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce21",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "Uma role pode agregar permissões e privilégios de acesso, simplificando a administração dos usuários do banco.",
+      "gabarito": "C",
+      "comentario": "Na seção 4.5, um papel é um conjunto de permissões sobre objetos e dados.",
+      "ordem": 3821,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 54",
+      "tema": "Papéis (roles)",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "roles-permissoes",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 54,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce22",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "O DBA costuma responder pela configuração e operação do SGBD, segurança operacional, backups, recuperação e desempenho.",
+      "gabarito": "C",
+      "comentario": "O material atribui a esse profissional a dimensão técnica e operacional do banco.",
+      "ordem": 3822,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 54",
+      "tema": "DBA",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "db-dba",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 54,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce23",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "O Administrador de Dados concentra-se mais no significado, padronização, modelagem e qualidade dos dados do negócio do que na manutenção física do SGBD.",
+      "gabarito": "C",
+      "comentario": "Apostila contrapõe AD (organização conceitual) e DBA (infraestrutura e operação).",
+      "ordem": 3823,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 55",
+      "tema": "Administrador de Dados (AD)",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "db-ad",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 55,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce24",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "Manter definições de campos e padronizar nomes e significados integra o escopo do Administrador de Dados na divisão estudada.",
+      "gabarito": "C",
+      "comentario": "O dicionário estabelece coerência terminológica para os campos e regras do negócio.",
+      "ordem": 3824,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 55",
+      "tema": "Dicionário de dados",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "db-ad-dicionario",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 55,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce25",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "Em uma base pessoal muito pequena, uma mesma pessoa pode exercer tanto funções de DBA quanto funções de Administrador de Dados.",
+      "gabarito": "C",
+      "comentario": "A apostila reconhece que a divisão é típica de organizações mais complexas; em bases simples pode haver acumulação.",
+      "ordem": 3825,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 54",
+      "tema": "Acúmulo de papéis",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "db-papeis-mesma-pessoa",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 54,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce26",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "O modelo conceitual captura entidades, atributos e relacionamentos de negócio em alto nível, sem decidir índices físicos ou marca de SGBD.",
+      "gabarito": "C",
+      "comentario": "A fase de conceituação aborda o que o negócio precisa representar, frequentemente por DER.",
+      "ordem": 3826,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 60",
+      "tema": "Modelo conceitual",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "proj-conceitual",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 60,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce27",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "O modelo lógico detalha chaves, restrições e relacionamentos em estrutura implementável, mas ainda é independente da escolha de SGBD específico.",
+      "gabarito": "C",
+      "comentario": "O capítulo classifica esse modelo como representativo e mais técnico que o conceitual.",
+      "ordem": 3827,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 61",
+      "tema": "Modelo lógico",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "proj-logico",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 61,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce28",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "Particionamento, índices e tipos específicos de armazenamento são decisões do modelo físico ligadas à tecnologia adotada.",
+      "gabarito": "C",
+      "comentario": "Essa fase define mecanismos concretos do SGBD escolhido e estruturas de persistência.",
+      "ordem": 3828,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 63",
+      "tema": "Modelo físico",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "proj-fisico",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 63,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce29",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "A modelagem conceitual normalmente se inicia com escolha de tipos físicos de coluna e tamanho de índice, deixando entidades e atributos para a fase final.",
+      "gabarito": "E",
+      "comentario": "A sequência é conceitual → lógico → físico, partindo do domínio para a implementação.",
+      "ordem": 3829,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 60",
+      "tema": "Inversão de modelos",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "proj-inversao",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 60,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce30",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "A normalização pode ser examinada durante a modelagem lógica para reduzir repetições e anomalias nas relações.",
+      "gabarito": "C",
+      "comentario": "O capítulo localiza normalização entre as tarefas de organização lógica dos dados.",
+      "ordem": 3830,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 62",
+      "tema": "Normalização lógica",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "proj-normalizacao",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 62,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t38-ce31",
+      "cap": "FISCAL-TI-38",
+      "capNome": "Trilha 02 · Tarefa 38 · Papéis, ANSI/SPARC e projetos",
+      "enunciado": "Um diagrama entidade-relacionamento é ferramenta para representar conceitualmente entidades, atributos e associações entre objetos do domínio.",
+      "gabarito": "C",
+      "comentario": "O material usa o DER como desenho de alto nível compreensível ao negócio.",
+      "ordem": 3831,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 60",
+      "tema": "DER",
+      "topico": "fiscal-t38",
+      "assuntoId": "fiscal-ti-arquitetura-ansi-sparc-projeto",
+      "mapaNoId": "proj-der",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 60,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Finalidade ANSI/SPARC",
+      "q": "Qual finalidade da arquitetura de três esquemas?",
+      "a": [
+        "Promover abstração e independência de dados entre camadas."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 25",
+      "mapaNoId": "ansi-proposito",
+      "questaoIds": [
+        "fiscal-t38-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Três níveis",
+      "q": "Quais são os três esquemas e suas funções?",
+      "a": [
+        "Externo: visões; conceitual: estrutura lógica global; interno: armazenamento físico."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 27",
+      "mapaNoId": "ansi-tres",
+      "questaoIds": [
+        "fiscal-t38-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Esquema externo",
+      "q": "Qual nível oferece visões específicas por grupo?",
+      "a": [
+        "O nível externo."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 27",
+      "mapaNoId": "ansi-externo",
+      "questaoIds": [
+        "fiscal-t38-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Esquema conceitual",
+      "q": "Qual nível descreve a estrutura lógica global?",
+      "a": [
+        "O esquema conceitual."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 30",
+      "mapaNoId": "ansi-conceitual",
+      "questaoIds": [
+        "fiscal-t38-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Esquema interno",
+      "q": "Qual é a preocupação central do nível interno?",
+      "a": [
+        "Arquivos, organização e estruturas de armazenamento físico."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 31",
+      "mapaNoId": "ansi-interno",
+      "questaoIds": [
+        "fiscal-t38-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Um ou vários externos",
+      "q": "Quantos esquemas externos podem existir?",
+      "a": [
+        "Múltiplos, conforme os grupos de usuários."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 27",
+      "mapaNoId": "ansi-varias-externas",
+      "questaoIds": [
+        "fiscal-t38-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Esquema × instância",
+      "q": "Diferencie esquema de instância.",
+      "a": [
+        "Esquema é a definição estrutural; instância são os dados existentes em certo instante."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 26",
+      "mapaNoId": "ansi-esquema",
+      "questaoIds": [
+        "fiscal-t38-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Independência física",
+      "q": "Que níveis estão envolvidos na independência física?",
+      "a": [
+        "Interno e conceitual."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 35",
+      "mapaNoId": "ansi-ind-fis",
+      "questaoIds": [
+        "fiscal-t38-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Independência lógica",
+      "q": "Quais níveis se relacionam na independência lógica?",
+      "a": [
+        "Conceitual e externo."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 35",
+      "mapaNoId": "ansi-ind-log",
+      "questaoIds": [
+        "fiscal-t38-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Independência não absoluta",
+      "q": "Independência de dados impede qualquer atualização de aplicações?",
+      "a": [
+        "Não. Ela protege contra mudanças compatíveis, não contra toda alteração possível."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 39",
+      "mapaNoId": "ansi-nao-total",
+      "questaoIds": [
+        "fiscal-t38-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "SGBD relacional",
+      "q": "Qual estrutura caracteriza o modelo relacional?",
+      "a": [
+        "Tabelas com tuplas/linhas e atributos/colunas."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 41",
+      "mapaNoId": "tip-relacional",
+      "questaoIds": [
+        "fiscal-t38-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo hierárquico",
+      "q": "Qual a regra de pai do modelo hierárquico tradicional?",
+      "a": [
+        "Cada filho tem um pai, embora o pai possa ter vários filhos."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 42",
+      "mapaNoId": "tip-hierarquico",
+      "questaoIds": [
+        "fiscal-t38-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo de rede",
+      "q": "Qual diferença entre modelo de rede e hierárquico?",
+      "a": [
+        "Rede admite múltiplas ligações; hierárquico tem árvore mais rígida."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 43",
+      "mapaNoId": "tip-rede",
+      "questaoIds": [
+        "fiscal-t38-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Orientado a objetos",
+      "q": "Quais características costumam aparecer em SGBD orientado a objetos?",
+      "a": [
+        "Objetos com identidade, atributos e comportamentos, incluindo herança/encapsulamento."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 44",
+      "mapaNoId": "tip-objetos",
+      "questaoIds": [
+        "fiscal-t38-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "NoSQL",
+      "q": "Cite quatro famílias NoSQL.",
+      "a": [
+        "Documentos, colunas, grafos e chave–valor."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 46",
+      "mapaNoId": "tip-nosql",
+      "questaoIds": [
+        "fiscal-t38-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Orientação a colunas",
+      "q": "Qual benefício típico do armazenamento colunar?",
+      "a": [
+        "Leitura analítica eficiente de colunas usadas em agregações."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 50",
+      "mapaNoId": "tip-coluna",
+      "questaoIds": [
+        "fiscal-t38-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Banco temporal",
+      "q": "Que tipo de banco facilita reconstruir versões históricas?",
+      "a": [
+        "Banco temporal."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 53",
+      "mapaNoId": "tip-temporal",
+      "questaoIds": [
+        "fiscal-t38-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Banco espacial",
+      "q": "Que operações são típicas de banco espacial?",
+      "a": [
+        "Consultas espaciais, distâncias, áreas e localização."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 53",
+      "mapaNoId": "tip-espacial",
+      "questaoIds": [
+        "fiscal-t38-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Tempo real",
+      "q": "Qual diferença entre banco rápido e banco de tempo real?",
+      "a": [
+        "Tempo real exige cumprir restrições temporais, e não só média baixa de latência."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 53",
+      "mapaNoId": "tip-real-time",
+      "questaoIds": [
+        "fiscal-t38-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Papéis (roles)",
+      "q": "Para que serve uma role no banco de dados?",
+      "a": [
+        "Agrupar privilégios atribuíveis a usuários, facilitando controle de acesso."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 54",
+      "mapaNoId": "roles-permissoes",
+      "questaoIds": [
+        "fiscal-t38-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "DBA",
+      "q": "Quais tarefas tipicamente cabem ao DBA?",
+      "a": [
+        "Instalar/configurar, monitorar, ajustar, proteger, fazer backup e recuperar."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 54",
+      "mapaNoId": "db-dba",
+      "questaoIds": [
+        "fiscal-t38-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Administrador de Dados (AD)",
+      "q": "Qual diferença central entre AD e DBA?",
+      "a": [
+        "AD cuida da semântica/modelagem corporativa; DBA da operação técnica do SGBD."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 55",
+      "mapaNoId": "db-ad",
+      "questaoIds": [
+        "fiscal-t38-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dicionário de dados",
+      "q": "Quem tende a definir significados padronizados e dicionários?",
+      "a": [
+        "O Administrador de Dados (AD), em colaboração com áreas de negócio."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 55",
+      "mapaNoId": "db-ad-dicionario",
+      "questaoIds": [
+        "fiscal-t38-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Acúmulo de papéis",
+      "q": "DBA e AD exigem pessoas distintas em toda base?",
+      "a": [
+        "Não. Uma pessoa pode acumular funções em um banco pequeno."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 54",
+      "mapaNoId": "db-papeis-mesma-pessoa",
+      "questaoIds": [
+        "fiscal-t38-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo conceitual",
+      "q": "O que se define no modelo conceitual?",
+      "a": [
+        "Entidades, atributos, relacionamentos e regras de negócio, sem detalhes de implementação."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 60",
+      "mapaNoId": "proj-conceitual",
+      "questaoIds": [
+        "fiscal-t38-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo lógico",
+      "q": "Que avanço existe no modelo lógico?",
+      "a": [
+        "Detalhamento de chaves, atributos, relações e normalização sem amarrar a plataforma."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 61",
+      "mapaNoId": "proj-logico",
+      "questaoIds": [
+        "fiscal-t38-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo físico",
+      "q": "O que pertence ao modelo físico?",
+      "a": [
+        "Índices, particionamento, formatos e opções específicas do SGBD."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 63",
+      "mapaNoId": "proj-fisico",
+      "questaoIds": [
+        "fiscal-t38-ce28"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Inversão de modelos",
+      "q": "Qual ordem de detalhamento costuma orientar o projeto?",
+      "a": [
+        "Conceitual → lógico → físico."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 60",
+      "mapaNoId": "proj-inversao",
+      "questaoIds": [
+        "fiscal-t38-ce29"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Normalização lógica",
+      "q": "Em qual fase se avalia normalmente a normalização?",
+      "a": [
+        "No projeto lógico."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 62",
+      "mapaNoId": "proj-normalizacao",
+      "questaoIds": [
+        "fiscal-t38-ce30"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "DER",
+      "q": "Qual é a finalidade do DER?",
+      "a": [
+        "Expressar conceitos de entidade, atributo e relacionamento visualmente no projeto conceitual."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 60",
+      "mapaNoId": "proj-der",
+      "questaoIds": [
+        "fiscal-t38-ce31"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "ANSI/SPARC, papéis e projeto de bancos · T38",
+    "versao": 2,
+    "fonte": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, pp. 25–66",
+    "ramos": [
+      {
+        "id": "conceito-1",
+        "t": "ANSI/SPARC e independência de dados",
+        "n": "Três esquemas; esquema × instância; independência física e lógica.",
+        "cor": 1,
+        "x": {
+          "e": "Três esquemas; esquema × instância; independência física e lógica.",
+          "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf"
+        },
+        "f": [
+          {
+            "id": "ansi-proposito",
+            "t": "Finalidade ANSI/SPARC",
+            "n": "Promover abstração e independência de dados entre camadas.",
+            "x": {
+              "e": "O modelo de três esquemas organiza visões, estrutura lógica global e armazenamento, viabilizando evolução com menos impacto.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 25",
+              "questaoIds": [
+                "fiscal-t38-ce02"
+              ]
+            }
+          },
+          {
+            "id": "ansi-tres",
+            "t": "Três níveis",
+            "n": "Externo: visões; conceitual: estrutura lógica global; interno: armazenamento físico.",
+            "x": {
+              "e": "A apostila distingue visão individual do usuário, esquema lógico global e detalhes físicos.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 27",
+              "questaoIds": [
+                "fiscal-t38-ce03"
+              ]
+            }
+          },
+          {
+            "id": "ansi-externo",
+            "t": "Esquema externo",
+            "n": "O nível externo.",
+            "x": {
+              "e": "Visões de RH e financeiro podem exibir informações diferentes da mesma base.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 27",
+              "questaoIds": [
+                "fiscal-t38-ce04"
+              ]
+            }
+          },
+          {
+            "id": "ansi-conceitual",
+            "t": "Esquema conceitual",
+            "n": "O esquema conceitual.",
+            "x": {
+              "e": "O nível conceitual descreve entidades, atributos e relações do domínio de modo global.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 30",
+              "questaoIds": [
+                "fiscal-t38-ce05"
+              ]
+            }
+          },
+          {
+            "id": "ansi-interno",
+            "t": "Esquema interno",
+            "n": "Arquivos, organização e estruturas de armazenamento físico.",
+            "x": {
+              "e": "É o contrário: interno preocupa-se com representação física e acesso, não com visões personalizadas.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 31",
+              "questaoIds": [
+                "fiscal-t38-ce06"
+              ]
+            }
+          },
+          {
+            "id": "ansi-varias-externas",
+            "t": "Um ou vários externos",
+            "n": "Múltiplos, conforme os grupos de usuários.",
+            "x": {
+              "e": "O modelo admite diversas visões externas e, tipicamente, um esquema conceitual integrado.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 27",
+              "questaoIds": [
+                "fiscal-t38-ce07"
+              ]
+            }
+          },
+          {
+            "id": "ansi-esquema",
+            "t": "Esquema × instância",
+            "n": "Esquema é a definição estrutural; instância são os dados existentes em certo instante.",
+            "x": {
+              "e": "O esquema tende a sofrer alterações infrequentes, e a instância muda com inserções, exclusões e atualizações.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 26",
+              "questaoIds": [
+                "fiscal-t38-ce08"
+              ]
+            }
+          },
+          {
+            "id": "ansi-ind-fis",
+            "t": "Independência física",
+            "n": "Interno e conceitual.",
+            "x": {
+              "e": "A separação interno/conceitual permite ajustes físicos sem mudar o modelo lógico exposto à aplicação.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 35",
+              "questaoIds": [
+                "fiscal-t38-ce09"
+              ]
+            }
+          },
+          {
+            "id": "ansi-ind-log",
+            "t": "Independência lógica",
+            "n": "Conceitual e externo.",
+            "x": {
+              "e": "A separação conceitual/externo protege as visões do usuário de certas mudanças lógicas globais.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 35",
+              "questaoIds": [
+                "fiscal-t38-ce10"
+              ]
+            }
+          },
+          {
+            "id": "ansi-nao-total",
+            "t": "Independência não absoluta",
+            "n": "Não. Ela protege contra mudanças compatíveis, não contra toda alteração possível.",
+            "x": {
+              "e": "A independência reduz impactos e depende de mapeamentos viáveis; não garante compatibilidade universal com toda mudança.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 39",
+              "questaoIds": [
+                "fiscal-t38-ce11"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-classificacao",
+        "t": "Classificação de SGBDs",
+        "n": "Relacional, hierárquico, rede, objetos, NoSQL e tipos especializados.",
+        "cor": 2,
+        "x": {
+          "e": "Relacional, hierárquico, rede, objetos, NoSQL e tipos especializados.",
+          "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf"
+        },
+        "f": [
+          {
+            "id": "tip-relacional",
+            "t": "SGBD relacional",
+            "n": "Tabelas com tuplas/linhas e atributos/colunas.",
+            "x": {
+              "e": "O capítulo associa o modelo a relações, tuplas, atributos e chaves.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 41",
+              "questaoIds": [
+                "fiscal-t38-ce12"
+              ]
+            }
+          },
+          {
+            "id": "tip-hierarquico",
+            "t": "Modelo hierárquico",
+            "n": "Cada filho tem um pai, embora o pai possa ter vários filhos.",
+            "x": {
+              "e": "O capítulo descreve árvore pai–filho: cada filho tem um pai na hierarquia tradicional.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 42",
+              "questaoIds": [
+                "fiscal-t38-ce13"
+              ]
+            }
+          },
+          {
+            "id": "tip-rede",
+            "t": "Modelo de rede",
+            "n": "Rede admite múltiplas ligações; hierárquico tem árvore mais rígida.",
+            "x": {
+              "e": "O modelo em rede representa estrutura mais flexível, com conexões entre registros.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 43",
+              "questaoIds": [
+                "fiscal-t38-ce14"
+              ]
+            }
+          },
+          {
+            "id": "tip-objetos",
+            "t": "Orientado a objetos",
+            "n": "Objetos com identidade, atributos e comportamentos, incluindo herança/encapsulamento.",
+            "x": {
+              "e": "O material o distingue do armazenamento tabular exclusivamente relacional.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 44",
+              "questaoIds": [
+                "fiscal-t38-ce15"
+              ]
+            }
+          },
+          {
+            "id": "tip-nosql",
+            "t": "NoSQL",
+            "n": "Documentos, colunas, grafos e chave–valor.",
+            "x": {
+              "e": "A apostila compara paradigmas e organiza famílias de bancos não relacionais.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 46",
+              "questaoIds": [
+                "fiscal-t38-ce16"
+              ]
+            }
+          },
+          {
+            "id": "tip-coluna",
+            "t": "Orientação a colunas",
+            "n": "Leitura analítica eficiente de colunas usadas em agregações.",
+            "x": {
+              "e": "A categoria de armazenamento colunar é associada a leitura eficiente de colunas específicas.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 50",
+              "questaoIds": [
+                "fiscal-t38-ce17"
+              ]
+            }
+          },
+          {
+            "id": "tip-temporal",
+            "t": "Banco temporal",
+            "n": "Banco temporal.",
+            "x": {
+              "e": "A listagem de bancos temporais destaca histórico de alterações e rastreio de versões.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 53",
+              "questaoIds": [
+                "fiscal-t38-ce18"
+              ]
+            }
+          },
+          {
+            "id": "tip-espacial",
+            "t": "Banco espacial",
+            "n": "Consultas espaciais, distâncias, áreas e localização.",
+            "x": {
+              "e": "O material o vincula a dados georreferenciados e geoprocessamento.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 53",
+              "questaoIds": [
+                "fiscal-t38-ce19"
+              ]
+            }
+          },
+          {
+            "id": "tip-real-time",
+            "t": "Tempo real",
+            "n": "Tempo real exige cumprir restrições temporais, e não só média baixa de latência.",
+            "x": {
+              "e": "A apostila enfatiza limites rígidos de tempo, não apenas respostas normalmente rápidas.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 53",
+              "questaoIds": [
+                "fiscal-t38-ce20"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-2",
+        "t": "Papéis e responsabilidades",
+        "n": "Roles de privilégios; DBA operacional e AD conceitual.",
+        "cor": 3,
+        "x": {
+          "e": "Roles de privilégios; DBA operacional e AD conceitual.",
+          "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf"
+        },
+        "f": [
+          {
+            "id": "roles-permissoes",
+            "t": "Papéis (roles)",
+            "n": "Agrupar privilégios atribuíveis a usuários, facilitando controle de acesso.",
+            "x": {
+              "e": "Na seção 4.5, um papel é um conjunto de permissões sobre objetos e dados.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 54",
+              "questaoIds": [
+                "fiscal-t38-ce21"
+              ]
+            }
+          },
+          {
+            "id": "db-dba",
+            "t": "DBA",
+            "n": "Instalar/configurar, monitorar, ajustar, proteger, fazer backup e recuperar.",
+            "x": {
+              "e": "O material atribui a esse profissional a dimensão técnica e operacional do banco.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 54",
+              "questaoIds": [
+                "fiscal-t38-ce22"
+              ]
+            }
+          },
+          {
+            "id": "db-ad",
+            "t": "Administrador de Dados (AD)",
+            "n": "AD cuida da semântica/modelagem corporativa; DBA da operação técnica do SGBD.",
+            "x": {
+              "e": "Apostila contrapõe AD (organização conceitual) e DBA (infraestrutura e operação).",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 55",
+              "questaoIds": [
+                "fiscal-t38-ce23"
+              ]
+            }
+          },
+          {
+            "id": "db-ad-dicionario",
+            "t": "Dicionário de dados",
+            "n": "O Administrador de Dados (AD), em colaboração com áreas de negócio.",
+            "x": {
+              "e": "O dicionário estabelece coerência terminológica para os campos e regras do negócio.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 55",
+              "questaoIds": [
+                "fiscal-t38-ce24"
+              ]
+            }
+          },
+          {
+            "id": "db-papeis-mesma-pessoa",
+            "t": "Acúmulo de papéis",
+            "n": "Não. Uma pessoa pode acumular funções em um banco pequeno.",
+            "x": {
+              "e": "A apostila reconhece que a divisão é típica de organizações mais complexas; em bases simples pode haver acumulação.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 54",
+              "questaoIds": [
+                "fiscal-t38-ce25"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-projeto",
+        "t": "Projeto conceitual, lógico e físico",
+        "n": "Entidades/DER, chaves e regras lógicas, implementação física e índices.",
+        "cor": 4,
+        "x": {
+          "e": "Entidades/DER, chaves e regras lógicas, implementação física e índices.",
+          "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf"
+        },
+        "f": [
+          {
+            "id": "proj-conceitual",
+            "t": "Modelo conceitual",
+            "n": "Entidades, atributos, relacionamentos e regras de negócio, sem detalhes de implementação.",
+            "x": {
+              "e": "A fase de conceituação aborda o que o negócio precisa representar, frequentemente por DER.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 60",
+              "questaoIds": [
+                "fiscal-t38-ce26"
+              ]
+            }
+          },
+          {
+            "id": "proj-logico",
+            "t": "Modelo lógico",
+            "n": "Detalhamento de chaves, atributos, relações e normalização sem amarrar a plataforma.",
+            "x": {
+              "e": "O capítulo classifica esse modelo como representativo e mais técnico que o conceitual.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 61",
+              "questaoIds": [
+                "fiscal-t38-ce27"
+              ]
+            }
+          },
+          {
+            "id": "proj-fisico",
+            "t": "Modelo físico",
+            "n": "Índices, particionamento, formatos e opções específicas do SGBD.",
+            "x": {
+              "e": "Essa fase define mecanismos concretos do SGBD escolhido e estruturas de persistência.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 63",
+              "questaoIds": [
+                "fiscal-t38-ce28"
+              ]
+            }
+          },
+          {
+            "id": "proj-inversao",
+            "t": "Inversão de modelos",
+            "n": "Conceitual → lógico → físico.",
+            "x": {
+              "e": "A sequência é conceitual → lógico → físico, partindo do domínio para a implementação.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 60",
+              "questaoIds": [
+                "fiscal-t38-ce29"
+              ]
+            }
+          },
+          {
+            "id": "proj-normalizacao",
+            "t": "Normalização lógica",
+            "n": "No projeto lógico.",
+            "x": {
+              "e": "O capítulo localiza normalização entre as tarefas de organização lógica dos dados.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 62",
+              "questaoIds": [
+                "fiscal-t38-ce30"
+              ]
+            }
+          },
+          {
+            "id": "proj-der",
+            "t": "DER",
+            "n": "Expressar conceitos de entidade, atributo e relacionamento visualmente no projeto conceitual.",
+            "x": {
+              "e": "O material usa o DER como desenho de alto nível compreensível ao negócio.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 60",
+              "questaoIds": [
+                "fiscal-t38-ce31"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": [
+      [
+        "conceito-1",
+        "g-projeto",
+        "Níveis arquiteturais não são fases de projeto"
+      ],
+      [
+        "g-classificacao",
+        "g-projeto",
+        "Escolha de modelo versus implementação"
+      ],
+      [
+        "conceito-2",
+        "g-projeto",
+        "AD define semântica; DBA opera SGBD"
+      ],
+      [
+        "conceito-1",
+        "conceito-2",
+        "Múltiplas visões dependem de privilégios"
+      ]
+    ]
+  }
+}
