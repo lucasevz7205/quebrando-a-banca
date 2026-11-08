@@ -145,10 +145,17 @@
     const outstanding = overdue.length;
     const selectedAuto = (due.questoes.get(S.planSelectedDay) || 0) + (due.cartoes.get(S.planSelectedDay) || 0);
     return `<div class="wrap qb-week-planner" style="gap:18px">
-      <section class="qb-plan-intro"><div><span class="qb-plan-eyebrow">CENTRAL DE EXECUÇÃO · CÂMARA DOS DEPUTADOS</span><h2>Planejamento semanal</h2><p>Organize sua semana, execute as tarefas e acompanhe as revisões que o sistema programa para você.</p></div><button type="button" class="btn" data-plan-action="new">+ Nova atividade</button></section>
-      <div class="qb-week-toolbar"><div class="qb-week-title"><h3>${esc(longRange(days[0], days[6]))}</h3><span>Semana de estudos</span></div>
-        <div class="qb-week-nav"><button type="button" data-plan-week="-1" aria-label="Semana anterior">‹</button><button type="button" data-plan-week="0">Semana atual</button><button type="button" data-plan-week="1" aria-label="Próxima semana">›</button></div>
-      </div>
+      <section class="qb-plan-intro qb-page-hero" aria-label="Planejamento semanal">
+        <div class="qb-page-hero-copy"><span class="qb-plan-eyebrow">PLANEJAMENTO SEMANAL · QUEBRANDO A BANCA</span>
+          <h2>Sua semana de estudos</h2>
+          <p>Planeje, execute e acompanhe suas tarefas, revisões e simulados. Um dia de cada vez, com toda a semana à vista.</p>
+        </div>
+        <div class="qb-page-hero-actions"><button type="button" class="btn" data-plan-action="new">+ Nova atividade</button></div>
+        <div class="qb-page-hero-footer" aria-label="Navegar entre semanas">
+          <div class="qb-week-title"><h3>${esc(longRange(days[0], days[6]))}</h3><span>Semana selecionada</span></div>
+          <div class="qb-week-nav"><button type="button" data-plan-week="-1" aria-label="Semana anterior">‹</button><button type="button" data-plan-week="0">Semana atual</button><button type="button" data-plan-week="1" aria-label="Próxima semana">›</button></div>
+        </div>
+      </section>
       <div class="qb-plan-summary">
         <div class="qb-plan-kpi"><b>${completed}<span>/${total}</span></b><small>tarefas concluídas</small></div>
         <div class="qb-plan-kpi"><b>${percent}%</b><small>conclusão semanal</small><div class="qb-plan-progress"><i style="width:${percent}%"></i></div></div>
