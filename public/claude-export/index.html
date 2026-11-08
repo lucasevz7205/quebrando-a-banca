@@ -411,7 +411,7 @@ details.diario .feed{margin-top:10px}
 </style>
 <link rel="stylesheet" href="/claude-export/experience.css">
 <link rel="stylesheet" href="/claude-export/weekly.css">
-<link rel="stylesheet" href="/claude-export/analytics.css?v=3">
+<link rel="stylesheet" href="/claude-export/analytics.css?v=4">
 <link rel="stylesheet" href="/claude-export/page-hero.css">
 <link rel="stylesheet" href="/claude-export/top-nav.css">
 <link rel="stylesheet" href="/claude-export/traps.css">
@@ -454,7 +454,7 @@ const S = {
   view:'painel', cap:null, modo:'novos', shuffle:false,
   round:null, pendingRender:false,
   ed:new Map(), mat:new Map(), pt:new Map(), di:[], edLoaded:false,
-  fEvo:'', evoCap:'', evoModo:'n', evoPer:'d', evoDe:'', evoAte:'', evoFaixa:'', evoPagina:0,
+  fEvo:'', evoCap:'', evoGrafico:'tempo', evoOrdem:'menor', evoModo:'n', evoPer:'d', evoDe:'', evoAte:'', evoFaixa:'', evoPagina:0,
   fMat:'', fSt:'', abertos:new Set(), ptsAbertos:new Set(), evocar:false, revelados:new Set(),
   rv:new Map(), cfg:new Map(), cartAbertos:new Set(),
   pg:new Map(), fPgMat:'', fPgTipo:'',
@@ -963,10 +963,11 @@ function qbCurve(pts){
 }
 
 function sessoesHistoricas(){
-  const materias=new Map(), assuntos=new Map(), sessoes=[];
+  const materias=new Map(), assuntos=new Map(), comparacao=new Map(), sessoes=[];
   for(const rodada of S.rodadas){
     if(!Number.isFinite(Date.parse(rodada.inicio))) continue;
     const dia=diaDe(rodada.inicio);
+    const dentro=(!S.evoDe||dia>=S.evoDe)&&(!S.evoAte||dia<=S.evoAte);
     const contagem={c:0,e:0,b:0,n:0};
     const nomes=new Set();
     for(const item of rodada.itens||[]){
@@ -978,21 +979,46 @@ function sessoesHistoricas(){
       const nome=String(questao?.capNome||topico?.titulo||cap||'Sem assunto').split(' · ').at(-1);
       materias.set(materia,nomeMateria(materia));
       if(cap&&!assuntos.has(cap)) assuntos.set(cap,{materia,nome});
-      if((S.fEvo&&S.fEvo!==materia)||(S.evoCap&&S.evoCap!==cap)) continue;
+      if(!dentro||(S.fEvo&&S.fEvo!==materia)) continue;
+      const resultado=item.marcada==='B'?'b':item.marcada===item.gabarito?'c':'e';
+      if(cap&&S.evoGrafico==='assuntos'){
+        const a=comparacao.get(cap)||{c:0,n:0};
+        a.n++;
+        if(resultado==='c') a.c++;
+        comparacao.set(cap,a);
+      }
+      if(S.evoCap&&S.evoCap!==cap) continue;
       nomes.add(nome);
       contagem.n++;
-      contagem[item.marcada==='B'?'b':item.marcada===item.gabarito?'c':'e']++;
+      contagem[resultado]++;
     }
-    if(contagem.n&&(!S.evoDe||dia>=S.evoDe)&&(!S.evoAte||dia<=S.evoAte)){
+    if(contagem.n){
       sessoes.push({rodada,dia,periodo:bucketEvo(dia),nomes:[...nomes],...contagem});
     }
   }
   sessoes.sort((a,b)=>Date.parse(b.rodada.inicio)-Date.parse(a.rodada.inicio));
-  return {materias,assuntos,sessoes};
+  return {materias,assuntos,comparacao,sessoes};
+}
+
+function viewComparacaoHistorica(comparacao,assuntos,materias){
+  if(!comparacao.size) return '<p class="qb-analytics-note">Nenhum assunto com respostas neste recorte.</p>';
+  const ordem=S.evoOrdem==='maior'?-1:1;
+  const linhas=[...comparacao].sort(([capA,a],[capB,b])=>ordem*(a.c/a.n-b.c/b.n)||b.n-a.n||capA.localeCompare(capB,'pt',{numeric:true})).map(([cap,p])=>{
+    const a=assuntos.get(cap), porcentagem=100*p.c/p.n;
+    const [nivel]=heatClasse({resp:p.n,okN:p.c});
+    const valor=porcentagem.toLocaleString('pt-BR',{maximumFractionDigits:1})+'%';
+    return `<button type="button" class="qb-history-compare-row" data-evo-comparar="${esc(cap)}" aria-pressed="${S.evoCap===cap}">
+      <span class="qb-history-compare-name"><strong>${esc(a.nome)}</strong><small>${esc(materias.get(a.materia))} · ${esc(cap)}</small></span>
+      <span class="qb-history-compare-track" aria-hidden="true"><span class="hc ${nivel}" style="width:${porcentagem}%"></span></span>
+      <span class="qb-history-compare-score"><strong>${valor}</strong><small>${p.c}/${p.n} acertos</small></span>
+    </button>`;
+  }).join('');
+  return `<div class="qb-history-compare" role="group" aria-label="Aproveitamento por assunto">${linhas}</div>`;
 }
 
 function viewSessoesHistoricas(){
-  const {materias,assuntos,sessoes}=sessoesHistoricas();
+  const {materias,assuntos,comparacao,sessoes}=sessoesHistoricas();
+  const comparar=S.evoGrafico==='assuntos';
   const periodos=new Map();
   for(const s of sessoes){
     const p=periodos.get(s.periodo)||{c:0,e:0,b:0,n:0};
@@ -1012,8 +1038,9 @@ function viewSessoesHistoricas(){
     const valor=taxa?fmtPct(p.c/p.n):p.c;
     const altura=100*p.c/(taxa?p.n:maximo);
     const descricao=`${lblEvo(d)} · ${d.slice(0,4)} · ${p.c} acertos, ${p.e} erros, ${p.b} em branco`;
+    const [nivel]=heatClasse({resp:p.n,okN:p.c});
     return `<button type="button" data-evo-faixa="${d}" aria-pressed="${faixa===d}" aria-label="${esc(descricao)}" title="${esc(descricao)}">
-      <span class="qb-history-bar-track"><span class="qb-history-bar" style="--qb-history-height:${altura}%"></span></span>
+      <span class="qb-history-bar-track"><span class="qb-history-bar hc ${nivel}" style="--qb-history-height:${altura}%"></span></span>
       <strong>${valor}</strong><small>${lblEvo(d)}</small>
     </button>`;
   }).join('');
@@ -1030,13 +1057,17 @@ function viewSessoesHistoricas(){
     <div class="qb-history-filters">
       <label>Matéria<select id="f-evo"><option value="">Todas as matérias</option>${opcoes([...materias],S.fEvo)}</select></label>
       <label>Assunto<select id="evo-cap"><option value="">Todos os assuntos</option>${opcoes(opcoesAssunto,S.evoCap)}</select></label>
-      <div class="seg" role="group" aria-label="Agrupar por">${[['d','Dia'],['s','Semana'],['m','Mês']].map(([k,t])=>`<button type="button" data-evoper="${k}" aria-pressed="${S.evoPer===k}">${t}</button>`).join('')}</div>
+      ${comparar?'':`<div class="seg" role="group" aria-label="Agrupar por">${[['d','Dia'],['s','Semana'],['m','Mês']].map(([k,t])=>`<button type="button" data-evoper="${k}" aria-pressed="${S.evoPer===k}">${t}</button>`).join('')}</div>`}
       <details class="qb-history-dates" ${S.evoDe||S.evoAte?'open':''}><summary>Filtrar datas</summary><div><label>De<input type="date" id="evo-de" value="${esc(S.evoDe)}"></label><label>Até<input type="date" id="evo-ate" value="${esc(S.evoAte)}"></label><button type="button" class="lnk" id="evo-limpa">Limpar datas</button></div></details>
     </div>
-    <div class="qb-history-chart-head"><strong>Acertos por ${{d:'dia',s:'semana',m:'mês'}[S.evoPer]}</strong>
-      <div class="seg" role="group" aria-label="Medida do gráfico"><button type="button" data-evomodo="n" aria-pressed="${!taxa}">Acertos</button><button type="button" data-evomodo="p" aria-pressed="${taxa}">% de acerto</button></div>
+    <div class="qb-history-chart-head">
+      <div class="seg" role="group" aria-label="Visualização do gráfico"><button type="button" data-evo-grafico="tempo" aria-pressed="${!comparar}">Por período</button><button type="button" data-evo-grafico="assuntos" aria-pressed="${comparar}">Comparar assuntos</button></div>
+      ${comparar?`<div class="seg" role="group" aria-label="Ordenar assuntos"><button type="button" data-evo-ordem="menor" aria-pressed="${S.evoOrdem==='menor'}">Menor %</button><button type="button" data-evo-ordem="maior" aria-pressed="${S.evoOrdem==='maior'}">Maior %</button></div>`:
+        `<div class="seg" role="group" aria-label="Medida do gráfico"><button type="button" data-evomodo="n" aria-pressed="${!taxa}">Acertos</button><button type="button" data-evomodo="p" aria-pressed="${taxa}">% de acerto</button></div>`}
     </div>
-    ${barras?`<div class="qb-history-chart" role="group" aria-label="Selecione uma barra para filtrar as sessões">${barras}</div>`:''}
+    ${comparar?viewComparacaoHistorica(comparacao,assuntos,materias):
+      barras?`<div class="qb-history-chart" role="group" aria-label="Selecione uma barra para filtrar as sessões por ${{d:'dia',s:'semana',m:'mês'}[S.evoPer]}">${barras}</div>`:''}
+    ${comparar&&comparacao.size||!comparar&&barras?`<div class="qb-history-legend">${heatLegenda(false)}${comparar?'<p class="qb-analytics-note">Toque num assunto para filtrar as sessões. O gráfico mantém os demais para comparação. Respostas em branco entram no total.</p>':''}</div>`:''}
     <div class="qb-history-list-head"><h4>Sessões de treino <span>${exibidas.length}</span></h4>${faixa?`<button type="button" class="lnk" data-evo-faixa="">Limpar seleção · ${lblEvo(faixa)}</button>`:''}</div>
     ${rows?`<div class="tbl-wrap"><table aria-label="Sessões de treino filtradas"><thead><tr><th>Data</th><th>Assunto</th><th class="num" title="Acertos">C</th><th class="num" title="Erros">E</th><th class="num" title="Em branco">B</th><th class="num">% acerto</th></tr></thead><tbody>${rows}</tbody></table></div>`:'<p class="qb-analytics-note">Nenhuma sessão neste recorte.</p>'}
     ${paginas>1?`<nav class="qb-history-pages" aria-label="Páginas de sessões"><button type="button" class="btn ghost small" data-evo-pagina="${pagina-1}" ${pagina===0?'disabled':''}>Anterior</button><span>${inicio+1}–${Math.min(inicio+porPagina,exibidas.length)} de ${exibidas.length}</span><button type="button" class="btn ghost small" data-evo-pagina="${pagina+1}" ${pagina===paginas-1?'disabled':''}>Próxima</button></nav>`:''}
@@ -1348,6 +1379,11 @@ function viewPanorama(){
 }
 /* mapa de calor: um quadrado por tópico, cor pelo aproveitamento (questão errada uma vez conta como erro) */
 function heatClasse(s){ if(!s.resp) return ['h0','–']; const p=s.okN/s.resp; return [p<0.6?'h1':p<0.75?'h2':p<0.85?'h3':p<0.9?'h4':'h5',Math.round(p*100)]; }
+function heatLegenda(incluirSemRespostas=true){
+  const faixas=[['h1','abaixo de 60%'],['h2','60–74%'],['h3','75–84%'],['h4','85–89%'],['h5','90% ou mais']];
+  if(incluirSemRespostas) faixas.push(['h0','sem respostas']);
+  return `<div class="heat-l" aria-label="Faixas de acerto">${faixas.map(([nivel,rotulo])=>`<span><span class="hc ${nivel}" aria-hidden="true"></span> ${rotulo}</span>`).join('')}</div>`;
+}
 function heatMap(gs){
   let rows='';
   for(const pv of ['P1','P2']) for(const g of gs.filter(g=>g.prova===pv&&(!S.fMat||g.sigla===S.fMat))){
@@ -1356,7 +1392,7 @@ function heatMap(gs){
     rows+=`<div class="heat-r"><span class="heat-n">${esc(g.nome)}</span><div class="heat-c">${ts.map(({t,s})=>{const [c,v]=heatClasse(s);return `<button class="hc ${c}" data-heat="${esc(t.id)}" data-sig="${esc(g.sigla)}" title="${esc(t.num)} · ${esc(t.titulo)}\n${s.resp?`${v}% de aproveitamento · ${s.resp}/${s.total} feitas${s.cad?` · ${s.cad} no caderno`:''}`:'Sem questões respondidas'}" aria-label="Tópico ${esc(t.num)}: ${s.resp?v+'%':'sem respostas'}">${esc(t.num)}</button>`}).join('')}</div></div>`;
   }
   return `<section class="heat" aria-label="Mapa de calor do edital"><h2 class="section-title">Mapa de calor · aproveitamento por tópico</h2>${rows}
-    <div class="heat-l"><span><span class="hc h1"></span> abaixo de 60%</span><span><span class="hc h2"></span> 60–74%</span><span><span class="hc h3"></span> 75–84%</span><span><span class="hc h4"></span> 85–89%</span><span><span class="hc h5"></span> 90% ou mais</span><span><span class="hc h0"></span> sem respostas</span></div>
+    ${heatLegenda()}
     <p class="rule">Toque num quadrado para abrir o tópico logo abaixo. O número é o do tópico no edital.</p></section>`;
 }
 function viewEdital(){
@@ -2122,11 +2158,16 @@ function wire(){
   const ra=$('#rv-abrir'); if(ra) ra.addEventListener('click',()=>{for(const t of S.ed.values()){if(S.rv.has(t.id)||S.pt.has(t.id)){S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+t.id)}}render(true)});
   const rf=$('#rv-fechar'); if(rf) rf.addEventListener('click',()=>{for(const k of [...S.abertos]) if(k.startsWith('rv:')||k.startsWith('rvt:')) S.abertos.delete(k); S.fMat=''; render(true)});
   const chart=document.querySelector('.qb-history-chart');
+  const comparacao=document.querySelector('.qb-history-compare');
+  if(comparacao){
+    comparacao.scrollTop=S.evoCompareScroll||0;
+    comparacao.addEventListener('scroll',()=>{S.evoCompareScroll=comparacao.scrollTop});
+  }
   if(chart){
     chart.scrollLeft=S.evoScroll??chart.scrollWidth;
     chart.addEventListener('scroll',()=>{S.evoScroll=chart.scrollLeft});
   }
-  const refreshHistory=()=>{S.evoFaixa='';S.evoPagina=0;S.evoScroll=null;render(true)};
+  const refreshHistory=()=>{S.evoFaixa='';S.evoPagina=0;S.evoScroll=null;S.evoCompareScroll=0;render(true)};
   const fe=$('#f-evo'); if(fe) fe.addEventListener('change',()=>{S.fEvo=fe.value;S.evoCap='';refreshHistory()});
   const ec=$('#evo-cap'); if(ec) ec.addEventListener('change',()=>{S.evoCap=ec.value;refreshHistory()});
   document.querySelectorAll('[data-qr]').forEach(r=>{const f=()=>{const k='qr:'+r.dataset.qr;if(S.abertos.has(k))S.abertos.delete(k);else S.abertos.add(k);render(true)};r.addEventListener('click',f);r.addEventListener('keydown',e=>{if(e.key==='Enter')f()})});
@@ -2134,6 +2175,16 @@ function wire(){
   const ed=$('#evo-de'); if(ed) ed.addEventListener('change',()=>{S.evoDe=ed.value;refreshHistory()});
   const ea=$('#evo-ate'); if(ea) ea.addEventListener('change',()=>{S.evoAte=ea.value;refreshHistory()});
   const el=$('#evo-limpa'); if(el) el.addEventListener('click',()=>{S.evoDe='';S.evoAte='';refreshHistory()});
+  document.querySelectorAll('[data-evo-grafico]').forEach(b=>b.addEventListener('click',()=>{S.evoGrafico=b.dataset.evoGrafico;refreshHistory()}));
+  document.querySelectorAll('[data-evo-ordem]').forEach(b=>b.addEventListener('click',()=>{S.evoOrdem=b.dataset.evoOrdem;S.evoCompareScroll=0;render(true)}));
+  document.querySelectorAll('[data-evo-comparar]').forEach(b=>b.addEventListener('click',()=>{
+    const cap=b.dataset.evoComparar;
+    S.evoCap=S.evoCap===cap?'':cap;
+    S.evoPagina=0;
+    if(comparacao) S.evoCompareScroll=comparacao.scrollTop;
+    render(true);
+    [...document.querySelectorAll('[data-evo-comparar]')].find(el=>el.dataset.evoComparar===cap)?.focus({preventScroll:true});
+  }));
   document.querySelectorAll('[data-evomodo]').forEach(b=>b.addEventListener('click',()=>{S.evoModo=b.dataset.evomodo;render(true)}));
   document.querySelectorAll('[data-evo-faixa]').forEach(b=>b.addEventListener('click',()=>{
     const chave=b.dataset.evoFaixa;

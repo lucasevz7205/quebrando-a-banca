@@ -68,7 +68,22 @@
 .qb-history-chart>button:is(:hover,[aria-pressed="true"]) {border-color:var(--pen);background:var(--pen-soft);color:var(--pen);}
 .qb-history-chart>button>strong,.qb-history-chart>button>small {font-size:10px;white-space:nowrap;}
 .qb-history-bar-track {display:flex;align-items:end;justify-content:center;width:100%;height:68px;border-bottom:1px solid var(--line);}
-.qb-history-bar {display:block;height:var(--qb-history-height);min-height:2px;width:65%;max-width:25px;border-radius:5px 5px 0 0;background:var(--pen);}
+.qb-history-bar.hc {display:block;height:var(--qb-history-height);min-height:2px;width:65%;max-width:25px;border-radius:5px 5px 0 0;}
+.qb-history-compare {max-height:220px;overflow-y:auto;display:grid;gap:4px;border:1px solid var(--line);border-radius:13px;background:var(--paper);padding:5px;margin-top:6px;}
+.qb-history-compare-row {display:grid;grid-template-columns:minmax(0,1.3fr) minmax(52px,1fr) auto;gap:8px;align-items:center;text-align:left;width:100%;border:1px solid transparent;border-radius:8px;background:transparent;color:var(--ink);padding:6px 7px;font:inherit;cursor:pointer;}
+.qb-history-compare-row:is(:hover,[aria-pressed="true"]) {background:var(--pen-soft);border-color:var(--pen);}
+.qb-history-compare-name {min-width:0;overflow-wrap:anywhere;}
+.qb-history-compare-score {text-align:right;font-variant-numeric:tabular-nums;}
+.qb-history-compare-row strong,.qb-history-compare-row small {display:block;font-size:12px;}
+.qb-history-compare-row small {font-size:10px;color:var(--muted);}
+.qb-history-compare-track {height:10px;background:var(--line);border-radius:999px;overflow:hidden;}
+.qb-history-compare-track .hc {display:block;height:100%;border-radius:inherit;box-sizing:border-box;}
+.qb-history-compare-track .hc[style="width:0%"] {border:0;}
+.qb-history-legend {display:grid;gap:4px;margin-top:6px;}
+.qb-history-legend .heat-l {gap:5px 9px;font-size:10px;}
+.qb-history-legend .heat-l>span {display:inline-flex;align-items:center;gap:4px;}
+.qb-history-legend .heat-l .hc {width:12px;height:9px;border-radius:3px;}
+
 .qb-history-list-head {margin:12px 0 7px;}
 .qb-history-list-head h4>span {font-size:11px;color:var(--pen);background:var(--pen-soft);border-radius:20px;padding:3px 7px;}
 .qb-history-main table {min-width:350px;}
