@@ -26,7 +26,7 @@
 .qb-trap-next button{border:1px solid #ffffff38;border-radius:13px;background:#ffffff16;color:#FFF;padding:13px;display:flex;flex-direction:column;gap:4px;text-align:left;cursor:pointer;min-width:0;}
 .qb-trap-next button:hover{background:#ffffff26;border-color:#ffffff82;}
 .qb-trap-next button b{font:700 11px var(--mono);color:#C9DFFF;}
-.qb-trap-next button span{font-weight:750;font-size:13px;}
+.qb-trap-next button>span:not(.qb-trap-score){font-weight:750;font-size:13px;}
 .qb-trap-next button small{font-size:11px;color:#D5E8FF;}
 .qb-trap-controls{display:flex;align-items:end;flex-wrap:wrap;gap:15px;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:17px;}
 .qb-trap-controls label{font:650 11px var(--display);color:var(--muted);display:flex;flex-direction:column;gap:6px;}
