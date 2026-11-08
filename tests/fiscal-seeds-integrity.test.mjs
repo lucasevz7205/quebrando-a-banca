@@ -13,7 +13,8 @@ const fileNames=[
   "t21-governanca-dados-fundamentos",
   "t26-governanca-arquitetura-controles",
   "t35-banco-sgbd-transacoes",
-  "t38-ansi-sparc-papeis-projetos"
+  "t38-ansi-sparc-papeis-projetos",
+  "t50-mer-entidades-relacionamentos"
 ];
 
 for(const file of fileNames){
