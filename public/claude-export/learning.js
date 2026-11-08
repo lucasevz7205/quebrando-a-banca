@@ -150,12 +150,44 @@
       button('answer','Responder e conferir')+(!isCE?button('skip',c.type==='pretest'?'Pular e ver explicação':'Revelar sem tentar'):'');
     return '<section class="learn-active" aria-live="polite"><h3>'+esc(c.title)+'</h3><p class="rule">'+({variant:'Aplicação em outro contexto',duel:'Duelo de conceitos',recall:'Evocação',pretest:a.known?'Sondagem antes da releitura · conteúdo já praticado':'Pré-teste · exposição anterior não confirmada'}[c.type]||'Prática')+'</p>'+response+(!answered?button('abandon','Encerrar atividade sem responder'):'')+(answered?button('close','Concluir')+((c.sourceItems||[]).length?button('source','Praticar itens relacionados'):''):'')+'</section>';
   }
+  /* P1: resumo do piloto. Resultados só são comparáveis depois do seguimento. */
+  function pilotHTML(S,m) {
+    if(!enabled(S,'p1'))return '<div class="learn-pilot-info"><b>Piloto de feedback desativado.</b><p>A correção padrão e o histórico existente continuam preservados.</p></div>';
+    const answered=m.immediate.filter(e=>e.marked==='C'||e.marked==='E');
+    const count=(ok,conf)=>answered.filter(e=>e.ok===ok&&e.confidence===conf).length;
+    const state=(label,num,explanation,kind)=>'<div class="learn-pilot-state '+kind+'"><small>'+label+'</small><strong>'+num+'</strong><span>'+explanation+'</span></div>';
+    const groups=['padrao','especifico'];
+    const rows=groups.map(k=>{
+      const eligible=m.eligibleFeedback[k]||[],follow=m.feedback[k]||[];
+      const eligIds=new Set(eligible.map(e=>e.id));
+      const observed=follow.filter(e=>eligIds.has(e.reference));
+      const pct=eligible.length?Math.round(observed.length/eligible.length*100)+'%':'–';
+      return '<div class="learn-pilot-arm"><div><b>'+ (k==='padrao'?'Feedback padrão':'Feedback + evocação') +'</b><span>'+eligible.length+' verificações já elegíveis · '+observed.length+' realizadas ('+pct+' de acompanhamento)</span></div><strong>'+rate(observed)+'</strong><small>'+observed.length+' respostas verificadas</small></div>';
+    }).join('');
+    const sufficient=groups.every(k=>{
+      const es=m.eligibleFeedback[k]||[],done=(m.feedback[k]||[]).filter(e=>new Set(es.map(x=>x.id)).has(e.reference));
+      return done.length>=30&&es.length&&done.length/es.length>=.7;
+    });
+    return '<section class="learn-pilot-info" aria-label="Piloto P1">'+
+      '<div class="learn-pilot-intro"><span class="learn-overline">P1 · FEEDBACK E METACOGNIÇÃO</span><h3>Confiança não é domínio</h3><p>Após responder questões, o sistema registra seu grau de certeza. Um acerto com dúvida pode exigir confirmação da regra, e um erro com certeza pode revelar uma confusão a investigar.</p></div>'+
+      '<div class="learn-pilot-states">'+
+      state('Acertou · certeza',count(true,3),'Verificar retenção depois','stable')+
+      state('Acertou · dúvida',count(true,2),'Confirmar a regra decisiva','attention')+
+      state('Errou · dúvida',count(false,2),'Corrigir a interpretação','attention')+
+      state('Errou · certeza',count(false,3),'Investigar o conceito','alert')+
+      '</div><details class="learn-pilot-method"><summary>Como estamos avaliando o novo feedback?</summary>'+
+      '<p>Quando há acerto com dúvida e comentário disponível, cada tentativa é alocada de forma reprodutível a feedback padrão ou feedback com pergunta de evocação. Os dois grupos recebem o gabarito comentado.</p>'+
+      '<div class="learn-pilot-arms">'+rows+'</div>'+
+      '<p class="learn-pilot-verdict">'+(sufficient?'Há acompanhamento suficiente para uma análise exploratória. Verifique comparabilidade dos itens, conceitos e perdas antes de interpretar qualquer diferença.':'Resultado ainda inconclusivo. A regra inicial requer pelo menos 30 verificações por grupo, acompanhamento de 70% e análise da comparabilidade dos conceitos.')+'</p>'+
+      '<small>Verificação tardia: primeira revisão elegível entre 7 e 10 dias da tentativa de referência. Os dados legados sem metadados são mantidos, mas não presumidos equivalentes. Este desenho não comprova causalidade.</small>'+
+      '</details></section>';
+  }
   function render(S,today) {
     const m=metrics([...attempts(S),...events(S).filter(e=>e.kind!=='attempt')]), tasks=catalog(S), vars=eligibleVariants(S);
     const nav='<div class="chips">'+[['indicadores','Indicadores'],['pratica','Prática ativa'],['agenda','Revisão e ciclo'],['editor','Preparar atividades']].map(([id,label])=>'<button class="chip" data-learn="section" data-id="'+id+'" aria-pressed="'+(selected===id)+'">'+label+'</button>').join('')+'</div>';
     let body='';
-    if(selected==='indicadores')body=enabled(S,'p4')?'<p class="rule">Registros feitos após esta atualização. Os números antigos continuam no Desempenho. Retenção usa a primeira verificação entre 7 e 10 dias após a referência registrada.</p><div class="learn-grid">'+stat('Desempenho imediato',m.immediate)+stat('Reconhecimento · item visto',m.recognition)+stat('Transferência · primeira variante válida',m.transfer)+stat('Retenção · verificações tardias',m.retention)+'</div>'+panel('Como interpretar', '<p>As populações podem se sobrepor. Não some retenção e transferência. “Reconhecimento” é um indicador operacional de acertos em itens já vistos, não um diagnóstico de memória.</p><p>Retenção em vistos: '+rate(m.retentionSeen)+' (n='+m.retentionSeen.length+'). Em inéditos: '+rate(m.retentionNew)+' (n='+m.retentionNew.length+').</p><p>'+m.unknown+' tentativas com exposição anterior desconhecida. '+m.excluded+' registros fora das métricas. '+m.retention.filter(x=>x.reexposures).length+' verificações com reexposição intermediária registrada.</p>')+
-      panel('Confiança e piloto do feedback', '<div class="learn-grid">'+[1,2,3,'unknown'].map(k=>stat(({1:'Chute',2:'Dúvida',3:'Certeza',unknown:'Confiança desconhecida'})[k],m.confidence[k])).join('')+'</div><p>Comparação exploratória por capítulo. Ambos os grupos recebem gabarito comentado.</p><div class="learn-grid">'+stat('Feedback padrão · retenção',m.feedback.padrao)+stat('Feedback específico · retenção',m.feedback.especifico)+'</div><p>Resultado inconclusivo enquanto não houver 30 verificações por condição, cinco pares comparáveis de conceitos e acompanhamento ≥70% em ambas. Esses mínimos são operacionais e não comprovam eficácia.</p>'):'<p>Indicadores desativados.</p>';
+    if(selected==='indicadores')body=pilotHTML(S,m)+(enabled(S,'p4')?'<p class="rule">Registros feitos após esta atualização. Os números antigos continuam no Desempenho. Retenção usa a primeira verificação entre 7 e 10 dias após a referência registrada.</p><div class="learn-grid">'+stat('Desempenho imediato',m.immediate)+stat('Reconhecimento · item visto',m.recognition)+stat('Transferência · primeira variante válida',m.transfer)+stat('Retenção · verificações tardias',m.retention)+'</div>'+panel('Como interpretar', '<p>As populações podem se sobrepor. Não some retenção e transferência. “Reconhecimento” é um indicador operacional de acertos em itens já vistos, não um diagnóstico de memória.</p><p>Retenção em vistos: '+rate(m.retentionSeen)+' (n='+m.retentionSeen.length+'). Em inéditos: '+rate(m.retentionNew)+' (n='+m.retentionNew.length+').</p><p>'+m.unknown+' tentativas com exposição anterior desconhecida. '+m.excluded+' registros fora das métricas. '+m.retention.filter(x=>x.reexposures).length+' verificações com reexposição intermediária registrada.</p>')+
+      panel('Confiança e piloto do feedback', '<div class="learn-grid">'+[1,2,3,'unknown'].map(k=>stat(({1:'Chute',2:'Dúvida',3:'Certeza',unknown:'Confiança desconhecida'})[k],m.confidence[k])).join('')+'</div><p>Comparação exploratória por capítulo. Ambos os grupos recebem gabarito comentado.</p><div class="learn-grid">'+stat('Feedback padrão · retenção',m.feedback.padrao)+stat('Feedback específico · retenção',m.feedback.especifico)+'</div><p>Os grupos recebem gabarito comentado. Resultados observados podem refletir diferenças de itens, usuários ou exposição. Consulte os critérios e a cobertura do piloto P1 acima.</p>'):'<p>Indicadores desativados.</p>');
     if(selected==='pratica')body='<p class="rule">Atividades curtas, separadas da nota dos treinos. Um novo texto só mede transferência quando sua equivalência, revisão e exposição estiverem confirmadas.</p>'+
       (enabled(S,'p2')?panel('Transferência para outro contexto · '+vars.length+' disponíveis',vars.length?vars.map(c=>'<p>'+esc(c.title)+' '+button('start','Responder variante reservada',c.id)+'</p>').join(''):'<p>Nenhuma variante elegível agora. É necessário conteúdo revisado, reservado e prática anterior do mesmo conceito. Itens do banco antigo não são presumidos inéditos. As variantes preparadas aguardam revisão humana independente, sem mostrar o gabarito ao estudante.</p>',true):'')+
       tasks.filter(c=>['duel','recall','pretest'].includes(c.type)&&enabled(S,{duel:'p3',recall:'p5',pretest:'p7'}[c.type])).map(c=>panel(c.title,'<p>'+esc(c.type==='duel'?'Explique a diferença decisiva antes de conferir.':'Tente recuperar a regra antes da explicação.')+'</p>'+button('start','Começar',c.id))).join('');
@@ -187,7 +219,7 @@
     const S=ctx.S,c=catalog(S).find(x=>x.id===id);
     if(!c)throw new Error('Atividade indisponível.');
     if(!S.learningLoaded||!S.learningContentLoaded)throw new Error('Aguarde o carregamento dos registros.');
-    if(activity&&activity.phase!=='feedback')throw new Error('Conclua a atividade aberta antes de iniciar outra.');
+    if(activity)throw new Error('Conclua a atividade aberta antes de iniciar outra.');
     if(!enabled(S,{variant:'p2',duel:'p3',recall:'p5',pretest:'p7'}[c.type]))throw new Error('Processo desativado.');
     if(c.type==='variant'&&!eligibleVariants(S).some(x=>x.id===id))throw new Error('Variante sem elegibilidade confirmada.');
     const seen=events(S).some(e=>e.item===id);
