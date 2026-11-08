@@ -25,7 +25,7 @@
       const current=S.q?.get(e.item); if(current&&version(current)!==e.version)e.invalid=true;
       out.set(e.id,e);
     }
-    for(const e of events(S)) if(e.kind==='attempt') {const c=S.learningContent?.get(e.item);out.set(e.id,{...e,invalid:e.invalid||!!(c&&c.version!==e.version)});}
+    for(const e of events(S)) if(e.kind==='attempt') {const c=S.learningContent?.get(e.item),q=S.q?.get(e.item);out.set(e.id,{...e,invalid:e.invalid||!!(c&&c.version!==e.version)||!!(q&&version(q)!==e.version)});}
     return [...out.values()].sort((a,b)=>Date.parse(a.at)-Date.parse(b.at)||a.id.localeCompare(b.id));
   }
   function prior(S,q) {
@@ -42,9 +42,10 @@
   }
   function metadata(S,q,L,conf,rd) {
     const ps=prior(S,q), at=new Date().toISOString();
+    const ref=ps.find(p=>Date.parse(at)-Date.parse(p.at)<=10*DAY&&!ps.some(x=>x.reference===p.id&&Date.parse(x.at)-Date.parse(p.at)>=7*DAY))||ps.at(-1);
     return {id:rd.id+':'+rd.idx,policy:POLICY,kind:'attempt',item:q.id,version:version(q),
       concept:conceptOf(S,q),cap:q.cap,at,origin:'treino',exposure:ps.length?'seen':'unknown',
-      reference:ps.length?ps[ps.length-1].id:null,referenceAt:ps.length?ps[ps.length-1].at:null,
+      reference:ref?.id||null,referenceAt:ref?.at||null,
       feedback:enabled(S,'p1')&&L===q.gabarito&&conf===2&&q.comentario?condition(q):'padrao',
       confidence:[1,2,3].includes(conf)?conf:null,marked:L,ok:L===q.gabarito};
   }
@@ -103,6 +104,8 @@
     try {await ctx.S.db.doc('aprendizagem/'+e.id).set(e);ctx.S.learningEvents.set(e.id,e);pending.delete(e.id);error='';}
     catch(err){error='Registro ainda não salvo. Mantenha esta página aberta e tente novamente.';throw err}
   }
+  function recordPrimary(e){if(e)save(e).catch(()=>{draw(false)});}
+  function statusHTML(){return pending.size&&error?'<div class="notice" role="alert">'+esc(error)+' '+button('retry','Tentar salvar novamente')+'</div>':'';}
   function mount(S,api) {
     ctx={S,...api};
     S.learningEvents ||= new Map(); S.learningContent ||= new Map();
@@ -215,7 +218,7 @@
     const S=ctx.S;
     if(name==='section'){selected=id;return}
     if(name==='plan'){ctx.setView('painel');return}
-    if(name==='close'){if(activity?.phase==='feedback')await save({id:activity.id+'-complete',kind:'completion',item:activity.card.id,at:new Date().toISOString(),origin:activity.card.type});activity=null;return}
+    if(name==='close'){if(activity?.phase==='feedback'){activity.completion ||= {id:activity.id+'-complete',kind:'completion',item:activity.card.id,at:new Date().toISOString(),origin:activity.card.type};await save(activity.completion);}activity=null;return}
     if(name==='start'){await begin(id);return}
     if(name==='source'){const c=activity?.card;const ids=(c?.sourceItems||[]).filter(id=>S.q.has(id));if(!ids.length)throw new Error('Nenhum item vinculado disponível.');if(S.round&&!S.round.fim)throw new Error('Conclua sua rodada atual primeiro.');activity=null;ctx.startSource(ids,c.title);return}
     if(name==='answer'||name==='skip'){await answer(name==='skip');return}
@@ -226,6 +229,7 @@
       await save({id:w.id,kind:'weekly',periodEnd:id,at:new Date().toISOString(),text,attempts:w.list.length,policy:POLICY});return;
     }
     if(name==='simulation'){
+      if(!enabled(S,'p6'))throw new Error('Simulação desativada.');
       const date=ctx.hoje(),id='simulation-'+date+'-'+uid();
       const decisions=values(S.r).filter(r=>r.proxRevisao).map(r=>({item:r.qid,...simulate(attempts(S).filter(e=>e.item===r.qid),r.proxRevisao,date,cfg(S).examDate)}));
       // One immutable event per item keeps writes below the bridge document limit.
@@ -254,5 +258,6 @@
       finally{saving=false;draw()}
     }));
   }
-  window.QBLearning={version,metadata,feedback,metrics,simulate,eligibleVariants,validateCard,attempts,mount,render,wire,weeklyHTML,contentHTML,flags,enabled};
+  window.addEventListener?.('beforeunload',event=>{if(pending.size){event.preventDefault();event.returnValue='';}});
+  window.QBLearning={recordPrimary,statusHTML,version,metadata,feedback,metrics,simulate,eligibleVariants,validateCard,attempts,mount,render,wire,weeklyHTML,contentHTML,flags,enabled};
 })();
