@@ -441,7 +441,7 @@ details.diario .feed{margin-top:10px}
 </div>
 <div class="toast" id="toast" hidden></div>
 
-<script src="/claude-export/bridge.js"></script>
+<script src="/claude-export/bridge.js?v=2"></script>
 <script src="/claude-export/planner.js"></script>
 <script src="/claude-export/insights.js"></script>
 <script src="/claude-export/assistant.js"></script>
@@ -641,7 +641,7 @@ function setView(v,push=true){
   S.view=v; if(PAI[v]==='estudo') S.ultEstudo=v;
   const pai=PAI[v]||v;
   for(const id of ['painel','edital','treinar','estudo','simulado','historico']){ const b=$('#tab-'+id); if(!b)continue; if(id===pai) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); }
-  if(push){ try{ history.replaceState(null,'','#'+v);}catch(e){} }
+  if(push){ try{ history.replaceState(null,'',location.href.split('#')[0]+'#'+v);}catch(e){} }
   render(true);
 }
 document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
