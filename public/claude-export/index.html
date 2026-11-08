@@ -611,7 +611,7 @@ const multiCap=cap=>cap==='MIX'||cap==='PEG';
 /* ---------- navegação ---------- */
 /* 5 abas; Estudo agrupa Revisão, Pegadinhas e Conteúdo; Treinar inclui o caderno de erros; Desempenho inclui o Método */
 const PAI={cartoes:'estudo',mapa:'estudo',revisao:'estudo',pegadinhas:'estudo',conteudo:'estudo',caderno:'treinar',metodo:'historico',analiseDia:'historico'};
-const SUBS={estudo:[['revisao','Revisão'],['mapa','Mapas mentais'],['cartoes','Flashcards'],['pegadinhas','Pegadinhas'],['conteudo','Materiais']],treinar:[['treinar','Treinar'],['caderno','Caderno de erros']],historico:[['analiseDia','Análise diária'],['historico','Indicadores históricos'],['metodo','Método']]};
+const SUBS={estudo:[['revisao','Revisão'],['mapa','Mapas mentais'],['cartoes','Flashcards'],['pegadinhas','Pegadinhas'],['conteudo','Materiais']],treinar:[['treinar','Treinar'],['caderno','Caderno de erros']],historico:[['analiseDia','Análise diária'],['historico','Análise histórica'],['metodo','Método']]};
 function subnav(){
   const pai=PAI[S.view]||S.view, l=SUBS[pai]; if(!l) return '';
   const cnt={caderno:cadernoItens().length,pegadinhas:S.pg.size};
@@ -628,7 +628,6 @@ const SECTION_INTROS={
   conteudo:['BIBLIOTECA DE ESTUDOS','Conhecimento organizado','Acesse seus materiais, resumos e fontes por disciplina e assunto.'],
   simulado:['SIMULADOS · CEBRASPE','Pratique como na prova','Teste domínio, ritmo e estratégia com exercícios em condições de prova.'],
   analiseDia:['ANÁLISE DIÁRIA','Desempenho diário','Os resultados reais das suas rodadas e tarefas em cada dia.'],
-  historico:['INDICADORES HISTÓRICOS','Sua evolução, ao longo do tempo','Analise tendências, consolidação da memória, confiança e desempenho por disciplina.'],
   metodo:['MÉTODO DE ESTUDO','Uma estratégia para evoluir','Entenda as regras de revisão, prática deliberada e análise de erros que orientam seus estudos.']
 };
 function sectionIntro(v){
@@ -1082,42 +1081,52 @@ function viewHistorico(){
   const qrRows=[...gm.values()].map(g=>{const ab=S.abertos.has('qr:'+g.k);
     return `<tr class="qr-m" data-qr="${esc(g.k)}" tabindex="0"><td><b>${ab?'▾':'▸'} ${esc(g.nome)}</b></td>${cel(g)}</tr>`+
       (ab?g.cs.map(c=>`<tr class="qr-a"><td>${esc(c.cap)} · ${esc(String(c.nome||'').replace(/^[^·]*·\s*/,''))}</td>${cel({total:c.total,resp:c.resp,ok:c.okUlt})}</tr>`).join(''):'')}).join('');
-  const respondidas=`<h2 class="section-title">Questões respondidas</h2>
-    <div class="summary">
-      <div class="stat"><span class="v">${T.resp}</span><span class="k">respondidas de ${T.total} no banco</span></div>
-      <div class="stat"><span class="v">${fmtPct(T.resp/T.total)}</span><span class="k">do banco respondido</span></div>
-      <div class="stat c"><span class="v">${T.ok}</span><span class="k">acertos</span></div>
-      <div class="stat c"><span class="v">${T.resp?fmtPct(T.ok/T.resp):'–'}</span><span class="k">de acerto</span></div>
-    </div>
+  const historicalCard=(label,title,body)=>`<section class="qb-analytics-card qb-historical-card">
+    <header class="qb-analytics-head"><div><span>${label}</span><h3>${title}</h3></div></header>
+    ${body}
+  </section>`;
+  const kpis=[
+    ['Questões respondidas',T.resp,`De ${T.total} questões no banco`],
+    ['Cobertura do banco',fmtPct(T.resp/T.total),'Questões distintas já respondidas'],
+    ['Acertos consolidados',T.ok,'Questões sem erro ou resposta em branco no histórico'],
+    ['Taxa de acerto',T.resp?fmtPct(T.ok/T.resp):'–','Acertos consolidados entre as respondidas']
+  ];
+  return `<div class="wrap qb-analytics qb-historical">
+    <section class="qb-analytics-intro qb-page-hero" aria-label="Análise histórica">
+      <div class="qb-page-hero-copy"><span class="qb-page-kicker">ANÁLISE HISTÓRICA · QUEBRANDO A BANCA</span><h2>Seu desempenho ao longo do tempo</h2><p>Acompanhe a cobertura do edital, a evolução dos acertos e os padrões dos seus erros.</p></div>
+    </section>
+    <div class="qb-analytics-kpis qb-historical-kpis">${kpis.map(([label,value,note])=>`<div class="qb-analytic-kpi"><small>${esc(label)}</small><strong>${esc(value)}</strong><span>${esc(note)}</span></div>`).join('')}</div>
+    ${historicalCard('EVOLUÇÃO DE ACERTOS','Evolução por assunto',viewEvolucao())}
+    ${historicalCard('COBERTURA DO BANCO','Questões respondidas por matéria',`
     <div class="tbl-wrap"><table><thead><tr><th>Matéria · assunto</th><th class="num">Respondidas</th><th class="num">% do banco</th><th class="num">Acertos</th><th class="num">% acerto</th></tr></thead><tbody>${qrRows}
       <tr class="qr-m"><td><b>Total</b></td>${cel(T)}</tr></tbody></table></div>
-    <p class="rule">Toque numa matéria para ver os assuntos. Cada questão conta uma vez. Questão que você já errou ou deixou em branco alguma vez fica contada como erro, mesmo que depois tenha acertado.</p>`;
-  return `<div class="wrap" style="gap:16px">
-    ${respondidas}
-    <h2 class="section-title">Agenda de revisões · próximos 14 dias</h2>
+    <p class="rule">Toque numa matéria para ver os assuntos. Cada questão conta uma vez. Questão que você já errou ou deixou em branco alguma vez fica contada como erro, mesmo que depois tenha acertado.</p>
+    `)}
+    ${historicalCard('REVISÃO ESPAÇADA','Agenda de revisões · próximos 14 dias',`
     <div class="agenda-wrap"><div class="agenda" role="img" aria-label="Itens a revisar por dia">${agenda}</div></div>
     <p class="rule">Intervalos: 1, 3, 7, 15 e 30 dias, nunca acima de 20% dos dias que faltam para a prova (hoje, ${teto(h)} ${teto(h)===1?'dia':'dias'}). Errou, volta para 1 dia. Acertou com certeza, no mínimo 7 dias; com dúvida, no mínimo 3. No máximo 40 revisões por dia, com os erros primeiro. A partir de 10/01/2027 as revisões ficam diárias até a prova.</p>
-
-    <h2 class="section-title">Direção dos erros</h2>
+    `)}
+    <div class="qb-analytics-columns qb-analytics-secondary">
+      ${historicalCard('PADRÕES DE LEITURA','Direção dos erros',`
     <div class="summary two">
       <div class="stat e"><span class="v">${st.eSendoC}</span><span class="k">marcou Errado num item Certo</span></div>
       <div class="stat e"><span class="v">${st.cSendoE}</span><span class="k">marcou Certo num item Errado</span></div>
     </div>
     <p class="insight">${leitura}</p>
-
-    <h2 class="section-title">Calibração e regra de decisão na prova</h2>
+      `)}
+      ${historicalCard('CADERNO DE ERROS','Origem dos erros',`
+    <div class="tbl-wrap"><table class="narrow"><thead><tr><th>Origem</th><th class="num">Itens</th></tr></thead><tbody>${oRows}</tbody></table></div>
+      `)}
+    </div>
+    ${historicalCard('ESTRATÉGIA DE PROVA','Calibração e regra de decisão na prova',`
     <p class="rule">No Cebraspe, certo vale +1, errado −1 e em branco 0. O ganho esperado de marcar um item é 2 × acerto − 1, então marcar só compensa quando o seu acerto naquele nível de confiança passa de 50%.</p>
     ${temConf?`<div class="tbl-wrap"><table><thead><tr><th>Confiança</th><th class="num">Respostas</th><th class="num">Acerto</th><th class="num">Ganho por item</th><th>Na prova</th></tr></thead><tbody>${confRows}</tbody></table></div>`
       :`<div class="notice">Ainda sem dados. Cada resposta pede a sua confiança antes do gabarito; com 10 respostas num nível, esta tabela diz se compensa marcar ou deixar em branco quando você se sente assim.</div>`}
-
-    <h2 class="section-title">Origem dos erros no caderno</h2>
-    <div class="tbl-wrap"><table class="narrow"><thead><tr><th>Origem</th><th class="num">Itens</th></tr></thead><tbody>${oRows}</tbody></table></div>
-
-    <h2 class="section-title">Evolução por assunto</h2>
-    ${viewEvolucao()}
-    <h2 class="section-title">Rodadas</h2>
+    `)}
+    ${historicalCard('SESSÕES DE TREINO','Rodadas',`
     ${rds.length?`<div class="tbl-wrap"><table><thead><tr><th>Quando</th><th>Capítulo</th><th>Modo</th><th class="num">C</th><th class="num">E</th><th class="num">B</th><th class="num">Líquida</th><th class="num">% acerto</th></tr></thead><tbody>${rdRows}</tbody></table></div><p class="rule">% acerto = certos ÷ itens respondidos na rodada, contando os em branco. A repescagem não entra.</p>`
       :`<div class="notice">Nenhuma rodada ainda. Elas aparecem aqui a partir da primeira resposta.</div>`}
+    `)}
   </div>`;
 }
 
