@@ -96,6 +96,8 @@
     },
   };
 
+  window.QBBridge = { ask };
+
   window.claude = {
     use: async feature => {
       if (feature === "db") return db;
