@@ -1,0 +1,245 @@
+[
+  {
+    "slug": "dns-dhcp",
+    "title": "Duelo: DNS × DHCP",
+    "concept": "TI-2:dns-dhcp",
+    "sourceItems": [
+      "ti2-40",
+      "ti2-41"
+    ],
+    "explanation": "DNS resolve nomes de domínio. DHCP atribui endereços IP e outros parâmetros de configuração. A diferença decisiva é resolver um nome versus configurar a conexão do dispositivo.",
+    "prompt": "Qual é a diferença decisiva entre resolver o nome de um site e atribuir automaticamente um endereço IP a um computador? Identifique o protocolo de cada função.",
+    "id": "pilot-dns-dhcp-duel",
+    "type": "duel",
+    "material": "fonte-ti-redes",
+    "reviewed": true,
+    "reviewedBy": "revisao-editorial-agente-sobre-banco-existente",
+    "reserved": false,
+    "active": true,
+    "version": "2026-11-08.1",
+    "reference": "Comentários dos itens ti2-40 e ti2-41 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais."
+  },
+  {
+    "slug": "dns-dhcp",
+    "title": "Evocação: DNS × DHCP",
+    "concept": "TI-2:dns-dhcp",
+    "sourceItems": [
+      "ti2-40",
+      "ti2-41"
+    ],
+    "explanation": "DNS resolve nomes de domínio. DHCP atribui endereços IP e outros parâmetros de configuração. A diferença decisiva é resolver um nome versus configurar a conexão do dispositivo.",
+    "prompt": "Qual é a diferença decisiva entre resolver o nome de um site e atribuir automaticamente um endereço IP a um computador? Identifique o protocolo de cada função.",
+    "id": "pilot-dns-dhcp-recall",
+    "type": "recall",
+    "material": "fonte-ti-redes",
+    "reviewed": true,
+    "reviewedBy": "revisao-editorial-agente-sobre-banco-existente",
+    "reserved": false,
+    "active": true,
+    "version": "2026-11-08.1",
+    "reference": "Comentários dos itens ti2-40 e ti2-41 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais."
+  },
+  {
+    "slug": "dns-dhcp",
+    "title": "Antes da explicação: DNS × DHCP",
+    "concept": "TI-2:dns-dhcp",
+    "sourceItems": [
+      "ti2-40",
+      "ti2-41"
+    ],
+    "explanation": "DNS resolve nomes de domínio. DHCP atribui endereços IP e outros parâmetros de configuração. A diferença decisiva é resolver um nome versus configurar a conexão do dispositivo.",
+    "prompt": "Qual é a diferença decisiva entre resolver o nome de um site e atribuir automaticamente um endereço IP a um computador? Identifique o protocolo de cada função.",
+    "id": "pilot-dns-dhcp-pretest",
+    "type": "pretest",
+    "material": "fonte-ti-redes",
+    "reviewed": true,
+    "reviewedBy": "revisao-editorial-agente-sobre-banco-existente",
+    "reserved": false,
+    "active": true,
+    "version": "2026-11-08.1",
+    "reference": "Comentários dos itens ti2-40 e ti2-41 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais."
+  },
+  {
+    "id": "pilot-dns-dhcp-variant",
+    "type": "variant",
+    "title": "Novo contexto: DNS × DHCP",
+    "concept": "TI-2:dns-dhcp",
+    "prompt": "Em uma rede, os computadores recebem configuração IP automaticamente, mas deixam de localizar um serviço pelo seu nome. A existência da configuração automática, por si só, comprova o funcionamento da resolução de nomes.",
+    "explanation": "DNS resolve nomes de domínio. DHCP atribui endereços IP e outros parâmetros de configuração. A diferença decisiva é resolver um nome versus configurar a conexão do dispositivo.",
+    "answer": "E",
+    "sourceItems": [
+      "ti2-40",
+      "ti2-41"
+    ],
+    "material": "fonte-ti-redes",
+    "reviewed": false,
+    "reviewStatus": "aguarda-revisao-humana",
+    "reserved": true,
+    "contextChanged": true,
+    "active": true,
+    "version": "2026-11-08.1",
+    "reference": "Derivada das regras dos itens ti2-40 e ti2-41. Revisão humana pendente."
+  },
+  {
+    "slug": "tcp-udp",
+    "title": "Duelo: TCP × UDP",
+    "concept": "TI-2:tcp-udp",
+    "sourceItems": [
+      "ti2-35",
+      "ti2-36"
+    ],
+    "explanation": "TCP fornece mecanismos de entrega ordenada, controle de fluxo e retransmissão. UDP não estabelece conexão nem oferece por si mesmo retransmissão dos datagramas perdidos. Uma aplicação pode implementar seus próprios mecanismos.",
+    "prompt": "Compare TCP e UDP: qual oferece mecanismos de entrega ordenada e qual não retransmite por si só um datagrama perdido?",
+    "id": "pilot-tcp-udp-duel",
+    "type": "duel",
+    "material": "fonte-ti-redes",
+    "reviewed": true,
+    "reviewedBy": "revisao-editorial-agente-sobre-banco-existente",
+    "reserved": false,
+    "active": true,
+    "version": "2026-11-08.1",
+    "reference": "Comentários dos itens ti2-35 e ti2-36 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais."
+  },
+  {
+    "slug": "tcp-udp",
+    "title": "Evocação: TCP × UDP",
+    "concept": "TI-2:tcp-udp",
+    "sourceItems": [
+      "ti2-35",
+      "ti2-36"
+    ],
+    "explanation": "TCP fornece mecanismos de entrega ordenada, controle de fluxo e retransmissão. UDP não estabelece conexão nem oferece por si mesmo retransmissão dos datagramas perdidos. Uma aplicação pode implementar seus próprios mecanismos.",
+    "prompt": "Compare TCP e UDP: qual oferece mecanismos de entrega ordenada e qual não retransmite por si só um datagrama perdido?",
+    "id": "pilot-tcp-udp-recall",
+    "type": "recall",
+    "material": "fonte-ti-redes",
+    "reviewed": true,
+    "reviewedBy": "revisao-editorial-agente-sobre-banco-existente",
+    "reserved": false,
+    "active": true,
+    "version": "2026-11-08.1",
+    "reference": "Comentários dos itens ti2-35 e ti2-36 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais."
+  },
+  {
+    "slug": "tcp-udp",
+    "title": "Antes da explicação: TCP × UDP",
+    "concept": "TI-2:tcp-udp",
+    "sourceItems": [
+      "ti2-35",
+      "ti2-36"
+    ],
+    "explanation": "TCP fornece mecanismos de entrega ordenada, controle de fluxo e retransmissão. UDP não estabelece conexão nem oferece por si mesmo retransmissão dos datagramas perdidos. Uma aplicação pode implementar seus próprios mecanismos.",
+    "prompt": "Compare TCP e UDP: qual oferece mecanismos de entrega ordenada e qual não retransmite por si só um datagrama perdido?",
+    "id": "pilot-tcp-udp-pretest",
+    "type": "pretest",
+    "material": "fonte-ti-redes",
+    "reviewed": true,
+    "reviewedBy": "revisao-editorial-agente-sobre-banco-existente",
+    "reserved": false,
+    "active": true,
+    "version": "2026-11-08.1",
+    "reference": "Comentários dos itens ti2-35 e ti2-36 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais."
+  },
+  {
+    "id": "pilot-tcp-udp-variant",
+    "type": "variant",
+    "title": "Novo contexto: TCP × UDP",
+    "concept": "TI-2:tcp-udp",
+    "prompt": "Uma aplicação que usa UDP detectou perda de mensagens e passou a reenviá-las por lógica própria. Essa implementação permite concluir que o UDP, como protocolo de transporte, passou a ser orientado à conexão.",
+    "explanation": "TCP fornece mecanismos de entrega ordenada, controle de fluxo e retransmissão. UDP não estabelece conexão nem oferece por si mesmo retransmissão dos datagramas perdidos. Uma aplicação pode implementar seus próprios mecanismos.",
+    "answer": "E",
+    "sourceItems": [
+      "ti2-35",
+      "ti2-36"
+    ],
+    "material": "fonte-ti-redes",
+    "reviewed": false,
+    "reviewStatus": "aguarda-revisao-humana",
+    "reserved": true,
+    "contextChanged": true,
+    "active": true,
+    "version": "2026-11-08.1",
+    "reference": "Derivada das regras dos itens ti2-35 e ti2-36. Revisão humana pendente."
+  },
+  {
+    "slug": "simplex-duplex",
+    "title": "Duelo: Simplex × half-duplex × full-duplex",
+    "concept": "TI-2:duplex",
+    "sourceItems": [
+      "ti2-17",
+      "ti2-18"
+    ],
+    "explanation": "Simplex permite comunicação em uma direção. Half-duplex permite as duas direções, alternadamente. Full-duplex permite transmissão e recepção simultâneas.",
+    "prompt": "Qual critério distingue simplex, half-duplex e full-duplex: direção, alternância ou simultaneidade? Explique cada caso.",
+    "id": "pilot-simplex-duplex-duel",
+    "type": "duel",
+    "material": "fonte-ti-redes",
+    "reviewed": true,
+    "reviewedBy": "revisao-editorial-agente-sobre-banco-existente",
+    "reserved": false,
+    "active": true,
+    "version": "2026-11-08.1",
+    "reference": "Comentários dos itens ti2-17 e ti2-18 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais."
+  },
+  {
+    "slug": "simplex-duplex",
+    "title": "Evocação: Simplex × half-duplex × full-duplex",
+    "concept": "TI-2:duplex",
+    "sourceItems": [
+      "ti2-17",
+      "ti2-18"
+    ],
+    "explanation": "Simplex permite comunicação em uma direção. Half-duplex permite as duas direções, alternadamente. Full-duplex permite transmissão e recepção simultâneas.",
+    "prompt": "Qual critério distingue simplex, half-duplex e full-duplex: direção, alternância ou simultaneidade? Explique cada caso.",
+    "id": "pilot-simplex-duplex-recall",
+    "type": "recall",
+    "material": "fonte-ti-redes",
+    "reviewed": true,
+    "reviewedBy": "revisao-editorial-agente-sobre-banco-existente",
+    "reserved": false,
+    "active": true,
+    "version": "2026-11-08.1",
+    "reference": "Comentários dos itens ti2-17 e ti2-18 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais."
+  },
+  {
+    "slug": "simplex-duplex",
+    "title": "Antes da explicação: Simplex × half-duplex × full-duplex",
+    "concept": "TI-2:duplex",
+    "sourceItems": [
+      "ti2-17",
+      "ti2-18"
+    ],
+    "explanation": "Simplex permite comunicação em uma direção. Half-duplex permite as duas direções, alternadamente. Full-duplex permite transmissão e recepção simultâneas.",
+    "prompt": "Qual critério distingue simplex, half-duplex e full-duplex: direção, alternância ou simultaneidade? Explique cada caso.",
+    "id": "pilot-simplex-duplex-pretest",
+    "type": "pretest",
+    "material": "fonte-ti-redes",
+    "reviewed": true,
+    "reviewedBy": "revisao-editorial-agente-sobre-banco-existente",
+    "reserved": false,
+    "active": true,
+    "version": "2026-11-08.1",
+    "reference": "Comentários dos itens ti2-17 e ti2-18 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais."
+  },
+  {
+    "id": "pilot-simplex-duplex-variant",
+    "type": "variant",
+    "title": "Novo contexto: Simplex × half-duplex × full-duplex",
+    "concept": "TI-2:duplex",
+    "prompt": "Um enlace permite que as duas pontas enviem dados, mas um mecanismo impede que transmitam ao mesmo tempo. Mesmo sendo bidirecional, esse enlace não opera em full-duplex.",
+    "explanation": "Simplex permite comunicação em uma direção. Half-duplex permite as duas direções, alternadamente. Full-duplex permite transmissão e recepção simultâneas.",
+    "answer": "C",
+    "sourceItems": [
+      "ti2-17",
+      "ti2-18"
+    ],
+    "material": "fonte-ti-redes",
+    "reviewed": false,
+    "reviewStatus": "aguarda-revisao-humana",
+    "reserved": true,
+    "contextChanged": true,
+    "active": true,
+    "version": "2026-11-08.1",
+    "reference": "Derivada das regras dos itens ti2-17 e ti2-18. Revisão humana pendente."
+  }
+]
