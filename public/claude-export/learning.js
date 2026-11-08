@@ -47,7 +47,7 @@
       concept:conceptOf(S,q),cap:q.cap,at,origin:'treino',exposure:ps.length?'seen':'unknown',
       reference:ref?.id||null,referenceAt:ref?.at||null,
       feedback:enabled(S,'p1')&&L===q.gabarito&&conf===2&&q.comentario?condition(q):'padrao',
-      confidence:[1,2,3].includes(conf)?conf:null,marked:L,ok:L===q.gabarito};
+      confidence:[1,2,3].includes(conf)?conf:null,marked:L,ok:L===q.gabarito,elapsedMs:rd.learningShown?.idx===rd.idx?Math.max(0,Date.now()-rd.learningShown.at):null};
   }
   function metrics(list,now=Date.now()) {
     const all=[...new Map(list.filter(e=>e&&e.id).map(e=>[e.id,e])).values()].sort((a,b)=>Date.parse(a.at)-Date.parse(b.at));
@@ -133,7 +133,7 @@
   function weeklyHTML(S,today) {
     if(!enabled(S,'p8'))return '';
     const w=weekly(S,today);
-    return panel('Diagnóstico dos últimos 7 dias', '<p>'+esc(w.start)+' a '+esc(today)+' · '+w.list.length+' tentativas de treino · '+w.list.filter(x=>x.ok).length+' acertos.</p><p>'+esc(w.suggestion)+'</p><label>Ação da próxima semana<textarea data-learn-draft="weekly" rows="2">'+esc(drafts.weekly??w.saved?.text??w.suggestion)+'</textarea></label>'+button('weekly','Salvar decisão do ciclo',today)+(w.saved?'<p class="rule">Decisão salva. As tarefas do calendário permanecem editáveis.</p>':'')+button('plan','Abrir planejamento'),false);
+    return panel('Diagnóstico dos últimos 7 dias', '<p>'+esc(w.start)+' a '+esc(today)+' · '+w.list.length+' tentativas de treino · '+w.list.filter(x=>x.ok).length+' acertos.</p><p>'+esc(w.suggestion)+'</p><label>Ação da próxima semana<textarea data-learn-draft="weekly" rows="2">'+esc(drafts.weekly??w.saved?.text??w.suggestion)+'</textarea></label>'+button('weekly','Salvar decisão do ciclo',today)+(w.saved?'<p class="rule">Decisão salva · '+(w.saved.completed?'concluída':'pendente')+'. As tarefas do calendário permanecem editáveis.</p>'+button('weekly-toggle',w.saved.completed?'Reabrir ação':'Marcar ação concluída',today):'')+button('plan','Abrir planejamento'),false);
   }
   function contentHTML(S,m) {
     const cards=catalog(S).filter(c=>c.material===m.id&&['recall','pretest'].includes(c.type));
@@ -146,7 +146,7 @@
     const response=answered?'<div class="learn-rule"><b>'+ (isCE?'Gabarito: '+esc(c.answer):'Compare sua resposta')+'</b><p>'+esc(c.explanation)+'</p><small>'+esc(c.reference)+'</small></div><p>'+esc(a.skipped?'Revelação sem tentativa registrada separadamente.':'Sua resposta: '+a.response)+'</p>':
       '<p class="statement">'+esc(c.prompt)+'</p>'+(isCE?'<fieldset><legend>Sua resposta</legend><label><input type="radio" name="learn-answer" value="C"> Certo</label><label><input type="radio" name="learn-answer" value="E"> Errado</label><label><input type="radio" name="learn-answer" value="B"> Em branco</label></fieldset><label>Confiança antes da correção<select id="learn-confidence"><option value="">Selecione</option><option value="1">Chute</option><option value="2">Dúvida</option><option value="3">Certeza</option></select></label>':'<label>Sua explicação<textarea data-learn-draft="response" rows="3" placeholder="Responda com suas palavras antes de conferir.">'+esc(drafts.response||'')+'</textarea></label>')+
       button('answer','Responder e conferir')+(!isCE?button('skip',c.type==='pretest'?'Pular e ver explicação':'Revelar sem tentar'):'');
-    return '<section class="learn-active" aria-live="polite"><h3>'+esc(c.title)+'</h3><p class="rule">'+({variant:'Aplicação em outro contexto',duel:'Duelo de conceitos',recall:'Evocação',pretest:a.known?'Sondagem antes da releitura · conteúdo já praticado':'Pré-teste · exposição anterior não confirmada'}[c.type]||'Prática')+'</p>'+response+(answered?button('close','Concluir')+((c.sourceItems||[]).length?button('source','Praticar itens relacionados'):''):'')+'</section>';
+    return '<section class="learn-active" aria-live="polite"><h3>'+esc(c.title)+'</h3><p class="rule">'+({variant:'Aplicação em outro contexto',duel:'Duelo de conceitos',recall:'Evocação',pretest:a.known?'Sondagem antes da releitura · conteúdo já praticado':'Pré-teste · exposição anterior não confirmada'}[c.type]||'Prática')+'</p>'+response+(!answered?button('abandon','Encerrar atividade sem responder'):'')+(answered?button('close','Concluir')+((c.sourceItems||[]).length?button('source','Praticar itens relacionados'):''):'')+'</section>';
   }
   function render(S,today) {
     const m=metrics([...attempts(S),...events(S).filter(e=>e.kind!=='attempt')]), tasks=catalog(S), vars=eligibleVariants(S);
@@ -165,6 +165,7 @@
       body=weeklyHTML(S,today)+panel('Revisão adaptativa · simulação', '<p>A agenda fixa continua valendo. A simulação shadow-v1 não grava nem altera vencimentos. Os primeiros 20 itens são apresentados para inspeção.</p><div class="tbl-wrap"><table><thead><tr><th>Item</th><th>Agenda atual</th><th>Sugestão</th><th>Motivo</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+button('simulation','Registrar esta simulação'));
     }
     if(selected==='editor')body=editorHTML(S);
+    if(selected==='indicadores'&&enabled(S,'p4')){const ps=events(S).filter(e=>e.kind==='practice');const starts=events(S).filter(e=>e.kind==='exposure'&&e.origin!=='editor');body+=panel('Participação nas atividades','<p>'+ps.filter(e=>!e.skipped).length+' tentativas de evocação/duelo/pré-teste · '+ps.filter(e=>e.skipped).length+' revelações sem tentativa · '+events(S).filter(e=>e.kind==='abandonment').length+' encerramentos sem resposta.</p><p>'+starts.length+' aberturas registradas. Tempo de resposta acumulado nas atividades: '+Math.round(ps.reduce((n,e)=>n+(e.elapsedMs||0),0)/60000)+' min. Não inclui a leitura posterior da correção.</p>');}
     const loading=(!S.learningLoaded||!S.learningContentLoaded)?'<p class="rule">Carregando registros pedagógicos…</p>':'';
     const warn=error?'<div class="notice" role="alert">'+esc(error)+(pending.size?button('retry','Tentar salvar novamente'):'')+'</div>':'';
     return '<div class="learn"><h2 class="section-title">Aprendizagem</h2>'+nav+loading+warn+(saving?'<p role="status">Salvando…</p>':'')+activityHTML()+body+'</div>';
@@ -218,6 +219,7 @@
     const S=ctx.S;
     if(name==='section'){selected=id;return}
     if(name==='plan'){ctx.setView('painel');return}
+    if(name==='abandon'){if(activity){activity.abandonment ||= {id:activity.id+'-abandon',kind:'abandonment',item:activity.card.id,at:new Date().toISOString(),origin:activity.card.type};await save(activity.abandonment);}activity=null;return}
     if(name==='close'){if(activity?.phase==='feedback'){activity.completion ||= {id:activity.id+'-complete',kind:'completion',item:activity.card.id,at:new Date().toISOString(),origin:activity.card.type};await save(activity.completion);}activity=null;return}
     if(name==='start'){await begin(id);return}
     if(name==='source'){const c=activity?.card;const ids=(c?.sourceItems||[]).filter(id=>S.q.has(id));if(!ids.length)throw new Error('Nenhum item vinculado disponível.');if(S.round&&!S.round.fim)throw new Error('Conclua sua rodada atual primeiro.');activity=null;ctx.startSource(ids,c.title);return}
@@ -226,8 +228,9 @@
     if(name==='weekly'){
       const w=weekly(S,id), text=String(drafts.weekly??w.saved?.text??w.suggestion).trim();
       if(!text)throw new Error('Escreva a ação do ciclo.');
-      await save({id:w.id,kind:'weekly',periodEnd:id,at:new Date().toISOString(),text,attempts:w.list.length,policy:POLICY});return;
+      await save({...w.saved,id:w.id,kind:'weekly',periodEnd:id,at:new Date().toISOString(),text,attempts:w.list.length,policy:POLICY});return;
     }
+    if(name==='weekly-toggle'){const w=weekly(S,id);if(w.saved)await save({...w.saved,completed:!w.saved.completed,at:new Date().toISOString()});return;}
     if(name==='simulation'){
       if(!enabled(S,'p6'))throw new Error('Simulação desativada.');
       const date=ctx.hoje(),id='simulation-'+date+'-'+uid();
