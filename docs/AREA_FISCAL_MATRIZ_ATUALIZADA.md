@@ -143,5 +143,5 @@ As fontes efetivamente lidas para estes seis tópicos foram **1. Análise de Inf
 - Foram preservados em cada tarefa os dois flashcards anteriores e a questão original. A revisão espaçada segue o motor existente; nenhum resultado do candidato foi alterado.
 - O banco compartilhado da T19 inclui 33 referências por ID a questões da T09 sem criar documentos duplicados. Esta bateria continua com seu próprio item original.
 - A T08 exige atenção especial à ressalva jurisprudencial sobre dação de bens móveis (ADI 1.917 e ADI 2.405) e ao caráter finalístico de certas espécies tributárias, tal como tratado nas páginas da apostila, sem extrapolações.
-- Foram verificados ao vivo no Base44: 273 IDs físicos distintos, nenhum item sem comentário/gabarito, 75 mapas, 532 nós no total (466 com ID), 364 cartões, 230 links explícitos válidos e referências de baterias sem ID faltante.
-- **Limitação:** as 75 tarefas ainda não foram todas aprofundadas. A T05, T11, T17 e demais aulas de TI continuam à espera de \`TI.zip\`.
+- **Registro histórico da etapa anterior à importação de TI:** havia 273 questões físicas, 532 nós, 364 cartões e 230 links explícitos. Os totais atuais estão no primeiro quadro deste documento: 396, 665, 487 e 365, respectivamente.
+- **Limitação atual:** ainda existem 61 tarefas sem cobertura estrutural ampliada (incluindo 3 orientações iniciais). A pendência documental de T05, T11 e T17 foi resolvida com as apostilas novas, mas os demais assuntos exigem leitura e elaboração editorial.
