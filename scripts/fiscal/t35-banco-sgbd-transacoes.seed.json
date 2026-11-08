@@ -1,0 +1,1435 @@
+{
+  "topic": "fiscal-t35",
+  "source": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+  "questions": [
+    {
+      "id": "fiscal-t35-ce02",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "Um banco de dados pode representar parte da realidade, denominada minimundo ou universo de discurso, cujas mudanças devem refletir-se nos dados armazenados.",
+      "gabarito": "C",
+      "comentario": "O conceito de minimundo vincula a coleção de dados a um domínio real específico e aos eventos que nele ocorrem.",
+      "ordem": 3502,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 3",
+      "tema": "Minimundo",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-minimundo",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 3,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce03",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "Uma coleção aleatória de valores sem qualquer significado ou relacionamento inerente atende plenamente à definição restrita de banco de dados.",
+      "gabarito": "E",
+      "comentario": "A abordagem da apostila exige coleção logicamente coerente e inter-relacionada, destinada a uma finalidade.",
+      "ordem": 3503,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 3",
+      "tema": "Coerência lógica",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-aleatorio",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 3,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce04",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "Na concepção apresentada, um banco de dados é projetado e povoado para um propósito e usuários definidos, e não para um conjunto inteiramente indeterminado de aplicações.",
+      "gabarito": "C",
+      "comentario": "Finalidade, usuários e aplicações integram as três propriedades implícitas do banco, além de minimundo e coerência.",
+      "ordem": 3504,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 3",
+      "tema": "Finalidade específica",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-finalidade",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 3,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce05",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "A existência de um banco de dados exige necessariamente software gerenciador, pois registros organizados em fichário de papel não constituem base de dados.",
+      "gabarito": "E",
+      "comentario": "O material admite bancos manuais, como fichários, e distingue base de armazenamento informatizado.",
+      "ordem": 3505,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 7",
+      "tema": "Banco não informatizado",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-manual",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 7,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce06",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "O número 82, sem identificação do que mede, pode ser dado; quando associado à idade de pessoa identificada, passa a compor informação contextualizada.",
+      "gabarito": "C",
+      "comentario": "O material distingue fato isolado de dado organizado em contexto interpretável.",
+      "ordem": 3506,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 6",
+      "tema": "Dado × informação",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-informacao",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 6,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce07",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "Banco de dados e SGBD são sinônimos técnicos, porque ambos designam exclusivamente o software que executa consultas SQL.",
+      "gabarito": "E",
+      "comentario": "Banco é coleção de dados; SGBD é sistema de programas para definir, construir, consultar, compartilhar e manter a base.",
+      "ordem": 3507,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+      "tema": "Banco × SGBD",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-sgbd-difer",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce08",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "O conjunto formado pela base de dados e pelo software gerenciador pode ser chamado de sistema de banco de dados.",
+      "gabarito": "C",
+      "comentario": "A apostila separa o SGBD, a base e o sistema formado por ambos.",
+      "ordem": 3508,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 9",
+      "tema": "Sistema de banco de dados",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-sistema",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 9,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce09",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "Definir um banco de dados envolve especificar tipos, estruturas e restrições, em vez de simplesmente gravar os primeiros registros.",
+      "gabarito": "C",
+      "comentario": "A tabela diferencia definição da construção física e manipulação de registros.",
+      "ordem": 3509,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+      "tema": "Definição de dados",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-definir",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce10",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "A atividade de construir uma base envolve armazenar os dados em meio controlado pelo SGBD, após definições estruturais adequadas.",
+      "gabarito": "C",
+      "comentario": "Construir refere-se ao armazenamento efetivo, diferentemente de definir esquema e manipular registros.",
+      "ordem": 3510,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+      "tema": "Construção da base",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-construir",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce11",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "Consulta, atualização e geração de relatórios são atividades de manipulação de banco de dados na classificação do capítulo.",
+      "gabarito": "C",
+      "comentario": "A classificação da apostila coloca essas operações sob a etapa de manipulação.",
+      "ordem": 3511,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+      "tema": "Manipulação de dados",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-manipular",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce12",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "Proteção contra falhas ou acesso não autorizado e manutenção para novos requisitos são atividades possíveis de gestão de banco.",
+      "gabarito": "C",
+      "comentario": "A tabela separa segurança/recovery de evolução contínua dos requisitos e estruturas.",
+      "ordem": 3512,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+      "tema": "Proteção e manutenção",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-proteger",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce13",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "Um protótipo de banco de dados permite validar requisitos e obter feedback antes de concluir toda a implementação.",
+      "gabarito": "C",
+      "comentario": "Prototipar pode incluir modelo simplificado, scripts de teste, consultas e interfaces iniciais.",
+      "ordem": 3513,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+      "tema": "Prototipação",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-prototipo",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce14",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "A duplicação não coordenada de endereços de alunos em arquivos isolados pode gerar inconsistência quando um setor atualiza o cadastro e outro não.",
+      "gabarito": "C",
+      "comentario": "O exemplo de departamentos de uma escola evidencia redundância e divergência de informações entre cópias.",
+      "ordem": 3514,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 17",
+      "tema": "Redundância e inconsistência",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-redundancia",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 17,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce15",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "A abordagem de banco de dados pode compartilhar registros entre aplicações e setores e reduzir duplicações que surgiriam em arquivos esparsos.",
+      "gabarito": "C",
+      "comentario": "A lista de benefícios de C. J. Date inclui compartilhamento, redução de redundância e inconsistência.",
+      "ordem": 3515,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 18",
+      "tema": "Dados compartilháveis",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-compartilha",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 18,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce16",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "Chaves e restrições de domínio auxiliam o SGBD a impedir armazenamento de valores incompatíveis com regras estruturais definidas.",
+      "gabarito": "C",
+      "comentario": "A integridade é sustentada por restrições explícitas aplicadas ao conjunto de dados.",
+      "ordem": 3516,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 18",
+      "tema": "Integridade",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-integridade",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 18,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce17",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "A natureza autodescritiva de uma base consiste em metadados acerca das estruturas, tipos e relações, além dos registros de negócio.",
+      "gabarito": "C",
+      "comentario": "O catálogo mantém informações sobre a própria base, como tabelas, campos e tipos.",
+      "ordem": 3517,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 20",
+      "tema": "Autodescrição",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-autodescr",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 20,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce18",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "A abstração oferecida pelo SGBD exige expor ao usuário final a localização física de cada registro e o índice utilizado em toda consulta.",
+      "gabarito": "E",
+      "comentario": "Apostila define abstração como ocultação de detalhes técnicos irrelevantes para o consumidor dos dados.",
+      "ordem": 3518,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 22",
+      "tema": "Abstração de dados",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-abstracao",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 22,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce19",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "É possível fornecer diferentes visões dos mesmos dados para áreas distintas, limitando acesso conforme a necessidade de trabalho.",
+      "gabarito": "C",
+      "comentario": "Views podem ocultar informações de um setor e apresentar apenas dados relevantes ao outro.",
+      "ordem": 3519,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 23",
+      "tema": "Múltiplas visões",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-multivisoes",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 23,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce20",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "O compartilhamento simultâneo dispensa mecanismos de concorrência porque transações paralelas nunca disputam o mesmo registro.",
+      "gabarito": "E",
+      "comentario": "O SGBD precisa coordenar operações simultâneas para evitar conflitos e estados incorretos.",
+      "ordem": 3520,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 23",
+      "tema": "Controle de concorrência",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-concorrencia",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 23,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce21",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "Deadlock pode ocorrer quando transações mantêm recursos e esperam indefinidamente por recursos retidos umas pelas outras.",
+      "gabarito": "C",
+      "comentario": "O capítulo descreve espera circular por recursos bloqueados, cuja resolução pode exigir encerrar ou desfazer transação.",
+      "ordem": 3521,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 23",
+      "tema": "Impasse ou deadlock",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-deadlock",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 23,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce22",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "ACID reúne atomicidade, consistência, isolamento e durabilidade, propriedades associadas à confiabilidade das transações.",
+      "gabarito": "C",
+      "comentario": "A apostila resume quatro princípios distintos, com subsistemas voltados ao controle de transações, integridade, concorrência e recuperação.",
+      "ordem": 3522,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 77",
+      "tema": "ACID",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-acid",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 77,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce23",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "A atomicidade obriga que toda transação seja concluída com sucesso, mesmo diante de falha elétrica durante sua execução.",
+      "gabarito": "E",
+      "comentario": "Atomicidade não obriga sucesso: se uma etapa falhar, a transação deve ser desfeita integralmente.",
+      "ordem": 3523,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 69",
+      "tema": "Atomicidade: tudo ou nada",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-atomicidade",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 69,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce24",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "Se o débito de uma transferência foi feito mas o crédito falhou, a atomicidade exige reverter o débito para evitar confirmação parcial.",
+      "gabarito": "C",
+      "comentario": "O exemplo da apostila apresenta débito e crédito como unidade indivisível: ambos confirmam ou ambos são revertidos.",
+      "ordem": 3524,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 78",
+      "tema": "Transferência e rollback",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-rollback",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 78,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce25",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "A consistência exige que a transação preserve restrições e regras de integridade, conduzindo a base de estado válido para estado válido.",
+      "gabarito": "C",
+      "comentario": "Chaves, domínios, gatilhos e regras de negócio definem o que constitui estado válido.",
+      "ordem": 3525,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 70",
+      "tema": "Consistência",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-consistencia",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 70,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce26",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "A consistência em ACID é apenas sinônimo de reduzir a duplicação de registros, sem relação com regras de integridade.",
+      "gabarito": "E",
+      "comentario": "A consistência de transações remete a estados válidos; minimizar redundâncias é outro benefício da abordagem de banco.",
+      "ordem": 3526,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 70",
+      "tema": "Consistência ≠ redundância",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-consist-nao-redund",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 70,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce27",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "O isolamento trata de transações concorrentes e visa evitar interferência indevida, aproximando os resultados de execução serial conforme o modelo estudado.",
+      "gabarito": "C",
+      "comentario": "A apostila usa equivalência à execução serial como referência para ausência de anomalias de concorrência.",
+      "ordem": 3527,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 74",
+      "tema": "Isolamento",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-isolamento",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 74,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce28",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "O isolamento exige que apenas uma transação exista no sistema por vez, proibindo qualquer processamento concorrente.",
+      "gabarito": "E",
+      "comentario": "Operações podem executar concorrentemente; controles devem evitar interferência, sem exigir processamento único.",
+      "ordem": 3528,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 74",
+      "tema": "Isolamento não é exclusividade temporal",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-isol-nao-sequencial",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 74,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce29",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "A durabilidade exige persistência dos efeitos de uma transação confirmada mesmo que haja falha posterior do sistema.",
+      "gabarito": "C",
+      "comentario": "Após commit, registros devem resistir a quedas e travamentos com apoio de mecanismos de recuperação.",
+      "ordem": 3529,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 75",
+      "tema": "Durabilidade e commit",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-durabilidade",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 75,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce30",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "Logs de transações, checkpoints e mecanismos de recuperação podem contribuir para manter efeitos confirmados após falhas.",
+      "gabarito": "C",
+      "comentario": "A apostila descreve mecanismos de persistência e recuperação como meios de garantir durabilidade.",
+      "ordem": 3530,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 75",
+      "tema": "Log e recuperação",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-log",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 75,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t35-ce31",
+      "cap": "FISCAL-TI-35",
+      "capNome": "Trilha 01 · Tarefa 35 · Banco de dados, SGBD e transações",
+      "enunciado": "Impedir que transações concorrentes produzam interferência e preservar alterações após commit são garantias da mesma propriedade ACID: isolamento.",
+      "gabarito": "E",
+      "comentario": "Não são a mesma: isolamento coordena concorrência; durabilidade preserva resultados confirmados.",
+      "ordem": 3531,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 77",
+      "tema": "Isolamento × durabilidade",
+      "topico": "fiscal-t35",
+      "assuntoId": "fiscal-ti-banco-sgbd-transacoes",
+      "mapaNoId": "db-isol-versus-dur",
+      "fonte": {
+        "documento": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf",
+        "pagina": 77,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Minimundo",
+      "q": "O que significa minimundo em banco de dados?",
+      "a": [
+        "O aspecto do mundo real modelado, cujas mudanças são refletidas na base."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 3",
+      "mapaNoId": "db-minimundo",
+      "questaoIds": [
+        "fiscal-t35-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Coerência lógica",
+      "q": "Qual atributo separa banco de dados de conjunto aleatório?",
+      "a": [
+        "Coerência lógica e significado dos dados no domínio modelado."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 3",
+      "mapaNoId": "db-aleatorio",
+      "questaoIds": [
+        "fiscal-t35-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Finalidade específica",
+      "q": "Quais três propriedades implícitas caracterizam a base?",
+      "a": [
+        "Representa minimundo; relaciona dados coerentemente; possui finalidade e usuários definidos."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 3",
+      "mapaNoId": "db-finalidade",
+      "questaoIds": [
+        "fiscal-t35-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Banco não informatizado",
+      "q": "Um fichário organizado pode ser banco de dados?",
+      "a": [
+        "Sim, desde que represente uma coleção coerente e organizada de dados."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 7",
+      "mapaNoId": "db-manual",
+      "questaoIds": [
+        "fiscal-t35-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dado × informação",
+      "q": "Quando o valor 82 deixa de ser dado isolado?",
+      "a": [
+        "Quando recebe contexto, por exemplo idade, sujeito e significado."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 6",
+      "mapaNoId": "db-informacao",
+      "questaoIds": [
+        "fiscal-t35-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Banco × SGBD",
+      "q": "Diferencie banco de dados de SGBD.",
+      "a": [
+        "Banco é o conjunto organizado de dados; SGBD é o software que o gerencia."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+      "mapaNoId": "db-sgbd-difer",
+      "questaoIds": [
+        "fiscal-t35-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Sistema de banco de dados",
+      "q": "O que compõe o sistema de banco de dados?",
+      "a": [
+        "O banco de dados mais o conjunto de programas que o gerencia."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 9",
+      "mapaNoId": "db-sistema",
+      "questaoIds": [
+        "fiscal-t35-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Definição de dados",
+      "q": "O que caracteriza a atividade de definir uma base?",
+      "a": [
+        "Determinar tipos de dados, estruturas e restrições."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+      "mapaNoId": "db-definir",
+      "questaoIds": [
+        "fiscal-t35-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Construção da base",
+      "q": "Definir e construir são a mesma etapa?",
+      "a": [
+        "Não: definir estabelece estruturas; construir materializa/armazenar os dados."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+      "mapaNoId": "db-construir",
+      "questaoIds": [
+        "fiscal-t35-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Manipulação de dados",
+      "q": "Quais operações ilustram a manipulação de dados?",
+      "a": [
+        "Consulta, atualização e geração de relatórios."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+      "mapaNoId": "db-manipular",
+      "questaoIds": [
+        "fiscal-t35-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Proteção e manutenção",
+      "q": "Como diferem proteção e manutenção da base?",
+      "a": [
+        "Proteção combate falhas/acesso indevido; manutenção adapta a base às mudanças."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+      "mapaNoId": "db-proteger",
+      "questaoIds": [
+        "fiscal-t35-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Prototipação",
+      "q": "Por que criar protótipo antes de concluir a base?",
+      "a": [
+        "Para testar ideias, validar requisitos e corrigir problemas cedo."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+      "mapaNoId": "db-prototipo",
+      "questaoIds": [
+        "fiscal-t35-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Redundância e inconsistência",
+      "q": "Qual relação existe entre redundância descontrolada e inconsistência?",
+      "a": [
+        "Cópias divergentes após atualizações parciais produzem dados incompatíveis."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 17",
+      "mapaNoId": "db-redundancia",
+      "questaoIds": [
+        "fiscal-t35-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dados compartilháveis",
+      "q": "Qual vantagem do compartilhamento centralizado?",
+      "a": [
+        "Permitir acesso coordenado a dados comuns com menos cópias."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 18",
+      "mapaNoId": "db-compartilha",
+      "questaoIds": [
+        "fiscal-t35-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Integridade",
+      "q": "Como o SGBD contribui para integridade?",
+      "a": [
+        "Aplicando chaves, domínios e restrições definidas no esquema."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 18",
+      "mapaNoId": "db-integridade",
+      "questaoIds": [
+        "fiscal-t35-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Autodescrição",
+      "q": "O que caracteriza uma base autodescritiva?",
+      "a": [
+        "Armazenar metadados de sua estrutura além dos dados propriamente ditos."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 20",
+      "mapaNoId": "db-autodescr",
+      "questaoIds": [
+        "fiscal-t35-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Abstração de dados",
+      "q": "Qual a utilidade da abstração para o usuário?",
+      "a": [
+        "Consultar dados sem precisar conhecer arquivos, páginas, índices e detalhes físicos."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 22",
+      "mapaNoId": "db-abstracao",
+      "questaoIds": [
+        "fiscal-t35-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Múltiplas visões",
+      "q": "O que são múltiplas visões em base compartilhada?",
+      "a": [
+        "Apresentações lógicas diferentes e controladas dos mesmos dados para perfis de usuário."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 23",
+      "mapaNoId": "db-multivisoes",
+      "questaoIds": [
+        "fiscal-t35-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Controle de concorrência",
+      "q": "Por que é necessário controle de concorrência?",
+      "a": [
+        "Para coordenar acessos e atualizações simultâneas potencialmente conflitantes."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 23",
+      "mapaNoId": "db-concorrencia",
+      "questaoIds": [
+        "fiscal-t35-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Impasse ou deadlock",
+      "q": "O que caracteriza deadlock entre transações?",
+      "a": [
+        "Espera circular/irresolúvel por recursos bloqueados por outras transações."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 23",
+      "mapaNoId": "db-deadlock",
+      "questaoIds": [
+        "fiscal-t35-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "ACID",
+      "q": "Expanda ACID.",
+      "a": [
+        "Atomicidade, Consistência, Isolamento e Durabilidade."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 77",
+      "mapaNoId": "db-acid",
+      "questaoIds": [
+        "fiscal-t35-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Atomicidade: tudo ou nada",
+      "q": "Uma falha pode impedir uma transação atômica de concluir?",
+      "a": [
+        "Sim. Nesse caso, suas operações não devem produzir resultado parcial confirmado."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 69",
+      "mapaNoId": "db-atomicidade",
+      "questaoIds": [
+        "fiscal-t35-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Transferência e rollback",
+      "q": "Qual propriedade impede débito sem crédito numa transferência?",
+      "a": [
+        "Atomicidade, com rollback da operação incompleta."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 78",
+      "mapaNoId": "db-rollback",
+      "questaoIds": [
+        "fiscal-t35-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Consistência",
+      "q": "Qual propriedade ACID controla validade antes/depois da transação?",
+      "a": [
+        "Consistência."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 70",
+      "mapaNoId": "db-consistencia",
+      "questaoIds": [
+        "fiscal-t35-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Consistência ≠ redundância",
+      "q": "Consistência ACID é o mesmo que ausência de duplicidade?",
+      "a": [
+        "Não. É preservação das restrições e regras do banco entre estados."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 70",
+      "mapaNoId": "db-consist-nao-redund",
+      "questaoIds": [
+        "fiscal-t35-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Isolamento",
+      "q": "Qual propriedade ACID coordena transações concorrentes?",
+      "a": [
+        "Isolamento."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 74",
+      "mapaNoId": "db-isolamento",
+      "questaoIds": [
+        "fiscal-t35-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Isolamento não é exclusividade temporal",
+      "q": "Isolamento proíbe transações simultâneas?",
+      "a": [
+        "Não. Permite concorrência controlada e evita interferência indevida."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 74",
+      "mapaNoId": "db-isol-nao-sequencial",
+      "questaoIds": [
+        "fiscal-t35-ce28"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Durabilidade e commit",
+      "q": "Qual é a diferença entre durabilidade e atomicidade?",
+      "a": [
+        "Durabilidade: persiste após commit; atomicidade: não confirma efeito parcial."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 75",
+      "mapaNoId": "db-durabilidade",
+      "questaoIds": [
+        "fiscal-t35-ce29"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Log e recuperação",
+      "q": "Qual papel do log na recuperação transacional?",
+      "a": [
+        "Registrar operações para permitir recuperar e refazer efeitos confirmados quando necessário."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 75",
+      "mapaNoId": "db-log",
+      "questaoIds": [
+        "fiscal-t35-ce30"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Isolamento × durabilidade",
+      "q": "Qual princípio rege concorrência e qual rege permanência?",
+      "a": [
+        "Isolamento rege concorrência; durabilidade rege persistência."
+      ],
+      "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 77",
+      "mapaNoId": "db-isol-versus-dur",
+      "questaoIds": [
+        "fiscal-t35-ce31"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Banco de dados, SGBD e transações · T35",
+    "versao": 2,
+    "fonte": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, pp. 3–24, 67–78",
+    "ramos": [
+      {
+        "id": "conceito-1",
+        "t": "Banco de dados e minimundo",
+        "n": "Coleção coerente, finalidade, domínio e distinção dado/informação.",
+        "cor": 1,
+        "x": {
+          "e": "Coleção coerente, finalidade, domínio e distinção dado/informação.",
+          "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf"
+        },
+        "f": [
+          {
+            "id": "db-minimundo",
+            "t": "Minimundo",
+            "n": "O aspecto do mundo real modelado, cujas mudanças são refletidas na base.",
+            "x": {
+              "e": "O conceito de minimundo vincula a coleção de dados a um domínio real específico e aos eventos que nele ocorrem.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-t35-ce02"
+              ]
+            }
+          },
+          {
+            "id": "db-aleatorio",
+            "t": "Coerência lógica",
+            "n": "Coerência lógica e significado dos dados no domínio modelado.",
+            "x": {
+              "e": "A abordagem da apostila exige coleção logicamente coerente e inter-relacionada, destinada a uma finalidade.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-t35-ce03"
+              ]
+            }
+          },
+          {
+            "id": "db-finalidade",
+            "t": "Finalidade específica",
+            "n": "Representa minimundo; relaciona dados coerentemente; possui finalidade e usuários definidos.",
+            "x": {
+              "e": "Finalidade, usuários e aplicações integram as três propriedades implícitas do banco, além de minimundo e coerência.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-t35-ce04"
+              ]
+            }
+          },
+          {
+            "id": "db-manual",
+            "t": "Banco não informatizado",
+            "n": "Sim, desde que represente uma coleção coerente e organizada de dados.",
+            "x": {
+              "e": "O material admite bancos manuais, como fichários, e distingue base de armazenamento informatizado.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 7",
+              "questaoIds": [
+                "fiscal-t35-ce05"
+              ]
+            }
+          },
+          {
+            "id": "db-informacao",
+            "t": "Dado × informação",
+            "n": "Quando recebe contexto, por exemplo idade, sujeito e significado.",
+            "x": {
+              "e": "O material distingue fato isolado de dado organizado em contexto interpretável.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 6",
+              "questaoIds": [
+                "fiscal-t35-ce06"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-sgbd",
+        "t": "Banco × SGBD × sistema",
+        "n": "Definir, construir, manipular, compartilhar, proteger e manter.",
+        "cor": 2,
+        "x": {
+          "e": "Definir, construir, manipular, compartilhar, proteger e manter.",
+          "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf"
+        },
+        "f": [
+          {
+            "id": "db-sgbd-difer",
+            "t": "Banco × SGBD",
+            "n": "Banco é o conjunto organizado de dados; SGBD é o software que o gerencia.",
+            "x": {
+              "e": "Banco é coleção de dados; SGBD é sistema de programas para definir, construir, consultar, compartilhar e manter a base.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-t35-ce07"
+              ]
+            }
+          },
+          {
+            "id": "db-sistema",
+            "t": "Sistema de banco de dados",
+            "n": "O banco de dados mais o conjunto de programas que o gerencia.",
+            "x": {
+              "e": "A apostila separa o SGBD, a base e o sistema formado por ambos.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 9",
+              "questaoIds": [
+                "fiscal-t35-ce08"
+              ]
+            }
+          },
+          {
+            "id": "db-definir",
+            "t": "Definição de dados",
+            "n": "Determinar tipos de dados, estruturas e restrições.",
+            "x": {
+              "e": "A tabela diferencia definição da construção física e manipulação de registros.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-t35-ce09"
+              ]
+            }
+          },
+          {
+            "id": "db-construir",
+            "t": "Construção da base",
+            "n": "Não: definir estabelece estruturas; construir materializa/armazenar os dados.",
+            "x": {
+              "e": "Construir refere-se ao armazenamento efetivo, diferentemente de definir esquema e manipular registros.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-t35-ce10"
+              ]
+            }
+          },
+          {
+            "id": "db-manipular",
+            "t": "Manipulação de dados",
+            "n": "Consulta, atualização e geração de relatórios.",
+            "x": {
+              "e": "A classificação da apostila coloca essas operações sob a etapa de manipulação.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-t35-ce11"
+              ]
+            }
+          },
+          {
+            "id": "db-proteger",
+            "t": "Proteção e manutenção",
+            "n": "Proteção combate falhas/acesso indevido; manutenção adapta a base às mudanças.",
+            "x": {
+              "e": "A tabela separa segurança/recovery de evolução contínua dos requisitos e estruturas.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-t35-ce12"
+              ]
+            }
+          },
+          {
+            "id": "db-prototipo",
+            "t": "Prototipação",
+            "n": "Para testar ideias, validar requisitos e corrigir problemas cedo.",
+            "x": {
+              "e": "Prototipar pode incluir modelo simplificado, scripts de teste, consultas e interfaces iniciais.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-t35-ce13"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-abordagem",
+        "t": "Arquivos esparsos × base integrada",
+        "n": "Redundância, inconsistência, autodescrição, abstração, visões e controle de concorrência.",
+        "cor": 3,
+        "x": {
+          "e": "Redundância, inconsistência, autodescrição, abstração, visões e controle de concorrência.",
+          "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf"
+        },
+        "f": [
+          {
+            "id": "db-redundancia",
+            "t": "Redundância e inconsistência",
+            "n": "Cópias divergentes após atualizações parciais produzem dados incompatíveis.",
+            "x": {
+              "e": "O exemplo de departamentos de uma escola evidencia redundância e divergência de informações entre cópias.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 17",
+              "questaoIds": [
+                "fiscal-t35-ce14"
+              ]
+            }
+          },
+          {
+            "id": "db-compartilha",
+            "t": "Dados compartilháveis",
+            "n": "Permitir acesso coordenado a dados comuns com menos cópias.",
+            "x": {
+              "e": "A lista de benefícios de C. J. Date inclui compartilhamento, redução de redundância e inconsistência.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 18",
+              "questaoIds": [
+                "fiscal-t35-ce15"
+              ]
+            }
+          },
+          {
+            "id": "db-integridade",
+            "t": "Integridade",
+            "n": "Aplicando chaves, domínios e restrições definidas no esquema.",
+            "x": {
+              "e": "A integridade é sustentada por restrições explícitas aplicadas ao conjunto de dados.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 18",
+              "questaoIds": [
+                "fiscal-t35-ce16"
+              ]
+            }
+          },
+          {
+            "id": "db-autodescr",
+            "t": "Autodescrição",
+            "n": "Armazenar metadados de sua estrutura além dos dados propriamente ditos.",
+            "x": {
+              "e": "O catálogo mantém informações sobre a própria base, como tabelas, campos e tipos.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 20",
+              "questaoIds": [
+                "fiscal-t35-ce17"
+              ]
+            }
+          },
+          {
+            "id": "db-abstracao",
+            "t": "Abstração de dados",
+            "n": "Consultar dados sem precisar conhecer arquivos, páginas, índices e detalhes físicos.",
+            "x": {
+              "e": "Apostila define abstração como ocultação de detalhes técnicos irrelevantes para o consumidor dos dados.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 22",
+              "questaoIds": [
+                "fiscal-t35-ce18"
+              ]
+            }
+          },
+          {
+            "id": "db-multivisoes",
+            "t": "Múltiplas visões",
+            "n": "Apresentações lógicas diferentes e controladas dos mesmos dados para perfis de usuário.",
+            "x": {
+              "e": "Views podem ocultar informações de um setor e apresentar apenas dados relevantes ao outro.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 23",
+              "questaoIds": [
+                "fiscal-t35-ce19"
+              ]
+            }
+          },
+          {
+            "id": "db-concorrencia",
+            "t": "Controle de concorrência",
+            "n": "Para coordenar acessos e atualizações simultâneas potencialmente conflitantes.",
+            "x": {
+              "e": "O SGBD precisa coordenar operações simultâneas para evitar conflitos e estados incorretos.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 23",
+              "questaoIds": [
+                "fiscal-t35-ce20"
+              ]
+            }
+          },
+          {
+            "id": "db-deadlock",
+            "t": "Impasse ou deadlock",
+            "n": "Espera circular/irresolúvel por recursos bloqueados por outras transações.",
+            "x": {
+              "e": "O capítulo descreve espera circular por recursos bloqueados, cuja resolução pode exigir encerrar ou desfazer transação.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 23",
+              "questaoIds": [
+                "fiscal-t35-ce21"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-2",
+        "t": "Transações e propriedades ACID",
+        "n": "Tudo-ou-nada, estados válidos, concorrência e persistência pós-commit.",
+        "cor": 4,
+        "x": {
+          "e": "Tudo-ou-nada, estados válidos, concorrência e persistência pós-commit.",
+          "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf"
+        },
+        "f": [
+          {
+            "id": "db-acid",
+            "t": "ACID",
+            "n": "Atomicidade, Consistência, Isolamento e Durabilidade.",
+            "x": {
+              "e": "A apostila resume quatro princípios distintos, com subsistemas voltados ao controle de transações, integridade, concorrência e recuperação.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 77",
+              "questaoIds": [
+                "fiscal-t35-ce22"
+              ]
+            }
+          },
+          {
+            "id": "db-atomicidade",
+            "t": "Atomicidade: tudo ou nada",
+            "n": "Sim. Nesse caso, suas operações não devem produzir resultado parcial confirmado.",
+            "x": {
+              "e": "Atomicidade não obriga sucesso: se uma etapa falhar, a transação deve ser desfeita integralmente.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 69",
+              "questaoIds": [
+                "fiscal-t35-ce23"
+              ]
+            }
+          },
+          {
+            "id": "db-rollback",
+            "t": "Transferência e rollback",
+            "n": "Atomicidade, com rollback da operação incompleta.",
+            "x": {
+              "e": "O exemplo da apostila apresenta débito e crédito como unidade indivisível: ambos confirmam ou ambos são revertidos.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 78",
+              "questaoIds": [
+                "fiscal-t35-ce24"
+              ]
+            }
+          },
+          {
+            "id": "db-consistencia",
+            "t": "Consistência",
+            "n": "Consistência.",
+            "x": {
+              "e": "Chaves, domínios, gatilhos e regras de negócio definem o que constitui estado válido.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 70",
+              "questaoIds": [
+                "fiscal-t35-ce25"
+              ]
+            }
+          },
+          {
+            "id": "db-consist-nao-redund",
+            "t": "Consistência ≠ redundância",
+            "n": "Não. É preservação das restrições e regras do banco entre estados.",
+            "x": {
+              "e": "A consistência de transações remete a estados válidos; minimizar redundâncias é outro benefício da abordagem de banco.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 70",
+              "questaoIds": [
+                "fiscal-t35-ce26"
+              ]
+            }
+          },
+          {
+            "id": "db-isolamento",
+            "t": "Isolamento",
+            "n": "Isolamento.",
+            "x": {
+              "e": "A apostila usa equivalência à execução serial como referência para ausência de anomalias de concorrência.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 74",
+              "questaoIds": [
+                "fiscal-t35-ce27"
+              ]
+            }
+          },
+          {
+            "id": "db-isol-nao-sequencial",
+            "t": "Isolamento não é exclusividade temporal",
+            "n": "Não. Permite concorrência controlada e evita interferência indevida.",
+            "x": {
+              "e": "Operações podem executar concorrentemente; controles devem evitar interferência, sem exigir processamento único.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 74",
+              "questaoIds": [
+                "fiscal-t35-ce28"
+              ]
+            }
+          },
+          {
+            "id": "db-durabilidade",
+            "t": "Durabilidade e commit",
+            "n": "Durabilidade: persiste após commit; atomicidade: não confirma efeito parcial.",
+            "x": {
+              "e": "Após commit, registros devem resistir a quedas e travamentos com apoio de mecanismos de recuperação.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 75",
+              "questaoIds": [
+                "fiscal-t35-ce29"
+              ]
+            }
+          },
+          {
+            "id": "db-log",
+            "t": "Log e recuperação",
+            "n": "Registrar operações para permitir recuperar e refazer efeitos confirmados quando necessário.",
+            "x": {
+              "e": "A apostila descreve mecanismos de persistência e recuperação como meios de garantir durabilidade.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 75",
+              "questaoIds": [
+                "fiscal-t35-ce30"
+              ]
+            }
+          },
+          {
+            "id": "db-isol-versus-dur",
+            "t": "Isolamento × durabilidade",
+            "n": "Isolamento rege concorrência; durabilidade rege persistência.",
+            "x": {
+              "e": "Não são a mesma: isolamento coordena concorrência; durabilidade preserva resultados confirmados.",
+              "src": "4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf, p. 77",
+              "questaoIds": [
+                "fiscal-t35-ce31"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": [
+      [
+        "conceito-1",
+        "g-sgbd",
+        "Dados organizados versus sistema gerenciador"
+      ],
+      [
+        "g-sgbd",
+        "g-abordagem",
+        "Abstração e integridade"
+      ],
+      [
+        "g-abordagem",
+        "conceito-2",
+        "Concorrência exige isolamento"
+      ],
+      [
+        "conceito-1",
+        "conceito-2",
+        "Regras definem consistência"
+      ]
+    ]
+  }
+}
