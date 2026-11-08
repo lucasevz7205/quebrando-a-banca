@@ -17,7 +17,7 @@ function harness(card) {
  vm.runInNewContext(source,env);const L=env.window.QBLearning;
  const api={render:()=>{},hoje:()=> '2026-11-08',setView:v=>{S.view=v},startSource:()=>{}};
  L.mount(S,api);
- return {S,L,saved,fail:()=>{failNext=true},html:()=>L.render(S,'2026-11-08'),
+ return {S,L,saved,fail:()=>{failNext=true},html:()=>L.activityHTML()+L.render(S,'2026-11-08'),
  async click(name,id=''){button.dataset={learn:name,id};L.wire(S,api);await callbacks.get('click')()},
  type(text){draft.value=text;L.wire(S,api);callbacks.get('input')()}};
 }
