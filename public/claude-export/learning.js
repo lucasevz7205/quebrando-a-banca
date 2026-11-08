@@ -59,9 +59,9 @@
       if(e.exposure==='seen') result.recognition.push(e);
       else if(e.exposure!=='new') result.unknown++;
       const key=e.item+'|'+e.version;
-      if(e.origin==='transferencia'&&e.exposure==='new'&&e.reviewed===true&&e.reference&&e.concept&&!transferSeen.has(key)) {result.transfer.push(e);transferSeen.add(key)}
       const ref=all.find(x=>x.id===e.reference&&!x.invalid&&validDate(x.at)&&(valid.includes(x)||x.kind==='practice'&&!x.skipped));
       const age=ref?(Date.parse(e.at)-Date.parse(ref.at))/DAY:NaN;
+      if(e.origin==='transferencia'&&e.exposure==='new'&&e.reviewed===true&&ref&&ref.item!==e.item&&ref.concept===e.concept&&age>=0&&!transferSeen.has(key)){result.transfer.push(e);transferSeen.add(key)}
       const compatible=ref&&(e.item===ref.item&&e.version===ref.version||result.transfer.includes(e)&&e.concept===ref.concept);
       if(compatible&&age>=7&&age<=10&&!used.has(ref.id)) {
         used.add(ref.id);
@@ -72,7 +72,7 @@
       }
     }
     for(const e of valid) if(e.ok&&e.confidence===2&&result.eligibleFeedback[e.feedback]&&now-Date.parse(e.at)>=10*DAY)result.eligibleFeedback[e.feedback].push(e);
-    result.excluded=all.length-valid.length;
+    result.excluded=all.filter(e=>e.kind==='attempt'||!e.kind).length-valid.length;
     return result;
   }
   function simulate(history,fixedDue,today,exam) {
@@ -143,16 +143,16 @@
     const response=answered?'<div class="learn-rule"><b>'+ (isCE?'Gabarito: '+esc(c.answer):'Compare sua resposta')+'</b><p>'+esc(c.explanation)+'</p><small>'+esc(c.reference)+'</small></div><p>'+esc(a.skipped?'Revelação sem tentativa registrada separadamente.':'Sua resposta: '+a.response)+'</p>':
       '<p class="statement">'+esc(c.prompt)+'</p>'+(isCE?'<fieldset><legend>Sua resposta</legend><label><input type="radio" name="learn-answer" value="C"> Certo</label><label><input type="radio" name="learn-answer" value="E"> Errado</label><label><input type="radio" name="learn-answer" value="B"> Em branco</label></fieldset><label>Confiança antes da correção<select id="learn-confidence"><option value="">Selecione</option><option value="1">Chute</option><option value="2">Dúvida</option><option value="3">Certeza</option></select></label>':'<label>Sua explicação<textarea data-learn-draft="response" rows="3" placeholder="Responda com suas palavras antes de conferir.">'+esc(drafts.response||'')+'</textarea></label>')+
       button('answer','Responder e conferir')+(!isCE?button('skip',c.type==='pretest'?'Pular e ver explicação':'Revelar sem tentar'):'');
-    return '<section class="learn-active" aria-live="polite"><h3>'+esc(c.title)+'</h3><p class="rule">'+({variant:'Aplicação em outro contexto',duel:'Duelo de conceitos',recall:'Evocação',pretest:'Pré-teste'}[c.type]||'Prática')+'</p>'+response+(answered?button('close','Concluir')+((c.sourceItems||[]).length?button('source','Praticar itens relacionados'):''):'')+'</section>';
+    return '<section class="learn-active" aria-live="polite"><h3>'+esc(c.title)+'</h3><p class="rule">'+({variant:'Aplicação em outro contexto',duel:'Duelo de conceitos',recall:'Evocação',pretest:a.known?'Sondagem antes da releitura · conteúdo já praticado':'Pré-teste · exposição anterior não confirmada'}[c.type]||'Prática')+'</p>'+response+(answered?button('close','Concluir')+((c.sourceItems||[]).length?button('source','Praticar itens relacionados'):''):'')+'</section>';
   }
   function render(S,today) {
-    const m=metrics(attempts(S)), tasks=catalog(S), vars=eligibleVariants(S);
+    const m=metrics([...attempts(S),...events(S).filter(e=>e.kind!=='attempt')]), tasks=catalog(S), vars=eligibleVariants(S);
     const nav='<div class="chips">'+[['indicadores','Indicadores'],['pratica','Prática ativa'],['agenda','Revisão e ciclo'],['editor','Preparar atividades']].map(([id,label])=>'<button class="chip" data-learn="section" data-id="'+id+'" aria-pressed="'+(selected===id)+'">'+label+'</button>').join('')+'</div>';
     let body='';
     if(selected==='indicadores')body=enabled(S,'p4')?'<p class="rule">Registros feitos após esta atualização. Os números antigos continuam no Desempenho. Retenção usa a primeira verificação entre 7 e 10 dias após a referência registrada.</p><div class="learn-grid">'+stat('Desempenho imediato',m.immediate)+stat('Reconhecimento · item visto',m.recognition)+stat('Transferência · primeira variante válida',m.transfer)+stat('Retenção · verificações tardias',m.retention)+'</div>'+panel('Como interpretar', '<p>As populações podem se sobrepor. Não some retenção e transferência. “Reconhecimento” é um indicador operacional de acertos em itens já vistos, não um diagnóstico de memória.</p><p>Retenção em vistos: '+rate(m.retentionSeen)+' (n='+m.retentionSeen.length+'). Em inéditos: '+rate(m.retentionNew)+' (n='+m.retentionNew.length+').</p><p>'+m.unknown+' tentativas com exposição anterior desconhecida. '+m.excluded+' registros fora das métricas. '+m.retention.filter(x=>x.reexposures).length+' verificações com reexposição intermediária registrada.</p>')+
       panel('Confiança e piloto do feedback', '<div class="learn-grid">'+[1,2,3,'unknown'].map(k=>stat(({1:'Chute',2:'Dúvida',3:'Certeza',unknown:'Confiança desconhecida'})[k],m.confidence[k])).join('')+'</div><p>Comparação exploratória por capítulo. Ambos os grupos recebem gabarito comentado.</p><div class="learn-grid">'+stat('Feedback padrão · retenção',m.feedback.padrao)+stat('Feedback específico · retenção',m.feedback.especifico)+'</div><p>Resultado inconclusivo enquanto não houver 30 verificações por condição, cinco pares comparáveis de conceitos e acompanhamento ≥70% em ambas. Esses mínimos são operacionais e não comprovam eficácia.</p>'):'<p>Indicadores desativados.</p>';
     if(selected==='pratica')body='<p class="rule">Atividades curtas, separadas da nota dos treinos. Um novo texto só mede transferência quando sua equivalência, revisão e exposição estiverem confirmadas.</p>'+
-      (enabled(S,'p2')?panel('Transferência para outro contexto · '+vars.length+' disponíveis',vars.length?vars.map(c=>'<p>'+esc(c.title)+' '+button('start','Responder variante reservada',c.id)+'</p>').join(''):'<p>Nenhuma variante elegível agora. É necessário conteúdo revisado, reservado e prática anterior do mesmo conceito. Itens do banco antigo não são presumidos inéditos.</p>',true):'')+
+      (enabled(S,'p2')?panel('Transferência para outro contexto · '+vars.length+' disponíveis',vars.length?vars.map(c=>'<p>'+esc(c.title)+' '+button('start','Responder variante reservada',c.id)+'</p>').join(''):'<p>Nenhuma variante elegível agora. É necessário conteúdo revisado, reservado e prática anterior do mesmo conceito. Itens do banco antigo não são presumidos inéditos. As variantes preparadas aguardam revisão humana independente, sem mostrar o gabarito ao estudante.</p>',true):'')+
       tasks.filter(c=>['duel','recall','pretest'].includes(c.type)&&enabled(S,{duel:'p3',recall:'p5',pretest:'p7'}[c.type])).map(c=>panel(c.title,'<p>'+esc(c.type==='duel'?'Explique a diferença decisiva antes de conferir.':'Tente recuperar a regra antes da explicação.')+'</p>'+button('start','Começar',c.id))).join('');
     if(selected==='agenda') {
       const rows=enabled(S,'p6')?values(S.r).filter(r=>r.proxRevisao).slice(0,20).map(r=>{
@@ -162,8 +162,9 @@
       body=weeklyHTML(S,today)+panel('Revisão adaptativa · simulação', '<p>A agenda fixa continua valendo. A simulação shadow-v1 não grava nem altera vencimentos. Os primeiros 20 itens são apresentados para inspeção.</p><div class="tbl-wrap"><table><thead><tr><th>Item</th><th>Agenda atual</th><th>Sugestão</th><th>Motivo</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+button('simulation','Registrar esta simulação'));
     }
     if(selected==='editor')body=editorHTML(S);
+    const loading=(!S.learningLoaded||!S.learningContentLoaded)?'<p class="rule">Carregando registros pedagógicos…</p>':'';
     const warn=error?'<div class="notice" role="alert">'+esc(error)+(pending.size?button('retry','Tentar salvar novamente'):'')+'</div>':'';
-    return '<div class="learn"><h2 class="section-title">Aprendizagem</h2>'+nav+warn+(saving?'<p role="status">Salvando…</p>':'')+activityHTML()+body+'</div>';
+    return '<div class="learn"><h2 class="section-title">Aprendizagem</h2>'+nav+loading+warn+(saving?'<p role="status">Salvando…</p>':'')+activityHTML()+body+'</div>';
   }
   function editorHTML(S) {
     return panel('Nova atividade pedagógica', '<p>As atividades ficam na sua conta. Gabaritos e questões existentes não são substituídos.</p><label>Tipo<select id="learn-type"><option value="recall">Evocação</option><option value="pretest">Pré-teste</option><option value="duel">Duelo</option><option value="variant">Variante reservada</option></select></label><label>Título<input id="learn-title" maxlength="160"></label><label>Conceito específico<input id="learn-concept" maxlength="100" placeholder="Ex.: DNS × DHCP"></label><label>Pergunta<textarea id="learn-prompt" rows="3"></textarea></label><label>Explicação / diferença decisiva<textarea id="learn-explanation" rows="3"></textarea></label><label>Fonte<input id="learn-reference"></label><label>Gabarito (variantes)<select id="learn-answer-key"><option value="C">Certo</option><option value="E">Errado</option></select></label><label>Material vinculado<select id="learn-material"><option value="">Sem vínculo</option>'+values(S.mat).map(m=>'<option value="'+esc(m.id)+'">'+esc(m.titulo||m.id)+'</option>').join('')+'</select></label><label><input type="checkbox" id="learn-reviewed"> Revisei o gabarito e a explicação.</label><label><input type="checkbox" id="learn-context"> A variante exige a mesma regra em outro contexto, sem mera troca de palavras.</label><p class="rule">Uma variante criada nesta tela já foi exposta a você e não entra como inédita na sua própria avaliação. Ela poderá servir como prática.</p>'+button('create','Salvar atividade'),true)+
@@ -179,6 +180,7 @@
   async function begin(id) {
     const S=ctx.S,c=catalog(S).find(x=>x.id===id);
     if(!c)throw new Error('Atividade indisponível.');
+    if(!S.learningLoaded||!S.learningContentLoaded)throw new Error('Aguarde o carregamento dos registros.');
     if(activity&&activity.phase!=='feedback')throw new Error('Conclua a atividade aberta antes de iniciar outra.');
     if(!enabled(S,{variant:'p2',duel:'p3',recall:'p5',pretest:'p7'}[c.type]))throw new Error('Processo desativado.');
     if(c.type==='variant'&&!eligibleVariants(S).some(x=>x.id===id))throw new Error('Variante sem elegibilidade confirmada.');
@@ -186,7 +188,7 @@
     const reference=[...attempts(S),...practices(S)].filter(e=>e.concept===c.concept&&!e.invalid&&(e.ok||e.kind==='practice')).sort((a,b)=>Date.parse(a.at)-Date.parse(b.at)).at(-1);
     const attemptId=uid(), at=new Date().toISOString();
     await save({id:attemptId+'-exposure',kind:'exposure',item:id,version:c.version||hash(c.prompt+c.answer+c.explanation),at,origin:c.type});
-    activity={id:attemptId,card:c,phase:'question',seen,reference,startedAt:at};drafts.response='';
+    activity={id:attemptId,card:c,phase:'question',seen,reference,startedAt:at,known:(c.sourceItems||[]).some(id=>S.r.get(id)?.tentativas>0)};drafts.response='';
     ctx.setView('aprendizagem');selected='pratica';
   }
   async function answer(skip) {
@@ -204,7 +206,7 @@
       reference:a.reference?.id||null,referenceAt:a.reference?.at||null,reviewed:c.reviewed===true,
       marked:c.type==='variant'?response:null,ok:c.type==='variant'?response===c.answer:null,confidence,
       response:skip?'':response,skipped:!!skip,elapsedMs:Date.now()-Date.parse(a.startedAt),policy:POLICY,
-      material:c.material||null,followUpAfter:new Date(Date.now()+7*DAY).toISOString()};
+      material:c.material||null,knownContent:!!a.known,followUpAfter:new Date(Date.now()+7*DAY).toISOString()};
     a.result=e;
     await save(e);
     a.phase='feedback';a.response=e.response||e.marked;a.skipped=e.skipped;
@@ -213,7 +215,7 @@
     const S=ctx.S;
     if(name==='section'){selected=id;return}
     if(name==='plan'){ctx.setView('painel');return}
-    if(name==='close'){activity=null;return}
+    if(name==='close'){if(activity?.phase==='feedback')await save({id:activity.id+'-complete',kind:'completion',item:activity.card.id,at:new Date().toISOString(),origin:activity.card.type});activity=null;return}
     if(name==='start'){await begin(id);return}
     if(name==='source'){const c=activity?.card;const ids=(c?.sourceItems||[]).filter(id=>S.q.has(id));if(!ids.length)throw new Error('Nenhum item vinculado disponível.');if(S.round&&!S.round.fim)throw new Error('Conclua sua rodada atual primeiro.');activity=null;ctx.startSource(ids,c.title);return}
     if(name==='answer'||name==='skip'){await answer(name==='skip');return}
