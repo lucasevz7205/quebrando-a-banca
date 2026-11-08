@@ -1814,7 +1814,7 @@ function viewMecanismos(){
   const confidenceErrors=itemsWithPractice.reduce((n,x)=>n+x.personal.confErros,0);
   const recurrent=itemsWithPractice.reduce((n,x)=>n+x.personal.reincidentes,0);
   const foco=S.mecFoco||'todos';
-  let chosen=all.filter(x=>foco==='erros'?x.personal.erros>0:foco==='praticar'?x.personal.respondidos<5&&x.ids.length>0:foco==='frequentes'?Number(x.raw?.n||0)>0:true);
+  let chosen=all.filter(x=>foco==='erros'?(x.personal.erros>0||x.personal.reincidentes>0):foco==='praticar'?x.personal.respondidos<5&&x.ids.length>0:foco==='frequentes'?Number(x.raw?.n||0)>0:true);
   if(foco==='frequentes')chosen.sort((a,b)=>Number(b.raw?.n||0)-Number(a.raw?.n||0));
   if(foco==='erros')chosen.sort((a,b)=>b.personal.erros-a.personal.erros||b.personal.confErros-a.personal.confErros);
   const focusOptions=[['todos','Todos os mecanismos'],['erros','Errei neles'],['praticar','Preciso praticar'],['frequentes','Frequentes na amostra']];
