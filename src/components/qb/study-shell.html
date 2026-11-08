@@ -1600,63 +1600,40 @@ function iaBox(k,resp){
     ${r.comentario?`<p>${esc(r.comentario)}</p>`:''}<span class="ps">A decisão é sua: marque abaixo. A IA não altera sua nota nem o agendamento. ${st.remaining??'?'} correções disponíveis hoje.</span></div>`;
 }
 async function corrigirIA(k){
-  const c=cartaoDe(k), resp=(S.cartResp.get(k)||'').trim(); if(!IA||!c||!resp) return;
-  const prompt=`Você corrige um cartão de revisão ativa de um candidato a concurso (Cebraspe, Câmara dos Deputados). Compare a resposta do candidato com a resposta esperada, item a item, aceitando sinônimos e paráfrases fiéis. Não acrescente conteúdo que não esteja na resposta esperada.
-PERGUNTA: ${c.q}
-RESPOSTA ESPERADA (itens): ${(c.a||[]).map((x,i)=>`(${i+1}) ${x}`).join(' ')}
-RESPOSTA DO CANDIDATO: ${resp}
-Devolva só JSON: {"veredito":"lembrei"|"parcial"|"nao","acertou":[itens esperados que ele trouxe],"faltou":[itens esperados ausentes],"errado":[afirmações dele que contradizem a resposta esperada],"comentario":"uma frase curta, em português, dizendo o ponto principal a fixar"}. "lembrei" só se todos os itens essenciais estiverem presentes e nada estiver errado; "nao" se quase nada bate.`;
-  for(let tent=1;tent<=2;tent++){
-    S.ia.set(k,{s:'run',tent}); render(true);
-    const ac=new AbortController(), to=setTimeout(()=>ac.abort(),40000);
-    try{
-      const r=await IA.json(prompt,{modelTier:tent===1?'default':'quick',signal:ac.signal});
-      clearTimeout(to);
-      if(!r||typeof r!=='object'||!r.veredito) throw {code:'formato'};
-      S.ia.set(k,{s:'ok',r}); render(true); return;
-    }catch(e){
-      clearTimeout(to);
-      const code=(e&&e.code)||(ac.signal.aborted?'tempo':'erro');
-      if(code==='not_granted'){IA=null;S.ia.delete(k);toast('Correção por IA desativada nesta visualização. A autoavaliação continua normal.');render(true);return;}
-      if(code==='rate_limited'){S.ia.set(k,{s:'err',msg:'Limite de uso da IA atingido agora. Compare você mesmo e tente a IA mais tarde.'});render(true);return;}
-      if(tent===2||code==='formato'&&tent===2){S.ia.set(k,{s:'err',msg:'A IA não respondeu a tempo. Compare você mesmo; a marcação funciona igual.'});render(true);return;}
-    }
+  const c=cartaoDe(k), resp=(S.cartResp.get(k)||'').trim();
+  if(!IA||!c||!resp||!S.cartAbertos.has(k)||S.ia.get(k)?.s==='run')return;
+  S.ia.set(k,{s:'run'});render(true);
+  try{
+    // O servidor recupera o cartão pela chave e pelo usuário logado; não confiamos
+    // em gabaritos nem prompts enviados pelo navegador.
+    const result=await window.QBBridge.ask('correctFlashcard',{key:k,response:resp});
+    if(!result?.result?.veredito)throw new Error('Correção indisponível. Use a comparação manual.');
+    S.ia.set(k,{s:'ok',r:result.result,remaining:result.remaining});
+  }catch(e){
+    S.ia.set(k,{s:'err',msg:e?.message||'Não foi possível corrigir com IA. A autocorreção continua funcionando.'});
   }
+  render(true);
 }
-/* explicação na revisão ativa (06/11/2026): 1) explicação gravada no cartão (campo "ex"); 2) nó mais parecido do mapa mental do tópico; 3) explicação gerada por IA */
-const _nrm=t=>String(t||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
-const _STOP=new Set('para pela pelo com sem que dos das nos nas uma uns umas por como mais sobre entre quando qual quais isso esse essa este esta ele ela seu sua nao sim art lei inciso'.split(' '));
-const _tok=t=>new Set(_nrm(t).split(/[^a-z0-9]+/).filter(w=>w.length>3&&!_STOP.has(w)));
-function noDoMapa(id,c){
-  const rv=S.rv.get(id), m=rv&&rv.mapa; if(!m) return null;
-  const alvo=_tok([c.tema,c.q,(c.a||[]).join(' ')].join(' ')); let best=null;
-  const walk=(n,path)=>{const txt=[n.t,n.n,n.x&&n.x.e,n.x&&n.x.ex,n.x&&n.x.trap].join(' ');const ws=_tok(txt);let sc=0;ws.forEach(w=>{if(alvo.has(w))sc++});if(n.x)sc+=0.5;if(sc>=2&&(!best||sc>best.sc))best={sc,path};(n.f||[]).forEach((f,i)=>walk(f,path+'.'+i))};
-  (m.ramos||[]).forEach((r,i)=>walk(r,String(i))); return best&&best.path;
+/* Cada cartão tem um mapa de origem verificável por identificador/caminho.
+ * Sem vínculo explícito, busca lexical é SUGESTÃO e o capítulo é o fallback. */
+function origemDoMapa(k,c){
+  const qid=window.QBQuestionLinks?.questionId(k);
+  const id=qid?(recursosQuestao(qid)?.matchedIds||[]).find(t=>!!S.rv.get(t)?.mapa):k.slice(0,k.lastIndexOf('@'));
+  const mapa=id?S.rv.get(id)?.mapa:null;
+  return {id,link:window.QBMapLinks.resolve(mapa,c)};
 }
 function irMapa(k){
-  const [id]=k.split('@'), c=cartaoDe(k), path=c&&noDoMapa(id,c); if(!path) return;
-  S.mapaId=id; S.mapaAb=new Set(['*']); S.mapaX=S.mapaX||new Set(); const xk='mx:'+id+':'+path; S.mapaX.add(xk);
-  setView('mapa'); setTimeout(()=>{const el=document.querySelector(`[data-mx="${CSS.escape(xk)}"]`);if(el){el.scrollIntoView({block:'center'});el.closest('li').classList.add('m-foco');setTimeout(()=>el.closest('li')&&el.closest('li').classList.remove('m-foco'),2500)}},40);
-}
-S.iaEx=new Map(); S.exAb=new Set();
-async function explicarIA(k){
-  const c=cartaoDe(k); if(!IA||!c) return;
-  const prompt=`Você é tutor de um candidato ao concurso de Analista Legislativo da Câmara dos Deputados (banca Cebraspe). Explique, em português e em no máximo 120 palavras, POR QUE a resposta abaixo é a correta. Baseie-se só na pergunta, na resposta e na fonte indicada; se algo depender de informação que não está aqui, diga que deve ser conferido na fonte, sem inventar números, artigos ou jurisprudência.
-PERGUNTA: ${c.q}
-RESPOSTA: ${(c.a||[]).join(' | ')}
-FONTE: ${c.src||'não informada'}
-Devolva só JSON: {"explicacao":"o raciocínio, em linguagem simples","exemplo":"um exemplo concreto curto ou vazio","pegadinha":"como o Cebraspe costuma distorcer isso, ou vazio","pergunta":"uma pergunta de recuperação curta sobre o ponto"}`;
-  for(let tent=1;tent<=2;tent++){
-    S.iaEx.set(k,{s:'run',tent}); render(true);
-    const ac=new AbortController(), to=setTimeout(()=>ac.abort(),40000);
-    try{ const r=await IA.json(prompt,{modelTier:tent===1?'default':'quick',signal:ac.signal}); clearTimeout(to);
-      if(!r||!r.explicacao) throw {code:'formato'}; S.iaEx.set(k,{s:'ok',r}); render(true); return;
-    }catch(e){ clearTimeout(to); const code=(e&&e.code)||(ac.signal.aborted?'tempo':'erro');
-      if(code==='not_granted'){IA=null;S.iaEx.delete(k);toast('IA indisponível nesta visualização.');render(true);return;}
-      if(code==='rate_limited'){S.iaEx.set(k,{s:'err',msg:'Limite de uso da IA atingido agora. Tente mais tarde.'});render(true);return;}
-      if(tent===2){S.iaEx.set(k,{s:'err',msg:'A IA não respondeu a tempo. Tente de novo.'});render(true);return;}
-    }
-  }
+  const origem=origemDoMapa(k,cartaoDe(k));
+  if(!origem.id||origem.link.status==='unavailable')return;
+  S.mapaBack={k,cartId:S.cartId};
+  S.mapaId=origem.id;S.mapaAb=new Set(['*']);S.mapaX=S.mapaX||new Set();
+  if(origem.link.path)S.mapaX.add('mx:'+origem.id+':'+origem.link.path);
+  setView('mapa');
+  if(origem.link.path)setTimeout(()=>{
+    const selector='[data-map-node="'+CSS.escape(origem.id+':'+origem.link.path)+'"]';
+    const node=document.querySelector(selector);
+    if(node){node.scrollIntoView({block:'center',behavior:'smooth'});node.classList.add('m-foco');setTimeout(()=>node.classList.remove('m-foco'),2500);}
+  },90);
 }
 function explicaBox(k){
   const [id]=k.split('@'), c=cartaoDe(k); if(!c) return '';
