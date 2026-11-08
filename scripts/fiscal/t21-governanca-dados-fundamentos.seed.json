@@ -1,0 +1,1448 @@
+{
+  "topic": "fiscal-t21",
+  "source": "2. Governança de dados.pdf",
+  "sourcePages": "5–29",
+  "questions": [
+    {
+      "id": "fiscal-t21-ce02",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "A governança de dados envolve o exercício de autoridade e controle sobre o gerenciamento de ativos de dados, inclusive definição de políticas e decisões.",
+      "gabarito": "C",
+      "comentario": "O DAMA-DMBOK define governança como planejamento, monitoramento e execução de autoridade e controle sobre ativos de dados.",
+      "ordem": 2102,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 7",
+      "tema": "Governança como autoridade",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-autoridade",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 7,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce03",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "Instalar um SGBD eficiente é condição suficiente para caracterizar programa completo de governança de dados.",
+      "gabarito": "E",
+      "comentario": "Governança abrange políticas, direitos decisórios, responsabilidades, padrões e supervisão; ferramentas, sozinhas, não bastam.",
+      "ordem": 2103,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 5",
+      "tema": "Governança não é ferramenta",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-nao-so-armazen",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 5,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce04",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "Governança corporativa orienta direção e controle da organização, enquanto governança de TI busca alinhamento tecnológico e geração de valor para a estratégia.",
+      "gabarito": "C",
+      "comentario": "O material diferencia governança corporativa, TI e dados como âmbitos relacionados porém específicos.",
+      "ordem": 2104,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 6",
+      "tema": "Governança corporativa × de TI",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-corporativo",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 6,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce05",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "Governança de dados trata primordialmente de investimentos em equipamentos de informática, ao passo que a de TI define direitos de decisão sobre ativos informacionais.",
+      "gabarito": "E",
+      "comentario": "O capítulo caracteriza governança de dados pela autoridade sobre dados, em contraste com o foco tecnológico da governança de TI.",
+      "ordem": 2105,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 22",
+      "tema": "Governança de dados × TI",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-dados-especifica",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 22,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce06",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "Toda organização que toma decisões sobre dados necessariamente possui programa formal e institucionalizado de governança.",
+      "gabarito": "E",
+      "comentario": "O DAMA-DMBOK observa que todas decidem sobre dados, mas nem todas possuem estrutura formal de governança.",
+      "ordem": 2106,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 7",
+      "tema": "Programa formal",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-dmbok-formal",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 7,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce07",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "Na cartilha federal mencionada, governança de dados integra estratégia, pessoas, processos, tecnologia e dados para apoiar políticas públicas e serviços ao cidadão.",
+      "gabarito": "C",
+      "comentario": "A apostila registra a orientação da Administração Pública ao uso efetivo dos dados na entrega de políticas e serviços.",
+      "ordem": 2107,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 7",
+      "tema": "Governança pública brasileira",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-cidadania",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 7,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce08",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "A governança define diretrizes e supervisiona, ao passo que a gestão de dados executa atividades conforme as políticas estabelecidas.",
+      "gabarito": "C",
+      "comentario": "O quadro da p. 8 separa direcionamento e monitoramento de execução operacional.",
+      "ordem": 2108,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 8",
+      "tema": "Governança × gestão",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-direcao-exec",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce09",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "A função da governança de dados consiste apenas em executar scripts e manipular tabelas, enquanto a gestão define sozinha as políticas institucionais.",
+      "gabarito": "E",
+      "comentario": "A frase inverte papéis: a governança define/monitora regras e a gestão executa mecanismos e atividades.",
+      "ordem": 2109,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 8",
+      "tema": "Inversão direção e execução",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-nao-confundir",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce10",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "A administração de dados pode atuar dentro da gestão para implementar práticas de definição, qualidade e acessibilidade ao longo do ciclo de vida.",
+      "gabarito": "C",
+      "comentario": "A apostila associa administração de dados à execução de mecanismos dentro da gestão de dados.",
+      "ordem": 2110,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 8",
+      "tema": "Administração de dados",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-adm-dados",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce11",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "Reduzir riscos regulatórios, apoiar privacidade e favorecer qualidade de dados são vantagens reconhecidas de programas de governança.",
+      "gabarito": "C",
+      "comentario": "O capítulo destaca compliance, proteção de ativos e melhor qualidade para uso na organização.",
+      "ordem": 2111,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 11",
+      "tema": "Conformidade e risco",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-conformidade",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 11,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce12",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "Um glossário corporativo pode reduzir ambiguidades sobre termos de dados e favorecer entendimento entre setores.",
+      "gabarito": "C",
+      "comentario": "Gestão de metadados e padronização terminológica aparecem como vantagens de governança.",
+      "ordem": 2112,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 11",
+      "tema": "Glossário de negócios",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-glossario",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 11,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce13",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "Definir padrões de qualidade, acesso, segurança e terminologia está fora do escopo típico de governança de dados.",
+      "gabarito": "E",
+      "comentario": "A tabela de escopo inclui estratégia, políticas, padrões, supervisão, compliance e resolução de problemas.",
+      "ordem": 2113,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 9",
+      "tema": "Padrões e qualidade",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-padroes",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 9,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce14",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "A governança de dados se esgota quando se conclui um único projeto temporário de implantação.",
+      "gabarito": "E",
+      "comentario": "O capítulo diferencia programa contínuo de projeto com prazo e resultado delimitados.",
+      "ordem": 2114,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 13",
+      "tema": "Programa contínuo",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-programa",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 13,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce15",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "O apoio da alta administração é relevante apenas na inauguração de um programa de governança, deixando de importar após sua implantação.",
+      "gabarito": "E",
+      "comentario": "O capítulo exige patrocínio constante para enfrentar resistência, orçamento e sustentação das iniciativas.",
+      "ordem": 2115,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 13",
+      "tema": "Patrocínio executivo",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-patrocinio",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 13,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce16",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "Pessoas, processos e tecnologia devem ser integrados ao programa de governança de dados, e não tratados como domínios isolados.",
+      "gabarito": "C",
+      "comentario": "A estrutura da p. 15 exemplifica alinhamento de profissionais, processos e ferramentas como SGBDs e metadados.",
+      "ordem": 2116,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 15",
+      "tema": "Tríade organizacional",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-pessoas-processos-ti",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 15,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce17",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "Governança de dados é responsabilidade exclusiva da equipe de TI, sendo desnecessária a participação de gestores e especialistas de negócio.",
+      "gabarito": "E",
+      "comentario": "O texto enfatiza colaboração das áreas de negócio com profissionais de tecnologia e responsabilidades distribuídas.",
+      "ordem": 2117,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 14",
+      "tema": "Responsabilidade compartilhada",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-negocio-ti",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 14,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce18",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "Treinamento de gestores e técnicos ajuda a implementar processos, ferramentas e objetivos do programa de governança.",
+      "gabarito": "C",
+      "comentario": "O capítulo aponta educação contínua como condição para adoção eficiente das práticas.",
+      "ordem": 2118,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 17",
+      "tema": "Capacitação contínua",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-capacitacao",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 17,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce19",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "No DAMA-DMBOK apresentado, o Data Steward atua na curadoria e administração de dados e pode ser chamado de mordomo de dados.",
+      "gabarito": "C",
+      "comentario": "O papel de steward está ligado à administração de ativos informacionais sob responsabilidade definida.",
+      "ordem": 2119,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 21",
+      "tema": "Data Steward ou curador",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-steward",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 21,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce20",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "O Data Owner e o Data Steward são papéis tratados no capítulo que podem participar da definição de responsabilidades sobre ativos de dados.",
+      "gabarito": "C",
+      "comentario": "A apostila enumera especializações de stewards e Data Owner entre papéis da governança.",
+      "ordem": 2120,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 21",
+      "tema": "Responsáveis e curadores",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-data-owner",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 21,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce21",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "O agente de governança de dados no âmbito federal citado na apostila é designado para funcionar como ponto focal e articulador de iniciativas.",
+      "gabarito": "C",
+      "comentario": "A cartilha define papel de coordenação, inventário e articulação entre negócios e TI.",
+      "ordem": 2121,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 7",
+      "tema": "Agente de governança federal",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-agente-publico",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 7,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce22",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "Na visão organizacional mostrada, CDO concentra direção e políticas de dados, ao passo que CIO participa da execução técnica e infraestrutura.",
+      "gabarito": "C",
+      "comentario": "O diagrama da p. 22–23 separa visão regulatória de governança e visão executiva de TI.",
+      "ordem": 2122,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 22",
+      "tema": "CDO × CIO",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-cdo-cio",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 22,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce23",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "O Comitê Diretor de Governança de Dados reúne executivos seniores e oferece apoio estratégico e financiamento ao programa.",
+      "gabarito": "C",
+      "comentario": "A apostila situa o steering committee como instância estratégica de alto nível.",
+      "ordem": 2123,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 23",
+      "tema": "Comitê diretor",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-comite",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 23,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce24",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "O Conselho de Governança atua em iniciativas e no escalonamento de conflitos que não foram resolvidos em níveis inferiores.",
+      "gabarito": "C",
+      "comentario": "O nível tático do DGC coordena políticas, métricas e solução/escalonamento de problemas.",
+      "ordem": 2124,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 23",
+      "tema": "Conselho de governança",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-conselho",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 23,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce25",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "O Escritório de Governança de Dados pode manter padrões e definições e coordenar Data Stewards.",
+      "gabarito": "C",
+      "comentario": "O DGO/EGD atua na manutenção contínua e coordenação operacional dos curadores.",
+      "ordem": 2125,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 23",
+      "tema": "Escritório de governança",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-dgo",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 23,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce26",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "Na governança centralizada, uma organização de governança supervisiona todas as áreas temáticas e unidades abrangidas.",
+      "gabarito": "C",
+      "comentario": "O modelo privilegia uniformidade e padronização, podendo reduzir autonomia local.",
+      "ordem": 2126,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 25",
+      "tema": "Modelo centralizado",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-centralizado",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 25,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce27",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "No modelo replicado, uma única autoridade central toma todas as decisões locais sem replicar estruturas nas unidades de negócio.",
+      "gabarito": "E",
+      "comentario": "Replicado significa adotar estruturas/modelos de governança em cada unidade, com autonomia operacional.",
+      "ordem": 2127,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 26",
+      "tema": "Modelo replicado",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-replicado",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 26,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce28",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "O modelo federado coordena padrões corporativos comuns com autonomia das unidades para aspectos locais.",
+      "gabarito": "C",
+      "comentario": "Há centro coordenador e unidades que aplicam/complementam regras, equilibrando padronização e flexibilidade.",
+      "ordem": 2128,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 26",
+      "tema": "Modelo federado",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-federado",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 26,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce29",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "O DAMA-DMBOK obriga organizações a adotarem exclusivamente o modelo centralizado, independentemente da cultura e estrutura empresarial.",
+      "gabarito": "E",
+      "comentario": "O material apresenta modelos centralizado, replicado e federado com escolha conforme contexto e cultura.",
+      "ordem": 2129,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 27",
+      "tema": "Modelo único obrigatório",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-nao-um",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 27,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce30",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "A DAMA Wheel apresenta a governança de dados como função central que orienta outras áreas do gerenciamento de dados.",
+      "gabarito": "C",
+      "comentario": "O esquema da p. 29 coloca governança no centro e demais domínios de gestão ao redor.",
+      "ordem": 2130,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 29",
+      "tema": "DAMA Wheel",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-roda",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 29,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t21-ce31",
+      "cap": "FISCAL-TI-21",
+      "capNome": "Trilha 01 · Tarefa 21 · Governança de dados: fundamentos, papéis e organização",
+      "enunciado": "O modelo federado se distingue do replicado porque preserva uma instância corporativa comum que coordena definições e padrões.",
+      "gabarito": "C",
+      "comentario": "O texto explicita que federado não é simplesmente descentralizado e depende do elo comum de governança.",
+      "ordem": 2131,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 27",
+      "tema": "Federado não é só descentralização",
+      "topico": "fiscal-t21",
+      "assuntoId": "fiscal-ti-governanca-fundamentos",
+      "mapaNoId": "gov-federado-vs-descentral",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 27,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Governança como autoridade",
+      "q": "Como o DAMA-DMBOK define governança de dados?",
+      "a": [
+        "Exercício de autoridade e controle sobre o gerenciamento de ativos de dados."
+      ],
+      "src": "2. Governança de dados.pdf, p. 7",
+      "mapaNoId": "gov-autoridade",
+      "questaoIds": [
+        "fiscal-t21-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Governança não é ferramenta",
+      "q": "Por que tecnologia de armazenamento não substitui governança?",
+      "a": [
+        "Porque governança exige políticas, decisões, processos e responsáveis pelos dados."
+      ],
+      "src": "2. Governança de dados.pdf, p. 5",
+      "mapaNoId": "gov-nao-so-armazen",
+      "questaoIds": [
+        "fiscal-t21-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Governança corporativa × de TI",
+      "q": "Diferencie a governança corporativa da de TI.",
+      "a": [
+        "Corporativa: direção e controle organizacional; TI: valor, riscos e alinhamento dos recursos tecnológicos."
+      ],
+      "src": "2. Governança de dados.pdf, p. 6",
+      "mapaNoId": "gov-corporativo",
+      "questaoIds": [
+        "fiscal-t21-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Governança de dados × TI",
+      "q": "Qual é o foco próprio da governança de dados?",
+      "a": [
+        "Ativos de dados: regras, responsabilidades, significado, qualidade e direitos de decisão."
+      ],
+      "src": "2. Governança de dados.pdf, p. 22",
+      "mapaNoId": "gov-dados-especifica",
+      "questaoIds": [
+        "fiscal-t21-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Programa formal",
+      "q": "Uma organização pode tomar decisões de dados sem programa formal?",
+      "a": [
+        "Sim. Formalizar torna o controle mais intencional e coordenado."
+      ],
+      "src": "2. Governança de dados.pdf, p. 7",
+      "mapaNoId": "gov-dmbok-formal",
+      "questaoIds": [
+        "fiscal-t21-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Governança pública brasileira",
+      "q": "Qual finalidade pública da governança de dados na cartilha federal?",
+      "a": [
+        "Alinhar estratégia, processos, pessoas e tecnologia para melhorar políticas e serviços."
+      ],
+      "src": "2. Governança de dados.pdf, p. 7",
+      "mapaNoId": "gov-cidadania",
+      "questaoIds": [
+        "fiscal-t21-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Governança × gestão",
+      "q": "Qual é a diferença entre governança e gestão de dados?",
+      "a": [
+        "Governança orienta e supervisiona; gestão planeja e executa as operações segundo as diretrizes."
+      ],
+      "src": "2. Governança de dados.pdf, p. 8",
+      "mapaNoId": "gov-direcao-exec",
+      "questaoIds": [
+        "fiscal-t21-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Inversão direção e execução",
+      "q": "Qual pegadinha clássica troca governança por gestão?",
+      "a": [
+        "Afirmar que governança executa tudo e gestão define a autoridade e as políticas."
+      ],
+      "src": "2. Governança de dados.pdf, p. 8",
+      "mapaNoId": "gov-nao-confundir",
+      "questaoIds": [
+        "fiscal-t21-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Administração de dados",
+      "q": "Qual papel da administração de dados na gestão?",
+      "a": [
+        "Aplicar técnicas para definição, qualidade e acessibilidade dos dados ao longo do ciclo."
+      ],
+      "src": "2. Governança de dados.pdf, p. 8",
+      "mapaNoId": "gov-adm-dados",
+      "questaoIds": [
+        "fiscal-t21-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Conformidade e risco",
+      "q": "Cite três benefícios da governança.",
+      "a": [
+        "Controle de risco, conformidade regulatória e qualidade/confiabilidade dos dados."
+      ],
+      "src": "2. Governança de dados.pdf, p. 11",
+      "mapaNoId": "gov-conformidade",
+      "questaoIds": [
+        "fiscal-t21-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Glossário de negócios",
+      "q": "Para que serve um glossário de negócios em governança?",
+      "a": [
+        "Padroniza a definição de termos e reduz discrepâncias entre áreas."
+      ],
+      "src": "2. Governança de dados.pdf, p. 11",
+      "mapaNoId": "gov-glossario",
+      "questaoIds": [
+        "fiscal-t21-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Padrões e qualidade",
+      "q": "Quais atividades estão no escopo de governança?",
+      "a": [
+        "Estratégia, políticas, padrões, qualidade, supervisão, conformidade e resolução de problemas."
+      ],
+      "src": "2. Governança de dados.pdf, p. 9",
+      "mapaNoId": "gov-padroes",
+      "questaoIds": [
+        "fiscal-t21-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Programa contínuo",
+      "q": "Governança é projeto pontual ou programa duradouro?",
+      "a": [
+        "Programa contínuo que pode conter diversos projetos."
+      ],
+      "src": "2. Governança de dados.pdf, p. 13",
+      "mapaNoId": "gov-programa",
+      "questaoIds": [
+        "fiscal-t21-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Patrocínio executivo",
+      "q": "Quando deve haver patrocínio executivo?",
+      "a": [
+        "Durante toda a vida do programa, não apenas no lançamento."
+      ],
+      "src": "2. Governança de dados.pdf, p. 13",
+      "mapaNoId": "gov-patrocinio",
+      "questaoIds": [
+        "fiscal-t21-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Tríade organizacional",
+      "q": "Quais três componentes organizacionais se articulam na governança?",
+      "a": [
+        "Pessoas, processos e tecnologia."
+      ],
+      "src": "2. Governança de dados.pdf, p. 15",
+      "mapaNoId": "gov-pessoas-processos-ti",
+      "questaoIds": [
+        "fiscal-t21-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Responsabilidade compartilhada",
+      "q": "Por que a governança não pode ser exclusivamente de TI?",
+      "a": [
+        "Porque definições, usos e qualidade dependem também das áreas de negócio."
+      ],
+      "src": "2. Governança de dados.pdf, p. 14",
+      "mapaNoId": "gov-negocio-ti",
+      "questaoIds": [
+        "fiscal-t21-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Capacitação contínua",
+      "q": "Por que a formação de pessoas é essencial à governança?",
+      "a": [
+        "Permite entendimento das regras, processos e ferramentas adotados."
+      ],
+      "src": "2. Governança de dados.pdf, p. 17",
+      "mapaNoId": "gov-capacitacao",
+      "questaoIds": [
+        "fiscal-t21-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Data Steward ou curador",
+      "q": "Qual o significado do papel de Data Steward?",
+      "a": [
+        "Curador/mordomo de dados que apoia definição, uso e gestão da qualidade sob diretrizes institucionais."
+      ],
+      "src": "2. Governança de dados.pdf, p. 21",
+      "mapaNoId": "gov-steward",
+      "questaoIds": [
+        "fiscal-t21-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Responsáveis e curadores",
+      "q": "Quem deve responder por direitos e responsabilidades sobre os dados?",
+      "a": [
+        "Papéis formalizados de responsáveis e curadores, como Data Owner e Data Steward, conforme estrutura organizacional."
+      ],
+      "src": "2. Governança de dados.pdf, p. 21",
+      "mapaNoId": "gov-data-owner",
+      "questaoIds": [
+        "fiscal-t21-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Agente de governança federal",
+      "q": "Qual a função do agente de governança citado para a esfera federal?",
+      "a": [
+        "Articular iniciativas e atuar como ponto focal, coordenando inventário e aplicação de diretrizes."
+      ],
+      "src": "2. Governança de dados.pdf, p. 7",
+      "mapaNoId": "gov-agente-publico",
+      "questaoIds": [
+        "fiscal-t21-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "CDO × CIO",
+      "q": "Diferencie CDO e CIO no modelo apresentado.",
+      "a": [
+        "CDO: políticas e diretrizes/decisões sobre dados; CIO: implementação técnica e suporte de TI."
+      ],
+      "src": "2. Governança de dados.pdf, p. 22",
+      "mapaNoId": "gov-cdo-cio",
+      "questaoIds": [
+        "fiscal-t21-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Comitê diretor",
+      "q": "Qual papel do Steering Committee?",
+      "a": [
+        "Patrocínio, supervisão estratégica e apoio ao financiamento da governança."
+      ],
+      "src": "2. Governança de dados.pdf, p. 23",
+      "mapaNoId": "gov-comite",
+      "questaoIds": [
+        "fiscal-t21-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Conselho de governança",
+      "q": "Quando um problema é escalonado ao Conselho de Governança?",
+      "a": [
+        "Quando precisa de decisão tática/superior não resolvida na instância local."
+      ],
+      "src": "2. Governança de dados.pdf, p. 23",
+      "mapaNoId": "gov-conselho",
+      "questaoIds": [
+        "fiscal-t21-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Escritório de governança",
+      "q": "Qual função típica do Data Governance Office?",
+      "a": [
+        "Manter padrões/definições e coordenar curadores e iniciativas do programa."
+      ],
+      "src": "2. Governança de dados.pdf, p. 23",
+      "mapaNoId": "gov-dgo",
+      "questaoIds": [
+        "fiscal-t21-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo centralizado",
+      "q": "O que distingue o modelo centralizado?",
+      "a": [
+        "Uma autoridade central de governança define padrões e supervisiona o conjunto."
+      ],
+      "src": "2. Governança de dados.pdf, p. 25",
+      "mapaNoId": "gov-centralizado",
+      "questaoIds": [
+        "fiscal-t21-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo replicado",
+      "q": "Como funciona governança replicada?",
+      "a": [
+        "Cada unidade de negócio utiliza modelo/padrões semelhantes em estrutura própria de governança."
+      ],
+      "src": "2. Governança de dados.pdf, p. 26",
+      "mapaNoId": "gov-replicado",
+      "questaoIds": [
+        "fiscal-t21-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo federado",
+      "q": "Qual contraste entre federado e replicado?",
+      "a": [
+        "Federado possui coordenação central mais autonomia local; replicado mantém estruturas similares por unidade sem a mesma coordenação central."
+      ],
+      "src": "2. Governança de dados.pdf, p. 26",
+      "mapaNoId": "gov-federado",
+      "questaoIds": [
+        "fiscal-t21-ce28"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo único obrigatório",
+      "q": "Há um modelo universal obrigatório de governança?",
+      "a": [
+        "Não. A estrutura deve ser adaptada ao contexto organizacional."
+      ],
+      "src": "2. Governança de dados.pdf, p. 27",
+      "mapaNoId": "gov-nao-um",
+      "questaoIds": [
+        "fiscal-t21-ce29"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "DAMA Wheel",
+      "q": "Onde fica governança na DAMA Wheel?",
+      "a": [
+        "No centro, integrando e orientando disciplinas como qualidade, arquitetura, segurança e metadados."
+      ],
+      "src": "2. Governança de dados.pdf, p. 29",
+      "mapaNoId": "gov-roda",
+      "questaoIds": [
+        "fiscal-t21-ce30"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Federado não é só descentralização",
+      "q": "Qual característica impede confundir federado e replicado?",
+      "a": [
+        "A instância corporativa coordenadora que define padrões gerais."
+      ],
+      "src": "2. Governança de dados.pdf, p. 27",
+      "mapaNoId": "gov-federado-vs-descentral",
+      "questaoIds": [
+        "fiscal-t21-ce31"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Governança de Dados: fundamentos, papéis e organização · Trilha 01 · T21",
+    "versao": 2,
+    "fonte": "2. Governança de dados.pdf, pp. 5–29",
+    "ramos": [
+      {
+        "id": "conceito-1",
+        "t": "Conceitos e finalidades",
+        "n": "Direção, autoridade e controle sobre ativos de dados no setor privado e público.",
+        "cor": 1,
+        "x": {
+          "e": "Direção, autoridade e controle sobre ativos de dados no setor privado e público.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "gov-autoridade",
+            "t": "Governança como autoridade",
+            "n": "Exercício de autoridade e controle sobre o gerenciamento de ativos de dados.",
+            "x": {
+              "e": "O DAMA-DMBOK define governança como planejamento, monitoramento e execução de autoridade e controle sobre ativos de dados.",
+              "src": "2. Governança de dados.pdf, p. 7",
+              "questaoIds": [
+                "fiscal-t21-ce02"
+              ]
+            }
+          },
+          {
+            "id": "gov-nao-so-armazen",
+            "t": "Governança não é ferramenta",
+            "n": "Porque governança exige políticas, decisões, processos e responsáveis pelos dados.",
+            "x": {
+              "e": "Governança abrange políticas, direitos decisórios, responsabilidades, padrões e supervisão; ferramentas, sozinhas, não bastam.",
+              "src": "2. Governança de dados.pdf, p. 5",
+              "questaoIds": [
+                "fiscal-t21-ce03"
+              ]
+            }
+          },
+          {
+            "id": "gov-corporativo",
+            "t": "Governança corporativa × de TI",
+            "n": "Corporativa: direção e controle organizacional; TI: valor, riscos e alinhamento dos recursos tecnológicos.",
+            "x": {
+              "e": "O material diferencia governança corporativa, TI e dados como âmbitos relacionados porém específicos.",
+              "src": "2. Governança de dados.pdf, p. 6",
+              "questaoIds": [
+                "fiscal-t21-ce04"
+              ]
+            }
+          },
+          {
+            "id": "gov-dados-especifica",
+            "t": "Governança de dados × TI",
+            "n": "Ativos de dados: regras, responsabilidades, significado, qualidade e direitos de decisão.",
+            "x": {
+              "e": "O capítulo caracteriza governança de dados pela autoridade sobre dados, em contraste com o foco tecnológico da governança de TI.",
+              "src": "2. Governança de dados.pdf, p. 22",
+              "questaoIds": [
+                "fiscal-t21-ce05"
+              ]
+            }
+          },
+          {
+            "id": "gov-dmbok-formal",
+            "t": "Programa formal",
+            "n": "Sim. Formalizar torna o controle mais intencional e coordenado.",
+            "x": {
+              "e": "O DAMA-DMBOK observa que todas decidem sobre dados, mas nem todas possuem estrutura formal de governança.",
+              "src": "2. Governança de dados.pdf, p. 7",
+              "questaoIds": [
+                "fiscal-t21-ce06"
+              ]
+            }
+          },
+          {
+            "id": "gov-cidadania",
+            "t": "Governança pública brasileira",
+            "n": "Alinhar estratégia, processos, pessoas e tecnologia para melhorar políticas e serviços.",
+            "x": {
+              "e": "A apostila registra a orientação da Administração Pública ao uso efetivo dos dados na entrega de políticas e serviços.",
+              "src": "2. Governança de dados.pdf, p. 7",
+              "questaoIds": [
+                "fiscal-t21-ce07"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-gestao",
+        "t": "Governança × gestão",
+        "n": "Orientação e supervisão, execução, regras, risco e continuidade do programa.",
+        "cor": 2,
+        "x": {
+          "e": "Orientação e supervisão, execução, regras, risco e continuidade do programa.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "gov-direcao-exec",
+            "t": "Governança × gestão",
+            "n": "Governança orienta e supervisiona; gestão planeja e executa as operações segundo as diretrizes.",
+            "x": {
+              "e": "O quadro da p. 8 separa direcionamento e monitoramento de execução operacional.",
+              "src": "2. Governança de dados.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-t21-ce08"
+              ]
+            }
+          },
+          {
+            "id": "gov-nao-confundir",
+            "t": "Inversão direção e execução",
+            "n": "Afirmar que governança executa tudo e gestão define a autoridade e as políticas.",
+            "x": {
+              "e": "A frase inverte papéis: a governança define/monitora regras e a gestão executa mecanismos e atividades.",
+              "src": "2. Governança de dados.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-t21-ce09"
+              ]
+            }
+          },
+          {
+            "id": "gov-adm-dados",
+            "t": "Administração de dados",
+            "n": "Aplicar técnicas para definição, qualidade e acessibilidade dos dados ao longo do ciclo.",
+            "x": {
+              "e": "A apostila associa administração de dados à execução de mecanismos dentro da gestão de dados.",
+              "src": "2. Governança de dados.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-t21-ce10"
+              ]
+            }
+          },
+          {
+            "id": "gov-conformidade",
+            "t": "Conformidade e risco",
+            "n": "Controle de risco, conformidade regulatória e qualidade/confiabilidade dos dados.",
+            "x": {
+              "e": "O capítulo destaca compliance, proteção de ativos e melhor qualidade para uso na organização.",
+              "src": "2. Governança de dados.pdf, p. 11",
+              "questaoIds": [
+                "fiscal-t21-ce11"
+              ]
+            }
+          },
+          {
+            "id": "gov-glossario",
+            "t": "Glossário de negócios",
+            "n": "Padroniza a definição de termos e reduz discrepâncias entre áreas.",
+            "x": {
+              "e": "Gestão de metadados e padronização terminológica aparecem como vantagens de governança.",
+              "src": "2. Governança de dados.pdf, p. 11",
+              "questaoIds": [
+                "fiscal-t21-ce12"
+              ]
+            }
+          },
+          {
+            "id": "gov-padroes",
+            "t": "Padrões e qualidade",
+            "n": "Estratégia, políticas, padrões, qualidade, supervisão, conformidade e resolução de problemas.",
+            "x": {
+              "e": "A tabela de escopo inclui estratégia, políticas, padrões, supervisão, compliance e resolução de problemas.",
+              "src": "2. Governança de dados.pdf, p. 9",
+              "questaoIds": [
+                "fiscal-t21-ce13"
+              ]
+            }
+          },
+          {
+            "id": "gov-programa",
+            "t": "Programa contínuo",
+            "n": "Programa contínuo que pode conter diversos projetos.",
+            "x": {
+              "e": "O capítulo diferencia programa contínuo de projeto com prazo e resultado delimitados.",
+              "src": "2. Governança de dados.pdf, p. 13",
+              "questaoIds": [
+                "fiscal-t21-ce14"
+              ]
+            }
+          },
+          {
+            "id": "gov-patrocinio",
+            "t": "Patrocínio executivo",
+            "n": "Durante toda a vida do programa, não apenas no lançamento.",
+            "x": {
+              "e": "O capítulo exige patrocínio constante para enfrentar resistência, orçamento e sustentação das iniciativas.",
+              "src": "2. Governança de dados.pdf, p. 13",
+              "questaoIds": [
+                "fiscal-t21-ce15"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-2",
+        "t": "Pessoas, papéis e responsabilidade",
+        "n": "Negócios/TI, Data Steward, Data Owner, agente federal, CDO e CIO.",
+        "cor": 3,
+        "x": {
+          "e": "Negócios/TI, Data Steward, Data Owner, agente federal, CDO e CIO.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "gov-pessoas-processos-ti",
+            "t": "Tríade organizacional",
+            "n": "Pessoas, processos e tecnologia.",
+            "x": {
+              "e": "A estrutura da p. 15 exemplifica alinhamento de profissionais, processos e ferramentas como SGBDs e metadados.",
+              "src": "2. Governança de dados.pdf, p. 15",
+              "questaoIds": [
+                "fiscal-t21-ce16"
+              ]
+            }
+          },
+          {
+            "id": "gov-negocio-ti",
+            "t": "Responsabilidade compartilhada",
+            "n": "Porque definições, usos e qualidade dependem também das áreas de negócio.",
+            "x": {
+              "e": "O texto enfatiza colaboração das áreas de negócio com profissionais de tecnologia e responsabilidades distribuídas.",
+              "src": "2. Governança de dados.pdf, p. 14",
+              "questaoIds": [
+                "fiscal-t21-ce17"
+              ]
+            }
+          },
+          {
+            "id": "gov-capacitacao",
+            "t": "Capacitação contínua",
+            "n": "Permite entendimento das regras, processos e ferramentas adotados.",
+            "x": {
+              "e": "O capítulo aponta educação contínua como condição para adoção eficiente das práticas.",
+              "src": "2. Governança de dados.pdf, p. 17",
+              "questaoIds": [
+                "fiscal-t21-ce18"
+              ]
+            }
+          },
+          {
+            "id": "gov-steward",
+            "t": "Data Steward ou curador",
+            "n": "Curador/mordomo de dados que apoia definição, uso e gestão da qualidade sob diretrizes institucionais.",
+            "x": {
+              "e": "O papel de steward está ligado à administração de ativos informacionais sob responsabilidade definida.",
+              "src": "2. Governança de dados.pdf, p. 21",
+              "questaoIds": [
+                "fiscal-t21-ce19"
+              ]
+            }
+          },
+          {
+            "id": "gov-data-owner",
+            "t": "Responsáveis e curadores",
+            "n": "Papéis formalizados de responsáveis e curadores, como Data Owner e Data Steward, conforme estrutura organizacional.",
+            "x": {
+              "e": "A apostila enumera especializações de stewards e Data Owner entre papéis da governança.",
+              "src": "2. Governança de dados.pdf, p. 21",
+              "questaoIds": [
+                "fiscal-t21-ce20"
+              ]
+            }
+          },
+          {
+            "id": "gov-agente-publico",
+            "t": "Agente de governança federal",
+            "n": "Articular iniciativas e atuar como ponto focal, coordenando inventário e aplicação de diretrizes.",
+            "x": {
+              "e": "A cartilha define papel de coordenação, inventário e articulação entre negócios e TI.",
+              "src": "2. Governança de dados.pdf, p. 7",
+              "questaoIds": [
+                "fiscal-t21-ce21"
+              ]
+            }
+          },
+          {
+            "id": "gov-cdo-cio",
+            "t": "CDO × CIO",
+            "n": "CDO: políticas e diretrizes/decisões sobre dados; CIO: implementação técnica e suporte de TI.",
+            "x": {
+              "e": "O diagrama da p. 22–23 separa visão regulatória de governança e visão executiva de TI.",
+              "src": "2. Governança de dados.pdf, p. 22",
+              "questaoIds": [
+                "fiscal-t21-ce22"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-estrutura",
+        "t": "Estrutura de decisão",
+        "n": "Comitê, Conselho e Escritório de Governança de Dados.",
+        "cor": 4,
+        "x": {
+          "e": "Comitê, Conselho e Escritório de Governança de Dados.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "gov-comite",
+            "t": "Comitê diretor",
+            "n": "Patrocínio, supervisão estratégica e apoio ao financiamento da governança.",
+            "x": {
+              "e": "A apostila situa o steering committee como instância estratégica de alto nível.",
+              "src": "2. Governança de dados.pdf, p. 23",
+              "questaoIds": [
+                "fiscal-t21-ce23"
+              ]
+            }
+          },
+          {
+            "id": "gov-conselho",
+            "t": "Conselho de governança",
+            "n": "Quando precisa de decisão tática/superior não resolvida na instância local.",
+            "x": {
+              "e": "O nível tático do DGC coordena políticas, métricas e solução/escalonamento de problemas.",
+              "src": "2. Governança de dados.pdf, p. 23",
+              "questaoIds": [
+                "fiscal-t21-ce24"
+              ]
+            }
+          },
+          {
+            "id": "gov-dgo",
+            "t": "Escritório de governança",
+            "n": "Manter padrões/definições e coordenar curadores e iniciativas do programa.",
+            "x": {
+              "e": "O DGO/EGD atua na manutenção contínua e coordenação operacional dos curadores.",
+              "src": "2. Governança de dados.pdf, p. 23",
+              "questaoIds": [
+                "fiscal-t21-ce25"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-modelos",
+        "t": "Modelos organizacionais e DAMA Wheel",
+        "n": "Centralizado, replicado e federado, com trade-offs e governança central na DAMA Wheel.",
+        "cor": 5,
+        "x": {
+          "e": "Centralizado, replicado e federado, com trade-offs e governança central na DAMA Wheel.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "gov-centralizado",
+            "t": "Modelo centralizado",
+            "n": "Uma autoridade central de governança define padrões e supervisiona o conjunto.",
+            "x": {
+              "e": "O modelo privilegia uniformidade e padronização, podendo reduzir autonomia local.",
+              "src": "2. Governança de dados.pdf, p. 25",
+              "questaoIds": [
+                "fiscal-t21-ce26"
+              ]
+            }
+          },
+          {
+            "id": "gov-replicado",
+            "t": "Modelo replicado",
+            "n": "Cada unidade de negócio utiliza modelo/padrões semelhantes em estrutura própria de governança.",
+            "x": {
+              "e": "Replicado significa adotar estruturas/modelos de governança em cada unidade, com autonomia operacional.",
+              "src": "2. Governança de dados.pdf, p. 26",
+              "questaoIds": [
+                "fiscal-t21-ce27"
+              ]
+            }
+          },
+          {
+            "id": "gov-federado",
+            "t": "Modelo federado",
+            "n": "Federado possui coordenação central mais autonomia local; replicado mantém estruturas similares por unidade sem a mesma coordenação central.",
+            "x": {
+              "e": "Há centro coordenador e unidades que aplicam/complementam regras, equilibrando padronização e flexibilidade.",
+              "src": "2. Governança de dados.pdf, p. 26",
+              "questaoIds": [
+                "fiscal-t21-ce28"
+              ]
+            }
+          },
+          {
+            "id": "gov-nao-um",
+            "t": "Modelo único obrigatório",
+            "n": "Não. A estrutura deve ser adaptada ao contexto organizacional.",
+            "x": {
+              "e": "O material apresenta modelos centralizado, replicado e federado com escolha conforme contexto e cultura.",
+              "src": "2. Governança de dados.pdf, p. 27",
+              "questaoIds": [
+                "fiscal-t21-ce29"
+              ]
+            }
+          },
+          {
+            "id": "gov-roda",
+            "t": "DAMA Wheel",
+            "n": "No centro, integrando e orientando disciplinas como qualidade, arquitetura, segurança e metadados.",
+            "x": {
+              "e": "O esquema da p. 29 coloca governança no centro e demais domínios de gestão ao redor.",
+              "src": "2. Governança de dados.pdf, p. 29",
+              "questaoIds": [
+                "fiscal-t21-ce30"
+              ]
+            }
+          },
+          {
+            "id": "gov-federado-vs-descentral",
+            "t": "Federado não é só descentralização",
+            "n": "A instância corporativa coordenadora que define padrões gerais.",
+            "x": {
+              "e": "O texto explicita que federado não é simplesmente descentralizado e depende do elo comum de governança.",
+              "src": "2. Governança de dados.pdf, p. 27",
+              "questaoIds": [
+                "fiscal-t21-ce31"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": [
+      [
+        "conceito-1",
+        "g-gestao",
+        "Governa e supervisiona versus executa"
+      ],
+      [
+        "g-gestao",
+        "conceito-2",
+        "Responsabilidades e direitos decisórios"
+      ],
+      [
+        "conceito-2",
+        "g-estrutura",
+        "Papéis e instâncias de decisão"
+      ],
+      [
+        "g-estrutura",
+        "g-modelos",
+        "Arranjos centralizado, replicado e federado"
+      ]
+    ]
+  }
+}
