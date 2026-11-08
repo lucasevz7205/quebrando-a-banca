@@ -18,7 +18,7 @@ test("A bateria reutiliza os IDs originais sem duplicar a contagem global",()=>{
  assert.equal(idx.byQuestion.size,3);
  assert.equal(idx.byTopic.get("t06").length,1);
  assert.equal(idx.byTopic.get("t12").length,1);
- assert.deepEqual(idx.byTopic.get("t18").map(x=>x.id),["q06","q12","q18"]);
+ assert.deepEqual([...idx.byTopic.get("t18").map(x=>x.id)],["q06","q12","q18"]);
  assert.equal(idx.referencedBy.get("q06").length,1);
  assert.ok(idx.byQuestion.get("q06").matchedIds.includes("t18"));
  assert.ok(idx.byTopic.get("t18").every(x=>qs.has(x.id)));
@@ -28,7 +28,7 @@ test("Links compartilhados não abrem questões de outra conta",()=>{
  const ed=new Map([["t06",{id:"t06",caps:["CAP06"]}],["t18",{id:"t18",caps:["CAP18"]}]]);
  const rev=new Map([["t18",{questaoIds:["q06","qOUTRO"]}]]);
  const idx=link.build(docs,ed,rev);
- assert.deepEqual(idx.byTopic.get("t18").map(x=>x.id),["q06"]);
+ assert.deepEqual([...idx.byTopic.get("t18").map(x=>x.id)],["q06"]);
  assert.equal(idx.byQuestion.has("qOUTRO"),false);
 });
 test("A bateria aponta para os dois mapas reais da teoria",()=>{
