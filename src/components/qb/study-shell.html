@@ -1566,7 +1566,7 @@ function viewCmix(){
   const rated=S.cartRated.has(k);
   return `<div class="wrap" style="gap:14px">
     <div class="scorebar"><span class="progress">Cartão ${m.idx+1} de ${m.fila.length} · tópicos misturados</span><button class="btn ghost small" data-cmix-sair="1">Encerrar</button></div>
-    <div class="card-r ck" style="--mc:var(--pen);padding:16px">
+    <div class="card-r ck" id="qbflash-${esc(k)}" style="--mc:var(--pen);padding:16px">
       <span class="tag">${ab?`${esc(lblT(t)||id)} · ${esc(c.tema||'')}`:'Assunto oculto até virar'}</span>
       <p class="cq" style="font-size:17px">${esc(c.q||'')}</p>
       ${ab?`<ul class="exl">${(c.a||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${c.src?`<span class="ps">${esc(c.src)}</span>`:''}`:''}
@@ -1697,7 +1697,7 @@ function viewCartoes(){
     if(!vis.length) return '';
     const fk=S.cartId+'#'+g, fe=(S.cartFech||new Set()).has(fk);
     return `<section class="m-ramo" style="--mc:var(--s${(gi-1)%8+1})"><button class="m-l m-tx" data-cfech="${esc(fk)}" aria-expanded="${!fe}" style="margin-bottom:6px;width:100%"><span class="m-t" style="font-size:16px;font-weight:800">${fe?'▸':'▾'} ${esc(g)}</span><span class="ps">${vis.length}</span></button>${fe?'':vis.map(([c,i])=>{const k=S.cartId+'@'+i,ab=S.cartAbertos.has(k);
-      return `<div class="card-r ck"><p class="cq">${esc(c.q)}</p>${ab?`<ul class="exl">${(c.a||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${c.src?`<span class="ps">${esc(c.src)}</span>`:''}`:''}${cartAval(k,ab)}</div>`}).join('')}</section>`}).join('');
+      return `<div class="card-r ck" id="qbflash-${esc(k)}"><p class="cq">${esc(c.q)}</p>${ab?`<ul class="exl">${(c.a||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${c.src?`<span class="ps">${esc(c.src)}</span>`:''}`:''}${cartAval(k,ab)}</div>`}).join('')}</section>`}).join('');
   /* fim dos ramos de cartões */
   const tot=(rv.cartoes||[]).length;
   return `<div class="wrap" style="gap:14px;max-width:1100px">
@@ -1772,13 +1772,14 @@ function viewMapa(){
     const xk='mx:'+S.mapaId+':'+k, xa=n.x&&(S.mapaX||new Set()).has(xk);
     const lab=n.x?`<button class="m-t m-tx" data-mx="${esc(xk)}" aria-expanded="${!!xa}">${esc(n.t)} <span class="m-i">${xa?'▾':'ⓘ'}</span></button>`:`<span class="m-t">${esc(n.t)}</span>`;
     const det=xa?`<div class="m-det"><p>${esc(n.x.e)}</p>${n.x.ex?`<p><b>Exemplo:</b> ${esc(n.x.ex)}</p>`:''}${n.x.trap?`<p class="m-trap"><b>Pegadinha:</b> ${esc(n.x.trap)}</p>`:''}${n.x.src?`<span class="ps">${esc(n.x.src)}</span>`:''}</div>`:'';
-    return `<li class="m-no${n.caixa?' m-caixa':''}" ${n.id?`id="mn-${esc(n.id)}"`:''}><div class="m-l">${lab}${tog}${out}${inn}</div>${nota}${det}${tab}${kids.length&&aberto?`<ul>${kids.map((c,i)=>no(c,cor,k+'.'+i)).join('')}</ul>`:''}</li>`;
+    return `<li class="m-no${n.caixa?' m-caixa':''}" data-map-node="${esc(S.mapaId+':'+k)}" ${n.id?`id="mn-${esc(n.id)}"`:''}><div class="m-l">${lab}${tog}${out}${inn}</div>${nota}${det}${tab}${kids.length&&aberto?`<ul>${kids.map((c,i)=>no(c,cor,k+'.'+i)).join('')}</ul>`:''}</li>`;
   };
   const ramos=(m.ramos||[]).map((r,i)=>{const cor=`var(--s${((r.cor||i+1)-1)%8+1})`;return `<section class="m-ramo" style="--mc:${cor}"><ul class="m-raiz">${no(r,cor,String(i))}</ul></section>`}).join('');
   return `<div class="wrap" style="gap:14px;max-width:1100px">
     <div class="filters"><select id="mapa-top" aria-label="Tópico">${ids.map(id=>`<option value="${esc(id)}" ${id===S.mapaId?'selected':''}>${esc(lblT(S.ed.get(id))||id)} · ${esc((S.ed.get(id)||{}).titulo||'')}</option>`).join('')}</select>
       <label class="check"><input type="checkbox" id="evocar" ${S.evocar?'checked':''}> Evocar antes de ler</label>
       <button class="btn ghost small" data-mtodos="1">Abrir tudo</button><button class="btn ghost small" data-mtodos="0">Fechar tudo</button>
+      ${S.mapaBack?'<button class="btn ghost small" data-voltar-flash="1">Voltar ao flashcard</button>':''}
       ${((S.rv.get(S.mapaId)||{}).cartoes||[]).length?`<button class="lnk" data-ir-cart="${esc(S.mapaId)}">Revisão ativa · ${(S.rv.get(S.mapaId).cartoes||[]).length}</button>`:''}</div>
     <p class="rule">Toque num ramo com ⓘ para abrir a explicação. Com "Evocar antes de ler", tente explicar antes de abrir.</p>
     <div class="m-centro">${esc(m.centro||t.titulo||'')}</div>
@@ -2254,6 +2255,12 @@ function wire(){
   document.querySelectorAll('[data-cresp]').forEach(t=>{t.addEventListener('input',()=>S.cartResp.set(t.dataset.cresp,t.value));t.addEventListener('blur',()=>{if(S.pendingRender)setTimeout(()=>render(),0)})});
   document.querySelectorAll('[data-exab]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.exab;if(S.exAb.has(k))S.exAb.delete(k);else S.exAb.add(k);render(true)}));
   document.querySelectorAll('[data-irmapa]').forEach(b=>b.addEventListener('click',()=>irMapa(b.dataset.irmapa)));
+  document.querySelectorAll('[data-voltar-flash]').forEach(b=>b.addEventListener('click',()=>{
+    const back=S.mapaBack;if(!back)return;
+    S.cartId=back.cartId;setView('cartoes');
+    const qid=window.QBQuestionLinks?.questionId(back.k);
+    setTimeout(()=>document.getElementById(qid?'qbq-'+qid:'qbflash-'+back.k)?.scrollIntoView({block:'center',behavior:'smooth'}),80);
+  }));
   document.querySelectorAll('[data-exia]').forEach(b=>b.addEventListener('click',()=>explicarIA(b.dataset.exia)));
   document.querySelectorAll('[data-ia]').forEach(b=>b.addEventListener('click',()=>corrigirIA(b.dataset.ia)));
   document.querySelectorAll('[data-cver]').forEach(b=>b.addEventListener('click',()=>{S.cartAbertos.add(b.dataset.cver);render(true)}));
