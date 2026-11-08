@@ -980,7 +980,7 @@
         ]
       },
       {
-        "id": "pecuniaria",
+        "id": "grupo-pecuniaria",
         "t": "Prestação pecuniária e dação",
         "n": "Exigência de expressão em moeda e hipóteses legais específicas de quitação, com jurisprudência mencionada.",
         "cor": 2,
@@ -1379,7 +1379,7 @@
     "ligacoes": [
       [
         "conceito-1",
-        "pecuniaria",
+        "grupo-pecuniaria",
         "Prestação em moeda"
       ],
       [
@@ -1399,7 +1399,7 @@
       ],
       [
         "natureza",
-        "pecuniaria",
+        "grupo-pecuniaria",
         "Natureza diferente de forma de pagamento"
       ]
     ]
