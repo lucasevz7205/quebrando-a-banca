@@ -38,10 +38,13 @@ test("A bateria aponta para os dois mapas reais da teoria",()=>{
  assert.match(shell,/data-ir-mapa/);
 });
 
-test("Baterias T17 e T32 reutilizam questões por referência sem materializar novos documentos",()=>{
+test("Baterias e revisões T17/T32/T44/T65/T71 reutilizam IDs sem duplicar documentos",()=>{
   const cases=[
     {topic:"t17",sources:["FISCAL-TI-05","FISCAL-TI-11"],local:"FISCAL-TI-17",sourceTopics:["t05","t11"]},
-    {topic:"t32",sources:["FISCAL-TI-21","FISCAL-TI-26"],local:"FISCAL-TI-32",sourceTopics:["t21","t26"]}
+    {topic:"t32",sources:["FISCAL-TI-21","FISCAL-TI-26"],local:"FISCAL-TI-32",sourceTopics:["t21","t26"]},
+    {topic:"t44",sources:["FISCAL-TI-35","FISCAL-TI-38"],local:"FISCAL-TI-44",sourceTopics:["t35","t38"]},
+    {topic:"t65",sources:["FISCAL-TI-50","FISCAL-TI-59"],local:"FISCAL-TI-65",sourceTopics:["t50","t59"]},
+    {topic:"t71",sources:["FISCAL-TI-05","FISCAL-TI-11"],local:"FISCAL-TI-71",sourceTopics:["t05","t11"]}
   ];
   for(const obj of cases){
     const questions=new Map(),ed=new Map(),rev=new Map(),refs=[];
