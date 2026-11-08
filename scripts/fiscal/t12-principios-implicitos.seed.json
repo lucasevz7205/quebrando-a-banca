@@ -1,0 +1,1592 @@
+{
+  "topic": "fiscal-t12",
+  "source": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf",
+  "questions": [
+    {
+      "id": "fiscal-t12-ce02",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "O princípio da supremacia do interesse público autoriza privilégios administrativos para satisfazer interesses exclusivamente patrimoniais da própria autoridade.",
+      "gabarito": "E",
+      "comentario": "A supremacia existe para proteger finalidades coletivas; não legitima benefício pessoal nem interesse secundário isolado.",
+      "ordem": 1202,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 29, seção 1.3",
+      "tema": "Finalidade da supremacia",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "sup-final"
+    },
+    {
+      "id": "fiscal-t12-ce03",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "Cláusulas exorbitantes em contratos administrativos são exemplos de prerrogativas relacionadas à supremacia do interesse público.",
+      "gabarito": "C",
+      "comentario": "Faculdades contratuais especiais, como alteração unilateral nos limites legais, derivam das finalidades públicas.",
+      "ordem": 1203,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 30, seção 1.3",
+      "tema": "Prerrogativas contratuais",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "sup-exorbitantes"
+    },
+    {
+      "id": "fiscal-t12-ce04",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A imposição legal de condicionamentos ao exercício de atividades privadas pelo poder de polícia é incompatível com a supremacia do interesse público.",
+      "gabarito": "E",
+      "comentario": "O poder de polícia, nos limites constitucionais e legais, é instrumento clássico de proteção do interesse coletivo.",
+      "ordem": 1204,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 30, seção 1.3",
+      "tema": "Poder de polícia",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "sup-policia"
+    },
+    {
+      "id": "fiscal-t12-ce05",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A desapropriação, a ocupação temporária e o tombamento podem concretizar prerrogativas administrativas relacionadas à supremacia do interesse público.",
+      "gabarito": "C",
+      "comentario": "A apostila apresenta diferentes modalidades de intervenção estatal na propriedade privada.",
+      "ordem": 1205,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 30, seção 1.3",
+      "tema": "Intervenção na propriedade",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "sup-intervencao"
+    },
+    {
+      "id": "fiscal-t12-ce06",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "O agente administrativo administra bens e interesses públicos em nome da coletividade, não podendo dispor deles como se fosse proprietário.",
+      "gabarito": "C",
+      "comentario": "Indisponibilidade vincula atuação à finalidade coletiva e impõe limites sobre alienação e escolha de contratados e agentes.",
+      "ordem": 1206,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 31, seção 1.3",
+      "tema": "Titularidade coletiva",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "ind-gestao"
+    },
+    {
+      "id": "fiscal-t12-ce07",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A indisponibilidade do interesse público impede absolutamente a realização de acordos administrativos, mesmo quando eles melhor protejam a coletividade.",
+      "gabarito": "E",
+      "comentario": "A apostila registra a admissibilidade de acordos compatíveis com benefício coletivo e com limites legais; indisponibilidade não é proibição absoluta de transigir.",
+      "ordem": 1207,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 32, seção 1.3",
+      "tema": "Acordos e transações",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "ind-acordos"
+    },
+    {
+      "id": "fiscal-t12-ce08",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A atribuição de competência administrativa pode representar poder-dever, a ser exercido nas situações em que o Direito impõe a atuação.",
+      "gabarito": "C",
+      "comentario": "Competências existem para cumprir deveres públicos; o agente não escolhe omitir-se livremente quando a norma exige agir.",
+      "ordem": 1208,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 32, seção 1.3",
+      "tema": "Poder-dever de agir",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "ind-poder-dever"
+    },
+    {
+      "id": "fiscal-t12-ce09",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "Pelo princípio da indisponibilidade, a Administração possui liberdade equivalente à de um proprietário privado para vender bens afetados ao serviço público.",
+      "gabarito": "E",
+      "comentario": "A alienação de bens públicos obedece a exigências jurídicas e não decorre de livre disponibilidade do agente.",
+      "ordem": 1209,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 31, seção 1.3",
+      "tema": "Alienação de bens",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "ind-alienacao"
+    },
+    {
+      "id": "fiscal-t12-ce10",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A discricionariedade administrativa autoriza escolhas bizarras ou incoerentes, desde que o ato não viole uma proibição literal da lei.",
+      "gabarito": "E",
+      "comentario": "A razoabilidade condiciona legitimidade e exige conduta coerente com finalidade e circunstâncias concretas.",
+      "ordem": 1210,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 35, seção 1.3",
+      "tema": "Razoabilidade em discricionariedade",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "raz-regras"
+    },
+    {
+      "id": "fiscal-t12-ce11",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A proporcionalidade exige relação justificável entre a intensidade da medida administrativa e a finalidade pública buscada.",
+      "gabarito": "C",
+      "comentario": "O princípio impede restrições desnecessárias ou excessivas em relação ao fim legítimo.",
+      "ordem": 1211,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 35, seção 1.3",
+      "tema": "Meios e fins",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "prop-meios-fins"
+    },
+    {
+      "id": "fiscal-t12-ce12",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "No exame de adequação, verifica-se se o meio escolhido tem aptidão real para atingir o resultado administrativo pretendido.",
+      "gabarito": "C",
+      "comentario": "O primeiro subteste da proporcionalidade avalia a compatibilidade do meio com o objetivo.",
+      "ordem": 1212,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 36, seção 1.3",
+      "tema": "Adequação",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "prop-adequacao"
+    },
+    {
+      "id": "fiscal-t12-ce13",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "Uma medida gravosa atende necessariamente à proporcionalidade mesmo quando exista alternativa igualmente eficaz e menos restritiva.",
+      "gabarito": "E",
+      "comentario": "A necessidade exige investigar meios menos lesivos que atinjam suficientemente a finalidade.",
+      "ordem": 1213,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 37, seção 1.3",
+      "tema": "Necessidade",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "prop-necessidade"
+    },
+    {
+      "id": "fiscal-t12-ce14",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A proporcionalidade em sentido estrito considera a relação entre os benefícios da medida e os sacrifícios impostos.",
+      "gabarito": "C",
+      "comentario": "O subteste final avalia o balanço entre vantagens públicas e restrições sofridas.",
+      "ordem": 1214,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 37, seção 1.3",
+      "tema": "Proporcionalidade estrita",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "prop-estrito"
+    },
+    {
+      "id": "fiscal-t12-ce15",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "Ao invalidar ato desarrazoado, o Judiciário necessariamente exerce revogação por conveniência e oportunidade, substituindo o mérito administrativo.",
+      "gabarito": "E",
+      "comentario": "O material diferencia controle de legitimidade/legalidade (anulação) de revisão de mérito administrativo (revogação).",
+      "ordem": 1215,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 36, seção 1.3",
+      "tema": "Judiciário e proporcionalidade",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "prop-controle-jud"
+    },
+    {
+      "id": "fiscal-t12-ce16",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "O controle finalístico da Administração Direta sobre entidades da administração indireta é denominado tutela e se relaciona ao princípio da especialidade.",
+      "gabarito": "C",
+      "comentario": "Tutela busca garantir finalidade institucional, respeitando a autonomia da entidade descentralizada.",
+      "ordem": 1216,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 38, seção 1.3",
+      "tema": "Tutela sobre entidades",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "tut-indireta"
+    },
+    {
+      "id": "fiscal-t12-ce17",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "Pela autotutela, a própria Administração pode controlar a legalidade e o mérito de seus atos, conforme os limites aplicáveis.",
+      "gabarito": "C",
+      "comentario": "O art. 53 da Lei 9.784/1999 diferencia anulação de atos ilegais e revogação por conveniência/oportunidade.",
+      "ordem": 1217,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 39, seção 1.3",
+      "tema": "Autotutela",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "autot-conceito"
+    },
+    {
+      "id": "fiscal-t12-ce18",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A revogação administrativa é a medida apropriada para eliminar ato ilegal, enquanto a anulação se funda somente em conveniência.",
+      "gabarito": "E",
+      "comentario": "A assertiva inverte os fundamentos: anulação corrige ilegalidade; revogação desfaz ato válido pelo mérito.",
+      "ordem": 1218,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 39, seção 1.3",
+      "tema": "Anulação × revogação",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "autot-anula"
+    },
+    {
+      "id": "fiscal-t12-ce19",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A Administração somente pode anular seus próprios atos ilegais após provocação judicial do interessado.",
+      "gabarito": "E",
+      "comentario": "A autotutela pode ser exercida de ofício ou por provocação, respeitados direitos e segurança jurídica.",
+      "ordem": 1219,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 39, seção 1.3",
+      "tema": "Controle de ofício",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "autot-oficio"
+    },
+    {
+      "id": "fiscal-t12-ce20",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "Quando o Poder Judiciário exerce função administrativa, ele pode revogar seus próprios atos administrativos, observados os limites do mérito.",
+      "gabarito": "C",
+      "comentario": "A impossibilidade de o Judiciário revogar ato de outro Poder no controle jurisdicional não elimina a autotutela de seus próprios atos administrativos.",
+      "ordem": 1220,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 40, seção 1.3",
+      "tema": "Judiciário e seus atos",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "autot-jud"
+    },
+    {
+      "id": "fiscal-t12-ce21",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A motivação administrativa demanda exposição inteligível das razões de fato e de direito que sustentam uma decisão pública.",
+      "gabarito": "C",
+      "comentario": "A motivação permite aferir legalidade, finalidade e coerência, sem se confundir com vontade subjetiva do agente.",
+      "ordem": 1221,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 42, seção 1.3",
+      "tema": "Motivação",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "motiv-fundamento"
+    },
+    {
+      "id": "fiscal-t12-ce22",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A motivação pode ser vaga ou contraditória sem afetar o dever de explicitar os fundamentos da decisão administrativa.",
+      "gabarito": "E",
+      "comentario": "A Lei 9.784/1999 exige motivação explícita, clara e congruente nas hipóteses nela previstas.",
+      "ordem": 1222,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 43, seção 1.3",
+      "tema": "Motivação clara",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "motiv-congruente"
+    },
+    {
+      "id": "fiscal-t12-ce23",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "Uma decisão administrativa pode, nas hipóteses legais, declarar concordância com fundamentos de parecer anterior, incorporando-os à sua motivação.",
+      "gabarito": "C",
+      "comentario": "O material reconhece a motivação por referência ou remissão nos termos legais, desde que os fundamentos sejam identificáveis.",
+      "ordem": 1223,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 43, seção 1.3",
+      "tema": "Motivação por remissão",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "motiv-por-remissao"
+    },
+    {
+      "id": "fiscal-t12-ce24",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A continuidade dos serviços públicos inspira mecanismos como substituição e delegação para evitar paralisação do atendimento.",
+      "gabarito": "C",
+      "comentario": "O capítulo associa continuidade à necessidade de manter funções e serviços de interesse coletivo.",
+      "ordem": 1224,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 44, seção 1.3",
+      "tema": "Continuidade do serviço",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "cont-publico"
+    },
+    {
+      "id": "fiscal-t12-ce25",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A continuidade do serviço autoriza a Administração a alterar unilateralmente contratos sem preservar o equilíbrio econômico-financeiro contratado.",
+      "gabarito": "E",
+      "comentario": "O material ressalta que prerrogativas de alteração unilateral não eliminam proteção ao equilíbrio econômico-financeiro.",
+      "ordem": 1225,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 46, seção 1.3",
+      "tema": "Continuidade × equilíbrio financeiro",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "cont-equilibrio"
+    },
+    {
+      "id": "fiscal-t12-ce26",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "As garantias de contraditório e ampla defesa aplicam-se exclusivamente aos processos administrativos que imponham sanções.",
+      "gabarito": "E",
+      "comentario": "A Constituição e a lei estendem tais garantias a litigantes em processo administrativo, inclusive não punitivo.",
+      "ordem": 1226,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 48, seção 1.3",
+      "tema": "Contraditório fora da sanção",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "contr-nonpun"
+    },
+    {
+      "id": "fiscal-t12-ce27",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A ausência de advogado em processo administrativo disciplinar sempre contraria a Constituição, independentemente das circunstâncias.",
+      "gabarito": "E",
+      "comentario": "A apostila cita a Súmula Vinculante 5 do STF, segundo a qual a falta de defesa técnica por advogado no PAD não ofende a Constituição.",
+      "ordem": 1227,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 49, seção 1.3",
+      "tema": "Defesa técnica por advogado",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "contr-advogado"
+    },
+    {
+      "id": "fiscal-t12-ce28",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "As entidades da Administração Indireta são criadas ou autorizadas para desempenhar finalidades próprias, e a especialidade limita sua atuação a tais objetivos.",
+      "gabarito": "C",
+      "comentario": "O princípio da especialidade traduz a vinculação da entidade descentralizada à finalidade definida no ordenamento.",
+      "ordem": 1228,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 49, seção 1.3",
+      "tema": "Especialidade da descentralização",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "espec-entidade"
+    },
+    {
+      "id": "fiscal-t12-ce29",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "O princípio da segurança jurídica protege a estabilização de relações consolidadas e deve ser considerado ao revisar atos antigos.",
+      "gabarito": "C",
+      "comentario": "A segurança jurídica equilibra legalidade com previsibilidade e estabilidade de situações já formadas.",
+      "ordem": 1229,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 50, seção 1.3",
+      "tema": "Segurança jurídica",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "seg-estabilizacao"
+    },
+    {
+      "id": "fiscal-t12-ce30",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A proteção à confiança representa a dimensão subjetiva da segurança jurídica, relacionada à expectativa de boa-fé na atuação estatal.",
+      "gabarito": "C",
+      "comentario": "O material distingue a estabilidade jurídica objetiva e a confiança subjetiva do administrado de boa-fé.",
+      "ordem": 1230,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 51, seção 1.3",
+      "tema": "Confiança legítima",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "seg-confianca"
+    },
+    {
+      "id": "fiscal-t12-ce31",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A descoberta de investidura irregular do agente exige necessariamente desconstituir todos os efeitos de seus atos em relação a terceiros inocentes.",
+      "gabarito": "E",
+      "comentario": "A segurança e a proteção à confiança podem preservar efeitos perante terceiros de boa-fé que confiaram na aparência de legalidade.",
+      "ordem": 1231,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 52, seção 1.3",
+      "tema": "Terceiros de boa-fé",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "seg-agente-fato"
+    },
+    {
+      "id": "fiscal-t12-ce32",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "Na exposição da apostila, a boa-fé objetiva se liga ao comportamento leal e honesto, e a subjetiva à crença de atuar corretamente.",
+      "gabarito": "C",
+      "comentario": "O material emprega as dimensões objetiva e subjetiva da boa-fé como base de relações de confiança.",
+      "ordem": 1232,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 53, seção 1.3",
+      "tema": "Boa-fé objetiva e subjetiva",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "seg-boa-fe"
+    },
+    {
+      "id": "fiscal-t12-ce33",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A sindicabilidade refere-se à possibilidade de controle de atos administrativos, abrangendo autotutela e controle judicial.",
+      "gabarito": "C",
+      "comentario": "O material associa a sindicabilidade à sujeição dos atos administrativos a mecanismos de controle.",
+      "ordem": 1233,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 58, seção 1.3",
+      "tema": "Sindicabilidade",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "sind-control"
+    },
+    {
+      "id": "fiscal-t12-ce34",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "O dever de prestar contas e a responsabilidade pela gestão de recursos públicos guardam relação com o princípio da responsividade.",
+      "gabarito": "C",
+      "comentario": "O agente não é dono da coisa pública e deve responder por seus atos e pelo emprego de recursos coletivos.",
+      "ordem": 1234,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 58, seção 1.3",
+      "tema": "Responsividade",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "resp-contas"
+    },
+    {
+      "id": "fiscal-t12-ce35",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "O princípio da hierarquia explica relações de direção, fiscalização, delegação e avocação típicas da função administrativa.",
+      "gabarito": "C",
+      "comentario": "A hierarquia é relacionada às relações de subordinação no exercício da função administrativa.",
+      "ordem": 1235,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 57, seção 1.3",
+      "tema": "Hierarquia administrativa",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "hierarquia"
+    },
+    {
+      "id": "fiscal-t12-ce36",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A consensualidade administrativa busca, quando cabível, soluções participativas e negociadas em lugar de toda atuação exclusivamente coercitiva.",
+      "gabarito": "C",
+      "comentario": "O capítulo lista consultas e audiências públicas, mediação e acordos como instrumentos de administração consensual.",
+      "ordem": 1236,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 59, seção 1.3",
+      "tema": "Consensualidade",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "consensual"
+    },
+    {
+      "id": "fiscal-t12-ce37",
+      "cap": "FISCAL-DA-12",
+      "capNome": "Trilha 00 · Tarefa 12 · Princípios administrativos implícitos",
+      "enunciado": "A precaução administrativa orienta medidas preventivas para evitar danos potencialmente graves ou de difícil reparação.",
+      "gabarito": "C",
+      "comentario": "O material apresenta a precaução como prudência diante de riscos que não devem esperar a consumação do dano.",
+      "ordem": 1237,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 57, seção 1.3",
+      "tema": "Precaução",
+      "topico": "fiscal-t12",
+      "assuntoId": "fiscal-da-principios-implicitos",
+      "mapaNoId": "precaucao"
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Finalidade da supremacia",
+      "q": "Qual finalidade justifica poderes especiais da Administração?",
+      "a": [
+        "A satisfação do interesse público primário nos limites da lei."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 29 (seção 1.3)",
+      "mapaNoId": "sup-final",
+      "questaoIds": [
+        "fiscal-t12-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Prerrogativas contratuais",
+      "q": "Por que certas cláusulas exorbitantes são admitidas?",
+      "a": [
+        "Para assegurar o atendimento de finalidades públicas sob condições legais."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 30 (seção 1.3)",
+      "mapaNoId": "sup-exorbitantes",
+      "questaoIds": [
+        "fiscal-t12-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Poder de polícia",
+      "q": "Qual relação existe entre poder de polícia e supremacia?",
+      "a": [
+        "O poder de polícia aplica limitações legalmente fundadas à atividade privada para proteger o interesse geral."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 30 (seção 1.3)",
+      "mapaNoId": "sup-policia",
+      "questaoIds": [
+        "fiscal-t12-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Intervenção na propriedade",
+      "q": "Cite três formas de intervenção estatal na propriedade ligadas ao interesse público.",
+      "a": [
+        "Desapropriação, ocupação temporária e tombamento, observados seus pressupostos."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 30 (seção 1.3)",
+      "mapaNoId": "sup-intervencao",
+      "questaoIds": [
+        "fiscal-t12-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Titularidade coletiva",
+      "q": "Por que a indisponibilidade limita a livre disposição de bens públicos?",
+      "a": [
+        "Porque a coletividade é titular dos interesses e o agente apenas os gere."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 31 (seção 1.3)",
+      "mapaNoId": "ind-gestao",
+      "questaoIds": [
+        "fiscal-t12-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Acordos e transações",
+      "q": "Acordos administrativos são necessariamente proibidos pela indisponibilidade?",
+      "a": [
+        "Não. Podem ser admitidos quando compatíveis com o ordenamento e com a finalidade coletiva."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 32 (seção 1.3)",
+      "mapaNoId": "ind-acordos",
+      "questaoIds": [
+        "fiscal-t12-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Poder-dever de agir",
+      "q": "O que significa dizer que competência administrativa pode ser poder-dever?",
+      "a": [
+        "Que a Administração tem a faculdade jurídica e também o dever de exercê-la nas hipóteses exigidas."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 32 (seção 1.3)",
+      "mapaNoId": "ind-poder-dever",
+      "questaoIds": [
+        "fiscal-t12-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Alienação de bens",
+      "q": "Qual erro há em equiparar a alienação de bem público à venda privada?",
+      "a": [
+        "A Administração não é proprietária no sentido de livre disposição; deve observar requisitos legais."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 31 (seção 1.3)",
+      "mapaNoId": "ind-alienacao",
+      "questaoIds": [
+        "fiscal-t12-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Razoabilidade em discricionariedade",
+      "q": "Como a razoabilidade limita escolhas discricionárias?",
+      "a": [
+        "Veda opções arbitrárias, incoerentes ou sem senso de adequação às finalidades legais."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 35 (seção 1.3)",
+      "mapaNoId": "raz-regras",
+      "questaoIds": [
+        "fiscal-t12-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Meios e fins",
+      "q": "Qual núcleo da proporcionalidade deve orientar medidas restritivas?",
+      "a": [
+        "Equilíbrio entre meios escolhidos, finalidade pública e intensidade do sacrifício."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 35 (seção 1.3)",
+      "mapaNoId": "prop-meios-fins",
+      "questaoIds": [
+        "fiscal-t12-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Adequação",
+      "q": "O que pergunta o teste de adequação?",
+      "a": [
+        "Se a medida é apta ou idônea a alcançar a finalidade legítima."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 36 (seção 1.3)",
+      "mapaNoId": "prop-adequacao",
+      "questaoIds": [
+        "fiscal-t12-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Necessidade",
+      "q": "O que pergunta o teste de necessidade?",
+      "a": [
+        "Se há alternativa eficaz menos gravosa para o administrado."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 37 (seção 1.3)",
+      "mapaNoId": "prop-necessidade",
+      "questaoIds": [
+        "fiscal-t12-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Proporcionalidade estrita",
+      "q": "O que distingue proporcionalidade em sentido estrito de adequação?",
+      "a": [
+        "A adequação testa aptidão; a proporcionalidade estrita pondera o ganho versus a restrição."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 37 (seção 1.3)",
+      "mapaNoId": "prop-estrito",
+      "questaoIds": [
+        "fiscal-t12-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Judiciário e proporcionalidade",
+      "q": "O Judiciário revoga ato administrativo apenas por considerá-lo desproporcional?",
+      "a": [
+        "Não. O controle judicial da desproporção é controle de legalidade/legitimidade, com invalidação."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 36 (seção 1.3)",
+      "mapaNoId": "prop-controle-jud",
+      "questaoIds": [
+        "fiscal-t12-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Tutela sobre entidades",
+      "q": "Qual é o objeto do controle por tutela sobre a administração indireta?",
+      "a": [
+        "Verificar o cumprimento das finalidades institucionais das entidades, com os limites previstos."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 38 (seção 1.3)",
+      "mapaNoId": "tut-indireta",
+      "questaoIds": [
+        "fiscal-t12-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Autotutela",
+      "q": "Quais duas dimensões tem a autotutela?",
+      "a": [
+        "Legalidade: anulação de ato inválido; mérito: revogação de ato válido, quando possível."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 39 (seção 1.3)",
+      "mapaNoId": "autot-conceito",
+      "questaoIds": [
+        "fiscal-t12-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Anulação × revogação",
+      "q": "Se a Administração detecta ilegalidade, deve em regra anular ou revogar?",
+      "a": [
+        "Anular. Revogar corresponde ao mérito de ato válido, se juridicamente revogável."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 39 (seção 1.3)",
+      "mapaNoId": "autot-anula",
+      "questaoIds": [
+        "fiscal-t12-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Controle de ofício",
+      "q": "A anulação administrativa por ilegalidade depende sempre de ordem judicial?",
+      "a": [
+        "Não. Pode ser realizada de ofício, sob limites legais."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 39 (seção 1.3)",
+      "mapaNoId": "autot-oficio",
+      "questaoIds": [
+        "fiscal-t12-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Judiciário e seus atos",
+      "q": "O Judiciário pode revogar atos administrativos que ele próprio praticou?",
+      "a": [
+        "Sim, ao exercer a função administrativa, se forem revogáveis e houver fundamento de mérito."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 40 (seção 1.3)",
+      "mapaNoId": "autot-jud",
+      "questaoIds": [
+        "fiscal-t12-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Motivação",
+      "q": "Quais elementos devem ser expostos na motivação do ato?",
+      "a": [
+        "Fundamentos fáticos e jurídicos pertinentes à decisão."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 42 (seção 1.3)",
+      "mapaNoId": "motiv-fundamento",
+      "questaoIds": [
+        "fiscal-t12-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Motivação clara",
+      "q": "Como a lei caracteriza a motivação adequada?",
+      "a": [
+        "Explícita, clara e congruente, inclusive mediante adoção fundamentada de parecer anterior."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 43 (seção 1.3)",
+      "mapaNoId": "motiv-congruente",
+      "questaoIds": [
+        "fiscal-t12-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Motivação por remissão",
+      "q": "É possível motivar por referência a parecer anterior?",
+      "a": [
+        "Sim, se os fundamentos forem adotados expressamente e puderem ser identificados."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 43 (seção 1.3)",
+      "mapaNoId": "motiv-por-remissao",
+      "questaoIds": [
+        "fiscal-t12-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Continuidade do serviço",
+      "q": "Como substituição e delegação podem preservar a continuidade?",
+      "a": [
+        "Permitem cobertura temporária de funções e evitam interrupção das atividades."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 44 (seção 1.3)",
+      "mapaNoId": "cont-publico",
+      "questaoIds": [
+        "fiscal-t12-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Continuidade × equilíbrio financeiro",
+      "q": "A continuidade autoriza destruir o equilíbrio financeiro do contrato?",
+      "a": [
+        "Não. Mudanças legais devem resguardar a equação econômico-financeira pertinente."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 46 (seção 1.3)",
+      "mapaNoId": "cont-equilibrio",
+      "questaoIds": [
+        "fiscal-t12-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Contraditório fora da sanção",
+      "q": "O contraditório alcança processo administrativo não sancionador?",
+      "a": [
+        "Sim, quando há litigantes e direitos em disputa, nos termos constitucionais."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 48 (seção 1.3)",
+      "mapaNoId": "contr-nonpun",
+      "questaoIds": [
+        "fiscal-t12-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Defesa técnica por advogado",
+      "q": "A falta de advogado no PAD torna o processo automaticamente inconstitucional?",
+      "a": [
+        "Não. A Súmula Vinculante 5 afasta essa consequência automática."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 49 (seção 1.3)",
+      "mapaNoId": "contr-advogado",
+      "questaoIds": [
+        "fiscal-t12-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Especialidade da descentralização",
+      "q": "O que o princípio da especialidade exige das entidades administrativas?",
+      "a": [
+        "Atuação voltada às finalidades institucionais que justificam sua criação."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 49 (seção 1.3)",
+      "mapaNoId": "espec-entidade",
+      "questaoIds": [
+        "fiscal-t12-ce28"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Segurança jurídica",
+      "q": "Qual tensão central a segurança jurídica busca administrar?",
+      "a": [
+        "Legalidade versus estabilidade das relações constituídas ao longo do tempo."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 50 (seção 1.3)",
+      "mapaNoId": "seg-estabilizacao",
+      "questaoIds": [
+        "fiscal-t12-ce29"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Confiança legítima",
+      "q": "Qual a diferença entre segurança objetiva e proteção à confiança?",
+      "a": [
+        "Objetiva: estabilidade do Direito; subjetiva: confiança legítima do administrado na aparência de legalidade estatal."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 51 (seção 1.3)",
+      "mapaNoId": "seg-confianca",
+      "questaoIds": [
+        "fiscal-t12-ce30"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Terceiros de boa-fé",
+      "q": "Por que atos de agente de fato podem conservar efeitos perante terceiros?",
+      "a": [
+        "Para proteger a confiança e a boa-fé de quem não deu causa ao vício do agente."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 52 (seção 1.3)",
+      "mapaNoId": "seg-agente-fato",
+      "questaoIds": [
+        "fiscal-t12-ce31"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Boa-fé objetiva e subjetiva",
+      "q": "Como diferenciar as dimensões objetiva e subjetiva da boa-fé?",
+      "a": [
+        "Objetiva: lealdade/honestidade da conduta; subjetiva: crença de agir corretamente."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 53 (seção 1.3)",
+      "mapaNoId": "seg-boa-fe",
+      "questaoIds": [
+        "fiscal-t12-ce32"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Sindicabilidade",
+      "q": "O que expressa o princípio da sindicabilidade?",
+      "a": [
+        "Todo ato administrativo está sujeito a algum tipo de controle, pelos meios jurídicos cabíveis."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 58 (seção 1.3)",
+      "mapaNoId": "sind-control",
+      "questaoIds": [
+        "fiscal-t12-ce33"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Responsividade",
+      "q": "Qual dever traduz a responsividade administrativa?",
+      "a": [
+        "Responder pelos atos e prestar contas da gestão dos recursos públicos."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 58 (seção 1.3)",
+      "mapaNoId": "resp-contas",
+      "questaoIds": [
+        "fiscal-t12-ce34"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Hierarquia administrativa",
+      "q": "Dê dois poderes derivados da hierarquia na atividade administrativa.",
+      "a": [
+        "Delegar e avocar atribuições, ou fiscalizar e orientar subordinados, nos limites legais."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 57 (seção 1.3)",
+      "mapaNoId": "hierarquia",
+      "questaoIds": [
+        "fiscal-t12-ce35"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Consensualidade",
+      "q": "Cite duas manifestações de consensualidade administrativa.",
+      "a": [
+        "Consultas públicas e mediação/conciliação, ou outros instrumentos negociados legalmente admitidos."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 59 (seção 1.3)",
+      "mapaNoId": "consensual",
+      "questaoIds": [
+        "fiscal-t12-ce36"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Precaução",
+      "q": "Qual lógica justifica o princípio da precaução?",
+      "a": [
+        "Agir preventivamente frente a riscos relevantes antes que danos graves se materializem."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 57 (seção 1.3)",
+      "mapaNoId": "precaucao",
+      "questaoIds": [
+        "fiscal-t12-ce37"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Princípios administrativos implícitos · T12",
+    "versao": 2,
+    "fonte": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, pp. 28–59",
+    "ramos": [
+      {
+        "id": "supremacia",
+        "t": "Supremacia e finalidade pública",
+        "n": "Prerrogativas instrumentais ao interesse coletivo, sob autorização normativa.",
+        "cor": 1,
+        "x": {
+          "e": "Prerrogativas instrumentais ao interesse coletivo, sob autorização normativa.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seção 1.3"
+        },
+        "f": [
+          {
+            "id": "sup-final",
+            "t": "Finalidade da supremacia",
+            "n": "A satisfação do interesse público primário nos limites da lei.",
+            "x": {
+              "e": "A supremacia existe para proteger finalidades coletivas; não legitima benefício pessoal nem interesse secundário isolado.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 29",
+              "questaoIds": [
+                "fiscal-t12-ce02"
+              ]
+            }
+          },
+          {
+            "id": "sup-exorbitantes",
+            "t": "Prerrogativas contratuais",
+            "n": "Para assegurar o atendimento de finalidades públicas sob condições legais.",
+            "x": {
+              "e": "Faculdades contratuais especiais, como alteração unilateral nos limites legais, derivam das finalidades públicas.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 30",
+              "questaoIds": [
+                "fiscal-t12-ce03"
+              ]
+            }
+          },
+          {
+            "id": "sup-policia",
+            "t": "Poder de polícia",
+            "n": "O poder de polícia aplica limitações legalmente fundadas à atividade privada para proteger o interesse geral.",
+            "x": {
+              "e": "O poder de polícia, nos limites constitucionais e legais, é instrumento clássico de proteção do interesse coletivo.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 30",
+              "questaoIds": [
+                "fiscal-t12-ce04"
+              ]
+            }
+          },
+          {
+            "id": "sup-intervencao",
+            "t": "Intervenção na propriedade",
+            "n": "Desapropriação, ocupação temporária e tombamento, observados seus pressupostos.",
+            "x": {
+              "e": "A apostila apresenta diferentes modalidades de intervenção estatal na propriedade privada.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 30",
+              "questaoIds": [
+                "fiscal-t12-ce05"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "indisponibilidade",
+        "t": "Indisponibilidade e poder-dever",
+        "n": "Gestão de bens coletivos e atuação vinculada à finalidade pública; admite acordos legais benéficos.",
+        "cor": 2,
+        "x": {
+          "e": "Gestão de bens coletivos e atuação vinculada à finalidade pública; admite acordos legais benéficos.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seção 1.3"
+        },
+        "f": [
+          {
+            "id": "ind-gestao",
+            "t": "Titularidade coletiva",
+            "n": "Porque a coletividade é titular dos interesses e o agente apenas os gere.",
+            "x": {
+              "e": "Indisponibilidade vincula atuação à finalidade coletiva e impõe limites sobre alienação e escolha de contratados e agentes.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 31",
+              "questaoIds": [
+                "fiscal-t12-ce06"
+              ]
+            }
+          },
+          {
+            "id": "ind-acordos",
+            "t": "Acordos e transações",
+            "n": "Não. Podem ser admitidos quando compatíveis com o ordenamento e com a finalidade coletiva.",
+            "x": {
+              "e": "A apostila registra a admissibilidade de acordos compatíveis com benefício coletivo e com limites legais; indisponibilidade não é proibição absoluta de transigir.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 32",
+              "questaoIds": [
+                "fiscal-t12-ce07"
+              ]
+            }
+          },
+          {
+            "id": "ind-poder-dever",
+            "t": "Poder-dever de agir",
+            "n": "Que a Administração tem a faculdade jurídica e também o dever de exercê-la nas hipóteses exigidas.",
+            "x": {
+              "e": "Competências existem para cumprir deveres públicos; o agente não escolhe omitir-se livremente quando a norma exige agir.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 32",
+              "questaoIds": [
+                "fiscal-t12-ce08"
+              ]
+            }
+          },
+          {
+            "id": "ind-alienacao",
+            "t": "Alienação de bens",
+            "n": "A Administração não é proprietária no sentido de livre disposição; deve observar requisitos legais.",
+            "x": {
+              "e": "A alienação de bens públicos obedece a exigências jurídicas e não decorre de livre disponibilidade do agente.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 31",
+              "questaoIds": [
+                "fiscal-t12-ce09"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-2",
+        "t": "Razoabilidade e proporcionalidade",
+        "n": "Adequação, necessidade e ponderação de meios e fins limitam excessos.",
+        "cor": 3,
+        "x": {
+          "e": "Adequação, necessidade e ponderação de meios e fins limitam excessos.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seção 1.3"
+        },
+        "f": [
+          {
+            "id": "raz-regras",
+            "t": "Razoabilidade em discricionariedade",
+            "n": "Veda opções arbitrárias, incoerentes ou sem senso de adequação às finalidades legais.",
+            "x": {
+              "e": "A razoabilidade condiciona legitimidade e exige conduta coerente com finalidade e circunstâncias concretas.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 35",
+              "questaoIds": [
+                "fiscal-t12-ce10"
+              ]
+            }
+          },
+          {
+            "id": "prop-meios-fins",
+            "t": "Meios e fins",
+            "n": "Equilíbrio entre meios escolhidos, finalidade pública e intensidade do sacrifício.",
+            "x": {
+              "e": "O princípio impede restrições desnecessárias ou excessivas em relação ao fim legítimo.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 35",
+              "questaoIds": [
+                "fiscal-t12-ce11"
+              ]
+            }
+          },
+          {
+            "id": "prop-adequacao",
+            "t": "Adequação",
+            "n": "Se a medida é apta ou idônea a alcançar a finalidade legítima.",
+            "x": {
+              "e": "O primeiro subteste da proporcionalidade avalia a compatibilidade do meio com o objetivo.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 36",
+              "questaoIds": [
+                "fiscal-t12-ce12"
+              ]
+            }
+          },
+          {
+            "id": "prop-necessidade",
+            "t": "Necessidade",
+            "n": "Se há alternativa eficaz menos gravosa para o administrado.",
+            "x": {
+              "e": "A necessidade exige investigar meios menos lesivos que atinjam suficientemente a finalidade.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 37",
+              "questaoIds": [
+                "fiscal-t12-ce13"
+              ]
+            }
+          },
+          {
+            "id": "prop-estrito",
+            "t": "Proporcionalidade estrita",
+            "n": "A adequação testa aptidão; a proporcionalidade estrita pondera o ganho versus a restrição.",
+            "x": {
+              "e": "O subteste final avalia o balanço entre vantagens públicas e restrições sofridas.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 37",
+              "questaoIds": [
+                "fiscal-t12-ce14"
+              ]
+            }
+          },
+          {
+            "id": "prop-controle-jud",
+            "t": "Judiciário e proporcionalidade",
+            "n": "Não. O controle judicial da desproporção é controle de legalidade/legitimidade, com invalidação.",
+            "x": {
+              "e": "O material diferencia controle de legitimidade/legalidade (anulação) de revisão de mérito administrativo (revogação).",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 36",
+              "questaoIds": [
+                "fiscal-t12-ce15"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-1",
+        "t": "Tutela e autotutela",
+        "n": "Controle finalístico de entidades difere do reexame da própria Administração.",
+        "cor": 4,
+        "x": {
+          "e": "Controle finalístico de entidades difere do reexame da própria Administração.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seção 1.3"
+        },
+        "f": [
+          {
+            "id": "tut-indireta",
+            "t": "Tutela sobre entidades",
+            "n": "Verificar o cumprimento das finalidades institucionais das entidades, com os limites previstos.",
+            "x": {
+              "e": "Tutela busca garantir finalidade institucional, respeitando a autonomia da entidade descentralizada.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 38",
+              "questaoIds": [
+                "fiscal-t12-ce16"
+              ]
+            }
+          },
+          {
+            "id": "autot-conceito",
+            "t": "Autotutela",
+            "n": "Legalidade: anulação de ato inválido; mérito: revogação de ato válido, quando possível.",
+            "x": {
+              "e": "O art. 53 da Lei 9.784/1999 diferencia anulação de atos ilegais e revogação por conveniência/oportunidade.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 39",
+              "questaoIds": [
+                "fiscal-t12-ce17"
+              ]
+            }
+          },
+          {
+            "id": "autot-anula",
+            "t": "Anulação × revogação",
+            "n": "Anular. Revogar corresponde ao mérito de ato válido, se juridicamente revogável.",
+            "x": {
+              "e": "A assertiva inverte os fundamentos: anulação corrige ilegalidade; revogação desfaz ato válido pelo mérito.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 39",
+              "questaoIds": [
+                "fiscal-t12-ce18"
+              ]
+            }
+          },
+          {
+            "id": "autot-oficio",
+            "t": "Controle de ofício",
+            "n": "Não. Pode ser realizada de ofício, sob limites legais.",
+            "x": {
+              "e": "A autotutela pode ser exercida de ofício ou por provocação, respeitados direitos e segurança jurídica.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 39",
+              "questaoIds": [
+                "fiscal-t12-ce19"
+              ]
+            }
+          },
+          {
+            "id": "autot-jud",
+            "t": "Judiciário e seus atos",
+            "n": "Sim, ao exercer a função administrativa, se forem revogáveis e houver fundamento de mérito.",
+            "x": {
+              "e": "A impossibilidade de o Judiciário revogar ato de outro Poder no controle jurisdicional não elimina a autotutela de seus próprios atos administrativos.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 40",
+              "questaoIds": [
+                "fiscal-t12-ce20"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "motivacao",
+        "t": "Motivação e razões do ato",
+        "n": "Exposição explícita, clara e coerente dos fundamentos fáticos e jurídicos.",
+        "cor": 5,
+        "x": {
+          "e": "Exposição explícita, clara e coerente dos fundamentos fáticos e jurídicos.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seção 1.3"
+        },
+        "f": [
+          {
+            "id": "motiv-fundamento",
+            "t": "Motivação",
+            "n": "Fundamentos fáticos e jurídicos pertinentes à decisão.",
+            "x": {
+              "e": "A motivação permite aferir legalidade, finalidade e coerência, sem se confundir com vontade subjetiva do agente.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 42",
+              "questaoIds": [
+                "fiscal-t12-ce21"
+              ]
+            }
+          },
+          {
+            "id": "motiv-congruente",
+            "t": "Motivação clara",
+            "n": "Explícita, clara e congruente, inclusive mediante adoção fundamentada de parecer anterior.",
+            "x": {
+              "e": "A Lei 9.784/1999 exige motivação explícita, clara e congruente nas hipóteses nela previstas.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 43",
+              "questaoIds": [
+                "fiscal-t12-ce22"
+              ]
+            }
+          },
+          {
+            "id": "motiv-por-remissao",
+            "t": "Motivação por remissão",
+            "n": "Sim, se os fundamentos forem adotados expressamente e puderem ser identificados.",
+            "x": {
+              "e": "O material reconhece a motivação por referência ou remissão nos termos legais, desde que os fundamentos sejam identificáveis.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 43",
+              "questaoIds": [
+                "fiscal-t12-ce23"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "continuidade",
+        "t": "Continuidade dos serviços públicos",
+        "n": "Mecanismos evitam paralisação, respeitando direitos e equilíbrio financeiro.",
+        "cor": 6,
+        "x": {
+          "e": "Mecanismos evitam paralisação, respeitando direitos e equilíbrio financeiro.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seção 1.3"
+        },
+        "f": [
+          {
+            "id": "cont-publico",
+            "t": "Continuidade do serviço",
+            "n": "Permitem cobertura temporária de funções e evitam interrupção das atividades.",
+            "x": {
+              "e": "O capítulo associa continuidade à necessidade de manter funções e serviços de interesse coletivo.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 44",
+              "questaoIds": [
+                "fiscal-t12-ce24"
+              ]
+            }
+          },
+          {
+            "id": "cont-equilibrio",
+            "t": "Continuidade × equilíbrio financeiro",
+            "n": "Não. Mudanças legais devem resguardar a equação econômico-financeira pertinente.",
+            "x": {
+              "e": "O material ressalta que prerrogativas de alteração unilateral não eliminam proteção ao equilíbrio econômico-financeiro.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 46",
+              "questaoIds": [
+                "fiscal-t12-ce25"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "contraditorio",
+        "t": "Contraditório e ampla defesa",
+        "n": "Garantias aplicáveis a litigantes e acusados no processo administrativo.",
+        "cor": 7,
+        "x": {
+          "e": "Garantias aplicáveis a litigantes e acusados no processo administrativo.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seção 1.3"
+        },
+        "f": [
+          {
+            "id": "contr-nonpun",
+            "t": "Contraditório fora da sanção",
+            "n": "Sim, quando há litigantes e direitos em disputa, nos termos constitucionais.",
+            "x": {
+              "e": "A Constituição e a lei estendem tais garantias a litigantes em processo administrativo, inclusive não punitivo.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 48",
+              "questaoIds": [
+                "fiscal-t12-ce26"
+              ]
+            }
+          },
+          {
+            "id": "contr-advogado",
+            "t": "Defesa técnica por advogado",
+            "n": "Não. A Súmula Vinculante 5 afasta essa consequência automática.",
+            "x": {
+              "e": "A apostila cita a Súmula Vinculante 5 do STF, segundo a qual a falta de defesa técnica por advogado no PAD não ofende a Constituição.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 49",
+              "questaoIds": [
+                "fiscal-t12-ce27"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "especialidade",
+        "t": "Especialidade",
+        "n": "Finalidades próprias vinculam entidades descentralizadas.",
+        "cor": 8,
+        "x": {
+          "e": "Finalidades próprias vinculam entidades descentralizadas.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seção 1.3"
+        },
+        "f": [
+          {
+            "id": "espec-entidade",
+            "t": "Especialidade da descentralização",
+            "n": "Atuação voltada às finalidades institucionais que justificam sua criação.",
+            "x": {
+              "e": "O princípio da especialidade traduz a vinculação da entidade descentralizada à finalidade definida no ordenamento.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 49",
+              "questaoIds": [
+                "fiscal-t12-ce28"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "seguranca",
+        "t": "Segurança jurídica e proteção da confiança",
+        "n": "Estabilidade objetiva e expectativas legítimas de boa-fé.",
+        "cor": 1,
+        "x": {
+          "e": "Estabilidade objetiva e expectativas legítimas de boa-fé.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seção 1.3"
+        },
+        "f": [
+          {
+            "id": "seg-estabilizacao",
+            "t": "Segurança jurídica",
+            "n": "Legalidade versus estabilidade das relações constituídas ao longo do tempo.",
+            "x": {
+              "e": "A segurança jurídica equilibra legalidade com previsibilidade e estabilidade de situações já formadas.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 50",
+              "questaoIds": [
+                "fiscal-t12-ce29"
+              ]
+            }
+          },
+          {
+            "id": "seg-confianca",
+            "t": "Confiança legítima",
+            "n": "Objetiva: estabilidade do Direito; subjetiva: confiança legítima do administrado na aparência de legalidade estatal.",
+            "x": {
+              "e": "O material distingue a estabilidade jurídica objetiva e a confiança subjetiva do administrado de boa-fé.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 51",
+              "questaoIds": [
+                "fiscal-t12-ce30"
+              ]
+            }
+          },
+          {
+            "id": "seg-agente-fato",
+            "t": "Terceiros de boa-fé",
+            "n": "Para proteger a confiança e a boa-fé de quem não deu causa ao vício do agente.",
+            "x": {
+              "e": "A segurança e a proteção à confiança podem preservar efeitos perante terceiros de boa-fé que confiaram na aparência de legalidade.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 52",
+              "questaoIds": [
+                "fiscal-t12-ce31"
+              ]
+            }
+          },
+          {
+            "id": "seg-boa-fe",
+            "t": "Boa-fé objetiva e subjetiva",
+            "n": "Objetiva: lealdade/honestidade da conduta; subjetiva: crença de agir corretamente.",
+            "x": {
+              "e": "O material emprega as dimensões objetiva e subjetiva da boa-fé como base de relações de confiança.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 53",
+              "questaoIds": [
+                "fiscal-t12-ce32"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "outros",
+        "t": "Controle, responsabilidade e consensualidade",
+        "n": "Sindicabilidade, responsividade, hierarquia e prevenção/consenso.",
+        "cor": 2,
+        "x": {
+          "e": "Sindicabilidade, responsividade, hierarquia e prevenção/consenso.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seção 1.3"
+        },
+        "f": [
+          {
+            "id": "sind-control",
+            "t": "Sindicabilidade",
+            "n": "Todo ato administrativo está sujeito a algum tipo de controle, pelos meios jurídicos cabíveis.",
+            "x": {
+              "e": "O material associa a sindicabilidade à sujeição dos atos administrativos a mecanismos de controle.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 58",
+              "questaoIds": [
+                "fiscal-t12-ce33"
+              ]
+            }
+          },
+          {
+            "id": "resp-contas",
+            "t": "Responsividade",
+            "n": "Responder pelos atos e prestar contas da gestão dos recursos públicos.",
+            "x": {
+              "e": "O agente não é dono da coisa pública e deve responder por seus atos e pelo emprego de recursos coletivos.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 58",
+              "questaoIds": [
+                "fiscal-t12-ce34"
+              ]
+            }
+          },
+          {
+            "id": "hierarquia",
+            "t": "Hierarquia administrativa",
+            "n": "Delegar e avocar atribuições, ou fiscalizar e orientar subordinados, nos limites legais.",
+            "x": {
+              "e": "A hierarquia é relacionada às relações de subordinação no exercício da função administrativa.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 57",
+              "questaoIds": [
+                "fiscal-t12-ce35"
+              ]
+            }
+          },
+          {
+            "id": "consensual",
+            "t": "Consensualidade",
+            "n": "Consultas públicas e mediação/conciliação, ou outros instrumentos negociados legalmente admitidos.",
+            "x": {
+              "e": "O capítulo lista consultas e audiências públicas, mediação e acordos como instrumentos de administração consensual.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 59",
+              "questaoIds": [
+                "fiscal-t12-ce36"
+              ]
+            }
+          },
+          {
+            "id": "precaucao",
+            "t": "Precaução",
+            "n": "Agir preventivamente frente a riscos relevantes antes que danos graves se materializem.",
+            "x": {
+              "e": "O material apresenta a precaução como prudência diante de riscos que não devem esperar a consumação do dano.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 57",
+              "questaoIds": [
+                "fiscal-t12-ce37"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": [
+      [
+        "conceito-1",
+        "seguranca",
+        "Autotutela × limites de confiança"
+      ],
+      [
+        "conceito-2",
+        "supremacia",
+        "Poder exercido sem excesso"
+      ],
+      [
+        "indisponibilidade",
+        "outros",
+        "Poder-dever e prestação de contas"
+      ]
+    ]
+  }
+}
