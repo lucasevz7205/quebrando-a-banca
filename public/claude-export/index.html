@@ -1005,14 +1005,15 @@ function viewSessoesHistoricas(){
   const pagina=Math.min(S.evoPagina,paginas-1);
   const inicio=pagina*porPagina;
   const taxa=S.evoModo==='p';
-  const maximo=taxa?100:Math.max(1,...[...periodos.values()].map(p=>p.c));
+  const maximo=Math.max(1,...[...periodos.values()].map(p=>p.c));
   const opcoes=(entries,selected)=>entries.sort((a,b)=>a[1].localeCompare(b[1],'pt-BR')).map(([id,nome])=>`<option value="${esc(id)}" ${id===selected?'selected':''}>${esc(nome)}</option>`).join('');
   const opcoesAssunto=[...assuntos].filter(([,a])=>!S.fEvo||a.materia===S.fEvo).map(([cap,a])=>[cap,`${cap} · ${a.nome}`]);
   const barras=[...periodos].sort(([a],[b])=>a.localeCompare(b)).map(([d,p])=>{
     const valor=taxa?fmtPct(p.c/p.n):p.c;
-    const descricao=`${lblEvo(d)} · ${p.c} acertos, ${p.e} erros, ${p.b} em branco`;
+    const altura=100*p.c/(taxa?p.n:maximo);
+    const descricao=`${lblEvo(d)} · ${d.slice(0,4)} · ${p.c} acertos, ${p.e} erros, ${p.b} em branco`;
     return `<button type="button" data-evo-faixa="${d}" aria-pressed="${faixa===d}" aria-label="${esc(descricao)}" title="${esc(descricao)}">
-      <span class="qb-history-bar-track"><span class="qb-history-bar" style="--qb-history-height:${100*p.c/(taxa?p.n*maximo/100:maximo)}%"></span></span>
+      <span class="qb-history-bar-track"><span class="qb-history-bar" style="--qb-history-height:${altura}%"></span></span>
       <strong>${valor}</strong><small>${lblEvo(d)}</small>
     </button>`;
   }).join('');
@@ -2120,7 +2121,12 @@ function wire(){
   document.querySelectorAll('[data-ir-rev]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.irRev,t=S.ed.get(id);S.fMat=t?t.sigla:'';if(t)S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+id);setView('revisao');setTimeout(()=>{const el=document.getElementById('rv-'+id);if(el)el.scrollIntoView({block:'start'})},30)}));
   const ra=$('#rv-abrir'); if(ra) ra.addEventListener('click',()=>{for(const t of S.ed.values()){if(S.rv.has(t.id)||S.pt.has(t.id)){S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+t.id)}}render(true)});
   const rf=$('#rv-fechar'); if(rf) rf.addEventListener('click',()=>{for(const k of [...S.abertos]) if(k.startsWith('rv:')||k.startsWith('rvt:')) S.abertos.delete(k); S.fMat=''; render(true)});
-  const refreshHistory=()=>{S.evoFaixa='';S.evoPagina=0;render(true)};
+  const chart=document.querySelector('.qb-history-chart');
+  if(chart){
+    chart.scrollLeft=S.evoScroll??chart.scrollWidth;
+    chart.addEventListener('scroll',()=>{S.evoScroll=chart.scrollLeft});
+  }
+  const refreshHistory=()=>{S.evoFaixa='';S.evoPagina=0;S.evoScroll=null;render(true)};
   const fe=$('#f-evo'); if(fe) fe.addEventListener('change',()=>{S.fEvo=fe.value;S.evoCap='';refreshHistory()});
   const ec=$('#evo-cap'); if(ec) ec.addEventListener('change',()=>{S.evoCap=ec.value;refreshHistory()});
   document.querySelectorAll('[data-qr]').forEach(r=>{const f=()=>{const k='qr:'+r.dataset.qr;if(S.abertos.has(k))S.abertos.delete(k);else S.abertos.add(k);render(true)};r.addEventListener('click',f);r.addEventListener('keydown',e=>{if(e.key==='Enter')f()})});
@@ -2129,7 +2135,14 @@ function wire(){
   const ea=$('#evo-ate'); if(ea) ea.addEventListener('change',()=>{S.evoAte=ea.value;refreshHistory()});
   const el=$('#evo-limpa'); if(el) el.addEventListener('click',()=>{S.evoDe='';S.evoAte='';refreshHistory()});
   document.querySelectorAll('[data-evomodo]').forEach(b=>b.addEventListener('click',()=>{S.evoModo=b.dataset.evomodo;render(true)}));
-  document.querySelectorAll('[data-evo-faixa]').forEach(b=>b.addEventListener('click',()=>{S.evoFaixa=S.evoFaixa===b.dataset.evoFaixa?'':b.dataset.evoFaixa;S.evoPagina=0;render(true)}));
+  document.querySelectorAll('[data-evo-faixa]').forEach(b=>b.addEventListener('click',()=>{
+    const chave=b.dataset.evoFaixa;
+    S.evoFaixa=S.evoFaixa===chave?'':chave;
+    S.evoPagina=0;
+    if(chart)S.evoScroll=chart.scrollLeft;
+    render(true);
+    if(chave)$("[data-evo-faixa='"+chave+"']")?.focus({preventScroll:true});
+  }));
   document.querySelectorAll('[data-evo-pagina]').forEach(b=>b.addEventListener('click',()=>{S.evoPagina=Number(b.dataset.evoPagina);render(true)}));
   document.querySelectorAll('[data-sub]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.sub)));
   document.querySelectorAll('[data-ir-cart]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.irCart;if(((S.rv.get(id)||{}).cartoes||[]).length){S.cartId=id;S.cartPend=false;setView('cartoes');window.scrollTo({top:0});return}const t=S.ed.get(id);S.fMat=t?t.sigla:'';S.evocar=true;S.revelados.clear();if(t)S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+id);setView('revisao');setTimeout(()=>{const el=document.getElementById('rv-'+id);if(el)el.scrollIntoView({block:'start'})},30)}));
