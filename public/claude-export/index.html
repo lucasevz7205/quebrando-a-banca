@@ -2379,7 +2379,7 @@ function simSigla(cap){
 }
 function simBlueprint(){const c=S.cfg.get('simulado');return (c&&c.obj&&c.obj.blocos)?c.obj:SIM_DEF.obj}
 function domingos(){const d=new Date();const off=(7-d.getDay())%7;const p=new Date(d);p.setDate(d.getDate()+off);return {hoje:d.getDay()===0,prox:p.toLocaleDateString('pt-BR')}}
-function simLS(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem('sim:'+k)||'null');if(v===null)localStorage.removeItem('sim:'+k);else localStorage.setItem('sim:'+k,JSON.stringify(v))}catch(e){return null}}
+function simLS(k,v){if(S.studyAccount)return null;try{if(v===undefined)return JSON.parse(localStorage.getItem('sim:'+k)||'null');if(v===null)localStorage.removeItem('sim:'+k);else localStorage.setItem('sim:'+k,JSON.stringify(v))}catch(e){return null}}
 function simMontar(){
   const bp=simBlueprint(), porMat=new Map();
   for(const q of S.q.values()){if(q.foraNivel)continue;const s=simSigla(q.cap);if(!porMat.has(s))porMat.set(s,[]);porMat.get(s).push(q)}
