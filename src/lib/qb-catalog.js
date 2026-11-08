@@ -57,7 +57,7 @@ export function proofCatalog(questions, edital) {
   return questions.filter(q => proofs[q.documento] || q.tipo === "prova-oficial" && String(q.banca).toUpperCase() === "CEBRASPE").map(q => {
     const proof = proofs[q.documento];
     return {
-      id: q.id, tipo: "prova", materia: topics.get(q.topico)?.materia || subjects.get(q.materia) || q.materia || "Matéria a classificar",
+      id: q.id, tipo: "prova", materia: topics.get(q.topico)?.materia || subjects.get(q.materia) || (q.materia === "OUTRA" ? null : q.materia) || "Matéria a classificar",
       assunto: topics.get(q.topico)?.titulo || q.assunto || q.topico || "Assunto a classificar",
       cargo: proof?.[0] || q.cargo || null, prova: proof?.[1] || q.provaId || null,
       orgao: proof ? "Câmara dos Deputados" : q.orgao || null,
@@ -72,7 +72,7 @@ export function proofCatalog(questions, edital) {
 }
 
 export function incidence(proofs, materia, assunto, cargo, ano) {
-  if (!materia || !assunto || !cargo) return null;
+  if (!materia || !assunto || !cargo || materia === "Matéria a classificar" || assunto === "Assunto a classificar" || assunto === "fora-edital") return null;
   const unique = new Map();
   for (const q of proofs) {
     if (!q.prova || q.item == null || q.materia !== materia || q.cargo !== cargo || ano && String(q.ano) !== ano) continue;
