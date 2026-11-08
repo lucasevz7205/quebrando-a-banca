@@ -71,6 +71,17 @@ export async function writeDocument(storage, { path, operation, value }) {
     const [existing] = await hydrated(storage, collection, old);
     next = { ...existing, ...value, id: legacy_id };
   }
+  if (collection === "aprendizagem") {
+    if (!["attempt", "practice", "exposure", "weekly", "schedule-simulation", "completion"].includes(next.kind) || !Number.isFinite(Date.parse(next.at))) {
+      throw new Error("Evento pedagógico inválido.");
+    }
+    if (old.length && next.kind !== "weekly") {
+      const [existing] = await hydrated(storage, collection, old);
+      const canonical = value => JSON.stringify(value, Object.keys(value).sort());
+      if (canonical(existing) === canonical(next)) return { ok: true, id: legacy_id, replay: true };
+      throw new Error("Evento já registrado. A tentativa original foi preservada.");
+    }
+  }
   const encoded = JSON.stringify(next);
   if (encoded.length > 500000) throw new Error("O documento excede o limite seguro da ponte.");
   const partsNeeded = Math.ceil(encoded.length / CHUNK);
