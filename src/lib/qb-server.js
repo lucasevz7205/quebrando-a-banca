@@ -3,7 +3,7 @@ import { z } from "zod";
 import { requireUser } from "@/lib/auth-middleware";
 import { project, validateProposal, planImport, fields } from "./qb-domain";
 import { listDocuments } from "./study-documents";
-import { proofCatalog, studyCatalog } from "./qb-catalog";
+import { editorialAuthorals, proofCatalog, studyCatalog } from "./qb-catalog";
 function client(context){if(context.user.role!=="admin")throw new Error("Acesso restrito ao administrador durante a preparação.");return context.getBase44().asServiceRole;}
 async function all(entity){const out=[];for(let skip=0;;skip+=500){const page=await entity.list("created_date",500,skip);out.push(...page);if(page.length<500)return out;if(skip>50000)throw new Error("Limite de leitura excedido.");}}
 async function snapshot(b){const [questions,proposals,decisions,tasks,sources]=await Promise.all(["Question","Proposal","Decision","TaskEvent","Source"].map(n=>all(b.entities[n])));return {originals:questions.map(q=>JSON.parse(q.original_json)),proposals,decisions,tasks,sources:sources.map(({content_base64,...s})=>s)};}
@@ -27,8 +27,9 @@ export const getQuestionLab = createServerFn({ method: "GET" })
    // Ambiente que contém as Trilhas 00–03; não inclui respostas nem progresso.
    catalogScope(StudyDocument, StudyDocumentPart, { study_account_id: "6af069aa28e43e39f27bd73c" }, "Área Fiscal"),
   ]);
-  const analyzed = proofCatalog(project(data.originals, data.decisions), camara.edital);
-  return { ...data, catalog: [...camara.items, ...fiscal.items, ...analyzed] };
+  const editorial = project(data.originals, data.decisions);
+  const analyzed = proofCatalog(editorial, camara.edital);
+  return { ...data, catalog: [...camara.items, ...fiscal.items, ...editorialAuthorals(editorial), ...analyzed] };
  });
 
 const proposalSchema=z.object({question_id:z.string().min(1).max(300),field:z.enum(fields),before:z.string().max(12000),after:z.string().trim().min(1).max(12000),source:z.string().trim().min(1).max(2000),evidence:z.string().trim().min(1).max(6000),responsible:z.string().trim().min(1).max(100)});

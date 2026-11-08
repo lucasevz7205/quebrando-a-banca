@@ -47,16 +47,16 @@ export default function QuestionCatalog({ items }) {
     </div>
     <div className="qb-filters">
       {group === "autoral" && <Filter label="Ambiente" value={area} options={sorted(category.map(q => q.ambiente))}
-        empty="Todos os ambientes" onChange={v => { setArea(v); setMateria(""); setAssunto(""); setPage(0); }}/>}
+        empty="Todos os ambientes" onChange={v => { setArea(v); setMateria(""); setAssunto(""); setCargo(""); setPage(0); }}/>}
       <Filter label="Matéria" value={materia} options={sorted(scoped.map(q => q.materia))} empty="Todas"
         onChange={v => { setMateria(v); setAssunto(""); setCargo(""); setAno(""); setPage(0); }}/>
       <Filter label="Assunto" value={assunto} options={sorted(subject.map(q => q.assunto))} empty="Todos"
         onChange={v => { setAssunto(v); setCargo(""); setAno(""); setPage(0); }}/>
-      {group !== "autoral" && <>
+      {(group !== "autoral" || topic.some(q => q.cargo)) && <>
         <Filter label="Cargo" value={cargo} options={sorted(topic.map(q => q.cargo))} empty="Todos"
           onChange={v => { setCargo(v); setAno(""); setPage(0); }}/>
-        <Filter label="Ano" value={ano} options={sorted(role.map(q => q.ano))} empty="Todos"
-          onChange={v => { setAno(v); setPage(0); }}/>
+        {group !== "autoral" && <Filter label="Ano" value={ano} options={sorted(role.map(q => q.ano))} empty="Todos"
+          onChange={v => { setAno(v); setPage(0); }}/> }
       </>}
     </div>
     <p>{results.length} itens no recorte.</p>
@@ -71,6 +71,8 @@ export default function QuestionCatalog({ items }) {
         <ul>{stats.rows.map(row => <li key={row.mecanismo}>{row.mecanismo} · {row.n}/{stats.falsos} ({pct(row.proporcao)})</li>)}</ul>
         <button type="button" disabled={!stats.rows.length} onClick={() => download("quebrando-a-banca-pauta.json", {
           versao: 1, materia, assunto, cargo, ano: ano || null, base: "amostra de provas analisadas", ...stats,
+          formatoImportacao: "Array JSON; use IDs estáveis novos, tipo autoral e documento identificando o lote. Importe apenas após revisão editorial.",
+          campos: ["id", "documento", "tipo", "ambiente", "materia", "assunto", "cargo", "enunciado", "gabarito", "justificativa", "fonte", "mecanismo", "referencias"],
           orientacao: "Crie itens inéditos de Certo/Errado. Priorize os mecanismos com maior frequência observada. Use novos cenários e redação própria. Inclua gabarito, justificativa, fonte e mecanismo. Submeta os itens à revisão editorial.",
           evidencias: results.filter(q => stats.rows.some(row => row.referencias.includes(q.id)))
             .map(({ id, prova, item, evidencia, mecanismo, vacina }) => ({ id, prova, item, evidencia, mecanismo, vacina })),
@@ -86,7 +88,7 @@ export default function QuestionCatalog({ items }) {
         </details></td>
         <td>{q.materia}<br/><small>{q.assunto}</small></td>
         <td>{q.ambiente || q.orgao || "Órgão a confirmar"}<br/>
-          {group !== "autoral" && <small>{q.cargo || "Cargo a confirmar"}{q.ano ? ` · ${q.ano}` : ""}</small>}
+          {(group !== "autoral" || q.cargo) && <small>{q.cargo || "Cargo a confirmar"}{q.ano ? ` · ${q.ano}` : ""}</small>}
           {q.tipo === "prova" && !q.valido && <p>Fora do cálculo</p>}
         </td>
       </tr>)}</tbody>

@@ -40,10 +40,21 @@ export function studyCatalog(questions, edital, ambiente) {
   });
 }
 
+export function editorialAuthorals(questions) {
+  return questions.filter(q => q.tipo === "autoral" && valid(q) && q.enunciado && q.materia && q.assunto &&
+    ["C", "E"].includes(q.gabarito)).map(q => ({
+    id: q.id, tipo: "autoral", ambiente: q.ambiente || "Laboratório",
+    materia: q.materia, assunto: q.assunto, assuntoId: q.assuntoId || null,
+    cargo: q.cargo || null, enunciado: q.enunciado, gabarito: q.gabarito,
+    comentario: q.justificativa || q.comentario || "", fonte: q.fonte || q.documento,
+    mecanismo: q.mecanismo || null, referencias: q.referencias || [],
+  }));
+}
+
 export function proofCatalog(questions, edital) {
   const topics = new Map(edital.map(t => [t.id, t]));
   const subjects = new Map(edital.map(t => [t.sigla, t.materia]));
-  return questions.filter(q => proofs[q.documento] || q.banca === "CEBRASPE" && q.tipo === "prova-oficial").map(q => {
+  return questions.filter(q => proofs[q.documento] || q.tipo === "prova-oficial" && String(q.banca).toUpperCase() === "CEBRASPE").map(q => {
     const proof = proofs[q.documento];
     return {
       id: q.id, tipo: "prova", materia: topics.get(q.topico)?.materia || subjects.get(q.materia) || q.materia || "Matéria a classificar",
