@@ -2070,7 +2070,7 @@ function viewConteudo(){
       const tops=(m.topicos||[]).map(id=>S.ed.get(id)).filter(Boolean);
       html+=`<article class="ct">
         <div class="ct-h"><span class="mono" style="font-size:13px;font-weight:600">${tops.map(t=>esc(t.num)).join(', ')}</span><span class="mtype">${esc(MTIPO[m.tipo]||m.tipo)}</span></div>
-        <a class="ct-t" href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>
+        ${m.url?`<a class="ct-t" href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>`:`<div class="ct-t">${esc(m.titulo)}</div>`}
         ${m.descricao?`<p class="pd">${esc(m.descricao)}</p>`:''}
         ${(m.secoes||[]).length?`<ol class="ct-s">${m.secoes.map(s=>`<li>${esc(s)}</li>`).join('')}</ol>`:''}
         ${window.QBLearning?window.QBLearning.contentHTML(S,m):''}
@@ -2643,6 +2643,8 @@ function init(){
   window.QBBridge.ask('account').then(account=>{
     if(!account.legacy){
       S.studyAccount=true;
+      PROVAS.P1='Trilha de estudo';
+      PROVAS.P2='Conhecimentos específicos';
       PROVA=account.date||null;
       LIMITE=PROVA?addDias(PROVA,-7):null;
       $('.qb-header-kicker').textContent=account.name;
