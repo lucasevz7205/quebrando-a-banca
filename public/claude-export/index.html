@@ -1763,10 +1763,14 @@ const MEC_MEMORIA={
   V4:{lema:'Estranho pode ser exceção certa.',pergunta:'Essa hipótese incomum está prevista na fonte?',armadilha:'Uma exceção verdadeira contraria a intuição.',acao:'Lembre a hipótese expressa antes de descartar o item.'}
 };
 function mecanStats(code,ids){
-  const out={total:ids.length,respondidos:0,acertos:0,erros:0,confErros:0,caderno:0};
+  const out={total:ids.length,respondidos:0,acertos:0,erros:0,confErros:0,caderno:0,errosHistoricos:0,reincidentes:0};
   for(const id of ids){
     const r=S.r.get(id),q=S.q.get(id);
     if(!r||!q||!Number(r.tentativas))continue;
+    const historico=(r.hist||[]).filter(h=>(h.m==='C'||h.m==='E')&&typeof h.ok==='boolean');
+    const anteriores=historico.filter(h=>h.ok===false).length;
+    out.errosHistoricos+=anteriores;
+    if(anteriores>=2)out.reincidentes++;
     const marca=r.ultimaMarcada;
     if(marca!=='C'&&marca!=='E')continue;
     out.respondidos++;
@@ -1808,20 +1812,21 @@ function viewMecanismos(){
   const personalTotal=itemsWithPractice.reduce((n,x)=>n+x.personal.respondidos,0);
   const errTotal=itemsWithPractice.reduce((n,x)=>n+x.personal.erros,0);
   const confidenceErrors=itemsWithPractice.reduce((n,x)=>n+x.personal.confErros,0);
+  const recurrent=itemsWithPractice.reduce((n,x)=>n+x.personal.reincidentes,0);
   const foco=S.mecFoco||'todos';
   let chosen=all.filter(x=>foco==='erros'?x.personal.erros>0:foco==='praticar'?x.personal.respondidos<5&&x.ids.length>0:foco==='frequentes'?Number(x.raw?.n||0)>0:true);
   if(foco==='frequentes')chosen.sort((a,b)=>Number(b.raw?.n||0)-Number(a.raw?.n||0));
   if(foco==='erros')chosen.sort((a,b)=>b.personal.erros-a.personal.erros||b.personal.confErros-a.personal.confErros);
   const focusOptions=[['todos','Todos os mecanismos'],['erros','Errei neles'],['praticar','Preciso praticar'],['frequentes','Frequentes na amostra']];
-  const destaque=all.filter(x=>x.personal.erros>0).sort((a,b)=>b.personal.confErros-a.personal.confErros||b.personal.erros-a.personal.erros).slice(0,3);
+  const destaque=all.filter(x=>x.personal.erros>0||x.personal.reincidentes>0).sort((a,b)=>b.personal.confErros-a.personal.confErros||b.personal.reincidentes-a.personal.reincidentes||b.personal.erros-a.personal.erros).slice(0,3);
   const orderedStats=all.filter(x=>Number(x.raw?.n||0)>0).sort((a,b)=>Number(b.raw?.n||0)-Number(a.raw?.n||0));
   const topSample=orderedStats.slice(0,3);
   const selectedMat=S.fMecMat?SIG_MAT[S.fMecMat]||S.fMecMat:'amostra geral';
   const card=x=>{
     const {code,d,memo,personal,ids,raw,denominator}=x;
     const isTrue=code[0]==='V';
-    const status=personal.erros?`${personal.erros} ${personal.erros===1?'erro':'erros'} em ${personal.respondidos} respondidos${personal.confErros?` · ${personal.confErros} com certeza`:''}`:personal.respondidos>=5?`${personal.acertos}/${personal.respondidos} últimas respostas certas`:personal.respondidos>0?`${personal.acertos}/${personal.respondidos} certas · amostra pequena`:ids.length?`Ainda sem respostas · ${ids.length} questões vinculadas`:'Sem questões vinculadas';
-    const label=personal.erros?'Atenção aos erros':personal.respondidos>=5?'Prática registrada':'Aprender e praticar';
+    const status=personal.erros?`${personal.erros} ${personal.erros===1?'erro':'erros'} em ${personal.respondidos} respondidos${personal.confErros?` · ${personal.confErros} com certeza`:''}`:personal.reincidentes?`Últimos itens corretos; ${personal.reincidentes} com erros repetidos no histórico`:personal.respondidos>=5?`${personal.acertos}/${personal.respondidos} últimas respostas certas`:personal.respondidos>0?`${personal.acertos}/${personal.respondidos} certas · amostra pequena`:ids.length?`Ainda sem respostas · ${ids.length} questões vinculadas`:'Sem questões vinculadas';
+    const label=personal.erros?'Atenção aos erros':personal.reincidentes?'Erros repetidos anteriormente':personal.respondidos>=5?'Prática registrada':'Aprender e praticar';
     const entries=(exemplos.get(code)||[]).map(e=>`<li>“${esc(e.evidencia)}” <small>${esc(SIG_MAT[e.materia]||e.materia||'')} · ${esc(e.doc||'Prova analisada')}${typeof e.item==='number'?' · item '+e.item:''}</small></li>`).join('');
     const opened=S.mecOpen.has(code);
     return `<details class="qb-trap-card ${isTrue?'is-true':'is-false'}" data-mec-card="${code}" ${opened?'open':''}>
@@ -1845,8 +1850,8 @@ function viewMecanismos(){
   const spots=topSample.map(x=>`<li><strong>${x.code} · ${esc(x.memo.lema)}</strong><span>${x.raw.n} itens na amostra · ${esc(x.memo.pergunta)}</span></li>`).join('');
   return `<div class="qb-traps-lab">
     <section class="qb-trap-overview"><div><span class="qb-trap-label">COMO ESTUDAR AS PEGADINHAS</span><h3>Reconheça. Interrompa. Confira.</h3><p>Em cada mecanismo, memorize uma frase curta, procure o sinal e faça uma pergunta preventiva antes de julgar a assertiva.</p></div><div class="qb-trap-steps"><span><b>1</b> Reconheça o sinal</span><span><b>2</b> Faça a pergunta</span><span><b>3</b> Treine no item</span></div></section>
-    <div class="qb-trap-metrics"><div class="qb-trap-metric"><small>Itens classificados já respondidos</small><strong>${personalTotal}</strong><span>Nas questões ligadas aos mecanismos</span></div><div class="qb-trap-metric ${errTotal?'warn':''}"><small>Erros na última resposta</small><strong>${errTotal}</strong><span>${confidenceErrors} ${confidenceErrors===1?'erro com certeza':'erros com certeza'}</span></div><div class="qb-trap-metric"><small>Mecanismos com treino disponível</small><strong>${itemsWithPractice.length}<i>/14</i></strong><span>Amostra pessoal não é a frequência da banca</span></div></div>
-    ${destaque.length?`<section class="qb-trap-next"><div><span class="qb-trap-label">PREVENÇÃO PERSONALIZADA</span><h3>Revise estes erros primeiro</h3></div><div>${destaque.map(x=>`<button type="button" data-mec-open="${x.code}"><b>${x.code}</b><span>${esc(x.memo.lema)}</span><small>${x.personal.erros} ${x.personal.erros===1?'erro':'erros'} · abrir</small></button>`).join('')}</div></section>`:`<section class="qb-trap-next qb-trap-neutral"><span class="qb-trap-label">PRÓXIMA AÇÃO</span><h3>${personalTotal?'Nenhum erro registrado nos itens classificados que você respondeu.':'Você ainda não tem respostas classificadas suficientes para medir seu padrão de erro.'}</h3><p>${personalTotal?'Isso não prova domínio permanente. Abra os mecanismos ainda não praticados e faça questões novas.':'Comece pelos três mecanismos mais presentes na amostra, sempre verificando o enunciado e a fonte.'}</p></section>`}
+    <div class="qb-trap-metrics"><div class="qb-trap-metric"><small>Itens classificados já respondidos</small><strong>${personalTotal}</strong><span>Nas questões ligadas aos mecanismos</span></div><div class="qb-trap-metric ${errTotal?'warn':''}"><small>Erros na última resposta</small><strong>${errTotal}</strong><span>${confidenceErrors} ${confidenceErrors===1?'erro com certeza':'erros com certeza'} · ${recurrent} ${recurrent===1?'item com erros repetidos':'itens com erros repetidos'}</span></div><div class="qb-trap-metric"><small>Mecanismos com treino disponível</small><strong>${itemsWithPractice.length}<i>/14</i></strong><span>Amostra pessoal não é a frequência da banca</span></div></div>
+    ${destaque.length?`<section class="qb-trap-next"><div><span class="qb-trap-label">PREVENÇÃO PERSONALIZADA</span><h3>Revise estes erros primeiro</h3></div><div>${destaque.map(x=>`<button type="button" data-mec-open="${x.code}"><b>${x.code}</b><span>${esc(x.memo.lema)}</span><small>${x.personal.erros?`${x.personal.erros} ${x.personal.erros===1?'erro':'erros'} na última resposta`:`${x.personal.reincidentes} ${x.personal.reincidentes===1?'item reincidente':'itens reincidentes'}`} · abrir</small></button>`).join('')}</div></section>`:`<section class="qb-trap-next qb-trap-neutral"><span class="qb-trap-label">PRÓXIMA AÇÃO</span><h3>${personalTotal?'Nenhum erro registrado nos itens classificados que você respondeu.':'Você ainda não tem respostas classificadas suficientes para medir seu padrão de erro.'}</h3><p>${personalTotal?'Isso não prova domínio permanente. Abra os mecanismos ainda não praticados e faça questões novas.':'Comece pelos três mecanismos mais presentes na amostra, sempre verificando o enunciado e a fonte.'}</p></section>`}
     <div class="qb-trap-controls"><label>Disciplina <select id="f-mecmat">${matOpts}</select></label><div class="qb-trap-focus" role="group" aria-label="Filtrar mecanismos">${focusOptions.map(([k,l])=>`<button data-mec-foco="${k}" aria-pressed="${foco===k}">${l}</button>`).join('')}</div></div>
     <section class="qb-trap-list"><div class="qb-trap-section-title"><div><span class="qb-trap-label">QUANDO O ITEM É ERRADO</span><h3>Armadilhas que mudam a regra</h3></div><span>${first.length} ${first.length===1?'mecanismo':'mecanismos'}</span></div>${first.map(card).join('')||'<p class="qb-trap-empty">Nenhuma armadilha atende a este filtro.</p>'}</section>
     <section class="qb-trap-list"><div class="qb-trap-section-title"><div><span class="qb-trap-label">QUANDO O ITEM É CERTO</span><h3>Verdades que parecem pegadinhas</h3></div><span>${second.length} ${second.length===1?'mecanismo':'mecanismos'}</span></div>${second.map(card).join('')||'<p class="qb-trap-empty">Nenhuma regra verdadeira atende a este filtro.</p>'}</section>
