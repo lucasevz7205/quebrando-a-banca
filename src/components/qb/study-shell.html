@@ -2261,7 +2261,6 @@ function wire(){
     const qid=window.QBQuestionLinks?.questionId(back.k);
     setTimeout(()=>document.getElementById(qid?'qbq-'+qid:'qbflash-'+back.k)?.scrollIntoView({block:'center',behavior:'smooth'}),80);
   }));
-  document.querySelectorAll('[data-exia]').forEach(b=>b.addEventListener('click',()=>explicarIA(b.dataset.exia)));
   document.querySelectorAll('[data-ia]').forEach(b=>b.addEventListener('click',()=>corrigirIA(b.dataset.ia)));
   document.querySelectorAll('[data-cver]').forEach(b=>b.addEventListener('click',()=>{S.cartAbertos.add(b.dataset.cver);render(true)}));
   document.querySelectorAll('[data-pts]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.pts;if(S.ptsAbertos.has(id))S.ptsAbertos.delete(id);else S.ptsAbertos.add(id);render(true)}));
