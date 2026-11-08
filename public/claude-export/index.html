@@ -630,6 +630,7 @@ const SECTION_INTROS={
   conteudo:['BIBLIOTECA DE ESTUDOS','Conhecimento organizado','Acesse seus materiais, resumos e fontes por disciplina e assunto.'],
   simulado:['SIMULADOS · CEBRASPE','Pratique como na prova','Teste domínio, ritmo e estratégia com exercícios em condições de prova.'],
   analiseDia:['ANÁLISE DIÁRIA','Desempenho diário','Os resultados reais das suas rodadas e tarefas em cada dia.'],
+  aprendizagem:['APRENDIZAGEM','Praticar, verificar e ajustar','Recupere conceitos, acompanhe verificações tardias e organize o próximo ciclo.'],
   metodo:['MÉTODO DE ESTUDO','Uma estratégia para evoluir','Entenda as regras de revisão, prática deliberada e análise de erros que orientam seus estudos.']
 };
 function sectionIntro(v){
@@ -2029,7 +2030,7 @@ function viewConteudo(){
     }
     html+=`</details>`;
   }
-  const fh=fontes.length?`<h2 class="section-title">Fontes do projeto</h2><div class="mat-l">${fontes.map(m=>`<div class="mat"><span class="mt">${m.url?`<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>`:esc(m.titulo)}</span><span class="mtype">${(m.topicos||[]).map(id=>esc(lblT(S.ed.get(id))||id)).join(', ')||esc(MTIPO[m.tipo]||'')}</span></div>`).join('')}</div>`:'';
+  const fh=fontes.length?`<h2 class="section-title">Fontes do projeto</h2><div class="mat-l">${fontes.map(m=>`<div class="mat"><span class="mt">${m.url?`<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>`:esc(m.titulo)}</span><span class="mtype">${(m.topicos||[]).map(id=>esc(lblT(S.ed.get(id))||id)).join(', ')||esc(MTIPO[m.tipo]||'')}</span>${window.QBLearning?window.QBLearning.contentHTML(S,m):''}</div>`).join('')}</div>`:'';
   return `<div class="wrap" style="gap:14px">
     ${html||'<div class="notice">Nenhum material gerado ainda.</div>'}
     ${fh}
@@ -2117,7 +2118,7 @@ function viewMetodo(){
 
 /* ---------- ações ---------- */
 function wire(){
-  if(window.QBLearning)window.QBLearning.wire(S,{render,hoje,setView});
+  if(window.QBLearning)window.QBLearning.wire(S,{render,hoje,setView,startSource:(ids,title)=>{setView('treinar');novaRodada('MIX',title,'aprendizagem',ids)}});
   if(S.view==='analiseDia' && window.QBInsights) window.QBInsights.wire(S,render,hoje);
   if(S.view==="painel" && window.QBPlanner) window.QBPlanner.wire(S,{render,enqueue,toast,hoje,startRevisao,iniciarMix,setView});
   document.querySelectorAll('[data-cap]').forEach(b=>b.addEventListener('click',()=>{S.cap=b.dataset.cap;S.capEscolhido=true;render(true)}));
@@ -2591,7 +2592,7 @@ function init(){
   }).then(db=>{
     if(!db){ S.dbState='missing'; render(true); return; }
     S.db=db; S.dbState='ok'; render(true); subscribe();
-    window.QBLearning?.mount(S,{render,hoje,setView});
+    window.QBLearning?.mount(S,{render,hoje,setView,startSource:(ids,title)=>{setView('treinar');novaRodada('MIX',title,'aprendizagem',ids)}});
   },()=>{S.dbState='missing';render(true)});
 }
 init();
