@@ -2059,7 +2059,10 @@ function viewConteudo(){
   const fontes=[...S.mat.values()].filter(m=>m.tipo==='fonte'||m.tipo==='metodo');
   const ordem=m=>{const t=S.ed.get((m.topicos||[])[0]);return t?t.ordem:9999};
   const grupos=new Map();
-  for(const m of mats.sort((a,b)=>ordem(a)-ordem(b)||(a.tipo==='material'?-1:1))){
+  const desempatar=(a,b)=>S.studyAccount&&a.tipo===b.tipo
+    ? a.titulo.localeCompare(b.titulo,'pt-BR',{numeric:true})
+    : a.tipo==='material'?-1:1;
+  for(const m of mats.sort((a,b)=>ordem(a)-ordem(b)||desempatar(a,b))){
     const t=S.ed.get((m.topicos||[])[0]); const k=t?t.materia:'Outros';
     if(!grupos.has(k)) grupos.set(k,[]); grupos.get(k).push(m);
   }
