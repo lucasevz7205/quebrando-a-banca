@@ -1,0 +1,1160 @@
+{
+  "topic": "fiscal-sup-qualidade",
+  "title": "Qualidade de Dados",
+  "source": "3. Qualidade de Dados.pdf",
+  "status": "revisao_pedagogica_pendente",
+  "cap": "FISCAL-TI-SUP-QUAL",
+  "order": 1001,
+  "questions": [
+    {
+      "id": "fiscal-sup-qualidade-ce01",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "A qualidade dos dados pode ser avaliada pela adequação deles ao uso pretendido.",
+      "gabarito": "C",
+      "comentario": "A adequação ao uso considera requisitos e expectativas do consumidor dos dados, não só propriedades técnicas.",
+      "ordem": 100101,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 3",
+      "tema": "Adequação ao uso",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n01",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 3,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce02",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Qualidade de dados e qualidade da informação são expressões rigorosamente equivalentes, independentemente de contexto e finalidade.",
+      "gabarito": "E",
+      "comentario": "Qualidade de dados focaliza características dos registros; qualidade da informação acrescenta relevância e utilidade contextual.",
+      "ordem": 100102,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 6",
+      "tema": "Dado × informação",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n02",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 6,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce03",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Um conjunto de dados pode ser adequado a uma finalidade e insuficiente para outra, conforme requisitos dos consumidores.",
+      "gabarito": "C",
+      "comentario": "Os critérios de qualidade dependem da finalidade; não existe um único patamar universal adequado a todos os usos.",
+      "ordem": 100103,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 5",
+      "tema": "Contexto",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n03",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 5,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce04",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "A família ISO 8000 está associada à qualidade de dados, incluindo sua caracterização, medição e gestão.",
+      "gabarito": "C",
+      "comentario": "A apostila apresenta ISO 8000 como referência de padronização para avaliar e gerenciar qualidade de dados.",
+      "ordem": 100104,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 4",
+      "tema": "ISO 8000",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n04",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 4,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce05",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Um valor pode obedecer ao formato exigido e ainda ser inexato em relação ao fato que representa.",
+      "gabarito": "C",
+      "comentario": "Validade de formato não comprova que o valor corresponde à realidade; precisão exige correção em relação à referência.",
+      "ordem": 100105,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 8",
+      "tema": "Precisão",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n05",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce06",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Consistência exige que os registros não apresentem contradições relevantes entre campos, bases ou sistemas.",
+      "gabarito": "C",
+      "comentario": "Incompatibilidades entre fontes ou campos constituem falhas de consistência, mesmo quando cada campo é sintaticamente válido.",
+      "ordem": 100106,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 8",
+      "tema": "Consistência",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n06",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce07",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "A qualidade de atualização depende do tempo transcorrido desde o registro, mesmo quando a realidade permanece inalterada.",
+      "gabarito": "E",
+      "comentario": "A atualidade depende de representar corretamente o estado do mundo; um dado antigo pode permanecer atual se o fato não mudou.",
+      "ordem": 100107,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 8",
+      "tema": "Atualidade",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n07",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce08",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "A completude examina se estão presentes os registros e valores necessários à finalidade definida.",
+      "gabarito": "C",
+      "comentario": "A avaliação pode incidir no conjunto, no registro ou no atributo e considera quais campos são exigidos.",
+      "ordem": 100108,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 21",
+      "tema": "Completude",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n08",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 21,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce09",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Uma chave estrangeira que aponta para registro inexistente pode caracterizar violação de integridade referencial.",
+      "gabarito": "C",
+      "comentario": "O registro dependente sem correspondente referenciado é um órfão e revela falha na coerência referencial.",
+      "ordem": 100109,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 23",
+      "tema": "Integridade referencial",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n09",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 23,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce10",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Latência de dados corresponde sempre à idade total do evento, contada até o momento em que o analista o consulta.",
+      "gabarito": "E",
+      "comentario": "A apostila distingue latência, tempo entre criação e disponibilização, de outras medidas de idade e atualidade.",
+      "ordem": 100110,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 24",
+      "tema": "Latência",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n10",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 24,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce11",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "A dimensão de unicidade identifica duplicações indevidas de uma mesma entidade em um conjunto de registros.",
+      "gabarito": "C",
+      "comentario": "Duplicação lógica pode persistir mesmo com diferentes grafias e requer critérios de identificação de mesma entidade.",
+      "ordem": 100111,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 24",
+      "tema": "Unicidade",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n11",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 24,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce12",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Rastreabilidade permite acompanhar origem e histórico dos dados, apoiando auditoria e investigação de problemas.",
+      "gabarito": "C",
+      "comentario": "Conhecer proveniência e transformações facilita análise de incidentes, atribuição de responsabilidades e controle.",
+      "ordem": 100112,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 8",
+      "tema": "Rastreabilidade",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n12",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce13",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "A gestão de qualidade de dados restringe-se à correção pontual de erros depois que usuários os descobrem.",
+      "gabarito": "E",
+      "comentario": "O DMBOK inclui planejamento, requisitos, avaliação, monitoramento e melhoria contínua, além de correção.",
+      "ordem": 100113,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 9",
+      "tema": "DMBOK",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n13",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 9,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce14",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Requisitos de qualidade devem ser estabelecidos considerando a necessidade do negócio antes de selecionar métricas.",
+      "gabarito": "C",
+      "comentario": "Sem critérios esperados não é possível interpretar corretamente taxas, limites e ações corretivas.",
+      "ordem": 100114,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 10",
+      "tema": "Requisitos",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n14",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 10,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce15",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Data profiling investiga distribuições, formatos, valores nulos e padrões para avaliar a qualidade de conjuntos de dados.",
+      "gabarito": "C",
+      "comentario": "O perfil de dados usa estatísticas descritivas para revelar estrutura, anomalias e oportunidades de melhoria.",
+      "ordem": 100115,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 13",
+      "tema": "Profiling",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n15",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 13,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce16",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Os resultados estatísticos de data profiling dispensam análise humana e aplicação das regras de negócio.",
+      "gabarito": "E",
+      "comentario": "Os indicadores do profiling precisam ser interpretados em face de requisitos, regras e contexto de uso.",
+      "ordem": 100116,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 14",
+      "tema": "Interpretação do profiling",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n16",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 14,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce17",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Matching pode usar uma pontuação de similaridade entre registros para apoiar a identificação de duplicatas.",
+      "gabarito": "C",
+      "comentario": "Correspondência aproximada, inclusive ponderada, ajuda a reconhecer instâncias da mesma entidade.",
+      "ordem": 100117,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 15",
+      "tema": "Matching",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n17",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 15,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce18",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "A deduplicação pode exigir regras de precedência entre fontes quando existem dados conflitantes sobre a mesma entidade.",
+      "gabarito": "C",
+      "comentario": "A seleção do registro autoritativo demanda regras de mesclagem e conhecimento sobre sistemas de origem.",
+      "ordem": 100118,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 16",
+      "tema": "Deduplicação",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n18",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 16,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce19",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Enriquecer dados significa apenas eliminar duplicatas de um conjunto já existente.",
+      "gabarito": "E",
+      "comentario": "Enriquecimento adiciona atributos e contexto, internos ou externos; deduplicação constitui outra atividade.",
+      "ordem": 100119,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 17",
+      "tema": "Enriquecimento",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n19",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 17,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce20",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Carimbos de criação e alteração podem auxiliar a investigar quando surgiu um problema de dados.",
+      "gabarito": "C",
+      "comentario": "Registros temporais facilitam delimitar a janela do incidente e verificar mudanças no ciclo de vida.",
+      "ordem": 100120,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 18",
+      "tema": "Carimbos temporais",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n20",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 18,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce21",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Uma métrica de qualidade útil deve ter regra de cálculo, limite interpretável e periodicidade de medição.",
+      "gabarito": "C",
+      "comentario": "Indicadores sem definição, parâmetros e cadência não sustentam comparações ou decisões corretivas confiáveis.",
+      "ordem": 100121,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 19",
+      "tema": "Métricas",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n21",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 19,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce22",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "A taxa de completude pode ser expressa pela proporção de valores obrigatórios presentes em relação aos esperados.",
+      "gabarito": "C",
+      "comentario": "A fração usa os campos necessários conforme regra definida; não deve confundir ausência permitida com falha.",
+      "ordem": 100122,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 20",
+      "tema": "Taxa de completude",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n22",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 20,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce23",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Uma taxa alta de conformidade de formato prova, sozinha, a correção factual de todos os registros avaliados.",
+      "gabarito": "E",
+      "comentario": "Conformidade com um padrão é distinta de exatidão frente a uma fonte de referência.",
+      "ordem": 100123,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 20",
+      "tema": "Taxa de precisão",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n23",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 20,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-qualidade-ce24",
+      "cap": "FISCAL-TI-SUP-QUAL",
+      "capNome": "Área Fiscal · Suplemento de TI · Qualidade de Dados",
+      "enunciado": "Métricas de qualidade devem estar vinculadas a objetivos de negócio e ações corretivas mensuráveis.",
+      "gabarito": "C",
+      "comentario": "Indicadores ganham utilidade quando medem requisitos prioritários e orientam decisões de melhoria.",
+      "ordem": 100124,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "3. Qualidade de Dados.pdf, p. 19",
+      "tema": "Orientação a objetivos",
+      "topico": "fiscal-sup-qualidade",
+      "assuntoId": "fiscal-ti-qualidade-dados",
+      "mapaNoId": "fiscal-sup-qualidade-n24",
+      "fonte": {
+        "documento": "3. Qualidade de Dados.pdf",
+        "pagina": 19,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Adequação ao uso",
+      "q": "O que significa fitness for use?",
+      "a": [
+        "Conformidade dos dados às necessidades concretas de seu uso."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 3",
+      "mapaNoId": "fiscal-sup-qualidade-n01",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce01"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dado × informação",
+      "q": "Como distinguir qualidade de dados de qualidade da informação?",
+      "a": [
+        "Dados: correção e propriedades dos registros; informação: relevância e utilidade para uma decisão."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 6",
+      "mapaNoId": "fiscal-sup-qualidade-n02",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Contexto",
+      "q": "Por que a finalidade importa para medir qualidade?",
+      "a": [
+        "Usos diferentes exigem precisão, completude e atualização em graus diferentes."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 5",
+      "mapaNoId": "fiscal-sup-qualidade-n03",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "ISO 8000",
+      "q": "Qual norma é apresentada como referência de qualidade de dados?",
+      "a": [
+        "A família ISO 8000."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 4",
+      "mapaNoId": "fiscal-sup-qualidade-n04",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Precisão",
+      "q": "Um CPF formatado corretamente prova precisão?",
+      "a": [
+        "Não. Formato válido não prova correspondência ao indivíduo correto."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 8",
+      "mapaNoId": "fiscal-sup-qualidade-n05",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Consistência",
+      "q": "Como reconhecer inconsistência?",
+      "a": [
+        "Buscar afirmações contraditórias entre registros, atributos ou sistemas."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 8",
+      "mapaNoId": "fiscal-sup-qualidade-n06",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Atualidade",
+      "q": "Um dado antigo é necessariamente desatualizado?",
+      "a": [
+        "Não. Pode continuar atual quando o fato representado não se alterou."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 8",
+      "mapaNoId": "fiscal-sup-qualidade-n07",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Completude",
+      "q": "O que mede a completude?",
+      "a": [
+        "A presença dos dados necessários segundo requisitos explicitados."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 21",
+      "mapaNoId": "fiscal-sup-qualidade-n08",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Integridade referencial",
+      "q": "O que é registro órfão?",
+      "a": [
+        "Referência de chave estrangeira sem registro correspondente na tabela de destino."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 23",
+      "mapaNoId": "fiscal-sup-qualidade-n09",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Latência",
+      "q": "Qual diferença entre latência e atualidade?",
+      "a": [
+        "Latência mede atraso na disponibilização; atualidade mede adequação temporal ao uso."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 24",
+      "mapaNoId": "fiscal-sup-qualidade-n10",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Unicidade",
+      "q": "Duas grafias ligeiramente distintas podem ferir unicidade?",
+      "a": [
+        "Sim, se representam indevidamente a mesma entidade."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 24",
+      "mapaNoId": "fiscal-sup-qualidade-n11",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Rastreabilidade",
+      "q": "Por que manter linhagem dos dados?",
+      "a": [
+        "Para reconstruir origem, transformações e histórico durante auditorias."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 8",
+      "mapaNoId": "fiscal-sup-qualidade-n12",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "DMBOK",
+      "q": "Quais fases integram a gestão de qualidade?",
+      "a": [
+        "Definir requisitos, avaliar, monitorar, corrigir e melhorar continuamente."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 9",
+      "mapaNoId": "fiscal-sup-qualidade-n13",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Requisitos",
+      "q": "O que vem antes de escolher uma métrica?",
+      "a": [
+        "Definir qual requisito do negócio será verificado."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 10",
+      "mapaNoId": "fiscal-sup-qualidade-n14",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Profiling",
+      "q": "O que a análise de perfil costuma identificar?",
+      "a": [
+        "Distribuições, valores nulos, formatos, padrões e anomalias."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 13",
+      "mapaNoId": "fiscal-sup-qualidade-n15",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Interpretação do profiling",
+      "q": "Por que profiling isolado não encerra auditoria?",
+      "a": [
+        "Porque estatísticas não substituem avaliação de regras e contexto."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 14",
+      "mapaNoId": "fiscal-sup-qualidade-n16",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Matching",
+      "q": "Qual é a função do matching?",
+      "a": [
+        "Estimar semelhança para identificar registros que possivelmente representam a mesma entidade."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 15",
+      "mapaNoId": "fiscal-sup-qualidade-n17",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Deduplicação",
+      "q": "Qual cuidado adotar ao mesclar duplicados?",
+      "a": [
+        "Definir qual fonte prevalece e preservar proveniência."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 16",
+      "mapaNoId": "fiscal-sup-qualidade-n18",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Enriquecimento",
+      "q": "Como enriquecimento difere de deduplicação?",
+      "a": [
+        "Enriquecimento acrescenta informação; deduplicação trata repetições indevidas."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 17",
+      "mapaNoId": "fiscal-sup-qualidade-n19",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Carimbos temporais",
+      "q": "Para que servem timestamps na qualidade?",
+      "a": [
+        "Rastrear mudanças e delimitar períodos de incidentes."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 18",
+      "mapaNoId": "fiscal-sup-qualidade-n20",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Métricas",
+      "q": "Quais elementos tornam a métrica auditável?",
+      "a": [
+        "Fórmula, critério interpretativo, limites aceitáveis e frequência."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 19",
+      "mapaNoId": "fiscal-sup-qualidade-n21",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Taxa de completude",
+      "q": "Como calcular uma taxa simples de completude?",
+      "a": [
+        "Valores obrigatórios preenchidos ÷ valores obrigatórios esperados."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 20",
+      "mapaNoId": "fiscal-sup-qualidade-n22",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Taxa de precisão",
+      "q": "Por que conformidade e precisão não são idênticas?",
+      "a": [
+        "Passar na validação de formato não assegura que o valor descreva corretamente a realidade."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 20",
+      "mapaNoId": "fiscal-sup-qualidade-n23",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Orientação a objetivos",
+      "q": "Como selecionar métricas relevantes?",
+      "a": [
+        "Vinculá-las a requisitos críticos e a possíveis decisões corretivas."
+      ],
+      "src": "3. Qualidade de Dados.pdf, p. 19",
+      "mapaNoId": "fiscal-sup-qualidade-n24",
+      "questaoIds": [
+        "fiscal-sup-qualidade-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Qualidade de Dados · Área Fiscal / suplemento de TI",
+    "versao": 1,
+    "fonte": "3. Qualidade de Dados.pdf, pp. 3–24",
+    "ramos": [
+      {
+        "id": "g-conceitos",
+        "t": "Conceitos",
+        "n": "Conceitos e armadilhas sobre conceitos.",
+        "cor": 1,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "3. Qualidade de Dados.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-qualidade-n01",
+            "t": "Adequação ao uso",
+            "n": "Conformidade dos dados às necessidades concretas de seu uso.",
+            "x": {
+              "e": "A adequação ao uso considera requisitos e expectativas do consumidor dos dados, não só propriedades técnicas.",
+              "src": "3. Qualidade de Dados.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce01"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n02",
+            "t": "Dado × informação",
+            "n": "Dados: correção e propriedades dos registros; informação: relevância e utilidade para uma decisão.",
+            "x": {
+              "e": "Qualidade de dados focaliza características dos registros; qualidade da informação acrescenta relevância e utilidade contextual.",
+              "src": "3. Qualidade de Dados.pdf, p. 6",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce02"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n03",
+            "t": "Contexto",
+            "n": "Usos diferentes exigem precisão, completude e atualização em graus diferentes.",
+            "x": {
+              "e": "Os critérios de qualidade dependem da finalidade; não existe um único patamar universal adequado a todos os usos.",
+              "src": "3. Qualidade de Dados.pdf, p. 5",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce03"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n04",
+            "t": "ISO 8000",
+            "n": "A família ISO 8000.",
+            "x": {
+              "e": "A apostila apresenta ISO 8000 como referência de padronização para avaliar e gerenciar qualidade de dados.",
+              "src": "3. Qualidade de Dados.pdf, p. 4",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce04"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-dimensoes",
+        "t": "Dimensões",
+        "n": "Conceitos e armadilhas sobre dimensões.",
+        "cor": 2,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "3. Qualidade de Dados.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-qualidade-n05",
+            "t": "Precisão",
+            "n": "Não. Formato válido não prova correspondência ao indivíduo correto.",
+            "x": {
+              "e": "Validade de formato não comprova que o valor corresponde à realidade; precisão exige correção em relação à referência.",
+              "src": "3. Qualidade de Dados.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce05"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n06",
+            "t": "Consistência",
+            "n": "Buscar afirmações contraditórias entre registros, atributos ou sistemas.",
+            "x": {
+              "e": "Incompatibilidades entre fontes ou campos constituem falhas de consistência, mesmo quando cada campo é sintaticamente válido.",
+              "src": "3. Qualidade de Dados.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce06"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n07",
+            "t": "Atualidade",
+            "n": "Não. Pode continuar atual quando o fato representado não se alterou.",
+            "x": {
+              "e": "A atualidade depende de representar corretamente o estado do mundo; um dado antigo pode permanecer atual se o fato não mudou.",
+              "src": "3. Qualidade de Dados.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce07"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n08",
+            "t": "Completude",
+            "n": "A presença dos dados necessários segundo requisitos explicitados.",
+            "x": {
+              "e": "A avaliação pode incidir no conjunto, no registro ou no atributo e considera quais campos são exigidos.",
+              "src": "3. Qualidade de Dados.pdf, p. 21",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce08"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n09",
+            "t": "Integridade referencial",
+            "n": "Referência de chave estrangeira sem registro correspondente na tabela de destino.",
+            "x": {
+              "e": "O registro dependente sem correspondente referenciado é um órfão e revela falha na coerência referencial.",
+              "src": "3. Qualidade de Dados.pdf, p. 23",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce09"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n10",
+            "t": "Latência",
+            "n": "Latência mede atraso na disponibilização; atualidade mede adequação temporal ao uso.",
+            "x": {
+              "e": "A apostila distingue latência, tempo entre criação e disponibilização, de outras medidas de idade e atualidade.",
+              "src": "3. Qualidade de Dados.pdf, p. 24",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce10"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n11",
+            "t": "Unicidade",
+            "n": "Sim, se representam indevidamente a mesma entidade.",
+            "x": {
+              "e": "Duplicação lógica pode persistir mesmo com diferentes grafias e requer critérios de identificação de mesma entidade.",
+              "src": "3. Qualidade de Dados.pdf, p. 24",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce11"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n12",
+            "t": "Rastreabilidade",
+            "n": "Para reconstruir origem, transformações e histórico durante auditorias.",
+            "x": {
+              "e": "Conhecer proveniência e transformações facilita análise de incidentes, atribuição de responsabilidades e controle.",
+              "src": "3. Qualidade de Dados.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce12"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-gestao",
+        "t": "Gestão",
+        "n": "Conceitos e armadilhas sobre gestão.",
+        "cor": 3,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "3. Qualidade de Dados.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-qualidade-n13",
+            "t": "DMBOK",
+            "n": "Definir requisitos, avaliar, monitorar, corrigir e melhorar continuamente.",
+            "x": {
+              "e": "O DMBOK inclui planejamento, requisitos, avaliação, monitoramento e melhoria contínua, além de correção.",
+              "src": "3. Qualidade de Dados.pdf, p. 9",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce13"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n14",
+            "t": "Requisitos",
+            "n": "Definir qual requisito do negócio será verificado.",
+            "x": {
+              "e": "Sem critérios esperados não é possível interpretar corretamente taxas, limites e ações corretivas.",
+              "src": "3. Qualidade de Dados.pdf, p. 10",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce14"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-ferramentas",
+        "t": "Ferramentas",
+        "n": "Conceitos e armadilhas sobre ferramentas.",
+        "cor": 4,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "3. Qualidade de Dados.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-qualidade-n15",
+            "t": "Profiling",
+            "n": "Distribuições, valores nulos, formatos, padrões e anomalias.",
+            "x": {
+              "e": "O perfil de dados usa estatísticas descritivas para revelar estrutura, anomalias e oportunidades de melhoria.",
+              "src": "3. Qualidade de Dados.pdf, p. 13",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce15"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n16",
+            "t": "Interpretação do profiling",
+            "n": "Porque estatísticas não substituem avaliação de regras e contexto.",
+            "x": {
+              "e": "Os indicadores do profiling precisam ser interpretados em face de requisitos, regras e contexto de uso.",
+              "src": "3. Qualidade de Dados.pdf, p. 14",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce16"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n17",
+            "t": "Matching",
+            "n": "Estimar semelhança para identificar registros que possivelmente representam a mesma entidade.",
+            "x": {
+              "e": "Correspondência aproximada, inclusive ponderada, ajuda a reconhecer instâncias da mesma entidade.",
+              "src": "3. Qualidade de Dados.pdf, p. 15",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce17"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n18",
+            "t": "Deduplicação",
+            "n": "Definir qual fonte prevalece e preservar proveniência.",
+            "x": {
+              "e": "A seleção do registro autoritativo demanda regras de mesclagem e conhecimento sobre sistemas de origem.",
+              "src": "3. Qualidade de Dados.pdf, p. 16",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce18"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n19",
+            "t": "Enriquecimento",
+            "n": "Enriquecimento acrescenta informação; deduplicação trata repetições indevidas.",
+            "x": {
+              "e": "Enriquecimento adiciona atributos e contexto, internos ou externos; deduplicação constitui outra atividade.",
+              "src": "3. Qualidade de Dados.pdf, p. 17",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce19"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n20",
+            "t": "Carimbos temporais",
+            "n": "Rastrear mudanças e delimitar períodos de incidentes.",
+            "x": {
+              "e": "Registros temporais facilitam delimitar a janela do incidente e verificar mudanças no ciclo de vida.",
+              "src": "3. Qualidade de Dados.pdf, p. 18",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce20"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-metricas",
+        "t": "Métricas",
+        "n": "Conceitos e armadilhas sobre métricas.",
+        "cor": 5,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "3. Qualidade de Dados.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-qualidade-n21",
+            "t": "Métricas",
+            "n": "Fórmula, critério interpretativo, limites aceitáveis e frequência.",
+            "x": {
+              "e": "Indicadores sem definição, parâmetros e cadência não sustentam comparações ou decisões corretivas confiáveis.",
+              "src": "3. Qualidade de Dados.pdf, p. 19",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce21"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n22",
+            "t": "Taxa de completude",
+            "n": "Valores obrigatórios preenchidos ÷ valores obrigatórios esperados.",
+            "x": {
+              "e": "A fração usa os campos necessários conforme regra definida; não deve confundir ausência permitida com falha.",
+              "src": "3. Qualidade de Dados.pdf, p. 20",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce22"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n23",
+            "t": "Taxa de precisão",
+            "n": "Passar na validação de formato não assegura que o valor descreva corretamente a realidade.",
+            "x": {
+              "e": "Conformidade com um padrão é distinta de exatidão frente a uma fonte de referência.",
+              "src": "3. Qualidade de Dados.pdf, p. 20",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce23"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-qualidade-n24",
+            "t": "Orientação a objetivos",
+            "n": "Vinculá-las a requisitos críticos e a possíveis decisões corretivas.",
+            "x": {
+              "e": "Indicadores ganham utilidade quando medem requisitos prioritários e orientam decisões de melhoria.",
+              "src": "3. Qualidade de Dados.pdf, p. 19",
+              "questaoIds": [
+                "fiscal-sup-qualidade-ce24"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": []
+  }
+}
