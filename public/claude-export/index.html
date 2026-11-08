@@ -679,6 +679,7 @@ function render(force){
   else if(S.view==='simulado'){ main.innerHTML=viewSimulado(); if(!simLS('obj')&&!simLS('disc')) main.insertAdjacentHTML('afterbegin',sectionIntro('simulado')); wireSim(); return; }
   else main.innerHTML=viewHistorico();
   if(S.view==='painel'&&window.QBLearning) main.insertAdjacentHTML('beforeend',window.QBLearning.weeklyHTML(S,hoje()));
+  if(S.view!=='aprendizagem'&&window.QBLearning) main.insertAdjacentHTML('afterbegin',window.QBLearning.statusHTML());
   const sn=subnav();
   if(S.view!=='painel'&&S.view!=='analiseDia'&&!(S.view==='treinar'&&S.round)) main.insertAdjacentHTML('afterbegin',sectionIntro(S.view));
   if(sn&&!(S.view==='treinar'&&S.round)) main.insertAdjacentHTML('afterbegin',`<div class="qb-tab-shell">${sn}</div>`);
@@ -2309,6 +2310,7 @@ function registrar(L,conf){
   const rdoc=rodadaDoc(rd);
   enqueue(()=>S.db.doc('respostas/'+q.id).set(r));
   enqueue(()=>S.db.doc('rodadas/'+rd.id).set(rdoc));
+  window.QBLearning?.recordPrimary(learning);
   render(true);
 }
 /* repescagem: não altera respostas nem agenda; só fica registrada na rodada */
