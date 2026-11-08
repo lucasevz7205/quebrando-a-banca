@@ -1,6 +1,6 @@
 # Área Fiscal · matriz operacional de cobertura
 
-Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 06 e 12** e compartilhamento do banco na bateria **18**. Ambiente Base44 vinculado à conta do candidato; o histórico da Câmara permanece separado.
+Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 06, 07, 08, 09 e 12** e compartilhamento do banco nas baterias **18 e 19**. Ambiente Base44 vinculado à conta do candidato; o histórico da Câmara permanece separado.
 
 ## Totais reais do banco
 
@@ -8,23 +8,28 @@ Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 06 e 12** e
 |---|---:|
 | Tarefas do edital | 75 |
 | Trilhas | 00: 20, 01: 16, 02: 20, 03: 19 |
-| Questões físicas distintas | 170 |
+| Questões físicas distintas | **273** |
 | Mapas por tópico | 75 |
-| Nós dos mapas, considerando todos os níveis | 419 |
-| Flashcards físicos | 261 |
-| Flashcards ligados a nós por identificador explícito | 119 |
-| Déficit aritmético até 20 questões/tarefa (excluídas 3 orientações, com reutilização da T18) | 1292 |
+| Nós dos mapas, considerando todos os níveis | **532** (466 com identificador) |
+| Flashcards físicos | **364** |
+| Flashcards ligados a nós por identificador explícito | **230** |
+| Déficit aritmético até 20 questões/tarefa (excluídas 3 orientações e consideradas as baterias T18 e T19) | **1216** |
 
-**Atenção:** a bateria **T18 possui 77 questões acessíveis**: 1 local e 76 referenciadas por ID das tarefas T06 e T12. Os itens reutilizados **não** aumentam o total de questões físicas e não criam novo histórico de respostas. Os mapas e cartões da bateria podem encaminhar aos materiais conceituais T06 e T12.
+**Atenção:** a bateria **T18 possui 77 questões acessíveis**: 1 local e 76 referenciadas por ID das tarefas T06 e T12. Os itens reutilizados **não** aumentam o total de questões físicas e não criam novo histórico de respostas. Os mapas e cartões da bateria podem encaminhar aos materiais conceituais T06 e T12. A bateria **T19 contém 34 questões acessíveis**: 1 própria e 33 referências por ID à T09. Em ambos os casos, não há cópia de documentos de questões, nem duplicação de histórico ou SRS.
 
 ## Assuntos aprofundados
 
 - **T04 · Constitucionalismo e neoconstitucionalismo:** 25 questões únicas, 44 nós, 39 flashcards, 39 vínculos diretos; fonte: Apostila Direito Constitucional, seção 1.2, pp. 7–18.
 - **T06 · Regime jurídico administrativo e princípios expressos:** 39 questões únicas, 44 nós e 40 flashcards (40 vínculos exatos), fonte: `DIREITO ADMINISTRATIVO.zip/1. Princípios da Administração.pdf`, seções 1.1–1.2, pp. 3–28.
+- **T07 · Ortografia, acentuação e acentos diferenciais:** **40 questões** (39 novas e uma preservada), **46 nós**, **41 flashcards** (41/41 vínculos), fonte: \`PORTUGUÊS.zip/1. Ortografia oficial. Acentuação gr.pdf\`, pp. 3, 14–35, seções 1.1 e 1.4–1.6.
+- **T08 · Tributo: conceito e natureza jurídica:** **33 questões**, **39 nós**, **34 flashcards** (34/34 vínculos), fonte: \`DIREITO TRIBUTÁRIO.zip/1. 1 - Conceito de Tributo.pdf\`, pp. 3, 10–27, especialmente arts. 3º–5º, 118, 156 e 162 do CTN e decisões discutidas na própria apostila.
+- **T09 · Contabilidade: objeto, finalidade e usuários:** **33 questões**, **40 nós**, **34 flashcards** (34/34 vínculos), fonte: \`CONTABILIDADE.zip/1. Aspectos Introdutórios.pdf\`, pp. 3–28. A distinção finalidade × objetivo segue a convenção adotada pela apostila e seu enquadramento em provas.
 - **T12 · Princípios administrativos implícitos:** 37 questões únicas, 46 nós e 38 flashcards (38 vínculos exatos), fonte: mesma apostila, seção 1.3, pp. 28–59.
 - **T18 · Bateria: princípios administrativos:** 77 questões disponíveis por IDs únicos, duas perguntas conceituais próprias, links para os dois mapas aprofundados; 76 itens são **referências**, não cópias.
 
-**Proveniência:** as questões adicionais foram redigidas para a plataforma e rotuladas como **autorais** com página da apostila. Não foram indevidamente atribuídas ao Cebraspe, FCC ou FGV. As questões anteriormente registradas e as avaliações SRS foram preservadas. Os materiais são preparados editorialmente; contagem e links comprovados não equivalem a evidência de retenção ou a revisão acadêmica completa.
+- **T19 · Bateria de aspectos introdutórios:** **34 questões** com reutilização dos 33 IDs da tarefa 09, mais uma questão própria; dois cartões preservados e links ao mapa da T09.
+
+**Proveniência:** as questões adicionais foram redigidas para a plataforma e rotuladas como **autorais** com página da apostila. Não foram indevidamente atribuídas ao Cebraspe, FCC ou FGV. As questões anteriormente registradas e as avaliações SRS foram preservadas. **201 questões novas** (além das 72 originalmente cadastradas) foram criadas como exercícios autorais com comentários e referências de apostila. A presença de conteúdo não atesta sua qualidade científica nem o domínio ou retenção por parte do aluno. Nenhum histórico de respostas ou avaliações de revisão espaçada foi artificialmente criado.
 
 **T05 bloqueada:** falta `TI.zip`, apostila indicada na Trilha 00 para DIKW e dados abertos. Não foi preenchida por conteúdo geral sem a fonte do usuário.
 
@@ -38,9 +43,9 @@ Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 06 e 12** e
 | 00 | 04 | Direito Constitucional | Constitucionalismo e neoconstitucionalismo | 25 | 44 | 39 | 39/39 | Cobertura estrutural; revisão editorial pendente |
 | 00 | 05 | Tecnologia da Informação | Pirâmide DIKW e dados abertos | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 00 | 06 | Direito Administrativo | Regime jurídico administrativo e princípios expressos | 39 | 44 | 40 | 40/40 | Cobertura estrutural; revisão editorial pendente |
-| 00 | 07 | Português | Ortografia, acentuação e acentos diferenciais | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 00 | 08 | Direito Tributário | Tributo: conceito e natureza jurídica | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 00 | 09 | Contabilidade Geral e Avançada | Contabilidade: objeto, finalidade e usuários | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 00 | 07 | Português | Ortografia, acentuação e acentos diferenciais | **40** | **46** | **41** | **41/41** | Cobertura estrutural; revisão editorial pendente |
+| 00 | 08 | Direito Tributário | Tributo: conceito e natureza jurídica | **33** | **39** | **34** | **34/34** | Cobertura estrutural; revisão editorial pendente |
+| 00 | 09 | Contabilidade Geral e Avançada | Contabilidade: objeto, finalidade e usuários | **33** | **40** | **34** | **34/34** | Cobertura estrutural; revisão editorial pendente |
 | 00 | 10 | Direito Constitucional | Sentidos, estrutura e classificação da Constituição | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 00 | 11 | Tecnologia da Informação | Metadados de arquivos | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 00 | 12 | Direito Administrativo | Princípios administrativos implícitos | 37 | 46 | 38 | 38/38 | Cobertura estrutural; revisão editorial pendente |
@@ -50,7 +55,7 @@ Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 06 e 12** e
 | 00 | 16 | Direito Constitucional | Aplicabilidade das normas e poder constituinte | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 00 | 17 | Tecnologia da Informação | Bateria: DIKW, dados abertos e metadados | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 00 | 18 | Direito Administrativo | Bateria: princípios administrativos | 77 | 4 | 2 | 2/2 | Bateria: banco compartilhado |
-| 00 | 19 | Contabilidade Geral e Avançada | Bateria: aspectos introdutórios da contabilidade | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 00 | 19 | Contabilidade Geral e Avançada | Bateria: aspectos introdutórios da contabilidade | **34** | 4 | 2 | **2/2** | Bateria: banco compartilhado |
 | 00 | 20 | Raciocínio Lógico e Matemática | Proposições compostas e conectivos | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 01 | 21 | Tecnologia da Informação | Governança de dados: fundamentos, papéis e organização | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 01 | 22 | Contabilidade Geral e Avançada | Estática patrimonial, situações líquidas, atos e fatos | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
@@ -116,3 +121,12 @@ Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 06 e 12** e
 4. Mapa temático com conceitos, relações, exemplos e distorções de banca.
 5. Flashcards de evocação e aplicação ligados por `mapaNoId`, sem interferência na revisão espaçada.
 6. Testes de integridade e validação editorial sem alteração das respostas anteriores.
+
+## Continuação desta etapa (T07, T08, T09 e T19)
+
+- Os três temas teóricos foram ampliados usando os PDFs anexados, com questão autoral Certo/Errado, comentário, referência à página, subtópico e ligação direta a nó do mapa e flashcard.
+- Foram preservados em cada tarefa os dois flashcards anteriores e a questão original. A revisão espaçada segue o motor existente; nenhum resultado do candidato foi alterado.
+- O banco compartilhado da T19 inclui 33 referências por ID a questões da T09 sem criar documentos duplicados. Esta bateria continua com seu próprio item original.
+- A T08 exige atenção especial à ressalva jurisprudencial sobre dação de bens móveis (ADI 1.917 e ADI 2.405) e ao caráter finalístico de certas espécies tributárias, tal como tratado nas páginas da apostila, sem extrapolações.
+- Foram verificados ao vivo no Base44: 273 IDs físicos distintos, nenhum item sem comentário/gabarito, 75 mapas, 532 nós no total (466 com ID), 364 cartões, 230 links explícitos válidos e referências de baterias sem ID faltante.
+- **Limitação:** as 75 tarefas ainda não foram todas aprofundadas. A T05, T11, T17 e demais aulas de TI continuam à espera de \`TI.zip\`.
