@@ -10,7 +10,8 @@ const fileNames=[
   "t09-aspectos-introdutorios",
   "t11-metadados",
   "t12-principios-implicitos",
-  "t21-governanca-dados-fundamentos"
+  "t21-governanca-dados-fundamentos",
+  "t26-governanca-arquitetura-controles"
 ];
 
 for(const file of fileNames){
