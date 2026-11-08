@@ -89,6 +89,6 @@ test('No original study counters are modified by rendering metrics',()=>{
  L.render(S,'2026-11-08');assert.equal(JSON.stringify([...S.r]),before);
 });
 test('All inline scripts parse',()=>{
- const html=fs.readFileSync('public/claude-export/index.html','utf8');
+ const html=fs.readFileSync('src/components/qb/study-shell.html','utf8');
  for(const m of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g))if(m[1].trim())new vm.Script(m[1]);
 });

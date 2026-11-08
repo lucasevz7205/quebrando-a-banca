@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 
-const html=fs.readFileSync('public/claude-export/index.html','utf8');
+const html=fs.readFileSync('src/components/qb/study-shell.html','utf8');
 const source=fs.readFileSync('public/claude-export/learning.js','utf8');
 const state=()=>({q:new Map(),r:new Map(),cfg:new Map(),rodadas:[],learningEvents:new Map(),learningContent:new Map(),mat:new Map()});
 const env={window:{},Map,Set,Date};

@@ -1,4 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
+import { studyShell } from "@/lib/study-shell.server";
+import { setResponseHeader } from "@tanstack/react-start/server";
 import { z } from "zod";
 import { requireUser } from "@/lib/auth-middleware";
 import { pendingStudyRequest, requestStudyAccess, studyRequestSchema } from "@/lib/study-onboarding";
@@ -15,10 +17,12 @@ async function resolveAccount(base44, user) {
 export const getStudyAccount = createServerFn({ method: "GET" })
   .middleware([requireUser])
   .handler(async ({ context }) => {
-    if (context.user.role === "admin") return { legacy: true };
+    setResponseHeader("Cache-Control", "private, no-store");
+    if (context.user.role === "admin") return { legacy: true, markup: studyShell(true) };
     const service = context.getBase44().asServiceRole;
     const account = await resolveAccount(service, context.user);
-    return account ?? { pending: await pendingStudyRequest(service.entities.StudyAccount, context.user) };
+    return account ? { ...account, markup: studyShell(false) } :
+      { pending: await pendingStudyRequest(service.entities.StudyAccount, context.user) };
   });
 
 export const submitStudyRequest = createServerFn({ method: "POST" })

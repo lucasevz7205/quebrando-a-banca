@@ -5,7 +5,6 @@ import { base44 } from "@/api/base44Client";
 import { useAuth } from "@/lib/AuthContext";
 import { accessStudyAccount, getStudyAccount } from "@/lib/study-account";
 import { listDocuments, writeDocument } from "@/lib/study-documents";
-import studyMarkup from "../../../public/claude-export/index.html?raw";
 
 const FLAG = "__qb44_bridge_v1__";
 const legacyStorage = {
@@ -112,10 +111,10 @@ function Estudar() {
         </div>
       )}
       {ready ? (
-        // The app blocks framed HTTP responses. Embed only the bundled study shell.
+        // The authenticated loader provides the shell for the current account.
         <iframe key={`${accountId || user?.id}:${frameVersion}`} ref={frameRef}
           title="Quebrando a Banca: Hoje, Edital, Treinar, Estudo, Simulado e Desempenho"
-          srcDoc={studyMarkup}
+          srcDoc={account.markup}
           style={{
             display: "block", width: "100%", height: "100dvh",
             border: 0, borderRadius: 0, background: "#F3F6F5"
