@@ -149,3 +149,30 @@
   .learn-panel, .learn-active { padding: 14px; }
 }
 @media(prefers-reduced-motion:reduce) { .learn *, .learn-panel { transition: none !important; } }
+
+/* Ponte bidirecional entre questões, mapas e flashcards. */
+.qb-qsource-actions{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 7px;align-items:center;}
+.qb-qsource-actions .btn{margin:0;min-height:36px;}
+.qb-qrev,.qb-qsource-list{
+  margin-top:14px;border:1px solid var(--line);border-radius:15px;
+  padding:13px 15px;background:var(--surface);min-width:0;
+}
+.qb-qrev>summary,.qb-qsource-list>summary{
+  color:var(--ink);font-size:13.5px;font-weight:760;line-height:1.5;
+  cursor:pointer;overflow-wrap:anywhere;
+}
+.qb-qrev>summary small{display:inline;font-size:11px;color:var(--muted);font-weight:500;}
+.qb-qrev-card{margin:13px 0;border:1px solid var(--line);border-radius:13px;padding:14px;}
+.qb-qrev-card:target{outline:2px solid var(--pen);}
+.qb-qrev-card>.tag{font-size:11px;}
+.qb-qrev-card>.cq{font-size:14px;line-height:1.55;overflow-wrap:anywhere;}
+.qb-qsource-item{padding:10px 12px;border:1px solid var(--line);border-radius:11px;margin:9px 0;background:var(--paper);}
+.qb-qsource-item>summary{font-size:12px;line-height:1.55;color:var(--ink);cursor:pointer;overflow-wrap:anywhere;}
+.qb-qsource-item>div{padding-top:8px;font-size:12px;line-height:1.65;color:var(--ink);}
+.qb-qsource-item p{margin:5px 0;}
+.qb-qsource-item small{color:var(--muted);}
+@media(max-width:560px){
+  .qb-qrev,.qb-qsource-list{padding:12px;}
+  .qb-qsource-actions .btn{width:100%;justify-content:center;}
+  .qb-qrev-card{padding:11px;}
+}
