@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import {webcrypto} from 'node:crypto';
 const script=fs.readFileSync('public/claude-export/learning.js','utf8');
-const env={window:{},crypto:webcrypto,Map,Set,Date,console};
+const env={window:{},crypto:webcrypto,Map,Set,Date};
 vm.runInNewContext(script,env);const L=env.window.QBLearning;
 const state=()=>({q:new Map(),r:new Map(),cfg:new Map(),rodadas:[],learningEvents:new Map(),learningContent:new Map()});
 const e=(id,item,day,extra={})=>({id,item,at:'2026-11-'+String(day).padStart(2,'0')+'T12:00:00Z',version:'1',kind:'attempt',origin:'treino',marked:'C',ok:true,confidence:2,concept:'k',exposure:'unknown',...extra});
