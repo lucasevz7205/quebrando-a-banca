@@ -37,7 +37,7 @@ export function resolveMapOrigin(map,card) {
 }
 export function assertCardResponse(response) {
   const text=String(response??"").trim();
-  if(text.length<2||text.length>2000)throw new Error("A resposta precisa ter entre 2 e 2000 caracteres.");
+  if(text.length<1||text.length>2000)throw new Error("A resposta precisa ter entre 1 e 2000 caracteres.");
   return text;
 }
 export function normalizeFlashcardAi(raw){
