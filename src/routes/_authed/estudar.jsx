@@ -5,7 +5,7 @@ import { base44 } from "@/api/base44Client";
 import { useAuth } from "@/lib/AuthContext";
 import { accessStudyAccount, getStudyAccount, getStudyPreview, listStudyPreview } from "@/lib/study-account";
 import { listDocuments, writeDocument } from "@/lib/study-documents";
-import { correctFlashcardWithAI } from "@/lib/flashcard-ai.server";
+import { correctFlashcardWithAI } from "@/lib/flashcard-ai";
 
 const FLAG = "__qb44_bridge_v1__";
 const legacyStorage = {
