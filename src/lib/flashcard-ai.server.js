@@ -96,9 +96,9 @@ export const correctFlashcardWithAI=createServerFn({method:"POST"})
       const remaining=await consumeAllowance(entities,user.id);
       const prompt=correctionPrompt(card,response);
       // Créditos do gateway/Base44. Nenhuma chave nem crédito de Claude do usuário.
-      const gateway=context.getBase44().asServiceRole.integrations?.Core?.InvokeLLM;
-      if(typeof gateway!=="function")throw new Error("IA do Base44 não está configurada nesta implantação.");
-      const result=await gateway({prompt});
+      const integration=context.getBase44().asServiceRole.integrations?.Core;
+      if(typeof integration?.InvokeLLM!=="function")throw new Error("IA do Base44 não está configurada nesta implantação.");
+      const result=await integration.InvokeLLM({prompt});
       const raw=typeof result==="string"?result:
         (result?.response??result?.output??result?.text??result);
       return {result:normalizeFlashcardAi(raw),remaining,source:"Base44 AI"};
