@@ -1,1 +1,151 @@
-.learn{display:grid;gap:16px}.learn-panel,.learn-active{border:1px solid var(--line,#dce5ef);border-radius:18px;margin:12px 0;padding:18px;background:var(--paper,transparent)}.learn-panel>summary{cursor:pointer;font-weight:650;color:var(--blue,#3974c5)}.learn-panel>div{padding-top:14px}.learn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.learn-stat{display:grid;gap:6px;border-radius:14px;padding:16px;background:color-mix(in srgb,var(--blue,#3974c5) 8%,transparent)}.learn-stat>b{font-size:24px}.learn-stat small,.learn .rule{color:var(--muted,#758096)}.learn-rule{border-left:3px solid var(--blue,#3974c5);padding:12px 16px;margin:12px 0;background:color-mix(in srgb,var(--blue,#3974c5) 7%,transparent);border-radius:0 12px 12px 0}.learn label{display:block;margin:10px 0}.learn textarea,.learn input:not([type=checkbox]):not([type=radio]),.learn select{display:block;box-sizing:border-box;width:100%;max-width:100%;padding:10px;border:1px solid var(--line,#ccd7e5);border-radius:10px;background:var(--bg,transparent);color:inherit;font:inherit}.learn .btn,.learn-inline .btn,.learn-panel .btn{margin:6px 8px 6px 0}.learn-active{border-color:var(--blue,#3974c5)}.learn .chips{flex-wrap:wrap}.learn fieldset label{display:inline-block;margin-right:20px}.learn-panel textarea{display:block;width:100%;box-sizing:border-box;border-radius:10px;padding:10px;font:inherit;background:var(--bg,transparent);color:inherit;border:1px solid var(--line,#ccd7e5)}
+
+/* Quebrando a Banca · Laboratório de aprendizagem, piloto P1.
+ * Visual compatível com os heróis da interface e os temas claro/escuro.
+ */
+.learn { display: flex; flex-direction: column; gap: 17px; min-width: 0; }
+.learn > .section-title { margin: 0; }
+.learn > .chips {
+  display: flex; flex-wrap: wrap; gap: 7px; padding: 6px;
+  border: 1px solid var(--line); background: var(--surface);
+  border-radius: 17px; width: 100%;
+}
+.learn > .chips .chip {
+  flex: 1 0 auto; min-height: 43px; padding: 10px 13px;
+  border-radius: 12px; border: 1px solid transparent;
+  background: transparent; color: var(--muted); font-size: 12.5px;
+  font-weight: 750; cursor: pointer;
+}
+.learn > .chips .chip:hover { background: var(--pen-soft); color: var(--pen); }
+.learn > .chips .chip[aria-pressed="true"] {
+  background: var(--pen-soft); color: var(--pen);
+  border-color: color-mix(in srgb, var(--pen) 25%, transparent);
+}
+.learn-panel, .learn-active {
+  border: 1px solid var(--line); border-radius: 19px;
+  background: var(--surface); padding: 17px 19px; margin: 0;
+  box-shadow: 0 12px 28px -28px rgba(19,58,118,.5); min-width: 0;
+}
+.learn-panel > summary {
+  cursor: pointer; font-size: 13.5px; font-weight: 750;
+  line-height: 1.5; color: var(--ink);
+}
+.learn-panel > div { padding-top: 15px; }
+.learn-panel p, .learn-active p { line-height: 1.55; }
+.learn-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(190px,100%),1fr));
+  gap: 11px;
+}
+.learn-stat {
+  display: flex; flex-direction: column; gap: 7px;
+  padding: 17px; border-radius: 15px;
+  background: var(--surface); border: 1px solid var(--line);
+  min-width: 0;
+}
+.learn-stat > b {
+  font: 800 clamp(21px,3vw,29px)/1.1 var(--mono);
+  color: var(--ink); overflow-wrap: anywhere;
+}
+.learn-stat > span { font-size: 12px; font-weight: 750; color: var(--ink); }
+.learn-stat > small { color: var(--muted); font-size: 11px; }
+.learn-rule {
+  border-left: 3px solid var(--pen); padding: 12px 15px;
+  background: var(--pen-soft); border-radius: 0 12px 12px 0;
+  margin: 12px 0; color: var(--ink);
+}
+.learn-rule p { margin: 6px 0 0; }
+.learn label { display: block; margin: 10px 0; }
+.learn textarea,
+.learn input:not([type="checkbox"]):not([type="radio"]),
+.learn select {
+  display: block; width: 100%; max-width: 100%;
+  min-height: 43px; padding: 10px 12px; box-sizing: border-box;
+  border-radius: 11px; border: 1px solid var(--line);
+  background: var(--paper); color: var(--ink);
+  font: inherit;
+}
+.learn fieldset { border-radius: 12px; border: 1px solid var(--line); padding: 12px 16px; }
+.learn fieldset label { display: inline-flex; align-items: center; margin-right: 17px; gap: 6px; }
+.learn fieldset input[type="radio"] { accent-color: var(--pen); }
+.learn-active { border-color: color-mix(in srgb, var(--pen) 55%, var(--line)); }
+.learn-active h3 { font-size: 21px; margin: 2px 0 9px; }
+.learn-active .statement { margin: 14px 0; }
+.learn .btn, .learn-inline .btn { margin: 5px 8px 5px 0; }
+.learn .rule { color: var(--muted); font-size: 12px; }
+
+/* Painel pedagógico P1: estados e acompanhamento de um piloto real. */
+.learn-pilot-info {
+  display: flex; flex-direction: column; gap: 14px;
+  padding: clamp(17px,3vw,24px);
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 21px; min-width: 0;
+}
+.learn-pilot-intro {
+  color: #E8F3FF; padding: clamp(16px,2.5vw,22px);
+  border: 1px solid #375E93; border-radius: 16px;
+  background: linear-gradient(117deg,#152B4A 0%,#254A7F 75%,#3471B7 100%);
+}
+.learn-overline {
+  font: 700 10px/1.45 var(--mono);
+  letter-spacing: .1em; color: #BBD8FF;
+}
+.learn-pilot-intro h3 {
+  color: #FFF; margin: 7px 0 8px;
+  font: 790 clamp(21px,3vw,26px)/1.17 var(--display); letter-spacing: -.02em;
+}
+.learn-pilot-intro p {
+  margin: 0; color: #DDEAFF;
+  max-width: 67ch; font-size: 12.5px; line-height: 1.65;
+}
+.learn-pilot-states {
+  display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 9px;
+}
+.learn-pilot-state {
+  min-width: 0; display: flex; flex-direction: column; gap: 7px;
+  border: 1px solid var(--line); border-radius: 14px;
+  padding: 12px 13px; background: var(--paper);
+}
+.learn-pilot-state small {
+  color: var(--muted); font-weight: 750; font-size: 11px; line-height: 1.4;
+}
+.learn-pilot-state strong { font: 790 25px/1.1 var(--mono); color: var(--ink); }
+.learn-pilot-state span { font-size: 10.5px; color: var(--muted); line-height: 1.45; }
+.learn-pilot-state.alert strong { color: var(--errado); }
+.learn-pilot-state.attention strong { color: var(--pen); }
+.learn-pilot-state.stable strong { color: var(--certo); }
+.learn-pilot-method { padding: 4px 1px; }
+.learn-pilot-method > summary {
+  cursor: pointer; color: var(--pen); font-weight: 750; font-size: 12px;
+}
+.learn-pilot-method > p {
+  font-size: 12px; color: var(--muted); line-height: 1.6;
+}
+.learn-pilot-arms {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 6px 0;
+}
+.learn-pilot-arm {
+  display: flex; flex-direction: column; gap: 8px;
+  border: 1px solid var(--line); border-radius: 13px;
+  padding: 12px 14px; background: var(--paper);
+}
+.learn-pilot-arm > div { display: flex; flex-direction: column; gap: 4px; }
+.learn-pilot-arm b { font-size: 12px; color: var(--ink); }
+.learn-pilot-arm span, .learn-pilot-arm small { font-size: 11px; color: var(--muted); }
+.learn-pilot-arm strong { font: 800 21px var(--mono); color: var(--ink); }
+.learn-pilot-verdict {
+  border-left: 3px solid var(--pen); padding: 9px 12px;
+  border-radius: 0 8px 8px 0; background: var(--pen-soft);
+}
+.learn-pilot-method > small { display: block; font-size: 11px; color: var(--muted); line-height: 1.55; }
+
+@media (max-width: 820px) {
+  .learn-pilot-states { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 520px) {
+  .learn > .chips .chip { flex: 1 0 calc(50% - 7px); }
+  .learn-pilot-info { padding: 13px; }
+  .learn-pilot-states { gap: 7px; }
+  .learn-pilot-state { padding: 10px; }
+  .learn-pilot-arms { grid-template-columns: 1fr; }
+  .learn-panel, .learn-active { padding: 14px; }
+}
+@media(prefers-reduced-motion:reduce) { .learn *, .learn-panel { transition: none !important; } }
