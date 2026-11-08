@@ -974,7 +974,7 @@ function sessoesHistoricas(){
       const questao=S.q.get(item.qid);
       const cap=questao?.cap||(!multiCap(rodada.cap)?rodada.cap:'')||'';
       const topico=topicoDoCap(cap);
-      const materia=topico?.sigla||'_';
+      const materia=topico?.sigla||(questao?materiaDaQuestao(questao):'')||'_';
       const nome=String(questao?.capNome||topico?.titulo||cap||'Sem assunto').split(' · ').at(-1);
       materias.set(materia,nomeMateria(materia));
       if(cap&&!assuntos.has(cap)) assuntos.set(cap,{materia,nome});
