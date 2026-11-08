@@ -3,10 +3,12 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 
 const fileNames=[
+  "t05-dikw-dados-abertos",
   "t06-regime-principios",
   "t07-ortografia-acentuacao",
   "t08-tributo-conceito-natureza",
   "t09-aspectos-introdutorios",
+  "t11-metadados",
   "t12-principios-implicitos"
 ];
 
