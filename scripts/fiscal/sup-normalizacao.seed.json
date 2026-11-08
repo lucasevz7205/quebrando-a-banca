@@ -617,7 +617,7 @@
       "tema": "Reflexividade",
       "q": "Qual regra justifica {CPF, Nome} → Nome?",
       "a": [
-        "Reflexividade."
+        "Pelo axioma da reflexividade, pois Nome está contido em {CPF, Nome}."
       ],
       "src": "7. Análise de Informações - Normaliz.pdf, p. 3",
       "mapaNoId": "fiscal-sup-normalizacao-n06",
@@ -643,7 +643,7 @@
       "tema": "Transitividade",
       "q": "Qual resultado de X → Y e Y → Z?",
       "a": [
-        "X → Z."
+        "Pela transitividade, conclui-se X → Z."
       ],
       "src": "7. Análise de Informações - Normaliz.pdf, p. 4",
       "mapaNoId": "fiscal-sup-normalizacao-n08",
@@ -656,7 +656,7 @@
       "tema": "Decomposição",
       "q": "O que se infere de X → YZ?",
       "a": [
-        "X → Y e X → Z."
+        "Pela decomposição, concluem-se X → Y e X → Z."
       ],
       "src": "7. Análise de Informações - Normaliz.pdf, p. 5",
       "mapaNoId": "fiscal-sup-normalizacao-n09",
@@ -990,7 +990,7 @@
           {
             "id": "fiscal-sup-normalizacao-n06",
             "t": "Reflexividade",
-            "n": "Reflexividade.",
+            "n": "Pelo axioma da reflexividade, pois Nome está contido em {CPF, Nome}.",
             "x": {
               "e": "A propriedade se aplica a dependências triviais, nas quais o lado direito está contido no esquerdo.",
               "src": "7. Análise de Informações - Normaliz.pdf, p. 3",
@@ -1014,7 +1014,7 @@
           {
             "id": "fiscal-sup-normalizacao-n08",
             "t": "Transitividade",
-            "n": "X → Z.",
+            "n": "Pela transitividade, conclui-se X → Z.",
             "x": {
               "e": "Encadear dependências permite inferir X → Z desde que ambas as premissas sejam válidas.",
               "src": "7. Análise de Informações - Normaliz.pdf, p. 4",
@@ -1026,7 +1026,7 @@
           {
             "id": "fiscal-sup-normalizacao-n09",
             "t": "Decomposição",
-            "n": "X → Y e X → Z.",
+            "n": "Pela decomposição, concluem-se X → Y e X → Z.",
             "x": {
               "e": "A decomposição permite separar o lado direito da dependência em duas consequências.",
               "src": "7. Análise de Informações - Normaliz.pdf, p. 5",
