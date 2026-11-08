@@ -1,0 +1,1721 @@
+{
+  "topic": "fiscal-t07",
+  "source": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf",
+  "sourcePages": "3, 14–35",
+  "questions": [
+    {
+      "id": "fiscal-t07-ce02",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "A prosódia estuda a pronúncia correta dos fonemas de uma palavra, enquanto a ortoépia trata exclusivamente do emprego do hífen.",
+      "gabarito": "E",
+      "comentario": "A apostila distingue ortoépia, associada à pronúncia correta, e prosódia, ligada à tonicidade, à sílaba e à acentuação.",
+      "ordem": 702,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 3, seções 1.1 e 1.4–1.6",
+      "tema": "Ortoépia × prosódia",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "orto-prosodia"
+    },
+    {
+      "id": "fiscal-t07-ce03",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "Toda sílaba tônica de palavra portuguesa recebe, obrigatoriamente, um sinal gráfico de acentuação.",
+      "gabarito": "E",
+      "comentario": "Tonicidade é fenômeno da fala; só se usa acento gráfico quando existe regra ortográfica. 'Saci' tem tônica, mas não sinal gráfico.",
+      "ordem": 703,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 3, seções 1.1 e 1.4–1.6",
+      "tema": "Acento tônico × gráfico",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "acento-tonico"
+    },
+    {
+      "id": "fiscal-t07-ce04",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "Monossílabos átonos, como certas preposições e artigos, possuem independência fonética maior que a dos monossílabos tônicos.",
+      "gabarito": "E",
+      "comentario": "Os átonos se apoiam na palavra vizinha e são pronunciados com intensidade menor; os tônicos têm autonomia fonética.",
+      "ordem": 704,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 3, seções 1.1 e 1.4–1.6",
+      "tema": "Monossílabos átonos",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "monos-atonos"
+    },
+    {
+      "id": "fiscal-t07-ce05",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "O acento agudo pode indicar timbre aberto, enquanto o circunflexo pode marcar timbre fechado, como se observa em avó e avô.",
+      "gabarito": "C",
+      "comentario": "A apostila contrasta avó (timbre aberto) e avô (timbre fechado) para ilustrar a função dos sinais.",
+      "ordem": 705,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 3, seções 1.1 e 1.4–1.6",
+      "tema": "Agudo × circunflexo",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "timbres"
+    },
+    {
+      "id": "fiscal-t07-ce06",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "A mudança da sílaba tônica não pode alterar a classe ou o sentido de uma palavra, porque a grafia é sempre igual.",
+      "gabarito": "E",
+      "comentario": "Acentuação pode distinguir formas e classes: 'acúmulo' (substantivo) e 'acumulo' (verbo), 'sábia', 'sabia' e 'sabiá'.",
+      "ordem": 706,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 14, seções 1.1 e 1.4–1.6",
+      "tema": "Tonicidade e significado",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "mudanca-tonica"
+    },
+    {
+      "id": "fiscal-t07-ce07",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "Na classificação pela tonicidade, oxítona tem tônica final; paroxítona, penúltima; proparoxítona, antepenúltima.",
+      "gabarito": "C",
+      "comentario": "É a classificação segundo a posição da sílaba com maior intensidade. Exemplos: café, fácil e lâmpada.",
+      "ordem": 707,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 14, seções 1.1 e 1.4–1.6",
+      "tema": "Oxítona, paroxítona, proparoxítona",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "tres-class"
+    },
+    {
+      "id": "fiscal-t07-ce08",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "Todas as palavras com tonicidade na antepenúltima sílaba são acentuadas, independentemente de sua terminação.",
+      "gabarito": "C",
+      "comentario": "A regra das proparoxítonas é universal na apresentação do material, a exemplo de 'página' e 'relâmpago'.",
+      "ordem": 708,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 14, seções 1.1 e 1.4–1.6",
+      "tema": "Regra das proparoxítonas",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "todas-proparox"
+    },
+    {
+      "id": "fiscal-t07-ce09",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "'Semântico', 'sintático' e 'linguísticas' recebem acento por serem proparoxítonas.",
+      "gabarito": "C",
+      "comentario": "As três têm tônica na antepenúltima sílaba e por isso obedecem à regra das proparoxítonas.",
+      "ordem": 709,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15, seções 1.1 e 1.4–1.6",
+      "tema": "Regra única de proparoxítonas",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "exemplo-semantico"
+    },
+    {
+      "id": "fiscal-t07-ce10",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "As oxítonas 'sofá', 'café' e 'cipó' recebem acento por terminarem, respectivamente, em a, e e o.",
+      "gabarito": "C",
+      "comentario": "Oxítonas terminadas em a(s), e(s), o(s), em e ens são acentuadas. Os exemplos cumprem a regra geral.",
+      "ordem": 710,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15, seções 1.1 e 1.4–1.6",
+      "tema": "Oxítonas terminadas em A, E e O",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "oxi-aeo"
+    },
+    {
+      "id": "fiscal-t07-ce11",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "As oxítonas 'também' e 'parabéns' recebem acento pela regra geral, que inclui as terminações em e ens.",
+      "gabarito": "C",
+      "comentario": "A regra geral inclui 'em' e 'ens' para oxítonas; essas terminações não fazem parte da regra de monossílabos tônicos.",
+      "ordem": 711,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15, seções 1.1 e 1.4–1.6",
+      "tema": "Oxítonas terminadas em EM e ENS",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "oxi-em-ens"
+    },
+    {
+      "id": "fiscal-t07-ce12",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "'Herói', 'anéis' e 'chapéu' são acentuados em razão de ditongos abertos em posição final de oxítona.",
+      "gabarito": "C",
+      "comentario": "O material apresenta os ditongos abertos éu(s), éi(s), ói(s) em oxítonas como regra especial de acentuação.",
+      "ordem": 712,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15, seções 1.1 e 1.4–1.6",
+      "tema": "Ditongos abertos nas oxítonas",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "oxi-abertos"
+    },
+    {
+      "id": "fiscal-t07-ce13",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "Os monossílabos tônicos terminados em a(s), e(s) ou o(s) recebem acento, como pá, pé e pó.",
+      "gabarito": "C",
+      "comentario": "A regra específica dos monossílabos tônicos admite as terminações a, e e o, com ou sem s.",
+      "ordem": 713,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15, seções 1.1 e 1.4–1.6",
+      "tema": "Monossílabos tônicos terminados em A/E/O",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "monos-aeo"
+    },
+    {
+      "id": "fiscal-t07-ce14",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "As palavras 'bem' e 'cem' devem receber acento gráfico por terminarem em 'em', assim como 'também'.",
+      "gabarito": "E",
+      "comentario": "A terminação 'em' pertence à regra das oxítonas, mas não à regra dos monossílabos tônicos; 'bem' e 'cem' não levam acento.",
+      "ordem": 714,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15, seções 1.1 e 1.4–1.6",
+      "tema": "Monossílabos terminados em EM",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "monos-em"
+    },
+    {
+      "id": "fiscal-t07-ce15",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "Na forma verbal 'comê-la', analisa-se 'comê' para aplicar a regra das oxítonas, desconsiderando-se o pronome átono.",
+      "gabarito": "C",
+      "comentario": "Na ênclise com hífen, a análise da acentuação recai sobre a forma verbal; 'comê' é oxítona terminada em e.",
+      "ordem": 715,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 16, seções 1.1 e 1.4–1.6",
+      "tema": "Acentuação e pronome enclítico",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "enclise"
+    },
+    {
+      "id": "fiscal-t07-ce16",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "Na regra geral, acentuam-se paroxítonas que não terminem em a(s), e(s), o(s), em ou ens, observadas as regras específicas.",
+      "gabarito": "C",
+      "comentario": "O material organiza a regra por oposição às oxítonas: fácil, hífen, álbum e caráter exemplificam terminações residuais.",
+      "ordem": 716,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 18, seções 1.1 e 1.4–1.6",
+      "tema": "Paroxítonas e regra residual",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "paroxi-residual"
+    },
+    {
+      "id": "fiscal-t07-ce17",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "'Água', 'história' e 'série' são acentuadas por serem paroxítonas terminadas em ditongo.",
+      "gabarito": "C",
+      "comentario": "O capítulo apresenta uma regra específica para paroxítonas terminadas em ditongos orais, como água, história e série.",
+      "ordem": 717,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 19, seções 1.1 e 1.4–1.6",
+      "tema": "Paroxítonas terminadas em ditongo",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "paroxi-ditongo"
+    },
+    {
+      "id": "fiscal-t07-ce18",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "De acordo com a ortografia vigente no material, as formas 'idéia' e 'heróico' mantêm o acento de ditongo aberto.",
+      "gabarito": "E",
+      "comentario": "Paroxítonas com ditongos abertos ei e oi perderam o acento: 'ideia' e 'heroico'.",
+      "ordem": 718,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 19, seções 1.1 e 1.4–1.6",
+      "tema": "Ditongos abertos nas paroxítonas",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "paroxi-ei-oi"
+    },
+    {
+      "id": "fiscal-t07-ce19",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "O acento de 'herói' não autoriza acentuar 'heroico', porque a primeira é oxítona e a segunda, paroxítona.",
+      "gabarito": "C",
+      "comentario": "O ditongo aberto ói é acentuado em herói (oxítona), mas não em heroico (paroxítona).",
+      "ordem": 719,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 19, seções 1.1 e 1.4–1.6",
+      "tema": "Herói × heroico",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "oxi-vs-paroxi-aberto"
+    },
+    {
+      "id": "fiscal-t07-ce20",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "A palavra 'hífen' recebe acento, mas seu plural 'hifens' não o recebe, em razão da mudança da terminação.",
+      "gabarito": "C",
+      "comentario": "Hífen é paroxítona terminada em en, enquanto hifens termina em ens, terminação não acentuada pela regra residual.",
+      "ordem": 720,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 20, seções 1.1 e 1.4–1.6",
+      "tema": "Hífen × hifens",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "hifen-hifens"
+    },
+    {
+      "id": "fiscal-t07-ce21",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "Os prefixos paroxítonos 'hiper', 'super', 'mini', 'anti' e 'semi' recebem acento obrigatório por terminarem em r ou i.",
+      "gabarito": "E",
+      "comentario": "A apostila destaca que esses prefixos não recebem acento, embora se pareçam com paroxítonas de regra geral.",
+      "ordem": 721,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 20, seções 1.1 e 1.4–1.6",
+      "tema": "Prefixos paroxítonos",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "prefixos-hiper"
+    },
+    {
+      "id": "fiscal-t07-ce22",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "O til em 'direções' é marca de nasalização, não acento gráfico que permita comparar sua regra com a de 'também'.",
+      "gabarito": "C",
+      "comentario": "A apostila distingue acento de marca de nasalidade; 'direções' não tem acento gráfico por causa do til.",
+      "ordem": 722,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 17, seções 1.1 e 1.4–1.6",
+      "tema": "Til não é acento gráfico",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "til-nasal"
+    },
+    {
+      "id": "fiscal-t07-ce23",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "O 'i' ou 'u' tônico em hiato, sozinho na sílaba ou seguido de s, pode receber acento, como em saúde e faísca.",
+      "gabarito": "C",
+      "comentario": "A regra do hiato destaca vogais I/U tônicas que se separam da vogal anterior e formam sílaba isolada ou com s.",
+      "ordem": 723,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 25, seções 1.1 e 1.4–1.6",
+      "tema": "Hiato de I/U tônicos",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "hiato-regra"
+    },
+    {
+      "id": "fiscal-t07-ce24",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "'Juízes' e 'açaí' são acentuadas pela mesma regra do hiato, embora não tenham a mesma classificação pela posição tônica.",
+      "gabarito": "C",
+      "comentario": "A regra do hiato opera independentemente de a palavra ser paroxítona ou oxítona; ambas contêm I tônico em hiato.",
+      "ordem": 724,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 16, seções 1.1 e 1.4–1.6",
+      "tema": "Hiato e tonicidade",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "hiato-classes"
+    },
+    {
+      "id": "fiscal-t07-ce25",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "'Juiz' não é acentuado pela regra do hiato, mas 'juízes' é, porque o i tônico passa a formar sílaba sozinho.",
+      "gabarito": "C",
+      "comentario": "Em juiz, o I tônico integra sílaba com z; em juízes, o I fica sozinho na sílaba, recebendo acento.",
+      "ordem": 725,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 25, seções 1.1 e 1.4–1.6",
+      "tema": "Juiz × juízes",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "hiato-juiz"
+    },
+    {
+      "id": "fiscal-t07-ce26",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "'Rainha' e 'moinho' não levam acento no i tônico do hiato quando a sílaba seguinte é iniciada por nh.",
+      "gabarito": "C",
+      "comentario": "O texto apresenta a exceção dos hiatos com I/U tônico antes de NH; rainha, bainha e moinho não são acentuadas.",
+      "ordem": 726,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 25, seções 1.1 e 1.4–1.6",
+      "tema": "Hiato antes de NH",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "hiato-nh"
+    },
+    {
+      "id": "fiscal-t07-ce27",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "As paroxítonas 'feiura' e 'baiuca' devem ser acentuadas por trazerem u tônico após ditongo decrescente.",
+      "gabarito": "E",
+      "comentario": "O Acordo Ortográfico retirou o acento em I/U tônicos após ditongo decrescente em paroxítonas: feiura, baiuca.",
+      "ordem": 727,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 26, seções 1.1 e 1.4–1.6",
+      "tema": "Ditongo decrescente e paroxítona",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "hiato-decrescente"
+    },
+    {
+      "id": "fiscal-t07-ce28",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "'Guaíra' e 'Guaíba' mantêm o acento, diferentemente de 'feiura', segundo a distinção dos ditongos anteriores ao hiato.",
+      "gabarito": "C",
+      "comentario": "A apostila contrasta ditongo crescente (Guaíra, Guaíba) com decrescente (feiura).",
+      "ordem": 728,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 26, seções 1.1 e 1.4–1.6",
+      "tema": "Guaíra × feiura",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "hiato-crescente"
+    },
+    {
+      "id": "fiscal-t07-ce29",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "A oxítona 'Piauí' mantém o acento no i tônico final, apesar de esse i vir depois de ditongo.",
+      "gabarito": "C",
+      "comentario": "O hiato acentuado após ditongo em oxítona permanece: Piauí, tuiuiú e teiú constam na apostila.",
+      "ordem": 729,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 26, seções 1.1 e 1.4–1.6",
+      "tema": "Hiato e oxítonas após ditongo",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "hiato-oxitona"
+    },
+    {
+      "id": "fiscal-t07-ce30",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "Após o Acordo Ortográfico, as grafias 'enjôo' e 'crêem' são obrigatórias para preservar a tonicidade da vogal repetida.",
+      "gabarito": "E",
+      "comentario": "O acento de vogais repetidas oo e ee foi eliminado: enjoo, voo, creem, leem.",
+      "ordem": 730,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 26, seções 1.1 e 1.4–1.6",
+      "tema": "Hiatos OO/EE",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "ee-oo"
+    },
+    {
+      "id": "fiscal-t07-ce31",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "O acento diferencial de 'pôde' indica a terceira pessoa do singular do pretérito perfeito, distinguindo-a de 'pode' no presente.",
+      "gabarito": "C",
+      "comentario": "O capítulo mantém o contraste pôde (passado) e pode (presente).",
+      "ordem": 731,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33, seções 1.1 e 1.4–1.6",
+      "tema": "Pôde × pode",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "pode-pode"
+    },
+    {
+      "id": "fiscal-t07-ce32",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "O verbo 'pôr' conserva o acento circunflexo diferencial, enquanto a preposição 'por' não recebe esse sinal.",
+      "gabarito": "C",
+      "comentario": "É um dos acentos diferenciais preservados pela ortografia atual, segundo a apostila.",
+      "ordem": 732,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33, seções 1.1 e 1.4–1.6",
+      "tema": "Pôr × por",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "por-por"
+    },
+    {
+      "id": "fiscal-t07-ce33",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "A forma 'têm' indica a terceira pessoa do plural de ter, enquanto 'tem' representa a terceira pessoa do singular.",
+      "gabarito": "C",
+      "comentario": "O circunflexo é marca diferencial de número para o verbo ter.",
+      "ordem": 733,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33, seções 1.1 e 1.4–1.6",
+      "tema": "Tem × têm",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "tem-tem"
+    },
+    {
+      "id": "fiscal-t07-ce34",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "O plural de 'vem' permanece graficamente igual à forma singular, sem acento diferencial.",
+      "gabarito": "E",
+      "comentario": "'Ele vem' e 'eles vêm' distinguem singular/plural por circunflexo na forma plural.",
+      "ordem": 734,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33, seções 1.1 e 1.4–1.6",
+      "tema": "Vem × vêm",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "vem-vem"
+    },
+    {
+      "id": "fiscal-t07-ce35",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "Nos derivados de 'vir', como 'intervir', usa-se 'intervém' no singular e 'intervêm' no plural.",
+      "gabarito": "C",
+      "comentario": "A apostila estende a diferenciação de número aos derivados de ter/vir, com acentos adequados.",
+      "ordem": 735,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33, seções 1.1 e 1.4–1.6",
+      "tema": "Derivados de ter e vir",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "derivados-intervir"
+    },
+    {
+      "id": "fiscal-t07-ce36",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "O uso do circunflexo para distinguir 'fôrma' de 'forma' pode ser facultativo, diferentemente do acento obrigatório de 'pôde'.",
+      "gabarito": "C",
+      "comentario": "A apostila registra 'fôrma/forma' como caso facultativo e 'pôde/pode' como distinção obrigatória.",
+      "ordem": 736,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 34, seções 1.1 e 1.4–1.6",
+      "tema": "Acentos diferenciais facultativos",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "forma-facultativo"
+    },
+    {
+      "id": "fiscal-t07-ce37",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "A grafia 'pára' é exigida quando a palavra corresponde ao verbo parar, para distingui-la da preposição 'para'.",
+      "gabarito": "E",
+      "comentario": "O antigo acento diferencial de pára (verbo) foi abolido; ambos os usos se escrevem para.",
+      "ordem": 737,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 34, seções 1.1 e 1.4–1.6",
+      "tema": "Para × pára",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "abolidos-para"
+    },
+    {
+      "id": "fiscal-t07-ce38",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "O substantivo 'pêlo' conserva obrigatoriamente o circunflexo para não se confundir com a contração 'pelo'.",
+      "gabarito": "E",
+      "comentario": "Apostila informa que o antigo acento de pêlo foi abolido; escreve-se pelo nos dois empregos.",
+      "ordem": 738,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 34, seções 1.1 e 1.4–1.6",
+      "tema": "Pelo × pêlo",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "abolidos-pelo"
+    },
+    {
+      "id": "fiscal-t07-ce39",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "Após o Acordo Ortográfico, 'polo' e 'pera' passaram a ser grafias sem acento diferencial nos casos citados pela apostila.",
+      "gabarito": "C",
+      "comentario": "O texto lista polo e pera entre as palavras que perderam acentos diferenciais.",
+      "ordem": 739,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 34, seções 1.1 e 1.4–1.6",
+      "tema": "Polo e pera",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "abolidos-polo"
+    },
+    {
+      "id": "fiscal-t07-ce40",
+      "cap": "FISCAL-LP-07",
+      "capNome": "Trilha 00 · Tarefa 07 · Ortografia, acentuação e acentos diferenciais",
+      "enunciado": "A simples coincidência de terminação basta para afirmar que 'parabéns' e 'lúmen' são acentuadas pela mesma regra.",
+      "gabarito": "E",
+      "comentario": "Parabéns é oxítona; lúmen, paroxítona. O material orienta classificar a tonicidade ao comparar as regras, exceto na regra do hiato.",
+      "ordem": 740,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 16, seções 1.1 e 1.4–1.6",
+      "tema": "Mesma regra e classificação",
+      "topico": "fiscal-t07",
+      "assuntoId": "fiscal-lp-acentuacao-e-diferenciais",
+      "mapaNoId": "comparacao-tonica"
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Ortoépia × prosódia",
+      "q": "Qual é a diferença entre ortoépia e prosódia?",
+      "a": [
+        "Ortoépia: pronúncia correta; prosódia: tonicidade e acentuação da palavra."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 3",
+      "mapaNoId": "orto-prosodia",
+      "questaoIds": [
+        "fiscal-t07-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Acento tônico × gráfico",
+      "q": "Qual diferença existe entre acento tônico e acento gráfico?",
+      "a": [
+        "Acento tônico ocorre na pronúncia; o gráfico é sinal escrito exigido por regras específicas."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 3",
+      "mapaNoId": "acento-tonico",
+      "questaoIds": [
+        "fiscal-t07-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Monossílabos átonos",
+      "q": "Compare autonomia dos monossílabos tônicos e átonos.",
+      "a": [
+        "Tônicos têm autonomia na fala; átonos se apoiam em palavra vizinha."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 3",
+      "mapaNoId": "monos-atonos",
+      "questaoIds": [
+        "fiscal-t07-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Agudo × circunflexo",
+      "q": "Que contraste fonético ilustram avó e avô?",
+      "a": [
+        "Avó apresenta timbre aberto, marcado com agudo; avô apresenta timbre fechado, com circunflexo."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 3",
+      "mapaNoId": "timbres",
+      "questaoIds": [
+        "fiscal-t07-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Tonicidade e significado",
+      "q": "Dê um par em que mudar o acento diferencia classe gramatical.",
+      "a": [
+        "Acúmulo (substantivo) × acumulo (verbo), por exemplo."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 14",
+      "mapaNoId": "mudanca-tonica",
+      "questaoIds": [
+        "fiscal-t07-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Oxítona, paroxítona, proparoxítona",
+      "q": "Classifique café, fácil e lâmpada.",
+      "a": [
+        "Café oxítona; fácil paroxítona; lâmpada proparoxítona."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 14",
+      "mapaNoId": "tres-class",
+      "questaoIds": [
+        "fiscal-t07-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Regra das proparoxítonas",
+      "q": "Qual é a regra de acentuação das proparoxítonas?",
+      "a": [
+        "Todas recebem acento gráfico, sem exceção baseada na terminação."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 14",
+      "mapaNoId": "todas-proparox",
+      "questaoIds": [
+        "fiscal-t07-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Regra única de proparoxítonas",
+      "q": "Qual regra acentua semântico, sintático e linguísticas?",
+      "a": [
+        "Todas são proparoxítonas e devem ser acentuadas."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15",
+      "mapaNoId": "exemplo-semantico",
+      "questaoIds": [
+        "fiscal-t07-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Oxítonas terminadas em A, E e O",
+      "q": "Quais terminações acentuam oxítonas pela regra geral?",
+      "a": [
+        "A(s), E(s), O(s), EM e ENS."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15",
+      "mapaNoId": "oxi-aeo",
+      "questaoIds": [
+        "fiscal-t07-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Oxítonas terminadas em EM e ENS",
+      "q": "Por que também e parabéns são acentuadas?",
+      "a": [
+        "São oxítonas terminadas, respectivamente, em EM e ENS."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15",
+      "mapaNoId": "oxi-em-ens",
+      "questaoIds": [
+        "fiscal-t07-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Ditongos abertos nas oxítonas",
+      "q": "Quais são os três ditongos abertos acentuados nas oxítonas?",
+      "a": [
+        "ÉU(s), ÉI(s), ÓI(s), como chapéu, anéis e herói."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15",
+      "mapaNoId": "oxi-abertos",
+      "questaoIds": [
+        "fiscal-t07-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Monossílabos tônicos terminados em A/E/O",
+      "q": "Quais terminações acentuam monossílabos tônicos?",
+      "a": [
+        "A(s), E(s), O(s) e ditongos abertos ÉU(s), ÉI(s), ÓI(s)."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15",
+      "mapaNoId": "monos-aeo",
+      "questaoIds": [
+        "fiscal-t07-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Monossílabos terminados em EM",
+      "q": "Por que bem não leva acento, embora também leve?",
+      "a": [
+        "Bem é monossílabo tônico e sua regra não inclui EM; também é oxítona terminada em EM."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15",
+      "mapaNoId": "monos-em",
+      "questaoIds": [
+        "fiscal-t07-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Acentuação e pronome enclítico",
+      "q": "Como verificar a acentuação de visitá-la e comê-la?",
+      "a": [
+        "Ignore o pronome enclítico: visitá, oxítona terminada em a; comê, em e."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 16",
+      "mapaNoId": "enclise",
+      "questaoIds": [
+        "fiscal-t07-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Paroxítonas e regra residual",
+      "q": "Qual atalho resume a regra geral das paroxítonas?",
+      "a": [
+        "Acentuam-se as que não terminam em A(s), E(s), O(s), EM, ENS, além da regra própria dos ditongos."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 18",
+      "mapaNoId": "paroxi-residual",
+      "questaoIds": [
+        "fiscal-t07-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Paroxítonas terminadas em ditongo",
+      "q": "Por que água e história têm acento, apesar de terminarem em vogal?",
+      "a": [
+        "Porque terminam em ditongos orais ('ua', 'ia') na classificação adotada na apostila."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 19",
+      "mapaNoId": "paroxi-ditongo",
+      "questaoIds": [
+        "fiscal-t07-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Ditongos abertos nas paroxítonas",
+      "q": "Como se escrevem ideia e heroico no Acordo Ortográfico?",
+      "a": [
+        "Sem acento: ideia e heroico."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 19",
+      "mapaNoId": "paroxi-ei-oi",
+      "questaoIds": [
+        "fiscal-t07-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Herói × heroico",
+      "q": "Explique o contraste de acentuação herói × heroico.",
+      "a": [
+        "Herói é oxítona com ditongo aberto final, acentuada; heroico é paroxítona com 'oi', sem acento."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 19",
+      "mapaNoId": "oxi-vs-paroxi-aberto",
+      "questaoIds": [
+        "fiscal-t07-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Hífen × hifens",
+      "q": "Por que hífen tem acento e hifens não?",
+      "a": [
+        "Hífen termina em EN e hifens em ENS; a segunda cai na terminação não acentuada das paroxítonas."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 20",
+      "mapaNoId": "hifen-hifens",
+      "questaoIds": [
+        "fiscal-t07-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Prefixos paroxítonos",
+      "q": "Qual cuidado de acentuação vale para hiper, super, mini, anti e semi?",
+      "a": [
+        "Na condição de prefixos paroxítonos, não são acentuados."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 20",
+      "mapaNoId": "prefixos-hiper",
+      "questaoIds": [
+        "fiscal-t07-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Til não é acento gráfico",
+      "q": "O til de direções pode ser contado como acento gráfico da mesma regra que também?",
+      "a": [
+        "Não. Til indica nasalidade; também leva acento agudo por oxítona terminada em EM."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 17",
+      "mapaNoId": "til-nasal",
+      "questaoIds": [
+        "fiscal-t07-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Hiato de I/U tônicos",
+      "q": "Formule a regra geral do hiato para I e U tônicos.",
+      "a": [
+        "Acentuam-se I/U tônicos em hiato com vogal anterior, sozinhos na sílaba ou seguidos de S, ressalvadas exceções."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 25",
+      "mapaNoId": "hiato-regra",
+      "questaoIds": [
+        "fiscal-t07-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Hiato e tonicidade",
+      "q": "Como juízes e açaí podem compartilhar regra de acento?",
+      "a": [
+        "Ambas levam acento pela regra do hiato, que independe da posição da sílaba tônica."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 16",
+      "mapaNoId": "hiato-classes",
+      "questaoIds": [
+        "fiscal-t07-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Juiz × juízes",
+      "q": "Explique por que juiz não leva acento, mas juízes leva.",
+      "a": [
+        "Em juiz, I tônico não está sozinho nem com S; em juízes, o I do hiato está sozinho na sílaba."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 25",
+      "mapaNoId": "hiato-juiz",
+      "questaoIds": [
+        "fiscal-t07-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Hiato antes de NH",
+      "q": "Qual exceção vale para o hiato antes de NH?",
+      "a": [
+        "Não se acentua I/U tônico quando vem NH na sílaba seguinte, como rainha e moinho."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 25",
+      "mapaNoId": "hiato-nh",
+      "questaoIds": [
+        "fiscal-t07-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Ditongo decrescente e paroxítona",
+      "q": "Por que feiura e baiuca não levam acento?",
+      "a": [
+        "São paroxítonas com I/U tônico após ditongo decrescente; aplica-se a exceção ortográfica."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 26",
+      "mapaNoId": "hiato-decrescente",
+      "questaoIds": [
+        "fiscal-t07-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Guaíra × feiura",
+      "q": "Por que Guaíra conserva acento, mas feiura não?",
+      "a": [
+        "Em Guaíra, o hiato ocorre após ditongo crescente; em feiura, após decrescente em paroxítona."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 26",
+      "mapaNoId": "hiato-crescente",
+      "questaoIds": [
+        "fiscal-t07-ce28"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Hiato e oxítonas após ditongo",
+      "q": "Compare Piauí e feiura no tocante ao acento.",
+      "a": [
+        "Piauí é oxítona com I tônico final e é acentuada; feiura é paroxítona após ditongo decrescente e não se acentua."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 26",
+      "mapaNoId": "hiato-oxitona",
+      "questaoIds": [
+        "fiscal-t07-ce29"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Hiatos OO/EE",
+      "q": "Como se escrevem creem, leem, voo e enjoo?",
+      "a": [
+        "Todas sem circunflexo, após as mudanças do Acordo Ortográfico."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 26",
+      "mapaNoId": "ee-oo",
+      "questaoIds": [
+        "fiscal-t07-ce30"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Pôde × pode",
+      "q": "Como distinguir pôde e pode em uma frase?",
+      "a": [
+        "Pôde: pretérito perfeito; pode: presente."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33",
+      "mapaNoId": "pode-pode",
+      "questaoIds": [
+        "fiscal-t07-ce31"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Pôr × por",
+      "q": "Qual das formas recebe acento: pôr (verbo) ou por (preposição)?",
+      "a": [
+        "Pôr, verbo no infinitivo, recebe circunflexo; por, preposição, não."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33",
+      "mapaNoId": "por-por",
+      "questaoIds": [
+        "fiscal-t07-ce32"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Tem × têm",
+      "q": "Complete: ele ___ razão; eles ___ razão.",
+      "a": [
+        "Ele tem; eles têm."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33",
+      "mapaNoId": "tem-tem",
+      "questaoIds": [
+        "fiscal-t07-ce33"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Vem × vêm",
+      "q": "Complete: ela ___; elas ___.",
+      "a": [
+        "Ela vem; elas vêm."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33",
+      "mapaNoId": "vem-vem",
+      "questaoIds": [
+        "fiscal-t07-ce34"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Derivados de ter e vir",
+      "q": "Complete: o governo ___; os governos ___.",
+      "a": [
+        "O governo intervém; os governos intervêm."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33",
+      "mapaNoId": "derivados-intervir",
+      "questaoIds": [
+        "fiscal-t07-ce35"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Acentos diferenciais facultativos",
+      "q": "Que contraste existe entre fôrma/forma e pôde/pode?",
+      "a": [
+        "Fôrma pode usar circunflexo facultativo; pôde exige acento no pretérito."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 34",
+      "mapaNoId": "forma-facultativo",
+      "questaoIds": [
+        "fiscal-t07-ce36"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Para × pára",
+      "q": "Como ficam para (preposição) e para (verbo parar)?",
+      "a": [
+        "Ambas sem acento diferencial na ortografia atual."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 34",
+      "mapaNoId": "abolidos-para",
+      "questaoIds": [
+        "fiscal-t07-ce37"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Pelo × pêlo",
+      "q": "Qual é a grafia de pelo como substantivo e como contração?",
+      "a": [
+        "Pelo, sem acento em ambos os usos."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 34",
+      "mapaNoId": "abolidos-pelo",
+      "questaoIds": [
+        "fiscal-t07-ce38"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Polo e pera",
+      "q": "Cite duas palavras que perderam acento diferencial.",
+      "a": [
+        "Polo e pera, entre outras como pelo e para."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 34",
+      "mapaNoId": "abolidos-polo",
+      "questaoIds": [
+        "fiscal-t07-ce39"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Mesma regra e classificação",
+      "q": "Qual verificação antecede comparar regras de acento de duas palavras?",
+      "a": [
+        "Classificar tonicidade; a regra do hiato é exceção importante, pois independe dela."
+      ],
+      "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 16",
+      "mapaNoId": "comparacao-tonica",
+      "questaoIds": [
+        "fiscal-t07-ce40"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Ortografia, acentuação e acentos diferenciais · T07",
+    "versao": 2,
+    "fonte": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, pp. 3, 14–35",
+    "ramos": [
+      {
+        "id": "conceito-1",
+        "t": "Fundamentos: som, tonicidade e grafia",
+        "n": "A tonicidade é fenômeno da fala; a grafia obedece a regras, não a mera força de pronúncia.",
+        "cor": 1,
+        "x": {
+          "e": "A tonicidade é fenômeno da fala; a grafia obedece a regras, não a mera força de pronúncia.",
+          "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf"
+        },
+        "f": [
+          {
+            "id": "orto-prosodia",
+            "t": "Ortoépia × prosódia",
+            "n": "Ortoépia: pronúncia correta; prosódia: tonicidade e acentuação da palavra.",
+            "x": {
+              "e": "A apostila distingue ortoépia, associada à pronúncia correta, e prosódia, ligada à tonicidade, à sílaba e à acentuação.",
+              "trap": "Trocar os nomes das disciplinas.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-t07-ce02"
+              ]
+            }
+          },
+          {
+            "id": "acento-tonico",
+            "t": "Acento tônico × gráfico",
+            "n": "Acento tônico ocorre na pronúncia; o gráfico é sinal escrito exigido por regras específicas.",
+            "x": {
+              "e": "Tonicidade é fenômeno da fala; só se usa acento gráfico quando existe regra ortográfica. 'Saci' tem tônica, mas não sinal gráfico.",
+              "trap": "Saci é oxítona sem acento gráfico.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-t07-ce03"
+              ]
+            }
+          },
+          {
+            "id": "monos-atonos",
+            "t": "Monossílabos átonos",
+            "n": "Tônicos têm autonomia na fala; átonos se apoiam em palavra vizinha.",
+            "x": {
+              "e": "Os átonos se apoiam na palavra vizinha e são pronunciados com intensidade menor; os tônicos têm autonomia fonética.",
+              "trap": "Confundir intensidade e quantidade de letras.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-t07-ce04"
+              ]
+            }
+          },
+          {
+            "id": "timbres",
+            "t": "Agudo × circunflexo",
+            "n": "Avó apresenta timbre aberto, marcado com agudo; avô apresenta timbre fechado, com circunflexo.",
+            "x": {
+              "e": "A apostila contrasta avó (timbre aberto) e avô (timbre fechado) para ilustrar a função dos sinais.",
+              "trap": "Sinal gráfico não equivale à simples tonicidade.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-t07-ce05"
+              ]
+            }
+          },
+          {
+            "id": "mudanca-tonica",
+            "t": "Tonicidade e significado",
+            "n": "Acúmulo (substantivo) × acumulo (verbo), por exemplo.",
+            "x": {
+              "e": "Acentuação pode distinguir formas e classes: 'acúmulo' (substantivo) e 'acumulo' (verbo), 'sábia', 'sabia' e 'sabiá'.",
+              "trap": "A posição tônica pode diferenciar palavras.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 14",
+              "questaoIds": [
+                "fiscal-t07-ce06"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "proparox",
+        "t": "Posição tônica e proparoxítonas",
+        "n": "Oxítonas: última; paroxítonas: penúltima; proparoxítonas: antepenúltima, sempre acentuadas.",
+        "cor": 2,
+        "x": {
+          "e": "Oxítonas: última; paroxítonas: penúltima; proparoxítonas: antepenúltima, sempre acentuadas.",
+          "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf"
+        },
+        "f": [
+          {
+            "id": "tres-class",
+            "t": "Oxítona, paroxítona, proparoxítona",
+            "n": "Café oxítona; fácil paroxítona; lâmpada proparoxítona.",
+            "x": {
+              "e": "É a classificação segundo a posição da sílaba com maior intensidade. Exemplos: café, fácil e lâmpada.",
+              "trap": "Não confundir sílaba tônica com contagem de sílabas.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 14",
+              "questaoIds": [
+                "fiscal-t07-ce07"
+              ]
+            }
+          },
+          {
+            "id": "todas-proparox",
+            "t": "Regra das proparoxítonas",
+            "n": "Todas recebem acento gráfico, sem exceção baseada na terminação.",
+            "x": {
+              "e": "A regra das proparoxítonas é universal na apresentação do material, a exemplo de 'página' e 'relâmpago'.",
+              "trap": "A terminação não interfere nessa regra.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 14",
+              "questaoIds": [
+                "fiscal-t07-ce08"
+              ]
+            }
+          },
+          {
+            "id": "exemplo-semantico",
+            "t": "Regra única de proparoxítonas",
+            "n": "Todas são proparoxítonas e devem ser acentuadas.",
+            "x": {
+              "e": "As três têm tônica na antepenúltima sílaba e por isso obedecem à regra das proparoxítonas.",
+              "trap": "Não confundir plural com alteração da tonicidade.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15",
+              "questaoIds": [
+                "fiscal-t07-ce09"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "oxitonas",
+        "t": "Oxítonas e monossílabos tônicos",
+        "n": "Oxítonas acentuadas em A/E/O/EM/ENS ou ditongo aberto; monossílabos em A/E/O e ditongos abertos.",
+        "cor": 3,
+        "x": {
+          "e": "Oxítonas acentuadas em A/E/O/EM/ENS ou ditongo aberto; monossílabos em A/E/O e ditongos abertos.",
+          "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf"
+        },
+        "f": [
+          {
+            "id": "oxi-aeo",
+            "t": "Oxítonas terminadas em A, E e O",
+            "n": "A(s), E(s), O(s), EM e ENS.",
+            "x": {
+              "e": "Oxítonas terminadas em a(s), e(s), o(s), em e ens são acentuadas. Os exemplos cumprem a regra geral.",
+              "trap": "Não aplicar automaticamente essa regra a paroxítonas.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15",
+              "questaoIds": [
+                "fiscal-t07-ce10"
+              ]
+            }
+          },
+          {
+            "id": "oxi-em-ens",
+            "t": "Oxítonas terminadas em EM e ENS",
+            "n": "São oxítonas terminadas, respectivamente, em EM e ENS.",
+            "x": {
+              "e": "A regra geral inclui 'em' e 'ens' para oxítonas; essas terminações não fazem parte da regra de monossílabos tônicos.",
+              "trap": "A regra dos monossílabos tônicos não inclui EM/ENS.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15",
+              "questaoIds": [
+                "fiscal-t07-ce11"
+              ]
+            }
+          },
+          {
+            "id": "oxi-abertos",
+            "t": "Ditongos abertos nas oxítonas",
+            "n": "ÉU(s), ÉI(s), ÓI(s), como chapéu, anéis e herói.",
+            "x": {
+              "e": "O material apresenta os ditongos abertos éu(s), éi(s), ói(s) em oxítonas como regra especial de acentuação.",
+              "trap": "Essa regra não se transporta às paroxítonas terminadas em EI/OI.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15",
+              "questaoIds": [
+                "fiscal-t07-ce12"
+              ]
+            }
+          },
+          {
+            "id": "monos-aeo",
+            "t": "Monossílabos tônicos terminados em A/E/O",
+            "n": "A(s), E(s), O(s) e ditongos abertos ÉU(s), ÉI(s), ÓI(s).",
+            "x": {
+              "e": "A regra específica dos monossílabos tônicos admite as terminações a, e e o, com ou sem s.",
+              "trap": "Não confundir com monossílabos átonos.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15",
+              "questaoIds": [
+                "fiscal-t07-ce13"
+              ]
+            }
+          },
+          {
+            "id": "monos-em",
+            "t": "Monossílabos terminados em EM",
+            "n": "Bem é monossílabo tônico e sua regra não inclui EM; também é oxítona terminada em EM.",
+            "x": {
+              "e": "A terminação 'em' pertence à regra das oxítonas, mas não à regra dos monossílabos tônicos; 'bem' e 'cem' não levam acento.",
+              "trap": "Classificação tônica muda a regra.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 15",
+              "questaoIds": [
+                "fiscal-t07-ce14"
+              ]
+            }
+          },
+          {
+            "id": "enclise",
+            "t": "Acentuação e pronome enclítico",
+            "n": "Ignore o pronome enclítico: visitá, oxítona terminada em a; comê, em e.",
+            "x": {
+              "e": "Na ênclise com hífen, a análise da acentuação recai sobre a forma verbal; 'comê' é oxítona terminada em e.",
+              "trap": "Não tratar '-la' como nova terminação da palavra.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 16",
+              "questaoIds": [
+                "fiscal-t07-ce15"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "paroxitonas",
+        "t": "Paroxítonas: regra residual e ditongos",
+        "n": "Regra por oposição às oxítonas, além de ditongos orais e mudanças do Acordo Ortográfico.",
+        "cor": 4,
+        "x": {
+          "e": "Regra por oposição às oxítonas, além de ditongos orais e mudanças do Acordo Ortográfico.",
+          "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf"
+        },
+        "f": [
+          {
+            "id": "paroxi-residual",
+            "t": "Paroxítonas e regra residual",
+            "n": "Acentuam-se as que não terminam em A(s), E(s), O(s), EM, ENS, além da regra própria dos ditongos.",
+            "x": {
+              "e": "O material organiza a regra por oposição às oxítonas: fácil, hífen, álbum e caráter exemplificam terminações residuais.",
+              "trap": "Lembre que há outras regras específicas, como os ditongos.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 18",
+              "questaoIds": [
+                "fiscal-t07-ce16"
+              ]
+            }
+          },
+          {
+            "id": "paroxi-ditongo",
+            "t": "Paroxítonas terminadas em ditongo",
+            "n": "Porque terminam em ditongos orais ('ua', 'ia') na classificação adotada na apostila.",
+            "x": {
+              "e": "O capítulo apresenta uma regra específica para paroxítonas terminadas em ditongos orais, como água, história e série.",
+              "trap": "Não reduzir água a terminação simples 'a'.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 19",
+              "questaoIds": [
+                "fiscal-t07-ce17"
+              ]
+            }
+          },
+          {
+            "id": "paroxi-ei-oi",
+            "t": "Ditongos abertos nas paroxítonas",
+            "n": "Sem acento: ideia e heroico.",
+            "x": {
+              "e": "Paroxítonas com ditongos abertos ei e oi perderam o acento: 'ideia' e 'heroico'.",
+              "trap": "Contrastar com herói, que é oxítona.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 19",
+              "questaoIds": [
+                "fiscal-t07-ce18"
+              ]
+            }
+          },
+          {
+            "id": "oxi-vs-paroxi-aberto",
+            "t": "Herói × heroico",
+            "n": "Herói é oxítona com ditongo aberto final, acentuada; heroico é paroxítona com 'oi', sem acento.",
+            "x": {
+              "e": "O ditongo aberto ói é acentuado em herói (oxítona), mas não em heroico (paroxítona).",
+              "trap": "Não generalizar acento por semelhança lexical.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 19",
+              "questaoIds": [
+                "fiscal-t07-ce19"
+              ]
+            }
+          },
+          {
+            "id": "hifen-hifens",
+            "t": "Hífen × hifens",
+            "n": "Hífen termina em EN e hifens em ENS; a segunda cai na terminação não acentuada das paroxítonas.",
+            "x": {
+              "e": "Hífen é paroxítona terminada em en, enquanto hifens termina em ens, terminação não acentuada pela regra residual.",
+              "trap": "O plural muda a terminação sem mudar a tonicidade.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 20",
+              "questaoIds": [
+                "fiscal-t07-ce20"
+              ]
+            }
+          },
+          {
+            "id": "prefixos-hiper",
+            "t": "Prefixos paroxítonos",
+            "n": "Na condição de prefixos paroxítonos, não são acentuados.",
+            "x": {
+              "e": "A apostila destaca que esses prefixos não recebem acento, embora se pareçam com paroxítonas de regra geral.",
+              "trap": "Não tratar prefixos isolados como palavras comuns.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 20",
+              "questaoIds": [
+                "fiscal-t07-ce21"
+              ]
+            }
+          },
+          {
+            "id": "til-nasal",
+            "t": "Til não é acento gráfico",
+            "n": "Não. Til indica nasalidade; também leva acento agudo por oxítona terminada em EM.",
+            "x": {
+              "e": "A apostila distingue acento de marca de nasalidade; 'direções' não tem acento gráfico por causa do til.",
+              "trap": "Nem toda marca sobre letra é acento de tonicidade.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 17",
+              "questaoIds": [
+                "fiscal-t07-ce22"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "hiatos",
+        "t": "Hiatos: I/U e exceções",
+        "n": "I/U tônicos em hiato e condições especiais após ditongo, antes de NH e com outras consoantes.",
+        "cor": 5,
+        "x": {
+          "e": "I/U tônicos em hiato e condições especiais após ditongo, antes de NH e com outras consoantes.",
+          "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf"
+        },
+        "f": [
+          {
+            "id": "hiato-regra",
+            "t": "Hiato de I/U tônicos",
+            "n": "Acentuam-se I/U tônicos em hiato com vogal anterior, sozinhos na sílaba ou seguidos de S, ressalvadas exceções.",
+            "x": {
+              "e": "A regra do hiato destaca vogais I/U tônicas que se separam da vogal anterior e formam sílaba isolada ou com s.",
+              "trap": "A classificação oxítona/paroxítona não é seu elemento decisivo.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 25",
+              "questaoIds": [
+                "fiscal-t07-ce23"
+              ]
+            }
+          },
+          {
+            "id": "hiato-classes",
+            "t": "Hiato e tonicidade",
+            "n": "Ambas levam acento pela regra do hiato, que independe da posição da sílaba tônica.",
+            "x": {
+              "e": "A regra do hiato opera independentemente de a palavra ser paroxítona ou oxítona; ambas contêm I tônico em hiato.",
+              "trap": "É exceção à comparação usual por tonicidade.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 16",
+              "questaoIds": [
+                "fiscal-t07-ce24"
+              ]
+            }
+          },
+          {
+            "id": "hiato-juiz",
+            "t": "Juiz × juízes",
+            "n": "Em juiz, I tônico não está sozinho nem com S; em juízes, o I do hiato está sozinho na sílaba.",
+            "x": {
+              "e": "Em juiz, o I tônico integra sílaba com z; em juízes, o I fica sozinho na sílaba, recebendo acento.",
+              "trap": "Não acentuar apenas por ouvir duas vogais.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 25",
+              "questaoIds": [
+                "fiscal-t07-ce25"
+              ]
+            }
+          },
+          {
+            "id": "hiato-nh",
+            "t": "Hiato antes de NH",
+            "n": "Não se acentua I/U tônico quando vem NH na sílaba seguinte, como rainha e moinho.",
+            "x": {
+              "e": "O texto apresenta a exceção dos hiatos com I/U tônico antes de NH; rainha, bainha e moinho não são acentuadas.",
+              "trap": "A regra básica do I/U sozinho não basta.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 25",
+              "questaoIds": [
+                "fiscal-t07-ce26"
+              ]
+            }
+          },
+          {
+            "id": "hiato-decrescente",
+            "t": "Ditongo decrescente e paroxítona",
+            "n": "São paroxítonas com I/U tônico após ditongo decrescente; aplica-se a exceção ortográfica.",
+            "x": {
+              "e": "O Acordo Ortográfico retirou o acento em I/U tônicos após ditongo decrescente em paroxítonas: feiura, baiuca.",
+              "trap": "Contrastar com Piauí, oxítona.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 26",
+              "questaoIds": [
+                "fiscal-t07-ce27"
+              ]
+            }
+          },
+          {
+            "id": "hiato-crescente",
+            "t": "Guaíra × feiura",
+            "n": "Em Guaíra, o hiato ocorre após ditongo crescente; em feiura, após decrescente em paroxítona.",
+            "x": {
+              "e": "A apostila contrasta ditongo crescente (Guaíra, Guaíba) com decrescente (feiura).",
+              "trap": "Não aplicar cegamente a exceção a todo ditongo.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 26",
+              "questaoIds": [
+                "fiscal-t07-ce28"
+              ]
+            }
+          },
+          {
+            "id": "hiato-oxitona",
+            "t": "Hiato e oxítonas após ditongo",
+            "n": "Piauí é oxítona com I tônico final e é acentuada; feiura é paroxítona após ditongo decrescente e não se acentua.",
+            "x": {
+              "e": "O hiato acentuado após ditongo em oxítona permanece: Piauí, tuiuiú e teiú constam na apostila.",
+              "trap": "Não generalizar o caso de feiura a Piauí.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 26",
+              "questaoIds": [
+                "fiscal-t07-ce29"
+              ]
+            }
+          },
+          {
+            "id": "ee-oo",
+            "t": "Hiatos OO/EE",
+            "n": "Todas sem circunflexo, após as mudanças do Acordo Ortográfico.",
+            "x": {
+              "e": "O acento de vogais repetidas oo e ee foi eliminado: enjoo, voo, creem, leem.",
+              "trap": "Diferenciar de têm/vêm, cujo circunflexo plural permanece.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 26",
+              "questaoIds": [
+                "fiscal-t07-ce30"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-2",
+        "t": "Acentos diferenciais: mantidos e abolidos",
+        "n": "Pôde/pode, pôr/por e ter/vir têm contrastes preservados; muitos outros desapareceram.",
+        "cor": 6,
+        "x": {
+          "e": "Pôde/pode, pôr/por e ter/vir têm contrastes preservados; muitos outros desapareceram.",
+          "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf"
+        },
+        "f": [
+          {
+            "id": "pode-pode",
+            "t": "Pôde × pode",
+            "n": "Pôde: pretérito perfeito; pode: presente.",
+            "x": {
+              "e": "O capítulo mantém o contraste pôde (passado) e pode (presente).",
+              "trap": "Ontem pôde; hoje pode.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33",
+              "questaoIds": [
+                "fiscal-t07-ce31"
+              ]
+            }
+          },
+          {
+            "id": "por-por",
+            "t": "Pôr × por",
+            "n": "Pôr, verbo no infinitivo, recebe circunflexo; por, preposição, não.",
+            "x": {
+              "e": "É um dos acentos diferenciais preservados pela ortografia atual, segundo a apostila.",
+              "trap": "Confundir com acentos diferenciais abolidos.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33",
+              "questaoIds": [
+                "fiscal-t07-ce32"
+              ]
+            }
+          },
+          {
+            "id": "tem-tem",
+            "t": "Tem × têm",
+            "n": "Ele tem; eles têm.",
+            "x": {
+              "e": "O circunflexo é marca diferencial de número para o verbo ter.",
+              "trap": "Não aplicar plural sem marca gráfica.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33",
+              "questaoIds": [
+                "fiscal-t07-ce33"
+              ]
+            }
+          },
+          {
+            "id": "vem-vem",
+            "t": "Vem × vêm",
+            "n": "Ela vem; elas vêm.",
+            "x": {
+              "e": "'Ele vem' e 'eles vêm' distinguem singular/plural por circunflexo na forma plural.",
+              "trap": "Plural de vir é vêm, não vem.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33",
+              "questaoIds": [
+                "fiscal-t07-ce34"
+              ]
+            }
+          },
+          {
+            "id": "derivados-intervir",
+            "t": "Derivados de ter e vir",
+            "n": "O governo intervém; os governos intervêm.",
+            "x": {
+              "e": "A apostila estende a diferenciação de número aos derivados de ter/vir, com acentos adequados.",
+              "trap": "Derivados não repetem sempre exatamente o acento da forma simples.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 33",
+              "questaoIds": [
+                "fiscal-t07-ce35"
+              ]
+            }
+          },
+          {
+            "id": "forma-facultativo",
+            "t": "Acentos diferenciais facultativos",
+            "n": "Fôrma pode usar circunflexo facultativo; pôde exige acento no pretérito.",
+            "x": {
+              "e": "A apostila registra 'fôrma/forma' como caso facultativo e 'pôde/pode' como distinção obrigatória.",
+              "trap": "Evitar dizer que todo acento diferencial foi abolido.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 34",
+              "questaoIds": [
+                "fiscal-t07-ce36"
+              ]
+            }
+          },
+          {
+            "id": "abolidos-para",
+            "t": "Para × pára",
+            "n": "Ambas sem acento diferencial na ortografia atual.",
+            "x": {
+              "e": "O antigo acento diferencial de pára (verbo) foi abolido; ambos os usos se escrevem para.",
+              "trap": "Não reproduzir regras anteriores ao Acordo.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 34",
+              "questaoIds": [
+                "fiscal-t07-ce37"
+              ]
+            }
+          },
+          {
+            "id": "abolidos-pelo",
+            "t": "Pelo × pêlo",
+            "n": "Pelo, sem acento em ambos os usos.",
+            "x": {
+              "e": "Apostila informa que o antigo acento de pêlo foi abolido; escreve-se pelo nos dois empregos.",
+              "trap": "Pêlo é grafia anterior ao Acordo.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 34",
+              "questaoIds": [
+                "fiscal-t07-ce38"
+              ]
+            }
+          },
+          {
+            "id": "abolidos-polo",
+            "t": "Polo e pera",
+            "n": "Polo e pera, entre outras como pelo e para.",
+            "x": {
+              "e": "O texto lista polo e pera entre as palavras que perderam acentos diferenciais.",
+              "trap": "Não confundir com o acento preservado de pôr.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 34",
+              "questaoIds": [
+                "fiscal-t07-ce39"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparacoes",
+        "t": "Pegadinhas de enquadramento da regra",
+        "n": "Para comparar regras de acentuação, identifique tonicidade e regra específica, especialmente hiatos.",
+        "cor": 7,
+        "x": {
+          "e": "Para comparar regras de acentuação, identifique tonicidade e regra específica, especialmente hiatos.",
+          "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf"
+        },
+        "f": [
+          {
+            "id": "comparacao-tonica",
+            "t": "Mesma regra e classificação",
+            "n": "Classificar tonicidade; a regra do hiato é exceção importante, pois independe dela.",
+            "x": {
+              "e": "Parabéns é oxítona; lúmen, paroxítona. O material orienta classificar a tonicidade ao comparar as regras, exceto na regra do hiato.",
+              "trap": "Duas palavras acentuadas não significam mesma regra.",
+              "src": "PORTUGUÊS.zip › 1. Ortografia oficial. Acentuação gr.pdf, p. 16",
+              "questaoIds": [
+                "fiscal-t07-ce40"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": [
+      [
+        "oxitonas",
+        "paroxitonas",
+        "Regras gerais opostas"
+      ],
+      [
+        "hiatos",
+        "oxitonas",
+        "Hiato independe da tonicidade"
+      ],
+      [
+        "conceito-2",
+        "hiatos",
+        "Acento diferencial não equivale ao do hiato"
+      ],
+      [
+        "conceito-1",
+        "comparacoes",
+        "Tonicidade orienta classificação"
+      ]
+    ]
+  }
+}
