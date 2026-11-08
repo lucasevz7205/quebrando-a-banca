@@ -185,3 +185,7 @@ details.why > summary { font-weight:700; }
   .filters select { width:100%; }
   .qb-section-intro h2 { font-size:24px; }
 }
+
+.qb-week-nav select[data-plan-trail] { max-width:100%; min-width:0; }
+.qb-plan-notes { margin:3px 0 6px; white-space:pre-line; font-size:13px; color:var(--muted); overflow-wrap:anywhere; }
+.qb-plan-resources .acts { display:flex; flex-wrap:wrap; gap:6px; }

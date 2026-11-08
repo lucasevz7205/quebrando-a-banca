@@ -68,7 +68,21 @@
     return due;
   }
 
-  function taskCard(task, compact = false) {
+  function trailResources(S, task) {
+    if (!S.studyAccount || typeof task.trilha !== "string") return "";
+    const revision = S.rv.get(task.topico);
+    return `<div class="qb-plan-resources">
+      ${task.notas ? `<p class="qb-plan-notes">${esc(task.notas)}</p>` : ""}
+      <div class="acts">
+        ${revision?.mapa ? `<button type="button" class="lnk" data-ir-mapa="${esc(task.topico)}">Mapa mental</button>` : ""}
+        ${revision?.cartoes?.length ? `<button type="button" class="lnk" data-ir-cart="${esc(task.topico)}">Revisão ativa</button>` : ""}
+        ${task.capitulo && S.q.size ? `<button type="button" class="lnk" data-treinar="${esc(task.capitulo)}">Treinar questão</button>` : ""}
+        ${!task.topico && task.tipo === "revisao" ? '<button type="button" class="lnk" data-sub="caderno">Caderno de erros</button>' : ""}
+      </div>
+    </div>`;
+  }
+
+  function taskCard(S, task, compact = false) {
     const status = task.status || "planejada";
     const title = esc(task.titulo || "Atividade sem título");
     const details = [task.horario, task.materia, task.minutos ? hours(task.minutos) : null].filter(Boolean).map(esc);
@@ -76,6 +90,7 @@
       ${compact ? `<span class="qb-task-name">${title}</span><span class="qb-task-line">${esc(KINDS[task.tipo] || "Estudo")}${task.horario ? ` · ${esc(task.horario)}` : ""}</span>` : `
       <div class="qb-task-copy"><span class="qb-task-kind">${esc(KINDS[task.tipo] || "Estudo")}</span><strong>${title}</strong>
         <span class="qb-task-line">${details.join(" · ") || "Sem horário fixo"}</span>
+        ${trailResources(S, task)}
         ${status === "executando" ? `<span class="qb-task-live">Em execução <b data-plan-timer="${esc(task.id)}">${clock(seconds(task))}</b></span>` : ""}
         ${status === "pausada" ? `<span class="qb-task-line">Pausada · ${clock(seconds(task))} registrado(s)</span>` : ""}
         ${done(task) ? `<span class="qb-task-finished">Concluída${task.concluidaEm ? ` · ${short(task.concluidaEm.slice(0, 10))}` : ""}</span>` : ""}
@@ -127,13 +142,35 @@
     </form>`;
   }
 
+  function plannedTrails(S) {
+    const firstDay = new Map();
+    if (S.studyAccount) {
+      for (const task of active(S.pl)) {
+        if (typeof task.trilha !== "string" || !/^\d{2}$/.test(task.trilha)) continue;
+        const current = firstDay.get(task.trilha);
+        if (!current || task.data < current) firstDay.set(task.trilha, task.data);
+      }
+    }
+    return [...firstDay.entries()].sort(([a], [b]) => a.localeCompare(b));
+  }
+
   function render(S, { hoje, proxDe, devidas, cartRevHoje }) {
     initialize(S);
     const today = hoje();
     const days = currentWeek(S);
     if (!days.includes(S.planSelectedDay)) S.planSelectedDay = days[0];
     const tasks = getWeekTasks(S, days);
+    const trails = plannedTrails(S);
+    if (!S.planTrailSeen && trails.length) {
+      S.planTrailSeen = true;
+      if (S.planSelectedDay === today && !tasks.some(t => t.data === today)) {
+        const first = tasks.filter(t => t.trilha && t.data > today).sort((a, b) => a.data.localeCompare(b.data))[0];
+        if (first) S.planSelectedDay = first.data;
+      }
+    }
     const selected = getDay(S, S.planSelectedDay);
+    const selectedTrail = selected.find(task => typeof task.trilha === "string")?.trilha
+      ?? tasks.find(task => typeof task.trilha === "string")?.trilha;
     const due = automaticReviews(S, today, proxDe, devidas, cartRevHoje);
     const total = tasks.length;
     const completed = tasks.filter(done).length;
@@ -147,13 +184,16 @@
     return `<div class="wrap qb-week-planner" style="gap:18px">
       <section class="qb-plan-intro qb-page-hero" aria-label="Planejamento semanal">
         <div class="qb-page-hero-copy"><span class="qb-plan-eyebrow">PLANEJAMENTO SEMANAL · QUEBRANDO A BANCA</span>
-          <h2>Sua semana de estudos</h2>
-          <p>Planeje, execute e acompanhe suas tarefas, revisões e simulados. Um dia de cada vez, com toda a semana à vista.</p>
+          <h2>${trails.length ? `Trilhas de estudo · ${esc(S.studyAccountName || "Seu concurso")}` : "Sua semana de estudos"}</h2>
+          <p>${trails.length ? "Siga a numeração das tarefas. Abra os mapas, revise com flashcards e faça a revisão de erros ao final de cada trilha." : "Planeje, execute e acompanhe suas tarefas, revisões e simulados. Um dia de cada vez, com toda a semana à vista."}</p>
         </div>
         <div class="qb-page-hero-actions"><button type="button" class="btn" data-plan-action="new">+ Nova atividade</button></div>
         <div class="qb-page-hero-footer" aria-label="Navegar entre semanas">
           <div class="qb-week-title"><h3>${esc(longRange(days[0], days[6]))}</h3><span>Semana selecionada</span></div>
-          <div class="qb-week-nav"><button type="button" data-plan-week="-1" aria-label="Semana anterior">‹</button><button type="button" data-plan-week="0">Semana atual</button><button type="button" data-plan-week="1" aria-label="Próxima semana">›</button></div>
+          <div class="qb-week-nav">${trails.length ? `<select aria-label="Ir para uma trilha" data-plan-trail>
+            <option value="">Ir para uma trilha</option>
+            ${trails.map(([trail, day]) => `<option value="${day}" ${selectedTrail === trail ? "selected" : ""}>Trilha ${esc(trail)}</option>`).join("")}
+          </select>` : ""}<button type="button" data-plan-week="-1" aria-label="Semana anterior">‹</button><button type="button" data-plan-week="0">Semana atual</button><button type="button" data-plan-week="1" aria-label="Próxima semana">›</button></div>
         </div>
       </section>
       <div class="qb-plan-summary">
@@ -166,7 +206,7 @@
       ${backlog.length ? `<details class="qb-plan-overdue"><summary><strong>${backlog.length} atividades pendentes de semanas anteriores</strong><span>Abra para reprogramar ou concluir</span></summary><div class="qb-plan-overdue-list">${backlog.map(t => `<div><div><strong>${esc(t.titulo)}</strong><small>${short(t.data)} · ${esc(KINDS[t.tipo] || "Estudo")}${t.materia ? ` · ${esc(t.materia)}` : ""}</small></div><button type="button" class="btn ghost small" data-plan-action="move" data-plan-id="${esc(t.id)}">Mover para ${short(S.planSelectedDay)}</button></div>`).join("")}</div></details>` : ""}
       <div class="qb-plan-bottom">
         <section class="qb-plan-day-detail"><div class="qb-plan-panel-head"><div><span class="qb-plan-eyebrow">EXECUÇÃO DO DIA</span><h3>${esc(DAY_LABELS[parseDay(S.planSelectedDay).getDay()])}, ${short(S.planSelectedDay)} ${S.planSelectedDay === today ? '<span class="qb-today-pill">Hoje</span>' : ""}</h3></div><button type="button" class="btn ghost small" data-plan-action="new">Adicionar</button></div>
-          ${selected.length ? `<div class="qb-plan-task-list">${selected.map(t => taskCard(t)).join("")}</div>` : `<div class="qb-plan-empty"><strong>Nenhuma atividade manual planejada.</strong><span>Adicione um estudo, revisão, simulado ou meta de questões para este dia.</span></div>`}
+          ${selected.length ? `<div class="qb-plan-task-list">${selected.map(t => taskCard(S, t)).join("")}</div>` : `<div class="qb-plan-empty"><strong>Nenhuma atividade manual planejada.</strong><span>Adicione um estudo, revisão, simulado ou meta de questões para este dia.</span></div>`}
           <div class="qb-auto-reviews"><div><strong>Revisões automáticas</strong><p>Geradas pelas respostas e avaliações anteriores. Não são alteradas ao reorganizar as tarefas.</p></div><div class="qb-auto-counts"><span>${due.questoes.get(S.planSelectedDay) || 0} questões</span><span>${due.cartoes.get(S.planSelectedDay) || 0} cartões</span></div>
             ${S.planSelectedDay === today && selectedAuto ? `<div class="qb-auto-actions"><button type="button" class="btn small" data-plan-auto="questoes" ${due.questoes.get(today) ? "" : "disabled"}>Revisar questões</button><button type="button" class="btn ghost small" data-plan-auto="cartoes" ${due.cartoes.get(today) ? "" : "disabled"}>Revisar flashcards</button></div>` : ""}
           </div>
@@ -199,6 +239,14 @@
       S.planFormOpen = false;
       rerender();
     }));
+    document.querySelector("[data-plan-trail]")?.addEventListener("change", event => {
+      const day = event.target.value;
+      if (!plannedTrails(S).some(([, date]) => date === day)) return;
+      S.planWeekStart = weekStart(day);
+      S.planSelectedDay = day;
+      S.planFormOpen = false;
+      rerender();
+    });
     document.querySelectorAll("[data-plan-day]").forEach(b => b.addEventListener("click", () => { S.planSelectedDay = b.dataset.planDay; S.planFormOpen = false; rerender(); }));
     document.querySelectorAll("[data-plan-open]").forEach(b => b.addEventListener("click", () => { const task = getTask(b.dataset.planOpen); if (task) { S.planSelectedDay = task.data; openForm(task); } }));
     document.querySelectorAll("[data-plan-action]").forEach(b => b.addEventListener("click", () => {

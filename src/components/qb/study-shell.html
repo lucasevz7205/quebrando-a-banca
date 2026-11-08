@@ -2646,6 +2646,7 @@ function init(){
   window.QBBridge.ask('account').then(account=>{
     if(!account.legacy){
       S.studyAccount=true;
+      S.studyAccountName=account.name;
       PROVAS.P1='Trilha de estudo';
       PROVAS.P2='Conhecimentos específicos';
       PROVA=account.date||null;
