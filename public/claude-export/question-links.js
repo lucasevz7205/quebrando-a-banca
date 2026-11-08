@@ -39,7 +39,7 @@
      * O banco permanece único; esta associação não duplica o registro nem a nota.
      * Apenas refs presentes no banco deste login e declaradas no documento da bateria. */
     const referencedBy=new Map();
-    for(const [topicId,doc] of (r instanceof Map?r.entries():[])){
+    for(const [topicId,doc] of (r&&typeof r.entries==='function'?r.entries():[])){
       if(!doc||!Array.isArray(doc.questaoIds)||!ed.some(t=>t.id===topicId))continue;
       const seen=new Set();
       for(const id of doc.questaoIds){
