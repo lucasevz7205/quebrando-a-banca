@@ -8,21 +8,26 @@ const env={window:{},crypto:webcrypto,Map,Set,Date};
 vm.runInNewContext(script,env);const L=env.window.QBLearning;
 const state=()=>({q:new Map(),r:new Map(),cfg:new Map(),rodadas:[],learningEvents:new Map(),learningContent:new Map()});
 const e=(id,item,day,extra={})=>({id,item,at:'2026-11-'+String(day).padStart(2,'0')+'T12:00:00Z',version:'1',kind:'attempt',origin:'treino',marked:'C',ok:true,confidence:2,concept:'k',exposure:'unknown',...extra});
-test('P1: four confidence states, absent and blanks; escaped comments',()=>{
- const S=state();let q={id:'q',cap:'TI-2',comentario:'<img src=x onerror=x>',gabarito:'C',enunciado:'x'};
+test('P1: four confidence states and distinct feedback for correct with doubt',()=>{
+ const S=state();const q={id:'q',cap:'TI-2',comentario:'<img src=x onerror=x>',gabarito:'C',enunciado:'x'};
  assert.equal(L.feedback(S,q,{marcada:'B',conf:null}),'');
  assert.equal(L.feedback(S,q,{marcada:'C',conf:null,acertou:true}),'');
  assert.match(L.feedback(S,q,{marcada:'E',conf:3,acertou:false}),/Erro com certeza/);
  assert.match(L.feedback(S,q,{marcada:'E',conf:2,acertou:false}),/dúvida/);
  assert.match(L.feedback(S,q,{marcada:'C',conf:3,acertou:true}),/Certeza e acerto/);
- for(let i=0;i<10;i++){q.cap='c'+i;const h=L.feedback(S,q,{marcada:'C',conf:2,acertou:true});if(h){assert.match(h,/&lt;img/);return}}
- assert.fail('Treatment arm missing');
+ const intervention=L.feedback(S,q,{marcada:'C',conf:2,acertou:true,pilotFeedback:'especifico'});
+ assert.match(intervention,/Evocação rápida/);
+ assert.doesNotMatch(intervention,/<img|onerror/);
+ assert.equal(L.feedback(S,q,{marcada:'C',conf:2,acertou:true,pilotFeedback:'padrao'}),'');
 });
 test('P1: feature off and metadata idempotent; content version changes',()=>{
  const S=state(),q={id:'q',cap:'c',enunciado:'one',gabarito:'C',comentario:'rule',ref:'source'},rd={id:'r',idx:0};
  const a=L.metadata(S,q,'C',2,rd),b=L.metadata(S,q,'C',2,rd);
  assert.equal(a.id,b.id);assert.equal(a.exposure,'unknown');
  assert.notEqual(L.version(q),L.version({...q,gabarito:'E'}));
+ assert.equal(a.allocation,'piloto-p1-por-tentativa-v1');
+ const arms=new Set(Array.from({length:64},(_,i)=>L.metadata(S,q,'C',2,{id:'r'+i,idx:i%4}).feedback));
+ assert.deepEqual([...arms].sort(),['especifico','padrao']);
  S.cfg.set('aprendizagem',{flags:{p1:false}});
  assert.equal(L.feedback(S,q,{marcada:'C',conf:2,acertou:true}),'');
 });
@@ -58,6 +63,15 @@ test('P6: deterministic, insufficient fallback, no input mutation, exam cap',()=
 test('P3/P5/P7: malformed editorial content rejected',()=>{
  assert.throws(()=>L.validateCard({type:'duel'}),/Preencha/);
  assert.equal(L.validateCard({type:'duel',title:'pair',concept:'k',prompt:'contrast',explanation:'difference',reference:'source'}),true);
+});
+test('P1 panel has four state counters, pilot caveats and no invented retention',()=>{
+ const S=state();S.learningEvents.set('a',e('a','a',1,{confidence:3,ok:true}));
+ S.learningEvents.set('b',e('b','b',2,{confidence:2,ok:true}));
+ S.learningEvents.set('c',e('c','c',3,{confidence:2,ok:false,marked:'E'}));
+ S.learningEvents.set('d',e('d','d',4,{confidence:3,ok:false,marked:'E'}));
+ const html=L.render(S,'2026-11-08');
+ for(const name of ['Acertou · certeza','Acertou · dúvida','Errou · dúvida','Errou · certeza','Resultado ainda inconclusivo','Confiança não é domínio'])assert.match(html,new RegExp(name));
+ assert.match(html,/Feedback \+ evocação/);
 });
 test('No original study counters are modified by rendering metrics',()=>{
  const S=state();S.r.set('q',{tentativas:17,acertos:12,erros:5,proxRevisao:'2026-11-09'});const before=JSON.stringify([...S.r]);
