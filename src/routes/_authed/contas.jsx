@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createFileRoute, useRouter } from "@tanstack/react-router";
+import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useAuth } from "@/lib/AuthContext";
 import Heading from "@/components/qb/Heading";
@@ -94,6 +94,7 @@ function StudyAccountsPage() {
           </div>
           <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
             {a.pending&&<a href="#importar-materiais" onClick={()=>setTarget(a.id)}>Providenciar materiais</a>}
+            {a.active&&<Link to="/estudar" search={{conta:a.id}} className="qb-primary">Ver ambiente</Link>}
             <button className="qb-primary" type="button" disabled={busy||!a.active&&(!a.ready.edital||!a.ready.questoes)}
               onClick={()=>run(async()=>{
                 await change({data:{accountId:a.id,active:!a.active}});

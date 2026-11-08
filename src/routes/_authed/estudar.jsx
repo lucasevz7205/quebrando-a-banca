@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import StudyOnboarding from "@/components/qb/StudyOnboarding";
 import { base44 } from "@/api/base44Client";
 import { useAuth } from "@/lib/AuthContext";
-import { accessStudyAccount, getStudyAccount } from "@/lib/study-account";
+import { accessStudyAccount, getStudyAccount, getStudyPreview, listStudyPreview } from "@/lib/study-account";
 import { listDocuments, writeDocument } from "@/lib/study-documents";
 
 const FLAG = "__qb44_bridge_v1__";
@@ -43,15 +43,28 @@ async function askAssistantLLM(input) {
 
 export const Route = createFileRoute("/_authed/estudar")({
   head: () => ({ meta: [{ title: "Estudar · Quebrando a Banca" }] }),
-  loader: () => getStudyAccount(),
+  validateSearch: search => ({
+    conta: typeof search.conta === "string" && search.conta.length <= 100 ? search.conta : undefined,
+  }),
+  loaderDeps: ({ search }) => ({ conta: search.conta }),
+  loader: ({ context, deps }) => {
+    if (!deps.conta) return getStudyAccount();
+    if (context.user?.role !== "admin") throw redirect({ to: "/estudar", search: {}, replace: true });
+    return getStudyPreview({ data: { accountId: deps.conta } });
+  },
   component: Estudar,
 });
 
 function Estudar() {
-  const { user, logout } = useAuth();
   const account = Route.useLoaderData();
+  return <StudyScreen key={account?.id || "principal"} account={account} />;
+}
+
+function StudyScreen({ account }) {
+  const { user, logout } = useAuth();
   const legacy = user?.role === "admin" && account?.legacy;
-  const accountId = user?.id && user.id === account?.userId ? account.id : null;
+  const preview = user?.role === "admin" && account?.preview === true;
+  const accountId = preview || (user?.id && user.id === account?.userId) ? account.id : null;
   const frameRef = useRef(null);
   const [ready, setReady] = useState(false);
   const [frameVersion, setFrameVersion] = useState(0);
@@ -67,14 +80,19 @@ function Estudar() {
       try {
         if (!user?.id || (!legacy && !accountId)) throw new Error("Ambiente de estudo indisponível.");
         let result;
-        if (msg.action === "logout") {
+        if (preview && msg.action === "write") {
+          frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: false, error: "Visualização somente leitura." }, event.origin);
+          return;
+        }
+        if (msg.action === "logout" && !preview) {
           logout();
           return;
         }
-        if (msg.action === "account") result = legacy ? { legacy: true } : { name: account.name, date: account.date };
+        if (msg.action === "account") result = legacy ? { legacy: true } : { name: account.name, date: account.date, preview };
         else if (msg.action === "assistantLLM" && legacy) result = await askAssistantLLM(msg.args || {});
         else if (msg.action === "list" || msg.action === "write") {
           if (legacy) result = await (msg.action === "list" ? listDocuments : writeDocument)(legacyStorage, msg.args || {});
+          else if (preview) result = await listStudyPreview({ data: { accountId, args: msg.args || {} } });
           else result = await accessStudyAccount({ data: { action: msg.action, accountId, args: msg.args || {} } });
         } else throw new Error("Ação indisponível para esta conta.");
         frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: true, value: result }, event.origin);
@@ -86,7 +104,7 @@ function Estudar() {
     window.addEventListener("message", receive);
     setReady(true);
     return () => window.removeEventListener("message", receive);
-  }, [user?.id, legacy, accountId, account?.name, account?.date, logout]);
+  }, [user?.id, legacy, preview, accountId, account?.name, account?.date, logout]);
 
   if (!legacy && !accountId) {
     return <StudyOnboarding key={user?.id} pending={account?.pending} logout={logout} />;
@@ -95,6 +113,12 @@ function Estudar() {
   return (
     <main aria-label="Quebrando a Banca · Ambiente de estudo"
       style={{ width: "100%", minHeight: "100dvh", background: "#F3F6F5" }}>
+      {preview && (
+        <header className="flex min-h-14 flex-wrap items-center justify-between gap-2 border-b bg-white px-4 py-2 text-sm text-slate-900">
+          <span><strong>{account.name}</strong> · Visualização administrativa · Somente leitura</span>
+          <Link to="/contas" className="font-medium underline">Voltar a Contas</Link>
+        </header>
+      )}
       {error && (
         <div role="alert" style={{
           position: "fixed", zIndex: 100, bottom: 16, left: 16,
@@ -116,7 +140,7 @@ function Estudar() {
           title="Quebrando a Banca: Hoje, Edital, Treinar, Estudo, Simulado e Desempenho"
           srcDoc={account.markup}
           style={{
-            display: "block", width: "100%", height: "100dvh",
+            display: "block", width: "100%", height: preview ? "calc(100dvh - 3.5rem)" : "100dvh",
             border: 0, borderRadius: 0, background: "#F3F6F5"
           }}
         />

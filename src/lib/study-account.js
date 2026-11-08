@@ -5,6 +5,7 @@ import { z } from "zod";
 import { requireUser } from "@/lib/auth-middleware";
 import { pendingStudyRequest, requestStudyAccess, studyRequestSchema } from "@/lib/study-onboarding";
 import { listDocuments, writeDocument } from "@/lib/study-documents";
+import { getStudyPreviewAccount, readStudyPreview, studyAccountStorage } from "@/lib/study-preview.server";
 
 async function resolveAccount(base44, user) {
   const matches = await base44.entities.StudyAccount.filter({ user_id: user.id, active: true }, "created_date", 2);
@@ -33,20 +34,40 @@ export const submitStudyRequest = createServerFn({ method: "POST" })
     return requestStudyAccess(context.getBase44().asServiceRole.entities, context.user, data);
   });
 
+const accountIdSchema = z.string().min(1).max(100);
+const readArgs = z.object({
+  collection: z.string().max(50),
+  order: z.string().max(100).nullish(),
+  direction: z.enum(["asc", "desc"]).nullish(),
+  limit: z.number().int().positive().max(10000).nullish(),
+});
+
+export const getStudyPreview = createServerFn({ method: "GET" })
+  .middleware([requireUser])
+  .validator(z.object({ accountId: accountIdSchema }))
+  .handler(async ({ context, data }) => {
+    setResponseHeader("Cache-Control", "private, no-store");
+    const account = await getStudyPreviewAccount(context, data.accountId);
+    return { ...account, markup: studyShell(false) };
+  });
+
+export const listStudyPreview = createServerFn({ method: "POST" })
+  .middleware([requireUser])
+  .validator(z.strictObject({ accountId: accountIdSchema, args: readArgs }))
+  .handler(({ context, data }) => {
+    setResponseHeader("Cache-Control", "private, no-store");
+    return readStudyPreview(context, data.accountId, data.args);
+  });
+
 const requestSchema = z.discriminatedUnion("action", [
   z.object({
     action: z.literal("list"),
-    accountId: z.string().min(1).max(100),
-    args: z.object({
-      collection: z.string().max(50),
-      order: z.string().max(100).nullish(),
-      direction: z.enum(["asc", "desc"]).nullish(),
-      limit: z.number().int().positive().max(10000).nullish(),
-    }),
+    accountId: accountIdSchema,
+    args: readArgs,
   }),
   z.object({
     action: z.literal("write"),
-    accountId: z.string().min(1).max(100),
+    accountId: accountIdSchema,
     args: z.object({
       path: z.string().max(300),
       operation: z.enum(["set", "update"]),
@@ -62,10 +83,6 @@ export const accessStudyAccount = createServerFn({ method: "POST" })
     const base44 = context.getBase44().asServiceRole;
     const account = await resolveAccount(base44, context.user);
     if (!account || account.id !== data.accountId) throw new Error("Ambiente de estudo indisponível para este login.");
-    const storage = {
-      documents: base44.entities.StudyDocument,
-      parts: base44.entities.StudyDocumentPart,
-      scope: { study_account_id: account.id },
-    };
+    const storage = studyAccountStorage(base44.entities, account.id);
     return data.action === "list" ? listDocuments(storage, data.args) : writeDocument(storage, data.args);
   });
