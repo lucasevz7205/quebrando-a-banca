@@ -33,6 +33,21 @@ Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 05, 06, 07,
 
 **T05, T11, T17, T21, T26 e T32 desbloqueadas** pelos novos PDFs de TI. Os dois primeiros assuntos de tecnologia e os dois de governança foram aprofundados; suas baterias passaram a compartilhar os mesmos IDs das questões de teoria.
 
+## Ampliação de Tecnologia da Informação em 08/11/2026
+
+As fontes efetivamente lidas para estes seis tópicos foram **1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf** (81 páginas) e **2. Governança de dados.pdf** (193 páginas). Os 18 outros PDFs recebidos permanecem como fontes para lotes posteriores; não equivalem a assuntos já concluídos.
+
+- **T05 · Pirâmide DIKW e dados abertos:** 32 questões (31 novas), 35 nós, 33 cartões e 33 vínculos. Origem: primeiro PDF, pp. 3–20 e 41–43, incluindo a pirâmide ilustrada na p. 5.
+- **T11 · Metadados de arquivos:** 29 questões (28 novas), 36 nós, 30 cartões e 30 vínculos. Origem: primeiro PDF, pp. 51–58 e 78–79, inclusive EXIF, XML, Dublin Core e classificações.
+- **T17 · Bateria DIKW/dados abertos/metadados:** 62 questões distintas acessíveis, sendo 61 referências às questões das T05 e T11 e 1 própria. Os mapas T05/T11 são acessíveis por links.
+- **T21 · Governança de dados: fundamentos e organização:** 31 questões (30 novas), 35 nós, 32 cartões e 32 vínculos. Origem: segundo PDF, pp. 5–29.
+- **T26 · Governança: arquitetura, ciclo e controles:** 35 questões (34 novas), 43 nós, 36 cartões e 36 vínculos. Origem: segundo PDF, pp. 34–71.
+- **T32 · Bateria de governança:** 67 questões acessíveis, sendo 66 referências aos bancos T21/T26 e 1 própria, com links aos dois mapas originais.
+
+**Controles:** 396 questões físicas sem duplicação de ID, 75 mapas com 665 nós (603 identificados), 487 cartões e 365 links explícitos válidos. **14 tarefas** têm cobertura estrutural ampliada (incluindo as quatro baterias); o déficit aritmético do mínimo por tarefa é **1.102**, antes de novas fusões por assunto. Nenhum histórico pessoal ou nota de revisão espaçada foi artificialmente alterado.
+
+**Proveniência e limite:** 324 questões autorais acrescentadas às 72 iniciais, com referências a apostilas; não atribuir autoria Cebraspe/FCC/FGV aos itens criados. A revisão editorial e pedagógica é necessária antes de considerar todo o conteúdo homologado.
+
 ## Detalhamento por tópico
 
 | Trilha | Tarefa | Disciplina | Assunto | Questões distintas acessíveis | Nós do mapa | Flashcards locais | Links exatos cartão–mapa | Situação |
