@@ -1952,7 +1952,7 @@ function viewMetodo(){
 /* ---------- ações ---------- */
 function wire(){
   if(S.view==='analiseDia' && window.QBInsights) window.QBInsights.wire(S,render,hoje);
-  if(S.view==="painel" && window.QBPlanner) window.QBPlanner.wire(S,{render,enqueue,toast,hoje,startRevisao,iniciarMix});
+  if(S.view==="painel" && window.QBPlanner) window.QBPlanner.wire(S,{render,enqueue,toast,hoje,startRevisao,iniciarMix,setView});
   document.querySelectorAll('[data-cap]').forEach(b=>b.addEventListener('click',()=>{S.cap=b.dataset.cap;S.capEscolhido=true;render(true)}));
   document.querySelectorAll('input[name="modo"]').forEach(i=>i.addEventListener('change',()=>{S.modo=i.value;render(true)}));
   const sh=$('#shuffle'); if(sh) sh.addEventListener('change',()=>{S.shuffle=sh.checked});
