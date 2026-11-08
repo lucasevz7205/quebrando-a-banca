@@ -559,13 +559,13 @@ function topicoDoCap(cap){let best=null;for(const t of S.ed.values()) if((t.caps
 function indiceQuestoes(){return window.QBQuestionLinks.build(S.q,S.ed,S.rv)}
 function chaveQuestao(qid){return window.QBQuestionLinks.key(qid)}
 function recursosQuestao(qid){return indiceQuestoes().byQuestion.get(qid)||null}
-function atalhosQuestao(q){
-  const info=recursosQuestao(q.id),mapa=info?.matchedIds.find(id=>!!S.rv.get(id)?.mapa);
+function atalhosQuestao(q,indice){
+  const info=(indice?.byQuestion.get(q.id))||recursosQuestao(q.id),mapa=info?.matchedIds.find(id=>!!S.rv.get(id)?.mapa);
   return `<div class="qb-qsource-actions"><button type="button" class="btn ghost small" data-qcard="${esc(q.id)}">Revisar este item nos Flashcards</button>${mapa?`<button type="button" class="btn ghost small" data-ir-mapa="${esc(mapa)}">Abrir mapa do tópico</button>`:''}</div>`;
 }
-function questoesEmMapa(qs){
+function questoesEmMapa(qs,indice){
   if(!qs.length)return '';
-  return `<details class="qb-qsource-list"><summary>Questões relacionadas ao capítulo · ${qs.length}</summary><p class="rule">O vínculo é por capítulo do edital, não por nó semântico do mapa. Revele cada gabarito e comentário quando desejar conferir a regra.</p>${qs.map(q=>`<details class="qb-qsource-item"><summary>${esc(q.enunciado)}</summary><div><p><b>Gabarito: ${esc(LETRA[q.gabarito]||q.gabarito)}</b></p><p>${esc(q.comentario||'Comentário indisponível; confira a fonte.')}</p><small>${esc(q.ref||'Fonte não cadastrada')}</small>${atalhosQuestao(q)}</div></details>`).join('')}</details>`;
+  return `<details class="qb-qsource-list"><summary>Questões relacionadas ao capítulo · ${qs.length}</summary><p class="rule">O vínculo é por capítulo do edital, não por nó semântico do mapa. Revele cada gabarito e comentário quando desejar conferir a regra.</p>${qs.map(q=>`<details class="qb-qsource-item"><summary>${esc(q.enunciado)}</summary><div><p><b>Gabarito: ${esc(LETRA[q.gabarito]||q.gabarito)}</b></p><p>${esc(q.comentario||'Comentário indisponível; confira a fonte.')}</p><small>${esc(q.ref||'Fonte não cadastrada')}</small>${atalhosQuestao(q,indice)}</div></details>`).join('')}</details>`;
 }
 function nomeTopicoIndice(id,idx){return S.ed.get(id)||idx.virtualTopics.get(id)||{id,titulo:id}}
 function capNome(cap){for(const q of S.q.values()) if(q.cap===cap) return q.capNome||''; return ''}
@@ -1422,7 +1422,7 @@ function heatMap(gs){
 }
 function viewEdital(){
   if(!S.edLoaded) return `<div class="notice">Carregando o edital…</div>`;
-  const gs=porMateria();
+  const indice=indiceQuestoes(),gs=porMateria();
   const opts=`<option value="">Todas as matérias</option>`+gs.map(g=>`<option value="${esc(g.sigla)}" ${S.fMat===g.sigla?'selected':''}>${esc(g.nome)}</option>`).join('');
   const stOpts=`<option value="">Todos os status</option>`+ST_ORD.slice().reverse().map(k=>`<option value="${k}" ${S.fSt===k?'selected':''}>${ST[k]}</option>`).join('');
   let html='';
@@ -1442,11 +1442,12 @@ function viewEdital(){
         const est=s.total?`<span class="mono">${s.resp}/${s.total} feitas${s.resp?` · ${fmtPct(s.okN/s.resp)} de acerto`:''}${s.cad?` · ${s.cad} no caderno`:''}${s.resp&&s.ok/s.resp>=0.85&&!s.cad&&s.ret<s.resp?` · ${s.resp-s.ret} sem prova de retenção`:''}${s.hoje?` · ${s.hoje} hoje`:''}</span>`:'';
         const links=mats.map(m=>m.url?`<a class="lnk" href="${esc(m.url)}" target="_blank" rel="noopener" title="${esc(MTIPO[m.tipo]||'')}">${esc(m.tipo==='mapa'?'Mapa':m.tipo==='cobertura'?'Cobertura':m.tipo==='material'?'Material':'Link')}</a>`:`<span class="tchip" title="${esc(m.descricao||'')}">${esc(MTIPO[m.tipo]||'Fonte')}: ${esc(m.titulo)}</span>`).join('');
         const nr=nRev(t.id);
-        const mapa=mats.find(m=>m.tipo==='mapa'&&m.url), nCart=((S.rv.get(t.id)||{}).cartoes||[]).length, nPg=pgsDe(t.id).length;
+        const mapa=mats.find(m=>m.tipo==='mapa'&&m.url), nCart=((S.rv.get(t.id)||{}).cartoes||[]).length, nPg=pgsDe(t.id).length,
+          nVinc=(indice.byTopic.get(t.id)||[]).length;
         const outros=mats.filter(m=>m!==mapa);
         const acts=`<div class="acts">
-            ${mapa?`<a class="lnk" href="${esc(mapa.url)}" target="_blank" rel="noopener">Mapa mental</a>`:((S.rv.get(t.id)||{}).mapa?`<button class="lnk" data-ir-mapa="${esc(t.id)}">Mapa mental</button>`:S.rv.has(t.id)?`<button class="lnk" data-ir-rev="${esc(t.id)}">Mapa mental</button>`:'<span class="lnk off">Mapa mental</span>')}
-            ${nr?`<button class="lnk" data-ir-cart="${esc(t.id)}">Revisão ativa${nCart?(()=>{const o=cartStats(t.id);return ` · ${nCart} cartões${o.firmes?` · ${o.firmes} firmes`:''}${o.hoje?` · ${o.hoje} hoje`:''}`})():''}</button>`:'<span class="lnk off">Revisão ativa</span>'}
+            ${mapa?`<a class="lnk" href="${esc(mapa.url)}" target="_blank" rel="noopener">Mapa mental</a>`:((S.rv.get(t.id)||{}).mapa?`<button class="lnk" data-ir-mapa="${esc(t.id)}">Mapa mental</button>`:'<span class="lnk off">Mapa mental</span>')}
+            ${nr||nVinc?`<button class="lnk" data-ir-cart="${esc(t.id)}">Flashcards / revisão ativa${nCart?(()=>{const o=cartStats(t.id);return ` · ${nCart} cartões${o.firmes?` · ${o.firmes} firmes`:''}${o.hoje?` · ${o.hoje} hoje`:''}`})():''}${nVinc?` · ${nVinc} questões vinculadas`:''}</button>`:'<span class="lnk off">Flashcards / revisão ativa</span>'}
             ${(t.caps||[]).length?`<button class="lnk" data-treinar="${esc(t.caps[0])}">Treinar${s.total?` · ${s.resp}/${s.total}`:''}</button>`:'<span class="lnk off">Treinar</span>'}
             ${nPg?`<button class="lnk" data-ir-pg="${esc(t.id)}">Pegadinhas · ${nPg}</button>`:''}</div>`;
         html+=`<div class="topic${t.foraEdital?' fora':''}" id="tp-${esc(t.id)}">
@@ -1774,6 +1775,7 @@ function viewRevisao(){
 }
 /* mapa mental no estilo do modelo do Lucas (End-to-End): centro, ramos coloridos, rótulos curtos com etiqueta, tabela, caixa e ligações cruzadas */
 function viewMapa(){
+  const indice=indiceQuestoes();
   const ids=[...S.rv.entries()].filter(([k,v])=>v&&v.mapa).map(([k])=>k).sort((a,b)=>((S.ed.get(a)||{}).ordem||0)-((S.ed.get(b)||{}).ordem||0));
   if(!ids.length) return `<div class="wrap"><div class="notice">Nenhum mapa no formato novo ainda. Os chats de matéria gravam o mapa no documento de revisão do tópico.</div></div>`;
   if(!S.mapaId||!ids.includes(S.mapaId)) S.mapaId=ids[0];
@@ -1802,7 +1804,7 @@ function viewMapa(){
     <p class="rule">Toque num ramo com ⓘ para abrir a explicação. Com "Evocar antes de ler", tente explicar antes de abrir.</p>
     <div class="m-centro">${esc(m.centro||t.titulo||'')}</div>
     <div class="m-grid">${ramos}</div>
-    ${questoesEmMapa(indiceQuestoes().byTopic.get(S.mapaId)||[])}
+    ${questoesEmMapa(indice.byTopic.get(S.mapaId)||[],indice)}
     ${m.autor?`<p class="rule">${esc(m.autor)}</p>`:''}
   </div>`;
 }
