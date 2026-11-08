@@ -1680,11 +1680,13 @@ function viewCartoes(){
   if(!S.cartId||!ids.includes(S.cartId)) S.cartId=ids[0];
   const rv=S.rv.get(S.cartId)||{cartoes:[]},t=nomeTopicoIndice(S.cartId,indice),cav=S.cav||new Map();
   const ligadas=indice.byTopic.get(S.cartId)||[];
+  const bancoCompartilhado=Array.isArray(rv.questaoIds)&&rv.questaoIds.length>0;
+  const mapasRelacionados=(rv.mapaRelacionadoIds||[]).filter(id=>id!==S.cartId&&S.rv.get(id)?.mapa);
   const grupos=new Map(); (rv.cartoes||[]).forEach((c,i)=>{const g=c.tema||'Geral';if(!grupos.has(g))grupos.set(g,[]);grupos.get(g).push([c,i])});
   const cnt={n:0,d:0,b:0,f:0,x:0}, cs0=cartStats(S.cartId);
   const qVisiveis=S.cartPend?ligadas.filter(q=>!cartNovo(cav.get(chaveQuestao(q.id)))&&cartVence(chaveQuestao(q.id))):ligadas;
   const qAberto=!!(S.cartQuestionFocus&&ligadas.some(q=>q.id===S.cartQuestionFocus));
-  const qResumo=ligadas.length?`<details class="qb-qrev" ${qAberto?'open':''}><summary>Questões vinculadas · ${ligadas.length} ${ligadas.length===1?'item':'itens'} <small>(fonte original, gabarito e comentário)</small></summary><p class="rule">Esses cartões são derivados diretamente das questões existentes. Não substituem os cartões conceituais e não entram como novos automáticos na sessão diária. Uma vez avaliados, seguem a revisão espaçada já existente. O vínculo com o tópico é feito pelo capítulo e ainda não valida equivalência com um nó específico do mapa.</p>${qVisiveis.map(q=>{
+  const qResumo=ligadas.length?`<details class="qb-qrev" ${qAberto?'open':''}><summary>Questões vinculadas · ${ligadas.length} ${ligadas.length===1?'item':'itens'} <small>(fonte original, gabarito e comentário)</small></summary><p class="rule">${bancoCompartilhado?'Esta bateria reutiliza os mesmos IDs de questões dos assuntos teóricos. Responder novamente não cria uma segunda questão; o histórico permanece associado ao ID original.':'Esses cartões são derivados diretamente das questões existentes.'} Não substituem os cartões conceituais e não entram como novos automaticamente na sessão diária. Uma vez avaliados, seguem a revisão espaçada já existente. A vinculação por capítulo não demonstra, sozinha, equivalência com um nó específico do mapa.</p>${qVisiveis.map(q=>{
     const k=chaveQuestao(q.id),c=cartaoDe(k),ab=S.cartAbertos.has(k);
     return `<article class="card-r ck qb-qrev-card" id="qbq-${esc(q.id)}"><span class="tag">Questão ${esc(q.ordem||q.id)} · ${esc(q.cap||'')}</span><p class="cq">${esc(c.q)}</p>${ab?`<ul class="exl">${(c.a||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${c.src?`<span class="ps">Fonte: ${esc(c.src)}</span>`:''}`:''}${cartAval(k,ab)}</article>`;
   }).join('')||'<p class="notice">Nenhuma questão vinculada vence hoje. Desmarque “Só os de hoje” para consultar todas.</p>'}</details>`:'';
@@ -1706,7 +1708,8 @@ function viewCartoes(){
       <button class="btn small" data-cart-hoje="1">Sessão intercalada · todos os tópicos</button>
       <button class="btn ghost small" id="cart-reset">Esconder respostas</button>
       <button class="btn ghost small" data-cf="1">Abrir tudo</button><button class="btn ghost small" data-cf="0">Fechar tudo</button>
-      ${rv.mapa?`<button class="lnk" data-ir-mapa="${esc(S.cartId)}">Mapa mental</button>`:''}</div>
+      ${rv.mapa?`<button class="lnk" data-ir-mapa="${esc(S.cartId)}">Mapa mental</button>`:''}
+      ${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
     <div class="m-centro">${esc((rv.mapa&&rv.mapa.centro)||t.titulo||'')} · revisão ativa</div>
     <p class="rule" style="align-self:center">${tot} cartões · <b>${Math.min(cs0.hoje,Math.max(0,CART_REV_DIA-cartRevHoje()))} para hoje</b> (${cs0.hoje} vencidos; teto de ${CART_REV_DIA} revisões por dia) · ${cs0.novos} novos · <span class="pos">${cs0.firmes} firmes</span> (intervalo de ${FIRME}+ dias) · última marcação: <span class="neg">${cnt.n} novamente</span>, <span style="color:var(--duvida)">${cnt.d} difícil</span>, <span class="pos">${cnt.b} bom</span>, <span style="color:var(--pen)">${cnt.f} fácil</span>. Responda de memória, vire e marque: cada botão mostra quando o cartão volta.</p>
     <div class="m-grid">${ramos||`<div class="notice">Nenhum cartão conceitual disponível neste tópico${vagas?'':` (limite de ${NOVOS_DIA} novos no dia atingido)`}. As questões originais comentadas permanecem acessíveis abaixo.</div>`}</div>
@@ -1758,7 +1761,8 @@ function viewMapa(){
   const ids=[...S.rv.entries()].filter(([k,v])=>v&&v.mapa).map(([k])=>k).sort((a,b)=>((S.ed.get(a)||{}).ordem||0)-((S.ed.get(b)||{}).ordem||0));
   if(!ids.length) return `<div class="wrap"><div class="notice">Nenhum mapa no formato novo ainda. Os chats de matéria gravam o mapa no documento de revisão do tópico.</div></div>`;
   if(!S.mapaId||!ids.includes(S.mapaId)) S.mapaId=ids[0];
-  const t=S.ed.get(S.mapaId)||{}, m=S.rv.get(S.mapaId).mapa, ab=S.mapaAb||new Set(['*']), tudo=ab.has('*');
+  const revMapa=S.rv.get(S.mapaId),mapasRelacionados=(revMapa.mapaRelacionadoIds||[]).filter(id=>id!==S.mapaId&&S.rv.get(id)?.mapa);
+  const t=S.ed.get(S.mapaId)||{}, m=revMapa.mapa, ab=S.mapaAb||new Set(['*']), tudo=ab.has('*');
   const nomes={}; const walk=(n)=>{if(n.id)nomes[n.id]=n.t;(n.f||[]).forEach(walk)}; (m.ramos||[]).forEach(walk);
   const lig=m.ligacoes||[];
   let seq=0;
@@ -1783,7 +1787,8 @@ function viewMapa(){
       <label class="check"><input type="checkbox" id="evocar" ${S.evocar?'checked':''}> Evocar antes de ler</label>
       <button class="btn ghost small" data-mtodos="1">Abrir tudo</button><button class="btn ghost small" data-mtodos="0">Fechar tudo</button>
       ${S.mapaBack?'<button class="btn ghost small" data-voltar-flash="1">Voltar ao flashcard</button>':''}
-      ${((S.rv.get(S.mapaId)||{}).cartoes||[]).length?`<button class="lnk" data-ir-cart="${esc(S.mapaId)}">Revisão ativa · ${(S.rv.get(S.mapaId).cartoes||[]).length}</button>`:''}</div>
+      ${((S.rv.get(S.mapaId)||{}).cartoes||[]).length?`<button class="lnk" data-ir-cart="${esc(S.mapaId)}">Revisão ativa · ${(S.rv.get(S.mapaId).cartoes||[]).length}</button>`:''}
+      ${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
     <p class="rule">Toque num ramo com ⓘ para abrir a explicação. Com "Evocar antes de ler", tente explicar antes de abrir.</p>
     <div class="m-centro">${esc(m.centro||t.titulo||'')}</div>
     <div class="m-grid">${ramos}</div>
