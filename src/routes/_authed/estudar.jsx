@@ -65,6 +65,10 @@ function Estudar() {
       try {
         if (!user?.id || (!legacy && !accountId)) throw new Error("Ambiente de estudo indisponível.");
         let result;
+        if (msg.action === "logout") {
+          logout();
+          return;
+        }
         if (msg.action === "account") result = legacy ? { legacy: true } : { name: account.name, date: account.date };
         else if (msg.action === "assistantLLM" && legacy) result = await askAssistantLLM(msg.args || {});
         else if (msg.action === "list" || msg.action === "write") {
@@ -80,7 +84,7 @@ function Estudar() {
     window.addEventListener("message", receive);
     setReady(true);
     return () => window.removeEventListener("message", receive);
-  }, [user?.id, legacy, accountId, account?.name, account?.date]);
+  }, [user?.id, legacy, accountId, account?.name, account?.date, logout]);
 
   if (!legacy && !accountId) {
     return <main style={{ padding: 32, fontFamily: "system-ui, sans-serif" }}>
