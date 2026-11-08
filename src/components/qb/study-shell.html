@@ -449,6 +449,7 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/strategies.js"></script>
 <script src="/claude-export/learning.js"></script>
 <script src="/claude-export/question-links.js"></script>
+<script src="/claude-export/map-origin.js"></script>
 <link rel="stylesheet" href="/claude-export/learning.css">
 <script>
 (function(){
@@ -1576,11 +1577,10 @@ function viewCmix(){
   </div>`;
 }
 S.cartResp=new Map(); S.cartRated=new Set();
-/* correção por IA da resposta escrita (06/11/2026). Usa o Claude da própria conta do Lucas (capability "sample"), sem chave de API na página.
-   Proteções: limite de tempo de 40 s; uma nova tentativa automática só para falha de rede/tempo, no modelo rápido; "limite de uso" não repete;
-   sem IA disponível, o botão some e a autoavaliação manual continua igual. A IA só sugere: quem marca Novamente/Difícil/Bom/Fácil é o Lucas. */
-S.ia=new Map(); let IA=null, iaPronta=false;
-(async()=>{try{IA=await claude.use('sample')}catch(e){IA=null} iaPronta=true; if(IA&&S.view==='cartoes') render();})();
+/* Correção opcional pelo servidor Base44: nunca usa créditos Claude do estudante.
+ * O gabarito é lido na conta autenticada, o limite é de 8 chamadas/dia e a avaliação
+ * automática é apenas orientativa; o aluno mantém a marcação SRS. */
+S.ia=new Map(); let IA=true, iaPronta=true;
 function cartaoDe(k){
   const qid=window.QBQuestionLinks?.questionId(k);
   if(qid)return window.QBQuestionLinks.card(S.q.get(qid));
@@ -1589,15 +1589,15 @@ function cartaoDe(k){
 function iaBox(k,resp){
   if(!IA||!resp.trim()) return '';
   const st=S.ia.get(k);
-  if(!st) return `<button class="btn ghost small" data-ia="${esc(k)}">Corrigir com IA</button>`;
-  if(st.s==='run') return `<span class="ps">Corrigindo… ${st.tent>1?'(nova tentativa)':''}</span>`;
-  if(st.s==='err') return `<span class="ps" style="color:var(--errado)">${esc(st.msg)}</span>`;
+  if(!st) return `<button class="btn ghost small" data-ia="${esc(k)}">Corrigir com IA · até 8/dia</button>`;
+  if(st.s==='run') return `<span class="ps" role="status">Comparando sua resposta com o gabarito…</span>`;
+  if(st.s==='err') return `<span class="ps" role="alert" style="color:var(--errado)">${esc(st.msg)}</span>`;
   const r=st.r, V={lembrei:['c','Bom'],parcial:['b','Difícil'],nao:['e','Novamente']}[r.veredito]||['p','?'];
   return `<div class="m-det" style="--mc:var(--pen);margin:0"><p><span class="pill ${V[0]}">Sugestão da IA: ${V[1]}</span></p>
     ${(r.acertou||[]).length?`<p><b>Acertou:</b> ${esc(r.acertou.join('; '))}</p>`:''}
     ${(r.faltou||[]).length?`<p><b>Faltou:</b> ${esc(r.faltou.join('; '))}</p>`:''}
     ${(r.errado||[]).length?`<p class="m-trap"><b>Errado:</b> ${esc(r.errado.join('; '))}</p>`:''}
-    ${r.comentario?`<p>${esc(r.comentario)}</p>`:''}<span class="ps">A decisão é sua: marque abaixo.</span></div>`;
+    ${r.comentario?`<p>${esc(r.comentario)}</p>`:''}<span class="ps">A decisão é sua: marque abaixo. A IA não altera sua nota nem o agendamento. ${st.remaining??'?'} correções disponíveis hoje.</span></div>`;
 }
 async function corrigirIA(k){
   const c=cartaoDe(k), resp=(S.cartResp.get(k)||'').trim(); if(!IA||!c||!resp) return;
