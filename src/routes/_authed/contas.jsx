@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createFileRoute, useRouter } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useAuth } from "@/lib/AuthContext";
-import { Heading } from "@/components/qb/Heading";
+import Heading from "@/components/qb/Heading";
 import {
   listStudyAccountsForAdmin, createStudyAccountForAdmin,
   setStudyAccountActiveForAdmin, importStudyContentForAdmin
