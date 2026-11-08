@@ -1,0 +1,1476 @@
+{
+  "topic": "fiscal-t05",
+  "source": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+  "sourcePages": "3–20,41–43",
+  "questions": [
+    {
+      "id": "fiscal-t05-ce02",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "A Teoria da Informação de Shannon foi apresentada em 1948 e permitiu tratar quantitativamente a informação na comunicação.",
+      "gabarito": "C",
+      "comentario": "O material associa Shannon à mensuração matemática da informação e ao estudo de transmissão, codificação e armazenamento.",
+      "ordem": 502,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 3",
+      "tema": "Shannon e Teoria da Informação",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "shannon-1948",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 3,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce03",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Mensagens altamente repetitivas e previsíveis possuem, em regra, entropia superior à de sequências imprevisíveis.",
+      "gabarito": "E",
+      "comentario": "Entropia expressa surpresa e imprevisibilidade: alta diversidade tende a maior entropia; repetição previsível tende a menor.",
+      "ordem": 503,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 3",
+      "tema": "Entropia da informação",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "entropia",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 3,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce04",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "A codificação de fonte pode reduzir redundâncias sem perda de conteúdo, como em algoritmos de compressão Huffman e LZW.",
+      "gabarito": "C",
+      "comentario": "A apostila associa a codificação de fonte à remoção de redundâncias para reduzir bits sem perda de dados.",
+      "ordem": 504,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 4",
+      "tema": "Compressão sem perdas",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "compressao",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 4,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce05",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Códigos de correção de erros, como Hamming e Reed-Solomon, reduzem deliberadamente toda redundância, eliminando bits de controle.",
+      "gabarito": "E",
+      "comentario": "Esses códigos acrescentam redundância para detectar e, conforme o código, corrigir falhas de transmissão.",
+      "ordem": 505,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 4",
+      "tema": "Correção de erros",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "correcao",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 4,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce06",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "A pirâmide DIKW organiza os níveis, da base ao topo, como dado, informação, conhecimento e sabedoria/inteligência.",
+      "gabarito": "C",
+      "comentario": "O diagrama da p. 5 traz Dado → Informação → Conhecimento → Inteligência; a apostila usa inteligência como sabedoria no topo.",
+      "ordem": 506,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 5",
+      "tema": "Ordem DIKW",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "dikw-sequencia",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 5,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce07",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Um número isolado, sem contexto que determine o fenômeno observado, pode ser classificado como dado bruto.",
+      "gabarito": "C",
+      "comentario": "Dados são fatos objetivos e discretos ainda não contextualizados, como o número 28 sem saber o atributo descrito.",
+      "ordem": 507,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 6",
+      "tema": "Dados brutos",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "dikw-dados",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 6,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce08",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Dados organizados e interpretados em um contexto podem adquirir significado e utilidade, constituindo informação.",
+      "gabarito": "C",
+      "comentario": "A informação resulta da contextualização de dados, reduz incerteza e auxilia decisões.",
+      "ordem": 508,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 9",
+      "tema": "Informação contextualizada",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "dikw-informacao",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 9,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce09",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Um relatório de vendas por região e modelo, elaborado para orientar a decisão de um diretor, é necessariamente apenas um conjunto de dados brutos.",
+      "gabarito": "E",
+      "comentario": "Ao agrupar, contextualizar e dar significado às vendas, o relatório assume função de informação, como no exemplo da apostila.",
+      "ordem": 509,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 10",
+      "tema": "Relatório por região",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "dikw-relatorio",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 10,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce10",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Na apresentação do material, conhecimento é informação compreendida e assimilada, articulada com experiência e contexto do indivíduo.",
+      "gabarito": "C",
+      "comentario": "O capítulo descreve conhecimento como construção cognitiva subjetiva capaz de apoiar julgamento e aprendizagem.",
+      "ordem": 510,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 14",
+      "tema": "Conhecimento internalizado",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "dikw-conhecimento",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 14,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce11",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "O conhecimento tácito é, em regra, mais fácil de capturar e documentar do que o conhecimento explícito.",
+      "gabarito": "E",
+      "comentario": "A tabela opõe tácito, pessoal e experiencial, a explícito, mais estruturado, articulável e compartilhável.",
+      "ordem": 511,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 15",
+      "tema": "Conhecimento tácito",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "dikw-tacito",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 15,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce12",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Manuais e documentos podem materializar conhecimento explícito, mais fácil de registrar e transmitir.",
+      "gabarito": "C",
+      "comentario": "O material apresenta livros, manuais e procedimentos como exemplos de conhecimento externalizado.",
+      "ordem": 512,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 14",
+      "tema": "Conhecimento explícito",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "dikw-explicito",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 14,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce13",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "No modelo SECI, a socialização representa transferência de conhecimento tácito para tácito por observação ou experiência compartilhada.",
+      "gabarito": "C",
+      "comentario": "O quadro da apostila apresenta socialização como tácito → tácito.",
+      "ordem": 513,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 16",
+      "tema": "Modelo SECI: socialização",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "seci-social",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 16,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce14",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "A externalização, no modelo SECI, corresponde à transformação de conhecimento explícito em tácito mediante leitura individual.",
+      "gabarito": "E",
+      "comentario": "Externalização é tácito → explícito; a passagem explícito → tácito caracteriza internalização.",
+      "ordem": 514,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 16",
+      "tema": "Modelo SECI: externalização",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "seci-extern",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 16,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce15",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "A combinação reúne conhecimentos explícitos de diferentes fontes para gerar conhecimento explícito organizado.",
+      "gabarito": "C",
+      "comentario": "Apostila: combinação = explícito → explícito.",
+      "ordem": 515,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 16",
+      "tema": "Modelo SECI: combinação",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "seci-comb",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 16,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce16",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Na pirâmide DIKW, inteligência/sabedoria utiliza conhecimento para orientar ações, resolver problemas e antecipar cenários.",
+      "gabarito": "C",
+      "comentario": "O topo é aplicação estratégica com julgamento e propósito; não basta apenas possuir uma informação.",
+      "ordem": 516,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 17",
+      "tema": "Inteligência ou sabedoria",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "dikw-inteligencia",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 17,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce17",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Na estrutura DIKW estudada, o conhecimento deriva da inteligência, e a inteligência nasce da organização de dados brutos.",
+      "gabarito": "E",
+      "comentario": "A relação usual é dado → informação → conhecimento → inteligência; a assertiva inverte a direção da construção.",
+      "ordem": 517,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 20",
+      "tema": "Inversão conhecimento/inteligência",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "dikw-inversao",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 20,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce18",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Confidencialidade é a propriedade que impede o acesso ou a revelação de informação a pessoas e sistemas não autorizados.",
+      "gabarito": "C",
+      "comentario": "A apostila caracteriza confidencialidade como controle de quem pode conhecer a informação.",
+      "ordem": 518,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 12",
+      "tema": "Confidencialidade",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "seg-conf",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 12,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce19",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Integridade é sinônimo de restrição de acesso a usuários autorizados, enquanto confidencialidade garante que dados não tenham sido corrompidos.",
+      "gabarito": "E",
+      "comentario": "A frase troca definições: integridade refere-se à exatidão/completeza; confidencialidade, à proteção contra acesso não autorizado.",
+      "ordem": 519,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 12",
+      "tema": "Integridade",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "seg-int",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 12,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce20",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Disponibilidade significa que informações podem ser acessadas e usadas por entidades autorizadas quando necessário.",
+      "gabarito": "C",
+      "comentario": "O quadro de segurança associa disponibilidade à acessibilidade sob demanda.",
+      "ordem": 520,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 12",
+      "tema": "Disponibilidade",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "seg-disp",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 12,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce21",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "A propriedade de autenticidade permite verificar que o usuário ou remetente corresponde à identidade que declara possuir.",
+      "gabarito": "C",
+      "comentario": "Autenticidade relaciona-se à garantia de identidade de quem envia ou usa a informação.",
+      "ordem": 521,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 12",
+      "tema": "Autenticidade",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "seg-autent",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 12,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce22",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Segundo a definição de abertura empregada no material, dados abertos devem permitir uso, reutilização e redistribuição, respeitadas no máximo condições como atribuição.",
+      "gabarito": "C",
+      "comentario": "A seção 1.5 cita liberdade de uso/reuso/redistribuição na definição da Open Knowledge Foundation.",
+      "ordem": 522,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 41",
+      "tema": "Dados abertos: uso e redistribuição",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "open-def",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 41,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce23",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Qualquer documento público disponibilizado como imagem em PDF, sem licença de reutilização, é automaticamente dado aberto.",
+      "gabarito": "E",
+      "comentario": "A mera publicidade não garante formato processável/reutilizável nem permissão de redistribuição.",
+      "ordem": 523,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 41",
+      "tema": "Público ≠ aberto",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "open-publico",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 41,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce24",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Disponibilidade/acesso, reutilização/redistribuição e participação universal formam os requisitos mínimos apresentados na apostila.",
+      "gabarito": "C",
+      "comentario": "O quadro da p. 41 apresenta essas três características como centrais para abertura de dados.",
+      "ordem": 524,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 41",
+      "tema": "Três características dos dados abertos",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "open-triade",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 41,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce25",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Uma licença que limita o uso de dados abertos a fins exclusivamente acadêmicos satisfaz integralmente a participação universal.",
+      "gabarito": "E",
+      "comentario": "Vedação a uso comercial ou limitação a grupos/fins específicos viola a participação universal.",
+      "ordem": 525,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 41",
+      "tema": "Participação universal",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "open-universal",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 41,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce26",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "As três 'leis dos dados abertos' da apostila são leis federais formalmente promulgadas pelo Congresso Nacional.",
+      "gabarito": "E",
+      "comentario": "A seção esclarece que são testes/heurísticas: descoberta na web, legibilidade por máquina e permissão de replicação.",
+      "ordem": 526,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 42",
+      "tema": "Três leis heurísticas de dados abertos",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "open-tres-leis",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 42,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce27",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "O princípio de dados primários recomenda a publicação na granularidade mais fina possível, tal como coletados na fonte.",
+      "gabarito": "C",
+      "comentario": "O quadro dos princípios distingue dados primários de conjuntos já agregados/transformados.",
+      "ordem": 527,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+      "tema": "Dados primários",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "open-primarios",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 43,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce28",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Dados abertos devem ser publicados em tempo adequado a preservar seu valor informacional, em vez de aguardar indefinidamente.",
+      "gabarito": "C",
+      "comentario": "Atualidade integra os princípios do capítulo: rapidez proporcional à necessidade e à utilidade.",
+      "ordem": 528,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+      "tema": "Atualidade",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "open-atuais",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 43,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce29",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Dados publicados exclusivamente em imagem não estruturada satisfazem, por isso só, a exigência de processabilidade automatizada.",
+      "gabarito": "E",
+      "comentario": "Processamento por máquina requer estrutura adequada; imagem isolada frequentemente dificulta análise automática.",
+      "ordem": 529,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+      "tema": "Processamento por máquina",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "open-maquina",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 43,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce30",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "CSV, JSON e XML são exemplos de formatos abertos ou de especificações não exclusivas citados no material.",
+      "gabarito": "C",
+      "comentario": "O quadro da p. 43 cita extensões como .csv, .json, .xml e .ods como exemplos.",
+      "ordem": 530,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+      "tema": "Formatos não proprietários",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "open-formatos",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 43,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce31",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "O princípio de abertura de dados exige publicar indiscriminadamente informações pessoais protegidas por privacidade ou sigilo legal.",
+      "gabarito": "E",
+      "comentario": "O princípio 'completos' limita dados públicos aos não abrangidos por restrições legítimas de privacidade, segurança e acesso.",
+      "ordem": 531,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+      "tema": "Limites legítimos",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "open-restricoes",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 43,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t05-ce32",
+      "cap": "FISCAL-TI-05",
+      "capNome": "Trilha 00 · Tarefa 05 · Pirâmide DIKW e dados abertos",
+      "enunciado": "Exigir cadastro prévio para toda consulta a dados abertos contraria o princípio de acesso não discriminatório apresentado na apostila.",
+      "gabarito": "C",
+      "comentario": "A p. 43 descreve disponibilidade a todos sem identificação ou registro como princípio de acesso.",
+      "ordem": 532,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+      "tema": "Acesso não discriminatório",
+      "topico": "fiscal-t05",
+      "assuntoId": "fiscal-ti-dikw-dados-abertos",
+      "mapaNoId": "open-sem-registro",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 43,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Shannon e Teoria da Informação",
+      "q": "Por que a teoria de Shannon é relevante?",
+      "a": [
+        "Ela quantifica informação e fundamenta análise de transmissão, codificação e compressão."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 3",
+      "mapaNoId": "shannon-1948",
+      "questaoIds": [
+        "fiscal-t05-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Entropia da informação",
+      "q": "O que ocorre com a entropia quando a mensagem é muito previsível?",
+      "a": [
+        "Tende a ser baixa, porque há pouca surpresa/informação nova."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 3",
+      "mapaNoId": "entropia",
+      "questaoIds": [
+        "fiscal-t05-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Compressão sem perdas",
+      "q": "O que diferencia compressão sem perdas de compressão com perdas?",
+      "a": [
+        "A sem perdas preserva integralmente o conteúdo; a com perdas descarta detalhes segundo uma finalidade."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 4",
+      "mapaNoId": "compressao",
+      "questaoIds": [
+        "fiscal-t05-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Correção de erros",
+      "q": "A correção de erros adiciona ou elimina redundância?",
+      "a": [
+        "Adiciona redundância controlada para proteger integridade e confiabilidade."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 4",
+      "mapaNoId": "correcao",
+      "questaoIds": [
+        "fiscal-t05-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Ordem DIKW",
+      "q": "Quais são os quatro níveis DIKW, de baixo para cima?",
+      "a": [
+        "Dado, Informação, Conhecimento e Sabedoria/Inteligência."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 5",
+      "mapaNoId": "dikw-sequencia",
+      "questaoIds": [
+        "fiscal-t05-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dados brutos",
+      "q": "Um número '28' isolado representa dado ou informação?",
+      "a": [
+        "Dado. Sem contexto não é possível saber o atributo que ele representa."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 6",
+      "mapaNoId": "dikw-dados",
+      "questaoIds": [
+        "fiscal-t05-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Informação contextualizada",
+      "q": "Como um dado se transforma em informação?",
+      "a": [
+        "Por organização, processamento e contextualização que atribuam significado."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 9",
+      "mapaNoId": "dikw-informacao",
+      "questaoIds": [
+        "fiscal-t05-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Relatório por região",
+      "q": "Por que relatório de vendas por região é informação?",
+      "a": [
+        "Porque organiza dados num contexto compreensível para uma decisão."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 10",
+      "mapaNoId": "dikw-relatorio",
+      "questaoIds": [
+        "fiscal-t05-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Conhecimento internalizado",
+      "q": "O que distingue conhecimento de informação?",
+      "a": [
+        "A compreensão e internalização/aplicação da informação, integrada à experiência."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 14",
+      "mapaNoId": "dikw-conhecimento",
+      "questaoIds": [
+        "fiscal-t05-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Conhecimento tácito",
+      "q": "Por que conhecimento tácito é difícil de compartilhar?",
+      "a": [
+        "Porque é pessoal, experiencial, internalizado e pouco codificado."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 15",
+      "mapaNoId": "dikw-tacito",
+      "questaoIds": [
+        "fiscal-t05-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Conhecimento explícito",
+      "q": "Cite dois exemplos de conhecimento explícito.",
+      "a": [
+        "Manuais, procedimentos, relatórios técnicos ou livros."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 14",
+      "mapaNoId": "dikw-explicito",
+      "questaoIds": [
+        "fiscal-t05-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo SECI: socialização",
+      "q": "Qual conversão SECI ocorre na socialização?",
+      "a": [
+        "Tácito → tácito, por compartilhamento de experiências e prática."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 16",
+      "mapaNoId": "seci-social",
+      "questaoIds": [
+        "fiscal-t05-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo SECI: externalização",
+      "q": "Diferencie externalização e internalização no SECI.",
+      "a": [
+        "Externalização: tácito → explícito; internalização: explícito → tácito."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 16",
+      "mapaNoId": "seci-extern",
+      "questaoIds": [
+        "fiscal-t05-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo SECI: combinação",
+      "q": "O que caracteriza combinação no SECI?",
+      "a": [
+        "Reunir e reorganizar fontes explícitas para produzir novo conhecimento explícito."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 16",
+      "mapaNoId": "seci-comb",
+      "questaoIds": [
+        "fiscal-t05-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Inteligência ou sabedoria",
+      "q": "Qual função distingue inteligência/sabedoria do conhecimento?",
+      "a": [
+        "Usar conhecimento estrategicamente para julgar, decidir e resolver problemas."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 17",
+      "mapaNoId": "dikw-inteligencia",
+      "questaoIds": [
+        "fiscal-t05-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Inversão conhecimento/inteligência",
+      "q": "Qual inversão de conceitos a banca explora em DIKW?",
+      "a": [
+        "Tratar conhecimento como produto da inteligência; o topo (inteligência) se apoia no conhecimento."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 20",
+      "mapaNoId": "dikw-inversao",
+      "questaoIds": [
+        "fiscal-t05-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Confidencialidade",
+      "q": "O que garante a confidencialidade da informação?",
+      "a": [
+        "Que só entidades autorizadas possam acessá-la ou recebê-la."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 12",
+      "mapaNoId": "seg-conf",
+      "questaoIds": [
+        "fiscal-t05-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Integridade",
+      "q": "Diferencie integridade de confidencialidade.",
+      "a": [
+        "Integridade preserva correção e completude; confidencialidade restringe acesso/divulgação."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 12",
+      "mapaNoId": "seg-int",
+      "questaoIds": [
+        "fiscal-t05-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Disponibilidade",
+      "q": "Qual propriedade de segurança trata do acesso sob demanda?",
+      "a": [
+        "Disponibilidade."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 12",
+      "mapaNoId": "seg-disp",
+      "questaoIds": [
+        "fiscal-t05-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Autenticidade",
+      "q": "Que pergunta a autenticidade ajuda a responder?",
+      "a": [
+        "Quem é o emissor e se sua identidade declarada é genuína."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 12",
+      "mapaNoId": "seg-autent",
+      "questaoIds": [
+        "fiscal-t05-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dados abertos: uso e redistribuição",
+      "q": "Que direitos mínimos caracterizam dados abertos na definição adotada?",
+      "a": [
+        "Uso, reutilização e redistribuição sob licença aberta, com condições limitadas como atribuição."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 41",
+      "mapaNoId": "open-def",
+      "questaoIds": [
+        "fiscal-t05-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Público ≠ aberto",
+      "q": "Por que um PDF público não é necessariamente dado aberto?",
+      "a": [
+        "Porque acesso público isolado não comprova formato processável e licença que permita reutilização."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 41",
+      "mapaNoId": "open-publico",
+      "questaoIds": [
+        "fiscal-t05-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Três características dos dados abertos",
+      "q": "Qual é a tríade mínima de abertura?",
+      "a": [
+        "Disponibilidade e acesso; reutilização e redistribuição; participação universal."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 41",
+      "mapaNoId": "open-triade",
+      "questaoIds": [
+        "fiscal-t05-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Participação universal",
+      "q": "Qual erro ocorre ao exigir uso só educacional em dados abertos?",
+      "a": [
+        "Impede a participação universal e restringe fins legítimos de reutilização."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 41",
+      "mapaNoId": "open-universal",
+      "questaoIds": [
+        "fiscal-t05-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Três leis heurísticas de dados abertos",
+      "q": "As três leis dos dados abertos são leis jurídicas?",
+      "a": [
+        "Não. São critérios heurísticos sobre descoberta, reuso por máquina e permissão de replicação."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 42",
+      "mapaNoId": "open-tres-leis",
+      "questaoIds": [
+        "fiscal-t05-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dados primários",
+      "q": "O que caracteriza dados primários no contexto da abertura?",
+      "a": [
+        "Divulgação na forma coletada e com máxima granularidade possível."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+      "mapaNoId": "open-primarios",
+      "questaoIds": [
+        "fiscal-t05-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Atualidade",
+      "q": "Por que a atualidade importa na publicação aberta?",
+      "a": [
+        "Porque atrasos podem reduzir ou eliminar o valor dos dados."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+      "mapaNoId": "open-atuais",
+      "questaoIds": [
+        "fiscal-t05-ce28"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Processamento por máquina",
+      "q": "O que torna dados processáveis por máquina?",
+      "a": [
+        "Representação razoavelmente estruturada, como formatos abertos que permitam leitura automatizada."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+      "mapaNoId": "open-maquina",
+      "questaoIds": [
+        "fiscal-t05-ce29"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Formatos não proprietários",
+      "q": "Cite três formatos possíveis para dados abertos.",
+      "a": [
+        "CSV, JSON e XML, entre outros de especificação aberta."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+      "mapaNoId": "open-formatos",
+      "questaoIds": [
+        "fiscal-t05-ce30"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Limites legítimos",
+      "q": "Dados abertos permitem divulgar qualquer informação pessoal?",
+      "a": [
+        "Não. Restrições legais legítimas de privacidade e segurança continuam aplicáveis."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+      "mapaNoId": "open-restricoes",
+      "questaoIds": [
+        "fiscal-t05-ce31"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Acesso não discriminatório",
+      "q": "Como funciona acesso não discriminatório em dados abertos?",
+      "a": [
+        "Sem exigir identificação/registro para acessar os dados, conforme o princípio da apostila."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+      "mapaNoId": "open-sem-registro",
+      "questaoIds": [
+        "fiscal-t05-ce32"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Pirâmide DIKW e dados abertos · T05",
+    "versao": 2,
+    "fonte": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, pp. 3–20, 41–43",
+    "ramos": [
+      {
+        "id": "g-teoria",
+        "t": "Teoria da informação",
+        "n": "Shannon, entropia, compressão sem perdas e códigos de correção de erros.",
+        "cor": 1,
+        "x": {
+          "e": "Shannon, entropia, compressão sem perdas e códigos de correção de erros.",
+          "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf"
+        },
+        "f": [
+          {
+            "id": "shannon-1948",
+            "t": "Shannon e Teoria da Informação",
+            "n": "Ela quantifica informação e fundamenta análise de transmissão, codificação e compressão.",
+            "x": {
+              "e": "O material associa Shannon à mensuração matemática da informação e ao estudo de transmissão, codificação e armazenamento.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-t05-ce02"
+              ]
+            }
+          },
+          {
+            "id": "entropia",
+            "t": "Entropia da informação",
+            "n": "Tende a ser baixa, porque há pouca surpresa/informação nova.",
+            "x": {
+              "e": "Entropia expressa surpresa e imprevisibilidade: alta diversidade tende a maior entropia; repetição previsível tende a menor.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-t05-ce03"
+              ]
+            }
+          },
+          {
+            "id": "compressao",
+            "t": "Compressão sem perdas",
+            "n": "A sem perdas preserva integralmente o conteúdo; a com perdas descarta detalhes segundo uma finalidade.",
+            "x": {
+              "e": "A apostila associa a codificação de fonte à remoção de redundâncias para reduzir bits sem perda de dados.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 4",
+              "questaoIds": [
+                "fiscal-t05-ce04"
+              ]
+            }
+          },
+          {
+            "id": "correcao",
+            "t": "Correção de erros",
+            "n": "Adiciona redundância controlada para proteger integridade e confiabilidade.",
+            "x": {
+              "e": "Esses códigos acrescentam redundância para detectar e, conforme o código, corrigir falhas de transmissão.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 4",
+              "questaoIds": [
+                "fiscal-t05-ce05"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-1",
+        "t": "Pirâmide DIKW",
+        "n": "Dado → informação → conhecimento → sabedoria/inteligência e SECI.",
+        "cor": 2,
+        "x": {
+          "e": "Dado → informação → conhecimento → sabedoria/inteligência e SECI.",
+          "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf"
+        },
+        "f": [
+          {
+            "id": "dikw-sequencia",
+            "t": "Ordem DIKW",
+            "n": "Dado, Informação, Conhecimento e Sabedoria/Inteligência.",
+            "x": {
+              "e": "O diagrama da p. 5 traz Dado → Informação → Conhecimento → Inteligência; a apostila usa inteligência como sabedoria no topo.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 5",
+              "questaoIds": [
+                "fiscal-t05-ce06"
+              ]
+            }
+          },
+          {
+            "id": "dikw-dados",
+            "t": "Dados brutos",
+            "n": "Dado. Sem contexto não é possível saber o atributo que ele representa.",
+            "x": {
+              "e": "Dados são fatos objetivos e discretos ainda não contextualizados, como o número 28 sem saber o atributo descrito.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 6",
+              "questaoIds": [
+                "fiscal-t05-ce07"
+              ]
+            }
+          },
+          {
+            "id": "dikw-informacao",
+            "t": "Informação contextualizada",
+            "n": "Por organização, processamento e contextualização que atribuam significado.",
+            "x": {
+              "e": "A informação resulta da contextualização de dados, reduz incerteza e auxilia decisões.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 9",
+              "questaoIds": [
+                "fiscal-t05-ce08"
+              ]
+            }
+          },
+          {
+            "id": "dikw-relatorio",
+            "t": "Relatório por região",
+            "n": "Porque organiza dados num contexto compreensível para uma decisão.",
+            "x": {
+              "e": "Ao agrupar, contextualizar e dar significado às vendas, o relatório assume função de informação, como no exemplo da apostila.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 10",
+              "questaoIds": [
+                "fiscal-t05-ce09"
+              ]
+            }
+          },
+          {
+            "id": "dikw-conhecimento",
+            "t": "Conhecimento internalizado",
+            "n": "A compreensão e internalização/aplicação da informação, integrada à experiência.",
+            "x": {
+              "e": "O capítulo descreve conhecimento como construção cognitiva subjetiva capaz de apoiar julgamento e aprendizagem.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 14",
+              "questaoIds": [
+                "fiscal-t05-ce10"
+              ]
+            }
+          },
+          {
+            "id": "dikw-tacito",
+            "t": "Conhecimento tácito",
+            "n": "Porque é pessoal, experiencial, internalizado e pouco codificado.",
+            "x": {
+              "e": "A tabela opõe tácito, pessoal e experiencial, a explícito, mais estruturado, articulável e compartilhável.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 15",
+              "questaoIds": [
+                "fiscal-t05-ce11"
+              ]
+            }
+          },
+          {
+            "id": "dikw-explicito",
+            "t": "Conhecimento explícito",
+            "n": "Manuais, procedimentos, relatórios técnicos ou livros.",
+            "x": {
+              "e": "O material apresenta livros, manuais e procedimentos como exemplos de conhecimento externalizado.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 14",
+              "questaoIds": [
+                "fiscal-t05-ce12"
+              ]
+            }
+          },
+          {
+            "id": "seci-social",
+            "t": "Modelo SECI: socialização",
+            "n": "Tácito → tácito, por compartilhamento de experiências e prática.",
+            "x": {
+              "e": "O quadro da apostila apresenta socialização como tácito → tácito.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 16",
+              "questaoIds": [
+                "fiscal-t05-ce13"
+              ]
+            }
+          },
+          {
+            "id": "seci-extern",
+            "t": "Modelo SECI: externalização",
+            "n": "Externalização: tácito → explícito; internalização: explícito → tácito.",
+            "x": {
+              "e": "Externalização é tácito → explícito; a passagem explícito → tácito caracteriza internalização.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 16",
+              "questaoIds": [
+                "fiscal-t05-ce14"
+              ]
+            }
+          },
+          {
+            "id": "seci-comb",
+            "t": "Modelo SECI: combinação",
+            "n": "Reunir e reorganizar fontes explícitas para produzir novo conhecimento explícito.",
+            "x": {
+              "e": "Apostila: combinação = explícito → explícito.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 16",
+              "questaoIds": [
+                "fiscal-t05-ce15"
+              ]
+            }
+          },
+          {
+            "id": "dikw-inteligencia",
+            "t": "Inteligência ou sabedoria",
+            "n": "Usar conhecimento estrategicamente para julgar, decidir e resolver problemas.",
+            "x": {
+              "e": "O topo é aplicação estratégica com julgamento e propósito; não basta apenas possuir uma informação.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 17",
+              "questaoIds": [
+                "fiscal-t05-ce16"
+              ]
+            }
+          },
+          {
+            "id": "dikw-inversao",
+            "t": "Inversão conhecimento/inteligência",
+            "n": "Tratar conhecimento como produto da inteligência; o topo (inteligência) se apoia no conhecimento.",
+            "x": {
+              "e": "A relação usual é dado → informação → conhecimento → inteligência; a assertiva inverte a direção da construção.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 20",
+              "questaoIds": [
+                "fiscal-t05-ce17"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-seguranca",
+        "t": "Segurança da informação",
+        "n": "Confidencialidade, integridade, disponibilidade e autenticidade sustentam a qualidade informacional.",
+        "cor": 3,
+        "x": {
+          "e": "Confidencialidade, integridade, disponibilidade e autenticidade sustentam a qualidade informacional.",
+          "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf"
+        },
+        "f": [
+          {
+            "id": "seg-conf",
+            "t": "Confidencialidade",
+            "n": "Que só entidades autorizadas possam acessá-la ou recebê-la.",
+            "x": {
+              "e": "A apostila caracteriza confidencialidade como controle de quem pode conhecer a informação.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 12",
+              "questaoIds": [
+                "fiscal-t05-ce18"
+              ]
+            }
+          },
+          {
+            "id": "seg-int",
+            "t": "Integridade",
+            "n": "Integridade preserva correção e completude; confidencialidade restringe acesso/divulgação.",
+            "x": {
+              "e": "A frase troca definições: integridade refere-se à exatidão/completeza; confidencialidade, à proteção contra acesso não autorizado.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 12",
+              "questaoIds": [
+                "fiscal-t05-ce19"
+              ]
+            }
+          },
+          {
+            "id": "seg-disp",
+            "t": "Disponibilidade",
+            "n": "Disponibilidade.",
+            "x": {
+              "e": "O quadro de segurança associa disponibilidade à acessibilidade sob demanda.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 12",
+              "questaoIds": [
+                "fiscal-t05-ce20"
+              ]
+            }
+          },
+          {
+            "id": "seg-autent",
+            "t": "Autenticidade",
+            "n": "Quem é o emissor e se sua identidade declarada é genuína.",
+            "x": {
+              "e": "Autenticidade relaciona-se à garantia de identidade de quem envia ou usa a informação.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 12",
+              "questaoIds": [
+                "fiscal-t05-ce21"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-2",
+        "t": "Dados abertos",
+        "n": "Conceito, três critérios mínimos, três leis heurísticas e princípios de publicação.",
+        "cor": 4,
+        "x": {
+          "e": "Conceito, três critérios mínimos, três leis heurísticas e princípios de publicação.",
+          "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf"
+        },
+        "f": [
+          {
+            "id": "open-def",
+            "t": "Dados abertos: uso e redistribuição",
+            "n": "Uso, reutilização e redistribuição sob licença aberta, com condições limitadas como atribuição.",
+            "x": {
+              "e": "A seção 1.5 cita liberdade de uso/reuso/redistribuição na definição da Open Knowledge Foundation.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 41",
+              "questaoIds": [
+                "fiscal-t05-ce22"
+              ]
+            }
+          },
+          {
+            "id": "open-publico",
+            "t": "Público ≠ aberto",
+            "n": "Porque acesso público isolado não comprova formato processável e licença que permita reutilização.",
+            "x": {
+              "e": "A mera publicidade não garante formato processável/reutilizável nem permissão de redistribuição.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 41",
+              "questaoIds": [
+                "fiscal-t05-ce23"
+              ]
+            }
+          },
+          {
+            "id": "open-triade",
+            "t": "Três características dos dados abertos",
+            "n": "Disponibilidade e acesso; reutilização e redistribuição; participação universal.",
+            "x": {
+              "e": "O quadro da p. 41 apresenta essas três características como centrais para abertura de dados.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 41",
+              "questaoIds": [
+                "fiscal-t05-ce24"
+              ]
+            }
+          },
+          {
+            "id": "open-universal",
+            "t": "Participação universal",
+            "n": "Impede a participação universal e restringe fins legítimos de reutilização.",
+            "x": {
+              "e": "Vedação a uso comercial ou limitação a grupos/fins específicos viola a participação universal.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 41",
+              "questaoIds": [
+                "fiscal-t05-ce25"
+              ]
+            }
+          },
+          {
+            "id": "open-tres-leis",
+            "t": "Três leis heurísticas de dados abertos",
+            "n": "Não. São critérios heurísticos sobre descoberta, reuso por máquina e permissão de replicação.",
+            "x": {
+              "e": "A seção esclarece que são testes/heurísticas: descoberta na web, legibilidade por máquina e permissão de replicação.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 42",
+              "questaoIds": [
+                "fiscal-t05-ce26"
+              ]
+            }
+          },
+          {
+            "id": "open-primarios",
+            "t": "Dados primários",
+            "n": "Divulgação na forma coletada e com máxima granularidade possível.",
+            "x": {
+              "e": "O quadro dos princípios distingue dados primários de conjuntos já agregados/transformados.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+              "questaoIds": [
+                "fiscal-t05-ce27"
+              ]
+            }
+          },
+          {
+            "id": "open-atuais",
+            "t": "Atualidade",
+            "n": "Porque atrasos podem reduzir ou eliminar o valor dos dados.",
+            "x": {
+              "e": "Atualidade integra os princípios do capítulo: rapidez proporcional à necessidade e à utilidade.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+              "questaoIds": [
+                "fiscal-t05-ce28"
+              ]
+            }
+          },
+          {
+            "id": "open-maquina",
+            "t": "Processamento por máquina",
+            "n": "Representação razoavelmente estruturada, como formatos abertos que permitam leitura automatizada.",
+            "x": {
+              "e": "Processamento por máquina requer estrutura adequada; imagem isolada frequentemente dificulta análise automática.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+              "questaoIds": [
+                "fiscal-t05-ce29"
+              ]
+            }
+          },
+          {
+            "id": "open-formatos",
+            "t": "Formatos não proprietários",
+            "n": "CSV, JSON e XML, entre outros de especificação aberta.",
+            "x": {
+              "e": "O quadro da p. 43 cita extensões como .csv, .json, .xml e .ods como exemplos.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+              "questaoIds": [
+                "fiscal-t05-ce30"
+              ]
+            }
+          },
+          {
+            "id": "open-restricoes",
+            "t": "Limites legítimos",
+            "n": "Não. Restrições legais legítimas de privacidade e segurança continuam aplicáveis.",
+            "x": {
+              "e": "O princípio 'completos' limita dados públicos aos não abrangidos por restrições legítimas de privacidade, segurança e acesso.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+              "questaoIds": [
+                "fiscal-t05-ce31"
+              ]
+            }
+          },
+          {
+            "id": "open-sem-registro",
+            "t": "Acesso não discriminatório",
+            "n": "Sem exigir identificação/registro para acessar os dados, conforme o princípio da apostila.",
+            "x": {
+              "e": "A p. 43 descreve disponibilidade a todos sem identificação ou registro como princípio de acesso.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 43",
+              "questaoIds": [
+                "fiscal-t05-ce32"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": [
+      [
+        "g-teoria",
+        "conceito-1",
+        "Representação e contexto dos dados"
+      ],
+      [
+        "conceito-1",
+        "g-seguranca",
+        "Confiança informacional"
+      ],
+      [
+        "conceito-1",
+        "conceito-2",
+        "Dados reutilizáveis exigem acesso e estrutura"
+      ]
+    ]
+  }
+}
