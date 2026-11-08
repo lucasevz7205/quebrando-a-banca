@@ -446,6 +446,8 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/insights.js"></script>
 <script src="/claude-export/assistant.js"></script>
 <script src="/claude-export/strategies.js"></script>
+<script src="/claude-export/learning.js"></script>
+<link rel="stylesheet" href="/claude-export/learning.css">
 <script>
 (function(){
 const S = {
@@ -461,7 +463,7 @@ const S = {
   pl:[], // planejamento semanal; nunca mistura com o histórico de respostas
   an:new Map(), mecQ:new Map(), pgModo:'mec', fMecMat:'', mecFoco:'todos', mecOpen:new Set()
 };
-const VIEWS=['cartoes','mapa','simulado','painel','edital','revisao','pegadinhas','conteudo','treinar','caderno','analiseDia','historico','metodo'];
+const VIEWS=['cartoes','mapa','simulado','painel','edital','revisao','pegadinhas','conteudo','treinar','caderno','analiseDia','historico','metodo','aprendizagem'];
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmtPct=x=>isFinite(x)?(Math.round(x*100)+'%'):'–';
@@ -610,8 +612,8 @@ const multiCap=cap=>cap==='MIX'||cap==='PEG';
 
 /* ---------- navegação ---------- */
 /* 5 abas; Estudo agrupa Revisão, Pegadinhas e Conteúdo; Treinar inclui o caderno de erros; Desempenho inclui o Método */
-const PAI={cartoes:'estudo',mapa:'estudo',revisao:'estudo',pegadinhas:'estudo',conteudo:'estudo',caderno:'treinar',metodo:'historico',analiseDia:'historico'};
-const SUBS={estudo:[['revisao','Revisão'],['mapa','Mapas mentais'],['cartoes','Flashcards'],['pegadinhas','Pegadinhas'],['conteudo','Materiais']],treinar:[['treinar','Treinar'],['caderno','Caderno de erros']],historico:[['analiseDia','Análise diária'],['historico','Análise histórica'],['metodo','Método']]};
+const PAI={cartoes:'estudo',mapa:'estudo',revisao:'estudo',pegadinhas:'estudo',conteudo:'estudo',caderno:'treinar',metodo:'historico',analiseDia:'historico',aprendizagem:'historico'};
+const SUBS={estudo:[['revisao','Revisão'],['mapa','Mapas mentais'],['cartoes','Flashcards'],['pegadinhas','Pegadinhas'],['conteudo','Materiais']],treinar:[['treinar','Treinar'],['caderno','Caderno de erros']],historico:[['analiseDia','Análise diária'],['historico','Análise histórica'],['aprendizagem','Aprendizagem'],['metodo','Método']]};
 function subnav(){
   const pai=PAI[S.view]||S.view, l=SUBS[pai]; if(!l) return '';
   const cnt={caderno:cadernoItens().length,pegadinhas:S.pg.size};
@@ -652,7 +654,7 @@ document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('clic
 /* ---------- render ---------- */
 function render(force){
   const ae=document.activeElement;
-  if(!force && ae && ae.dataset && (ae.dataset.nota||ae.dataset.cresp)){ S.pendingRender=true; updateCounts(); return; }
+  if(!force && ae && ae.dataset && (ae.dataset.nota||ae.dataset.cresp||ae.dataset.learnDraft||ae.id?.startsWith('learn-'))){ S.pendingRender=true; updateCounts(); return; }
   S.pendingRender=false;
   updateCounts();
   const main=$('#main');
@@ -669,11 +671,13 @@ function render(force){
   else if(S.view==='cartoes') main.innerHTML=viewCartoes();
   else if(S.view==='pegadinhas') main.innerHTML=viewPegadinhas();
   else if(S.view==='conteudo') main.innerHTML=viewConteudo();
+  else if(S.view==='aprendizagem') main.innerHTML=window.QBLearning.render(S,hoje());
   else if(S.view==='treinar') main.innerHTML=S.round?(S.round.fim?viewFim():viewItem()):viewSetup();
   else if(S.view==='caderno') main.innerHTML=viewCaderno();
   else if(S.view==='analiseDia') main.innerHTML=window.QBInsights ? window.QBInsights.render(S,hoje) : '<div class="notice">Análise diária indisponível.</div>';
   else if(S.view==='simulado'){ main.innerHTML=viewSimulado(); if(!simLS('obj')&&!simLS('disc')) main.insertAdjacentHTML('afterbegin',sectionIntro('simulado')); wireSim(); return; }
   else main.innerHTML=viewHistorico();
+  if(S.view==='painel'&&window.QBLearning) main.insertAdjacentHTML('beforeend',window.QBLearning.weeklyHTML(S,hoje()));
   const sn=subnav();
   if(S.view!=='painel'&&S.view!=='analiseDia'&&!(S.view==='treinar'&&S.round)) main.insertAdjacentHTML('afterbegin',sectionIntro(S.view));
   if(sn&&!(S.view==='treinar'&&S.round)) main.insertAdjacentHTML('afterbegin',`<div class="qb-tab-shell">${sn}</div>`);
@@ -794,9 +798,10 @@ function viewItem(){
     const kind=a.marcada==='B'?'dub':(a.acertou?(a.conf===1?'dub':'ok'):'bad');
     const vt=a.marcada==='B'?`Em branco. O gabarito é ${LETRA[q.gabarito]}.`:(a.acertou?`Acertou. Gabarito: ${LETRA[q.gabarito]}.`:`Errou. O gabarito é ${LETRA[q.gabarito]}.`);
     let calib='';
-    if(a.marcada!=='B'&&!a.acertou&&a.conf===3) calib=`<span class="calib alert">Erro com certeza: na prova, você marcaria e perderia um ponto. Para aprender, é o melhor momento: erros cometidos com certeza são os que mais se corrigem depois do feedback. Leia o comentário com atenção.</span>`;
+    if(a.marcada!=='B'&&!a.acertou&&a.conf===3) calib=`<span class="calib alert">Erro com certeza: confira o trecho que sustentou sua escolha e compare com a regra do comentário.</span>`;
     else if(a.acertou&&a.conf===1) calib=`<span class="calib">Acerto no chute: o item foi para o caderno e só sai com dois acertos seguros.</span>`;
     else if(a.acertou&&a.conf===3) calib=`<span class="calib">Calibrado: certeza e acerto.</span>`;
+    if(window.QBLearning) calib=window.QBLearning.feedback(S,q,a)||calib;
     const foiCaderno=(kind!=='ok')?' Este item está no caderno de erros.':'';
     const prox=r.proxRevisao?` Próxima revisão em ${ddmm(r.proxRevisao)}.`:'';
     const precisaOrigem=exigeJust(a);
@@ -2018,6 +2023,7 @@ function viewConteudo(){
         <a class="ct-t" href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>
         ${m.descricao?`<p class="pd">${esc(m.descricao)}</p>`:''}
         ${(m.secoes||[]).length?`<ol class="ct-s">${m.secoes.map(s=>`<li>${esc(s)}</li>`).join('')}</ol>`:''}
+        ${window.QBLearning?window.QBLearning.contentHTML(S,m):''}
         <span class="ps">${m.chat?`chat ${esc(m.chat)}`:''}${m.criadoEm?` · ${ddmm(m.criadoEm)}`:''}</span>
       </article>`;
     }
@@ -2111,6 +2117,7 @@ function viewMetodo(){
 
 /* ---------- ações ---------- */
 function wire(){
+  if(window.QBLearning)window.QBLearning.wire(S,{render,hoje,setView});
   if(S.view==='analiseDia' && window.QBInsights) window.QBInsights.wire(S,render,hoje);
   if(S.view==="painel" && window.QBPlanner) window.QBPlanner.wire(S,{render,enqueue,toast,hoje,startRevisao,iniciarMix,setView});
   document.querySelectorAll('[data-cap]').forEach(b=>b.addEventListener('click',()=>{S.cap=b.dataset.cap;S.capEscolhido=true;render(true)}));
@@ -2229,7 +2236,7 @@ function wire(){
   const conf1=document.querySelector('[data-conf="1"]'); if(conf1&&S.round&&S.round.pend&&S.round.pend.focus){ S.round.pend.focus=false; conf1.focus({preventScroll:true}); }
 }
 function novaRodada(cap,capNome,modo,fila){
-  S.round={id:'r-'+Date.now().toString(36),cap,capNome,modo,fila,idx:0,atual:null,pend:null,itens:[],certos:0,errados:0,brancos:0,inicio:new Date().toISOString(),fim:null,rep:{fila:[],ini:null,res:[]}};
+  S.round={id:'r-'+crypto.randomUUID(),cap,capNome,modo,fila,idx:0,atual:null,pend:null,itens:[],certos:0,errados:0,brancos:0,inicio:new Date().toISOString(),fim:null,rep:{fila:[],ini:null,res:[]}};
   render(true); window.scrollTo({top:0});
 }
 function startRound(cap,modo){
@@ -2262,7 +2269,8 @@ function registrar(L,conf){
   rd.pend=null; rd.just='';
   rd.atual={marcada:L,acertou,conf,corr};
   if(L==='B') rd.brancos++; else if(acertou) rd.certos++; else rd.errados++;
-  rd.itens.push(Object.assign({qid:q.id,ordem:q.ordem||0,marcada:L,gabarito:q.gabarito,conf:conf||null},corr?{corr}:{}));
+  const learning=window.QBLearning?.metadata(S,q,L,conf,rd);
+  rd.itens.push(Object.assign({qid:q.id,ordem:q.ordem||0,marcada:L,gabarito:q.gabarito,conf:conf||null},corr?{corr}:{},learning?{learning}:{}));
   if((L==='B'||!acertou||conf===1)&&!rd.rep.fila.includes(q.id)) rd.rep.fila.push(q.id);
   // estado do item
   const prev=S.r.get(q.id)||{};
@@ -2583,6 +2591,7 @@ function init(){
   }).then(db=>{
     if(!db){ S.dbState='missing'; render(true); return; }
     S.db=db; S.dbState='ok'; render(true); subscribe();
+    window.QBLearning?.mount(S,{render,hoje,setView});
   },()=>{S.dbState='missing';render(true)});
 }
 init();
