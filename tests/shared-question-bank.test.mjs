@@ -37,3 +37,31 @@ test("A bateria aponta para os dois mapas reais da teoria",()=>{
  assert.match(shell,/bancoCompartilhado/);
  assert.match(shell,/data-ir-mapa/);
 });
+
+test("Baterias T17 e T32 reutilizam questões por referência sem materializar novos documentos",()=>{
+  const cases=[
+    {topic:"t17",sources:["FISCAL-TI-05","FISCAL-TI-11"],local:"FISCAL-TI-17",sourceTopics:["t05","t11"]},
+    {topic:"t32",sources:["FISCAL-TI-21","FISCAL-TI-26"],local:"FISCAL-TI-32",sourceTopics:["t21","t26"]}
+  ];
+  for(const obj of cases){
+    const questions=new Map(),ed=new Map(),rev=new Map(),refs=[];
+    for(let i=0;i<obj.sources.length;i++){
+      const id="Q"+i;
+      const tid=obj.sourceTopics[i];
+      questions.set(id,{id,cap:obj.sources[i],enunciado:"Item "+id,gabarito:"C"});
+      ed.set(tid,{id:tid,caps:[obj.sources[i]]});
+      refs.push(id);
+    }
+    const own="LOCAL"+obj.topic;
+    questions.set(own,{id:own,cap:obj.local,enunciado:"Item próprio",gabarito:"E"});
+    ed.set(obj.topic,{id:obj.topic,caps:[obj.local]});
+    rev.set(obj.topic,{questaoIds:refs,cartoes:[{q:"A",a:["B"]}],mapaRelacionadoIds:obj.sourceTopics});
+    const result=link.build(questions,ed,rev);
+    assert.equal(result.total,3);
+    assert.deepEqual([...result.byTopic.get(obj.topic).map(q=>q.id)],["Q0","Q1",own]);
+    assert.equal(result.byQuestion.size,3);
+    assert.ok(result.byTopic.get(obj.topic).every(q=>questions.has(q.id)));
+    assert.equal(rev.get(obj.topic).mapaRelacionadoIds.length,2);
+  }
+});
+
