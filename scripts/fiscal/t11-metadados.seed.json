@@ -1,0 +1,1399 @@
+{
+  "topic": "fiscal-t11",
+  "source": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+  "sourcePages": "51–58,78–79",
+  "questions": [
+    {
+      "id": "fiscal-t11-ce02",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Metadados são informações que descrevem outros dados, acrescentando contexto que facilita localização, organização e utilização.",
+      "gabarito": "C",
+      "comentario": "A seção 1.8 apresenta metadados como descrições complementares, e não como o próprio conteúdo principal.",
+      "ordem": 1102,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 51",
+      "tema": "Dados sobre dados",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-dados",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 51,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce03",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Metadados só passaram a existir após a invenção dos computadores, já que descrições de livros em fichários físicos não cumprem essa função.",
+      "gabarito": "E",
+      "comentario": "Catálogos físicos e etiquetas usadas historicamente também descreviam recursos e auxiliavam a recuperação de informações.",
+      "ordem": 1103,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 52",
+      "tema": "Metadados não digitais",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-precomputacao",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 52,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce04",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "O título e a data de criação de um PDF podem constituir metadados, ao passo que as conclusões do relatório integram seu conteúdo.",
+      "gabarito": "C",
+      "comentario": "Metadados identificam e contextualizam o documento sem substituí-lo; o conteúdo analítico é o dado principal.",
+      "ordem": 1104,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 52",
+      "tema": "Título e conteúdo",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-titulo",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 52,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce05",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Todos os arquivos digitais necessariamente possuem os mesmos metadados, independentemente de serem fotografias, vídeos ou músicas.",
+      "gabarito": "E",
+      "comentario": "A apostila diferencia taxas de quadros de vídeos, autor/faixas em música e parâmetros fotográficos em imagens.",
+      "ordem": 1105,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 52",
+      "tema": "Variação por tipo de arquivo",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-variacao",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 52,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce06",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Metadados ajudam ferramentas de busca e bibliotecas digitais a localizar e recuperar recursos sem exigir inspeção integral do conteúdo.",
+      "gabarito": "C",
+      "comentario": "Descrições estruturadas como título, assunto e autor aceleram indexação e seleção de resultados.",
+      "ordem": 1106,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 51",
+      "tema": "Busca e recuperação",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-busca",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 51,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce07",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "As descrições de formatos, campos e estruturas necessárias a um SGBD são exemplos de metadados técnicos.",
+      "gabarito": "C",
+      "comentario": "A classificação por uso apresenta metadados técnicos para ferramentas que armazenam, manipulam ou movimentam dados.",
+      "ordem": 1107,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "tema": "Metadados técnicos",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-tecnico",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 54,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce08",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Metadados de negócio descrevem significado e contexto úteis aos usuários de negócio, não apenas parâmetros internos de armazenamento.",
+      "gabarito": "C",
+      "comentario": "O capítulo diferencia metadados técnicos, voltados a ferramentas, e de negócio, voltados à compreensão pelos usuários.",
+      "ordem": 1108,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "tema": "Metadados de negócio",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-negocios",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 54,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce09",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Em banco de dados, o catálogo armazena somente os valores de registros de clientes e salários, sem qualquer descrição das tabelas ou colunas.",
+      "gabarito": "E",
+      "comentario": "Catálogo descreve tabelas, colunas, tipos, tamanhos e regras, distinguindo-os dos dados transacionais.",
+      "ordem": 1109,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+      "tema": "Catálogo de dados",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-catalogo",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 55,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce10",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Conhecer tipos de colunas e restrições por metadados ajuda o SGBD a interpretar e validar os valores armazenados.",
+      "gabarito": "C",
+      "comentario": "O texto relaciona metadados do catálogo a consistência, manutenção e administração dos dados.",
+      "ordem": 1110,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+      "tema": "Consistência estrutural",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-catalogo-funcao",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 55,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce11",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Metadados sintáticos descrevem o significado de domínio da informação, enquanto os semânticos descrevem exclusivamente sua sintaxe.",
+      "gabarito": "E",
+      "comentario": "A categorização é inversa: sintáticos descrevem sintaxe; semânticos, conteúdo e significado no domínio.",
+      "ordem": 1111,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "tema": "Metadados sintáticos",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-sintatico",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 54,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce12",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Metadados estruturais podem indicar a organização de um recurso, inclusive a sequência ou o agrupamento de partes de uma obra digitalizada.",
+      "gabarito": "C",
+      "comentario": "A apostila associa metadados estruturais à composição e navegação entre partes do recurso.",
+      "ordem": 1112,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "tema": "Metadados estruturais",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-estrutural",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 54,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce13",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Metadados semânticos descrevem o significado e conteúdo dos dados em determinado domínio de aplicação.",
+      "gabarito": "C",
+      "comentario": "A classificação da seção 1.8 distingue semântica de sintaxe e de estrutura.",
+      "ordem": 1113,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "tema": "Metadados semânticos",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-semantico",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 54,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce14",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Autor, título, resumo e palavras-chave podem ser metadados descritivos que favorecem descoberta e identificação de recursos.",
+      "gabarito": "C",
+      "comentario": "A função descritiva identifica o objeto informacional para pesquisa e recuperação.",
+      "ordem": 1114,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "tema": "Metadados descritivos",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-descritivo",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 54,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce15",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Informações sobre criação, gestão e manutenção de um recurso classificam-se como metadados administrativos na divisão funcional do capítulo.",
+      "gabarito": "C",
+      "comentario": "Apostila: administrativos apoiam gerenciamento, como quando, como e por que o recurso foi criado.",
+      "ordem": 1115,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "tema": "Metadados administrativos",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-administrativo",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 54,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce16",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "A indicação da sequência das páginas de um documento digitalizado é, em geral, metadado administrativo, e não estrutural.",
+      "gabarito": "E",
+      "comentario": "A organização e composição do recurso é característica dos metadados estruturais; administrativos apoiam gerenciamento.",
+      "ordem": 1116,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "tema": "Estruturais × administrativos",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-estrutural-nao-admin",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 54,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce17",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "A classificação sintático/estrutural/semântico é a mesma divisão funcional descritivo/estrutural/administrativo, sem qualquer diferença de critério.",
+      "gabarito": "E",
+      "comentario": "O material apresenta diferentes critérios de agrupamento, por forma/significado e por função; a palavra estrutural aparece em ambos.",
+      "ordem": 1117,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "tema": "Duas classificações distintas",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-sintatico-vs-descritivo",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 54,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce18",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "EXIF é um padrão de metadados associado principalmente a imagens digitais, podendo incluir parâmetros da captura.",
+      "gabarito": "C",
+      "comentario": "Exchangeable Image File Format permite registrar modelo de câmera, ISO, obturador, data e outras informações.",
+      "ordem": 1118,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+      "tema": "EXIF em imagens",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "exif-sigla",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 55,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce19",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Uma fotografia pode expor coordenadas GPS por meio dos metadados EXIF, dependendo das configurações do dispositivo.",
+      "gabarito": "C",
+      "comentario": "O material alerta que EXIF pode conter geolocalização sensível e comprometer privacidade.",
+      "ordem": 1119,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+      "tema": "EXIF e localização",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "exif-gps",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 55,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce20",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Metadados EXIF servem exclusivamente para registrar o momento da captura, não podendo guardar ISO, abertura ou identificação da câmera.",
+      "gabarito": "E",
+      "comentario": "EXIF pode registrar ISO, abertura, velocidade de obturador, distância focal, flash e outros atributos.",
+      "ordem": 1120,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+      "tema": "EXIF não é só data",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "exif-nao-somente-data",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 55,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce21",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "A remoção seletiva de metadados de localização antes de publicar uma foto pode reduzir exposição de dados sensíveis.",
+      "gabarito": "C",
+      "comentario": "O risco se relaciona a divulgação involuntária de GPS e outros atributos incorporados ao arquivo.",
+      "ordem": 1121,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 53",
+      "tema": "Remoção de metadados",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "exif-prevencao",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 53,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce22",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "XML é linguagem de marcação extensível que usa tags para estruturar dados, não sendo simplesmente uma linguagem de programação de algoritmos.",
+      "gabarito": "C",
+      "comentario": "A seção descreve tags como marcações de início/fim de elementos e de organização semântica.",
+      "ordem": 1122,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 56",
+      "tema": "XML como linguagem de marcação",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "xml-expansao",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 56,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce23",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "XML pode representar metadados estruturados para integração e intercâmbio de informações entre aplicações.",
+      "gabarito": "C",
+      "comentario": "O material associa a linguagem à organização e descrição padronizada de elementos.",
+      "ordem": 1123,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 56",
+      "tema": "XML e metadados",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "xml-metadados",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 56,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce24",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Etiquetas ou tags livremente escolhidas pelo autor podem agrupar conteúdos sem necessariamente integrar esquema formal de classificação.",
+      "gabarito": "C",
+      "comentario": "A apostila distingue o emprego informal de tags de esquemas padronizados de metadados.",
+      "ordem": 1124,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 58",
+      "tema": "Tags informais",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "tag-informal",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 58,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce25",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Dublin Core é padrão de descrição de recursos digitais voltado à interoperabilidade e à recuperação de informações.",
+      "gabarito": "C",
+      "comentario": "O capítulo cita descrição de textos, imagens, vídeos e sites, com vocabulários de metadados.",
+      "ordem": 1125,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 58",
+      "tema": "Padrão Dublin Core",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "dublin-core",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 58,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce26",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Título, criador, assunto, data, formato, identificador e direitos são exemplos de elementos de metadados Dublin Core.",
+      "gabarito": "C",
+      "comentario": "A listagem da apostila inclui esses elementos entre seus atributos descritivos.",
+      "ordem": 1126,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 58",
+      "tema": "Elementos Dublin Core",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "dublin-elementos",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 58,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce27",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Dublin Core é sistema de gerenciamento de banco de dados orientado a documentos, equivalente a um SGBD NoSQL.",
+      "gabarito": "E",
+      "comentario": "Trata-se de padrão/vocabulário de metadados, não de produto de armazenamento de bancos.",
+      "ordem": 1127,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 58",
+      "tema": "Dublin Core não é SGBD",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "dublin-nao-banco",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 58,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce28",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Metadados de horários, conexões e interações podem revelar padrões de comportamento mesmo sem divulgar integralmente o conteúdo de mensagens.",
+      "gabarito": "C",
+      "comentario": "A p. 53 associa metadados a análises de tráfego, relações entre indivíduos e privacidade.",
+      "ordem": 1128,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 53",
+      "tema": "Metadados e rastreamento",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-privacidade",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 53,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t11-ce29",
+      "cap": "FISCAL-TI-11",
+      "capNome": "Trilha 00 · Tarefa 11 · Metadados de arquivos",
+      "enunciado": "Para identificar a versão mais recente de documento, metadados de data de modificação e versão podem ser mais úteis que a leitura integral do conteúdo.",
+      "gabarito": "C",
+      "comentario": "Campos de histórico/versão são descrições sobre o recurso que facilitam seleção entre documentos.",
+      "ordem": 1129,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 52",
+      "tema": "Datas de versão",
+      "topico": "fiscal-t11",
+      "assuntoId": "fiscal-ti-metadados-arquivos",
+      "mapaNoId": "meta-data-ultima",
+      "fonte": {
+        "documento": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf",
+        "pagina": 52,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Dados sobre dados",
+      "q": "Como distinguir um dado e um metadado?",
+      "a": [
+        "Dado é o recurso principal; metadado descreve suas características, contexto ou organização."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 51",
+      "mapaNoId": "meta-dados",
+      "questaoIds": [
+        "fiscal-t11-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Metadados não digitais",
+      "q": "Metadados são necessariamente digitais?",
+      "a": [
+        "Não. Catálogos e fichas físicas já desempenhavam funções equivalentes."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 52",
+      "mapaNoId": "meta-precomputacao",
+      "questaoIds": [
+        "fiscal-t11-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Título e conteúdo",
+      "q": "Classifique título, data de criação e conclusões de um PDF.",
+      "a": [
+        "Título e data são metadados; conclusões são parte do conteúdo do relatório."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 52",
+      "mapaNoId": "meta-titulo",
+      "questaoIds": [
+        "fiscal-t11-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Variação por tipo de arquivo",
+      "q": "Metadados de vídeo e áudio são idênticos?",
+      "a": [
+        "Não. Variação depende da estrutura e finalidade do tipo de arquivo."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 52",
+      "mapaNoId": "meta-variacao",
+      "questaoIds": [
+        "fiscal-t11-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Busca e recuperação",
+      "q": "Como metadados reduzem esforço em sistemas de busca?",
+      "a": [
+        "Permitem indexar e localizar recursos por atributos descritivos, sem ler todo o conteúdo."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 51",
+      "mapaNoId": "meta-busca",
+      "questaoIds": [
+        "fiscal-t11-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Metadados técnicos",
+      "q": "Qual metadado interessa diretamente ao funcionamento de SGBD?",
+      "a": [
+        "Metadado técnico, como tipo e tamanho dos campos de uma tabela."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "mapaNoId": "meta-tecnico",
+      "questaoIds": [
+        "fiscal-t11-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Metadados de negócio",
+      "q": "Qual diferença existe entre metadados de negócio e técnicos?",
+      "a": [
+        "Negócio: significado no domínio; técnicos: estrutura, tipos e formatos para ferramentas."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "mapaNoId": "meta-negocios",
+      "questaoIds": [
+        "fiscal-t11-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Catálogo de dados",
+      "q": "O que costuma ser armazenado no catálogo de dados?",
+      "a": [
+        "Metadados de estrutura: tabelas, colunas, tipos, tamanhos e restrições."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+      "mapaNoId": "meta-catalogo",
+      "questaoIds": [
+        "fiscal-t11-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Consistência estrutural",
+      "q": "Por que o SGBD depende de metadados estruturais?",
+      "a": [
+        "Para interpretar tipos, tamanhos, restrições e organização das tabelas."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+      "mapaNoId": "meta-catalogo-funcao",
+      "questaoIds": [
+        "fiscal-t11-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Metadados sintáticos",
+      "q": "Diferencie metadado sintático de semântico.",
+      "a": [
+        "Sintático: forma/sintaxe; semântico: significado de domínio."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "mapaNoId": "meta-sintatico",
+      "questaoIds": [
+        "fiscal-t11-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Metadados estruturais",
+      "q": "Que função exercem metadados estruturais em livro digital?",
+      "a": [
+        "Descrevem como páginas e partes se organizam para navegação e apresentação."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "mapaNoId": "meta-estrutural",
+      "questaoIds": [
+        "fiscal-t11-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Metadados semânticos",
+      "q": "Qual a característica central do metadado semântico?",
+      "a": [
+        "Representar o significado dos dados em um contexto ou domínio."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "mapaNoId": "meta-semantico",
+      "questaoIds": [
+        "fiscal-t11-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Metadados descritivos",
+      "q": "Cite quatro metadados descritivos de documento.",
+      "a": [
+        "Título, autor, resumo e palavras-chave."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "mapaNoId": "meta-descritivo",
+      "questaoIds": [
+        "fiscal-t11-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Metadados administrativos",
+      "q": "Que pergunta respondem metadados administrativos?",
+      "a": [
+        "Como e quando o recurso foi produzido e quais condições ajudam a geri-lo."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "mapaNoId": "meta-administrativo",
+      "questaoIds": [
+        "fiscal-t11-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Estruturais × administrativos",
+      "q": "Diferencie estrutural e administrativo num PDF digitalizado.",
+      "a": [
+        "Estrutural: ordem/partes das páginas; administrativo: criação, manutenção ou gestão."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "mapaNoId": "meta-estrutural-nao-admin",
+      "questaoIds": [
+        "fiscal-t11-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Duas classificações distintas",
+      "q": "Quais duas tríades classificatórias o capítulo diferencia?",
+      "a": [
+        "Sintáticos, estruturais e semânticos; e descritivos, estruturais e administrativos."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+      "mapaNoId": "meta-sintatico-vs-descritivo",
+      "questaoIds": [
+        "fiscal-t11-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "EXIF em imagens",
+      "q": "O que é EXIF e em quais recursos aparece?",
+      "a": [
+        "Um padrão de metadados para imagens digitais, com detalhes da captura."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+      "mapaNoId": "exif-sigla",
+      "questaoIds": [
+        "fiscal-t11-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "EXIF e localização",
+      "q": "Qual risco de privacidade existe em compartilhar imagem com EXIF?",
+      "a": [
+        "Divulgar dados técnicos e, eventualmente, localização GPS da captura."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+      "mapaNoId": "exif-gps",
+      "questaoIds": [
+        "fiscal-t11-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "EXIF não é só data",
+      "q": "Cite três atributos EXIF além da data.",
+      "a": [
+        "Modelo da câmera, ISO, abertura ou localização GPS."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+      "mapaNoId": "exif-nao-somente-data",
+      "questaoIds": [
+        "fiscal-t11-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Remoção de metadados",
+      "q": "Que medida reduz risco ao publicar foto com GPS no EXIF?",
+      "a": [
+        "Remover ou revisar metadados sensíveis de localização antes do compartilhamento."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 53",
+      "mapaNoId": "exif-prevencao",
+      "questaoIds": [
+        "fiscal-t11-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "XML como linguagem de marcação",
+      "q": "O que significa XML e para que servem suas tags?",
+      "a": [
+        "eXtensible Markup Language; tags organizam e identificam elementos de informação."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 56",
+      "mapaNoId": "xml-expansao",
+      "questaoIds": [
+        "fiscal-t11-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "XML e metadados",
+      "q": "Como XML se relaciona a metadados?",
+      "a": [
+        "Permite descrever recursos por elementos/atributos estruturados e intercambiáveis."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 56",
+      "mapaNoId": "xml-metadados",
+      "questaoIds": [
+        "fiscal-t11-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Tags informais",
+      "q": "Toda tag escolhida por usuário equivale a padrão formal de metadados?",
+      "a": [
+        "Não. Muitas são etiquetas informais de organização."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 58",
+      "mapaNoId": "tag-informal",
+      "questaoIds": [
+        "fiscal-t11-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Padrão Dublin Core",
+      "q": "Qual finalidade principal do Dublin Core?",
+      "a": [
+        "Padronizar descrições de recursos e favorecer interoperabilidade e recuperação."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 58",
+      "mapaNoId": "dublin-core",
+      "questaoIds": [
+        "fiscal-t11-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Elementos Dublin Core",
+      "q": "Cite cinco elementos Dublin Core.",
+      "a": [
+        "Título, criador, assunto, data e identificador, por exemplo."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 58",
+      "mapaNoId": "dublin-elementos",
+      "questaoIds": [
+        "fiscal-t11-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dublin Core não é SGBD",
+      "q": "Dublin Core é um SGBD?",
+      "a": [
+        "Não. É padrão de metadados para descrição de recursos."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 58",
+      "mapaNoId": "dublin-nao-banco",
+      "questaoIds": [
+        "fiscal-t11-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Metadados e rastreamento",
+      "q": "Por que metadados merecem proteção mesmo sem o conteúdo?",
+      "a": [
+        "Porque horários, localizações e conexões podem revelar padrões e relações sensíveis."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 53",
+      "mapaNoId": "meta-privacidade",
+      "questaoIds": [
+        "fiscal-t11-ce28"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Datas de versão",
+      "q": "Quais metadados ajudam a encontrar versão recente?",
+      "a": [
+        "Data de modificação e identificador de versão, quando existentes."
+      ],
+      "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 52",
+      "mapaNoId": "meta-data-ultima",
+      "questaoIds": [
+        "fiscal-t11-ce29"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Metadados de arquivos · T11",
+    "versao": 2,
+    "fonte": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, pp. 51–58, 78–79",
+    "ramos": [
+      {
+        "id": "conceito-1",
+        "t": "Conceito e função",
+        "n": "Dados que descrevem outros dados e ajudam a identificar, localizar e gerir recursos.",
+        "cor": 1,
+        "x": {
+          "e": "Dados que descrevem outros dados e ajudam a identificar, localizar e gerir recursos.",
+          "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf"
+        },
+        "f": [
+          {
+            "id": "meta-dados",
+            "t": "Dados sobre dados",
+            "n": "Dado é o recurso principal; metadado descreve suas características, contexto ou organização.",
+            "x": {
+              "e": "A seção 1.8 apresenta metadados como descrições complementares, e não como o próprio conteúdo principal.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 51",
+              "questaoIds": [
+                "fiscal-t11-ce02"
+              ]
+            }
+          },
+          {
+            "id": "meta-precomputacao",
+            "t": "Metadados não digitais",
+            "n": "Não. Catálogos e fichas físicas já desempenhavam funções equivalentes.",
+            "x": {
+              "e": "Catálogos físicos e etiquetas usadas historicamente também descreviam recursos e auxiliavam a recuperação de informações.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 52",
+              "questaoIds": [
+                "fiscal-t11-ce03"
+              ]
+            }
+          },
+          {
+            "id": "meta-titulo",
+            "t": "Título e conteúdo",
+            "n": "Título e data são metadados; conclusões são parte do conteúdo do relatório.",
+            "x": {
+              "e": "Metadados identificam e contextualizam o documento sem substituí-lo; o conteúdo analítico é o dado principal.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 52",
+              "questaoIds": [
+                "fiscal-t11-ce04"
+              ]
+            }
+          },
+          {
+            "id": "meta-variacao",
+            "t": "Variação por tipo de arquivo",
+            "n": "Não. Variação depende da estrutura e finalidade do tipo de arquivo.",
+            "x": {
+              "e": "A apostila diferencia taxas de quadros de vídeos, autor/faixas em música e parâmetros fotográficos em imagens.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 52",
+              "questaoIds": [
+                "fiscal-t11-ce05"
+              ]
+            }
+          },
+          {
+            "id": "meta-busca",
+            "t": "Busca e recuperação",
+            "n": "Permitem indexar e localizar recursos por atributos descritivos, sem ler todo o conteúdo.",
+            "x": {
+              "e": "Descrições estruturadas como título, assunto e autor aceleram indexação e seleção de resultados.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 51",
+              "questaoIds": [
+                "fiscal-t11-ce06"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-tecnicos",
+        "t": "Metadados técnicos e de negócio",
+        "n": "Estrutura interna e catálogo do SGBD versus significado para usuários de negócio.",
+        "cor": 2,
+        "x": {
+          "e": "Estrutura interna e catálogo do SGBD versus significado para usuários de negócio.",
+          "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf"
+        },
+        "f": [
+          {
+            "id": "meta-tecnico",
+            "t": "Metadados técnicos",
+            "n": "Metadado técnico, como tipo e tamanho dos campos de uma tabela.",
+            "x": {
+              "e": "A classificação por uso apresenta metadados técnicos para ferramentas que armazenam, manipulam ou movimentam dados.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+              "questaoIds": [
+                "fiscal-t11-ce07"
+              ]
+            }
+          },
+          {
+            "id": "meta-negocios",
+            "t": "Metadados de negócio",
+            "n": "Negócio: significado no domínio; técnicos: estrutura, tipos e formatos para ferramentas.",
+            "x": {
+              "e": "O capítulo diferencia metadados técnicos, voltados a ferramentas, e de negócio, voltados à compreensão pelos usuários.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+              "questaoIds": [
+                "fiscal-t11-ce08"
+              ]
+            }
+          },
+          {
+            "id": "meta-catalogo",
+            "t": "Catálogo de dados",
+            "n": "Metadados de estrutura: tabelas, colunas, tipos, tamanhos e restrições.",
+            "x": {
+              "e": "Catálogo descreve tabelas, colunas, tipos, tamanhos e regras, distinguindo-os dos dados transacionais.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+              "questaoIds": [
+                "fiscal-t11-ce09"
+              ]
+            }
+          },
+          {
+            "id": "meta-catalogo-funcao",
+            "t": "Consistência estrutural",
+            "n": "Para interpretar tipos, tamanhos, restrições e organização das tabelas.",
+            "x": {
+              "e": "O texto relaciona metadados do catálogo a consistência, manutenção e administração dos dados.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+              "questaoIds": [
+                "fiscal-t11-ce10"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-sintaxe",
+        "t": "Sintáticos, estruturais e semânticos",
+        "n": "Sintaxe/forma, estrutura/organização e significado contextual.",
+        "cor": 3,
+        "x": {
+          "e": "Sintaxe/forma, estrutura/organização e significado contextual.",
+          "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf"
+        },
+        "f": [
+          {
+            "id": "meta-sintatico",
+            "t": "Metadados sintáticos",
+            "n": "Sintático: forma/sintaxe; semântico: significado de domínio.",
+            "x": {
+              "e": "A categorização é inversa: sintáticos descrevem sintaxe; semânticos, conteúdo e significado no domínio.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+              "questaoIds": [
+                "fiscal-t11-ce11"
+              ]
+            }
+          },
+          {
+            "id": "meta-estrutural",
+            "t": "Metadados estruturais",
+            "n": "Descrevem como páginas e partes se organizam para navegação e apresentação.",
+            "x": {
+              "e": "A apostila associa metadados estruturais à composição e navegação entre partes do recurso.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+              "questaoIds": [
+                "fiscal-t11-ce12"
+              ]
+            }
+          },
+          {
+            "id": "meta-semantico",
+            "t": "Metadados semânticos",
+            "n": "Representar o significado dos dados em um contexto ou domínio.",
+            "x": {
+              "e": "A classificação da seção 1.8 distingue semântica de sintaxe e de estrutura.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+              "questaoIds": [
+                "fiscal-t11-ce13"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-funcao",
+        "t": "Descritivos, estruturais e administrativos",
+        "n": "Identificar recursos, descrever composição e apoiar gestão.",
+        "cor": 4,
+        "x": {
+          "e": "Identificar recursos, descrever composição e apoiar gestão.",
+          "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf"
+        },
+        "f": [
+          {
+            "id": "meta-descritivo",
+            "t": "Metadados descritivos",
+            "n": "Título, autor, resumo e palavras-chave.",
+            "x": {
+              "e": "A função descritiva identifica o objeto informacional para pesquisa e recuperação.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+              "questaoIds": [
+                "fiscal-t11-ce14"
+              ]
+            }
+          },
+          {
+            "id": "meta-administrativo",
+            "t": "Metadados administrativos",
+            "n": "Como e quando o recurso foi produzido e quais condições ajudam a geri-lo.",
+            "x": {
+              "e": "Apostila: administrativos apoiam gerenciamento, como quando, como e por que o recurso foi criado.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+              "questaoIds": [
+                "fiscal-t11-ce15"
+              ]
+            }
+          },
+          {
+            "id": "meta-estrutural-nao-admin",
+            "t": "Estruturais × administrativos",
+            "n": "Estrutural: ordem/partes das páginas; administrativo: criação, manutenção ou gestão.",
+            "x": {
+              "e": "A organização e composição do recurso é característica dos metadados estruturais; administrativos apoiam gerenciamento.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+              "questaoIds": [
+                "fiscal-t11-ce16"
+              ]
+            }
+          },
+          {
+            "id": "meta-sintatico-vs-descritivo",
+            "t": "Duas classificações distintas",
+            "n": "Sintáticos, estruturais e semânticos; e descritivos, estruturais e administrativos.",
+            "x": {
+              "e": "O material apresenta diferentes critérios de agrupamento, por forma/significado e por função; a palavra estrutural aparece em ambos.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 54",
+              "questaoIds": [
+                "fiscal-t11-ce17"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-2",
+        "t": "EXIF e privacidade",
+        "n": "Parâmetros técnicos e localização podem acompanhar fotos.",
+        "cor": 5,
+        "x": {
+          "e": "Parâmetros técnicos e localização podem acompanhar fotos.",
+          "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf"
+        },
+        "f": [
+          {
+            "id": "exif-sigla",
+            "t": "EXIF em imagens",
+            "n": "Um padrão de metadados para imagens digitais, com detalhes da captura.",
+            "x": {
+              "e": "Exchangeable Image File Format permite registrar modelo de câmera, ISO, obturador, data e outras informações.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+              "questaoIds": [
+                "fiscal-t11-ce18"
+              ]
+            }
+          },
+          {
+            "id": "exif-gps",
+            "t": "EXIF e localização",
+            "n": "Divulgar dados técnicos e, eventualmente, localização GPS da captura.",
+            "x": {
+              "e": "O material alerta que EXIF pode conter geolocalização sensível e comprometer privacidade.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+              "questaoIds": [
+                "fiscal-t11-ce19"
+              ]
+            }
+          },
+          {
+            "id": "exif-nao-somente-data",
+            "t": "EXIF não é só data",
+            "n": "Modelo da câmera, ISO, abertura ou localização GPS.",
+            "x": {
+              "e": "EXIF pode registrar ISO, abertura, velocidade de obturador, distância focal, flash e outros atributos.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 55",
+              "questaoIds": [
+                "fiscal-t11-ce20"
+              ]
+            }
+          },
+          {
+            "id": "exif-prevencao",
+            "t": "Remoção de metadados",
+            "n": "Remover ou revisar metadados sensíveis de localização antes do compartilhamento.",
+            "x": {
+              "e": "O risco se relaciona a divulgação involuntária de GPS e outros atributos incorporados ao arquivo.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 53",
+              "questaoIds": [
+                "fiscal-t11-ce21"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-xml",
+        "t": "XML e tags",
+        "n": "Linguagem de marcação estruturada versus etiquetas informais.",
+        "cor": 6,
+        "x": {
+          "e": "Linguagem de marcação estruturada versus etiquetas informais.",
+          "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf"
+        },
+        "f": [
+          {
+            "id": "xml-expansao",
+            "t": "XML como linguagem de marcação",
+            "n": "eXtensible Markup Language; tags organizam e identificam elementos de informação.",
+            "x": {
+              "e": "A seção descreve tags como marcações de início/fim de elementos e de organização semântica.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 56",
+              "questaoIds": [
+                "fiscal-t11-ce22"
+              ]
+            }
+          },
+          {
+            "id": "xml-metadados",
+            "t": "XML e metadados",
+            "n": "Permite descrever recursos por elementos/atributos estruturados e intercambiáveis.",
+            "x": {
+              "e": "O material associa a linguagem à organização e descrição padronizada de elementos.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 56",
+              "questaoIds": [
+                "fiscal-t11-ce23"
+              ]
+            }
+          },
+          {
+            "id": "tag-informal",
+            "t": "Tags informais",
+            "n": "Não. Muitas são etiquetas informais de organização.",
+            "x": {
+              "e": "A apostila distingue o emprego informal de tags de esquemas padronizados de metadados.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 58",
+              "questaoIds": [
+                "fiscal-t11-ce24"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-dublin",
+        "t": "Dublin Core",
+        "n": "Padrão de descrição e interoperabilidade de recursos digitais.",
+        "cor": 7,
+        "x": {
+          "e": "Padrão de descrição e interoperabilidade de recursos digitais.",
+          "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf"
+        },
+        "f": [
+          {
+            "id": "dublin-core",
+            "t": "Padrão Dublin Core",
+            "n": "Padronizar descrições de recursos e favorecer interoperabilidade e recuperação.",
+            "x": {
+              "e": "O capítulo cita descrição de textos, imagens, vídeos e sites, com vocabulários de metadados.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 58",
+              "questaoIds": [
+                "fiscal-t11-ce25"
+              ]
+            }
+          },
+          {
+            "id": "dublin-elementos",
+            "t": "Elementos Dublin Core",
+            "n": "Título, criador, assunto, data e identificador, por exemplo.",
+            "x": {
+              "e": "A listagem da apostila inclui esses elementos entre seus atributos descritivos.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 58",
+              "questaoIds": [
+                "fiscal-t11-ce26"
+              ]
+            }
+          },
+          {
+            "id": "dublin-nao-banco",
+            "t": "Dublin Core não é SGBD",
+            "n": "Não. É padrão de metadados para descrição de recursos.",
+            "x": {
+              "e": "Trata-se de padrão/vocabulário de metadados, não de produto de armazenamento de bancos.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 58",
+              "questaoIds": [
+                "fiscal-t11-ce27"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-uso",
+        "t": "Casos de uso e riscos",
+        "n": "Recuperação de versões, organização e análise de comportamento.",
+        "cor": 8,
+        "x": {
+          "e": "Recuperação de versões, organização e análise de comportamento.",
+          "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf"
+        },
+        "f": [
+          {
+            "id": "meta-privacidade",
+            "t": "Metadados e rastreamento",
+            "n": "Porque horários, localizações e conexões podem revelar padrões e relações sensíveis.",
+            "x": {
+              "e": "A p. 53 associa metadados a análises de tráfego, relações entre indivíduos e privacidade.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 53",
+              "questaoIds": [
+                "fiscal-t11-ce28"
+              ]
+            }
+          },
+          {
+            "id": "meta-data-ultima",
+            "t": "Datas de versão",
+            "n": "Data de modificação e identificador de versão, quando existentes.",
+            "x": {
+              "e": "Campos de histórico/versão são descrições sobre o recurso que facilitam seleção entre documentos.",
+              "src": "1. Análise de Informações - Pirâmide DIKW. Dados Abertos. Metadados de Arquivos.pdf, p. 52",
+              "questaoIds": [
+                "fiscal-t11-ce29"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": [
+      [
+        "conceito-1",
+        "g-tecnicos",
+        "Metadados no catálogo"
+      ],
+      [
+        "g-tecnicos",
+        "g-sintaxe",
+        "Estrutura e significado"
+      ],
+      [
+        "g-sintaxe",
+        "g-funcao",
+        "Duas classificações distintas"
+      ],
+      [
+        "conceito-2",
+        "g-uso",
+        "Risco de exposição de localização"
+      ],
+      [
+        "g-xml",
+        "g-dublin",
+        "Estrutura versus vocabulário padronizado"
+      ]
+    ]
+  }
+}
