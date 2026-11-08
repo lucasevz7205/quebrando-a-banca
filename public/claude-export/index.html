@@ -2273,6 +2273,7 @@ function registrar(L,conf){
   rd.atual={marcada:L,acertou,conf,corr};
   if(L==='B') rd.brancos++; else if(acertou) rd.certos++; else rd.errados++;
   const learning=window.QBLearning?.metadata(S,q,L,conf,rd);
+  if(learning) rd.atual.pilotFeedback=learning.feedback;
   rd.itens.push(Object.assign({qid:q.id,ordem:q.ordem||0,marcada:L,gabarito:q.gabarito,conf:conf||null},corr?{corr}:{},learning?{learning}:{}));
   if((L==='B'||!acertou||conf===1)&&!rd.rep.fila.includes(q.id)) rd.rep.fila.push(q.id);
   // estado do item
