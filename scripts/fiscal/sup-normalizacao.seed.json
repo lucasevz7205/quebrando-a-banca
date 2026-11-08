@@ -1,0 +1,1319 @@
+{
+  "topic": "fiscal-sup-normalizacao",
+  "title": "Normalização de Bancos de Dados",
+  "source": "7. Análise de Informações - Normaliz.pdf",
+  "status": "revisao_pedagogica_pendente",
+  "cap": "FISCAL-TI-SUP-NORM",
+  "order": 1003,
+  "questions": [
+    {
+      "id": "fiscal-sup-normalizacao-ce01",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "A normalização busca reduzir redundâncias e anomalias por meio da organização lógica das relações.",
+      "gabarito": "C",
+      "comentario": "As formas normais organizam tabelas com base em dependências e preservação da informação.",
+      "ordem": 100301,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 7",
+      "tema": "Normalização",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n01",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 7,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce02",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "A normalização de dados consiste essencialmente em criar índices para acelerar consultas SQL.",
+      "gabarito": "E",
+      "comentario": "Índices tratam acesso e desempenho físico; formas normais tratam a estrutura lógica dos dados.",
+      "ordem": 100302,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 8",
+      "tema": "Índices",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n02",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 8,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce03",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Quando o nome de um fornecedor precisa ser alterado em várias linhas repetidas, existe risco de anomalia de atualização.",
+      "gabarito": "C",
+      "comentario": "Repetição de dados descritivos impõe várias modificações e pode deixar valores inconsistentes.",
+      "ordem": 100303,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 7",
+      "tema": "Anomalia de atualização",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n03",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 7,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce04",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "A exclusão de uma venda que também apaga a única informação conhecida sobre o produto caracteriza possível anomalia de exclusão.",
+      "gabarito": "C",
+      "comentario": "Eliminar uma tupla pode fazer desaparecer indevidamente outro fato representado na mesma relação.",
+      "ordem": 100304,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 7",
+      "tema": "Anomalia de exclusão",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n04",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 7,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce05",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "A impossibilidade de cadastrar um fornecedor sem incluir uma venda fictícia pode revelar anomalia de inserção.",
+      "gabarito": "C",
+      "comentario": "A estrutura mal separada força a criação de dados artificiais ou impede registrar entidades independentes.",
+      "ordem": 100305,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 7",
+      "tema": "Anomalia de inserção",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n05",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 7,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce06",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Pelo axioma da reflexividade, se Y é subconjunto de X, então X determina funcionalmente Y.",
+      "gabarito": "C",
+      "comentario": "A propriedade se aplica a dependências triviais, nas quais o lado direito está contido no esquerdo.",
+      "ordem": 100306,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 3",
+      "tema": "Reflexividade",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n06",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 3,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce07",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Se X determina Y, acrescentar o mesmo conjunto Z a ambos os lados preserva a dependência funcional.",
+      "gabarito": "C",
+      "comentario": "A regra de aumentação produz XZ → YZ a partir de X → Y.",
+      "ordem": 100307,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 4",
+      "tema": "Aumentação",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n07",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 4,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce08",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Se X determina Y e Y determina Z, então X determina Z, conforme a transitividade.",
+      "gabarito": "C",
+      "comentario": "Encadear dependências permite inferir X → Z desde que ambas as premissas sejam válidas.",
+      "ordem": 100308,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 4",
+      "tema": "Transitividade",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n08",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 4,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce09",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "De X → YZ não se pode deduzir separadamente X → Y e X → Z.",
+      "gabarito": "E",
+      "comentario": "A decomposição permite separar o lado direito da dependência em duas consequências.",
+      "ordem": 100309,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 5",
+      "tema": "Decomposição",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n09",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 5,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce10",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Se X → Y e X → Z, pode-se inferir que X → YZ.",
+      "gabarito": "C",
+      "comentario": "A regra de união reúne atributos que compartilham o mesmo determinante.",
+      "ordem": 100310,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 5",
+      "tema": "União",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n10",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 5,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce11",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "A Primeira Forma Normal exige que cada célula contenha valor atômico de seu domínio.",
+      "gabarito": "C",
+      "comentario": "Atomicidade é definida em relação ao domínio e ao uso, excluindo listas de valores independentes na mesma célula.",
+      "ordem": 100311,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 10",
+      "tema": "Atomicidade",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n11",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 10,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce12",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Uma célula contendo dois telefones independentes separados por ponto e vírgula satisfaz automaticamente a 1FN.",
+      "gabarito": "E",
+      "comentario": "Se são valores separados que precisam de operações independentes, há atributo multivalorado inadequadamente armazenado.",
+      "ordem": 100312,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 12",
+      "tema": "Lista de telefones",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n12",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 12,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce13",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Separar telefones em relação própria, associada ao identificador da pessoa, é solução usual para atributo multivalorado.",
+      "gabarito": "C",
+      "comentario": "Uma linha por telefone mantém valores atômicos e preserva a associação por chave estrangeira.",
+      "ordem": 100313,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 14",
+      "tema": "Tabela de telefones",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n13",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 14,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce14",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Criar colunas Telefone1, Telefone2 e Telefone3 elimina definitivamente o problema de valores multivalorados.",
+      "gabarito": "E",
+      "comentario": "Colunas repetitivas mantêm grupo de mesma natureza e geram limite artificial e campos vazios.",
+      "ordem": 100314,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 15",
+      "tema": "Grupos repetitivos",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n14",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 15,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce15",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "A repetição de uma chave estrangeira em várias linhas de tabela filha viola, por si só, a 1FN.",
+      "gabarito": "E",
+      "comentario": "É normal que a mesma FK se repita quando a entidade do lado um possui vários dependentes.",
+      "ordem": 100315,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 20",
+      "tema": "Repetição de identificador",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n15",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 20,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce16",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Uma relação em 2FN está na 1FN e não apresenta dependência parcial de atributo não primo em relação a chave candidata.",
+      "gabarito": "C",
+      "comentario": "A 2FN elimina dependências de atributos não primos em subconjuntos próprios de chaves candidatas.",
+      "ordem": 100316,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 24",
+      "tema": "2FN",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n16",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 24,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce17",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Se {Pedido, Item} é chave composta e DataPedido depende apenas de Pedido, há dependência parcial.",
+      "gabarito": "C",
+      "comentario": "O atributo descritivo DataPedido não necessita de toda a chave, exigindo separação para 2FN.",
+      "ordem": 100317,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 26",
+      "tema": "Pedido e item",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n17",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 26,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce18",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Uma relação com única chave candidata simples e já na 1FN não apresenta dependência parcial dessa chave.",
+      "gabarito": "C",
+      "comentario": "Sem subconjunto próprio não vazio de uma chave simples, inexiste dependência parcial do tipo tratado pela 2FN.",
+      "ordem": 100318,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 25",
+      "tema": "Chave simples",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n18",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 25,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce19",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Na 3FN, não basta proibir toda dependência funcional cujo determinante não seja superchave: existe exceção para atributo primo.",
+      "gabarito": "C",
+      "comentario": "O critério formal da 3FN admite X → A não trivial se X é superchave ou A é atributo primo.",
+      "ordem": 100319,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 44",
+      "tema": "3FN",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n19",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 44,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce20",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Se ItemID determina MarcaID e MarcaID determina NomeMarca, guardar os três no mesmo cadastro pode gerar dependência transitiva problemática.",
+      "gabarito": "C",
+      "comentario": "NomeMarca depende propriamente de MarcaID, e não diretamente da identificação do item.",
+      "ordem": 100320,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 47",
+      "tema": "Dependência transitiva",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n20",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 47,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce21",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Uma dependência entre duas chaves candidatas é sempre proibida pela 3FN por ser transitiva.",
+      "gabarito": "E",
+      "comentario": "Quando o atributo intermediário é chave candidata, as dependências não configuram necessariamente violação da 3FN.",
+      "ordem": 100321,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 48",
+      "tema": "Chave intermediária",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n21",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 48,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce22",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Na forma normal de Boyce-Codd, toda dependência funcional não trivial deve ter uma superchave como determinante.",
+      "gabarito": "C",
+      "comentario": "A FNBC é mais restritiva que a 3FN e não utiliza a exceção geral para atributo primo.",
+      "ordem": 100322,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 55",
+      "tema": "FNBC",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n22",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 55,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce23",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Pode existir uma relação na 3FN e fora da FNBC quando todos os atributos envolvidos são primos.",
+      "gabarito": "C",
+      "comentario": "O exemplo de aluno, disciplina e professor apresenta dependência cujo determinante não é superchave, ainda que 3FN seja satisfeita.",
+      "ordem": 100323,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 57",
+      "tema": "3FN sem FNBC",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n23",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 57,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce24",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Toda decomposição sem perda para FNBC preserva necessariamente todas as dependências funcionais originais.",
+      "gabarito": "E",
+      "comentario": "É possível obter FNBC sem perda de informação e não preservar diretamente todas as dependências funcionais.",
+      "ordem": 100324,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 59",
+      "tema": "Preservação",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n24",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 59,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce25",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "A Quarta Forma Normal trata redundâncias decorrentes de dependências multivaloradas não triviais.",
+      "gabarito": "C",
+      "comentario": "A 4FN exige superchave como determinante de dependências multivaloradas não triviais.",
+      "ordem": 100325,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 62",
+      "tema": "4FN",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n25",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 62,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce26",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "A Quinta Forma Normal lida com dependências de junção e decomposições sem perda de informação.",
+      "gabarito": "C",
+      "comentario": "A forma normal projeção-junção analisa casos de redundância que só aparecem em decomposições envolvendo várias relações.",
+      "ordem": 100326,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 63",
+      "tema": "5FN",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n26",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 63,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-normalizacao-ce27",
+      "cap": "FISCAL-TI-SUP-NORM",
+      "capNome": "Área Fiscal · Suplemento de TI · Normalização de Bancos de Dados",
+      "enunciado": "Uma relação na FNBC pode deixar de cumprir a 1FN porque as formas normais são independentes.",
+      "gabarito": "E",
+      "comentario": "A hierarquia é cumulativa: FNBC implica 3FN, 2FN e 1FN.",
+      "ordem": 100327,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "7. Análise de Informações - Normaliz.pdf, p. 60",
+      "tema": "Hierarquia",
+      "topico": "fiscal-sup-normalizacao",
+      "assuntoId": "fiscal-ti-normalizacao",
+      "mapaNoId": "fiscal-sup-normalizacao-n27",
+      "fonte": {
+        "documento": "7. Análise de Informações - Normaliz.pdf",
+        "pagina": 60,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Normalização",
+      "q": "Qual é o propósito central da normalização?",
+      "a": [
+        "Reduzir redundâncias e anomalias por decomposição lógica adequada."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 7",
+      "mapaNoId": "fiscal-sup-normalizacao-n01",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce01"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Índices",
+      "q": "O que diferencia índice de forma normal?",
+      "a": [
+        "Índice acelera acesso; forma normal reorganiza relações e dependências."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 8",
+      "mapaNoId": "fiscal-sup-normalizacao-n02",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Anomalia de atualização",
+      "q": "Qual anomalia decorre da atualização parcial de cópias?",
+      "a": [
+        "Anomalia de atualização."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 7",
+      "mapaNoId": "fiscal-sup-normalizacao-n03",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Anomalia de exclusão",
+      "q": "O que é anomalia de exclusão?",
+      "a": [
+        "Perda não intencional de informação ao excluir outro registro."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 7",
+      "mapaNoId": "fiscal-sup-normalizacao-n04",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Anomalia de inserção",
+      "q": "Qual exemplo caracteriza anomalia de inserção?",
+      "a": [
+        "Precisar criar outro fato inexistente para cadastrar uma entidade."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 7",
+      "mapaNoId": "fiscal-sup-normalizacao-n05",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Reflexividade",
+      "q": "Qual regra justifica {CPF, Nome} → Nome?",
+      "a": [
+        "Reflexividade."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 3",
+      "mapaNoId": "fiscal-sup-normalizacao-n06",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Aumentação",
+      "q": "Como aplicar aumentação a X → Y?",
+      "a": [
+        "Inferir XZ → YZ."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 4",
+      "mapaNoId": "fiscal-sup-normalizacao-n07",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Transitividade",
+      "q": "Qual resultado de X → Y e Y → Z?",
+      "a": [
+        "X → Z."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 4",
+      "mapaNoId": "fiscal-sup-normalizacao-n08",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Decomposição",
+      "q": "O que se infere de X → YZ?",
+      "a": [
+        "X → Y e X → Z."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 5",
+      "mapaNoId": "fiscal-sup-normalizacao-n09",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "União",
+      "q": "O que a união faz?",
+      "a": [
+        "Combina X → Y e X → Z em X → YZ."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 5",
+      "mapaNoId": "fiscal-sup-normalizacao-n10",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Atomicidade",
+      "q": "Qual regra central da 1FN?",
+      "a": [
+        "Um único valor atômico por atributo de cada tupla."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 10",
+      "mapaNoId": "fiscal-sup-normalizacao-n11",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Lista de telefones",
+      "q": "Por que dois telefones numa célula são problemáticos?",
+      "a": [
+        "Porque representam coleção de valores independentes."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 12",
+      "mapaNoId": "fiscal-sup-normalizacao-n12",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Tabela de telefones",
+      "q": "Como modelar múltiplos telefones em 1FN?",
+      "a": [
+        "Tabela filha de telefones, uma ocorrência por linha."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 14",
+      "mapaNoId": "fiscal-sup-normalizacao-n13",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Grupos repetitivos",
+      "q": "Por que Telefone1, Telefone2 não é solução robusta?",
+      "a": [
+        "São grupos repetitivos que devem virar ocorrências em tabela relacionada."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 15",
+      "mapaNoId": "fiscal-sup-normalizacao-n14",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Repetição de identificador",
+      "q": "Repetir FK em linhas distintas fere 1FN?",
+      "a": [
+        "Não, desde que as tuplas preservem seus atributos atômicos."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 20",
+      "mapaNoId": "fiscal-sup-normalizacao-n15",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "2FN",
+      "q": "Qual problema é eliminado pela 2FN?",
+      "a": [
+        "Dependência parcial de atributo não primo em chave candidata composta."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 24",
+      "mapaNoId": "fiscal-sup-normalizacao-n16",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Pedido e item",
+      "q": "Como reconhecer dependência parcial?",
+      "a": [
+        "Um atributo não primo depende somente de parte de chave candidata composta."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 26",
+      "mapaNoId": "fiscal-sup-normalizacao-n17",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Chave simples",
+      "q": "O que muda na análise de 2FN com chave simples?",
+      "a": [
+        "Não há parte própria não vazia dessa chave para determinar atributo não primo."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 25",
+      "mapaNoId": "fiscal-sup-normalizacao-n18",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "3FN",
+      "q": "Quando uma DF não trivial satisfaz 3FN?",
+      "a": [
+        "Quando o determinante é superchave ou o dependente é atributo primo."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 44",
+      "mapaNoId": "fiscal-sup-normalizacao-n19",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dependência transitiva",
+      "q": "Qual é o encadeamento transitivo do exemplo?",
+      "a": [
+        "ItemID → MarcaID → NomeMarca."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 47",
+      "mapaNoId": "fiscal-sup-normalizacao-n20",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Chave intermediária",
+      "q": "Toda cadeia indireta viola a 3FN?",
+      "a": [
+        "Não; o critério formal considera superchaves e atributos primos."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 48",
+      "mapaNoId": "fiscal-sup-normalizacao-n21",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "FNBC",
+      "q": "Qual exigência define FNBC?",
+      "a": [
+        "Determinante superchave em cada dependência funcional não trivial."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 55",
+      "mapaNoId": "fiscal-sup-normalizacao-n22",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "3FN sem FNBC",
+      "q": "3FN implica FNBC?",
+      "a": [
+        "Não. FNBC impõe condição mais rigorosa ao determinante."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 57",
+      "mapaNoId": "fiscal-sup-normalizacao-n23",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Preservação",
+      "q": "Qual o risco de decompor em FNBC?",
+      "a": [
+        "Perder preservação de algumas dependências, exigindo verificações por junção."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 59",
+      "mapaNoId": "fiscal-sup-normalizacao-n24",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "4FN",
+      "q": "Que dependência é foco da 4FN?",
+      "a": [
+        "Dependência multivalorada independente."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 62",
+      "mapaNoId": "fiscal-sup-normalizacao-n25",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "5FN",
+      "q": "Qual problema aborda a 5FN?",
+      "a": [
+        "Dependências de junção não triviais."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 63",
+      "mapaNoId": "fiscal-sup-normalizacao-n26",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Hierarquia",
+      "q": "FNBC implica formas anteriores?",
+      "a": [
+        "Sim: 3FN, 2FN e 1FN."
+      ],
+      "src": "7. Análise de Informações - Normaliz.pdf, p. 60",
+      "mapaNoId": "fiscal-sup-normalizacao-n27",
+      "questaoIds": [
+        "fiscal-sup-normalizacao-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Normalização de Bancos de Dados · Área Fiscal / suplemento de TI",
+    "versao": 1,
+    "fonte": "7. Análise de Informações - Normaliz.pdf, pp. 3–64",
+    "ramos": [
+      {
+        "id": "g-fundamentos",
+        "t": "Fundamentos",
+        "n": "Regras e aplicações de fundamentos.",
+        "cor": 1,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "7. Análise de Informações - Normaliz.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-normalizacao-n01",
+            "t": "Normalização",
+            "n": "Reduzir redundâncias e anomalias por decomposição lógica adequada.",
+            "x": {
+              "e": "As formas normais organizam tabelas com base em dependências e preservação da informação.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 7",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce01"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n02",
+            "t": "Índices",
+            "n": "Índice acelera acesso; forma normal reorganiza relações e dependências.",
+            "x": {
+              "e": "Índices tratam acesso e desempenho físico; formas normais tratam a estrutura lógica dos dados.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce02"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n03",
+            "t": "Anomalia de atualização",
+            "n": "Anomalia de atualização.",
+            "x": {
+              "e": "Repetição de dados descritivos impõe várias modificações e pode deixar valores inconsistentes.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 7",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce03"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n04",
+            "t": "Anomalia de exclusão",
+            "n": "Perda não intencional de informação ao excluir outro registro.",
+            "x": {
+              "e": "Eliminar uma tupla pode fazer desaparecer indevidamente outro fato representado na mesma relação.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 7",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce04"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n05",
+            "t": "Anomalia de inserção",
+            "n": "Precisar criar outro fato inexistente para cadastrar uma entidade.",
+            "x": {
+              "e": "A estrutura mal separada força a criação de dados artificiais ou impede registrar entidades independentes.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 7",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce05"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-dependencias",
+        "t": "Dependências",
+        "n": "Regras e aplicações de dependências.",
+        "cor": 2,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "7. Análise de Informações - Normaliz.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-normalizacao-n06",
+            "t": "Reflexividade",
+            "n": "Reflexividade.",
+            "x": {
+              "e": "A propriedade se aplica a dependências triviais, nas quais o lado direito está contido no esquerdo.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce06"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n07",
+            "t": "Aumentação",
+            "n": "Inferir XZ → YZ.",
+            "x": {
+              "e": "A regra de aumentação produz XZ → YZ a partir de X → Y.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 4",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce07"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n08",
+            "t": "Transitividade",
+            "n": "X → Z.",
+            "x": {
+              "e": "Encadear dependências permite inferir X → Z desde que ambas as premissas sejam válidas.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 4",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce08"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n09",
+            "t": "Decomposição",
+            "n": "X → Y e X → Z.",
+            "x": {
+              "e": "A decomposição permite separar o lado direito da dependência em duas consequências.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 5",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce09"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n10",
+            "t": "União",
+            "n": "Combina X → Y e X → Z em X → YZ.",
+            "x": {
+              "e": "A regra de união reúne atributos que compartilham o mesmo determinante.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 5",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce10"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-primeira-forma",
+        "t": "Primeira forma",
+        "n": "Regras e aplicações de primeira forma.",
+        "cor": 3,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "7. Análise de Informações - Normaliz.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-normalizacao-n11",
+            "t": "Atomicidade",
+            "n": "Um único valor atômico por atributo de cada tupla.",
+            "x": {
+              "e": "Atomicidade é definida em relação ao domínio e ao uso, excluindo listas de valores independentes na mesma célula.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 10",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce11"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n12",
+            "t": "Lista de telefones",
+            "n": "Porque representam coleção de valores independentes.",
+            "x": {
+              "e": "Se são valores separados que precisam de operações independentes, há atributo multivalorado inadequadamente armazenado.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 12",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce12"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n13",
+            "t": "Tabela de telefones",
+            "n": "Tabela filha de telefones, uma ocorrência por linha.",
+            "x": {
+              "e": "Uma linha por telefone mantém valores atômicos e preserva a associação por chave estrangeira.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 14",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce13"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n14",
+            "t": "Grupos repetitivos",
+            "n": "São grupos repetitivos que devem virar ocorrências em tabela relacionada.",
+            "x": {
+              "e": "Colunas repetitivas mantêm grupo de mesma natureza e geram limite artificial e campos vazios.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 15",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce14"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n15",
+            "t": "Repetição de identificador",
+            "n": "Não, desde que as tuplas preservem seus atributos atômicos.",
+            "x": {
+              "e": "É normal que a mesma FK se repita quando a entidade do lado um possui vários dependentes.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 20",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce15"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-segunda-forma",
+        "t": "Segunda forma",
+        "n": "Regras e aplicações de segunda forma.",
+        "cor": 4,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "7. Análise de Informações - Normaliz.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-normalizacao-n16",
+            "t": "2FN",
+            "n": "Dependência parcial de atributo não primo em chave candidata composta.",
+            "x": {
+              "e": "A 2FN elimina dependências de atributos não primos em subconjuntos próprios de chaves candidatas.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 24",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce16"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n17",
+            "t": "Pedido e item",
+            "n": "Um atributo não primo depende somente de parte de chave candidata composta.",
+            "x": {
+              "e": "O atributo descritivo DataPedido não necessita de toda a chave, exigindo separação para 2FN.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 26",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce17"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n18",
+            "t": "Chave simples",
+            "n": "Não há parte própria não vazia dessa chave para determinar atributo não primo.",
+            "x": {
+              "e": "Sem subconjunto próprio não vazio de uma chave simples, inexiste dependência parcial do tipo tratado pela 2FN.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 25",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce18"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-terceira-forma",
+        "t": "Terceira forma",
+        "n": "Regras e aplicações de terceira forma.",
+        "cor": 5,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "7. Análise de Informações - Normaliz.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-normalizacao-n19",
+            "t": "3FN",
+            "n": "Quando o determinante é superchave ou o dependente é atributo primo.",
+            "x": {
+              "e": "O critério formal da 3FN admite X → A não trivial se X é superchave ou A é atributo primo.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 44",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce19"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n20",
+            "t": "Dependência transitiva",
+            "n": "ItemID → MarcaID → NomeMarca.",
+            "x": {
+              "e": "NomeMarca depende propriamente de MarcaID, e não diretamente da identificação do item.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 47",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce20"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n21",
+            "t": "Chave intermediária",
+            "n": "Não; o critério formal considera superchaves e atributos primos.",
+            "x": {
+              "e": "Quando o atributo intermediário é chave candidata, as dependências não configuram necessariamente violação da 3FN.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 48",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce21"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-boyce-codd",
+        "t": "Boyce-Codd",
+        "n": "Regras e aplicações de boyce-codd.",
+        "cor": 6,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "7. Análise de Informações - Normaliz.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-normalizacao-n22",
+            "t": "FNBC",
+            "n": "Determinante superchave em cada dependência funcional não trivial.",
+            "x": {
+              "e": "A FNBC é mais restritiva que a 3FN e não utiliza a exceção geral para atributo primo.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 55",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce22"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n23",
+            "t": "3FN sem FNBC",
+            "n": "Não. FNBC impõe condição mais rigorosa ao determinante.",
+            "x": {
+              "e": "O exemplo de aluno, disciplina e professor apresenta dependência cujo determinante não é superchave, ainda que 3FN seja satisfeita.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 57",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce23"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n24",
+            "t": "Preservação",
+            "n": "Perder preservação de algumas dependências, exigindo verificações por junção.",
+            "x": {
+              "e": "É possível obter FNBC sem perda de informação e não preservar diretamente todas as dependências funcionais.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 59",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce24"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-formas-superiores",
+        "t": "Formas superiores",
+        "n": "Regras e aplicações de formas superiores.",
+        "cor": 7,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "7. Análise de Informações - Normaliz.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-normalizacao-n25",
+            "t": "4FN",
+            "n": "Dependência multivalorada independente.",
+            "x": {
+              "e": "A 4FN exige superchave como determinante de dependências multivaloradas não triviais.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 62",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce25"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n26",
+            "t": "5FN",
+            "n": "Dependências de junção não triviais.",
+            "x": {
+              "e": "A forma normal projeção-junção analisa casos de redundância que só aparecem em decomposições envolvendo várias relações.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 63",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce26"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-normalizacao-n27",
+            "t": "Hierarquia",
+            "n": "Sim: 3FN, 2FN e 1FN.",
+            "x": {
+              "e": "A hierarquia é cumulativa: FNBC implica 3FN, 2FN e 1FN.",
+              "src": "7. Análise de Informações - Normaliz.pdf, p. 60",
+              "questaoIds": [
+                "fiscal-sup-normalizacao-ce27"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": []
+  }
+}
