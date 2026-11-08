@@ -413,15 +413,20 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/weekly.css">
 <link rel="stylesheet" href="/claude-export/analytics.css">
 <link rel="stylesheet" href="/claude-export/page-hero.css">
+<link rel="stylesheet" href="/claude-export/top-nav.css">
 
 <div class="wrap">
-  <header class="top">
-    <div class="eyebrow">Câmara dos Deputados · Analista Legislativo ARR · Cebraspe · central do projeto</div>
-    <div class="head-row">
-      <h1>Quebrando a banca</h1>
-      <span class="row" style="gap:8px"><span class="countdown" id="countdown"></span><button class="theme-b" id="theme-b" aria-label="Trocar tema">◐ Tema</button><a class="theme-b" href="/questoes" target="_top" rel="noopener" style="text-decoration:none">Laboratório</a></span>
+  <header class="top qb-app-header">
+    <div class="eyebrow qb-header-kicker">Câmara dos Deputados · Analista Legislativo ARR · Cebraspe</div>
+    <div class="head-row qb-header-row">
+      <div class="qb-header-brand"><span class="qb-header-brand-mark" aria-hidden="true">QB</span><h1>Quebrando a banca</h1></div>
+      <div class="row qb-header-utilities" role="group" aria-label="Informações e controles do aplicativo">
+        <span class="countdown qb-utility-countdown" id="countdown" aria-live="off"></span>
+        <button class="theme-b qb-utility-action" id="theme-b" aria-label="Trocar tema">Tema</button>
+        <a class="theme-b qb-utility-action qb-utility-lab" href="/questoes" target="_top" rel="noopener">Laboratório</a>
+      </div>
     </div>
-    <nav class="tabs" aria-label="Seções">
+    <nav class="tabs qb-primary-nav" aria-label="Navegação principal">
       <button id="tab-painel" data-view="painel">Hoje</button>
       <button id="tab-edital" data-view="edital">Edital</button>
       <button id="tab-treinar" data-view="treinar">Treinar <span class="count" id="cnt-hoje">0</span></button>
