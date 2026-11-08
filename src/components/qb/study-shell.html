@@ -1635,18 +1635,17 @@ function irMapa(k){
     if(node){node.scrollIntoView({block:'center',behavior:'smooth'});node.classList.add('m-foco');setTimeout(()=>node.classList.remove('m-foco'),2500);}
   },90);
 }
+S.exAb=new Set();
 function explicaBox(k){
-  const [id]=k.split('@'), c=cartaoDe(k); if(!c) return '';
+  const c=cartaoDe(k);if(!c)return '';
   const bts=[];
-  if(c.ex) bts.push(`<button class="lnk" data-exab="${esc(k)}">${S.exAb.has(k)?'Esconder explicação':'Ver explicação'}</button>`);
-  if(noDoMapa(id,c)) bts.push(`<button class="lnk" data-irmapa="${esc(k)}">Ver no mapa mental ↗</button>`);
-  const st=S.iaEx.get(k);
-  if(IA&&!st) bts.push(`<button class="lnk" data-exia="${esc(k)}">Explicar com IA</button>`);
-  let out=bts.length?`<div class="chips" style="gap:12px">${bts.join('')}</div>`:'';
-  if(c.ex&&S.exAb.has(k)) out+=`<div class="m-det" style="margin:0"><p>${esc(c.ex)}</p></div>`;
-  if(st&&st.s==='run') out+=`<span class="ps">Gerando explicação… ${st.tent>1?'(nova tentativa)':''}</span>`;
-  if(st&&st.s==='err') out+=`<span class="ps" style="color:var(--errado)">${esc(st.msg)}</span> <button class="lnk" data-exia="${esc(k)}">Tentar de novo</button>`;
-  if(st&&st.s==='ok'){const r=st.r; out+=`<div class="m-det" style="--mc:var(--pen);margin:0"><p><span class="pill p">Explicação gerada por IA · confira na fonte</span></p><p>${esc(r.explicacao)}</p>${r.exemplo?`<p><b>Exemplo:</b> ${esc(r.exemplo)}</p>`:''}${r.pegadinha?`<p class="m-trap"><b>Pegadinha:</b> ${esc(r.pegadinha)}</p>`:''}${r.pergunta?`<p><b>Recupere:</b> ${esc(r.pergunta)}</p>`:''}</div>`;}
+  if(c.ex)bts.push('<button class="lnk" data-exab="'+esc(k)+'">'+(S.exAb.has(k)?'Esconder explicação':'Ver explicação')+'</button>');
+  const origem=origemDoMapa(k,c);
+  const labels={exact:'Ver origem no mapa mental',suggested:'Ver sugestão no mapa (não validada)',topic:'Abrir mapa do capítulo'};
+  if(origem.id&&labels[origem.link.status])bts.push('<button class="lnk" data-irmapa="'+esc(k)+'">'+labels[origem.link.status]+'</button>');
+  else bts.push('<span class="ps">Sem mapa mental cadastrado para este cartão.</span>');
+  let out='<div class="chips" style="gap:12px">'+bts.join('')+'</div>';
+  if(c.ex&&S.exAb.has(k))out+='<div class="m-det" style="margin:0"><p>'+esc(c.ex)+'</p></div>';
   return out;
 }
 function cartAval(k,ab){
