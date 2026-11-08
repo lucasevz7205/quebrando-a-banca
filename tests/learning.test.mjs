@@ -45,14 +45,25 @@ test('P4: unknown confidence, changed versions, blanks and invalid events',()=>{
  e('blank','b',2,{marked:'B',confidence:null,ok:false}),e('bad','c',3,{invalid:true})]);
  assert.equal(m.retention.length,0);assert.equal(m.confidence.unknown.length,1);assert.equal(m.excluded,1);
 });
-test('P2: reject uncertain, unreviewed, exposed and unpracticed variants',()=>{
- const S=state();const c={id:'v',type:'variant',reviewed:true,reserved:true,contextChanged:true,concept:'k',answer:'C',prompt:'new context',explanation:'rule',reference:'source'};
+test('P2: reject ungraded practice, errors, unknown sources, unreviewed or exposed variants',()=>{
+ const S=state(),q={id:'source',enunciado:'original',gabarito:'C',comentario:'explication',ref:'ref'};
+ const c={id:'v',type:'variant',reviewed:true,reserved:true,contextChanged:true,concept:'k',answer:'C',prompt:'new context',explanation:'rule',reference:'source',sourceItems:['source']};
  S.learningContent.set('v',c);assert.equal(L.eligibleVariants(S).length,0);
- S.learningEvents.set('p',e('p','x',1,{kind:'practice',skipped:false}));
- assert.equal(L.eligibleVariants(S).length,1);
+ S.learningEvents.set('p',e('p','source',1,{kind:'practice',skipped:false,concept:'k'}));
+ assert.equal(L.eligibleVariants(S).length,0,'Ungraded recall is not evidence of mastery');
+ S.q.set('source',q);
+ S.learningEvents.set('a',e('a','source',1,{ok:false,marked:'E',concept:'k',version:L.version(q)}));
+ assert.equal(L.eligibleVariants(S).length,0,'Incorrect source attempt cannot unlock transfer');
+ S.learningEvents.set('b',e('b','source',2,{ok:true,marked:'C',concept:'k',version:L.version(q)}));
+ assert.equal(L.eligibleVariants(S).length,1,'Correct source attempt unlocks a vetted variant');
  S.learningEvents.set('seen',{id:'seen',kind:'exposure',item:'v'});
  assert.equal(L.eligibleVariants(S).length,0);
  S.learningEvents.delete('seen');c.reviewed=false;assert.equal(L.eligibleVariants(S).length,0);
+});
+test('P4: ungraded free text cannot prove transfer or delayed retention',()=>{
+ const p=e('p','src',1,{kind:'practice',skipped:false,ok:null});
+ const v=e('v','variant',8,{origin:'transferencia',exposure:'new',reviewed:true,reference:'p',concept:'k'});
+ const result=L.metrics([p,v]);assert.equal(result.transfer.length,0);assert.equal(result.retention.length,0);
 });
 test('P6: deterministic, insufficient fallback, no input mutation, exam cap',()=>{
  const hs=[e('a','q',1,{confidence:3}),e('b','q',2,{confidence:3}),e('c','q',3,{confidence:3})],copy=JSON.stringify(hs);
