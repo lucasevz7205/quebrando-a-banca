@@ -4,7 +4,7 @@
  */
 (() => {
   'use strict';
-  const values=x=>x instanceof Map?[...x.values()]:Array.isArray(x)?x:[];
+  const values=x=>x&&typeof x.values==='function'?[...x.values()]:[];
   const asText=x=>String(x??'').trim();
   function build(questions,topics,revisions) {
     const ed=values(topics),q=values(questions),r=revisions||new Map();
@@ -16,14 +16,14 @@
     let coveredWithMaterials=0,withoutResources=0,withoutTopic=0,withMap=0,withFlashcards=0;
     for(const question of q) {
       if(!question?.id)continue;
-      const matched=(byCap.get(question.cap)||[]).sort((a,b)=>(a.ordem||9999)-(b.ordem||9999));
-      const first=matched[0];
+      const matched=(byCap.get(question.cap)||[]).sort((a,b)=>(a.ordem??9999)-(b.ordem??9999));
+      const related=matched.filter(t=>Boolean(r.get(t.id)?.mapa)||(r.get(t.id)?.cartoes||[]).length>0);
+      const first=related[0]||matched[0];
       const topicId=first?.id||'unmapped:'+asText(question.cap||'sem-capitulo');
       if(!first){
         withoutTopic++;
         if(!virtualTopics.has(topicId))virtualTopics.set(topicId,{id:topicId,cap:question.cap||'',titulo:question.capNome||question.cap||'Sem capítulo do edital',sigla:'_',virtual:true,ordem:99999});
       }
-      const related=matched.filter(t=>Boolean(r.get(t.id)?.mapa)||(r.get(t.id)?.cartoes||[]).length>0);
       const hasMap=related.some(t=>!!r.get(t.id)?.mapa);
       const hasFlashcards=related.some(t=>(r.get(t.id)?.cartoes||[]).length>0);
       if(hasMap||hasFlashcards)coveredWithMaterials++;
