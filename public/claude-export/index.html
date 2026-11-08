@@ -611,9 +611,9 @@ function rotuloCap(cap){return cap==='MIX'?'Revisão intercalada':cap==='PEG'?'P
 const multiCap=cap=>cap==='MIX'||cap==='PEG';
 
 /* ---------- navegação ---------- */
-/* 5 abas; Estudo agrupa Revisão, Pegadinhas e Conteúdo; Treinar inclui o caderno de erros; Desempenho inclui o Método */
-const PAI={cartoes:'estudo',mapa:'estudo',revisao:'estudo',pegadinhas:'estudo',conteudo:'estudo',caderno:'treinar',metodo:'historico',analiseDia:'historico',aprendizagem:'historico'};
-const SUBS={estudo:[['revisao','Revisão'],['mapa','Mapas mentais'],['cartoes','Flashcards'],['pegadinhas','Pegadinhas'],['conteudo','Materiais']],treinar:[['treinar','Treinar'],['caderno','Caderno de erros']],historico:[['analiseDia','Análise diária'],['historico','Análise histórica'],['aprendizagem','Aprendizagem'],['metodo','Método']]};
+/* Estudo reúne a prática e o acompanhamento pedagógico; Desempenho mantém a análise histórica. */
+const PAI={cartoes:'estudo',mapa:'estudo',revisao:'estudo',pegadinhas:'estudo',conteudo:'estudo',aprendizagem:'estudo',caderno:'treinar',metodo:'historico',analiseDia:'historico'};
+const SUBS={estudo:[['revisao','Revisão'],['mapa','Mapas mentais'],['cartoes','Flashcards'],['pegadinhas','Pegadinhas'],['conteudo','Materiais'],['aprendizagem','Aprendizagem']],treinar:[['treinar','Treinar'],['caderno','Caderno de erros']],historico:[['analiseDia','Análise diária'],['historico','Análise histórica'],['metodo','Método']]};
 function subnav(){
   const pai=PAI[S.view]||S.view, l=SUBS[pai]; if(!l) return '';
   const cnt={caderno:cadernoItens().length,pegadinhas:S.pg.size};
@@ -630,7 +630,7 @@ const SECTION_INTROS={
   conteudo:['BIBLIOTECA DE ESTUDOS','Conhecimento organizado','Acesse seus materiais, resumos e fontes por disciplina e assunto.'],
   simulado:['SIMULADOS · CEBRASPE','Pratique como na prova','Teste domínio, ritmo e estratégia com exercícios em condições de prova.'],
   analiseDia:['ANÁLISE DIÁRIA','Desempenho diário','Os resultados reais das suas rodadas e tarefas em cada dia.'],
-  aprendizagem:['APRENDIZAGEM','Praticar, verificar e ajustar','Recupere conceitos, acompanhe verificações tardias e organize o próximo ciclo.'],
+  aprendizagem:['APRENDIZAGEM','Verifique o que permaneceu','Acompanhe recuperação, confiança e retenção sem duplicar Flashcards, Revisão ou Pegadinhas.'],
   metodo:['MÉTODO DE ESTUDO','Uma estratégia para evoluir','Entenda as regras de revisão, prática deliberada e análise de erros que orientam seus estudos.']
 };
 function sectionIntro(v){
@@ -1968,6 +1968,7 @@ function viewPegadinhasTopicos(){
         for(const pg of ps){
           const key='pg:'+pg.id, oc=S.evocar&&!S.revelados.has(key);
           const par=(pg.par||[]).length?`<div class="chips-t">${pg.par.map(x=>`<span class="tchip">${esc(x)}</span>`).join('<span class="ps">×</span>')}</div>`:'';
+          const contraste=(pg.par||[]).length>=2?`<div class="qb-trap-contrast"><b>Contraste decisivo</b><p>Distinga ${pg.par.map(esc).join(' × ')}: qual característica muda o julgamento do item? Diga a diferença antes de revelar a regra.</p></div>`:'';
           const itens=(pg.qids||[]).map(estadoItem).join('');
           const {acertos,erros}=mecanStats(pg.mecanismo,qidsPg([pg]));
           const memo=MEC_MEMORIA[pg.mecanismo];
@@ -1975,7 +1976,8 @@ function viewPegadinhasTopicos(){
           corpo+=`<div class="pt pg-${esc(pg.origem||'analitica')}">
             ${oc?`<button class="pk ev" data-revelar="${esc(key)}">${esc(pg.armadilha)}</button>`:`<span class="pk">${esc(pg.armadilha)}</span>`}
             ${trapScore(acertos,erros)}
-            ${oc?'':`${memo?`<div class="qb-trap-key-inline"><b>${esc(pg.mecanismo)} · ${esc(MEC[pg.mecanismo]?.n||'')} · ${esc(maximaMec(pg.mecanismo))}</b>${strategy?`<small class="qb-strategy-author">Adaptação pedagógica inspirada em ${esc(strategy.autor)}</small>`:''}<p>${esc(memo.pergunta)}</p><p><strong>Como evitar o erro</strong> · ${esc(memo.acao)}</p></div>`:''}${par}<p class="pd">${esc(pg.regra)}</p>${pg.sinal?`<p class="ptr">Sinal: ${esc(pg.sinal)}</p>`:''}
+            ${oc?contraste:''}
+            ${oc?'':`${memo?`<div class="qb-trap-key-inline"><b>${esc(pg.mecanismo)} · ${esc(MEC[pg.mecanismo]?.n||'')} · ${esc(maximaMec(pg.mecanismo))}</b>${strategy?`<small class="qb-strategy-author">Adaptação pedagógica inspirada em ${esc(strategy.autor)}</small>`:''}<p>${esc(memo.pergunta)}</p><p><strong>Como evitar o erro</strong> · ${esc(memo.acao)}</p></div>`:''}${par}${!oc&&contraste?`<p class="qb-trap-contrast-tip">Como esses conceitos se distinguem? Confira sua explicação com a regra abaixo.</p>`:''}<p class="pd">${esc(pg.regra)}</p>${pg.sinal?`<p class="ptr">Sinal: ${esc(pg.sinal)}</p>`:''}
             <div class="pills"><span class="pill">${esc(PG_TIPO[pg.tipo]||pg.tipo||'')}</span><span class="pill ${pg.origem==='registrada'?'e':pg.origem==='prova'?'p':''}">${esc(PG_ORIG[pg.origem]||pg.origem||'')}${pg.origem==='prova'&&pg.fonteProva?' · '+esc(pg.fonteProva):''}</span>${itens}</div>
             ${pg.ref?`<span class="ps">${esc(pg.ref)}</span>`:''}`}</div>`;
         }
