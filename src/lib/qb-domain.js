@@ -13,7 +13,7 @@ export function project(originals, decisions) {
  return [...map.values()];
 }
 export function ranking(questions, mode="historico", materia="") {
- const qs=questions.filter(q=>valid(q)&&(!materia||q.materia===materia)); const counts={};let pending=0,missing=0;
+ const qs=questions.filter(q=>q.tipo!=="autoral"&&valid(q)&&(!materia||q.materia===materia)); const counts={};let pending=0,missing=0;
  for(const q of qs){if(mode!=="historico"&&q.pending?.includes("mecanismo")){pending++;continue;}if(!q.mecanismo){missing++;continue;}counts[q.mecanismo]=(counts[q.mecanismo]||0)+1;}
  return {total:qs.length,pending,missing,rows:Object.entries(counts).map(([m,n])=>({m,n,pct:qs.length?100*n/qs.length:0})).sort((a,b)=>b.n-a.n||a.m.localeCompare(b.m))};
 }
