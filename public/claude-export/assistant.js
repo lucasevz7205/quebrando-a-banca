@@ -14,7 +14,7 @@
     if(!s)return 'O módulo de análise ainda não carregou. Atualize a página.';
     const n=s.c+s.e;
     if(/(quem e voce|o que faz|ajuda|funciona|comandos|capacidades)/.test(text)) return 'Eu sou o assistente local do Quebrando a Banca. Posso consultar suas estatísticas reais, apontar disciplinas mais fracas, mostrar as tarefas e revisões e explicar como navegar. Para perguntas abertas, há uma opção separada de IA generativa que consome créditos de integração.';
-    if(/(taref|agenda|planeja|meta|hoje|penden|atrasad|calendario|semana)/.test(text)){
+    if(/(taref|agenda|planeja|meta|penden|atrasad|calendario|semana)/.test(text)){
       const tasks=(state.pl||[]).filter(t=>t.data===day&&!t.arquivada),toDo=tasks.filter(t=>t.status!=='concluida');
       return `${day}: ${s.done} de ${tasks.length} tarefas concluídas. ${toDo.length} pendentes.${toDo.length?' Próximas: '+toDo.slice(0,4).map(v=>v.titulo).join('; ')+'.':''} Use a aba Hoje para iniciar o cronômetro, concluir ou reagendar.`;
     }
