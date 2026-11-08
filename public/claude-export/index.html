@@ -411,7 +411,7 @@ details.diario .feed{margin-top:10px}
 </style>
 <link rel="stylesheet" href="/claude-export/experience.css">
 <link rel="stylesheet" href="/claude-export/weekly.css">
-<link rel="stylesheet" href="/claude-export/analytics.css?v=2">
+<link rel="stylesheet" href="/claude-export/analytics.css?v=3">
 <link rel="stylesheet" href="/claude-export/page-hero.css">
 <link rel="stylesheet" href="/claude-export/top-nav.css">
 <link rel="stylesheet" href="/claude-export/traps.css">
@@ -454,7 +454,7 @@ const S = {
   view:'painel', cap:null, modo:'novos', shuffle:false,
   round:null, pendingRender:false,
   ed:new Map(), mat:new Map(), pt:new Map(), di:[], edLoaded:false,
-  fEvo:'', evoModo:'n', evoOff:new Set(), evoPer:'d', evoDe:'', evoAte:'',
+  fEvo:'', evoCap:'', evoModo:'n', evoPer:'d', evoDe:'', evoAte:'', evoFaixa:'', evoPagina:0,
   fMat:'', fSt:'', abertos:new Set(), ptsAbertos:new Set(), evocar:false, revelados:new Set(),
   rv:new Map(), cfg:new Map(), cartAbertos:new Set(),
   pg:new Map(), fPgMat:'', fPgTipo:'',
@@ -937,29 +937,6 @@ function estatisticas(){
   for(const {r} of cadernoItens()){ if(r.motivo==='chute') continue; if(r.origem&&ORIGENS[r.origem]) origem[r.origem]=(origem[r.origem]||0)+1; else semOrigem++; }
   return {eSendoC,cSendoE,brancos,conf,origem,semOrigem};
 }
-/* evolução dos acertos por assunto (capítulo do Caderno), por dia, a partir dos itens de cada rodada */
-function dadosEvolucao(){
-  const m=new Map();
-  for(const r of S.rodadas){
-    const d0=diaDe(r.inicio);
-    if((S.evoDe&&d0<S.evoDe)||(S.evoAte&&d0>S.evoAte)) continue;
-    const d=bucketEvo(d0);
-    for(const it of (r.itens||[])){
-      const q=S.q.get(it.qid); const c0=q?q.cap:(!multiCap(r.cap)?r.cap:null); if(!c0||foraCalc(c0)||(q&&q.foraNivel)) continue;
-      /* sem filtro: uma linha por matéria; com matéria escolhida: uma linha por assunto dela */
-      const sig=materiaDoCap(c0)||'_';
-      if(S.fEvo&&sig!==S.fEvo) continue;
-      const cap=S.fEvo?c0:sig;
-      const nome=S.fEvo?(q?q.capNome:(r.capNome||'')):(nomeMateria(sig));
-      if(!m.has(cap)) m.set(cap,{cap,nome,dias:new Map()});
-      const o=m.get(cap).dias.get(d)||{c:0,n:0}; o.n++; if(it.marcada===it.gabarito) o.c++; m.get(cap).dias.set(d,o);
-    }
-  }
-  const ser=[...m.values()].map(s=>({...s,pts:[...s.dias.entries()].sort((a,b)=>a[0].localeCompare(b[0])).map(([d,o])=>({d,c:o.c,n:o.n}))}));
-  ser.sort((a,b)=>a.pts[0].d.localeCompare(b.pts[0].d)||a.cap.localeCompare(b.cap,'pt',{numeric:true}));
-  ser.forEach((s,i)=>{s.slot=i<8?i+1:0;});
-  return ser;
-}
 /* período do gráfico: dia, semana (começa na segunda) ou mês */
 function bucketEvo(d){
   if(S.evoPer==='s'){const [y,m,dd]=d.split('-').map(Number);const w=(new Date(y,m-1,dd).getDay()+6)%7;return addDias(d,-w)}
@@ -969,7 +946,6 @@ function bucketEvo(d){
 const MESES=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
 function lblEvo(d){if(S.evoPer==='m') return MESES[+d.slice(5,7)-1]+'/'+d.slice(2,4); if(S.evoPer==='s') return 'sem. '+ddmm(d); return ddmm(d)}
 function nomeMateria(sig){if(sig==='_') return 'Sem tópico do edital';const t=[...S.ed.values()].find(t=>t.sigla===sig);return t?t.materia:sig}
-function materiasComRodadas(){const set=new Set();for(const r of S.rodadas)for(const it of (r.itens||[])){const q=S.q.get(it.qid);const c=q?q.cap:null;if(c){const s=materiaDoCap(c);if(s)set.add(s)}}return [...set]}
 function materiaDoCap(cap){for(const t of S.ed.values()) if((t.caps||[]).includes(cap)) return t.sigla; return ''}
 /* Interpolação cúbica suave para as curvas, sem alterar nenhum valor da série. */
 function qbCurve(pts){
@@ -985,67 +961,88 @@ function qbCurve(pts){
   }
   return p;
 }
-function viewEvolucao(){
-  const todas=dadosEvolucao();
-  if(!todas.length&&!(S.evoDe||S.evoAte)) return `<div class="notice">O gráfico aparece depois da primeira rodada.</div>`;
-  const mats=materiasComRodadas();
-  const ser=todas;
-  const vis=ser.filter(s=>!S.evoOff.has(s.cap));
-  const pct=S.evoModo==='p';
-  const val=p=>pct?Math.round(p.c/p.n*100):p.c;
-  const dias=[...new Set(vis.flatMap(s=>s.pts.map(p=>p.d)))].sort();
-  const W=window.innerWidth<600?400:720,H=window.innerWidth<600?260:280,L=44,R=vis.length&&vis.length<=4?90:20,T=14,B=38;
-  let d0=dias[0]||hoje(), d1=dias[dias.length-1]||hoje(); if(d0===d1){d0=addDias(d0,-1);d1=addDias(d1,1);}
-  const span=Math.max(1,difDias(d0,d1));
-  const x=d=>L+(W-L-R)*difDias(d0,d)/span;
-  const maxV=pct?100:Math.max(5,...vis.flatMap(s=>s.pts.map(val)));
-  const passo=pct?25:Math.max(1,Math.ceil(maxV/4/5)*5);
-  const topo=pct?100:Math.ceil(maxV/passo)*passo;
-  const y=v=>T+(H-T-B)*(1-v/topo);
-  let g='';
-  for(let v=0;v<=topo;v+=passo) g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" class="evo-grid"/><text x="${L-8}" y="${y(v)+4}" class="evo-ax" text-anchor="end">${v}${pct?'%':''}</text>`;
-  const nT=Math.min(6,span+1);
-  const ticks=dias.length<=8?dias:[...Array(nT)].map((_,i)=>dias[Math.round((dias.length-1)*i/Math.max(1,nT-1))]);
-  for(const d of ticks) g+=`<text x="${x(d)}" y="${H-B+20}" class="evo-ax" text-anchor="middle">${lblEvo(d)}</text>`;
-  const cor=s=>s.slot?`var(--s${s.slot})`:'var(--muted)';
-  let linhas='',pontos='',rot='';
-  for(const s of vis){
-    const ps=s.pts;
-    if(ps.length>1) linhas+=`<path d="${qbCurve(ps.map(p=>[x(p.d),y(val(p))]))}" fill="none" stroke="${cor(s)}" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" ${s.slot?'':'stroke-dasharray="5 4"'}/>`;
-    for(const p of ps) pontos+=`<circle cx="${x(p.d)}" cy="${y(val(p))}" r="5.2" fill="${cor(s)}" class="evo-pt"/>`;
-    if(vis.length<=4){const p=ps[ps.length-1];rot+=`<text x="${x(p.d)+10}" y="${y(val(p))+4}" class="evo-lb">${esc(S.fEvo?s.cap:s.cap.toUpperCase())}</text>`;}
+
+function sessoesHistoricas(){
+  const materias=new Map(), assuntos=new Map(), sessoes=[];
+  for(const rodada of S.rodadas){
+    if(!Number.isFinite(Date.parse(rodada.inicio))) continue;
+    const dia=diaDe(rodada.inicio);
+    const contagem={c:0,e:0,b:0,n:0};
+    const nomes=new Set();
+    for(const item of rodada.itens||[]){
+      if(!['C','E','B'].includes(item.marcada)||!['C','E'].includes(item.gabarito)) continue;
+      const questao=S.q.get(item.qid);
+      const cap=questao?.cap||(!multiCap(rodada.cap)?rodada.cap:'')||'';
+      const topico=topicoDoCap(cap);
+      const materia=topico?.sigla||'_';
+      const nome=String(questao?.capNome||topico?.titulo||cap||'Sem assunto').split(' · ').at(-1);
+      materias.set(materia,nomeMateria(materia));
+      if(cap&&!assuntos.has(cap)) assuntos.set(cap,{materia,nome});
+      if((S.fEvo&&S.fEvo!==materia)||(S.evoCap&&S.evoCap!==cap)) continue;
+      nomes.add(nome);
+      contagem.n++;
+      contagem[item.marcada==='B'?'b':item.marcada===item.gabarito?'c':'e']++;
+    }
+    if(contagem.n&&(!S.evoDe||dia>=S.evoDe)&&(!S.evoAte||dia<=S.evoAte)){
+      sessoes.push({rodada,dia,periodo:bucketEvo(dia),nomes:[...nomes],...contagem});
+    }
   }
-  let hits='';
-  dias.forEach((d,i)=>{
-    const xa=i?(x(dias[i-1])+x(d))/2:L, xb=i<dias.length-1?(x(d)+x(dias[i+1]))/2:W-R;
-    const linhasDia=vis.map(s=>{const p=s.pts.find(p=>p.d===d);return p?`${S.fEvo?s.cap:s.nome}: ${p.c} de ${p.n} (${Math.round(p.c/p.n*100)}%)`:null}).filter(Boolean);
-    const tip=lblEvo(d)+'\n'+linhasDia.join('\n');
-    hits+=`<g class="evo-hit" tabindex="0" data-tip="${esc(tip)}" data-x="${x(d)}"><rect x="${xa}" y="${T}" width="${Math.max(1,xb-xa)}" height="${H-T-B}" fill="transparent"/><line x1="${x(d)}" x2="${x(d)}" y1="${T}" y2="${H-B}" class="evo-cross"/><title>${esc(tip)}</title></g>`;
-  });
-  const leg=ser.map(s=>`<button class="evo-chip" data-evo="${esc(s.cap)}" aria-pressed="${!S.evoOff.has(s.cap)}"><i style="background:${cor(s)}"></i>${S.fEvo?`${esc(s.cap)} <span>${esc((s.nome||'').split('·').slice(-1)[0].trim())}</span>`:esc(s.nome)}</button>`).join('');
-  const linhasTab=ser.flatMap(s=>s.pts.map(p=>`<tr><td>${esc(S.fEvo?s.cap:s.nome)}</td><td class="mono">${lblEvo(p.d)}</td><td class="num">${p.c}</td><td class="num">${p.n}</td><td class="num">${fmtPct(p.c/p.n)}</td></tr>`)).join('');
-  return `<div class="evo">
-    <div class="filters">
-      <select id="f-evo" aria-label="Matéria do gráfico"><option value="">Por matéria</option>${mats.map(s=>`<option value="${esc(s)}" ${S.fEvo===s?'selected':''}>Assuntos de ${esc(nomeMateria(s))}</option>`).join('')}</select>
-      <div class="seg" role="group" aria-label="Período">${[['d','Dia'],['s','Semana'],['m','Mês']].map(([k,t])=>`<button data-evoper="${k}" aria-pressed="${S.evoPer===k}">${t}</button>`).join('')}</div>
-      <label class="check">De <input type="date" id="evo-de" value="${esc(S.evoDe)}"></label><label class="check">Até <input type="date" id="evo-ate" value="${esc(S.evoAte)}"></label>${S.evoDe||S.evoAte?'<button class="lnk" id="evo-limpa">Todo o período</button>':''}
-      <div class="seg" role="group" aria-label="Medida"><button data-evomodo="n" aria-pressed="${!pct}">Nº de acertos</button><button data-evomodo="p" aria-pressed="${pct}">% de acerto</button></div>
+  sessoes.sort((a,b)=>Date.parse(b.rodada.inicio)-Date.parse(a.rodada.inicio));
+  return {materias,assuntos,sessoes};
+}
+
+function viewSessoesHistoricas(){
+  const {materias,assuntos,sessoes}=sessoesHistoricas();
+  const periodos=new Map();
+  for(const s of sessoes){
+    const p=periodos.get(s.periodo)||{c:0,e:0,b:0,n:0};
+    for(const k of ['c','e','b','n']) p[k]+=s[k];
+    periodos.set(s.periodo,p);
+  }
+  const faixa=periodos.has(S.evoFaixa)?S.evoFaixa:'';
+  const exibidas=faixa?sessoes.filter(s=>s.periodo===faixa):sessoes;
+  const porPagina=8, paginas=Math.max(1,Math.ceil(exibidas.length/porPagina));
+  const pagina=Math.min(S.evoPagina,paginas-1);
+  const inicio=pagina*porPagina;
+  const taxa=S.evoModo==='p';
+  const maximo=taxa?100:Math.max(1,...[...periodos.values()].map(p=>p.c));
+  const opcoes=(entries,selected)=>entries.sort((a,b)=>a[1].localeCompare(b[1],'pt-BR')).map(([id,nome])=>`<option value="${esc(id)}" ${id===selected?'selected':''}>${esc(nome)}</option>`).join('');
+  const opcoesAssunto=[...assuntos].filter(([,a])=>!S.fEvo||a.materia===S.fEvo).map(([cap,a])=>[cap,`${cap} · ${a.nome}`]);
+  const barras=[...periodos].sort(([a],[b])=>a.localeCompare(b)).map(([d,p])=>{
+    const valor=taxa?fmtPct(p.c/p.n):p.c;
+    const descricao=`${lblEvo(d)} · ${p.c} acertos, ${p.e} erros, ${p.b} em branco`;
+    return `<button type="button" data-evo-faixa="${d}" aria-pressed="${faixa===d}" aria-label="${esc(descricao)}" title="${esc(descricao)}">
+      <span class="qb-history-bar-track"><span class="qb-history-bar" style="--qb-history-height:${100*p.c/(taxa?p.n*maximo/100:maximo)}%"></span></span>
+      <strong>${valor}</strong><small>${lblEvo(d)}</small>
+    </button>`;
+  }).join('');
+  const modos={novos:'Inéditas',todos:'Capítulo todo',caderno:'Caderno de erros',revisao:'Revisão espaçada',pegadinhas:'Pegadinhas'};
+  const rows=exibidas.slice(inicio,inicio+porPagina).map(s=>{
+    const hora=new Date(s.rodada.inicio).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+    const nome=s.nomes.slice(0,2).join(' · ')+(s.nomes.length>2?` +${s.nomes.length-2}`:'');
+    return `<tr><td class="mono">${ddmm(s.dia)}/${s.dia.slice(0,4)} <small>${hora}</small></td>
+      <td>${esc(nome)}<small>${esc(modos[s.rodada.modo]||s.rodada.modo||'Treino')}</small></td>
+      <td class="num pos">${s.c}</td><td class="num neg">${s.e}</td><td class="num">${s.b}</td><td class="num">${fmtPct(s.c/s.n)}</td></tr>`;
+  }).join('');
+  return `<section class="qb-analytics-card qb-history-main" aria-label="Histórico de treino">
+    <header class="qb-analytics-head"><div><span>ANÁLISE HISTÓRICA</span><h3>Histórico de treino</h3></div></header>
+    <div class="qb-history-filters">
+      <label>Matéria<select id="f-evo"><option value="">Todas as matérias</option>${opcoes([...materias],S.fEvo)}</select></label>
+      <label>Assunto<select id="evo-cap"><option value="">Todos os assuntos</option>${opcoes(opcoesAssunto,S.evoCap)}</select></label>
+      <div class="seg" role="group" aria-label="Agrupar por">${[['d','Dia'],['s','Semana'],['m','Mês']].map(([k,t])=>`<button type="button" data-evoper="${k}" aria-pressed="${S.evoPer===k}">${t}</button>`).join('')}</div>
+      <details class="qb-history-dates" ${S.evoDe||S.evoAte?'open':''}><summary>Filtrar datas</summary><div><label>De<input type="date" id="evo-de" value="${esc(S.evoDe)}"></label><label>Até<input type="date" id="evo-ate" value="${esc(S.evoAte)}"></label><button type="button" class="lnk" id="evo-limpa">Limpar datas</button></div></details>
     </div>
-    <div class="evo-legend">${leg}</div>
-    <div class="evo-box"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${pct?'Percentual':'Número'} de acertos por dia, por assunto">${g}${linhas}${pontos}${rot}${hits}</svg><div class="evo-tip" id="evo-tip" hidden></div></div>
-    ${dias.length<2?`<p class="rule">Só há respostas em ${{d:'um dia',s:'uma semana',m:'um mês'}[S.evoPer]} neste período. As linhas aparecem a partir do segundo.</p>`:''}
-    <p class="rule">${S.fEvo?'Uma linha por assunto da matéria.':'Uma linha por matéria. Escolha uma matéria acima para ver os assuntos dela.'} Cada ponto soma os acertos do ${{d:'dia',s:'semana',m:'mês'}[S.evoPer]} em todas as rodadas; toque na legenda para esconder uma linha.</p>
-    <details class="why"><summary>Ver em tabela</summary><div class="tbl-wrap" style="margin-top:8px"><table class="narrow"><thead><tr><th>${S.fEvo?'Assunto':'Matéria'}</th><th>${{d:'Dia',s:'Semana',m:'Mês'}[S.evoPer]}</th><th class="num">Acertos</th><th class="num">Itens</th><th class="num">%</th></tr></thead><tbody>${linhasTab}</tbody></table></div></details>
-  </div>`;
+    <div class="qb-history-chart-head"><strong>Acertos por ${{d:'dia',s:'semana',m:'mês'}[S.evoPer]}</strong>
+      <div class="seg" role="group" aria-label="Medida do gráfico"><button type="button" data-evomodo="n" aria-pressed="${!taxa}">Acertos</button><button type="button" data-evomodo="p" aria-pressed="${taxa}">% de acerto</button></div>
+    </div>
+    ${barras?`<div class="qb-history-chart" role="group" aria-label="Selecione uma barra para filtrar as sessões">${barras}</div>`:''}
+    <div class="qb-history-list-head"><h4>Sessões de treino <span>${exibidas.length}</span></h4>${faixa?`<button type="button" class="lnk" data-evo-faixa="">Limpar seleção · ${lblEvo(faixa)}</button>`:''}</div>
+    ${rows?`<div class="tbl-wrap"><table aria-label="Sessões de treino filtradas"><thead><tr><th>Data</th><th>Assunto</th><th class="num" title="Acertos">C</th><th class="num" title="Erros">E</th><th class="num" title="Em branco">B</th><th class="num">% acerto</th></tr></thead><tbody>${rows}</tbody></table></div>`:'<p class="qb-analytics-note">Nenhuma sessão neste recorte.</p>'}
+    ${paginas>1?`<nav class="qb-history-pages" aria-label="Páginas de sessões"><button type="button" class="btn ghost small" data-evo-pagina="${pagina-1}" ${pagina===0?'disabled':''}>Anterior</button><span>${inicio+1}–${Math.min(inicio+porPagina,exibidas.length)} de ${exibidas.length}</span><button type="button" class="btn ghost small" data-evo-pagina="${pagina+1}" ${pagina===paginas-1?'disabled':''}>Próxima</button></nav>`:''}
+  </section>`;
 }
 function viewHistorico(){
   const cs=caps(), st=estatisticas(), h=hoje();
-  const capRows=cs.map(c=>`<tr><td>Cap. ${esc(c.cap)} · ${esc(c.nome)}</td><td class="num">${c.resp}/${c.total}</td><td class="num">${c.resp?fmtPct(c.okUlt/c.resp):'–'}</td><td class="num">${c.cad}</td><td class="num">${c.devidos}</td></tr>`).join('');
-  const rds=S.rodadas.filter(r=>(r.certos+r.errados+r.brancos)>0);
-  const rdRows=rds.map(r=>{const liq=r.certos-r.errados; const d=new Date(r.inicio);
-    return `<tr><td class="mono">${isNaN(d)?'–':d.toLocaleDateString('pt-BR')+' '+d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</td><td>${r.cap==='MIX'?'Intercalada':r.cap==='PEG'?esc(r.capNome||'Pegadinhas'):'Cap. '+esc(r.cap)}</td><td>${esc({novos:'Inéditas',todos:'Capítulo todo',caderno:'Revisão do caderno',revisao:'Revisão espaçada',pegadinhas:'Pegadinhas'}[r.modo]||r.modo)}</td>
-      <td class="num pos">${r.certos}</td><td class="num neg">${r.errados}</td><td class="num">${r.brancos}</td><td class="num ${liq<0?'neg':''}">${liq}</td><td class="num">${fmtPct(r.certos/(r.certos+r.errados+r.brancos))}</td></tr>`}).join('');
-
   // direção dos erros (Rápido e Devagar: qual impulso do Sistema 1 está pesando)
   const tot=st.eSendoC+st.cSendoE;
   let leitura='';
@@ -1085,18 +1082,11 @@ function viewHistorico(){
     <header class="qb-analytics-head"><div><span>${label}</span><h3>${title}</h3></div></header>
     ${body}
   </section>`;
-  const kpis=[
-    ['Questões respondidas',T.resp,`De ${T.total} questões no banco`],
-    ['Cobertura do banco',fmtPct(T.resp/T.total),'Questões distintas já respondidas'],
-    ['Acertos consolidados',T.ok,'Última resposta certa, sem erro ou branco anterior'],
-    ['Taxa de acerto',T.resp?fmtPct(T.ok/T.resp):'–','Acertos consolidados entre as respondidas']
-  ];
   return `<div class="wrap qb-analytics qb-historical">
-    <section class="qb-analytics-intro qb-page-hero" aria-label="Análise histórica">
-      <div class="qb-page-hero-copy"><span class="qb-page-kicker">ANÁLISE HISTÓRICA · QUEBRANDO A BANCA</span><h2>Seu desempenho ao longo do tempo</h2><p>Acompanhe a cobertura do edital, a evolução dos acertos e os padrões dos seus erros.</p></div>
-    </section>
-    <div class="qb-analytics-kpis qb-historical-kpis">${kpis.map(([label,value,note])=>`<div class="qb-analytic-kpi"><small>${esc(label)}</small><strong>${esc(value)}</strong><span>${esc(note)}</span></div>`).join('')}</div>
-    ${historicalCard('EVOLUÇÃO DE ACERTOS','Evolução por assunto',viewEvolucao())}
+    ${viewSessoesHistoricas()}
+    <details class="qb-history-more" data-grupo="historico-extra" ${S.abertos.has('historico-extra')?'open':''}>
+      <summary>Outros indicadores históricos</summary>
+      <div>
     ${historicalCard('COBERTURA DO BANCO','Questões respondidas por matéria',`
     <div class="tbl-wrap"><table><thead><tr><th>Matéria · assunto</th><th class="num">Respondidas</th><th class="num">% do banco</th><th class="num">Acertos</th><th class="num">% acerto</th></tr></thead><tbody>${qrRows}
       <tr class="qr-m"><td><b>Total</b></td>${cel(T)}</tr></tbody></table></div>
@@ -1123,10 +1113,8 @@ function viewHistorico(){
     ${temConf?`<div class="tbl-wrap"><table><thead><tr><th>Confiança</th><th class="num">Respostas</th><th class="num">Acerto</th><th class="num">Ganho por item</th><th>Na prova</th></tr></thead><tbody>${confRows}</tbody></table></div>`
       :`<div class="notice">Ainda sem dados. Cada resposta pede a sua confiança antes do gabarito; com 10 respostas num nível, esta tabela diz se compensa marcar ou deixar em branco quando você se sente assim.</div>`}
     `)}
-    ${historicalCard('SESSÕES DE TREINO','Rodadas',`
-    ${rds.length?`<div class="tbl-wrap"><table><thead><tr><th>Quando</th><th>Capítulo</th><th>Modo</th><th class="num">C</th><th class="num">E</th><th class="num">B</th><th class="num">Líquida</th><th class="num">% acerto</th></tr></thead><tbody>${rdRows}</tbody></table></div><p class="rule">% acerto = certos ÷ itens respondidos na rodada, contando os em branco. A repescagem não entra.</p>`
-      :`<div class="notice">Nenhuma rodada ainda. Elas aparecem aqui a partir da primeira resposta.</div>`}
-    `)}
+      </div>
+    </details>
   </div>`;
 }
 
@@ -2132,16 +2120,17 @@ function wire(){
   document.querySelectorAll('[data-ir-rev]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.irRev,t=S.ed.get(id);S.fMat=t?t.sigla:'';if(t)S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+id);setView('revisao');setTimeout(()=>{const el=document.getElementById('rv-'+id);if(el)el.scrollIntoView({block:'start'})},30)}));
   const ra=$('#rv-abrir'); if(ra) ra.addEventListener('click',()=>{for(const t of S.ed.values()){if(S.rv.has(t.id)||S.pt.has(t.id)){S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+t.id)}}render(true)});
   const rf=$('#rv-fechar'); if(rf) rf.addEventListener('click',()=>{for(const k of [...S.abertos]) if(k.startsWith('rv:')||k.startsWith('rvt:')) S.abertos.delete(k); S.fMat=''; render(true)});
-  const fe=$('#f-evo'); if(fe) fe.addEventListener('change',()=>{S.fEvo=fe.value;S.evoOff.clear();render(true)});
+  const refreshHistory=()=>{S.evoFaixa='';S.evoPagina=0;render(true)};
+  const fe=$('#f-evo'); if(fe) fe.addEventListener('change',()=>{S.fEvo=fe.value;S.evoCap='';refreshHistory()});
+  const ec=$('#evo-cap'); if(ec) ec.addEventListener('change',()=>{S.evoCap=ec.value;refreshHistory()});
   document.querySelectorAll('[data-qr]').forEach(r=>{const f=()=>{const k='qr:'+r.dataset.qr;if(S.abertos.has(k))S.abertos.delete(k);else S.abertos.add(k);render(true)};r.addEventListener('click',f);r.addEventListener('keydown',e=>{if(e.key==='Enter')f()})});
-  document.querySelectorAll('[data-evoper]').forEach(b=>b.addEventListener('click',()=>{S.evoPer=b.dataset.evoper;render(true)}));
-  const ed=$('#evo-de'); if(ed) ed.addEventListener('change',()=>{S.evoDe=ed.value;render(true)});
-  const ea=$('#evo-ate'); if(ea) ea.addEventListener('change',()=>{S.evoAte=ea.value;render(true)});
-  const el=$('#evo-limpa'); if(el) el.addEventListener('click',()=>{S.evoDe='';S.evoAte='';render(true)});
+  document.querySelectorAll('[data-evoper]').forEach(b=>b.addEventListener('click',()=>{S.evoPer=b.dataset.evoper;refreshHistory()}));
+  const ed=$('#evo-de'); if(ed) ed.addEventListener('change',()=>{S.evoDe=ed.value;refreshHistory()});
+  const ea=$('#evo-ate'); if(ea) ea.addEventListener('change',()=>{S.evoAte=ea.value;refreshHistory()});
+  const el=$('#evo-limpa'); if(el) el.addEventListener('click',()=>{S.evoDe='';S.evoAte='';refreshHistory()});
   document.querySelectorAll('[data-evomodo]').forEach(b=>b.addEventListener('click',()=>{S.evoModo=b.dataset.evomodo;render(true)}));
-  document.querySelectorAll('[data-evo]').forEach(b=>b.addEventListener('click',()=>{const c=b.dataset.evo;if(S.evoOff.has(c))S.evoOff.delete(c);else S.evoOff.add(c);render(true)}));
-  const tip=$('#evo-tip'), box=document.querySelector('.evo-box');
-  document.querySelectorAll('.evo-hit').forEach(c=>{const show=()=>{if(!tip||!box)return;const br=box.getBoundingClientRect(),sv=box.querySelector('svg').getBoundingClientRect();tip.textContent=c.dataset.tip;tip.hidden=false;const tw=tip.offsetWidth;const cx=sv.left-br.left+(+c.dataset.x)*sv.width/box.querySelector('svg').viewBox.baseVal.width;let lx=cx+12;if(lx+tw>br.width)lx=cx-12-tw;lx=Math.max(0,lx);tip.style.left=lx+'px';tip.style.top='12px'};const hide=()=>{if(tip)tip.hidden=true};c.addEventListener('mouseenter',show);c.addEventListener('focus',show);c.addEventListener('mouseleave',hide);c.addEventListener('blur',hide);});
+  document.querySelectorAll('[data-evo-faixa]').forEach(b=>b.addEventListener('click',()=>{S.evoFaixa=S.evoFaixa===b.dataset.evoFaixa?'':b.dataset.evoFaixa;S.evoPagina=0;render(true)}));
+  document.querySelectorAll('[data-evo-pagina]').forEach(b=>b.addEventListener('click',()=>{S.evoPagina=Number(b.dataset.evoPagina);render(true)}));
   document.querySelectorAll('[data-sub]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.sub)));
   document.querySelectorAll('[data-ir-cart]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.irCart;if(((S.rv.get(id)||{}).cartoes||[]).length){S.cartId=id;S.cartPend=false;setView('cartoes');window.scrollTo({top:0});return}const t=S.ed.get(id);S.fMat=t?t.sigla:'';S.evocar=true;S.revelados.clear();if(t)S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+id);setView('revisao');setTimeout(()=>{const el=document.getElementById('rv-'+id);if(el)el.scrollIntoView({block:'start'})},30)}));
   document.querySelectorAll('[data-cart-hoje]').forEach(b=>b.addEventListener('click',iniciarMix));
