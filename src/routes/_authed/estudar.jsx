@@ -4,6 +4,7 @@ import { base44 } from "@/api/base44Client";
 import { useAuth } from "@/lib/AuthContext";
 import { accessStudyAccount, getStudyAccount } from "@/lib/study-account";
 import { listDocuments, writeDocument } from "@/lib/study-documents";
+import studyMarkup from "../../../public/claude-export/index.html?raw";
 
 const FLAG = "__qb44_bridge_v1__";
 const legacyStorage = {
@@ -53,6 +54,7 @@ function Estudar() {
   const accountId = user?.id && user.id === account?.userId ? account.id : null;
   const frameRef = useRef(null);
   const [ready, setReady] = useState(false);
+  const [frameVersion, setFrameVersion] = useState(0);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -108,14 +110,15 @@ function Estudar() {
           Falha na comunicação com o banco: {error}. Os dados anteriores continuam preservados.
           <button type="button" onClick={() => {
             setError("");
-            if (frameRef.current) frameRef.current.src = "/claude-export/index.html";
+            setFrameVersion(version => version + 1);
           }} style={{ marginLeft: 10, textDecoration: "underline" }}>Recarregar</button>
         </div>
       )}
       {ready ? (
-        <iframe key={accountId || user?.id} ref={frameRef}
+        // The app blocks framed HTTP responses. Embed only the bundled study shell.
+        <iframe key={`${accountId || user?.id}:${frameVersion}`} ref={frameRef}
           title="Quebrando a Banca: Hoje, Edital, Treinar, Estudo, Simulado e Desempenho"
-          src="/claude-export/index.html"
+          srcDoc={studyMarkup}
           style={{
             display: "block", width: "100%", height: "100dvh",
             border: 0, borderRadius: 0, background: "#F3F6F5"
