@@ -86,22 +86,22 @@ As fontes efetivamente lidas para estes seis tópicos foram **1. Análise de Inf
 | 01 | 32 | Tecnologia da Informação | Bateria: governança de dados | **67** | 4 | 2 | **2/2** | Bateria: banco compartilhado |
 | 01 | 33 | Direito Administrativo | Bateria: introdução ao Direito Administrativo | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 01 | 34 | Contabilidade Geral e Avançada | Plano de contas e método das partidas dobradas | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 01 | 35 | Tecnologia da Informação | Banco de dados, SGBD e transações | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 01 | 35 | Tecnologia da Informação | Banco de dados, SGBD e transações | **31** | **34** | **32** | **32/32** | Cobertura estrutural; revisão editorial pendente |
 | 01 | 36 | Direito Tributário | Bateria: conceito e espécies tributárias | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 02 | 37 | Direito Tributário | Limitações ao poder de tributar: legalidade, isonomia e não confisco | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 02 | 38 | Tecnologia da Informação | Papéis, arquitetura ANSI/SPARC e projetos de banco de dados | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 02 | 38 | Tecnologia da Informação | Papéis, arquitetura ANSI/SPARC e projetos de banco de dados | **31** | **34** | **32** | **32/32** | Cobertura estrutural; revisão editorial pendente |
 | 02 | 39 | Direito Constitucional | Normas constitucionais no tempo e interpretação | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 02 | 40 | Raciocínio Lógico e Matemática | Equivalências lógicas fundamentais | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 02 | 41 | Direito Administrativo | Organização administrativa: direta, indireta, concentração e descentralização | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 02 | 42 | Contabilidade Geral e Avançada | Retificação de lançamentos e fatos contábeis | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 02 | 43 | Português | Substantivo e adjetivo | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 02 | 44 | Tecnologia da Informação | Bateria: conceitos básicos de bancos de dados | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 02 | 44 | Tecnologia da Informação | Bateria: conceitos básicos de bancos de dados | **63** | 4 | 2 | **2/2** | Bateria compartilhada |
 | 02 | 45 | Direito Tributário | Anterioridades, irretroatividade e demais princípios tributários | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 02 | 46 | Raciocínio Lógico e Matemática | Negações lógicas | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 02 | 47 | Direito Administrativo | Autarquias e jurisprudência da organização administrativa | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 02 | 48 | Português | Advérbio, artigo, numeral e interjeição | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 02 | 49 | Direito Constitucional | Bateria: normas constitucionais no tempo e interpretação | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 02 | 50 | Tecnologia da Informação | Modelagem conceitual: MER, entidades e relacionamentos | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 02 | 50 | Tecnologia da Informação | Modelagem conceitual: MER, entidades e relacionamentos | **31** | **35** | **32** | **32/32** | Cobertura estrutural; revisão editorial pendente |
 | 02 | 51 | Raciocínio Lógico e Matemática | Álgebra de proposições | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 02 | 52 | Contabilidade Geral e Avançada | Bateria: escrituração, parte I | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 02 | 53 | Direito Administrativo | Bateria: organização administrativa, parte I | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
@@ -110,19 +110,19 @@ As fontes efetivamente lidas para estes seis tópicos foram **1. Análise de Inf
 | 02 | 56 | Raciocínio Lógico e Matemática | Bateria: equivalências e negações | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 03 | 57 | Contabilidade Geral e Avançada | Livros contábeis e fiscais e balancete | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 03 | 58 | Direito Administrativo | Empresas públicas e sociedades de economia mista: conceitos e prescrição | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 03 | 59 | Tecnologia da Informação | Modelagem conceitual: atributos, modelo estendido e pé de galinha | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 03 | 59 | Tecnologia da Informação | Modelagem conceitual: atributos, modelo estendido e pé de galinha | **31** | **33** | **32** | **32/32** | Cobertura estrutural; revisão editorial pendente |
 | 03 | 60 | Direito Tributário | Imunidades tributárias: fundamentos, recíproca e religiosa | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 03 | 61 | Português | Preposições e conjunções coordenativas | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 03 | 62 | Direito Constitucional | Teoria geral dos direitos fundamentais | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 03 | 63 | Contabilidade Geral e Avançada | Bateria: escrituração, parte II | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 03 | 64 | Raciocínio Lógico e Matemática | Quantificadores e diagramas lógicos | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 03 | 65 | Tecnologia da Informação | Bateria: modelagem conceitual | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 03 | 65 | Tecnologia da Informação | Bateria: modelagem conceitual | **63** | 4 | 2 | **2/2** | Bateria compartilhada |
 | 03 | 66 | Direito Administrativo | Estatais: regime de pessoal. Fundações públicas | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 03 | 67 | Contabilidade Geral e Avançada | Regimes contábeis e apuração do resultado | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 03 | 68 | Direito Tributário | Imunidades: partidos, entidades, livros e demais hipóteses | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 03 | 69 | Português | Conjunções subordinativas e sentidos no contexto | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 03 | 70 | Raciocínio Lógico e Matemática | Bateria: diagramas lógicos | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 03 | 71 | Tecnologia da Informação | Revisão: DIKW, dados abertos e metadados | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 03 | 71 | Tecnologia da Informação | Revisão: DIKW, dados abertos e metadados | **62** | 4 | 2 | **2/2** | Revisão com banco compartilhado |
 | 03 | 72 | Direito Constitucional | Bateria: teoria geral dos direitos fundamentais | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 03 | 73 | Direito Administrativo | Bateria: organização administrativa, parte II | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 03 | 74 | Português | Bateria: preposições e conjunções | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
