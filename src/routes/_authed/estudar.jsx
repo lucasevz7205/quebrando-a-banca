@@ -50,7 +50,7 @@ function Estudar() {
   const { user, logout } = useAuth();
   const account = Route.useLoaderData();
   const legacy = user?.role === "admin" && account?.legacy;
-  const accountId = account?.id;
+  const accountId = user?.id && user.id === account?.userId ? account.id : null;
   const frameRef = useRef(null);
   const [ready, setReady] = useState(false);
   const [error, setError] = useState("");
