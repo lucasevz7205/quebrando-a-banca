@@ -1,4 +1,4 @@
-import { createFileRoute, Outlet, useLocation } from "@tanstack/react-router";
+import { createFileRoute, Outlet, redirect, useLocation } from "@tanstack/react-router";
 import { AuthGateError, requireSignedIn } from "@/components/auth/AuthGate";
 import Layout from "@/components/qb/Layout";
 
@@ -13,7 +13,14 @@ function ProtectedLayout() {
 
 export const Route = createFileRoute("/_authed")({
   ssr: false,
-  beforeLoad: requireSignedIn,
+  beforeLoad: async (args) => {
+    const auth = await requireSignedIn(args);
+    const path = args.location.pathname.replace(/\/+$/, "") || "/";
+    if (auth.user.role !== "admin" && path !== "/" && path !== "/estudar") {
+      throw redirect({ to: "/estudar", replace: true });
+    }
+    return auth;
+  },
   errorComponent: AuthGateError,
   component: ProtectedLayout,
 });
