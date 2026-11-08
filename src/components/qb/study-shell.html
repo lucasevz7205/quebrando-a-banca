@@ -1771,7 +1771,10 @@ function viewMapa(){
     const tog=kids.length?`<button class="m-tog" data-mtog="${esc(k)}" aria-expanded="${aberto}">${aberto?'−':'+'}${aberto?'':' '+kids.length}</button>`:'';
     const xk='mx:'+S.mapaId+':'+k, xa=n.x&&(S.mapaX||new Set()).has(xk);
     const lab=n.x?`<button class="m-t m-tx" data-mx="${esc(xk)}" aria-expanded="${!!xa}">${esc(n.t)} <span class="m-i">${xa?'▾':'ⓘ'}</span></button>`:`<span class="m-t">${esc(n.t)}</span>`;
-    const det=xa?`<div class="m-det"><p>${esc(n.x.e)}</p>${n.x.ex?`<p><b>Exemplo:</b> ${esc(n.x.ex)}</p>`:''}${n.x.trap?`<p class="m-trap"><b>Pegadinha:</b> ${esc(n.x.trap)}</p>`:''}${n.x.src?`<span class="ps">${esc(n.x.src)}</span>`:''}</div>`:'';
+    /* Questões com associação editorial direta ao nó; só exibimos gabarito após revelar o item. */
+    const ligadasAoNo=(n.x?.questaoIds||[]).map(id=>S.q.get(id)).filter(Boolean);
+    const exemplos=ligadasAoNo.length?`<details class="qb-map-questions"><summary>Questões deste conceito · ${ligadasAoNo.length}</summary>${ligadasAoNo.map(q=>`<details class="qb-qsource-item"><summary>${esc(q.enunciado)}</summary><div><p><b>Gabarito: ${q.gabarito==='C'?'Certo':'Errado'}</b></p><p>${esc(q.comentario||'Comentário indisponível.')}</p><small>${esc(q.ref||'Fonte não cadastrada')}</small>${atalhosQuestao(q,indice)}</div></details>`).join('')}</details>`:'';
+    const det=xa?`<div class="m-det"><p>${esc(n.x.e||'')}</p>${n.x.ex?`<p><b>Exemplo:</b> ${esc(n.x.ex)}</p>`:''}${n.x.trap?`<p class="m-trap"><b>Pegadinha:</b> ${esc(n.x.trap)}</p>`:''}${n.x.src?`<span class="ps">${esc(n.x.src)}</span>`:''}${exemplos}</div>`:'';
     return `<li class="m-no${n.caixa?' m-caixa':''}" data-map-node="${esc(S.mapaId+':'+k)}" ${n.id?`id="mn-${esc(n.id)}"`:''}><div class="m-l">${lab}${tog}${out}${inn}</div>${nota}${det}${tab}${kids.length&&aberto?`<ul>${kids.map((c,i)=>no(c,cor,k+'.'+i)).join('')}</ul>`:''}</li>`;
   };
   const ramos=(m.ramos||[]).map((r,i)=>{const cor=`var(--s${((r.cor||i+1)-1)%8+1})`;return `<section class="m-ramo" style="--mc:${cor}"><ul class="m-raiz">${no(r,cor,String(i))}</ul></section>`}).join('');
