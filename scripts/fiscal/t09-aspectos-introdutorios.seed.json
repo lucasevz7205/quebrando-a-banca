@@ -1,0 +1,1418 @@
+{
+  "topic": "fiscal-t09",
+  "source": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf",
+  "questions": [
+    {
+      "id": "fiscal-t09-ce02",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "A Contabilidade é classificada como ciência exata porque seus resultados são expressos predominantemente por números.",
+      "gabarito": "E",
+      "comentario": "A apostila caracteriza a Contabilidade como ciência social aplicada, voltada ao patrimônio e aos fenômenos das entidades.",
+      "ordem": 902,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 3",
+      "tema": "Ciência social aplicada",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "ciencia-social"
+    },
+    {
+      "id": "fiscal-t09-ce03",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "A definição histórica citada no capítulo atribui à Contabilidade funções de orientação, controle e registro dos atos e fatos da administração econômica.",
+      "gabarito": "C",
+      "comentario": "A definição do 1º Congresso Brasileiro de Contabilidade enfatiza orientação, controle e registro.",
+      "ordem": 903,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 3",
+      "tema": "Definição de Contabilidade",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "contabilidade-definicao"
+    },
+    {
+      "id": "fiscal-t09-ce04",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "A Contabilidade teórica concentra-se no lançamento cotidiano de operações em livros, enquanto a prática estuda axiomas e princípios da ciência.",
+      "gabarito": "E",
+      "comentario": "A exposição inverte as categorias: teoria aprofunda princípios e ciência; prática executa registros de fatos.",
+      "ordem": 904,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 6",
+      "tema": "Contabilidade teórica × prática",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "teorica-pratica"
+    },
+    {
+      "id": "fiscal-t09-ce05",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "O objeto de estudo da Contabilidade é o patrimônio das entidades, compreendendo bens, direitos e obrigações.",
+      "gabarito": "C",
+      "comentario": "A apostila distingue patrimônio, objeto de estudo, das técnicas e das informações produzidas pela disciplina.",
+      "ordem": 905,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 7",
+      "tema": "Objeto da Contabilidade",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "objeto-patrimonio"
+    },
+    {
+      "id": "fiscal-t09-ce06",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "O registro de fatos que modificam o patrimônio constitui o próprio objeto da Contabilidade, substituindo a noção de patrimônio.",
+      "gabarito": "E",
+      "comentario": "Registro é técnica de escrituração, não o objeto de estudo da ciência, que permanece o patrimônio.",
+      "ordem": 906,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 9",
+      "tema": "Registro não é objeto",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "objeto-registro"
+    },
+    {
+      "id": "fiscal-t09-ce07",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Uma dívida assumida pela empresa integra o patrimônio contabilmente considerado, embora represente obrigação, e não bem.",
+      "gabarito": "C",
+      "comentario": "O patrimônio contábil reúne bens, direitos e obrigações, inclusive dívidas e compromissos.",
+      "ordem": 907,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 8",
+      "tema": "Patrimônio inclui passivos",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "objeto-nao-so-bens"
+    },
+    {
+      "id": "fiscal-t09-ce08",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "As aziendas representam o campo de aplicação da Contabilidade e abrangem patrimônios geridos de modo organizado.",
+      "gabarito": "C",
+      "comentario": "O campo de aplicação refere-se às entidades/aziendas, com ou sem finalidade lucrativa.",
+      "ordem": 908,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 10",
+      "tema": "Campo de aplicação",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "aziendas"
+    },
+    {
+      "id": "fiscal-t09-ce09",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "A Contabilidade aplica-se exclusivamente a sociedades empresárias, sendo inadequada para órgãos públicos e associações.",
+      "gabarito": "E",
+      "comentario": "O material abrange empresas, associações e entes públicos como sujeitos de aplicação da ciência contábil.",
+      "ordem": 909,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 10",
+      "tema": "Contabilidade fora das empresas",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "sem-fins-lucro"
+    },
+    {
+      "id": "fiscal-t09-ce10",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Aziendas econômicas buscam lucro; econômico-sociais aplicam eventuais sobras a fins próprios; sociais não têm escopo lucrativo.",
+      "gabarito": "C",
+      "comentario": "A classificação do capítulo relaciona o objetivo a que se destina cada entidade.",
+      "ordem": 910,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 10",
+      "tema": "Tipos de azienda",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "aziendas-tipos"
+    },
+    {
+      "id": "fiscal-t09-ce11",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "No tratamento de prova destacado na apostila, a finalidade é controlar o patrimônio e o objetivo é fornecer informações úteis aos usuários.",
+      "gabarito": "C",
+      "comentario": "A apostila alerta que, na distinção cobrada pelo Cebraspe, finalidade/controle e objetivo/informação não devem ser invertidos.",
+      "ordem": 911,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 11",
+      "tema": "Objetivo × finalidade (convenção da apostila)",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "objetivo-finalidade"
+    },
+    {
+      "id": "fiscal-t09-ce12",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "A divulgação de informações úteis substitui o patrimônio como objeto de estudo da Contabilidade.",
+      "gabarito": "E",
+      "comentario": "O objeto segue sendo patrimônio; divulgação/informação se relaciona ao objetivo/finalidade informacional conforme contexto da questão.",
+      "ordem": 912,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 9",
+      "tema": "Objeto × objetivo",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "objetivo-nao-patrimonio"
+    },
+    {
+      "id": "fiscal-t09-ce13",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "A função administrativa da Contabilidade corresponde ao auxílio no controle do patrimônio da entidade.",
+      "gabarito": "C",
+      "comentario": "A função administrativa monitora estoques, obrigações, saldos, direitos e outros elementos patrimoniais.",
+      "ordem": 913,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 19",
+      "tema": "Função administrativa",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "funcao-administrativa"
+    },
+    {
+      "id": "fiscal-t09-ce14",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "O cálculo do lucro ou prejuízo do período corresponde à função econômica da Contabilidade, relacionada ao rédito.",
+      "gabarito": "C",
+      "comentario": "A função econômica apura resultado do exercício, normalmente mediante comparação de receitas e despesas.",
+      "ordem": 914,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 19",
+      "tema": "Função econômica e rédito",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "funcao-economica"
+    },
+    {
+      "id": "fiscal-t09-ce15",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Na classificação básica apresentada, as duas funções essenciais são a preventiva e a cambial.",
+      "gabarito": "E",
+      "comentario": "O material aponta função administrativa e função econômica, e não preventiva/cambial.",
+      "ordem": 915,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 20",
+      "tema": "Função cambial",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "funcao-preventiva"
+    },
+    {
+      "id": "fiscal-t09-ce16",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "O gestor de alta administração com acesso direto às informações integra, em regra, o grupo de usuários internos da Contabilidade.",
+      "gabarito": "C",
+      "comentario": "Gerentes e conselho de administração aparecem no quadro de usuários internos.",
+      "ordem": 916,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 13",
+      "tema": "Usuário interno",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "interno-gestor"
+    },
+    {
+      "id": "fiscal-t09-ce17",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Os credores por empréstimos avaliam capacidade de pagamento de principal e juros com auxílio dos relatórios contábeis.",
+      "gabarito": "C",
+      "comentario": "O material cita empréstimos e fornecedores como usuários externos interessados na solvência da entidade.",
+      "ordem": 917,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 14",
+      "tema": "Credores como usuários externos",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "externo-credor"
+    },
+    {
+      "id": "fiscal-t09-ce18",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Ser sócio ou empregado da entidade é condição suficiente para classificação como usuário interno, ainda que não haja acesso direto à informação contábil.",
+      "gabarito": "E",
+      "comentario": "A apostila trata sócio minoritário e empregado sem acesso privilegiado como usuários externos para essa finalidade.",
+      "ordem": 918,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 13",
+      "tema": "Sócio minoritário sem acesso",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "minoritario-externo"
+    },
+    {
+      "id": "fiscal-t09-ce19",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Clientes podem utilizar relatórios contábeis para avaliar a continuidade de um fornecedor relevante de longo prazo.",
+      "gabarito": "C",
+      "comentario": "O capítulo registra clientes entre usuários interessados na continuidade da operação da entidade.",
+      "ordem": 919,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 14",
+      "tema": "Cliente e continuidade",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "usuario-cliente"
+    },
+    {
+      "id": "fiscal-t09-ce20",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "De acordo com o CPC 00 (R2), investidores e credores existentes e potenciais estão entre os usuários principais dos relatórios financeiros para fins gerais.",
+      "gabarito": "C",
+      "comentario": "A prioridade decorre de não poderem exigir diretamente toda a informação necessária, diferentemente de certos órgãos com poderes de requisição.",
+      "ordem": 920,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 17",
+      "tema": "Usuários principais CPC 00 (R2)",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "principais-cpc"
+    },
+    {
+      "id": "fiscal-t09-ce21",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "O auditor fiscal é, pelo CPC 00 (R2), o usuário principal dos relatórios financeiros gerais porque não pode solicitar informações adicionais à entidade.",
+      "gabarito": "E",
+      "comentario": "O material destaca que o Fisco possui prerrogativas para solicitar informações, não sendo o público primário definido no CPC 00 (R2).",
+      "ordem": 921,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 17",
+      "tema": "Fisco como principal usuário",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "fisco-principal"
+    },
+    {
+      "id": "fiscal-t09-ce22",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Na apresentação introdutória da apostila, bens e direitos integram o ativo, enquanto obrigações integram o passivo.",
+      "gabarito": "C",
+      "comentario": "Essa classificação organiza a estrutura patrimonial básica no início da disciplina.",
+      "ordem": 922,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 20",
+      "tema": "Ativo e passivo",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "ativo-passivo"
+    },
+    {
+      "id": "fiscal-t09-ce23",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "O patrimônio líquido corresponde, de modo simplificado, ao ativo menos o passivo da entidade.",
+      "gabarito": "C",
+      "comentario": "PL é a participação residual nos ativos após deduzir os passivos.",
+      "ordem": 923,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 21",
+      "tema": "Patrimônio líquido",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "pl-formula"
+    },
+    {
+      "id": "fiscal-t09-ce24",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Patrimônio bruto ou total corresponde ao ativo; já o patrimônio líquido corresponde à diferença entre ativo e passivo.",
+      "gabarito": "C",
+      "comentario": "Apostila distingue patrimônio bruto do residual líquido, cuja fórmula subtrai obrigações.",
+      "ordem": 924,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 21",
+      "tema": "Patrimônio bruto × patrimônio líquido",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "patrimonio-bruto"
+    },
+    {
+      "id": "fiscal-t09-ce25",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Um imóvel utilizado nas operações da empresa e um imóvel mantido primordialmente para aluguel têm exatamente a mesma classificação funcional de bens de uso.",
+      "gabarito": "E",
+      "comentario": "Apostila distingue bens de uso (atividade operacional) e de renda (geração de rendimentos), com classificações patrimoniais próprias.",
+      "ordem": 925,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 22",
+      "tema": "Bens de uso × bens de renda",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "bem-uso-renda"
+    },
+    {
+      "id": "fiscal-t09-ce26",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Venda efetuada a prazo pode gerar um direito de receber de cliente, classificado no ativo da entidade.",
+      "gabarito": "C",
+      "comentario": "Créditos decorrentes de venda a prazo são direitos perante terceiros e, portanto, componentes do ativo.",
+      "ordem": 926,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 23",
+      "tema": "Direito a receber",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "direito-receber"
+    },
+    {
+      "id": "fiscal-t09-ce27",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Salários e financiamentos a pagar representam obrigações patrimoniais classificadas como passivo.",
+      "gabarito": "C",
+      "comentario": "A empresa deve valores a terceiros, classificando essas quantias em obrigações.",
+      "ordem": 927,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 23",
+      "tema": "Obrigações",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "obrigacao-finan"
+    },
+    {
+      "id": "fiscal-t09-ce28",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Escrituração é a técnica que registra os fatos contábeis em livros e demais suportes apropriados.",
+      "gabarito": "C",
+      "comentario": "A técnica antecede a consolidação dos registros nas demonstrações financeiras.",
+      "ordem": 928,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 24",
+      "tema": "Escrituração contábil",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "escrituracao"
+    },
+    {
+      "id": "fiscal-t09-ce29",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "As principais técnicas são escrituração, elaboração de demonstrações, auditoria e análise das demonstrações contábeis.",
+      "gabarito": "C",
+      "comentario": "O capítulo enumera as quatro técnicas usadas na aplicação do conhecimento contábil.",
+      "ordem": 929,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 24",
+      "tema": "Quatro técnicas contábeis",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "quatro-tecnicas"
+    },
+    {
+      "id": "fiscal-t09-ce30",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "A análise das demonstrações substitui a auditoria por ter como objetivo central emitir opinião independente sobre conformidade dos registros.",
+      "gabarito": "E",
+      "comentario": "Auditoria verifica adequação às normas; análise examina informações para decisões sobre desempenho e risco.",
+      "ordem": 930,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 25",
+      "tema": "Auditoria × análise",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "auditoria-analise"
+    },
+    {
+      "id": "fiscal-t09-ce31",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Em regra, o exercício social das sociedades por ações dura um ano, com término previsto no estatuto.",
+      "gabarito": "C",
+      "comentario": "É a regra do art. 175 da Lei 6.404/1976, mencionada no capítulo, com exceções de constituição e alteração estatutária.",
+      "ordem": 931,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 25",
+      "tema": "Exercício social",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "exercicio-social"
+    },
+    {
+      "id": "fiscal-t09-ce32",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "O princípio da entidade admite, como regra, confundir os bens e direitos particulares do sócio com os da pessoa jurídica.",
+      "gabarito": "E",
+      "comentario": "O capítulo exemplifica a autonomia patrimonial entre sociedade e sócios.",
+      "ordem": 932,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 28",
+      "tema": "Separação patrimonial",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "principio-entidade"
+    },
+    {
+      "id": "fiscal-t09-ce33",
+      "cap": "FISCAL-CT-09",
+      "capNome": "Trilha 00 · Tarefa 09 · Contabilidade: objeto, finalidade e usuários",
+      "enunciado": "Segundo CPC 00 (R2), a entidade que reporta precisa obrigatoriamente corresponder a uma pessoa jurídica isolada, sem admitir grupos ou partes de entidade.",
+      "gabarito": "E",
+      "comentario": "A entidade que reporta pode ser parte de uma entidade ou um grupo de entidades e não necessariamente corresponde a uma entidade legal.",
+      "ordem": 933,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 8",
+      "tema": "Entidade que reporta",
+      "topico": "fiscal-t09",
+      "assuntoId": "fiscal-ct-aspectos-introdutorios",
+      "mapaNoId": "entidade-reporta"
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Ciência social aplicada",
+      "q": "A Contabilidade é ciência exata ou social?",
+      "a": [
+        "Ciência social aplicada, embora utilize métodos e expressões quantitativas."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 3",
+      "mapaNoId": "ciencia-social",
+      "questaoIds": [
+        "fiscal-t09-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Definição de Contabilidade",
+      "q": "Quais três funções aparecem na definição histórica de Contabilidade?",
+      "a": [
+        "Orientação, controle e registro de atos e fatos da administração econômica."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 3",
+      "mapaNoId": "contabilidade-definicao",
+      "questaoIds": [
+        "fiscal-t09-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Contabilidade teórica × prática",
+      "q": "Distinga Contabilidade teórica da prática.",
+      "a": [
+        "Teórica: fundamentos, princípios e teorias; prática: registros e aplicação técnica em livros."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 6",
+      "mapaNoId": "teorica-pratica",
+      "questaoIds": [
+        "fiscal-t09-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Objeto da Contabilidade",
+      "q": "O que é o objeto de estudo contábil?",
+      "a": [
+        "Patrimônio da entidade, com bens, direitos e obrigações."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 7",
+      "mapaNoId": "objeto-patrimonio",
+      "questaoIds": [
+        "fiscal-t09-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Registro não é objeto",
+      "q": "Por que escrituração não é o objeto da Contabilidade?",
+      "a": [
+        "Porque escrituração é técnica de registro; o objeto é o patrimônio das entidades."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 9",
+      "mapaNoId": "objeto-registro",
+      "questaoIds": [
+        "fiscal-t09-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Patrimônio inclui passivos",
+      "q": "Por que dívidas integram o conceito contábil de patrimônio?",
+      "a": [
+        "Porque patrimônio inclui também obrigações, não somente bens e direitos."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 8",
+      "mapaNoId": "objeto-nao-so-bens",
+      "questaoIds": [
+        "fiscal-t09-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Campo de aplicação",
+      "q": "Qual é o campo de aplicação da Contabilidade?",
+      "a": [
+        "Aziendas: patrimônios organizadamente geridos de entidades."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 10",
+      "mapaNoId": "aziendas",
+      "questaoIds": [
+        "fiscal-t09-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Contabilidade fora das empresas",
+      "q": "Somente empresas com lucro usam contabilidade?",
+      "a": [
+        "Não. Empresas, pessoas e entidades públicas ou sem fins lucrativos também a utilizam."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 10",
+      "mapaNoId": "sem-fins-lucro",
+      "questaoIds": [
+        "fiscal-t09-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Tipos de azienda",
+      "q": "Diferencie azienda econômica, econômico-social e social.",
+      "a": [
+        "Econômica: lucro; econômico-social: excedente revertido a outros fins; social: não lucrativa."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 10",
+      "mapaNoId": "aziendas-tipos",
+      "questaoIds": [
+        "fiscal-t09-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Objetivo × finalidade (convenção da apostila)",
+      "q": "Na distinção didática da apostila, qual é a finalidade e qual é o objetivo?",
+      "a": [
+        "Finalidade: controlar o patrimônio; objetivo: fornecer informações úteis para decisões."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 11",
+      "mapaNoId": "objetivo-finalidade",
+      "questaoIds": [
+        "fiscal-t09-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Objeto × objetivo",
+      "q": "O que muda entre objeto e objetivo da Contabilidade?",
+      "a": [
+        "Objeto: patrimônio; objetivo: prover informação relevante para usuários."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 9",
+      "mapaNoId": "objetivo-nao-patrimonio",
+      "questaoIds": [
+        "fiscal-t09-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Função administrativa",
+      "q": "Qual função contábil controla o patrimônio?",
+      "a": [
+        "Função administrativa."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 19",
+      "mapaNoId": "funcao-administrativa",
+      "questaoIds": [
+        "fiscal-t09-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Função econômica e rédito",
+      "q": "O que é o rédito no contexto da função econômica?",
+      "a": [
+        "Resultado econômico do período: lucro ou prejuízo."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 19",
+      "mapaNoId": "funcao-economica",
+      "questaoIds": [
+        "fiscal-t09-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Função cambial",
+      "q": "Quais são as duas funções fundamentais?",
+      "a": [
+        "Administrativa (controle patrimonial) e econômica (resultado/rédito)."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 20",
+      "mapaNoId": "funcao-preventiva",
+      "questaoIds": [
+        "fiscal-t09-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Usuário interno",
+      "q": "Quem é exemplo de usuário interno da contabilidade?",
+      "a": [
+        "Gestor, membro da administração ou acionista controlador com acesso interno."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 13",
+      "mapaNoId": "interno-gestor",
+      "questaoIds": [
+        "fiscal-t09-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Credores como usuários externos",
+      "q": "Qual é o interesse típico de um credor em demonstrações?",
+      "a": [
+        "Capacidade da entidade de honrar principal e juros no vencimento."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 14",
+      "mapaNoId": "externo-credor",
+      "questaoIds": [
+        "fiscal-t09-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Sócio minoritário sem acesso",
+      "q": "Por que um sócio minoritário pode ser usuário externo?",
+      "a": [
+        "Porque não possui acesso interno livre às informações e depende de relatórios divulgados."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 13",
+      "mapaNoId": "minoritario-externo",
+      "questaoIds": [
+        "fiscal-t09-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Cliente e continuidade",
+      "q": "O que interessa a cliente que depende de fornecedor?",
+      "a": [
+        "Se o fornecedor terá condições de continuar operando e atendendo no futuro."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 14",
+      "mapaNoId": "usuario-cliente",
+      "questaoIds": [
+        "fiscal-t09-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Usuários principais CPC 00 (R2)",
+      "q": "Quem são os usuários principais do relatório financeiro geral?",
+      "a": [
+        "Investidores, credores por empréstimos e outros credores, existentes e potenciais."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 17",
+      "mapaNoId": "principais-cpc",
+      "questaoIds": [
+        "fiscal-t09-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Fisco como principal usuário",
+      "q": "O Fisco é usuário principal segundo CPC 00 (R2)?",
+      "a": [
+        "Não. Os prioritários são investidores e credores que dependem de informação geral publicada."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 17",
+      "mapaNoId": "fisco-principal",
+      "questaoIds": [
+        "fiscal-t09-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Ativo e passivo",
+      "q": "Qual a classificação básica de bens, direitos e obrigações?",
+      "a": [
+        "Bens e direitos: ativo; obrigações: passivo."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 20",
+      "mapaNoId": "ativo-passivo",
+      "questaoIds": [
+        "fiscal-t09-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Patrimônio líquido",
+      "q": "Qual é a equação contábil básica do patrimônio líquido?",
+      "a": [
+        "PL = Ativo − Passivo."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 21",
+      "mapaNoId": "pl-formula",
+      "questaoIds": [
+        "fiscal-t09-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Patrimônio bruto × patrimônio líquido",
+      "q": "Diferencie patrimônio bruto de patrimônio líquido.",
+      "a": [
+        "Bruto = Ativo; líquido = Ativo − Passivo."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 21",
+      "mapaNoId": "patrimonio-bruto",
+      "questaoIds": [
+        "fiscal-t09-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Bens de uso × bens de renda",
+      "q": "Como diferenciar bens de uso e bens de renda?",
+      "a": [
+        "Uso: empregados nas atividades da entidade; renda: mantidos para gerar rendimentos, como imóveis para aluguel."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 22",
+      "mapaNoId": "bem-uso-renda",
+      "questaoIds": [
+        "fiscal-t09-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Direito a receber",
+      "q": "Venda a prazo gera direito ou obrigação para a empresa vendedora?",
+      "a": [
+        "Direito de receber, componente do ativo."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 23",
+      "mapaNoId": "direito-receber",
+      "questaoIds": [
+        "fiscal-t09-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Obrigações",
+      "q": "Onde são classificados salários a pagar e financiamento a pagar?",
+      "a": [
+        "Passivo."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 23",
+      "mapaNoId": "obrigacao-finan",
+      "questaoIds": [
+        "fiscal-t09-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Escrituração contábil",
+      "q": "Qual é a função técnica da escrituração?",
+      "a": [
+        "Registrar sistematicamente fatos contábeis nos livros e suportes próprios."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 24",
+      "mapaNoId": "escrituracao",
+      "questaoIds": [
+        "fiscal-t09-ce28"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Quatro técnicas contábeis",
+      "q": "Enumere as quatro técnicas contábeis.",
+      "a": [
+        "Escrituração; elaboração das demonstrações; auditoria; análise das demonstrações."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 24",
+      "mapaNoId": "quatro-tecnicas",
+      "questaoIds": [
+        "fiscal-t09-ce29"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Auditoria × análise",
+      "q": "Diferencie auditoria de análise de demonstrações.",
+      "a": [
+        "Auditoria avalia conformidade e evidenciação; análise examina situação e desempenho para decisões."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 25",
+      "mapaNoId": "auditoria-analise",
+      "questaoIds": [
+        "fiscal-t09-ce30"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Exercício social",
+      "q": "Qual duração ordinária do exercício social prevista no art. 175?",
+      "a": [
+        "Um ano, com data de término fixada no estatuto."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 25",
+      "mapaNoId": "exercicio-social",
+      "questaoIds": [
+        "fiscal-t09-ce31"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Separação patrimonial",
+      "q": "Qual ideia essencial resume o princípio da entidade?",
+      "a": [
+        "O patrimônio da pessoa jurídica não se confunde com os bens e obrigações dos sócios."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 28",
+      "mapaNoId": "principio-entidade",
+      "questaoIds": [
+        "fiscal-t09-ce32"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Entidade que reporta",
+      "q": "A entidade que reporta precisa ser uma pessoa jurídica única?",
+      "a": [
+        "Não. Pode ser parte ou conjunto de entidades, conforme o CPC 00 (R2)."
+      ],
+      "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 8",
+      "mapaNoId": "entidade-reporta",
+      "questaoIds": [
+        "fiscal-t09-ce33"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Contabilidade: objeto, finalidade e usuários · T09",
+    "versao": 2,
+    "fonte": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, pp. 3–28",
+    "ramos": [
+      {
+        "id": "ciencia",
+        "t": "Contabilidade como ciência social",
+        "n": "Orientação, controle, registro e sistemas de informação da atividade patrimonial.",
+        "cor": 1,
+        "x": {
+          "e": "Orientação, controle, registro e sistemas de informação da atividade patrimonial.",
+          "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf"
+        },
+        "f": [
+          {
+            "id": "ciencia-social",
+            "t": "Ciência social aplicada",
+            "n": "Ciência social aplicada, embora utilize métodos e expressões quantitativas.",
+            "x": {
+              "e": "A apostila caracteriza a Contabilidade como ciência social aplicada, voltada ao patrimônio e aos fenômenos das entidades.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-t09-ce02"
+              ]
+            }
+          },
+          {
+            "id": "contabilidade-definicao",
+            "t": "Definição de Contabilidade",
+            "n": "Orientação, controle e registro de atos e fatos da administração econômica.",
+            "x": {
+              "e": "A definição do 1º Congresso Brasileiro de Contabilidade enfatiza orientação, controle e registro.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-t09-ce03"
+              ]
+            }
+          },
+          {
+            "id": "teorica-pratica",
+            "t": "Contabilidade teórica × prática",
+            "n": "Teórica: fundamentos, princípios e teorias; prática: registros e aplicação técnica em livros.",
+            "x": {
+              "e": "A exposição inverte as categorias: teoria aprofunda princípios e ciência; prática executa registros de fatos.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 6",
+              "questaoIds": [
+                "fiscal-t09-ce04"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-1",
+        "t": "Objeto: patrimônio",
+        "n": "Patrimônio = bens, direitos e obrigações; não se confunde com técnicas nem com usuários.",
+        "cor": 2,
+        "x": {
+          "e": "Patrimônio = bens, direitos e obrigações; não se confunde com técnicas nem com usuários.",
+          "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf"
+        },
+        "f": [
+          {
+            "id": "objeto-patrimonio",
+            "t": "Objeto da Contabilidade",
+            "n": "Patrimônio da entidade, com bens, direitos e obrigações.",
+            "x": {
+              "e": "A apostila distingue patrimônio, objeto de estudo, das técnicas e das informações produzidas pela disciplina.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 7",
+              "questaoIds": [
+                "fiscal-t09-ce05"
+              ]
+            }
+          },
+          {
+            "id": "objeto-registro",
+            "t": "Registro não é objeto",
+            "n": "Porque escrituração é técnica de registro; o objeto é o patrimônio das entidades.",
+            "x": {
+              "e": "Registro é técnica de escrituração, não o objeto de estudo da ciência, que permanece o patrimônio.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 9",
+              "questaoIds": [
+                "fiscal-t09-ce06"
+              ]
+            }
+          },
+          {
+            "id": "objeto-nao-so-bens",
+            "t": "Patrimônio inclui passivos",
+            "n": "Porque patrimônio inclui também obrigações, não somente bens e direitos.",
+            "x": {
+              "e": "O patrimônio contábil reúne bens, direitos e obrigações, inclusive dívidas e compromissos.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-t09-ce07"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "campo",
+        "t": "Campo de aplicação: aziendas",
+        "n": "Entidades organizadas, lucrativas ou não, com tipologia econômica, econômico-social e social.",
+        "cor": 3,
+        "x": {
+          "e": "Entidades organizadas, lucrativas ou não, com tipologia econômica, econômico-social e social.",
+          "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf"
+        },
+        "f": [
+          {
+            "id": "aziendas",
+            "t": "Campo de aplicação",
+            "n": "Aziendas: patrimônios organizadamente geridos de entidades.",
+            "x": {
+              "e": "O campo de aplicação refere-se às entidades/aziendas, com ou sem finalidade lucrativa.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 10",
+              "questaoIds": [
+                "fiscal-t09-ce08"
+              ]
+            }
+          },
+          {
+            "id": "sem-fins-lucro",
+            "t": "Contabilidade fora das empresas",
+            "n": "Não. Empresas, pessoas e entidades públicas ou sem fins lucrativos também a utilizam.",
+            "x": {
+              "e": "O material abrange empresas, associações e entes públicos como sujeitos de aplicação da ciência contábil.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 10",
+              "questaoIds": [
+                "fiscal-t09-ce09"
+              ]
+            }
+          },
+          {
+            "id": "aziendas-tipos",
+            "t": "Tipos de azienda",
+            "n": "Econômica: lucro; econômico-social: excedente revertido a outros fins; social: não lucrativa.",
+            "x": {
+              "e": "A classificação do capítulo relaciona o objetivo a que se destina cada entidade.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 10",
+              "questaoIds": [
+                "fiscal-t09-ce10"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "finalidade",
+        "t": "Finalidade, objetivo e funções",
+        "n": "Na convenção da apostila/Cebraspe: finalidade controla patrimônio, objetivo fornece informação; funções administrativa e econômica.",
+        "cor": 4,
+        "x": {
+          "e": "Na convenção da apostila/Cebraspe: finalidade controla patrimônio, objetivo fornece informação; funções administrativa e econômica.",
+          "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf"
+        },
+        "f": [
+          {
+            "id": "objetivo-finalidade",
+            "t": "Objetivo × finalidade (convenção da apostila)",
+            "n": "Finalidade: controlar o patrimônio; objetivo: fornecer informações úteis para decisões.",
+            "x": {
+              "e": "A apostila alerta que, na distinção cobrada pelo Cebraspe, finalidade/controle e objetivo/informação não devem ser invertidos.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 11",
+              "questaoIds": [
+                "fiscal-t09-ce11"
+              ]
+            }
+          },
+          {
+            "id": "objetivo-nao-patrimonio",
+            "t": "Objeto × objetivo",
+            "n": "Objeto: patrimônio; objetivo: prover informação relevante para usuários.",
+            "x": {
+              "e": "O objeto segue sendo patrimônio; divulgação/informação se relaciona ao objetivo/finalidade informacional conforme contexto da questão.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 9",
+              "questaoIds": [
+                "fiscal-t09-ce12"
+              ]
+            }
+          },
+          {
+            "id": "funcao-administrativa",
+            "t": "Função administrativa",
+            "n": "Função administrativa.",
+            "x": {
+              "e": "A função administrativa monitora estoques, obrigações, saldos, direitos e outros elementos patrimoniais.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 19",
+              "questaoIds": [
+                "fiscal-t09-ce13"
+              ]
+            }
+          },
+          {
+            "id": "funcao-economica",
+            "t": "Função econômica e rédito",
+            "n": "Resultado econômico do período: lucro ou prejuízo.",
+            "x": {
+              "e": "A função econômica apura resultado do exercício, normalmente mediante comparação de receitas e despesas.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 19",
+              "questaoIds": [
+                "fiscal-t09-ce14"
+              ]
+            }
+          },
+          {
+            "id": "funcao-preventiva",
+            "t": "Função cambial",
+            "n": "Administrativa (controle patrimonial) e econômica (resultado/rédito).",
+            "x": {
+              "e": "O material aponta função administrativa e função econômica, e não preventiva/cambial.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 20",
+              "questaoIds": [
+                "fiscal-t09-ce15"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-2",
+        "t": "Usuários da informação contábil",
+        "n": "Internos, externos e usuários principais definidos no CPC 00 (R2).",
+        "cor": 5,
+        "x": {
+          "e": "Internos, externos e usuários principais definidos no CPC 00 (R2).",
+          "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf"
+        },
+        "f": [
+          {
+            "id": "interno-gestor",
+            "t": "Usuário interno",
+            "n": "Gestor, membro da administração ou acionista controlador com acesso interno.",
+            "x": {
+              "e": "Gerentes e conselho de administração aparecem no quadro de usuários internos.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 13",
+              "questaoIds": [
+                "fiscal-t09-ce16"
+              ]
+            }
+          },
+          {
+            "id": "externo-credor",
+            "t": "Credores como usuários externos",
+            "n": "Capacidade da entidade de honrar principal e juros no vencimento.",
+            "x": {
+              "e": "O material cita empréstimos e fornecedores como usuários externos interessados na solvência da entidade.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 14",
+              "questaoIds": [
+                "fiscal-t09-ce17"
+              ]
+            }
+          },
+          {
+            "id": "minoritario-externo",
+            "t": "Sócio minoritário sem acesso",
+            "n": "Porque não possui acesso interno livre às informações e depende de relatórios divulgados.",
+            "x": {
+              "e": "A apostila trata sócio minoritário e empregado sem acesso privilegiado como usuários externos para essa finalidade.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 13",
+              "questaoIds": [
+                "fiscal-t09-ce18"
+              ]
+            }
+          },
+          {
+            "id": "usuario-cliente",
+            "t": "Cliente e continuidade",
+            "n": "Se o fornecedor terá condições de continuar operando e atendendo no futuro.",
+            "x": {
+              "e": "O capítulo registra clientes entre usuários interessados na continuidade da operação da entidade.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 14",
+              "questaoIds": [
+                "fiscal-t09-ce19"
+              ]
+            }
+          },
+          {
+            "id": "principais-cpc",
+            "t": "Usuários principais CPC 00 (R2)",
+            "n": "Investidores, credores por empréstimos e outros credores, existentes e potenciais.",
+            "x": {
+              "e": "A prioridade decorre de não poderem exigir diretamente toda a informação necessária, diferentemente de certos órgãos com poderes de requisição.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 17",
+              "questaoIds": [
+                "fiscal-t09-ce20"
+              ]
+            }
+          },
+          {
+            "id": "fisco-principal",
+            "t": "Fisco como principal usuário",
+            "n": "Não. Os prioritários são investidores e credores que dependem de informação geral publicada.",
+            "x": {
+              "e": "O material destaca que o Fisco possui prerrogativas para solicitar informações, não sendo o público primário definido no CPC 00 (R2).",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 17",
+              "questaoIds": [
+                "fiscal-t09-ce21"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "patrimonio",
+        "t": "Componentes patrimoniais",
+        "n": "Ativo, passivo, patrimônio líquido, bens de uso e renda, direitos e obrigações.",
+        "cor": 6,
+        "x": {
+          "e": "Ativo, passivo, patrimônio líquido, bens de uso e renda, direitos e obrigações.",
+          "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf"
+        },
+        "f": [
+          {
+            "id": "ativo-passivo",
+            "t": "Ativo e passivo",
+            "n": "Bens e direitos: ativo; obrigações: passivo.",
+            "x": {
+              "e": "Essa classificação organiza a estrutura patrimonial básica no início da disciplina.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 20",
+              "questaoIds": [
+                "fiscal-t09-ce22"
+              ]
+            }
+          },
+          {
+            "id": "pl-formula",
+            "t": "Patrimônio líquido",
+            "n": "PL = Ativo − Passivo.",
+            "x": {
+              "e": "PL é a participação residual nos ativos após deduzir os passivos.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 21",
+              "questaoIds": [
+                "fiscal-t09-ce23"
+              ]
+            }
+          },
+          {
+            "id": "patrimonio-bruto",
+            "t": "Patrimônio bruto × patrimônio líquido",
+            "n": "Bruto = Ativo; líquido = Ativo − Passivo.",
+            "x": {
+              "e": "Apostila distingue patrimônio bruto do residual líquido, cuja fórmula subtrai obrigações.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 21",
+              "questaoIds": [
+                "fiscal-t09-ce24"
+              ]
+            }
+          },
+          {
+            "id": "bem-uso-renda",
+            "t": "Bens de uso × bens de renda",
+            "n": "Uso: empregados nas atividades da entidade; renda: mantidos para gerar rendimentos, como imóveis para aluguel.",
+            "x": {
+              "e": "Apostila distingue bens de uso (atividade operacional) e de renda (geração de rendimentos), com classificações patrimoniais próprias.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 22",
+              "questaoIds": [
+                "fiscal-t09-ce25"
+              ]
+            }
+          },
+          {
+            "id": "direito-receber",
+            "t": "Direito a receber",
+            "n": "Direito de receber, componente do ativo.",
+            "x": {
+              "e": "Créditos decorrentes de venda a prazo são direitos perante terceiros e, portanto, componentes do ativo.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 23",
+              "questaoIds": [
+                "fiscal-t09-ce26"
+              ]
+            }
+          },
+          {
+            "id": "obrigacao-finan",
+            "t": "Obrigações",
+            "n": "Passivo.",
+            "x": {
+              "e": "A empresa deve valores a terceiros, classificando essas quantias em obrigações.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 23",
+              "questaoIds": [
+                "fiscal-t09-ce27"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "tecnicas",
+        "t": "Técnicas contábeis",
+        "n": "Escrituração, demonstrações, auditoria e análise de balanços.",
+        "cor": 7,
+        "x": {
+          "e": "Escrituração, demonstrações, auditoria e análise de balanços.",
+          "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf"
+        },
+        "f": [
+          {
+            "id": "escrituracao",
+            "t": "Escrituração contábil",
+            "n": "Registrar sistematicamente fatos contábeis nos livros e suportes próprios.",
+            "x": {
+              "e": "A técnica antecede a consolidação dos registros nas demonstrações financeiras.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 24",
+              "questaoIds": [
+                "fiscal-t09-ce28"
+              ]
+            }
+          },
+          {
+            "id": "quatro-tecnicas",
+            "t": "Quatro técnicas contábeis",
+            "n": "Escrituração; elaboração das demonstrações; auditoria; análise das demonstrações.",
+            "x": {
+              "e": "O capítulo enumera as quatro técnicas usadas na aplicação do conhecimento contábil.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 24",
+              "questaoIds": [
+                "fiscal-t09-ce29"
+              ]
+            }
+          },
+          {
+            "id": "auditoria-analise",
+            "t": "Auditoria × análise",
+            "n": "Auditoria avalia conformidade e evidenciação; análise examina situação e desempenho para decisões.",
+            "x": {
+              "e": "Auditoria verifica adequação às normas; análise examina informações para decisões sobre desempenho e risco.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 25",
+              "questaoIds": [
+                "fiscal-t09-ce30"
+              ]
+            }
+          },
+          {
+            "id": "exercicio-social",
+            "t": "Exercício social",
+            "n": "Um ano, com data de término fixada no estatuto.",
+            "x": {
+              "e": "É a regra do art. 175 da Lei 6.404/1976, mencionada no capítulo, com exceções de constituição e alteração estatutária.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 25",
+              "questaoIds": [
+                "fiscal-t09-ce31"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "entidade",
+        "t": "Entidade e autonomia patrimonial",
+        "n": "Separação patrimonial entre sócios e entidade; entidade que reporta pode assumir diferentes formatos.",
+        "cor": 8,
+        "x": {
+          "e": "Separação patrimonial entre sócios e entidade; entidade que reporta pode assumir diferentes formatos.",
+          "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf"
+        },
+        "f": [
+          {
+            "id": "principio-entidade",
+            "t": "Separação patrimonial",
+            "n": "O patrimônio da pessoa jurídica não se confunde com os bens e obrigações dos sócios.",
+            "x": {
+              "e": "O capítulo exemplifica a autonomia patrimonial entre sociedade e sócios.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 28",
+              "questaoIds": [
+                "fiscal-t09-ce32"
+              ]
+            }
+          },
+          {
+            "id": "entidade-reporta",
+            "t": "Entidade que reporta",
+            "n": "Não. Pode ser parte ou conjunto de entidades, conforme o CPC 00 (R2).",
+            "x": {
+              "e": "A entidade que reporta pode ser parte de uma entidade ou um grupo de entidades e não necessariamente corresponde a uma entidade legal.",
+              "src": "CONTABILIDADE.zip › 1. Aspectos Introdutórios.pdf, p. 8",
+              "questaoIds": [
+                "fiscal-t09-ce33"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": [
+      [
+        "conceito-1",
+        "finalidade",
+        "Objeto ≠ objetivo"
+      ],
+      [
+        "conceito-1",
+        "patrimonio",
+        "Composição patrimonial"
+      ],
+      [
+        "finalidade",
+        "conceito-2",
+        "Informação para usuários"
+      ],
+      [
+        "ciencia",
+        "tecnicas",
+        "Ciência versus técnicas"
+      ],
+      [
+        "campo",
+        "entidade",
+        "Áreas de aplicação"
+      ]
+    ]
+  }
+}
