@@ -1,0 +1,1418 @@
+{
+  "topic": "fiscal-t59",
+  "source": "5. Análise de Informações - Modelagem Conceitual.pdf",
+  "questions": [
+    {
+      "id": "fiscal-t59-ce02",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Atributos podem descrever propriedades tanto de entidades quanto dos próprios relacionamentos entre elas.",
+      "gabarito": "C",
+      "comentario": "O capítulo admite características do vínculo, como data de matrícula, além das de entidade, como nome do aluno.",
+      "ordem": 5902,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 39",
+      "tema": "Atributos de entidades ou relacionamentos",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "attr-objeto",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 39,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce03",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Atributos são normalmente representados por elipses ligadas a entidades ou relacionamentos na notação Chen.",
+      "gabarito": "C",
+      "comentario": "O diagrama convencional usa elipses ou círculos como representação de propriedades.",
+      "ordem": 5903,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 39",
+      "tema": "Atributo em Chen",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "attr-elipse",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 39,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce04",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Um atributo CPF modelado para guardar um único valor por pessoa é exemplo de atributo monovalorado.",
+      "gabarito": "C",
+      "comentario": "Monovalorado guarda um único valor por ocorrência, em oposição ao multivalorado.",
+      "ordem": 5904,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 40",
+      "tema": "Monovalorado",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "attr-mono",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 40,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce05",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Um conjunto de números de telefone associados à mesma pessoa pode ser modelado como atributo multivalorado.",
+      "gabarito": "C",
+      "comentario": "Atributo multivalorado admite multiplicidade de valores, como contato residencial e celular.",
+      "ordem": 5905,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 40",
+      "tema": "Multivalorado",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "attr-multi",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 40,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce06",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Na representação Chen usada no material, o atributo multivalorado costuma ser desenhado com duas elipses concêntricas.",
+      "gabarito": "C",
+      "comentario": "A dupla elipse distingue capacidade de múltiplos valores de atributo monovalorado.",
+      "ordem": 5906,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 40",
+      "tema": "Dupla elipse",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "attr-multi-elipse",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 40,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce07",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Um atributo simples é aquele que, no contexto do modelo, não pode ser subdividido em componentes com significado próprio.",
+      "gabarito": "C",
+      "comentario": "O material caracteriza atributo simples como indivisível segundo a necessidade do domínio.",
+      "ordem": 5907,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 41",
+      "tema": "Atributo simples",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "attr-simple",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 41,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce08",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "O atributo endereço pode ser considerado composto se for detalhado em rua, número, bairro e município.",
+      "gabarito": "C",
+      "comentario": "Composto é aquele cujas partes têm significado separado e podem ser representadas por subatributos.",
+      "ordem": 5908,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 41",
+      "tema": "Atributo composto",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "attr-composto",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 41,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce09",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "O atributo telefone é necessariamente composto sempre que uma pessoa possuir mais de um número registrado.",
+      "gabarito": "E",
+      "comentario": "Ter muitos valores indica multiplicidade; possuir subpartes significativas indica atributo composto. São critérios diferentes.",
+      "ordem": 5909,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 41",
+      "tema": "Multivalorado ≠ composto",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "attr-multi-vs-composto",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 41,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce10",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "A idade de uma pessoa pode ser calculada a partir da data de nascimento, constituindo exemplo de atributo derivado.",
+      "gabarito": "C",
+      "comentario": "O valor pode ser inferido/calculado de outros atributos, dispensando necessariamente armazenamento redundante.",
+      "ordem": 5910,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 43",
+      "tema": "Atributo derivado",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "attr-derivado",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 43,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce11",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Atributo armazenado é registrado como dado, enquanto derivado pode ser calculado ou inferido com base em outros valores.",
+      "gabarito": "C",
+      "comentario": "O capítulo classifica os atributos pela origem do valor e contrasta ambos os casos.",
+      "ordem": 5911,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 43",
+      "tema": "Armazenado × derivado",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "attr-armazenado",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 43,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce12",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Um identificador formado por Matrícula e Ano difere de identificador simples por empregar mais de um atributo.",
+      "gabarito": "C",
+      "comentario": "Apostila exemplifica chaves identificadoras simples e compostas com seus componentes.",
+      "ordem": 5912,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 40",
+      "tema": "Identificador composto",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "attr-id-composto",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 40,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce13",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "A data de início de participação de um engenheiro em determinado projeto pode pertencer ao relacionamento, não isoladamente a Engenheiro ou Projeto.",
+      "gabarito": "C",
+      "comentario": "A característica descreve o vínculo específico entre as duas ocorrências; pode mudar conforme o projeto.",
+      "ordem": 5913,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 45",
+      "tema": "Atributo de relacionamento",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "attr-relacao-data",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 45,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce14",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Especialização parte de um tipo de entidade geral e identifica subtipos que acrescentam propriedades específicas.",
+      "gabarito": "C",
+      "comentario": "O capítulo apresenta PAGAMENTO subdividido em CARTÃO e PIX e relaciona isso a hierarquia de entidades.",
+      "ordem": 5914,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 47",
+      "tema": "Especialização",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "mee-especializacao",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 47,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce15",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Generalização consiste em reunir atributos comuns de tipos específicos em uma entidade mais genérica.",
+      "gabarito": "C",
+      "comentario": "O material exemplifica combinar dados comuns de pagamentos em uma classe superior.",
+      "ordem": 5915,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+      "tema": "Generalização",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "mee-generalizacao",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 49,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce16",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Uma entidade especializada pode herdar atributos da entidade geral e acrescentar campos próprios do subtipo.",
+      "gabarito": "C",
+      "comentario": "PAGAMENTO CARTÃO herda código, valor e data de PAGAMENTO e adiciona número e bandeira.",
+      "ordem": 5916,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 48",
+      "tema": "Herança",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "mee-heranca",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 48,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce17",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Em especialização disjunta ou exclusiva, uma mesma ocorrência da superclasse não pertence simultaneamente a dois subtipos exclusivos.",
+      "gabarito": "C",
+      "comentario": "A apostila usa o indicador x para subclasses mutuamente exclusivas.",
+      "ordem": 5917,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+      "tema": "Especialização exclusiva",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "mee-exclusiva",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 49,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce18",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Uma especialização sobreposta permite que a mesma ocorrência participe de mais de uma subclasse.",
+      "gabarito": "C",
+      "comentario": "O texto contrapõe subclasses sobrepostas às disjuntas, com exemplo de pagamento combinado.",
+      "ordem": 5918,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+      "tema": "Especialização compartilhada",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "mee-sobreposta",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 49,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce19",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Em especialização total, toda ocorrência da superclasse deve pertencer a pelo menos uma das subclasses.",
+      "gabarito": "C",
+      "comentario": "A condição de totalidade exige cobertura da superclasse; a apostila assinala t.",
+      "ordem": 5919,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+      "tema": "Especialização total",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "mee-total",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 49,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce20",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Em especialização parcial, a existência de uma ocorrência apenas na superclasse, sem subtipo, pode ser admitida.",
+      "gabarito": "C",
+      "comentario": "O capítulo exemplifica pagamento com método ainda não definido.",
+      "ordem": 5920,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+      "tema": "Especialização parcial",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "mee-parcial",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 49,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce21",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Na notação resumida apresentada, xt significa especialização exclusiva e total, e não sobreposta e parcial.",
+      "gabarito": "C",
+      "comentario": "x indica exclusividade; t indica totalidade. São dimensões independentes.",
+      "ordem": 5921,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+      "tema": "Combinação xt",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "mee-xt",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 49,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce22",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "A agregação pode tratar uma associação como unidade de nível superior, permitindo sua participação em outro relacionamento.",
+      "gabarito": "C",
+      "comentario": "O capítulo descreve 'empacotar' relação MÉDICO–PACIENTE/CONSULTA para ligá-la a EXAME.",
+      "ordem": 5922,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 52",
+      "tema": "Agregação",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "mee-agregacao",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 52,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce23",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Agregação e entidade associativa representam exatamente o mesmo símbolo conceitual e não diferem em ênfase de modelagem.",
+      "gabarito": "E",
+      "comentario": "Apostila ressalta que podem resultar em estruturas finais semelhantes, mas agregação enfatiza abstração de um relacionamento inteiro.",
+      "ordem": 5923,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 53",
+      "tema": "Entidade associativa × agregação",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "mee-associativa-diferenca",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 53,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce24",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "A notação Crow's Foot expressa cardinalidades por símbolos próximos às extremidades de linhas entre entidades.",
+      "gabarito": "C",
+      "comentario": "O material apresenta uma alternativa gráfica ao DER de Chen, muito usada em ferramentas de modelagem.",
+      "ordem": 5924,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 54",
+      "tema": "Pé de galinha",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "cf-uso",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 54,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce25",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Na notação pé de galinha apresentada, círculo representa cardinalidade zero ou participação opcional.",
+      "gabarito": "C",
+      "comentario": "A apostila associa círculo ao zero, barra ao um e ramificação ao muitos.",
+      "ordem": 5925,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+      "tema": "Símbolo zero",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "cf-simbolo-0",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 56,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce26",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Uma barra vertical na notação Crow's Foot representa um, não muitos.",
+      "gabarito": "C",
+      "comentario": "O traço vertical indica cardinalidade um segundo a tabela da apostila.",
+      "ordem": 5926,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+      "tema": "Símbolo um",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "cf-simbolo-1",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 56,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce27",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "A ramificação semelhante a um pé de galinha representa o valor máximo múltiplo (N).",
+      "gabarito": "C",
+      "comentario": "A forma ramificada caracteriza o máximo muitos no diagrama.",
+      "ordem": 5927,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+      "tema": "Símbolo muitos",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "cf-simbolo-n",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 56,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce28",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Na leitura de cardinalidade Crow's Foot do material, o primeiro símbolo da combinação de dentro para fora indica mínimo e o segundo, máximo.",
+      "gabarito": "C",
+      "comentario": "A apostila afirma explicitamente a leitura mínima depois máxima, de dentro para fora do relacionamento.",
+      "ordem": 5928,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+      "tema": "Ordem de leitura da cardinalidade",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "cf-ler-minmax",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 56,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce29",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Círculo combinado com pé de galinha permite indicar de zero a muitas ocorrências relacionadas.",
+      "gabarito": "C",
+      "comentario": "A cardinalidade (0,N) expressa opcionalidade com máximo múltiplo.",
+      "ordem": 5929,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+      "tema": "Combinação 0:N",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "cf-zero-n",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 56,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce30",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "Barra combinada com pé de galinha denota participação obrigatória de uma ou muitas ocorrências, conforme a direção da associação.",
+      "gabarito": "C",
+      "comentario": "A combinação (1,N) indica mínimo um e máximo muitos.",
+      "ordem": 5930,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 57",
+      "tema": "Combinação 1:N",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "cf-um-n",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 57,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t59-ce31",
+      "cap": "FISCAL-TI-59",
+      "capNome": "Trilha 03 · Tarefa 59 · Modelagem conceitual: atributos, modelo estendido e pé de galinha",
+      "enunciado": "PK e FK são rótulos usados para indicar chaves primárias e estrangeiras em representações tabulares da notação pé de galinha.",
+      "gabarito": "C",
+      "comentario": "A apostila indica o uso das siglas junto aos atributos identificadores no diagrama.",
+      "ordem": 5931,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 55",
+      "tema": "PK e FK no diagrama",
+      "topico": "fiscal-t59",
+      "assuntoId": "fiscal-ti-modelagem-atributos-estendido-crowfoot",
+      "mapaNoId": "cf-pk",
+      "fonte": {
+        "documento": "5. Análise de Informações - Modelagem Conceitual.pdf",
+        "pagina": 55,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Atributos de entidades ou relacionamentos",
+      "q": "Atributos só podem descrever entidades?",
+      "a": [
+        "Não. Podem qualificar entidades ou relacionamentos."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 39",
+      "mapaNoId": "attr-objeto",
+      "questaoIds": [
+        "fiscal-t59-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Atributo em Chen",
+      "q": "Como é representado um atributo em Chen?",
+      "a": [
+        "Elipse ou círculo conectado ao elemento descrito."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 39",
+      "mapaNoId": "attr-elipse",
+      "questaoIds": [
+        "fiscal-t59-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Monovalorado",
+      "q": "Qual diferença entre monovalorado e multivalorado?",
+      "a": [
+        "Monovalorado admite um valor; multivalorado pode admitir vários por ocorrência."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 40",
+      "mapaNoId": "attr-mono",
+      "questaoIds": [
+        "fiscal-t59-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Multivalorado",
+      "q": "Qual exemplo de atributo multivalorado?",
+      "a": [
+        "Telefones de uma pessoa."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 40",
+      "mapaNoId": "attr-multi",
+      "questaoIds": [
+        "fiscal-t59-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dupla elipse",
+      "q": "Que símbolo gráfico indica atributo multivalorado?",
+      "a": [
+        "Elipse dupla."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 40",
+      "mapaNoId": "attr-multi-elipse",
+      "questaoIds": [
+        "fiscal-t59-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Atributo simples",
+      "q": "O que torna atributo simples?",
+      "a": [
+        "Não haver subdivisão semanticamente relevante no modelo."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 41",
+      "mapaNoId": "attr-simple",
+      "questaoIds": [
+        "fiscal-t59-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Atributo composto",
+      "q": "Quando Endereço é atributo composto?",
+      "a": [
+        "Quando se decompõe em Rua, Número, Bairro, Município etc."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 41",
+      "mapaNoId": "attr-composto",
+      "questaoIds": [
+        "fiscal-t59-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Multivalorado ≠ composto",
+      "q": "Qual é a diferença entre composto e multivalorado?",
+      "a": [
+        "Composto tem subpartes; multivalorado possui múltiplos valores por ocorrência."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 41",
+      "mapaNoId": "attr-multi-vs-composto",
+      "questaoIds": [
+        "fiscal-t59-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Atributo derivado",
+      "q": "Dê um exemplo de atributo derivado.",
+      "a": [
+        "Idade calculada a partir de data de nascimento e data de referência."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 43",
+      "mapaNoId": "attr-derivado",
+      "questaoIds": [
+        "fiscal-t59-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Armazenado × derivado",
+      "q": "Qual diferença entre atributo armazenado e derivado?",
+      "a": [
+        "Armazenado persiste valor; derivado é obtido por cálculo/inferência."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 43",
+      "mapaNoId": "attr-armazenado",
+      "questaoIds": [
+        "fiscal-t59-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Identificador composto",
+      "q": "O que torna um identificador composto?",
+      "a": [
+        "Ser formado pela combinação de dois ou mais atributos."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 40",
+      "mapaNoId": "attr-id-composto",
+      "questaoIds": [
+        "fiscal-t59-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Atributo de relacionamento",
+      "q": "Quando data deve ser atributo do relacionamento?",
+      "a": [
+        "Quando pertence a uma associação específica e não a uma entidade individual."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 45",
+      "mapaNoId": "attr-relacao-data",
+      "questaoIds": [
+        "fiscal-t59-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Especialização",
+      "q": "Qual é o sentido da especialização?",
+      "a": [
+        "Da superclasse genérica para subclasses específicas."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 47",
+      "mapaNoId": "mee-especializacao",
+      "questaoIds": [
+        "fiscal-t59-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Generalização",
+      "q": "O que distingue generalização de especialização?",
+      "a": [
+        "Generalização sobe o que há em comum; especialização desce para subtipos específicos."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+      "mapaNoId": "mee-generalizacao",
+      "questaoIds": [
+        "fiscal-t59-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Herança",
+      "q": "Quais atributos carrega subtipo Cartão no exemplo?",
+      "a": [
+        "Os herdados de Pagamento mais os específicos de Cartão."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 48",
+      "mapaNoId": "mee-heranca",
+      "questaoIds": [
+        "fiscal-t59-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Especialização exclusiva",
+      "q": "O que significa especialização exclusiva/disjunta?",
+      "a": [
+        "Uma ocorrência pertence a no máximo um subtipo do conjunto exclusivo."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+      "mapaNoId": "mee-exclusiva",
+      "questaoIds": [
+        "fiscal-t59-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Especialização compartilhada",
+      "q": "Quando a especialização é sobreposta?",
+      "a": [
+        "Quando a mesma ocorrência pode pertencer a dois ou mais subtipos."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+      "mapaNoId": "mee-sobreposta",
+      "questaoIds": [
+        "fiscal-t59-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Especialização total",
+      "q": "O que caracteriza uma especialização total?",
+      "a": [
+        "A superclasse é integralmente coberta por suas subclasses."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+      "mapaNoId": "mee-total",
+      "questaoIds": [
+        "fiscal-t59-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Especialização parcial",
+      "q": "Qual a diferença entre especialização total e parcial?",
+      "a": [
+        "Total exige subtipo; parcial permite instância apenas na superclasse."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+      "mapaNoId": "mee-parcial",
+      "questaoIds": [
+        "fiscal-t59-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Combinação xt",
+      "q": "Decodifique xt na especialização.",
+      "a": [
+        "Exclusiva/disjunta e total."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+      "mapaNoId": "mee-xt",
+      "questaoIds": [
+        "fiscal-t59-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Agregação",
+      "q": "Para que serve a agregação?",
+      "a": [
+        "Tratar relacionamento como unidade que participa de outra associação."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 52",
+      "mapaNoId": "mee-agregacao",
+      "questaoIds": [
+        "fiscal-t59-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Entidade associativa × agregação",
+      "q": "Diferencie agregação de entidade associativa.",
+      "a": [
+        "Agregação encapsula relação como unidade; associativa promove vínculo a entidade com dados próprios."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 53",
+      "mapaNoId": "mee-associativa-diferenca",
+      "questaoIds": [
+        "fiscal-t59-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Pé de galinha",
+      "q": "Qual é a função principal do pé de galinha?",
+      "a": [
+        "Representar cardinalidades e opcionalidade dos relacionamentos."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 54",
+      "mapaNoId": "cf-uso",
+      "questaoIds": [
+        "fiscal-t59-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Símbolo zero",
+      "q": "Qual símbolo representa zero na Crow's Foot?",
+      "a": [
+        "Círculo."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+      "mapaNoId": "cf-simbolo-0",
+      "questaoIds": [
+        "fiscal-t59-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Símbolo um",
+      "q": "Qual símbolo representa um na Crow's Foot?",
+      "a": [
+        "Barra vertical."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+      "mapaNoId": "cf-simbolo-1",
+      "questaoIds": [
+        "fiscal-t59-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Símbolo muitos",
+      "q": "Qual símbolo representa muitos?",
+      "a": [
+        "Tridente/ramificação de pé de galinha."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+      "mapaNoId": "cf-simbolo-n",
+      "questaoIds": [
+        "fiscal-t59-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Ordem de leitura da cardinalidade",
+      "q": "Como ler os dois símbolos combinados de cardinalidade?",
+      "a": [
+        "De dentro para fora: mínimo e depois máximo."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+      "mapaNoId": "cf-ler-minmax",
+      "questaoIds": [
+        "fiscal-t59-ce28"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Combinação 0:N",
+      "q": "O que representa 0:N?",
+      "a": [
+        "Associação opcional, com zero ou muitos vínculos."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+      "mapaNoId": "cf-zero-n",
+      "questaoIds": [
+        "fiscal-t59-ce29"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Combinação 1:N",
+      "q": "Diferencie 1:N de 0:N.",
+      "a": [
+        "1:N exige ao menos um vínculo; 0:N admite nenhum."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 57",
+      "mapaNoId": "cf-um-n",
+      "questaoIds": [
+        "fiscal-t59-ce30"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "PK e FK no diagrama",
+      "q": "Qual a diferença entre PK e FK?",
+      "a": [
+        "PK identifica a linha de sua tabela; FK referencia chave de outra tabela/relação."
+      ],
+      "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 55",
+      "mapaNoId": "cf-pk",
+      "questaoIds": [
+        "fiscal-t59-ce31"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Atributos, MER estendido e Crow's Foot · T59",
+    "versao": 2,
+    "fonte": "5. Análise de Informações - Modelagem Conceitual.pdf, pp. 39–57",
+    "ramos": [
+      {
+        "id": "conceito-1",
+        "t": "Atributos e classificações",
+        "n": "Entidade ou relação; simples/composto, mono/multivalorado, armazenado/derivado e identificador.",
+        "cor": 1,
+        "x": {
+          "e": "Entidade ou relação; simples/composto, mono/multivalorado, armazenado/derivado e identificador.",
+          "src": "5. Análise de Informações - Modelagem Conceitual.pdf"
+        },
+        "f": [
+          {
+            "id": "attr-objeto",
+            "t": "Atributos de entidades ou relacionamentos",
+            "n": "Não. Podem qualificar entidades ou relacionamentos.",
+            "x": {
+              "e": "O capítulo admite características do vínculo, como data de matrícula, além das de entidade, como nome do aluno.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 39",
+              "questaoIds": [
+                "fiscal-t59-ce02"
+              ]
+            }
+          },
+          {
+            "id": "attr-elipse",
+            "t": "Atributo em Chen",
+            "n": "Elipse ou círculo conectado ao elemento descrito.",
+            "x": {
+              "e": "O diagrama convencional usa elipses ou círculos como representação de propriedades.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 39",
+              "questaoIds": [
+                "fiscal-t59-ce03"
+              ]
+            }
+          },
+          {
+            "id": "attr-mono",
+            "t": "Monovalorado",
+            "n": "Monovalorado admite um valor; multivalorado pode admitir vários por ocorrência.",
+            "x": {
+              "e": "Monovalorado guarda um único valor por ocorrência, em oposição ao multivalorado.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 40",
+              "questaoIds": [
+                "fiscal-t59-ce04"
+              ]
+            }
+          },
+          {
+            "id": "attr-multi",
+            "t": "Multivalorado",
+            "n": "Telefones de uma pessoa.",
+            "x": {
+              "e": "Atributo multivalorado admite multiplicidade de valores, como contato residencial e celular.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 40",
+              "questaoIds": [
+                "fiscal-t59-ce05"
+              ]
+            }
+          },
+          {
+            "id": "attr-multi-elipse",
+            "t": "Dupla elipse",
+            "n": "Elipse dupla.",
+            "x": {
+              "e": "A dupla elipse distingue capacidade de múltiplos valores de atributo monovalorado.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 40",
+              "questaoIds": [
+                "fiscal-t59-ce06"
+              ]
+            }
+          },
+          {
+            "id": "attr-simple",
+            "t": "Atributo simples",
+            "n": "Não haver subdivisão semanticamente relevante no modelo.",
+            "x": {
+              "e": "O material caracteriza atributo simples como indivisível segundo a necessidade do domínio.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 41",
+              "questaoIds": [
+                "fiscal-t59-ce07"
+              ]
+            }
+          },
+          {
+            "id": "attr-composto",
+            "t": "Atributo composto",
+            "n": "Quando se decompõe em Rua, Número, Bairro, Município etc.",
+            "x": {
+              "e": "Composto é aquele cujas partes têm significado separado e podem ser representadas por subatributos.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 41",
+              "questaoIds": [
+                "fiscal-t59-ce08"
+              ]
+            }
+          },
+          {
+            "id": "attr-multi-vs-composto",
+            "t": "Multivalorado ≠ composto",
+            "n": "Composto tem subpartes; multivalorado possui múltiplos valores por ocorrência.",
+            "x": {
+              "e": "Ter muitos valores indica multiplicidade; possuir subpartes significativas indica atributo composto. São critérios diferentes.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 41",
+              "questaoIds": [
+                "fiscal-t59-ce09"
+              ]
+            }
+          },
+          {
+            "id": "attr-derivado",
+            "t": "Atributo derivado",
+            "n": "Idade calculada a partir de data de nascimento e data de referência.",
+            "x": {
+              "e": "O valor pode ser inferido/calculado de outros atributos, dispensando necessariamente armazenamento redundante.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 43",
+              "questaoIds": [
+                "fiscal-t59-ce10"
+              ]
+            }
+          },
+          {
+            "id": "attr-armazenado",
+            "t": "Armazenado × derivado",
+            "n": "Armazenado persiste valor; derivado é obtido por cálculo/inferência.",
+            "x": {
+              "e": "O capítulo classifica os atributos pela origem do valor e contrasta ambos os casos.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 43",
+              "questaoIds": [
+                "fiscal-t59-ce11"
+              ]
+            }
+          },
+          {
+            "id": "attr-id-composto",
+            "t": "Identificador composto",
+            "n": "Ser formado pela combinação de dois ou mais atributos.",
+            "x": {
+              "e": "Apostila exemplifica chaves identificadoras simples e compostas com seus componentes.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 40",
+              "questaoIds": [
+                "fiscal-t59-ce12"
+              ]
+            }
+          },
+          {
+            "id": "attr-relacao-data",
+            "t": "Atributo de relacionamento",
+            "n": "Quando pertence a uma associação específica e não a uma entidade individual.",
+            "x": {
+              "e": "A característica descreve o vínculo específico entre as duas ocorrências; pode mudar conforme o projeto.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 45",
+              "questaoIds": [
+                "fiscal-t59-ce13"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-estendido",
+        "t": "MER estendido",
+        "n": "Especialização/generalização, herança, exclusividade, totalidade, agregação e entidade associativa.",
+        "cor": 2,
+        "x": {
+          "e": "Especialização/generalização, herança, exclusividade, totalidade, agregação e entidade associativa.",
+          "src": "5. Análise de Informações - Modelagem Conceitual.pdf"
+        },
+        "f": [
+          {
+            "id": "mee-especializacao",
+            "t": "Especialização",
+            "n": "Da superclasse genérica para subclasses específicas.",
+            "x": {
+              "e": "O capítulo apresenta PAGAMENTO subdividido em CARTÃO e PIX e relaciona isso a hierarquia de entidades.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 47",
+              "questaoIds": [
+                "fiscal-t59-ce14"
+              ]
+            }
+          },
+          {
+            "id": "mee-generalizacao",
+            "t": "Generalização",
+            "n": "Generalização sobe o que há em comum; especialização desce para subtipos específicos.",
+            "x": {
+              "e": "O material exemplifica combinar dados comuns de pagamentos em uma classe superior.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+              "questaoIds": [
+                "fiscal-t59-ce15"
+              ]
+            }
+          },
+          {
+            "id": "mee-heranca",
+            "t": "Herança",
+            "n": "Os herdados de Pagamento mais os específicos de Cartão.",
+            "x": {
+              "e": "PAGAMENTO CARTÃO herda código, valor e data de PAGAMENTO e adiciona número e bandeira.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 48",
+              "questaoIds": [
+                "fiscal-t59-ce16"
+              ]
+            }
+          },
+          {
+            "id": "mee-exclusiva",
+            "t": "Especialização exclusiva",
+            "n": "Uma ocorrência pertence a no máximo um subtipo do conjunto exclusivo.",
+            "x": {
+              "e": "A apostila usa o indicador x para subclasses mutuamente exclusivas.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+              "questaoIds": [
+                "fiscal-t59-ce17"
+              ]
+            }
+          },
+          {
+            "id": "mee-sobreposta",
+            "t": "Especialização compartilhada",
+            "n": "Quando a mesma ocorrência pode pertencer a dois ou mais subtipos.",
+            "x": {
+              "e": "O texto contrapõe subclasses sobrepostas às disjuntas, com exemplo de pagamento combinado.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+              "questaoIds": [
+                "fiscal-t59-ce18"
+              ]
+            }
+          },
+          {
+            "id": "mee-total",
+            "t": "Especialização total",
+            "n": "A superclasse é integralmente coberta por suas subclasses.",
+            "x": {
+              "e": "A condição de totalidade exige cobertura da superclasse; a apostila assinala t.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+              "questaoIds": [
+                "fiscal-t59-ce19"
+              ]
+            }
+          },
+          {
+            "id": "mee-parcial",
+            "t": "Especialização parcial",
+            "n": "Total exige subtipo; parcial permite instância apenas na superclasse.",
+            "x": {
+              "e": "O capítulo exemplifica pagamento com método ainda não definido.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+              "questaoIds": [
+                "fiscal-t59-ce20"
+              ]
+            }
+          },
+          {
+            "id": "mee-xt",
+            "t": "Combinação xt",
+            "n": "Exclusiva/disjunta e total.",
+            "x": {
+              "e": "x indica exclusividade; t indica totalidade. São dimensões independentes.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 49",
+              "questaoIds": [
+                "fiscal-t59-ce21"
+              ]
+            }
+          },
+          {
+            "id": "mee-agregacao",
+            "t": "Agregação",
+            "n": "Tratar relacionamento como unidade que participa de outra associação.",
+            "x": {
+              "e": "O capítulo descreve 'empacotar' relação MÉDICO–PACIENTE/CONSULTA para ligá-la a EXAME.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 52",
+              "questaoIds": [
+                "fiscal-t59-ce22"
+              ]
+            }
+          },
+          {
+            "id": "mee-associativa-diferenca",
+            "t": "Entidade associativa × agregação",
+            "n": "Agregação encapsula relação como unidade; associativa promove vínculo a entidade com dados próprios.",
+            "x": {
+              "e": "Apostila ressalta que podem resultar em estruturas finais semelhantes, mas agregação enfatiza abstração de um relacionamento inteiro.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 53",
+              "questaoIds": [
+                "fiscal-t59-ce23"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-2",
+        "t": "Crow's Foot",
+        "n": "Pé de galinha, símbolos 0/1/N e combinações mínima/máxima.",
+        "cor": 3,
+        "x": {
+          "e": "Pé de galinha, símbolos 0/1/N e combinações mínima/máxima.",
+          "src": "5. Análise de Informações - Modelagem Conceitual.pdf"
+        },
+        "f": [
+          {
+            "id": "cf-uso",
+            "t": "Pé de galinha",
+            "n": "Representar cardinalidades e opcionalidade dos relacionamentos.",
+            "x": {
+              "e": "O material apresenta uma alternativa gráfica ao DER de Chen, muito usada em ferramentas de modelagem.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 54",
+              "questaoIds": [
+                "fiscal-t59-ce24"
+              ]
+            }
+          },
+          {
+            "id": "cf-simbolo-0",
+            "t": "Símbolo zero",
+            "n": "Círculo.",
+            "x": {
+              "e": "A apostila associa círculo ao zero, barra ao um e ramificação ao muitos.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+              "questaoIds": [
+                "fiscal-t59-ce25"
+              ]
+            }
+          },
+          {
+            "id": "cf-simbolo-1",
+            "t": "Símbolo um",
+            "n": "Barra vertical.",
+            "x": {
+              "e": "O traço vertical indica cardinalidade um segundo a tabela da apostila.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+              "questaoIds": [
+                "fiscal-t59-ce26"
+              ]
+            }
+          },
+          {
+            "id": "cf-simbolo-n",
+            "t": "Símbolo muitos",
+            "n": "Tridente/ramificação de pé de galinha.",
+            "x": {
+              "e": "A forma ramificada caracteriza o máximo muitos no diagrama.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+              "questaoIds": [
+                "fiscal-t59-ce27"
+              ]
+            }
+          },
+          {
+            "id": "cf-ler-minmax",
+            "t": "Ordem de leitura da cardinalidade",
+            "n": "De dentro para fora: mínimo e depois máximo.",
+            "x": {
+              "e": "A apostila afirma explicitamente a leitura mínima depois máxima, de dentro para fora do relacionamento.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+              "questaoIds": [
+                "fiscal-t59-ce28"
+              ]
+            }
+          },
+          {
+            "id": "cf-zero-n",
+            "t": "Combinação 0:N",
+            "n": "Associação opcional, com zero ou muitos vínculos.",
+            "x": {
+              "e": "A cardinalidade (0,N) expressa opcionalidade com máximo múltiplo.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 56",
+              "questaoIds": [
+                "fiscal-t59-ce29"
+              ]
+            }
+          },
+          {
+            "id": "cf-um-n",
+            "t": "Combinação 1:N",
+            "n": "1:N exige ao menos um vínculo; 0:N admite nenhum.",
+            "x": {
+              "e": "A combinação (1,N) indica mínimo um e máximo muitos.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 57",
+              "questaoIds": [
+                "fiscal-t59-ce30"
+              ]
+            }
+          },
+          {
+            "id": "cf-pk",
+            "t": "PK e FK no diagrama",
+            "n": "PK identifica a linha de sua tabela; FK referencia chave de outra tabela/relação.",
+            "x": {
+              "e": "A apostila indica o uso das siglas junto aos atributos identificadores no diagrama.",
+              "src": "5. Análise de Informações - Modelagem Conceitual.pdf, p. 55",
+              "questaoIds": [
+                "fiscal-t59-ce31"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": [
+      [
+        "conceito-1",
+        "g-estendido",
+        "Atributos herdados na especialização"
+      ],
+      [
+        "g-estendido",
+        "conceito-2",
+        "Modelos podem ser representados por múltiplas notações"
+      ],
+      [
+        "conceito-1",
+        "conceito-2",
+        "Chaves PK/FK e multiplicidade"
+      ]
+    ]
+  }
+}
