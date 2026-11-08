@@ -1,0 +1,249 @@
+/* Quebrando a Banca · processos pedagógicos v1.
+ * Eventos prospectivos privados. Nunca reclassifica o legado nem altera vencimentos.
+ */
+(() => {
+  'use strict';
+  const DAY=86400000, POLICY='aprendizagem-v1';
+  const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const hash=x=>{let h=2166136261;for(const c of String(x)){h^=c.charCodeAt(0);h=Math.imul(h,16777619)}return (h>>>0).toString(16)};
+  const version=q=>hash(JSON.stringify([q.enunciado,q.gabarito,q.comentario,q.ref]));
+  const uid=()=>crypto.randomUUID();
+  const validDate=x=>Number.isFinite(Date.parse(x));
+  const flags=S=>({...{p1:true,p2:true,p3:true,p4:true,p5:true,p6:true,p7:true,p8:true},...(S.cfg?.get('aprendizagem')?.flags||{})});
+  const enabled=(S,k)=>flags(S)[k]!==false;
+  const cfg=S=>S.cfg?.get('aprendizagem')||{};
+  const values=m=>m instanceof Map?[...m.values()]:[];
+  const events=S=>values(S.learningEvents);
+  const catalog=S=>values(S.learningContent).filter(x=>x.active!==false);
+  const rounds=S=>[...(S.rodadas||[]).filter(x=>x.id!==S.round?.id),...(S.round?[S.round]:[])];
+  function attempts(S) {
+    const out=new Map();
+    for(const rd of rounds(S)) for(const item of rd.itens||[]) if(item.learning?.id) {
+      const e={...item.learning,ok:item.marcada===item.gabarito,marked:item.marcada,confidence:item.conf??null};
+      out.set(e.id,e);
+    }
+    for(const e of events(S)) if(e.kind==='attempt') out.set(e.id,e);
+    return [...out.values()].sort((a,b)=>Date.parse(a.at)-Date.parse(b.at)||a.id.localeCompare(b.id));
+  }
+  function prior(S,q) {
+    return attempts(S).filter(e=>e.item===q.id&&e.version===version(q)&&e.origin==='treino'&&!e.invalid);
+  }
+  function condition(q) {return parseInt(hash(q.cap||q.id),16)%2?'especifico':'padrao'}
+  function feedback(S,q,a) {
+    if(!enabled(S,'p1')||!a||a.rep||a.marcada==='B'||![1,2,3].includes(a.conf)) return '';
+    if(!a.acertou&&a.conf===3) return '<span class="calib alert">Erro com certeza: qual trecho sustentou sua escolha? Confira a regra e verifique se houve troca de conceitos.</span>';
+    if(!a.acertou&&a.conf===2) return '<span class="calib">Você sinalizou dúvida. Compare sua interpretação com a regra do comentário antes de seguir.</span>';
+    if(a.acertou&&a.conf===3) return '<span class="calib">Certeza e acerto nesta tentativa. A revisão posterior verificará a manutenção do acerto.</span>';
+    if(a.acertou&&a.conf===2&&q.comentario&&condition(q)==='especifico') return '<span class="calib">Acertou com dúvida. Identifique a regra que confirmou sua resposta e explique por que a alternativa oposta estaria errada.</span><div class="learn-rule"><b>Regra a fixar · comentário do item</b><p>'+esc(q.comentario)+'</p></div>';
+    return '';
+  }
+  function metadata(S,q,L,conf,rd) {
+    const ps=prior(S,q), at=new Date().toISOString();
+    return {id:rd.id+':'+rd.idx,policy:POLICY,kind:'attempt',item:q.id,version:version(q),
+      concept:q.learningConcept||null,cap:q.cap,at,origin:'treino',exposure:ps.length?'seen':'unknown',
+      reference:ps.length?ps[ps.length-1].id:null,referenceAt:ps.length?ps[ps.length-1].at:null,
+      feedback:enabled(S,'p1')&&L===q.gabarito&&conf===2&&q.comentario?condition(q):'padrao',
+      confidence:[1,2,3].includes(conf)?conf:null,marked:L,ok:L===q.gabarito};
+  }
+  function metrics(list,now=Date.now()) {
+    const all=[...new Map(list.filter(e=>e&&e.id).map(e=>[e.id,e])).values()].sort((a,b)=>Date.parse(a.at)-Date.parse(b.at));
+    const valid=all.filter(e=>!e.invalid&&e.kind==='attempt'&&validDate(e.at)&&e.version&&['C','E','B'].includes(e.marked)&&['treino','transferencia'].includes(e.origin));
+    const used=new Set(), transferSeen=new Set();
+    const result={immediate:[],recognition:[],transfer:[],retention:[],retentionSeen:[],retentionNew:[],unknown:0,confidence:{1:[],2:[],3:[],unknown:[]},feedback:{padrao:[],especifico:[]},eligibleFeedback:{padrao:[],especifico:[]}};
+    for(const e of valid) {
+      result.immediate.push(e);
+      result.confidence[[1,2,3].includes(e.confidence)?e.confidence:'unknown'].push(e);
+      if(e.exposure==='seen') result.recognition.push(e);
+      else if(e.exposure!=='new') result.unknown++;
+      const key=e.item+'|'+e.version;
+      if(e.origin==='transferencia'&&e.exposure==='new'&&e.reviewed===true&&e.reference&&e.concept&&!transferSeen.has(key)) {result.transfer.push(e);transferSeen.add(key)}
+      const ref=valid.find(x=>x.id===e.reference);
+      const age=ref?(Date.parse(e.at)-Date.parse(ref.at))/DAY:NaN;
+      const compatible=ref&&(e.item===ref.item&&e.version===ref.version||result.transfer.includes(e)&&e.concept===ref.concept);
+      if(compatible&&age>=7&&age<=10&&!used.has(ref.id)) {
+        used.add(ref.id);
+        const row={...e,reexposures:all.filter(x=>x.id!==e.id&&x.item===e.item&&validDate(x.at)&&Date.parse(x.at)>Date.parse(ref.at)&&Date.parse(x.at)<Date.parse(e.at)).length};
+        result.retention.push(row);
+        (e.exposure==='new'?result.retentionNew:result.retentionSeen).push(row);
+        if(ref.ok&&ref.confidence===2&&result.feedback[ref.feedback])result.feedback[ref.feedback].push(row);
+      }
+    }
+    for(const e of valid) if(e.ok&&e.confidence===2&&result.eligibleFeedback[e.feedback]&&now-Date.parse(e.at)>=10*DAY)result.eligibleFeedback[e.feedback].push(e);
+    result.excluded=all.length-valid.length;
+    return result;
+  }
+  function simulate(history,fixedDue,today,exam) {
+    const base={policy:'shadow-v1',fixedDue,suggestedDue:fixedDue,mode:'simulation',reason:'Histórico insuficiente: manter calendário fixo'};
+    const hs=history.filter(e=>!e.invalid&&validDate(e.at)&&['C','E'].includes(e.marked)).sort((a,b)=>Date.parse(a.at)-Date.parse(b.at));
+    if(hs.length<3||!validDate(today))return base;
+    const last=hs[hs.length-1], recent=hs.slice(-3);
+    let days=!last.ok?1:last.confidence!==3?3:recent.every(e=>e.ok)?7:3;
+    if(exam&&validDate(exam))days=Math.max(1,Math.min(days,Math.floor((Date.parse(exam)-Date.parse(today))/DAY/5)));
+    const suggestedDue=new Date(Date.parse(today+'T12:00:00Z')+days*DAY).toISOString().slice(0,10);
+    return {...base,suggestedDue,days,reason:!last.ok?'Erro recente':last.confidence!==3?'Confiança ainda instável':'Três tentativas recentes avaliadas'};
+  }
+  function eligibleVariants(S) {
+    const es=events(S), as=attempts(S);
+    return catalog(S).filter(c=>c.type==='variant'&&c.reviewed===true&&c.reserved===true&&c.contextChanged===true&&c.concept&&c.answer&&c.prompt&&c.explanation&&c.reference&&
+      !es.some(e=>e.item===c.id)&&!as.some(e=>e.item===c.id)&&
+      as.some(e=>e.concept===c.concept&&e.ok&&!e.invalid));
+  }
+  const rate=xs=>xs.length?Math.round(xs.filter(x=>x.ok).length/xs.length*100)+'%':'Dados insuficientes';
+  const stat=(title,xs)=>'<div class="learn-stat"><b>'+rate(xs)+'</b><span>'+esc(title)+'</span><small>'+xs.filter(x=>x.ok).length+' acertos / '+xs.length+' tentativas</small></div>';
+  const panel=(title,body,open=false)=>'<details class="learn-panel" '+(open?'open':'')+'><summary>'+esc(title)+'</summary><div>'+body+'</div></details>';
+  const button=(action,label,id='',other='')=>'<button class="btn ghost small" data-learn="'+action+'" data-id="'+esc(id)+'" '+other+'>'+esc(label)+'</button>';
+  let ctx=null, activity=null, pending=new Map(), saving=false, error='', drafts={}, selected='indicadores';
+  function draw(){if(ctx)ctx.render(true)}
+  async function save(e) {
+    if(!ctx?.S.db)throw new Error('Banco de estudo indisponível.');
+    pending.set(e.id,e);
+    try {await ctx.S.db.doc('aprendizagem/'+e.id).set(e);ctx.S.learningEvents.set(e.id,e);pending.delete(e.id);error='';}
+    catch(err){error='Registro ainda não salvo. Mantenha esta página aberta e tente novamente.';throw err}
+  }
+  function mount(S,api) {
+    ctx={S,...api};
+    S.learningEvents ||= new Map(); S.learningContent ||= new Map();
+    S.db.collection('aprendizagem').onSnapshot(s=>{
+      for(const d of s.docs) S.learningEvents.set(d.id,{...d.data(),id:d.id});
+      S.learningLoaded=true;if(['aprendizagem','painel','conteudo'].includes(S.view))draw();
+    },()=>{error='Não foi possível carregar os registros de aprendizagem.';draw()});
+    S.db.collection('aprendizagem_conteudos').onSnapshot(s=>{
+      S.learningContent=new Map(s.docs.map(d=>[d.id,{...d.data(),id:d.id}]));
+      S.learningContentLoaded=true;if(['aprendizagem','conteudo'].includes(S.view))draw();
+    },()=>{error='Não foi possível carregar as atividades.';draw()});
+  }
+  function weekly(S,today) {
+    const end=Date.parse(today+'T23:59:59Z'), start=end-7*DAY;
+    const list=attempts(S).filter(e=>Date.parse(e.at)>start&&Date.parse(e.at)<=end&&!e.invalid);
+    const by=new Map();
+    for(const e of list){const key=e.cap||e.concept||'Sem assunto';if(!by.has(key))by.set(key,[]);by.get(key).push(e)}
+    const worst=[...by].filter(([,a])=>a.length>=5).sort((a,b)=>a[1].filter(x=>x.ok).length/a[1].length-b[1].filter(x=>x.ok).length/b[1].length)[0];
+    const suggestion=worst?'Revisar '+worst[0]+' e explicar os erros antes de conferir o comentário.':'Registrar pelo menos cinco tentativas em um assunto para orientar o próximo ciclo.';
+    const id='semana-'+today;
+    const saved=events(S).find(e=>e.kind==='weekly'&&e.periodEnd===today);
+    return {id,list,worst,suggestion,saved,start:new Date(start+1).toISOString().slice(0,10)};
+  }
+  function weeklyHTML(S,today) {
+    if(!enabled(S,'p8'))return '';
+    const w=weekly(S,today);
+    return panel('Diagnóstico dos últimos 7 dias', '<p>'+esc(w.start)+' a '+esc(today)+' · '+w.list.length+' tentativas prospectivas · '+w.list.filter(x=>x.ok).length+' acertos.</p><p>'+esc(w.suggestion)+'</p><label>Ação da próxima semana<textarea data-learn-draft="weekly" rows="2">'+esc(drafts.weekly??w.saved?.text??w.suggestion)+'</textarea></label>'+button('weekly','Salvar decisão do ciclo',today)+(w.saved?'<p class="rule">Decisão salva. As tarefas do calendário permanecem editáveis.</p>':'')+button('plan','Abrir planejamento'),false);
+  }
+  function contentHTML(S,m) {
+    const cards=catalog(S).filter(c=>c.material===m.id&&['recall','pretest'].includes(c.type));
+    if(!cards.length)return '';
+    return '<div class="learn-inline">'+cards.filter(c=>enabled(S,c.type==='pretest'?'p7':'p5')).map(c=>button('start',c.type==='pretest'?'Antes da leitura: tentar':'Evocar sem consultar',c.id)).join('')+'</div>';
+  }
+  function activityHTML() {
+    if(!activity)return '';
+    const a=activity,c=a.card, answered=a.phase==='feedback', isCE=c.type==='variant';
+    const response=answered?'<div class="learn-rule"><b>'+ (isCE?'Gabarito: '+esc(c.answer):'Compare sua resposta')+'</b><p>'+esc(c.explanation)+'</p><small>'+esc(c.reference)+'</small></div><p>'+esc(a.skipped?'Revelação sem tentativa registrada separadamente.':'Sua resposta: '+a.response)+'</p>':
+      '<p class="statement">'+esc(c.prompt)+'</p>'+(isCE?'<fieldset><legend>Sua resposta</legend><label><input type="radio" name="learn-answer" value="C"> Certo</label><label><input type="radio" name="learn-answer" value="E"> Errado</label><label><input type="radio" name="learn-answer" value="B"> Em branco</label></fieldset><label>Confiança antes da correção<select id="learn-confidence"><option value="">Selecione</option><option value="1">Chute</option><option value="2">Dúvida</option><option value="3">Certeza</option></select></label>':'<label>Sua explicação<textarea data-learn-draft="response" rows="3" placeholder="Responda com suas palavras antes de conferir.">'+esc(drafts.response||'')+'</textarea></label>')+
+      button('answer','Responder e conferir')+(!isCE?button('skip',c.type==='pretest'?'Pular e ver explicação':'Revelar sem tentar'):'');
+    return '<section class="learn-active" aria-live="polite"><h3>'+esc(c.title)+'</h3><p class="rule">'+({variant:'Aplicação em outro contexto',duel:'Duelo de conceitos',recall:'Evocação',pretest:'Pré-teste'}[c.type]||'Prática')+'</p>'+response+(answered?button('close','Concluir'):'')+'</section>';
+  }
+  function render(S,today) {
+    const m=metrics(attempts(S)), tasks=catalog(S), vars=eligibleVariants(S);
+    const nav='<div class="chips">'+[['indicadores','Indicadores'],['pratica','Prática ativa'],['agenda','Revisão e ciclo'],['editor','Preparar atividades']].map(([id,label])=>'<button class="chip" data-learn="section" data-id="'+id+'" aria-pressed="'+(selected===id)+'">'+label+'</button>').join('')+'</div>';
+    let body='';
+    if(selected==='indicadores')body=enabled(S,'p4')?'<p class="rule">Registros feitos após esta atualização. Os números antigos continuam no Desempenho. Retenção usa a primeira verificação entre 7 e 10 dias após a referência registrada.</p><div class="learn-grid">'+stat('Desempenho imediato',m.immediate)+stat('Reconhecimento · item visto',m.recognition)+stat('Transferência · primeira variante válida',m.transfer)+stat('Retenção · verificações tardias',m.retention)+'</div>'+panel('Como interpretar', '<p>As populações podem se sobrepor. Não some retenção e transferência. “Reconhecimento” é um indicador operacional de acertos em itens já vistos, não um diagnóstico de memória.</p><p>Retenção em vistos: '+rate(m.retentionSeen)+' (n='+m.retentionSeen.length+'). Em inéditos: '+rate(m.retentionNew)+' (n='+m.retentionNew.length+').</p><p>'+m.unknown+' tentativas com exposição anterior desconhecida. '+m.excluded+' registros fora das métricas. '+m.retention.filter(x=>x.reexposures).length+' verificações com reexposição intermediária registrada.</p>')+
+      panel('Confiança e piloto do feedback', '<div class="learn-grid">'+[1,2,3,'unknown'].map(k=>stat(({1:'Chute',2:'Dúvida',3:'Certeza',unknown:'Confiança desconhecida'})[k],m.confidence[k])).join('')+'</div><p>Comparação exploratória por capítulo. Ambos os grupos recebem gabarito comentado.</p><div class="learn-grid">'+stat('Feedback padrão · retenção',m.feedback.padrao)+stat('Feedback específico · retenção',m.feedback.especifico)+'</div><p>Resultado inconclusivo enquanto não houver 30 verificações por condição, cinco pares comparáveis de conceitos e acompanhamento ≥70% em ambas. Esses mínimos são operacionais e não comprovam eficácia.</p>'):'<p>Indicadores desativados.</p>';
+    if(selected==='pratica')body='<p class="rule">Atividades curtas, separadas da nota dos treinos. Um novo texto só mede transferência quando sua equivalência, revisão e exposição estiverem confirmadas.</p>'+
+      (enabled(S,'p2')?panel('Transferência para outro contexto · '+vars.length+' disponíveis',vars.length?vars.map(c=>'<p>'+esc(c.title)+' '+button('start','Responder variante reservada',c.id)+'</p>').join(''):'<p>Nenhuma variante elegível agora. É necessário conteúdo revisado, reservado e prática anterior do mesmo conceito. Itens do banco antigo não são presumidos inéditos.</p>',true):'')+
+      tasks.filter(c=>['duel','recall','pretest'].includes(c.type)&&enabled(S,{duel:'p3',recall:'p5',pretest:'p7'}[c.type])).map(c=>panel(c.title,'<p>'+esc(c.type==='duel'?'Explique a diferença decisiva antes de conferir.':'Tente recuperar a regra antes da explicação.')+'</p>'+button('start','Começar',c.id))).join('');
+    if(selected==='agenda') {
+      const rows=enabled(S,'p6')?values(S.r).filter(r=>r.proxRevisao).slice(0,20).map(r=>{
+        const s=simulate(attempts(S).filter(e=>e.item===r.qid),r.proxRevisao,today,cfg(S).examDate);
+        return '<tr><td>'+esc(r.qid)+'</td><td>'+esc(s.fixedDue)+'</td><td>'+esc(s.suggestedDue)+'</td><td>'+esc(s.reason)+'</td></tr>';
+      }).join(''):'';
+      body=weeklyHTML(S,today)+panel('Revisão adaptativa · simulação', '<p>A agenda fixa continua valendo. A simulação shadow-v1 não grava nem altera vencimentos. Os primeiros 20 itens são apresentados para inspeção.</p><div class="tbl-wrap"><table><thead><tr><th>Item</th><th>Agenda atual</th><th>Sugestão</th><th>Motivo</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+button('simulation','Registrar esta simulação'));
+    }
+    if(selected==='editor')body=editorHTML(S);
+    const warn=error?'<div class="notice" role="alert">'+esc(error)+(pending.size?button('retry','Tentar salvar novamente'):'')+'</div>':'';
+    return '<div class="learn"><h2 class="section-title">Aprendizagem</h2>'+nav+warn+(saving?'<p role="status">Salvando…</p>':'')+activityHTML()+body+'</div>';
+  }
+  function editorHTML(S) {
+    return panel('Nova atividade pedagógica', '<p>As atividades ficam na sua conta. Gabaritos e questões existentes não são substituídos.</p><label>Tipo<select id="learn-type"><option value="recall">Evocação</option><option value="pretest">Pré-teste</option><option value="duel">Duelo</option><option value="variant">Variante reservada</option></select></label><label>Título<input id="learn-title" maxlength="160"></label><label>Conceito específico<input id="learn-concept" maxlength="100" placeholder="Ex.: DNS × DHCP"></label><label>Pergunta<textarea id="learn-prompt" rows="3"></textarea></label><label>Explicação / diferença decisiva<textarea id="learn-explanation" rows="3"></textarea></label><label>Fonte<input id="learn-reference"></label><label>Gabarito (variantes)<select id="learn-answer-key"><option value="C">Certo</option><option value="E">Errado</option></select></label><label>Material vinculado<select id="learn-material"><option value="">Sem vínculo</option>'+values(S.mat).map(m=>'<option value="'+esc(m.id)+'">'+esc(m.titulo||m.id)+'</option>').join('')+'</select></label><label><input type="checkbox" id="learn-reviewed"> Revisei o gabarito e a explicação.</label><label><input type="checkbox" id="learn-context"> A variante exige a mesma regra em outro contexto, sem mera troca de palavras.</label><p class="rule">Uma variante criada nesta tela já foi exposta a você e não entra como inédita na sua própria avaliação. Ela poderá servir como prática.</p>'+button('create','Salvar atividade'),true)+
+      panel('Controles de liberação', '<p>Desligar um processo preserva os registros. A revisão adaptativa permanece em simulação.</p>'+Object.entries(flags(S)).map(([k,v])=>'<label><input type="checkbox" data-learn-flag="'+k+'" '+(v?'checked':'')+'> '+esc(k.toUpperCase())+'</label>').join('')+button('flags','Salvar controles'));
+  }
+  function validateCard(c) {
+    if(!['variant','duel','recall','pretest'].includes(c.type))throw new Error('Tipo de atividade inválido.');
+    for(const key of ['title','concept','prompt','explanation','reference'])if(typeof c[key]!=='string'||!c[key].trim())throw new Error('Preencha título, conceito, pergunta, explicação e fonte.');
+    if(c.prompt.length>10000||c.explanation.length>10000)throw new Error('Atividade muito longa.');
+    if(c.type==='variant'&&!['C','E'].includes(c.answer))throw new Error('Gabarito inválido.');
+    return true;
+  }
+  async function begin(id) {
+    const S=ctx.S,c=catalog(S).find(x=>x.id===id);
+    if(!c)throw new Error('Atividade indisponível.');
+    if(activity&&activity.phase!=='feedback')throw new Error('Conclua a atividade aberta antes de iniciar outra.');
+    if(c.type==='variant'&&!eligibleVariants(S).some(x=>x.id===id))throw new Error('Variante sem elegibilidade confirmada.');
+    const seen=events(S).some(e=>e.item===id);
+    const reference=attempts(S).filter(e=>e.concept===c.concept&&!e.invalid&&e.ok).at(-1);
+    const attemptId=uid(), at=new Date().toISOString();
+    await save({id:attemptId+'-exposure',kind:'exposure',item:id,version:c.version||hash(c.prompt+c.answer+c.explanation),at,origin:c.type});
+    activity={id:attemptId,card:c,phase:'question',seen,reference,startedAt:at};drafts.response='';
+    ctx.setView('aprendizagem');selected='pratica';
+  }
+  async function answer(skip) {
+    if(!activity||activity.phase!=='question')return;
+    const a=activity,c=a.card;
+    let response=String(drafts.response||'').trim(), confidence=null;
+    if(c.type==='variant') {
+      response=document.querySelector('input[name="learn-answer"]:checked')?.value;
+      confidence=Number(document.getElementById('learn-confidence')?.value)||null;
+      if(!response||response!=='B'&&!confidence)throw new Error('Marque a resposta e a confiança antes de conferir.');
+      if(response==='B')confidence=null;
+    } else if(!skip&&!response)throw new Error('Escreva uma tentativa ou escolha revelar sem tentar.');
+    const e={id:a.id,kind:c.type==='variant'?'attempt':'practice',item:c.id,version:c.version||hash(c.prompt+c.answer+c.explanation),concept:c.concept,at:new Date().toISOString(),
+      origin:c.type==='variant'?'transferencia':c.type,exposure:!a.seen&&c.reserved?'new':a.seen?'seen':'unknown',
+      reference:a.reference?.id||null,referenceAt:a.reference?.at||null,reviewed:c.reviewed===true,
+      marked:c.type==='variant'?response:null,ok:c.type==='variant'?response===c.answer:null,confidence,
+      response:skip?'':response,skipped:!!skip,elapsedMs:Date.now()-Date.parse(a.startedAt),policy:POLICY,
+      material:c.material||null,followUpAfter:new Date(Date.now()+7*DAY).toISOString()};
+    await save(e);
+    a.phase='feedback';a.response=response;a.skipped=skip;
+  }
+  async function action(name,id) {
+    const S=ctx.S;
+    if(name==='section'){selected=id;return}
+    if(name==='plan'){ctx.setView('painel');return}
+    if(name==='close'){activity=null;return}
+    if(name==='start'){await begin(id);return}
+    if(name==='answer'||name==='skip'){await answer(name==='skip');return}
+    if(name==='retry'){for(const e of [...pending.values()])await save(e);return}
+    if(name==='weekly'){
+      const w=weekly(S,id), text=String(drafts.weekly??w.saved?.text??w.suggestion).trim();
+      if(!text)throw new Error('Escreva a ação do ciclo.');
+      await save({id:w.id,kind:'weekly',periodEnd:id,at:new Date().toISOString(),text,attempts:w.list.length,policy:POLICY});return;
+    }
+    if(name==='simulation'){
+      const date=ctx.hoje(),id='simulation-'+date+'-'+uid();
+      const decisions=values(S.r).filter(r=>r.proxRevisao).map(r=>({item:r.qid,...simulate(attempts(S).filter(e=>e.item===r.qid),r.proxRevisao,date,cfg(S).examDate)}));
+      // One immutable event per item keeps writes below the bridge document limit.
+      for(const row of decisions.slice(0,20))await save({id:id+'-'+row.item,kind:'schedule-simulation',at:new Date().toISOString(),...row});
+      return;
+    }
+    if(name==='flags'){
+      const next={...cfg(S),flags:Object.fromEntries([...document.querySelectorAll('[data-learn-flag]')].map(e=>[e.dataset.learnFlag,e.checked]))};
+      await S.db.doc('config/aprendizagem').set(next);S.cfg.set('aprendizagem',next);return;
+    }
+    if(name==='create'){
+      const v=k=>document.getElementById('learn-'+k)?.value?.trim()||'';
+      const c={id:'learn-'+uid(),type:v('type'),title:v('title'),concept:v('concept'),prompt:v('prompt'),explanation:v('explanation'),reference:v('reference'),material:v('material'),
+        answer:v('answer-key'),reviewed:document.getElementById('learn-reviewed').checked,contextChanged:document.getElementById('learn-context').checked,reserved:false,active:true,createdAt:new Date().toISOString()};
+      validateCard(c);c.version=hash(JSON.stringify(c));await S.db.doc('aprendizagem_conteudos/'+c.id).set(c);S.learningContent.set(c.id,c);
+      await save({id:uid(),kind:'exposure',item:c.id,version:c.version,origin:'editor',at:new Date().toISOString()});
+      error='Atividade salva.';return;
+    }
+  }
+  function wire(S,api) {
+    ctx={S,...api};
+    document.querySelectorAll('[data-learn-draft]').forEach(el=>el.addEventListener('input',()=>{drafts[el.dataset.learnDraft]=el.value}));
+    document.querySelectorAll('[data-learn]').forEach(el=>el.addEventListener('click',async()=>{
+      if(saving)return;saving=true;el.disabled=true;
+      try{await action(el.dataset.learn,el.dataset.id)}catch(e){error=e.message||'Não foi possível concluir.'}
+      finally{saving=false;draw()}
+    }));
+  }
+  window.QBLearning={version,metadata,feedback,metrics,simulate,eligibleVariants,validateCard,attempts,mount,render,wire,weeklyHTML,contentHTML,flags,enabled};
+})();
