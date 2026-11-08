@@ -1,0 +1,1148 @@
+{
+  "topic": "fiscal-sup-modelagem-logica",
+  "title": "Modelagem Lógica Relacional",
+  "source": "6. Análise de Informações - Modelage.pdf",
+  "status": "revisao_pedagogica_pendente",
+  "cap": "FISCAL-TI-SUP-LOG",
+  "order": 1002,
+  "questions": [
+    {
+      "id": "fiscal-sup-modelagem-logica-ce01",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "O modelo relacional representa dados mediante relações cujas tuplas correspondem às linhas da tabela.",
+      "gabarito": "C",
+      "comentario": "Tabela é a representação usual de relação; cada linha corresponde a uma tupla no modelo relacional.",
+      "ordem": 100201,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 59",
+      "tema": "Relação",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n01",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 59,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce02",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "No modelo relacional, o termo atributo corresponde ordinariamente a uma coluna da relação.",
+      "gabarito": "C",
+      "comentario": "O atributo descreve uma propriedade e seu domínio restringe os valores admissíveis.",
+      "ordem": 100202,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 60",
+      "tema": "Atributo",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n02",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 60,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce03",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "Domínio é a ordenação física dos registros de uma tabela pelo SGBD.",
+      "gabarito": "E",
+      "comentario": "Domínio descreve o conjunto de valores permitidos para um atributo, não a ordem física dos registros.",
+      "ordem": 100203,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 60",
+      "tema": "Domínio",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n03",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 60,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce04",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "O grau ou aridade de uma relação equivale ao número de colunas de seu esquema.",
+      "gabarito": "C",
+      "comentario": "O grau conta atributos; o número de tuplas define a cardinalidade da relação.",
+      "ordem": 100204,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 60",
+      "tema": "Grau",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n04",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 60,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce05",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "O número de tuplas de uma relação determina seu grau.",
+      "gabarito": "E",
+      "comentario": "Grau conta atributos; cardinalidade, neste contexto, conta tuplas da relação.",
+      "ordem": 100205,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 59",
+      "tema": "Cardinalidade da relação",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n05",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 59,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce06",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "A ordem em que os registros são apresentados ao usuário integra necessariamente a definição matemática da relação.",
+      "gabarito": "E",
+      "comentario": "O modelo relacional considera conjuntos de tuplas, sem ordem lógica intrínseca.",
+      "ordem": 100206,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 61",
+      "tema": "Ordem das tuplas",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n06",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 61,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce07",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "Uma relação matemática, por ser conjunto, não admite tuplas idênticas repetidas.",
+      "gabarito": "C",
+      "comentario": "A teoria do modelo relacional proíbe duplicatas, embora implementações práticas SQL exijam cuidados próprios.",
+      "ordem": 100207,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 59",
+      "tema": "Duplicatas",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n07",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 59,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce08",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "Um valor NULL pode representar informação desconhecida ou não aplicável, conforme a situação.",
+      "gabarito": "C",
+      "comentario": "NULL expressa ausência ou inaplicabilidade, não devendo ser confundido automaticamente com zero ou string vazia.",
+      "ordem": 100208,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 64",
+      "tema": "NULL",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n08",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 64,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce09",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "Qualquer conjunto de atributos que identifica univocamente uma tupla é uma superchave, mesmo que inclua atributos desnecessários.",
+      "gabarito": "C",
+      "comentario": "A superchave exige unicidade, mas não minimalidade; por isso pode conter atributos extras.",
+      "ordem": 100209,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 69",
+      "tema": "Superchave",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n09",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 69,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce10",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "Chave candidata é uma superchave mínima, da qual não se pode remover atributos sem perder a identificação.",
+      "gabarito": "C",
+      "comentario": "A minimalidade distingue chaves candidatas de superchaves com atributos supérfluos.",
+      "ordem": 100210,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 74",
+      "tema": "Chave candidata",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n10",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 74,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce11",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "Toda superchave é necessariamente uma chave candidata, porque ambas identificam tuplas de modo único.",
+      "gabarito": "E",
+      "comentario": "A chave candidata é superchave mínima, mas uma superchave pode ter atributos redundantes.",
+      "ordem": 100211,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 74",
+      "tema": "Superchave × candidata",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n11",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 74,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce12",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "A chave primária é escolhida entre chaves candidatas para identificar as linhas de uma relação.",
+      "gabarito": "C",
+      "comentario": "Uma das chaves candidatas é designada primária; as demais podem permanecer como candidatas alternativas.",
+      "ordem": 100212,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 76",
+      "tema": "Chave primária",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n12",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 76,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce13",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "Uma chave primária pode ser NULL quando o relacionamento com a tabela referenciada é opcional.",
+      "gabarito": "E",
+      "comentario": "Chaves primárias não podem ser nulas; a opcionalidade pode permitir NULL em chave estrangeira.",
+      "ordem": 100213,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 58",
+      "tema": "Nulidade da primária",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n13",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 58,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce14",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "Uma chave estrangeira pode admitir NULL quando a associação representada é opcional e as restrições o permitem.",
+      "gabarito": "C",
+      "comentario": "A cardinalidade mínima zero permite ausência de associação; o atributo FK pode ser definido como anulável.",
+      "ordem": 100214,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 57",
+      "tema": "Chave estrangeira opcional",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n14",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 57,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce15",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "Uma chave estrangeira não nula pode apontar livremente para uma chave inexistente na tabela de destino.",
+      "gabarito": "E",
+      "comentario": "A integridade referencial requer que uma referência não nula corresponda a registro válido referenciado.",
+      "ordem": 100215,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 58",
+      "tema": "Integridade referencial",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n15",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 58,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce16",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "A exclusão de registro referenciado exige política compatível com restrições, podendo ser proibida ou aplicar cascata.",
+      "gabarito": "C",
+      "comentario": "As ações referenciais são configuráveis, como restrição à exclusão ou propagação para dependentes.",
+      "ordem": 100216,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 58",
+      "tema": "Exclusão referenciada",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n16",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 58,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce17",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "O relacionamento um-para-um admite, conforme cardinalidades e regras, alternativas de implementação por chave estrangeira ou fusão.",
+      "gabarito": "C",
+      "comentario": "A escolha do desenho depende da obrigatoriedade e de restrições de cada lado; não há única estratégia para todos os 1:1.",
+      "ordem": 100217,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 91",
+      "tema": "1:1",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n17",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 91,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce18",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "Em todo relacionamento 1:1, a fusão de tabelas é obrigatória, inclusive se ambos os lados forem opcionais.",
+      "gabarito": "E",
+      "comentario": "A apostila diferencia estratégias conforme mínimos e máximos; em opcionalidade bilateral, fusão não é regra.",
+      "ordem": 100218,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 92",
+      "tema": "Obrigatoriedade 1:1",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n18",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 92,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce19",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "Na implementação relacional usual de 1:N, a chave estrangeira fica no lado N e referencia a chave do lado 1.",
+      "gabarito": "C",
+      "comentario": "Cada ocorrência do lado muitos associa-se ao identificador correspondente no lado um.",
+      "ordem": 100219,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 93",
+      "tema": "1:N",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n19",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 93,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce20",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "Para implementar 1:N, a solução geral é acrescentar na tabela do lado 1 uma lista de todas as chaves do lado N.",
+      "gabarito": "E",
+      "comentario": "A modelagem usual coloca FK no lado muitos, evitando atributo multivalorado do lado um.",
+      "ordem": 100220,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 93",
+      "tema": "Inversão 1:N",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n20",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 93,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce21",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "O relacionamento muitos-para-muitos costuma ser representado por uma tabela associativa com chaves estrangeiras.",
+      "gabarito": "C",
+      "comentario": "A relação intermediária transforma N:M em dois vínculos 1:N, podendo armazenar atributos da associação.",
+      "ordem": 100221,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 94",
+      "tema": "N:M",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n21",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 94,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce22",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "A tabela associativa de N:M pode armazenar atributos do próprio vínculo, como data de inscrição.",
+      "gabarito": "C",
+      "comentario": "Os atributos do relacionamento pertencem à ocorrência da associação e não necessariamente a uma entidade isolada.",
+      "ordem": 100222,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 95",
+      "tema": "Atributos da associação",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n22",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 95,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce23",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "É suficiente acrescentar uma única FK a uma das tabelas para representar quaisquer relações N:M, sem novas tabelas.",
+      "gabarito": "E",
+      "comentario": "Uma FK isolada em lado único não preserva múltiplas associações bidirecionais de N:M.",
+      "ordem": 100223,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 95",
+      "tema": "FK isolada em N:M",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n23",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 95,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-sup-modelagem-logica-ce24",
+      "cap": "FISCAL-TI-SUP-LOG",
+      "capNome": "Área Fiscal · Suplemento de TI · Modelagem Lógica Relacional",
+      "enunciado": "O modelo relacional em 1FN admite indistintamente listas de vários valores independentes em uma mesma célula.",
+      "gabarito": "E",
+      "comentario": "Na 1FN, o atributo da tupla contém um valor atômico do domínio; listas independentes exigem outro desenho.",
+      "ordem": 100224,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "6. Análise de Informações - Modelage.pdf, p. 64",
+      "tema": "Atomicidade",
+      "topico": "fiscal-sup-modelagem-logica",
+      "assuntoId": "fiscal-ti-modelagem-logica",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n24",
+      "fonte": {
+        "documento": "6. Análise de Informações - Modelage.pdf",
+        "pagina": 64,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Relação",
+      "q": "O que representa uma tupla?",
+      "a": [
+        "Uma linha ou ocorrência da relação."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 59",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n01",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce01"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Atributo",
+      "q": "Como identificar atributo em tabela?",
+      "a": [
+        "É a coluna que descreve uma propriedade de suas tuplas."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 60",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n02",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Domínio",
+      "q": "O que é o domínio do atributo?",
+      "a": [
+        "Conjunto dos valores admissíveis conforme seu tipo e restrições."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 60",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n03",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Grau",
+      "q": "O que é grau de uma relação?",
+      "a": [
+        "Quantidade de atributos ou colunas."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 60",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n04",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Cardinalidade da relação",
+      "q": "Que medida conta as tuplas de uma relação?",
+      "a": [
+        "A cardinalidade da relação."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 59",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n05",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Ordem das tuplas",
+      "q": "Existe primeira linha em sentido lógico?",
+      "a": [
+        "Não. Qualquer ordenação de saída depende de critérios externos."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 61",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n06",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Duplicatas",
+      "q": "O modelo relacional formal permite tuplas idênticas duplicadas?",
+      "a": [
+        "Não, pois a relação é um conjunto."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 59",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n07",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "NULL",
+      "q": "NULL significa o número zero?",
+      "a": [
+        "Não. Representa valor ausente, desconhecido ou não aplicável."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 64",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n08",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Superchave",
+      "q": "Uma superchave precisa ser mínima?",
+      "a": [
+        "Não, basta identificar cada tupla de modo único."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 69",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n09",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Chave candidata",
+      "q": "O que distingue chave candidata de superchave?",
+      "a": [
+        "Ser mínima, sem atributo removível mantendo a unicidade."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 74",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n10",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Superchave × candidata",
+      "q": "Qual relação entre superchaves e candidatas?",
+      "a": [
+        "Toda candidata é superchave; a recíproca não é obrigatória."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 74",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n11",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Chave primária",
+      "q": "De onde se escolhe a chave primária?",
+      "a": [
+        "Das chaves candidatas da relação."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 76",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n12",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Nulidade da primária",
+      "q": "Chave primária admite NULL?",
+      "a": [
+        "Não, por sua função de identificação."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 58",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n13",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Chave estrangeira opcional",
+      "q": "Quando uma FK pode ser nula?",
+      "a": [
+        "Quando o relacionamento é opcional e a coluna admite NULL."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 57",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n14",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Integridade referencial",
+      "q": "O que torna FK não nula válida?",
+      "a": [
+        "Referenciar uma chave existente na tabela de destino."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 58",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n15",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Exclusão referenciada",
+      "q": "Como tratar exclusão de registro referenciado?",
+      "a": [
+        "Aplicar a ação configurada, respeitando integridade: restringir, propagar ou outra válida."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 58",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n16",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "1:1",
+      "q": "Como pensar implementação 1:1?",
+      "a": [
+        "Avaliar opcionalidade antes de escolher FK, fusão ou relação separada."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 91",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n17",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Obrigatoriedade 1:1",
+      "q": "Toda relação 1:1 exige fusão?",
+      "a": [
+        "Não, depende da obrigatoriedade e do contexto."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 92",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n18",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "1:N",
+      "q": "Onde se posiciona a FK em 1:N?",
+      "a": [
+        "No lado N, apontando para o lado 1."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 93",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n19",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Inversão 1:N",
+      "q": "Por que não guardar lista de IDs no lado 1?",
+      "a": [
+        "Porque introduz coleção multivalorada; o lado N guarda a FK."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 93",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n20",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "N:M",
+      "q": "Como mapear N:M?",
+      "a": [
+        "Criar tabela associativa contendo FKs das entidades relacionadas."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 94",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n21",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Atributos da associação",
+      "q": "Onde registrar atributos de N:M?",
+      "a": [
+        "Na tabela associativa que representa a ocorrência do vínculo."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 95",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n22",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "FK isolada em N:M",
+      "q": "Por que N:M demanda associação?",
+      "a": [
+        "Para registrar cada par relacionado e manter múltiplas ocorrências de ambos os lados."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 95",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n23",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Atomicidade",
+      "q": "Uma célula deve guardar lista de telefones independentes?",
+      "a": [
+        "Não; modelam-se os vários telefones em linhas relacionadas."
+      ],
+      "src": "6. Análise de Informações - Modelage.pdf, p. 64",
+      "mapaNoId": "fiscal-sup-modelagem-logica-n24",
+      "questaoIds": [
+        "fiscal-sup-modelagem-logica-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Modelagem Lógica Relacional · Área Fiscal / suplemento de TI",
+    "versao": 1,
+    "fonte": "6. Análise de Informações - Modelage.pdf, pp. 57–95",
+    "ramos": [
+      {
+        "id": "g-estrutura-relacional",
+        "t": "Estrutura relacional",
+        "n": "Estruturas, definições e armadilhas sobre estrutura relacional.",
+        "cor": 1,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "6. Análise de Informações - Modelage.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-modelagem-logica-n01",
+            "t": "Relação",
+            "n": "Uma linha ou ocorrência da relação.",
+            "x": {
+              "e": "Tabela é a representação usual de relação; cada linha corresponde a uma tupla no modelo relacional.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 59",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce01"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n02",
+            "t": "Atributo",
+            "n": "É a coluna que descreve uma propriedade de suas tuplas.",
+            "x": {
+              "e": "O atributo descreve uma propriedade e seu domínio restringe os valores admissíveis.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 60",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce02"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n03",
+            "t": "Domínio",
+            "n": "Conjunto dos valores admissíveis conforme seu tipo e restrições.",
+            "x": {
+              "e": "Domínio descreve o conjunto de valores permitidos para um atributo, não a ordem física dos registros.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 60",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce03"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n04",
+            "t": "Grau",
+            "n": "Quantidade de atributos ou colunas.",
+            "x": {
+              "e": "O grau conta atributos; o número de tuplas define a cardinalidade da relação.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 60",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce04"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n05",
+            "t": "Cardinalidade da relação",
+            "n": "A cardinalidade da relação.",
+            "x": {
+              "e": "Grau conta atributos; cardinalidade, neste contexto, conta tuplas da relação.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 59",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce05"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n06",
+            "t": "Ordem das tuplas",
+            "n": "Não. Qualquer ordenação de saída depende de critérios externos.",
+            "x": {
+              "e": "O modelo relacional considera conjuntos de tuplas, sem ordem lógica intrínseca.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 61",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce06"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n07",
+            "t": "Duplicatas",
+            "n": "Não, pois a relação é um conjunto.",
+            "x": {
+              "e": "A teoria do modelo relacional proíbe duplicatas, embora implementações práticas SQL exijam cuidados próprios.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 59",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce07"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n08",
+            "t": "NULL",
+            "n": "Não. Representa valor ausente, desconhecido ou não aplicável.",
+            "x": {
+              "e": "NULL expressa ausência ou inaplicabilidade, não devendo ser confundido automaticamente com zero ou string vazia.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 64",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce08"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n24",
+            "t": "Atomicidade",
+            "n": "Não; modelam-se os vários telefones em linhas relacionadas.",
+            "x": {
+              "e": "Na 1FN, o atributo da tupla contém um valor atômico do domínio; listas independentes exigem outro desenho.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 64",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce24"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-identificacao",
+        "t": "Identificação",
+        "n": "Estruturas, definições e armadilhas sobre identificação.",
+        "cor": 2,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "6. Análise de Informações - Modelage.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-modelagem-logica-n09",
+            "t": "Superchave",
+            "n": "Não, basta identificar cada tupla de modo único.",
+            "x": {
+              "e": "A superchave exige unicidade, mas não minimalidade; por isso pode conter atributos extras.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 69",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce09"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n10",
+            "t": "Chave candidata",
+            "n": "Ser mínima, sem atributo removível mantendo a unicidade.",
+            "x": {
+              "e": "A minimalidade distingue chaves candidatas de superchaves com atributos supérfluos.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 74",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce10"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n11",
+            "t": "Superchave × candidata",
+            "n": "Toda candidata é superchave; a recíproca não é obrigatória.",
+            "x": {
+              "e": "A chave candidata é superchave mínima, mas uma superchave pode ter atributos redundantes.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 74",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce11"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n12",
+            "t": "Chave primária",
+            "n": "Das chaves candidatas da relação.",
+            "x": {
+              "e": "Uma das chaves candidatas é designada primária; as demais podem permanecer como candidatas alternativas.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 76",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce12"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n13",
+            "t": "Nulidade da primária",
+            "n": "Não, por sua função de identificação.",
+            "x": {
+              "e": "Chaves primárias não podem ser nulas; a opcionalidade pode permitir NULL em chave estrangeira.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 58",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce13"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-referencias",
+        "t": "Referências",
+        "n": "Estruturas, definições e armadilhas sobre referências.",
+        "cor": 3,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "6. Análise de Informações - Modelage.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-modelagem-logica-n14",
+            "t": "Chave estrangeira opcional",
+            "n": "Quando o relacionamento é opcional e a coluna admite NULL.",
+            "x": {
+              "e": "A cardinalidade mínima zero permite ausência de associação; o atributo FK pode ser definido como anulável.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 57",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce14"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n15",
+            "t": "Integridade referencial",
+            "n": "Referenciar uma chave existente na tabela de destino.",
+            "x": {
+              "e": "A integridade referencial requer que uma referência não nula corresponda a registro válido referenciado.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 58",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce15"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n16",
+            "t": "Exclusão referenciada",
+            "n": "Aplicar a ação configurada, respeitando integridade: restringir, propagar ou outra válida.",
+            "x": {
+              "e": "As ações referenciais são configuráveis, como restrição à exclusão ou propagação para dependentes.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 58",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce16"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-relacionamentos",
+        "t": "Relacionamentos",
+        "n": "Estruturas, definições e armadilhas sobre relacionamentos.",
+        "cor": 4,
+        "x": {
+          "e": "Tema de estudo",
+          "src": "6. Análise de Informações - Modelage.pdf"
+        },
+        "f": [
+          {
+            "id": "fiscal-sup-modelagem-logica-n17",
+            "t": "1:1",
+            "n": "Avaliar opcionalidade antes de escolher FK, fusão ou relação separada.",
+            "x": {
+              "e": "A escolha do desenho depende da obrigatoriedade e de restrições de cada lado; não há única estratégia para todos os 1:1.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 91",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce17"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n18",
+            "t": "Obrigatoriedade 1:1",
+            "n": "Não, depende da obrigatoriedade e do contexto.",
+            "x": {
+              "e": "A apostila diferencia estratégias conforme mínimos e máximos; em opcionalidade bilateral, fusão não é regra.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 92",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce18"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n19",
+            "t": "1:N",
+            "n": "No lado N, apontando para o lado 1.",
+            "x": {
+              "e": "Cada ocorrência do lado muitos associa-se ao identificador correspondente no lado um.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 93",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce19"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n20",
+            "t": "Inversão 1:N",
+            "n": "Porque introduz coleção multivalorada; o lado N guarda a FK.",
+            "x": {
+              "e": "A modelagem usual coloca FK no lado muitos, evitando atributo multivalorado do lado um.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 93",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce20"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n21",
+            "t": "N:M",
+            "n": "Criar tabela associativa contendo FKs das entidades relacionadas.",
+            "x": {
+              "e": "A relação intermediária transforma N:M em dois vínculos 1:N, podendo armazenar atributos da associação.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 94",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce21"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n22",
+            "t": "Atributos da associação",
+            "n": "Na tabela associativa que representa a ocorrência do vínculo.",
+            "x": {
+              "e": "Os atributos do relacionamento pertencem à ocorrência da associação e não necessariamente a uma entidade isolada.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 95",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce22"
+              ]
+            }
+          },
+          {
+            "id": "fiscal-sup-modelagem-logica-n23",
+            "t": "FK isolada em N:M",
+            "n": "Para registrar cada par relacionado e manter múltiplas ocorrências de ambos os lados.",
+            "x": {
+              "e": "Uma FK isolada em lado único não preserva múltiplas associações bidirecionais de N:M.",
+              "src": "6. Análise de Informações - Modelage.pdf, p. 95",
+              "questaoIds": [
+                "fiscal-sup-modelagem-logica-ce23"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": []
+  }
+}
