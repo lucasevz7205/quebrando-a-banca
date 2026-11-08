@@ -559,6 +559,14 @@ function topicoDoCap(cap){let best=null;for(const t of S.ed.values()) if((t.caps
 function indiceQuestoes(){return window.QBQuestionLinks.build(S.q,S.ed,S.rv)}
 function chaveQuestao(qid){return window.QBQuestionLinks.key(qid)}
 function recursosQuestao(qid){return indiceQuestoes().byQuestion.get(qid)||null}
+function atalhosQuestao(q){
+  const info=recursosQuestao(q.id),mapa=info?.matchedIds.find(id=>!!S.rv.get(id)?.mapa);
+  return `<div class="qb-qsource-actions"><button type="button" class="btn ghost small" data-qcard="${esc(q.id)}">Revisar este item nos Flashcards</button>${mapa?`<button type="button" class="btn ghost small" data-ir-mapa="${esc(mapa)}">Abrir mapa do tópico</button>`:''}</div>`;
+}
+function questoesEmMapa(qs){
+  if(!qs.length)return '';
+  return `<details class="qb-qsource-list"><summary>Questões relacionadas ao capítulo · ${qs.length}</summary><p class="rule">O vínculo é por capítulo do edital, não por nó semântico do mapa. Revele cada gabarito e comentário quando desejar conferir a regra.</p>${qs.map(q=>`<details class="qb-qsource-item"><summary>${esc(q.enunciado)}</summary><div><p><b>Gabarito: ${esc(LETRA[q.gabarito]||q.gabarito)}</b></p><p>${esc(q.comentario||'Comentário indisponível; confira a fonte.')}</p><small>${esc(q.ref||'Fonte não cadastrada')}</small>${atalhosQuestao(q)}</div></details>`).join('')}</details>`;
+}
 function nomeTopicoIndice(id,idx){return S.ed.get(id)||idx.virtualTopics.get(id)||{id,titulo:id}}
 function capNome(cap){for(const q of S.q.values()) if(q.cap===cap) return q.capNome||''; return ''}
 function questoesDoCap(cap){return [...S.q.values()].filter(q=>q.cap===cap).sort((a,b)=>(a.ordem||0)-(b.ordem||0))}
@@ -821,6 +829,7 @@ function viewItem(){
       ${temTravas(q)?`<span class="ref">Palavras de alcance destacadas no enunciado: confira se a assertiva generaliza ou restringe demais.</span>`:''}
       ${(()=>{const x=mecDe(q);return x&&MEC[x.m]?`<span class="calib">Mecanismo da banca: ${esc(x.m)} · ${esc(MEC[x.m].n)}.${x.v&&String(q.comentario||'').includes(x.v)?'':x.v?` Vacina: ${esc(x.v)}`:` ${esc(MEC[x.m].v)}`}</span>`:''})()}
       <span class="ref">${q.ref?('Ver '+esc(q.ref)+'.'):''}${esc(foiCaderno+prox)}</span>
+      ${atalhosQuestao(q)}
       ${precisaOrigem?chipsOrigem(q.id,r.origem):''}
       ${precisaOrigem?`<div class="just"><label for="just-txt">${a.marcada!=='B'&&!a.acertou&&a.conf===3?'Erro com certeza: o que te deu certeza? Escreva o que te levou a marcar e qual é a regra certa, com as suas palavras.':`Justifique para seguir: por que você ${a.marcada==='B'?'deixou em branco':(a.acertou?'chutou':'errou')} e qual é a regra certa, com as suas palavras. Se puder, dê um exemplo seu.`}</label>
         <textarea id="just-txt" data-just="${esc(q.id)}" placeholder="Ex.: confundi competência exclusiva com privativa; a exclusiva não pode ser delegada porque…">${esc(rd.just||'')}</textarea>
@@ -1520,6 +1529,11 @@ function filaMix(){
   for(const id of ids){ (S.rv.get(id).cartoes||[]).forEach((c,i)=>{const k=id+'@'+i,a=cav.get(k);
     if(cartVence(k)){ due.push({k,id,pr:(S.cartDeNovo&&S.cartDeNovo.has(k)?-1:cartNivel(a)),p:(a&&a.prox)||'0000'}); }
     else if(cartNovo(a)){ if(!novos.has(id)) novos.set(id,[]); novos.get(id).push(k); } }); }
+  /* Cartões derivados de questões entram no intercalado somente após avaliação manual anterior. */
+  for(const [k,a] of cav){
+    const qid=window.QBQuestionLinks?.questionId(k);
+    if(qid&&S.q.has(qid)&&!cartNovo(a)&&cartVence(k))due.push({k,id:k.split('@')[0],pr:(S.cartDeNovo&&S.cartDeNovo.has(k)?-1:cartNivel(a)),p:a.prox||'0000'});
+  }
   /* revisões: prioridade (Novamente, depois o degrau mais baixo, depois o mais atrasado); o teto diário corta o resto para amanhã */
   due.sort((x,y)=>(x.pr-y.pr)||(x.p<y.p?-1:x.p>y.p?1:0));
   for(const x of due.slice(0,revVagas)){ if(!porTop.has(x.id)) porTop.set(x.id,[]); porTop.get(x.id).push(x.k); }
@@ -1542,7 +1556,9 @@ function iniciarMix(){const f=filaMix(); if(!f.length){toast('Nenhum cartão par
 function viewCmix(){
   const m=S.cmix;
   if(m.idx>=m.fila.length) return `<div class="wrap" style="gap:14px"><div class="due calm"><div class="due-body"><h2 class="section-title">Sessão intercalada concluída</h2><div class="due-n"><span class="mono">${m.feitos}</span> avaliações</div><div class="due-meta">Cada cartão já tem a próxima data. Os marcados como Novamente voltaram no fim da sessão e voltam amanhã.</div></div><button class="btn" data-cmix-sair="1">Fechar</button></div></div>`;
-  const k=m.fila[m.idx], [id,i]=k.split('@'), rv=S.rv.get(id)||{}, c=(rv.cartoes||[])[+i]||{}, t=S.ed.get(id)||{}, ab=S.cartAbertos.has(k);
+  const k=m.fila[m.idx], [id,i]=k.split('@'),qid=window.QBQuestionLinks?.questionId(k),
+    c=cartaoDe(k)||{},info=qid?recursosQuestao(qid):null,
+    t=S.ed.get(info?.topicId||id)||indiceQuestoes().virtualTopics.get(info?.topicId)||{},ab=S.cartAbertos.has(k);
   const rated=S.cartRated.has(k);
   return `<div class="wrap" style="gap:14px">
     <div class="scorebar"><span class="progress">Cartão ${m.idx+1} de ${m.fila.length} · tópicos misturados</span><button class="btn ghost small" data-cmix-sair="1">Encerrar</button></div>
@@ -1786,6 +1802,7 @@ function viewMapa(){
     <p class="rule">Toque num ramo com ⓘ para abrir a explicação. Com "Evocar antes de ler", tente explicar antes de abrir.</p>
     <div class="m-centro">${esc(m.centro||t.titulo||'')}</div>
     <div class="m-grid">${ramos}</div>
+    ${questoesEmMapa(indiceQuestoes().byTopic.get(S.mapaId)||[])}
     ${m.autor?`<p class="rule">${esc(m.autor)}</p>`:''}
   </div>`;
 }
@@ -2181,6 +2198,13 @@ function wire(){
   document.querySelectorAll('details[data-grupo]').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.abertos.add(d.dataset.grupo);else S.abertos.delete(d.dataset.grupo)}));
   document.querySelectorAll('[data-status]').forEach(s=>s.addEventListener('change',()=>salvarStatus(s.dataset.status,s.value)));
   document.querySelectorAll('[data-ir-mapa]').forEach(b=>b.addEventListener('click',()=>{S.mapaId=b.dataset.irMapa;S.mapaAb=null;S.revelados.clear();setView('mapa');window.scrollTo({top:0})}));
+  document.querySelectorAll('[data-qcard]').forEach(b=>b.addEventListener('click',()=>{
+    const id=b.dataset.qcard,info=recursosQuestao(id);
+    if(!info)return;
+    S.cartQuestionFocus=id;S.cartId=info.topicId;S.cartPend=false;S.cmix=null;
+    setView('cartoes');
+    setTimeout(()=>document.getElementById('qbq-'+id)?.scrollIntoView({block:'center',behavior:'smooth'}),60);
+  }));
   document.querySelectorAll('[data-mx]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.mx;S.mapaX=S.mapaX||new Set();if(S.mapaX.has(k))S.mapaX.delete(k);else S.mapaX.add(k);render(true)}));
   document.querySelectorAll('[data-mtog]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.mtog;S.mapaAb=S.mapaAb||new Set();if(S.mapaAb.has(k))S.mapaAb.delete(k);else S.mapaAb.add(k);render(true)}));
   document.querySelectorAll('[data-mtodos]').forEach(b=>b.addEventListener('click',()=>{S.mapaAb=b.dataset.mtodos==='1'?new Set(['*']):new Set();render(true)}));
@@ -2189,7 +2213,7 @@ function wire(){
   const cp=$('#cart-pend'); if(cp) cp.addEventListener('change',()=>{S.cartPend=cp.checked;render(true)});
   document.querySelectorAll('[data-cfech]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.cfech;S.cartFech=S.cartFech||new Set();if(S.cartFech.has(k))S.cartFech.delete(k);else S.cartFech.add(k);render(true)}));
   document.querySelectorAll('[data-cf]').forEach(b=>b.addEventListener('click',()=>{S.cartFech=new Set();if(b.dataset.cf==='0'){const rv=S.rv.get(S.cartId);for(const c of (rv&&rv.cartoes)||[])S.cartFech.add(S.cartId+'#'+(c.tema||'Geral'))}render(true)}));
-  const cr=$('#cart-reset'); if(cr) cr.addEventListener('click',()=>{for(const k of [...S.cartAbertos]) if(k.startsWith(S.cartId+'@')){S.cartAbertos.delete(k);S.cartRated.delete(k);S.cartResp.delete(k);S.ia.delete(k)}render(true)});
+  const cr=$('#cart-reset'); if(cr) cr.addEventListener('click',()=>{const qs=indiceQuestoes().byTopic.get(S.cartId)||[],keys=new Set(qs.map(q=>chaveQuestao(q.id)));for(const k of [...S.cartAbertos]) if(k.startsWith(S.cartId+'@')||keys.has(k)){S.cartAbertos.delete(k);S.cartRated.delete(k);S.cartResp.delete(k);S.ia.delete(k)}render(true)});
   const mt=$('#mapa-top'); if(mt) mt.addEventListener('change',()=>{S.mapaId=mt.value;S.mapaAb=null;S.revelados.clear();render(true)});
   /* O detalhamento do edital está exclusivamente na aba Edital. */
   const ra=$('#rv-abrir'); if(ra) ra.addEventListener('click',()=>{for(const t of S.ed.values()){if(S.rv.has(t.id)||S.pt.has(t.id)){S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+t.id)}}render(true)});
