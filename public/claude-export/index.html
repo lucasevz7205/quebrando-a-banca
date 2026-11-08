@@ -414,6 +414,7 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/analytics.css">
 <link rel="stylesheet" href="/claude-export/page-hero.css">
 <link rel="stylesheet" href="/claude-export/top-nav.css">
+<link rel="stylesheet" href="/claude-export/traps.css">
 
 <div class="wrap">
   <header class="top qb-app-header">
@@ -1901,7 +1902,7 @@ function viewPegadinhasTopicos(){
           const itens=(pg.qids||[]).map(estadoItem).join('');
           corpo+=`<div class="pt pg-${esc(pg.origem||'analitica')}">
             ${oc?`<button class="pk ev" data-revelar="${esc(key)}">${esc(pg.armadilha)}</button>`:`<span class="pk">${esc(pg.armadilha)}</span>`}
-            ${oc?'':`${par}<p class="pd">${esc(pg.regra)}</p>${pg.sinal?`<p class="ptr">Sinal: ${esc(pg.sinal)}</p>`:''}
+            ${oc?'':`${pg.mecanismo&&MEC_MEMORIA[pg.mecanismo]?`<div class="qb-trap-key-inline"><b>${esc(pg.mecanismo)} · ${esc(MEC[pg.mecanismo]?.n||'')} · ${esc(MEC_MEMORIA[pg.mecanismo].lema)}</b>${esc(MEC_MEMORIA[pg.mecanismo].pergunta)}</div>`:''}${par}<p class="pd">${esc(pg.regra)}</p>${pg.sinal?`<p class="ptr">Sinal: ${esc(pg.sinal)}</p>`:''}
             <div class="pills"><span class="pill">${esc(PG_TIPO[pg.tipo]||pg.tipo||'')}</span><span class="pill ${pg.origem==='registrada'?'e':pg.origem==='prova'?'p':''}">${esc(PG_ORIG[pg.origem]||pg.origem||'')}${pg.origem==='prova'&&pg.fonteProva?' · '+esc(pg.fonteProva):''}</span>${itens}</div>
             ${pg.ref?`<span class="ps">${esc(pg.ref)}</span>`:''}`}</div>`;
         }
