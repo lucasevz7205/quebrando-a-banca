@@ -1,6 +1,30 @@
 # Contas de estudo
 
-A conta administradora continua usando o ambiente original da Câmara. Os demais logins precisam de um vínculo ativo em `StudyAccount`. Cada vínculo carrega seu próprio edital, banco de questões, pegadinhas e progresso.
+## Arquitetura acordada em 8/11/2026
+
+Uma única plataforma Base44 para todos os candidatos; cada login vê somente o conteúdo do seu concurso.
+
+- Compartilhado: código, interface, algoritmos, mecanismo de questões, flashcards e mapas.
+- Privado por login: edital, questões, materiais, mapas, flashcards, pegadinhas, respostas, Caderno de Erros, agenda, rodadas e eventos de aprendizagem.
+- O login administrador continua no banco legado da Câmara. Cada outro login com papel de usuário comum precisa de um StudyAccount ativo, e os dados são isolados por study_account_id.
+- As entidades StudyDocument e StudyDocumentPart restringem leitura e gravação diretas a administradores no Base44. As contas comuns só acessam esses dados pelo servidor autenticado, que valida o ID do usuário.
+
+## Painel para configurar outro candidato
+
+Um administrador entra em **Contas e concursos** pelo menu lateral do laboratório, em /contas. O procedimento é:
+
+1. Cadastre primeiro o novo login no painel de usuários do Base44 como usuário comum (papel user) e copie o ID exato. Não transfira a senha nem dados pessoais do administrador.
+2. Crie o vínculo entre esse ID e o nome do novo concurso, com a data da prova se conhecida. Ele começa desativado e vazio.
+3. Importe os arquivos JSON por coleção: edital, questoes, revisao (mapas e flashcards), materiais, pontos, pegadinhas, analise e textos.
+4. Ative somente depois de importar edital e questões. O usuário então pode entrar no mesmo site e acessar /estudar com suas credenciais.
+5. Antes de liberar o novo ambiente, valide com dois logins diferentes que cada um vê apenas seu próprio material, histórico e respostas.
+
+A importação **não copia respostas, históricos nem o Caderno de Erros** de outras contas. IDs existentes são mantidos sem sobrescrita. Para importar novos conteúdos, desative temporariamente o vínculo de destino. Um usuário pode ter mais de um concurso cadastrado, mas no máximo um ativo por vez, preservando os demais históricos.
+
+Os arquivos JSON podem ser vetores de documentos com campo id, objetos com records/documents ou objetos indexados por ID. A primeira versão do mecanismo aceita julgamentos **Certo/Errado**; provas de múltipla escolha precisarão de um formato de questão específico antes da importação.
+
+Validação técnica: 30 testes automatizados e compilação aprovados. Não equivale ainda a um teste real entre dois logins autenticados.
+
 
 ## Cadastrar um concurso para um login
 
