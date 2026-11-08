@@ -15,14 +15,17 @@
   const values=m=>m instanceof Map?[...m.values()]:[];
   const events=S=>values(S.learningEvents);
   const catalog=S=>values(S.learningContent).filter(x=>x.active!==false);
+  const practices=S=>events(S).filter(e=>e.kind==='practice'&&!e.skipped&&!e.invalid);
+  const conceptOf=(S,q)=>q.learningConcept||catalog(S).find(c=>(c.sourceItems||[]).includes(q.id))?.concept||null;
   const rounds=S=>[...(S.rodadas||[]).filter(x=>x.id!==S.round?.id),...(S.round?[S.round]:[])];
   function attempts(S) {
     const out=new Map();
     for(const rd of rounds(S)) for(const item of rd.itens||[]) if(item.learning?.id) {
       const e={...item.learning,ok:item.marcada===item.gabarito,marked:item.marcada,confidence:item.conf??null};
+      const current=S.q?.get(e.item); if(current&&version(current)!==e.version)e.invalid=true;
       out.set(e.id,e);
     }
-    for(const e of events(S)) if(e.kind==='attempt') out.set(e.id,e);
+    for(const e of events(S)) if(e.kind==='attempt') {const c=S.learningContent?.get(e.item);out.set(e.id,{...e,invalid:e.invalid||!!(c&&c.version!==e.version)});}
     return [...out.values()].sort((a,b)=>Date.parse(a.at)-Date.parse(b.at)||a.id.localeCompare(b.id));
   }
   function prior(S,q) {
@@ -40,7 +43,7 @@
   function metadata(S,q,L,conf,rd) {
     const ps=prior(S,q), at=new Date().toISOString();
     return {id:rd.id+':'+rd.idx,policy:POLICY,kind:'attempt',item:q.id,version:version(q),
-      concept:q.learningConcept||null,cap:q.cap,at,origin:'treino',exposure:ps.length?'seen':'unknown',
+      concept:conceptOf(S,q),cap:q.cap,at,origin:'treino',exposure:ps.length?'seen':'unknown',
       reference:ps.length?ps[ps.length-1].id:null,referenceAt:ps.length?ps[ps.length-1].at:null,
       feedback:enabled(S,'p1')&&L===q.gabarito&&conf===2&&q.comentario?condition(q):'padrao',
       confidence:[1,2,3].includes(conf)?conf:null,marked:L,ok:L===q.gabarito};
@@ -57,7 +60,7 @@
       else if(e.exposure!=='new') result.unknown++;
       const key=e.item+'|'+e.version;
       if(e.origin==='transferencia'&&e.exposure==='new'&&e.reviewed===true&&e.reference&&e.concept&&!transferSeen.has(key)) {result.transfer.push(e);transferSeen.add(key)}
-      const ref=valid.find(x=>x.id===e.reference);
+      const ref=all.find(x=>x.id===e.reference&&!x.invalid&&validDate(x.at)&&(valid.includes(x)||x.kind==='practice'&&!x.skipped));
       const age=ref?(Date.parse(e.at)-Date.parse(ref.at))/DAY:NaN;
       const compatible=ref&&(e.item===ref.item&&e.version===ref.version||result.transfer.includes(e)&&e.concept===ref.concept);
       if(compatible&&age>=7&&age<=10&&!used.has(ref.id)) {
@@ -86,14 +89,14 @@
     const es=events(S), as=attempts(S);
     return catalog(S).filter(c=>c.type==='variant'&&c.reviewed===true&&c.reserved===true&&c.contextChanged===true&&c.concept&&c.answer&&c.prompt&&c.explanation&&c.reference&&
       !es.some(e=>e.item===c.id)&&!as.some(e=>e.item===c.id)&&
-      as.some(e=>e.concept===c.concept&&e.ok&&!e.invalid));
+      [...as,...practices(S)].some(e=>e.concept===c.concept&&(e.ok||e.kind==='practice')&&!e.invalid));
   }
   const rate=xs=>xs.length?Math.round(xs.filter(x=>x.ok).length/xs.length*100)+'%':'Dados insuficientes';
   const stat=(title,xs)=>'<div class="learn-stat"><b>'+rate(xs)+'</b><span>'+esc(title)+'</span><small>'+xs.filter(x=>x.ok).length+' acertos / '+xs.length+' tentativas</small></div>';
   const panel=(title,body,open=false)=>'<details class="learn-panel" '+(open?'open':'')+'><summary>'+esc(title)+'</summary><div>'+body+'</div></details>';
   const button=(action,label,id='',other='')=>'<button class="btn ghost small" data-learn="'+action+'" data-id="'+esc(id)+'" '+other+'>'+esc(label)+'</button>';
   let ctx=null, activity=null, pending=new Map(), saving=false, error='', drafts={}, selected='indicadores';
-  function draw(){if(ctx)ctx.render(true)}
+  function draw(force=true){if(ctx)ctx.render(force)}
   async function save(e) {
     if(!ctx?.S.db)throw new Error('Banco de estudo indisponível.');
     pending.set(e.id,e);
@@ -105,28 +108,29 @@
     S.learningEvents ||= new Map(); S.learningContent ||= new Map();
     S.db.collection('aprendizagem').onSnapshot(s=>{
       for(const d of s.docs) S.learningEvents.set(d.id,{...d.data(),id:d.id});
-      S.learningLoaded=true;if(['aprendizagem','painel','conteudo'].includes(S.view))draw();
+      S.learningLoaded=true;if(['aprendizagem','painel','conteudo'].includes(S.view))draw(false);
     },()=>{error='Não foi possível carregar os registros de aprendizagem.';draw()});
     S.db.collection('aprendizagem_conteudos').onSnapshot(s=>{
       S.learningContent=new Map(s.docs.map(d=>[d.id,{...d.data(),id:d.id}]));
-      S.learningContentLoaded=true;if(['aprendizagem','conteudo'].includes(S.view))draw();
+      S.learningContentLoaded=true;if(['aprendizagem','conteudo'].includes(S.view))draw(false);
     },()=>{error='Não foi possível carregar as atividades.';draw()});
   }
   function weekly(S,today) {
     const end=Date.parse(today+'T23:59:59Z'), start=end-7*DAY;
-    const list=attempts(S).filter(e=>Date.parse(e.at)>start&&Date.parse(e.at)<=end&&!e.invalid);
+    const list=rounds(S).flatMap(rd=>(rd.itens||[]).map((i,n)=>({id:rd.id+':'+n,at:i.learning?.at||rd.inicio,cap:rd.cap,marked:i.marcada,ok:i.marcada===i.gabarito}))).filter(e=>validDate(e.at)&&Date.parse(e.at)>start&&Date.parse(e.at)<=end);
     const by=new Map();
     for(const e of list){const key=e.cap||e.concept||'Sem assunto';if(!by.has(key))by.set(key,[]);by.get(key).push(e)}
     const worst=[...by].filter(([,a])=>a.length>=5).sort((a,b)=>a[1].filter(x=>x.ok).length/a[1].length-b[1].filter(x=>x.ok).length/b[1].length)[0];
     const suggestion=worst?'Revisar '+worst[0]+' e explicar os erros antes de conferir o comentário.':'Registrar pelo menos cinco tentativas em um assunto para orientar o próximo ciclo.';
-    const id='semana-'+today;
-    const saved=events(S).find(e=>e.kind==='weekly'&&e.periodEnd===today);
+    const day=new Date(today+'T12:00:00Z');day.setUTCDate(day.getUTCDate()-((day.getUTCDay()+6)%7));
+    const id='semana-'+day.toISOString().slice(0,10);
+    const saved=events(S).find(e=>e.kind==='weekly'&&e.id===id);
     return {id,list,worst,suggestion,saved,start:new Date(start+1).toISOString().slice(0,10)};
   }
   function weeklyHTML(S,today) {
     if(!enabled(S,'p8'))return '';
     const w=weekly(S,today);
-    return panel('Diagnóstico dos últimos 7 dias', '<p>'+esc(w.start)+' a '+esc(today)+' · '+w.list.length+' tentativas prospectivas · '+w.list.filter(x=>x.ok).length+' acertos.</p><p>'+esc(w.suggestion)+'</p><label>Ação da próxima semana<textarea data-learn-draft="weekly" rows="2">'+esc(drafts.weekly??w.saved?.text??w.suggestion)+'</textarea></label>'+button('weekly','Salvar decisão do ciclo',today)+(w.saved?'<p class="rule">Decisão salva. As tarefas do calendário permanecem editáveis.</p>':'')+button('plan','Abrir planejamento'),false);
+    return panel('Diagnóstico dos últimos 7 dias', '<p>'+esc(w.start)+' a '+esc(today)+' · '+w.list.length+' tentativas de treino · '+w.list.filter(x=>x.ok).length+' acertos.</p><p>'+esc(w.suggestion)+'</p><label>Ação da próxima semana<textarea data-learn-draft="weekly" rows="2">'+esc(drafts.weekly??w.saved?.text??w.suggestion)+'</textarea></label>'+button('weekly','Salvar decisão do ciclo',today)+(w.saved?'<p class="rule">Decisão salva. As tarefas do calendário permanecem editáveis.</p>':'')+button('plan','Abrir planejamento'),false);
   }
   function contentHTML(S,m) {
     const cards=catalog(S).filter(c=>c.material===m.id&&['recall','pretest'].includes(c.type));
@@ -139,7 +143,7 @@
     const response=answered?'<div class="learn-rule"><b>'+ (isCE?'Gabarito: '+esc(c.answer):'Compare sua resposta')+'</b><p>'+esc(c.explanation)+'</p><small>'+esc(c.reference)+'</small></div><p>'+esc(a.skipped?'Revelação sem tentativa registrada separadamente.':'Sua resposta: '+a.response)+'</p>':
       '<p class="statement">'+esc(c.prompt)+'</p>'+(isCE?'<fieldset><legend>Sua resposta</legend><label><input type="radio" name="learn-answer" value="C"> Certo</label><label><input type="radio" name="learn-answer" value="E"> Errado</label><label><input type="radio" name="learn-answer" value="B"> Em branco</label></fieldset><label>Confiança antes da correção<select id="learn-confidence"><option value="">Selecione</option><option value="1">Chute</option><option value="2">Dúvida</option><option value="3">Certeza</option></select></label>':'<label>Sua explicação<textarea data-learn-draft="response" rows="3" placeholder="Responda com suas palavras antes de conferir.">'+esc(drafts.response||'')+'</textarea></label>')+
       button('answer','Responder e conferir')+(!isCE?button('skip',c.type==='pretest'?'Pular e ver explicação':'Revelar sem tentar'):'');
-    return '<section class="learn-active" aria-live="polite"><h3>'+esc(c.title)+'</h3><p class="rule">'+({variant:'Aplicação em outro contexto',duel:'Duelo de conceitos',recall:'Evocação',pretest:'Pré-teste'}[c.type]||'Prática')+'</p>'+response+(answered?button('close','Concluir'):'')+'</section>';
+    return '<section class="learn-active" aria-live="polite"><h3>'+esc(c.title)+'</h3><p class="rule">'+({variant:'Aplicação em outro contexto',duel:'Duelo de conceitos',recall:'Evocação',pretest:'Pré-teste'}[c.type]||'Prática')+'</p>'+response+(answered?button('close','Concluir')+((c.sourceItems||[]).length?button('source','Praticar itens relacionados'):''):'')+'</section>';
   }
   function render(S,today) {
     const m=metrics(attempts(S)), tasks=catalog(S), vars=eligibleVariants(S);
@@ -176,9 +180,10 @@
     const S=ctx.S,c=catalog(S).find(x=>x.id===id);
     if(!c)throw new Error('Atividade indisponível.');
     if(activity&&activity.phase!=='feedback')throw new Error('Conclua a atividade aberta antes de iniciar outra.');
+    if(!enabled(S,{variant:'p2',duel:'p3',recall:'p5',pretest:'p7'}[c.type]))throw new Error('Processo desativado.');
     if(c.type==='variant'&&!eligibleVariants(S).some(x=>x.id===id))throw new Error('Variante sem elegibilidade confirmada.');
     const seen=events(S).some(e=>e.item===id);
-    const reference=attempts(S).filter(e=>e.concept===c.concept&&!e.invalid&&e.ok).at(-1);
+    const reference=[...attempts(S),...practices(S)].filter(e=>e.concept===c.concept&&!e.invalid&&(e.ok||e.kind==='practice')).sort((a,b)=>Date.parse(a.at)-Date.parse(b.at)).at(-1);
     const attemptId=uid(), at=new Date().toISOString();
     await save({id:attemptId+'-exposure',kind:'exposure',item:id,version:c.version||hash(c.prompt+c.answer+c.explanation),at,origin:c.type});
     activity={id:attemptId,card:c,phase:'question',seen,reference,startedAt:at};drafts.response='';
@@ -194,14 +199,15 @@
       if(!response||response!=='B'&&!confidence)throw new Error('Marque a resposta e a confiança antes de conferir.');
       if(response==='B')confidence=null;
     } else if(!skip&&!response)throw new Error('Escreva uma tentativa ou escolha revelar sem tentar.');
-    const e={id:a.id,kind:c.type==='variant'?'attempt':'practice',item:c.id,version:c.version||hash(c.prompt+c.answer+c.explanation),concept:c.concept,at:new Date().toISOString(),
+    const e=a.result||{id:a.id,kind:c.type==='variant'?'attempt':'practice',item:c.id,version:c.version||hash(c.prompt+c.answer+c.explanation),concept:c.concept,at:new Date().toISOString(),
       origin:c.type==='variant'?'transferencia':c.type,exposure:!a.seen&&c.reserved?'new':a.seen?'seen':'unknown',
       reference:a.reference?.id||null,referenceAt:a.reference?.at||null,reviewed:c.reviewed===true,
       marked:c.type==='variant'?response:null,ok:c.type==='variant'?response===c.answer:null,confidence,
       response:skip?'':response,skipped:!!skip,elapsedMs:Date.now()-Date.parse(a.startedAt),policy:POLICY,
       material:c.material||null,followUpAfter:new Date(Date.now()+7*DAY).toISOString()};
+    a.result=e;
     await save(e);
-    a.phase='feedback';a.response=response;a.skipped=skip;
+    a.phase='feedback';a.response=e.response||e.marked;a.skipped=e.skipped;
   }
   async function action(name,id) {
     const S=ctx.S;
@@ -209,8 +215,9 @@
     if(name==='plan'){ctx.setView('painel');return}
     if(name==='close'){activity=null;return}
     if(name==='start'){await begin(id);return}
+    if(name==='source'){const c=activity?.card;const ids=(c?.sourceItems||[]).filter(id=>S.q.has(id));if(!ids.length)throw new Error('Nenhum item vinculado disponível.');if(S.round&&!S.round.fim)throw new Error('Conclua sua rodada atual primeiro.');activity=null;ctx.startSource(ids,c.title);return}
     if(name==='answer'||name==='skip'){await answer(name==='skip');return}
-    if(name==='retry'){for(const e of [...pending.values()])await save(e);return}
+    if(name==='retry'){for(const e of [...pending.values()])await save(e);if(activity?.result&&!pending.has(activity.id)){activity.phase='feedback';activity.response=activity.result.response||activity.result.marked;activity.skipped=activity.result.skipped;}return}
     if(name==='weekly'){
       const w=weekly(S,id), text=String(drafts.weekly??w.saved?.text??w.suggestion).trim();
       if(!text)throw new Error('Escreva a ação do ciclo.');
