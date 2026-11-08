@@ -51,3 +51,14 @@ test('P2: two independent windows never share an event identifier',async()=>{
  const a=harness(card),b=harness(card);await a.click('start','recall');await b.click('start','recall');
  const aid=[...a.saved.values()][0].id,bid=[...b.saved.values()][0].id;assert.notEqual(aid,bid);
 });
+test('P5: recalled flashcard duplicate is hidden; P7 pretest stays within Materiais',async()=>{
+ const source={...card,type:'pretest',material:'m'};
+ const h=harness(source);
+ const buttons=h.L.contentHTML(h.S,{id:'m'});
+ assert.match(buttons,/Sondagem antes da leitura/);
+ assert.doesNotMatch(buttons,/Evocar sem consultar/);
+ await h.click('start','recall');
+ assert.equal(h.S.view,'conteudo');
+ assert.match(h.L.activityHTML(),/Explain the rule/);
+ assert.doesNotMatch(h.L.render(h.S,'2026-11-08'),/Explain the rule/);
+});
