@@ -5,10 +5,10 @@ Data de auditoria: 2026-11-08. Ambiente de estudo: 6af069aa28e43e39f27bd73c. Fon
 ## Resultado consolidado
 
 - Tópicos cadastrados: 75; distribuição {"00":20,"01":16,"02":20,"03":19}.
-- Questões comentadas cadastradas: 72. Procedência declarada: {"Autoral · adaptação para treino":72}.
-- Cartões: 150, em 75 documentos. Mapas: 75; nós existentes no total: 297 (não mede profundidade/qualidade).
-- Vínculos explícitos cartão → nó de mapa: 0/150 na auditoria inicial. **Piloto T04:** após o levantamento, foram vinculados os dois cartões aos nós `conceito-1` e `conceito-2`, elevando o total para **2/150** (demais cartões não modificados).
-- Déficit matemático de questões para atingir 20 por tópico sem reaproveitamento: 1428. **Esta cifra não é meta de geração definitiva**: questões do mesmo assunto devem formar um banco único e compartilhado entre teoria/bateria, após normalização.
+- Questões comentadas cadastradas na auditoria inicial: 72; **agora 96**, após inclusão de 24 itens autorais na T04. Procedência declarada: {"Autoral · adaptação para treino":72}.
+- Cartões na auditoria inicial: 150; **agora 187**, em virtude de 37 novos cartões da T04; mapas permanecem 75, com 44 nós só no mapa T04. Cartões originais: 150, em 75 documentos. Mapas: 75; nós existentes no total: 297 (não mede profundidade/qualidade).
+- Vínculos explícitos cartão → nó de mapa: 0/150 na auditoria inicial. **Piloto T04 concluído:** mapa ampliado para 44 nós, 39 cartões mapeados (incluindo os dois originais preservados). Links explicitamente válidos: 39/39 na T04. Demais cartões não modificados, total geral **39/187**.
+- Déficit matemático inicial para atingir 20 por tópico sem reaproveitamento: 1428; com a T04 cumprida, **1409** faltantes em tarefas distintas. **Esta cifra não é meta de geração definitiva**: questões do mesmo assunto devem formar um banco único e compartilhado entre teoria/bateria, após normalização.
 - A contagem de nós não prova cobertura dos subtópicos das apostilas. Status de cobertura semântica: **não auditável sem o PDF integral**.
 - Revisão ativa: os 150 flashcards existentes usam o mecanismo de autoavaliação e espaçamento do app, porém a coleção `cartoes_aval` não tinha registros nesse ambiente durante o inventário: **0 avaliações registradas por assunto**. Material disponível não equivale a revisão efetivamente realizada.
 
@@ -21,7 +21,7 @@ As linhas abaixo são tópicos operacionais da trilha e ainda não foram fundida
 | 00 | 01 | Orientações de estudo | Monte uma rotina realista | 0 | 3 | 2 | 0/2 | Lacuna |
 | 00 | 02 | Orientações de estudo | Crie constância no ciclo | 0 | 3 | 2 | 0/2 | Lacuna |
 | 00 | 03 | Orientações de estudo | Planeje a revisão com resumos e mapas | 0 | 3 | 2 | 0/2 | Lacuna |
-| 00 | 04 | Direito Constitucional | Constitucionalismo e neoconstitucionalismo | 1 | 4 | 2 | 0/2 | Lacuna |
+| 00 | 04 | Direito Constitucional | Constitucionalismo e neoconstitucionalismo | **25** | **44** | **39** | **39/39** | **Cobertura estrutural concluída; revisão editorial pendente** |
 | 00 | 05 | Tecnologia da Informação | Pirâmide DIKW e dados abertos | 1 | 4 | 2 | 0/2 | Lacuna |
 | 00 | 06 | Direito Administrativo | Regime jurídico administrativo e princípios expressos | 1 | 4 | 2 | 0/2 | Lacuna |
 | 00 | 07 | Português | Ortografia, acentuação e acentos diferenciais | 1 | 4 | 2 | 0/2 | Lacuna |
@@ -98,7 +98,7 @@ As linhas abaixo são tópicos operacionais da trilha e ainda não foram fundida
 
 **Assunto:** Constitucionalismo e neoconstitucionalismo. Fonte de leitura indicada no roteiro: `DIREITO CONSTITUCIONAL.zip › 1. Conceito. Classificação. Aplicab.pdf`.
 
-A trilha disponível no Base44 descreve: (a) constitucionalismo como limitação do poder, (b) força normativa da Constituição, (c) centralidade dos direitos fundamentais, (d) papel dos princípios no neoconstitucionalismo. Ela **não contém o PDF** nem a extensão e as ressalvas de cada tópico. Uma questão autoral comentada, dois cartões e um mapa preliminar (4 nós) já existem para esta tarefa. Os dois cartões receberam `mapaNoId` explícito, conferido contra os nós existentes; a questão original, o gabarito e os históricos permanecem intactos. **Não marcar como completo:** faltam 19 questões distintas e cobertura editorial dos subtópicos da apostila.
+A trilha disponível no Base44 descreve: (a) constitucionalismo como limitação do poder, (b) força normativa da Constituição, (c) centralidade dos direitos fundamentais, (d) papel dos princípios no neoconstitucionalismo. Ela **não contém o PDF** nem a extensão e as ressalvas de cada tópico. **Pós-recebimento da fonte:** a tarefa tem **25 questões únicas** (24 autorais novas + 1 original preservada), todas com comentários e C/E; **44 nós** em sete ramos (seção 1.2, p. 7–18), e **39 cartões** de evocação/aplicação com correspondência explícita a nó (39/39 validada). Os itens novos não são transcrições integrais de provas: são questões autorais derivadas da leitura. O mecanismo de espaçamento existente permanece intacto; não houve criação artificial de avaliações.
 
 **Critérios para homologação:** (1) fonte PDF efetivamente lida e páginas/seções rastreáveis, (2) pelo menos 20 itens independentes com C/E, comentário e prova de origem, (3) mapa multinível cobrindo conceitos, autores, fases históricas, diferenciações e armadilhas realmente tratados na apostila, (4) cartões por subtópico com perguntas de recuperação e aplicação, (5) mapaNoId individual válido em cada cartão, (6) associação das questões ao mesmo assunto e reutilização por baterias sem duplicação, (7) testes do app e conferência editorial de exemplos.
 
@@ -114,3 +114,9 @@ A trilha disponível no Base44 descreve: (a) constitucionalismo como limitação
 - Trilha 00 · Tarefas 06 (princípios expressos), 12 (implícitos), 18 (bateria de princípios): reutilização por subassunto, não por todo o PDF indistintamente.
 - Trilha 00 · Tarefas 09 e 19: introdução à Contabilidade (objeto, finalidade, usuários) e respectiva bateria.
 - Trilha 00 · Tarefas 04, 10, 16: mesma apostila de Direito Constitucional, **mas assuntos diferentes**, não devem compartilhar indiscriminadamente as mesmas questões.
+
+## Atualização após o recebimento das fontes em 08/11/2026
+
+Recebidos no chat os arquivos `primo.zip` (Trilhas 00 a 03), `DIREITO CONSTITUCIONAL.zip`, `DIREITO ADMINISTRATIVO.zip`, `DIREITO TRIBUTÁRIO.zip`, `PORTUGUÊS.zip`, `RACIOCÍNIO LÓGICO.zip` e `CONTABILIDADE.zip`. **Não foi fornecido `TI.zip`, necessário às tarefas de Tecnologia da Informação.** Os PDFs permaneceram no material fornecido pelo usuário, e a base contém apenas conhecimento transformado em perguntas, explicações e mapa, com indicação de páginas.
+
+A validação da T04 conferiu IDs, gabaritos, 25 enunciados distintos, 39 cartões e a integridade dos 8 fragmentos que compõem o documento de revisão. A cobertura do PDF nos ramos estudados é estrutural; demanda avaliação pedagógica do usuário antes de chamá-la de domínio da matéria.
