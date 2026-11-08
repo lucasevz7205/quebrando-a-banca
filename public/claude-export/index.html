@@ -1447,7 +1447,7 @@ function viewEdital(){
         const outros=mats.filter(m=>m!==mapa);
         const acts=`<div class="acts">
             ${mapa?`<a class="lnk" href="${esc(mapa.url)}" target="_blank" rel="noopener">Mapa mental</a>`:((S.rv.get(t.id)||{}).mapa?`<button class="lnk" data-ir-mapa="${esc(t.id)}">Mapa mental</button>`:'<span class="lnk off">Mapa mental</span>')}
-            ${nr||nVinc?`<button class="lnk" data-ir-cart="${esc(t.id)}">Flashcards / revisão ativa${nCart?(()=>{const o=cartStats(t.id);return ` · ${nCart} cartões${o.firmes?` · ${o.firmes} firmes`:''}${o.hoje?` · ${o.hoje} hoje`:''}`})():''}${nVinc?` · ${nVinc} questões vinculadas`:''}</button>`:'<span class="lnk off">Flashcards / revisão ativa</span>'}
+            ${nCart||nVinc?`<button class="lnk" data-ir-cart="${esc(t.id)}">Flashcards / revisão ativa${nCart?(()=>{const o=cartStats(t.id);return ` · ${nCart} cartões${o.firmes?` · ${o.firmes} firmes`:''}${o.hoje?` · ${o.hoje} hoje`:''}`})():''}${nVinc?` · ${nVinc} questões vinculadas`:''}</button>`:'<span class="lnk off">Flashcards / revisão ativa</span>'}
             ${(t.caps||[]).length?`<button class="lnk" data-treinar="${esc(t.caps[0])}">Treinar${s.total?` · ${s.resp}/${s.total}`:''}</button>`:'<span class="lnk off">Treinar</span>'}
             ${nPg?`<button class="lnk" data-ir-pg="${esc(t.id)}">Pegadinhas · ${nPg}</button>`:''}</div>`;
         html+=`<div class="topic${t.foraEdital?' fora':''}" id="tp-${esc(t.id)}">
@@ -2259,7 +2259,11 @@ function wire(){
   }));
   document.querySelectorAll('[data-evo-pagina]').forEach(b=>b.addEventListener('click',()=>{S.evoPagina=Number(b.dataset.evoPagina);render(true)}));
   document.querySelectorAll('[data-sub]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.sub)));
-  document.querySelectorAll('[data-ir-cart]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.irCart;if(((S.rv.get(id)||{}).cartoes||[]).length){S.cartId=id;S.cartPend=false;setView('cartoes');window.scrollTo({top:0});return}const t=S.ed.get(id);S.fMat=t?t.sigla:'';S.evocar=true;S.revelados.clear();if(t)S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+id);setView('revisao');setTimeout(()=>{const el=document.getElementById('rv-'+id);if(el)el.scrollIntoView({block:'start'})},30)}));
+  document.querySelectorAll('[data-ir-cart]').forEach(b=>b.addEventListener('click',()=>{
+    const id=b.dataset.irCart,hasCards=!!((S.rv.get(id)||{}).cartoes||[]).length,hasQuestions=indiceQuestoes().byTopic.has(id);
+    if(hasCards||hasQuestions){S.cartId=id;S.cartQuestionFocus=null;S.cartPend=false;S.cmix=null;setView('cartoes');window.scrollTo({top:0});return}
+    const t=S.ed.get(id);S.fMat=t?.sigla||'';setView('edital');
+  }));
   document.querySelectorAll('[data-cart-hoje]').forEach(b=>b.addEventListener('click',iniciarMix));
   document.querySelectorAll('[data-cmix-next]').forEach(b=>b.addEventListener('click',()=>{const m=S.cmix;if(!m)return;const k=m.fila[m.idx];m.idx++;S.cartRated.delete(k);S.cartAbertos.delete(k);S.cartResp.delete(k);render(true);window.scrollTo({top:0})}));
   document.querySelectorAll('[data-cmix-sair]').forEach(b=>b.addEventListener('click',()=>{S.cmix=null;render(true)}));
