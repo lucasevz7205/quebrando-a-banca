@@ -31,13 +31,14 @@
   function prior(S,q) {
     return attempts(S).filter(e=>e.item===q.id&&e.version===version(q)&&e.origin==='treino'&&!e.invalid);
   }
-  function condition(q) {return parseInt(hash(q.cap||q.id),16)%2?'especifico':'padrao'}
+  /* Alocação do piloto P1 por tentativa, não por matéria. Uma matéria não determina o grupo. */
+  function condition(q,rd) {return parseInt(hash([rd?.id||'',''+(rd?.idx??0),q.id].join('|')),16)%2?'especifico':'padrao'}
   function feedback(S,q,a) {
     if(!enabled(S,'p1')||!a||a.rep||a.marcada==='B'||![1,2,3].includes(a.conf)) return '';
     if(!a.acertou&&a.conf===3) return '<span class="calib alert">Erro com certeza: qual trecho sustentou sua escolha? Confira a regra e verifique se houve troca de conceitos.</span>';
     if(!a.acertou&&a.conf===2) return '<span class="calib">Você sinalizou dúvida. Compare sua interpretação com a regra do comentário antes de seguir.</span>';
     if(a.acertou&&a.conf===3) return '<span class="calib">Certeza e acerto nesta tentativa. A revisão posterior verificará a manutenção do acerto.</span>';
-    if(a.acertou&&a.conf===2&&q.comentario&&condition(q)==='especifico') return '<span class="calib">Acertou com dúvida. Identifique a regra que confirmou sua resposta e explique por que a alternativa oposta estaria errada.</span><div class="learn-rule"><b>Regra a fixar · comentário do item</b><p>'+esc(q.comentario)+'</p></div>';
+    if(a.acertou&&a.conf===2&&q.comentario&&a.pilotFeedback==='especifico') return '<span class="calib">Acertou com dúvida. O acerto não prova domínio: identifique a regra decisiva antes de avançar.</span><div class="learn-rule"><b>Evocação rápida</b><p>Qual elemento do enunciado confirma a regra? Por que o julgamento oposto estaria errado? Responda de memória e confira com o comentário abaixo.</p></div>';
     return '';
   }
   function metadata(S,q,L,conf,rd) {
@@ -46,7 +47,8 @@
     return {id:rd.id+':'+rd.idx,policy:POLICY,kind:'attempt',item:q.id,version:version(q),
       concept:conceptOf(S,q),cap:q.cap,at,origin:'treino',exposure:ps.length?'seen':'unknown',
       reference:ref?.id||null,referenceAt:ref?.at||null,
-      feedback:enabled(S,'p1')&&L===q.gabarito&&conf===2&&q.comentario?condition(q):'padrao',
+      feedback:enabled(S,'p1')&&L===q.gabarito&&conf===2&&q.comentario?condition(q,rd):'padrao',
+      allocation: 'piloto-p1-por-tentativa-v1',
       confidence:[1,2,3].includes(conf)?conf:null,marked:L,ok:L===q.gabarito,elapsedMs:rd.learningShown?.idx===rd.idx?Math.max(0,Date.now()-rd.learningShown.at):null};
   }
   function metrics(list,now=Date.now()) {
