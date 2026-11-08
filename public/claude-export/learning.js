@@ -145,6 +145,13 @@
     if(!cards.length)return '';
     return '<div class="learn-inline">'+cards.map(c=>button('start','Sondagem antes da leitura',c.id)).join('')+'</div>';
   }
+  /* Somente aplicação inédita realmente distinta de flashcards entra em Pegadinhas. Os duelos já pertencem ao banco de pegadinhas. */
+  function pegadinhasHTML(S) {
+    if(!enabled(S,'p2'))return '';
+    const vars=eligibleVariants(S);
+    if(!vars.length)return '';
+    return '<section class="qb-trap-contrast" aria-label="Transferência para questões inéditas"><b>Aplicação inédita · verificação de transferência</b><p>Depois de praticar o conceito, responda uma variante editorialmente revisada em contexto diferente. Não é um flashcard e não substitui o treinamento da banca.</p>'+vars.map(c=>'<p><strong>'+esc(c.title)+'</strong> '+button('start','Testar conceito em questão inédita',c.id)+'</p>').join('')+'</section>';
+  }
   function activityHTML() {
     if(!activity)return '';
     const a=activity,c=a.card, answered=a.phase==='feedback', isCE=c.type==='variant';
@@ -298,5 +305,5 @@
     }));
   }
   window.addEventListener?.('beforeunload',event=>{if(pending.size){event.preventDefault();event.returnValue='';}});
-  window.QBLearning={recordPrimary,statusHTML,version,metadata,feedback,metrics,simulate,eligibleVariants,validateCard,attempts,mount,render,wire,weeklyHTML,contentHTML,activityHTML,flags,enabled};
+  window.QBLearning={recordPrimary,statusHTML,version,metadata,feedback,metrics,simulate,eligibleVariants,validateCard,attempts,mount,render,wire,weeklyHTML,contentHTML,pegadinhasHTML,activityHTML,flags,enabled};
 })();
