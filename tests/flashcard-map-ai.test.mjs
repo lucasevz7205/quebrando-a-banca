@@ -58,3 +58,11 @@ test("Bridge requires own authenticated server lookup and usage cap, never brows
   assert.match(markup,/data-voltar-flash/);
   assert.match(markup,/data-map-node/);
 });
+test('A questão ligada a um nó tem comentário oculto até abertura e volta ao flashcard',()=>{
+ const shell=fs.readFileSync('src/components/qb/study-shell.html','utf8');
+ assert.match(shell,/ligadasAoNo=\(n\.x\?\.questaoIds\|\|\[\]\)/);
+ assert.match(shell,/<details class="qb-qsource-item"><summary>\$\{esc\(q\.enunciado\)\}<\/summary>/);
+ assert.match(shell,/Gabarito: \$\{q\.gabarito==='C'\?'Certo':'Errado'\}/);
+ assert.match(shell,/data-qcard/);
+ assert.match(shell,/data-voltar-flash/);
+});

@@ -176,3 +176,7 @@
   .qb-qsource-actions .btn{width:100%;justify-content:center;}
   .qb-qrev-card{padding:11px;}
 }
+/* Questões editoriais específicas de um nó do mapa; revelar resultado é opcional. */
+.qb-map-questions{border-top:1px solid var(--line);margin-top:12px;padding-top:10px;}
+.qb-map-questions>summary{font-size:12px;font-weight:700;cursor:pointer;color:var(--pen);line-height:1.5;}
+.qb-map-questions .qb-qsource-item{background:var(--surface);}
