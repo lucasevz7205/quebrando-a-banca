@@ -2036,6 +2036,7 @@ function viewConteudo(){
   }
   const fh=fontes.length?`<h2 class="section-title">Fontes do projeto</h2><div class="mat-l">${fontes.map(m=>`<div class="mat"><span class="mt">${m.url?`<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>`:esc(m.titulo)}</span><span class="mtype">${(m.topicos||[]).map(id=>esc(lblT(S.ed.get(id))||id)).join(', ')||esc(MTIPO[m.tipo]||'')}</span>${window.QBLearning?window.QBLearning.contentHTML(S,m):''}</div>`).join('')}</div>`:'';
   return `<div class="wrap" style="gap:14px">
+    ${window.QBLearning?window.QBLearning.activityHTML():''}
     ${html||'<div class="notice">Nenhum material gerado ainda.</div>'}
     ${fh}
   </div>`;
