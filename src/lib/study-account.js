@@ -8,7 +8,7 @@ async function resolveAccount(base44, user) {
   if (matches.length > 1) throw new Error("Há mais de um concurso ativo para esta conta. Solicite a correção ao administrador.");
   const account = matches[0];
   if (!account) return null;
-  return { id: account.id, name: account.exam_name, date: account.exam_date || null };
+  return { id: account.id, userId: user.id, name: account.exam_name, date: account.exam_date || null };
 }
 
 export const getStudyAccount = createServerFn({ method: "GET" })
