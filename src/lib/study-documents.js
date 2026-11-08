@@ -72,7 +72,7 @@ export async function writeDocument(storage, { path, operation, value }) {
     next = { ...existing, ...value, id: legacy_id };
   }
   if (collection === "aprendizagem") {
-    if (!["attempt", "practice", "exposure", "weekly", "schedule-simulation", "completion"].includes(next.kind) || !Number.isFinite(Date.parse(next.at))) {
+    if (!["attempt", "practice", "exposure", "weekly", "schedule-simulation", "completion", "abandonment"].includes(next.kind) || !Number.isFinite(Date.parse(next.at))) {
       throw new Error("Evento pedagógico inválido.");
     }
     if (old.length && next.kind !== "weekly") {
