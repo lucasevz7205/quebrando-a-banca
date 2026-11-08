@@ -62,7 +62,7 @@
       if(e.exposure==='seen') result.recognition.push(e);
       else if(e.exposure!=='new') result.unknown++;
       const key=e.item+'|'+e.version;
-      const ref=all.find(x=>x.id===e.reference&&!x.invalid&&validDate(x.at)&&(valid.includes(x)||x.kind==='practice'&&!x.skipped));
+      const ref=all.find(x=>x.id===e.reference&&!x.invalid&&validDate(x.at)&&valid.includes(x));
       const age=ref?(Date.parse(e.at)-Date.parse(ref.at))/DAY:NaN;
       if(e.origin==='transferencia'&&e.exposure==='new'&&e.reviewed===true&&ref&&ref.item!==e.item&&ref.concept===e.concept&&age>=0&&!transferSeen.has(key)){result.transfer.push(e);transferSeen.add(key)}
       const compatible=ref&&(e.item===ref.item&&e.version===ref.version||result.transfer.includes(e)&&e.concept===ref.concept);
@@ -90,9 +90,11 @@
   }
   function eligibleVariants(S) {
     const es=events(S), as=attempts(S);
+    /* Evocação livre sem correção validada é prática, não prova de domínio. */
     return catalog(S).filter(c=>c.type==='variant'&&c.reviewed===true&&c.reserved===true&&c.contextChanged===true&&c.concept&&c.answer&&c.prompt&&c.explanation&&c.reference&&
+      Array.isArray(c.sourceItems)&&c.sourceItems.some(id=>S.q?.has(id))&&
       !es.some(e=>e.item===c.id)&&!as.some(e=>e.item===c.id)&&
-      [...as,...practices(S)].some(e=>e.concept===c.concept&&(e.ok||e.kind==='practice')&&!e.invalid));
+      as.some(e=>e.concept===c.concept&&e.ok===true&&e.origin==='treino'&&!e.invalid&&c.sourceItems.includes(e.item)));
   }
   const rate=xs=>xs.length?Math.round(xs.filter(x=>x.ok).length/xs.length*100)+'%':'Dados insuficientes';
   const stat=(title,xs)=>'<div class="learn-stat"><b>'+rate(xs)+'</b><span>'+esc(title)+'</span><small>'+xs.filter(x=>x.ok).length+' acertos / '+xs.length+' tentativas</small></div>';
@@ -190,7 +192,7 @@
     if(selected==='indicadores')body=pilotHTML(S,m)+(enabled(S,'p4')?'<p class="rule">Registros feitos após esta atualização. Os números antigos continuam no Desempenho. Retenção usa a primeira verificação entre 7 e 10 dias após a referência registrada.</p><div class="learn-grid">'+stat('Desempenho imediato',m.immediate)+stat('Reconhecimento · item visto',m.recognition)+stat('Transferência · primeira variante válida',m.transfer)+stat('Retenção · verificações tardias',m.retention)+'</div>'+panel('Como interpretar', '<p>As populações podem se sobrepor. Não some retenção e transferência. “Reconhecimento” é um indicador operacional de acertos em itens já vistos, não um diagnóstico de memória.</p><p>Retenção em vistos: '+rate(m.retentionSeen)+' (n='+m.retentionSeen.length+'). Em inéditos: '+rate(m.retentionNew)+' (n='+m.retentionNew.length+').</p><p>'+m.unknown+' tentativas com exposição anterior desconhecida. '+m.excluded+' registros fora das métricas. '+m.retention.filter(x=>x.reexposures).length+' verificações com reexposição intermediária registrada.</p>')+
       panel('Confiança e piloto do feedback', '<div class="learn-grid">'+[1,2,3,'unknown'].map(k=>stat(({1:'Chute',2:'Dúvida',3:'Certeza',unknown:'Confiança desconhecida'})[k],m.confidence[k])).join('')+'</div><p>Alocação exploratória por tentativa. Ambos os grupos recebem gabarito comentado; não há garantia de equivalência entre itens.</p><div class="learn-grid">'+stat('Feedback padrão · retenção',m.feedback.padrao)+stat('Feedback específico · retenção',m.feedback.especifico)+'</div><p>Os grupos recebem gabarito comentado. Resultados observados podem refletir diferenças de itens, usuários ou exposição. Consulte os critérios e a cobertura do piloto P1 acima.</p>'):'<p>Indicadores desativados.</p>');
     if(selected==='pratica')body='<p class="rule">Atividades curtas, separadas da nota dos treinos. Um novo texto só mede transferência quando sua equivalência, revisão e exposição estiverem confirmadas.</p>'+
-      (enabled(S,'p2')?panel('Transferência para outro contexto · '+vars.length+' disponíveis',vars.length?vars.map(c=>'<p>'+esc(c.title)+' '+button('start','Responder variante reservada',c.id)+'</p>').join(''):'<p>Nenhuma variante elegível agora. É necessário conteúdo revisado, reservado e prática anterior do mesmo conceito. Itens do banco antigo não são presumidos inéditos. As variantes preparadas aguardam revisão humana independente, sem mostrar o gabarito ao estudante.</p>',true):'')+
+      (enabled(S,'p2')?panel('Transferência para outro contexto · '+vars.length+' disponíveis',vars.length?vars.map(c=>'<p>'+esc(c.title)+' '+button('start','Responder variante reservada',c.id)+'</p>').join(''):'<p>Nenhuma variante elegível agora. É necessário conteúdo revisado, reservado e acerto confirmado em uma questão original do mesmo conceito. Itens do banco antigo não são presumidos inéditos. As variantes preparadas aguardam revisão humana independente, sem mostrar o gabarito ao estudante.</p>',true):'')+
       tasks.filter(c=>['duel','recall','pretest'].includes(c.type)&&enabled(S,{duel:'p3',recall:'p5',pretest:'p7'}[c.type])).map(c=>panel(c.title,'<p>'+esc(c.type==='duel'?'Explique a diferença decisiva antes de conferir.':'Tente recuperar a regra antes da explicação.')+'</p>'+button('start','Começar',c.id))).join('');
     if(selected==='agenda') {
       const rows=enabled(S,'p6')?values(S.r).filter(r=>r.proxRevisao).slice(0,20).map(r=>{
@@ -224,7 +226,7 @@
     if(!enabled(S,{variant:'p2',duel:'p3',recall:'p5',pretest:'p7'}[c.type]))throw new Error('Processo desativado.');
     if(c.type==='variant'&&!eligibleVariants(S).some(x=>x.id===id))throw new Error('Variante sem elegibilidade confirmada.');
     const seen=events(S).some(e=>e.item===id);
-    const reference=[...attempts(S),...practices(S)].filter(e=>e.concept===c.concept&&!e.invalid&&(e.ok||e.kind==='practice')).sort((a,b)=>Date.parse(a.at)-Date.parse(b.at)).at(-1);
+    const reference=attempts(S).filter(e=>e.concept===c.concept&&!e.invalid&&e.ok===true&&e.origin==='treino'&&(c.sourceItems||[]).includes(e.item)).sort((a,b)=>Date.parse(a.at)-Date.parse(b.at)).at(-1);
     const attemptId=uid(), at=new Date().toISOString();
     await save({id:attemptId+'-exposure',kind:'exposure',item:id,version:c.version||hash(c.prompt+c.answer+c.explanation),at,origin:c.type});
     activity={id:attemptId,card:c,phase:'question',seen,reference,startedAt:at,known:(c.sourceItems||[]).some(id=>S.r.get(id)?.tentativas>0)};drafts.response='';
