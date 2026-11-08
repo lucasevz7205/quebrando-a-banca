@@ -1,6 +1,6 @@
 # Área Fiscal · matriz operacional de cobertura
 
-Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 06, 07, 08, 09 e 12** e compartilhamento do banco nas baterias **18 e 19**. Ambiente Base44 vinculado à conta do candidato; o histórico da Câmara permanece separado.
+Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 05, 06, 07, 08, 09, 11, 12, 21 e 26** e compartilhamento dos bancos nas baterias **17, 18, 19 e 32**. Ambiente Base44 vinculado à conta do candidato; o histórico da Câmara permanece separado.
 
 ## Totais reais do banco
 
@@ -8,12 +8,12 @@ Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 06, 07, 08,
 |---|---:|
 | Tarefas do edital | 75 |
 | Trilhas | 00: 20, 01: 16, 02: 20, 03: 19 |
-| Questões físicas distintas | **273** |
+| Questões físicas distintas | **396** |
 | Mapas por tópico | 75 |
-| Nós dos mapas, considerando todos os níveis | **532** (466 com identificador) |
-| Flashcards físicos | **364** |
-| Flashcards ligados a nós por identificador explícito | **230** |
-| Déficit aritmético até 20 questões/tarefa (excluídas 3 orientações e consideradas as baterias T18 e T19) | **1216** |
+| Nós dos mapas, considerando todos os níveis | **665** (603 com identificador) |
+| Flashcards físicos | **487** |
+| Flashcards ligados a nós por identificador explícito | **365** |
+| Déficit aritmético até 20 questões/tarefa (excluídas 3 orientações, consideradas as baterias compartilhadas) | **1102** |
 
 **Atenção:** a bateria **T18 possui 77 questões acessíveis**: 1 local e 76 referenciadas por ID das tarefas T06 e T12. Os itens reutilizados **não** aumentam o total de questões físicas e não criam novo histórico de respostas. Os mapas e cartões da bateria podem encaminhar aos materiais conceituais T06 e T12. A bateria **T19 contém 34 questões acessíveis**: 1 própria e 33 referências por ID à T09. Em ambos os casos, não há cópia de documentos de questões, nem duplicação de histórico ou SRS.
 
@@ -29,9 +29,9 @@ Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 06, 07, 08,
 
 - **T19 · Bateria de aspectos introdutórios:** **34 questões** com reutilização dos 33 IDs da tarefa 09, mais uma questão própria; dois cartões preservados e links ao mapa da T09.
 
-**Proveniência:** as questões adicionais foram redigidas para a plataforma e rotuladas como **autorais** com página da apostila. Não foram indevidamente atribuídas ao Cebraspe, FCC ou FGV. As questões anteriormente registradas e as avaliações SRS foram preservadas. **201 questões novas** (além das 72 originalmente cadastradas) foram criadas como exercícios autorais com comentários e referências de apostila. A presença de conteúdo não atesta sua qualidade científica nem o domínio ou retenção por parte do aluno. Nenhum histórico de respostas ou avaliações de revisão espaçada foi artificialmente criado.
+**Proveniência:** as questões adicionais foram redigidas para a plataforma e rotuladas como **autorais** com página da apostila. Não foram indevidamente atribuídas ao Cebraspe, FCC ou FGV. As questões anteriormente registradas e as avaliações SRS foram preservadas. **324 questões novas** (além das 72 originalmente cadastradas) foram criadas como exercícios autorais com comentários e referências de apostila. A presença de conteúdo não atesta sua qualidade científica nem o domínio ou retenção por parte do aluno. Nenhum histórico de respostas ou avaliações de revisão espaçada foi artificialmente criado.
 
-**T05 bloqueada:** falta `TI.zip`, apostila indicada na Trilha 00 para DIKW e dados abertos. Não foi preenchida por conteúdo geral sem a fonte do usuário.
+**T05, T11, T17, T21, T26 e T32 desbloqueadas** pelos novos PDFs de TI. Os dois primeiros assuntos de tecnologia e os dois de governança foram aprofundados; suas baterias passaram a compartilhar os mesmos IDs das questões de teoria.
 
 ## Detalhamento por tópico
 
