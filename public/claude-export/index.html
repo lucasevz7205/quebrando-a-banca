@@ -610,18 +610,18 @@ function subnav(){
   return `<div class="seg subnav qb-header-tabs" role="group" aria-label="Seções">${l.map(([v,t])=>`<button data-sub="${v}" aria-pressed="${S.view===v}">${t}${cnt[v]?` <span class="count${v==='caderno'?' hot':''}">${cnt[v]}</span>`:''}</button>`).join('')}</div>`;
 }
 const SECTION_INTROS={
-  edital:['COBERTURA DO EDITAL','Edital verticalizado','Expanda uma disciplina para ver seus tópicos, status, mapas e exercícios.'],
-  treinar:['PRÁTICA DE QUESTÕES','Treinar','Escolha um assunto e inicie uma rodada. A agenda de revisões é atualizada conforme suas respostas.'],
-  caderno:['RECUPERAÇÃO ATIVA','Caderno de erros','Revise itens errados, registre o motivo e acompanhe a recuperação do conteúdo.'],
-  revisao:['CONSOLIDAÇÃO','Revisão por tópicos','Abra a disciplina e o tópico para revisar regras, fontes e pontos-chave.'],
-  mapa:['VISUALIZAÇÃO DO CONTEÚDO','Mapas mentais','Explore os ramos, abra explicações quando necessário e pratique evocação ativa.'],
-  cartoes:['MEMÓRIA DE LONGO PRAZO','Flashcards','Responda antes de revelar e classifique sua recuperação para programar a próxima revisão.'],
-  pegadinhas:['PADRÕES DA BANCA','Pegadinhas','Explore os mecanismos de cobrança e treine os itens relacionados.'],
-  conteudo:['BIBLIOTECA DE ESTUDOS','Materiais','Consulte os materiais e fontes organizados por matéria e assunto.'],
-  simulado:['TREINO DE PROVA','Simulados','Pratique com tempo, distribuição de questões e correção conforme as regras previstas.'],
+  edital:['EDITAL VERTICALIZADO','Seu edital, em perspectiva','Acompanhe disciplinas e assuntos, visualize o progresso e identifique lacunas para estudar com precisão.'],
+  treinar:['PRÁTICA ATIVA','Treine com estratégia','Escolha um assunto, ajuste a rodada e desenvolva precisão nas questões do CEBRASPE.'],
+  caderno:['CADERNO DE ERROS','Erros que viram acertos','Reveja as questões que exigem atenção e transforme suas dificuldades em retenção.'],
+  revisao:['REVISÃO ATIVA','Revisar é consolidar','Retome conceitos no momento certo, evoque antes de revelar e acompanhe sua memória.'],
+  mapa:['MAPAS MENTAIS','O conteúdo, em conexões','Explore relações entre temas, abra os ramos e revise com evocação ativa.'],
+  cartoes:['FLASHCARDS','Sua memória em construção','Responda antes de revelar e use a repetição espaçada para fixar conceitos importantes.'],
+  pegadinhas:['INTELIGÊNCIA DE BANCA','Antecipe as armadilhas','Reconheça os mecanismos recorrentes do CEBRASPE e aprenda a escapar deles.'],
+  conteudo:['BIBLIOTECA DE ESTUDOS','Conhecimento organizado','Acesse seus materiais, resumos e fontes por disciplina e assunto.'],
+  simulado:['SIMULADOS · CEBRASPE','Pratique como na prova','Teste domínio, ritmo e estratégia com exercícios em condições de prova.'],
   analiseDia:['ANÁLISE DIÁRIA','Desempenho diário','Os resultados reais das suas rodadas e tarefas em cada dia.'],
-  historico:['INDICADORES','Indicadores históricos','Acompanhe a evolução por matéria, a calibração da confiança e a agenda futura.'],
-  metodo:['ESTRATÉGIA DE APRENDIZAGEM','Método de estudo','Consulte as regras da revisão espaçada, do caderno de erros e da prática ativa.']
+  historico:['INDICADORES HISTÓRICOS','Sua evolução, ao longo do tempo','Analise tendências, consolidação da memória, confiança e desempenho por disciplina.'],
+  metodo:['MÉTODO DE ESTUDO','Uma estratégia para evoluir','Entenda as regras de revisão, prática deliberada e análise de erros que orientam seus estudos.']
 };
 function sectionIntro(v){
   const info=SECTION_INTROS[v]; if(!info) return '';
