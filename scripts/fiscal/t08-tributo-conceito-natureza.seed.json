@@ -1,0 +1,1407 @@
+{
+  "topic": "fiscal-t08",
+  "source": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf",
+  "sourcePages": "3, 10–27",
+  "questions": [
+    {
+      "id": "fiscal-t08-ce02",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A definição do art. 3º do CTN reúne compulsoriedade, expressão pecuniária, instituição em lei, ausência de caráter sancionatório e cobrança vinculada.",
+      "gabarito": "C",
+      "comentario": "O art. 3º explicita os cinco atributos estudados para reconhecer um tributo.",
+      "ordem": 802,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 10, seções 1.1–1.3",
+      "tema": "Art. 3º do CTN",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "ctn-art3"
+    },
+    {
+      "id": "fiscal-t08-ce03",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "Tributos são exemplos de receitas públicas originárias porque resultam de atividade comercial do Estado em condições de mercado.",
+      "gabarito": "E",
+      "comentario": "O tributo é receita derivada, obtida mediante poder de império, não receita originária de exploração patrimonial ou econômica.",
+      "ordem": 803,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 10, seções 1.1–1.3",
+      "tema": "Tributo como receita derivada",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "receita-derivada"
+    },
+    {
+      "id": "fiscal-t08-ce04",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "O Direito Tributário é uma subdivisão do Direito Público e utiliza instrumentos coercitivos nas relações jurídicas de tributação.",
+      "gabarito": "C",
+      "comentario": "A apostila situa a tributação no direito público e destaca a arrecadação derivada.",
+      "ordem": 804,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 3, seções 1.1–1.3",
+      "tema": "Regime público tributário",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "direito-publico"
+    },
+    {
+      "id": "fiscal-t08-ce05",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "O Código Tributário Nacional foi recepcionado pela Constituição de 1988 com status material de lei complementar nos assuntos reservados à lei complementar.",
+      "gabarito": "C",
+      "comentario": "O CTN é anterior à CF/88, mas desempenha a função de normas gerais reservadas à LC pelo art. 146, III.",
+      "ordem": 805,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 11, seções 1.1–1.3",
+      "tema": "Status do CTN",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "ctn-lc"
+    },
+    {
+      "id": "fiscal-t08-ce06",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "Uma lei complementar é aprovada por maioria simples, enquanto a lei ordinária exige maioria absoluta.",
+      "gabarito": "E",
+      "comentario": "A apostila apresenta a exigência inversa: LC, maioria absoluta; LO, maioria simples, em regra.",
+      "ordem": 806,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 11, seções 1.1–1.3",
+      "tema": "Lei complementar e ordinária",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "lc-lo"
+    },
+    {
+      "id": "fiscal-t08-ce07",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "Uma obrigação de executar serviços pessoais obrigatórios para pagar tributo configura, por si, modalidade de tributo in labore admitida pelo art. 3º do CTN.",
+      "gabarito": "E",
+      "comentario": "O conceito exige prestação pecuniária ou exprimível em moeda; não admite instituir tributo mediante prestação em trabalho.",
+      "ordem": 807,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 11, seções 1.1–1.3",
+      "tema": "Prestação pecuniária",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "pecuniaria"
+    },
+    {
+      "id": "fiscal-t08-ce08",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A extinção de crédito tributário por dação em pagamento de bens imóveis pode ser admitida na forma e condições estabelecidas em lei.",
+      "gabarito": "C",
+      "comentario": "O art. 156, XI, do CTN prevê expressamente a dação de bens imóveis segundo a lei aplicável.",
+      "ordem": 808,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 12, seções 1.1–1.3",
+      "tema": "Dação em bem imóvel",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "imovel-daçao"
+    },
+    {
+      "id": "fiscal-t08-ce09",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A simples oferta de um imóvel obriga a Fazenda a recebê-lo em pagamento, independentemente de lei que regulamente a dação.",
+      "gabarito": "E",
+      "comentario": "A autorização do art. 156, XI, demanda disciplina legal e atendimento às condições estabelecidas.",
+      "ordem": 809,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 14, seções 1.1–1.3",
+      "tema": "Dação não automática",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "imovel-nao-autom"
+    },
+    {
+      "id": "fiscal-t08-ce10",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "O CTN prevê expressamente, no art. 156, XI, a extinção do crédito tributário mediante entrega de bens móveis, sem previsão de lei própria.",
+      "gabarito": "E",
+      "comentario": "A literalidade do inciso XI refere-se a bens imóveis, não móveis. O tema dos móveis comporta controvérsias constitucionais específicas.",
+      "ordem": 810,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 12, seções 1.1–1.3",
+      "tema": "Bens móveis no CTN",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "moveis-ctn"
+    },
+    {
+      "id": "fiscal-t08-ce11",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "Na ADI 1.917/DF, o STF entendeu que lei distrital de dação de bens móveis como quitação tributária violava a exigência de licitação.",
+      "gabarito": "C",
+      "comentario": "A apostila relata a inconstitucionalidade da norma distrital por ofensa ao art. 37, XXI, da Constituição.",
+      "ordem": 811,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 13, seções 1.1–1.3",
+      "tema": "Dação de móveis e licitação",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "adi-1917"
+    },
+    {
+      "id": "fiscal-t08-ce12",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A ADI 2.405/RS é mencionada na apostila como decisão segundo a qual há reserva absoluta de lei complementar federal para criar hipóteses locais de extinção de crédito tributário.",
+      "gabarito": "E",
+      "comentario": "O trecho reproduz o entendimento de que não existe essa reserva geral de LC federal para novas hipóteses estaduais específicas de quitação.",
+      "ordem": 812,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 14, seções 1.1–1.3",
+      "tema": "Dação e reserva de LC",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "adi-2405"
+    },
+    {
+      "id": "fiscal-t08-ce13",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A obrigação de recolher um tributo regularmente exigido independe de aceitação contratual do contribuinte.",
+      "gabarito": "C",
+      "comentario": "O pagamento tributário não é manifestação de vontade negocial: nasce da ocorrência do fato previsto em lei.",
+      "ordem": 813,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 15, seções 1.1–1.3",
+      "tema": "Compulsoriedade",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "obrigatoria"
+    },
+    {
+      "id": "fiscal-t08-ce14",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A natureza compulsória da prestação tributária impede que o contribuinte questione administrativa ou judicialmente sua legalidade.",
+      "gabarito": "E",
+      "comentario": "O dever de pagar não elimina os meios de impugnar valor, exigibilidade ou legitimidade da cobrança.",
+      "ordem": 814,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 15, seções 1.1–1.3",
+      "tema": "Compulsoriedade e impugnação",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "contestacao"
+    },
+    {
+      "id": "fiscal-t08-ce15",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A instituição regular de tributo exige lei ordinária, complementar quando reservada, ou ato com força de lei admitido constitucionalmente.",
+      "gabarito": "C",
+      "comentario": "O princípio da legalidade tributária exige base legislativa e permite MP nos casos admitidos.",
+      "ordem": 815,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 16, seções 1.1–1.3",
+      "tema": "Instituição em lei",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "instituir-lei"
+    },
+    {
+      "id": "fiscal-t08-ce16",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A cobrança instituída somente por decreto, sem fundamento legal, é válida pelo fato de ser compulsória.",
+      "gabarito": "E",
+      "comentario": "A apostila distingue compulsoriedade como requisito de existência e instituição regular por lei como requisito de validade.",
+      "ordem": 816,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 16, seções 1.1–1.3",
+      "tema": "Tributo instituído por decreto",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "decreto-invalidade"
+    },
+    {
+      "id": "fiscal-t08-ce17",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "Medida provisória pode disciplinar livremente matéria constitucionalmente reservada a lei complementar, pois possui força de lei.",
+      "gabarito": "E",
+      "comentario": "O art. 62 da CF impede MP em matéria reservada a LC, embora a MP possa instituir tributos não sujeitos a essa reserva, conforme condições constitucionais.",
+      "ordem": 817,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 16, seções 1.1–1.3",
+      "tema": "Medida provisória e LC",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "mp-lc"
+    },
+    {
+      "id": "fiscal-t08-ce18",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A alteração de alíquotas tributárias é sempre permitida por decreto, sem ressalvas, pois não equivale à instituição do tributo.",
+      "gabarito": "E",
+      "comentario": "O material apresenta a lei como regra também para alterações de alíquotas, ressalvadas exceções constitucionais específicas.",
+      "ordem": 818,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 16, seções 1.1–1.3",
+      "tema": "Alteração de alíquota",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "alteracao-aliquota"
+    },
+    {
+      "id": "fiscal-t08-ce19",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A multa tributária compõe o conceito de tributo por ser prestação pecuniária compulsória instituída em lei.",
+      "gabarito": "E",
+      "comentario": "O elemento decisivo é a finalidade de punir ato ilícito, que exclui a multa do conceito do art. 3º.",
+      "ordem": 819,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 17, seções 1.1–1.3",
+      "tema": "Multa não é tributo",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "tributo-multa"
+    },
+    {
+      "id": "fiscal-t08-ce20",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "Um tributo perde sua natureza tributária sempre que sua finalidade principal é regular condutas econômicas, e não maximizar a arrecadação.",
+      "gabarito": "E",
+      "comentario": "Tributos extrafiscais podem orientar a economia sem assumir função sancionatória, permanecendo tributos.",
+      "ordem": 820,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 17, seções 1.1–1.3",
+      "tema": "Extrafiscalidade",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "extrafiscal"
+    },
+    {
+      "id": "fiscal-t08-ce21",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A incidência de imposto de renda sobre rendimentos oriundos de atividade criminosa é incompatível com a vedação ao tributo como sanção.",
+      "gabarito": "E",
+      "comentario": "Pode haver IR sobre renda auferida ilicitamente porque o fato tributado é a obtenção de renda, não a prática criminosa.",
+      "ordem": 821,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 17, seções 1.1–1.3",
+      "tema": "Pecunia non olet",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "non-olet"
+    },
+    {
+      "id": "fiscal-t08-ce22",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "É possível tributar fato gerador lícito em abstrato que ocorra no contexto de atividade ilícita, desde que o ilícito não integre o próprio núcleo sancionatório da hipótese tributária.",
+      "gabarito": "C",
+      "comentario": "Apostila distingue tributar renda obtida em contexto ilícito de tributar a infração como hipótese própria do tributo.",
+      "ordem": 822,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 18, seções 1.1–1.3",
+      "tema": "Ilícito acidental à incidência",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "ilicit-periferia"
+    },
+    {
+      "id": "fiscal-t08-ce23",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A validade jurídica dos atos praticados pelo contribuinte determina, necessariamente, se houve fato gerador tributário, conforme o art. 118 do CTN.",
+      "gabarito": "E",
+      "comentario": "O art. 118 manda interpretar o fato gerador abstraindo-se, entre outros aspectos, da validade jurídica dos atos praticados.",
+      "ordem": 823,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 17, seções 1.1–1.3",
+      "tema": "Art. 118 do CTN",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "ctn-118"
+    },
+    {
+      "id": "fiscal-t08-ce24",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A cobrança do tributo regularmente devido é atividade administrativa plenamente vinculada, não subordinada à conveniência pessoal do agente.",
+      "gabarito": "C",
+      "comentario": "É característica expressa do art. 3º do CTN; não existe opção discricionária geral de cobrar ou perdoar tributos.",
+      "ordem": 824,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 18, seções 1.1–1.3",
+      "tema": "Cobrança administrativa vinculada",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "ato-vinculado"
+    },
+    {
+      "id": "fiscal-t08-ce25",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "Pelo art. 4º do CTN, o fato gerador da obrigação é critério central da natureza jurídica específica do tributo.",
+      "gabarito": "C",
+      "comentario": "O art. 4º emprega o fato gerador e afasta a denominação formal como elemento determinante, ressalvadas as espécies finalísticas conforme a CF.",
+      "ordem": 825,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 21, seções 1.1–1.3",
+      "tema": "Art. 4º do CTN",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "art4-fato"
+    },
+    {
+      "id": "fiscal-t08-ce26",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A denominação 'taxa' dada por lei é suficiente, por si só, para qualificar uma exação como taxa tributária.",
+      "gabarito": "E",
+      "comentario": "O nome e outras características formais são irrelevantes para qualificar tributo pelo art. 4º, devendo-se examinar o fato gerador.",
+      "ordem": 826,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 21, seções 1.1–1.3",
+      "tema": "Nome não define espécie",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "nome-irrelevante"
+    },
+    {
+      "id": "fiscal-t08-ce27",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "O art. 5º do CTN lista impostos, taxas e contribuições de melhoria, refletindo a teoria tripartida originalmente adotada.",
+      "gabarito": "C",
+      "comentario": "A distinção entre taxonomia do CTN e reconhecimento constitucional posterior é essencial.",
+      "ordem": 827,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 21, seções 1.1–1.3",
+      "tema": "CTN: teoria tripartida",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "tripartite"
+    },
+    {
+      "id": "fiscal-t08-ce28",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "Segundo a orientação do STF indicada na apostila, a classificação das espécies tributárias se limita às três espécies previstas no art. 5º do CTN.",
+      "gabarito": "E",
+      "comentario": "O STF adota, na exposição, cinco espécies: impostos, taxas, contribuição de melhoria, empréstimos compulsórios e contribuições especiais.",
+      "ordem": 828,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 22, seções 1.1–1.3",
+      "tema": "Constituição e pentapartição",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "pentapartite"
+    },
+    {
+      "id": "fiscal-t08-ce29",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A destinação do produto da arrecadação é sempre irrelevante, inclusive ao identificar empréstimos compulsórios e contribuições especiais.",
+      "gabarito": "E",
+      "comentario": "A apostila ressalta que essas espécies são finalísticas, o que exige considerar a destinação para distingui-las; há limite ao alcance geral do art. 4º.",
+      "ordem": 829,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 23, seções 1.1–1.3",
+      "tema": "Tributos finalísticos",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "finalisticos"
+    },
+    {
+      "id": "fiscal-t08-ce30",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A classificação de tributo vinculado indica ligação do fato gerador a uma atuação estatal relativa ao contribuinte, como ocorre com taxas.",
+      "gabarito": "C",
+      "comentario": "Impostos não dependem de atuação estatal específica; taxas e contribuição de melhoria são exemplos de tributos vinculados à atividade estatal.",
+      "ordem": 830,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 24, seções 1.1–1.3",
+      "tema": "Vinculação ao fato estatal",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "vinculado-fato"
+    },
+    {
+      "id": "fiscal-t08-ce31",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "Um tributo com receita legalmente destinada a finalidade determinada é necessariamente vinculado ao Estado no sentido de seu fato gerador.",
+      "gabarito": "E",
+      "comentario": "Vinculação da arrecadação e vinculação do fato gerador são critérios diferentes. Empréstimo compulsório pode ter destinação vinculada.",
+      "ordem": 831,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 24, seções 1.1–1.3",
+      "tema": "Vinculação de receita × fato",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "vinculacao-receita"
+    },
+    {
+      "id": "fiscal-t08-ce32",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "A comparação da base de cálculo com o fato gerador auxilia a verificar a natureza de um tributo, inclusive a vedação constitucional de base própria de imposto às taxas.",
+      "gabarito": "C",
+      "comentario": "O art. 145, §2º, da CF impede que taxa tenha base de cálculo própria de impostos e a apostila destaca o cotejo.",
+      "ordem": 832,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 23, seções 1.1–1.3",
+      "tema": "Base de cálculo e natureza",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "base-calculo"
+    },
+    {
+      "id": "fiscal-t08-ce33",
+      "cap": "FISCAL-DT-08",
+      "capNome": "Trilha 00 · Tarefa 08 · Tributo: conceito e natureza jurídica",
+      "enunciado": "Somente as taxas são cobradas mediante atividade administrativa vinculada; os impostos ficam a critério do agente fiscal.",
+      "gabarito": "E",
+      "comentario": "Todo tributo é cobrado por atividade administrativa vinculada; isso difere de tributo vinculado a atuação estatal ou de receita vinculada.",
+      "ordem": 833,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 24, seções 1.1–1.3",
+      "tema": "Três vínculos distintos",
+      "topico": "fiscal-t08",
+      "assuntoId": "fiscal-dt-conceito-natureza",
+      "mapaNoId": "cobranca-todos"
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Art. 3º do CTN",
+      "q": "Enumere os cinco elementos do conceito de tributo do art. 3º do CTN.",
+      "a": [
+        "Prestação pecuniária; compulsória; instituída em lei; não sancionatória; cobrada por atividade administrativa vinculada."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 10",
+      "mapaNoId": "ctn-art3",
+      "questaoIds": [
+        "fiscal-t08-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Tributo como receita derivada",
+      "q": "O tributo é receita originária ou derivada?",
+      "a": [
+        "Derivada: decorre de imposição estatal nos termos legais."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 10",
+      "mapaNoId": "receita-derivada",
+      "questaoIds": [
+        "fiscal-t08-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Regime público tributário",
+      "q": "Por que Direito Tributário integra o Direito Público?",
+      "a": [
+        "Porque envolve imposição jurídica de tributos mediante poder estatal, com sujeição ao ordenamento público."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 3",
+      "mapaNoId": "direito-publico",
+      "questaoIds": [
+        "fiscal-t08-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Status do CTN",
+      "q": "Qual o status do CTN perante a Constituição de 1988?",
+      "a": [
+        "É recepcionado com força de lei complementar nos temas reservados a ela."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 11",
+      "mapaNoId": "ctn-lc",
+      "questaoIds": [
+        "fiscal-t08-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Lei complementar e ordinária",
+      "q": "Que quórum diferencia lei complementar e lei ordinária?",
+      "a": [
+        "Lei complementar exige maioria absoluta; lei ordinária, em regra, maioria simples."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 11",
+      "mapaNoId": "lc-lo",
+      "questaoIds": [
+        "fiscal-t08-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Prestação pecuniária",
+      "q": "O que significa o requisito de prestação pecuniária?",
+      "a": [
+        "Dever expresso em moeda, afastando tributo in natura e in labore como formas de instituição."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 11",
+      "mapaNoId": "pecuniaria",
+      "questaoIds": [
+        "fiscal-t08-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dação em bem imóvel",
+      "q": "Qual hipótese de dação em pagamento consta do art. 156, XI, do CTN?",
+      "a": [
+        "Bens imóveis, na forma e condições estabelecidas em lei."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 12",
+      "mapaNoId": "imovel-daçao",
+      "questaoIds": [
+        "fiscal-t08-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dação não automática",
+      "q": "O contribuinte pode impor a aceitação de imóvel como pagamento?",
+      "a": [
+        "Não. É preciso previsão legal e cumprimento dos requisitos."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 14",
+      "mapaNoId": "imovel-nao-autom",
+      "questaoIds": [
+        "fiscal-t08-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Bens móveis no CTN",
+      "q": "O inciso XI do art. 156 refere-se a móveis ou imóveis?",
+      "a": [
+        "Imóveis. A questão dos bens móveis exige análise separada de legislação e precedentes."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 12",
+      "mapaNoId": "moveis-ctn",
+      "questaoIds": [
+        "fiscal-t08-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dação de móveis e licitação",
+      "q": "Qual preocupação fundamentou a ADI 1.917/DF?",
+      "a": [
+        "A aquisição de bens móveis pela Administração sem observar o princípio da licitação."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 13",
+      "mapaNoId": "adi-1917",
+      "questaoIds": [
+        "fiscal-t08-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dação e reserva de LC",
+      "q": "Qual ressalva o material faz com a ADI 2.405/RS?",
+      "a": [
+        "Que o STF admitiu a competência de estados para regras específicas de quitação de seus créditos, sem reserva geral de LC federal."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 14",
+      "mapaNoId": "adi-2405",
+      "questaoIds": [
+        "fiscal-t08-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Compulsoriedade",
+      "q": "A obrigação tributária depende de contrato ou anuência do contribuinte?",
+      "a": [
+        "Não; decorre de lei e fato gerador."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 15",
+      "mapaNoId": "obrigatoria",
+      "questaoIds": [
+        "fiscal-t08-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Compulsoriedade e impugnação",
+      "q": "Compulsoriedade exclui direito de contestar a cobrança?",
+      "a": [
+        "Não. É possível discutir a cobrança pelos mecanismos legais."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 15",
+      "mapaNoId": "contestacao",
+      "questaoIds": [
+        "fiscal-t08-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Instituição em lei",
+      "q": "Como deve ser instituído um tributo válido em regra?",
+      "a": [
+        "Por lei ordinária, lei complementar quando exigida ou medida provisória constitucionalmente admitida."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 16",
+      "mapaNoId": "instituir-lei",
+      "questaoIds": [
+        "fiscal-t08-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Tributo instituído por decreto",
+      "q": "O decreto isolado pode criar validamente tributo?",
+      "a": [
+        "Não. Sem suporte legal adequado, a imposição viola a legalidade."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 16",
+      "mapaNoId": "decreto-invalidade",
+      "questaoIds": [
+        "fiscal-t08-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Medida provisória e LC",
+      "q": "A MP pode substituir lei complementar para instituir tributo?",
+      "a": [
+        "Não quando a Constituição exige lei complementar."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 16",
+      "mapaNoId": "mp-lc",
+      "questaoIds": [
+        "fiscal-t08-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Alteração de alíquota",
+      "q": "Qual é a regra para modificar alíquotas tributárias?",
+      "a": [
+        "Exige lei, salvo hipóteses constitucionais de alteração por ato infralegal."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 16",
+      "mapaNoId": "alteracao-aliquota",
+      "questaoIds": [
+        "fiscal-t08-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Multa não é tributo",
+      "q": "Por que multa administrativa não é tributo?",
+      "a": [
+        "Porque constitui sanção por ato ilícito, característica excluída pelo art. 3º do CTN."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 17",
+      "mapaNoId": "tributo-multa",
+      "questaoIds": [
+        "fiscal-t08-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Extrafiscalidade",
+      "q": "O que caracteriza a extrafiscalidade sem transformar tributo em multa?",
+      "a": [
+        "Finalidade interventiva ou regulatória legítima sem fato gerador definido como punição de ilícito."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 17",
+      "mapaNoId": "extrafiscal",
+      "questaoIds": [
+        "fiscal-t08-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Pecunia non olet",
+      "q": "Como tributar renda ilícita sem fazer do tributo uma sanção?",
+      "a": [
+        "Incide imposto sobre renda como fato gerador, independente da origem ilícita."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 17",
+      "mapaNoId": "non-olet",
+      "questaoIds": [
+        "fiscal-t08-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Ilícito acidental à incidência",
+      "q": "Diferencie renda obtida com ilícito de tributar a conduta ilícita em si.",
+      "a": [
+        "A renda pode ser tributada; a conduta criminosa não deve ser definida como fato gerador punitivo de tributo."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 18",
+      "mapaNoId": "ilicit-periferia",
+      "questaoIds": [
+        "fiscal-t08-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Art. 118 do CTN",
+      "q": "Qual a regra do art. 118 do CTN para fatos geradores?",
+      "a": [
+        "Interpretar sua ocorrência abstraindo-se da validade jurídica dos atos e da natureza de seu objeto ou efeitos."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 17",
+      "mapaNoId": "ctn-118",
+      "questaoIds": [
+        "fiscal-t08-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Cobrança administrativa vinculada",
+      "q": "O agente pode escolher cobrar tributo devido por mera conveniência?",
+      "a": [
+        "Não. Cobrança é atividade plenamente vinculada, segundo o CTN."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 18",
+      "mapaNoId": "ato-vinculado",
+      "questaoIds": [
+        "fiscal-t08-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Art. 4º do CTN",
+      "q": "Qual é o critério central do art. 4º do CTN?",
+      "a": [
+        "O fato gerador da obrigação tributária."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 21",
+      "mapaNoId": "art4-fato",
+      "questaoIds": [
+        "fiscal-t08-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Nome não define espécie",
+      "q": "A denominação atribuída pela lei define a espécie?",
+      "a": [
+        "Não. Deve-se examinar o fato gerador e, conforme o tipo, demais critérios constitucionais."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 21",
+      "mapaNoId": "nome-irrelevante",
+      "questaoIds": [
+        "fiscal-t08-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "CTN: teoria tripartida",
+      "q": "Quais três espécies estão no art. 5º do CTN?",
+      "a": [
+        "Impostos, taxas e contribuições de melhoria."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 21",
+      "mapaNoId": "tripartite",
+      "questaoIds": [
+        "fiscal-t08-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Constituição e pentapartição",
+      "q": "Quais são as cinco espécies da teoria pentapartida?",
+      "a": [
+        "Impostos, taxas, contribuições de melhoria, empréstimos compulsórios e contribuições especiais."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 22",
+      "mapaNoId": "pentapartite",
+      "questaoIds": [
+        "fiscal-t08-ce28"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Tributos finalísticos",
+      "q": "Por que a destinação importa na identificação de algumas espécies?",
+      "a": [
+        "Empréstimos compulsórios e contribuições especiais são finalísticos, ao contrário da leitura universal do art. 4º."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 23",
+      "mapaNoId": "finalisticos",
+      "questaoIds": [
+        "fiscal-t08-ce29"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Vinculação ao fato estatal",
+      "q": "O que significa tributo vinculado em razão do fato gerador?",
+      "a": [
+        "A cobrança pressupõe atuação estatal específica relativa ao contribuinte, como taxa ou valorização por obra."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 24",
+      "mapaNoId": "vinculado-fato",
+      "questaoIds": [
+        "fiscal-t08-ce30"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Vinculação de receita × fato",
+      "q": "Diferencie vinculação de receita e vinculação do fato gerador.",
+      "a": [
+        "Receita vinculada: destinação legal; fato vinculado: atividade estatal relativa ao contribuinte."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 24",
+      "mapaNoId": "vinculacao-receita",
+      "questaoIds": [
+        "fiscal-t08-ce31"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Base de cálculo e natureza",
+      "q": "Como a base de cálculo auxilia a identificar espécie tributária?",
+      "a": [
+        "Conferindo coerência com o fato gerador e vedação de base de cálculo própria de imposto à taxa."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 23",
+      "mapaNoId": "base-calculo",
+      "questaoIds": [
+        "fiscal-t08-ce32"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Três vínculos distintos",
+      "q": "Quais são os três sentidos diferentes de vínculo nesse capítulo?",
+      "a": [
+        "Vínculo do fato gerador à ação estatal, vinculação do produto arrecadado e cobrança vinculada para todos os tributos."
+      ],
+      "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 24",
+      "mapaNoId": "cobranca-todos",
+      "questaoIds": [
+        "fiscal-t08-ce33"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Tributo: conceito e natureza jurídica · T08",
+    "versao": 2,
+    "fonte": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, pp. 3, 10–27",
+    "ramos": [
+      {
+        "id": "conceito-1",
+        "t": "Conceito legal e receita pública",
+        "n": "Art. 3º CTN, receita pública derivada, status material do CTN e relação com direito público.",
+        "cor": 1,
+        "x": {
+          "e": "Art. 3º CTN, receita pública derivada, status material do CTN e relação com direito público.",
+          "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf"
+        },
+        "f": [
+          {
+            "id": "ctn-art3",
+            "t": "Art. 3º do CTN",
+            "n": "Prestação pecuniária; compulsória; instituída em lei; não sancionatória; cobrada por atividade administrativa vinculada.",
+            "x": {
+              "e": "O art. 3º explicita os cinco atributos estudados para reconhecer um tributo.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 10",
+              "questaoIds": [
+                "fiscal-t08-ce02"
+              ]
+            }
+          },
+          {
+            "id": "receita-derivada",
+            "t": "Tributo como receita derivada",
+            "n": "Derivada: decorre de imposição estatal nos termos legais.",
+            "x": {
+              "e": "O tributo é receita derivada, obtida mediante poder de império, não receita originária de exploração patrimonial ou econômica.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 10",
+              "questaoIds": [
+                "fiscal-t08-ce03"
+              ]
+            }
+          },
+          {
+            "id": "direito-publico",
+            "t": "Regime público tributário",
+            "n": "Porque envolve imposição jurídica de tributos mediante poder estatal, com sujeição ao ordenamento público.",
+            "x": {
+              "e": "A apostila situa a tributação no direito público e destaca a arrecadação derivada.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 3",
+              "questaoIds": [
+                "fiscal-t08-ce04"
+              ]
+            }
+          },
+          {
+            "id": "ctn-lc",
+            "t": "Status do CTN",
+            "n": "É recepcionado com força de lei complementar nos temas reservados a ela.",
+            "x": {
+              "e": "O CTN é anterior à CF/88, mas desempenha a função de normas gerais reservadas à LC pelo art. 146, III.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 11",
+              "questaoIds": [
+                "fiscal-t08-ce05"
+              ]
+            }
+          },
+          {
+            "id": "lc-lo",
+            "t": "Lei complementar e ordinária",
+            "n": "Lei complementar exige maioria absoluta; lei ordinária, em regra, maioria simples.",
+            "x": {
+              "e": "A apostila apresenta a exigência inversa: LC, maioria absoluta; LO, maioria simples, em regra.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 11",
+              "questaoIds": [
+                "fiscal-t08-ce06"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "pecuniaria",
+        "t": "Prestação pecuniária e dação",
+        "n": "Exigência de expressão em moeda e hipóteses legais específicas de quitação, com jurisprudência mencionada.",
+        "cor": 2,
+        "x": {
+          "e": "Exigência de expressão em moeda e hipóteses legais específicas de quitação, com jurisprudência mencionada.",
+          "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf"
+        },
+        "f": [
+          {
+            "id": "pecuniaria",
+            "t": "Prestação pecuniária",
+            "n": "Dever expresso em moeda, afastando tributo in natura e in labore como formas de instituição.",
+            "x": {
+              "e": "O conceito exige prestação pecuniária ou exprimível em moeda; não admite instituir tributo mediante prestação em trabalho.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 11",
+              "questaoIds": [
+                "fiscal-t08-ce07"
+              ]
+            }
+          },
+          {
+            "id": "imovel-daçao",
+            "t": "Dação em bem imóvel",
+            "n": "Bens imóveis, na forma e condições estabelecidas em lei.",
+            "x": {
+              "e": "O art. 156, XI, do CTN prevê expressamente a dação de bens imóveis segundo a lei aplicável.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 12",
+              "questaoIds": [
+                "fiscal-t08-ce08"
+              ]
+            }
+          },
+          {
+            "id": "imovel-nao-autom",
+            "t": "Dação não automática",
+            "n": "Não. É preciso previsão legal e cumprimento dos requisitos.",
+            "x": {
+              "e": "A autorização do art. 156, XI, demanda disciplina legal e atendimento às condições estabelecidas.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 14",
+              "questaoIds": [
+                "fiscal-t08-ce09"
+              ]
+            }
+          },
+          {
+            "id": "moveis-ctn",
+            "t": "Bens móveis no CTN",
+            "n": "Imóveis. A questão dos bens móveis exige análise separada de legislação e precedentes.",
+            "x": {
+              "e": "A literalidade do inciso XI refere-se a bens imóveis, não móveis. O tema dos móveis comporta controvérsias constitucionais específicas.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 12",
+              "questaoIds": [
+                "fiscal-t08-ce10"
+              ]
+            }
+          },
+          {
+            "id": "adi-1917",
+            "t": "Dação de móveis e licitação",
+            "n": "A aquisição de bens móveis pela Administração sem observar o princípio da licitação.",
+            "x": {
+              "e": "A apostila relata a inconstitucionalidade da norma distrital por ofensa ao art. 37, XXI, da Constituição.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 13",
+              "questaoIds": [
+                "fiscal-t08-ce11"
+              ]
+            }
+          },
+          {
+            "id": "adi-2405",
+            "t": "Dação e reserva de LC",
+            "n": "Que o STF admitiu a competência de estados para regras específicas de quitação de seus créditos, sem reserva geral de LC federal.",
+            "x": {
+              "e": "O trecho reproduz o entendimento de que não existe essa reserva geral de LC federal para novas hipóteses estaduais específicas de quitação.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 14",
+              "questaoIds": [
+                "fiscal-t08-ce12"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "compulsoria",
+        "t": "Compulsoriedade",
+        "n": "Obrigação legal sem consentimento contratual, compatível com impugnação administrativa e judicial.",
+        "cor": 3,
+        "x": {
+          "e": "Obrigação legal sem consentimento contratual, compatível com impugnação administrativa e judicial.",
+          "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf"
+        },
+        "f": [
+          {
+            "id": "obrigatoria",
+            "t": "Compulsoriedade",
+            "n": "Não; decorre de lei e fato gerador.",
+            "x": {
+              "e": "O pagamento tributário não é manifestação de vontade negocial: nasce da ocorrência do fato previsto em lei.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 15",
+              "questaoIds": [
+                "fiscal-t08-ce13"
+              ]
+            }
+          },
+          {
+            "id": "contestacao",
+            "t": "Compulsoriedade e impugnação",
+            "n": "Não. É possível discutir a cobrança pelos mecanismos legais.",
+            "x": {
+              "e": "O dever de pagar não elimina os meios de impugnar valor, exigibilidade ou legitimidade da cobrança.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 15",
+              "questaoIds": [
+                "fiscal-t08-ce14"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "legalidade",
+        "t": "Instituição em lei e força normativa",
+        "n": "Lei como regra; medidas provisórias nos limites constitucionais; diferença entre validade e existência.",
+        "cor": 4,
+        "x": {
+          "e": "Lei como regra; medidas provisórias nos limites constitucionais; diferença entre validade e existência.",
+          "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf"
+        },
+        "f": [
+          {
+            "id": "instituir-lei",
+            "t": "Instituição em lei",
+            "n": "Por lei ordinária, lei complementar quando exigida ou medida provisória constitucionalmente admitida.",
+            "x": {
+              "e": "O princípio da legalidade tributária exige base legislativa e permite MP nos casos admitidos.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 16",
+              "questaoIds": [
+                "fiscal-t08-ce15"
+              ]
+            }
+          },
+          {
+            "id": "decreto-invalidade",
+            "t": "Tributo instituído por decreto",
+            "n": "Não. Sem suporte legal adequado, a imposição viola a legalidade.",
+            "x": {
+              "e": "A apostila distingue compulsoriedade como requisito de existência e instituição regular por lei como requisito de validade.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 16",
+              "questaoIds": [
+                "fiscal-t08-ce16"
+              ]
+            }
+          },
+          {
+            "id": "mp-lc",
+            "t": "Medida provisória e LC",
+            "n": "Não quando a Constituição exige lei complementar.",
+            "x": {
+              "e": "O art. 62 da CF impede MP em matéria reservada a LC, embora a MP possa instituir tributos não sujeitos a essa reserva, conforme condições constitucionais.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 16",
+              "questaoIds": [
+                "fiscal-t08-ce17"
+              ]
+            }
+          },
+          {
+            "id": "alteracao-aliquota",
+            "t": "Alteração de alíquota",
+            "n": "Exige lei, salvo hipóteses constitucionais de alteração por ato infralegal.",
+            "x": {
+              "e": "O material apresenta a lei como regra também para alterações de alíquotas, ressalvadas exceções constitucionais específicas.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 16",
+              "questaoIds": [
+                "fiscal-t08-ce18"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-2",
+        "t": "Tributo × multa e renda ilícita",
+        "n": "Sanção não é tributo; fato gerador de renda pode ocorrer em contexto ilícito sem ser punição.",
+        "cor": 5,
+        "x": {
+          "e": "Sanção não é tributo; fato gerador de renda pode ocorrer em contexto ilícito sem ser punição.",
+          "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf"
+        },
+        "f": [
+          {
+            "id": "tributo-multa",
+            "t": "Multa não é tributo",
+            "n": "Porque constitui sanção por ato ilícito, característica excluída pelo art. 3º do CTN.",
+            "x": {
+              "e": "O elemento decisivo é a finalidade de punir ato ilícito, que exclui a multa do conceito do art. 3º.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 17",
+              "questaoIds": [
+                "fiscal-t08-ce19"
+              ]
+            }
+          },
+          {
+            "id": "extrafiscal",
+            "t": "Extrafiscalidade",
+            "n": "Finalidade interventiva ou regulatória legítima sem fato gerador definido como punição de ilícito.",
+            "x": {
+              "e": "Tributos extrafiscais podem orientar a economia sem assumir função sancionatória, permanecendo tributos.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 17",
+              "questaoIds": [
+                "fiscal-t08-ce20"
+              ]
+            }
+          },
+          {
+            "id": "non-olet",
+            "t": "Pecunia non olet",
+            "n": "Incide imposto sobre renda como fato gerador, independente da origem ilícita.",
+            "x": {
+              "e": "Pode haver IR sobre renda auferida ilicitamente porque o fato tributado é a obtenção de renda, não a prática criminosa.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 17",
+              "questaoIds": [
+                "fiscal-t08-ce21"
+              ]
+            }
+          },
+          {
+            "id": "ilicit-periferia",
+            "t": "Ilícito acidental à incidência",
+            "n": "A renda pode ser tributada; a conduta criminosa não deve ser definida como fato gerador punitivo de tributo.",
+            "x": {
+              "e": "Apostila distingue tributar renda obtida em contexto ilícito de tributar a infração como hipótese própria do tributo.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 18",
+              "questaoIds": [
+                "fiscal-t08-ce22"
+              ]
+            }
+          },
+          {
+            "id": "ctn-118",
+            "t": "Art. 118 do CTN",
+            "n": "Interpretar sua ocorrência abstraindo-se da validade jurídica dos atos e da natureza de seu objeto ou efeitos.",
+            "x": {
+              "e": "O art. 118 manda interpretar o fato gerador abstraindo-se, entre outros aspectos, da validade jurídica dos atos praticados.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 17",
+              "questaoIds": [
+                "fiscal-t08-ce23"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cobranca",
+        "t": "Cobrança vinculada",
+        "n": "Fiscalização e cobrança obrigatória, sem escolha livre do agente.",
+        "cor": 6,
+        "x": {
+          "e": "Fiscalização e cobrança obrigatória, sem escolha livre do agente.",
+          "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf"
+        },
+        "f": [
+          {
+            "id": "ato-vinculado",
+            "t": "Cobrança administrativa vinculada",
+            "n": "Não. Cobrança é atividade plenamente vinculada, segundo o CTN.",
+            "x": {
+              "e": "É característica expressa do art. 3º do CTN; não existe opção discricionária geral de cobrar ou perdoar tributos.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 18",
+              "questaoIds": [
+                "fiscal-t08-ce24"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "natureza",
+        "t": "Natureza jurídica e espécies",
+        "n": "Art. 4º CTN, art. 5º CTN, visão pentapartida do STF e distinção entre vinculações.",
+        "cor": 7,
+        "x": {
+          "e": "Art. 4º CTN, art. 5º CTN, visão pentapartida do STF e distinção entre vinculações.",
+          "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf"
+        },
+        "f": [
+          {
+            "id": "art4-fato",
+            "t": "Art. 4º do CTN",
+            "n": "O fato gerador da obrigação tributária.",
+            "x": {
+              "e": "O art. 4º emprega o fato gerador e afasta a denominação formal como elemento determinante, ressalvadas as espécies finalísticas conforme a CF.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 21",
+              "questaoIds": [
+                "fiscal-t08-ce25"
+              ]
+            }
+          },
+          {
+            "id": "nome-irrelevante",
+            "t": "Nome não define espécie",
+            "n": "Não. Deve-se examinar o fato gerador e, conforme o tipo, demais critérios constitucionais.",
+            "x": {
+              "e": "O nome e outras características formais são irrelevantes para qualificar tributo pelo art. 4º, devendo-se examinar o fato gerador.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 21",
+              "questaoIds": [
+                "fiscal-t08-ce26"
+              ]
+            }
+          },
+          {
+            "id": "tripartite",
+            "t": "CTN: teoria tripartida",
+            "n": "Impostos, taxas e contribuições de melhoria.",
+            "x": {
+              "e": "A distinção entre taxonomia do CTN e reconhecimento constitucional posterior é essencial.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 21",
+              "questaoIds": [
+                "fiscal-t08-ce27"
+              ]
+            }
+          },
+          {
+            "id": "pentapartite",
+            "t": "Constituição e pentapartição",
+            "n": "Impostos, taxas, contribuições de melhoria, empréstimos compulsórios e contribuições especiais.",
+            "x": {
+              "e": "O STF adota, na exposição, cinco espécies: impostos, taxas, contribuição de melhoria, empréstimos compulsórios e contribuições especiais.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 22",
+              "questaoIds": [
+                "fiscal-t08-ce28"
+              ]
+            }
+          },
+          {
+            "id": "finalisticos",
+            "t": "Tributos finalísticos",
+            "n": "Empréstimos compulsórios e contribuições especiais são finalísticos, ao contrário da leitura universal do art. 4º.",
+            "x": {
+              "e": "A apostila ressalta que essas espécies são finalísticas, o que exige considerar a destinação para distingui-las; há limite ao alcance geral do art. 4º.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 23",
+              "questaoIds": [
+                "fiscal-t08-ce29"
+              ]
+            }
+          },
+          {
+            "id": "vinculado-fato",
+            "t": "Vinculação ao fato estatal",
+            "n": "A cobrança pressupõe atuação estatal específica relativa ao contribuinte, como taxa ou valorização por obra.",
+            "x": {
+              "e": "Impostos não dependem de atuação estatal específica; taxas e contribuição de melhoria são exemplos de tributos vinculados à atividade estatal.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 24",
+              "questaoIds": [
+                "fiscal-t08-ce30"
+              ]
+            }
+          },
+          {
+            "id": "vinculacao-receita",
+            "t": "Vinculação de receita × fato",
+            "n": "Receita vinculada: destinação legal; fato vinculado: atividade estatal relativa ao contribuinte.",
+            "x": {
+              "e": "Vinculação da arrecadação e vinculação do fato gerador são critérios diferentes. Empréstimo compulsório pode ter destinação vinculada.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 24",
+              "questaoIds": [
+                "fiscal-t08-ce31"
+              ]
+            }
+          },
+          {
+            "id": "base-calculo",
+            "t": "Base de cálculo e natureza",
+            "n": "Conferindo coerência com o fato gerador e vedação de base de cálculo própria de imposto à taxa.",
+            "x": {
+              "e": "O art. 145, §2º, da CF impede que taxa tenha base de cálculo própria de impostos e a apostila destaca o cotejo.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 23",
+              "questaoIds": [
+                "fiscal-t08-ce32"
+              ]
+            }
+          },
+          {
+            "id": "cobranca-todos",
+            "t": "Três vínculos distintos",
+            "n": "Vínculo do fato gerador à ação estatal, vinculação do produto arrecadado e cobrança vinculada para todos os tributos.",
+            "x": {
+              "e": "Todo tributo é cobrado por atividade administrativa vinculada; isso difere de tributo vinculado a atuação estatal ou de receita vinculada.",
+              "src": "DIREITO TRIBUTÁRIO.zip › 1. 1 - Conceito de Tributo.pdf, p. 24",
+              "questaoIds": [
+                "fiscal-t08-ce33"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": [
+      [
+        "conceito-1",
+        "pecuniaria",
+        "Prestação em moeda"
+      ],
+      [
+        "conceito-1",
+        "compulsoria",
+        "Obrigação legal"
+      ],
+      [
+        "conceito-1",
+        "conceito-2",
+        "Sem caráter sancionatório"
+      ],
+      [
+        "cobranca",
+        "natureza",
+        "Cobrança vinculada não define espécie"
+      ],
+      [
+        "natureza",
+        "pecuniaria",
+        "Natureza diferente de forma de pagamento"
+      ]
+    ]
+  }
+}
