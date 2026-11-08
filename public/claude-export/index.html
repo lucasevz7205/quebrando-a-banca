@@ -411,6 +411,7 @@ details.diario .feed{margin-top:10px}
 </style>
 <link rel="stylesheet" href="/claude-export/experience.css">
 <link rel="stylesheet" href="/claude-export/weekly.css">
+<link rel="stylesheet" href="/claude-export/analytics.css">
 
 <div class="wrap">
   <header class="top">
@@ -425,7 +426,7 @@ details.diario .feed{margin-top:10px}
       <button id="tab-treinar" data-view="treinar">Treinar <span class="count" id="cnt-hoje">0</span></button>
       <button id="tab-estudo" data-view="estudo">Estudo</button>
       <button id="tab-simulado" data-view="simulado">Simulado</button>
-      <button id="tab-historico" data-view="historico">Desempenho</button>
+      <button id="tab-historico" data-view="analiseDia">Desempenho</button>
     </nav>
   </header>
   <main id="main" aria-live="polite"></main>
@@ -434,6 +435,8 @@ details.diario .feed{margin-top:10px}
 
 <script src="/claude-export/bridge.js"></script>
 <script src="/claude-export/planner.js"></script>
+<script src="/claude-export/insights.js"></script>
+<script src="/claude-export/assistant.js"></script>
 <script>
 (function(){
 const S = {
@@ -449,7 +452,7 @@ const S = {
   pl:[], // planejamento semanal; nunca mistura com o histórico de respostas
   an:new Map(), mecQ:new Map(), pgModo:'mec', fMecMat:''
 };
-const VIEWS=['cartoes','mapa','simulado','painel','edital','revisao','pegadinhas','conteudo','treinar','caderno','historico','metodo'];
+const VIEWS=['cartoes','mapa','simulado','painel','edital','revisao','pegadinhas','conteudo','treinar','caderno','analiseDia','historico','metodo'];
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmtPct=x=>isFinite(x)?(Math.round(x*100)+'%'):'–';
@@ -598,8 +601,8 @@ const multiCap=cap=>cap==='MIX'||cap==='PEG';
 
 /* ---------- navegação ---------- */
 /* 5 abas; Estudo agrupa Revisão, Pegadinhas e Conteúdo; Treinar inclui o caderno de erros; Desempenho inclui o Método */
-const PAI={cartoes:'estudo',mapa:'estudo',revisao:'estudo',pegadinhas:'estudo',conteudo:'estudo',caderno:'treinar',metodo:'historico'};
-const SUBS={estudo:[['revisao','Revisão'],['mapa','Mapas mentais'],['cartoes','Flashcards'],['pegadinhas','Pegadinhas'],['conteudo','Materiais']],treinar:[['treinar','Treinar'],['caderno','Caderno de erros']],historico:[['historico','Desempenho'],['metodo','Método']]};
+const PAI={cartoes:'estudo',mapa:'estudo',revisao:'estudo',pegadinhas:'estudo',conteudo:'estudo',caderno:'treinar',metodo:'historico',analiseDia:'historico'};
+const SUBS={estudo:[['revisao','Revisão'],['mapa','Mapas mentais'],['cartoes','Flashcards'],['pegadinhas','Pegadinhas'],['conteudo','Materiais']],treinar:[['treinar','Treinar'],['caderno','Caderno de erros']],historico:[['analiseDia','Análise diária'],['historico','Indicadores históricos'],['metodo','Método']]};
 function subnav(){
   const pai=PAI[S.view]||S.view, l=SUBS[pai]; if(!l) return '';
   const cnt={caderno:cadernoItens().length,pegadinhas:S.pg.size};
@@ -615,7 +618,8 @@ const SECTION_INTROS={
   pegadinhas:['PADRÕES DA BANCA','Pegadinhas','Explore os mecanismos de cobrança e treine os itens relacionados.'],
   conteudo:['BIBLIOTECA DE ESTUDOS','Materiais','Consulte os materiais e fontes organizados por matéria e assunto.'],
   simulado:['TREINO DE PROVA','Simulados','Pratique com tempo, distribuição de questões e correção conforme as regras previstas.'],
-  historico:['INDICADORES','Desempenho','Acompanhe a evolução por matéria, a calibração da confiança e a agenda futura.'],
+  analiseDia:['ANÁLISE DIÁRIA','Desempenho diário','Os resultados reais das suas rodadas e tarefas em cada dia.'],
+  historico:['INDICADORES','Indicadores históricos','Acompanhe a evolução por matéria, a calibração da confiança e a agenda futura.'],
   metodo:['ESTRATÉGIA DE APRENDIZAGEM','Método de estudo','Consulte as regras da revisão espaçada, do caderno de erros e da prática ativa.']
 };
 function sectionIntro(v){
@@ -658,10 +662,11 @@ function render(force){
   else if(S.view==='conteudo') main.innerHTML=viewConteudo();
   else if(S.view==='treinar') main.innerHTML=S.round?(S.round.fim?viewFim():viewItem()):viewSetup();
   else if(S.view==='caderno') main.innerHTML=viewCaderno();
+  else if(S.view==='analiseDia') main.innerHTML=window.QBInsights ? window.QBInsights.render(S,hoje) : '<div class="notice">Análise diária indisponível.</div>';
   else if(S.view==='simulado'){ main.innerHTML=viewSimulado(); if(!simLS('obj')&&!simLS('disc')) main.insertAdjacentHTML('afterbegin',sectionIntro('simulado')); wireSim(); return; }
   else main.innerHTML=viewHistorico();
   const sn=subnav(); if(sn&&!(S.view==='treinar'&&S.round)) main.insertAdjacentHTML('afterbegin',`<div class="wrap" style="margin-bottom:14px">${sn}</div>`);
-  if(S.view!=='painel'&&!(S.view==='treinar'&&S.round)) main.insertAdjacentHTML('afterbegin',sectionIntro(S.view));
+  if(S.view!=='painel'&&S.view!=='analiseDia'&&!(S.view==='treinar'&&S.round)) main.insertAdjacentHTML('afterbegin',sectionIntro(S.view));
   wire();
 }
 function updateCounts(){
@@ -1946,6 +1951,7 @@ function viewMetodo(){
 
 /* ---------- ações ---------- */
 function wire(){
+  if(S.view==='analiseDia' && window.QBInsights) window.QBInsights.wire(S,render,hoje);
   if(S.view==="painel" && window.QBPlanner) window.QBPlanner.wire(S,{render,enqueue,toast,hoje,startRevisao,iniciarMix});
   document.querySelectorAll('[data-cap]').forEach(b=>b.addEventListener('click',()=>{S.cap=b.dataset.cap;S.capEscolhido=true;render(true)}));
   document.querySelectorAll('input[name="modo"]').forEach(i=>i.addEventListener('change',()=>{S.modo=i.value;render(true)}));
@@ -2197,9 +2203,9 @@ function subscribe(){
     S.r=m; render();
   },()=>{});
   db.collection('rodadas').orderBy('inicio','desc').limit(500).onSnapshot(snap=>{
-    S.rodadas=snap.docs.map(d=>Object.assign({id:d.id},d.data())); if(['historico','painel','treinar'].includes(S.view)&&!S.round) render(); else updateCounts();
+    S.rodadas=snap.docs.map(d=>Object.assign({id:d.id},d.data())); if(['historico','analiseDia','painel','treinar'].includes(S.view)&&!S.round) render(); else updateCounts();
   },()=>{});
-  const central=(col,fn)=>db.collection(col).onSnapshot(snap=>{fn(snap.docs.map(d=>Object.assign({id:d.id},d.data())));if(['painel','edital','revisao','pegadinhas','conteudo','cartoes','mapa'].includes(S.view))render();},()=>{});
+  const central=(col,fn)=>db.collection(col).onSnapshot(snap=>{fn(snap.docs.map(d=>Object.assign({id:d.id},d.data())));if(['painel','analiseDia','edital','revisao','pegadinhas','conteudo','cartoes','mapa'].includes(S.view))render();},()=>{});
   central('revisao',ds=>{S.rv=new Map(ds.map(d=>[d.id,d]));});
   central('cartoes_aval',ds=>{S.cav=new Map(ds.map(d=>[d.k||d.id,d]));});
   central('pegadinhas',ds=>{S.pg=new Map(ds.map(d=>[d.id,d]));updateCounts();});
@@ -2211,10 +2217,10 @@ function subscribe(){
   central('diario',ds=>{S.di=ds;});
   db.collection('planejamento').onSnapshot(snap=>{
     S.pl=snap.docs.map(d=>Object.assign({id:d.id},d.data()));
-    if(S.view==='painel')render();
+    if(['painel','analiseDia'].includes(S.view))render();
   },err=>{console.warn('O planejamento não pôde ser carregado.',err)});
   db.collection('textos').onSnapshot(snap=>{S.tx=new Map(snap.docs.map(d=>[d.id,Object.assign({id:d.id},d.data())]));if(['simulado','treinar'].includes(S.view))render();},()=>{});
-  db.collection('simulados').onSnapshot(snap=>{S.sims=snap.docs.map(d=>Object.assign({id:d.id},d.data()));if(S.view==='simulado'&&!simLS('obj')&&!simLS('disc'))render();},()=>{});
+  db.collection('simulados').onSnapshot(snap=>{S.sims=snap.docs.map(d=>Object.assign({id:d.id},d.data()));if((S.view==='simulado'||S.view==='analiseDia')&&!simLS('obj')&&!simLS('disc'))render();},()=>{});
 }
 /* ---------- SIMULADO DOMINICAL ---------- */
 const SIM_DEF={
@@ -2369,6 +2375,7 @@ function wireSim(){
 function init(){
   let v='painel'; try{ const h=(location.hash||'').slice(1); if(VIEWS.includes(h)) v=h; }catch(e){}
   setView(v,false);
+  if(window.QBAssistant)window.QBAssistant.mount(S);
   const use=window.claude&&window.claude.use?window.claude.use('db'):Promise.resolve(null);
   Promise.resolve(use).then(db=>{
     if(!db){ S.dbState='missing'; render(true); return; }
