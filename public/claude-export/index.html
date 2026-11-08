@@ -1944,8 +1944,10 @@ function viewPegadinhas(){
   if(!S.edLoaded) return `<div class="notice">Carregando…</div>`;
   const seg=`<div class="qb-trap-topbar"><div class="seg" role="group" aria-label="Visão"><button data-pgmodo="mec" aria-pressed="${S.pgModo==='mec'}">Aprender os mecanismos</button><button data-pgmodo="top" aria-pressed="${S.pgModo!=='mec'}">Aplicar por tópico</button></div>
     ${S.pgModo==='top'?'<label class="check"><input type="checkbox" id="evocar" '+(S.evocar?'checked':'')+'> Evocar antes de ler</label>':''}</div>`; 
-  if(S.pgModo==='mec') return `<div class="wrap" style="gap:14px">${seg}${viewMecanismos()}</div>`;
-  return `<div class="wrap" style="gap:14px">${seg}${viewPegadinhasTopicos()}</div>`;
+  /* Um único lugar para contrastes, pegadinhas e futuras variantes inéditas curadas. */
+  const extra=window.QBLearning?(window.QBLearning.activityHTML()+window.QBLearning.pegadinhasHTML(S)):'';
+  if(S.pgModo==='mec') return `<div class="wrap" style="gap:14px">${seg}${extra}${viewMecanismos()}</div>`;
+  return `<div class="wrap" style="gap:14px">${seg}${extra}${viewPegadinhasTopicos()}</div>`;
 }
 function viewPegadinhasTopicos(){
   if(!S.pg.size) return `<div class="notice"><strong>Nenhuma pegadinha registrada ainda.</strong> Peça ao Claude, no Code, "/pegadinhas" com o tópico ou a matéria (por exemplo, "/pegadinhas dc-2d"). Cada pegadinha entra aqui ligada a um item C/E.</div>`;
