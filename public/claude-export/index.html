@@ -959,6 +959,20 @@ function lblEvo(d){if(S.evoPer==='m') return MESES[+d.slice(5,7)-1]+'/'+d.slice(
 function nomeMateria(sig){if(sig==='_') return 'Sem tópico do edital';const t=[...S.ed.values()].find(t=>t.sigla===sig);return t?t.materia:sig}
 function materiasComRodadas(){const set=new Set();for(const r of S.rodadas)for(const it of (r.itens||[])){const q=S.q.get(it.qid);const c=q?q.cap:null;if(c){const s=materiaDoCap(c);if(s)set.add(s)}}return [...set]}
 function materiaDoCap(cap){for(const t of S.ed.values()) if((t.caps||[]).includes(cap)) return t.sigla; return ''}
+/* Interpolação cúbica suave para as curvas, sem alterar nenhum valor da série. */
+function qbCurve(pts){
+  if(!pts.length) return '';
+  if(pts.length===1) return 'M '+pts[0][0].toFixed(1)+' '+pts[0][1].toFixed(1);
+  let p='M '+pts[0][0].toFixed(1)+' '+pts[0][1].toFixed(1);
+  for(let i=1;i<pts.length;i++){
+    const a=pts[i-1],b=pts[i],prev=pts[Math.max(0,i-2)],next=pts[Math.min(pts.length-1,i+1)];
+    const dx=(b[0]-a[0])/3;
+    const d1=(b[1]-prev[1])*dx/Math.max(1,b[0]-prev[0]);
+    const d2=(next[1]-a[1])*dx/Math.max(1,next[0]-a[0]);
+    p+=' C '+(a[0]+dx).toFixed(1)+' '+(a[1]+d1).toFixed(1)+', '+(b[0]-dx).toFixed(1)+' '+(b[1]-d2).toFixed(1)+', '+b[0].toFixed(1)+' '+b[1].toFixed(1);
+  }
+  return p;
+}
 function viewEvolucao(){
   const todas=dadosEvolucao();
   if(!todas.length&&!(S.evoDe||S.evoAte)) return `<div class="notice">O gráfico aparece depois da primeira rodada.</div>`;
@@ -985,8 +999,8 @@ function viewEvolucao(){
   let linhas='',pontos='',rot='';
   for(const s of vis){
     const ps=s.pts;
-    if(ps.length>1) linhas+=`<path d="${ps.map((p,i)=>(i?'L':'M')+x(p.d).toFixed(1)+' '+y(val(p)).toFixed(1)).join(' ')}" fill="none" stroke="${cor(s)}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" ${s.slot?'':'stroke-dasharray="5 4"'}/>`;
-    for(const p of ps) pontos+=`<circle cx="${x(p.d)}" cy="${y(val(p))}" r="4.5" fill="${cor(s)}" class="evo-pt"/>`;
+    if(ps.length>1) linhas+=`<path d="${qbCurve(ps.map(p=>[x(p.d),y(val(p))]))}" fill="none" stroke="${cor(s)}" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" ${s.slot?'':'stroke-dasharray="5 4"'}/>`;
+    for(const p of ps) pontos+=`<circle cx="${x(p.d)}" cy="${y(val(p))}" r="5.2" fill="${cor(s)}" class="evo-pt"/>`;
     if(vis.length<=4){const p=ps[ps.length-1];rot+=`<text x="${x(p.d)+10}" y="${y(val(p))+4}" class="evo-lb">${esc(S.fEvo?s.cap:s.cap.toUpperCase())}</text>`;}
   }
   let hits='';
@@ -1231,13 +1245,13 @@ function memoria(){
     for(let i=1;i<hs.length;i++){const g=difDias(diaDe(hs[i-1].em),diaDe(hs[i].em)); if(g<1) continue; const k=B.findIndex(b=>g>=b[0]&&g<=b[1]); if(k<0) continue; acc[k][0]++; if(hs[i].ok) acc[k][1]++;}}
   const W=360,H=180,L=34,Rr=16,T=24,Bt=28, x=i=>L+i*(W-L-Rr)/(B.length-1), y=v=>T+(1-v)*(H-T-Bt);
   const pts=acc.map((a,i)=>a[0]>=5?[x(i),y(a[1]/a[0]),a]:null);
-  const path=pts.filter(Boolean).map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ');
+  const path=qbCurve(pts.filter(Boolean).map(p=>[p[0],p[1]]));
   const grid=[0.5,0.75,0.9,1].map(v=>`<line x1="${L}" x2="${W-Rr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" ${v===0.9?'stroke-dasharray="4 3" stroke="var(--certo)"':''}/><text class="vx" x="${L-4}" y="${y(v)+3}" text-anchor="end">${v*100}%</text>`).join('');
   const n=acc.reduce((s,a)=>s+a[0],0);
   if(n<10) return `<section class="card-v"><h2 class="section-title">Sua memória por intervalo</h2><p class="rule">Ainda há poucas revisões registradas para desenhar a curva.</p></section>`;
   return `<section class="card-v" aria-label="Sua memória por intervalo"><h2 class="section-title">Sua memória por intervalo</h2>
     <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Acerto ao rever um item, por dias desde a resposta anterior">${grid}
-    <path d="${path}" fill="none" stroke="var(--pen)" stroke-width="2.5"/>
+    <path d="${path}" fill="none" stroke="var(--pen)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
     ${pts.map((p,i)=>p?`<circle cx="${p[0]}" cy="${p[1]}" r="5" fill="var(--pen)" stroke="var(--surface)" stroke-width="2"><title>${B[i][2]}: ${Math.round(p[2][1]/p[2][0]*100)}% (${p[2][1]} de ${p[2][0]})</title></circle><text class="vl" x="${p[0]}" y="${p[1]-9}" text-anchor="middle">${Math.round(p[2][1]/p[2][0]*100)}%</text>`:'').join('')}
     ${B.map((b,i)=>`<text class="vx" x="${x(i)}" y="${H-10}" text-anchor="middle">${b[2]}</text>`).join('')}</svg>
     <p class="rule">Quanto você acerta ao reencontrar um item, pelos dias desde a resposta anterior (${n} reencontros; pontos com menos de 5 ficam de fora). A linha tracejada é a meta de 90%. Se a curva cai muito nos intervalos longos, o espaçamento está largo demais para você.</p></section>`;
