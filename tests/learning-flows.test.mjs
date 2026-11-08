@@ -12,7 +12,7 @@ function harness(card) {
  const doc={querySelectorAll:s=>s==='[data-learn]'?[button]:s==='[data-learn-draft]'?[draft]:[],
  querySelector:()=>({value:'C'}),getElementById:()=>({value:'2'})};
  S.db={collection:name=>({onSnapshot:cb=>cb({docs:name==='aprendizagem_conteudos'?[{id:card.id,data:()=>card}]:[]})}),
- doc:path=>({set:async value=>{if(failNext){failNext=false;throw Error('Synthetic failure')}saved.set(path,structuredClone(value));}})};
+ doc:path=>({set:async value=>{if(failNext){failNext=false;throw Error('Synthetic failure')}saved.set(path,JSON.parse(JSON.stringify(value)));}})};
  const env={window:{},document:doc,crypto:webcrypto,Map,Set,Date};
  vm.runInNewContext(source,env);const L=env.window.QBLearning;
  const api={render:()=>{},hoje:()=> '2026-11-08',setView:v=>{S.view=v},startSource:()=>{}};
