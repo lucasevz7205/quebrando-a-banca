@@ -82,7 +82,7 @@ export const correctFlashcardWithAI=createServerFn({method:"POST"})
   .middleware([requireUser])
   .validator(z.object({
     key:z.string().min(3).max(190),
-    response:z.string().min(2).max(2000)
+    response:z.string().min(1).max(2000)
   }))
   .handler(async({context,data})=>{
     const user=context.user;
@@ -93,11 +93,11 @@ export const correctFlashcardWithAI=createServerFn({method:"POST"})
       const {entities,storage}=await ownStorage(context);
       // O cartão é SEMPRE lido da própria conta, jamais recebido do navegador.
       const card=await trustedCard(storage,data.key);
-      const remaining=await consumeAllowance(entities,user.id);
-      const prompt=correctionPrompt(card,response);
       // Créditos do gateway/Base44. Nenhuma chave nem crédito de Claude do usuário.
       const integration=context.getBase44().asServiceRole.integrations?.Core;
       if(typeof integration?.InvokeLLM!=="function")throw new Error("IA do Base44 não está configurada nesta implantação.");
+      const remaining=await consumeAllowance(entities,user.id);
+      const prompt=correctionPrompt(card,response);
       const result=await integration.InvokeLLM({prompt});
       const raw=typeof result==="string"?result:
         (result?.response??result?.output??result?.text??result);
