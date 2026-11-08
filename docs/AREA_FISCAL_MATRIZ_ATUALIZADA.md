@@ -1,6 +1,6 @@
 # Área Fiscal · matriz operacional de cobertura
 
-Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 05, 06, 07, 08, 09, 11, 12, 21 e 26** e compartilhamento dos bancos nas baterias **17, 18, 19 e 32**. Ambiente Base44 vinculado à conta do candidato; o histórico da Câmara permanece separado.
+Atualizada em **08/11/2026**, com ampliação de bancos de dados nas tarefas **35, 38, 44, 50, 59 e 65** e reaproveitamento das questões de DIKW na **T71**, além das tarefas anteriormente trabalhadas. Ambiente Base44 vinculado à conta do candidato; o histórico da Câmara permanece separado.
 
 ## Totais reais do banco
 
@@ -8,12 +8,12 @@ Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 05, 06, 07,
 |---|---:|
 | Tarefas do edital | 75 |
 | Trilhas | 00: 20, 01: 16, 02: 20, 03: 19 |
-| Questões físicas distintas | **396** |
+| Questões físicas distintas | **516** |
 | Mapas por tópico | 75 |
-| Nós dos mapas, considerando todos os níveis | **665** (603 com identificador) |
-| Flashcards físicos | **487** |
-| Flashcards ligados a nós por identificador explícito | **365** |
-| Déficit aritmético até 20 questões/tarefa (excluídas 3 orientações, consideradas as baterias compartilhadas) | **1102** |
+| Nós dos mapas, considerando todos os níveis | **785** (727 com identificador) |
+| Flashcards físicos | **607** |
+| Flashcards ligados a nós por identificador explícito | **499** |
+| Déficit aritmético até 20 questões/tarefa (excluídas 3 orientações e considerados bancos compartilhados) | **969** |
 
 **Atenção:** a bateria **T18 possui 77 questões acessíveis**: 1 local e 76 referenciadas por ID das tarefas T06 e T12. Os itens reutilizados **não** aumentam o total de questões físicas e não criam novo histórico de respostas. Os mapas e cartões da bateria podem encaminhar aos materiais conceituais T06 e T12. A bateria **T19 contém 34 questões acessíveis**: 1 própria e 33 referências por ID à T09. Em ambos os casos, não há cópia de documentos de questões, nem duplicação de histórico ou SRS.
 
@@ -29,7 +29,7 @@ Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 05, 06, 07,
 
 - **T19 · Bateria de aspectos introdutórios:** **34 questões** com reutilização dos 33 IDs da tarefa 09, mais uma questão própria; dois cartões preservados e links ao mapa da T09.
 
-**Proveniência:** as questões adicionais foram redigidas para a plataforma e rotuladas como **autorais** com página da apostila. Não foram indevidamente atribuídas ao Cebraspe, FCC ou FGV. As questões anteriormente registradas e as avaliações SRS foram preservadas. **324 questões novas** (além das 72 originalmente cadastradas) foram criadas como exercícios autorais com comentários e referências de apostila. A presença de conteúdo não atesta sua qualidade científica nem o domínio ou retenção por parte do aluno. Nenhum histórico de respostas ou avaliações de revisão espaçada foi artificialmente criado.
+**Proveniência:** as questões adicionais foram redigidas para a plataforma e rotuladas como **autorais** com página da apostila. Não foram indevidamente atribuídas ao Cebraspe, FCC ou FGV. As questões anteriormente registradas e as avaliações SRS foram preservadas. **444 questões novas** (além das 72 originalmente cadastradas) foram criadas como exercícios autorais com comentários e referências de apostila. A presença de conteúdo não atesta sua qualidade científica nem o domínio ou retenção por parte do aluno. Nenhum histórico de respostas ou avaliações de revisão espaçada foi artificialmente criado.
 
 **T05, T11, T17, T21, T26 e T32 desbloqueadas** pelos novos PDFs de TI. Os dois primeiros assuntos de tecnologia e os dois de governança foram aprofundados; suas baterias passaram a compartilhar os mesmos IDs das questões de teoria.
 
@@ -44,7 +44,7 @@ As fontes efetivamente lidas para estes seis tópicos foram **1. Análise de Inf
 - **T26 · Governança: arquitetura, ciclo e controles:** 35 questões (34 novas), 43 nós, 36 cartões e 36 vínculos. Origem: segundo PDF, pp. 34–71.
 - **T32 · Bateria de governança:** 67 questões acessíveis, sendo 66 referências aos bancos T21/T26 e 1 própria, com links aos dois mapas originais.
 
-**Controles:** 396 questões físicas sem duplicação de ID, 75 mapas com 665 nós (603 identificados), 487 cartões e 365 links explícitos válidos. **14 tarefas** têm cobertura estrutural ampliada (incluindo as quatro baterias); o déficit aritmético do mínimo por tarefa é **1.102**, antes de novas fusões por assunto. Nenhum histórico pessoal ou nota de revisão espaçada foi artificialmente alterado.
+**Controles da etapa anterior:** 396 questões físicas, 75 mapas com 665 nós, 487 cartões e 365 links válidos, com 14 tarefas ampliadas. A auditoria atualizada passou para **516 questões, 785 nós, 607 cartões, 499 vínculos e 21 tarefas ampliadas**; o déficit aritmético caiu para **969**. Nenhum histórico de respostas ou nota SRS foi artificialmente alterado.
 
 **Proveniência e limite:** 324 questões autorais acrescentadas às 72 iniciais, com referências a apostilas; não atribuir autoria Cebraspe/FCC/FGV aos itens criados. A revisão editorial e pedagógica é necessária antes de considerar todo o conteúdo homologado.
 
@@ -143,5 +143,5 @@ As fontes efetivamente lidas para estes seis tópicos foram **1. Análise de Inf
 - Foram preservados em cada tarefa os dois flashcards anteriores e a questão original. A revisão espaçada segue o motor existente; nenhum resultado do candidato foi alterado.
 - O banco compartilhado da T19 inclui 33 referências por ID a questões da T09 sem criar documentos duplicados. Esta bateria continua com seu próprio item original.
 - A T08 exige atenção especial à ressalva jurisprudencial sobre dação de bens móveis (ADI 1.917 e ADI 2.405) e ao caráter finalístico de certas espécies tributárias, tal como tratado nas páginas da apostila, sem extrapolações.
-- **Registro histórico da etapa anterior à importação de TI:** havia 273 questões físicas, 532 nós, 364 cartões e 230 links explícitos. Os totais atuais estão no primeiro quadro deste documento: 396, 665, 487 e 365, respectivamente.
-- **Limitação atual:** ainda existem 61 tarefas sem cobertura estrutural ampliada (incluindo 3 orientações iniciais). A pendência documental de T05, T11 e T17 foi resolvida com as apostilas novas, mas os demais assuntos exigem leitura e elaboração editorial.
+- **Histórico:** os marcos anteriores eram 273 questões / 364 cartões, e depois 396 questões / 487 cartões. A auditoria atualizada está no primeiro quadro: 516 questões e 607 cartões, sem duplicar registros de baterias.
+- **Limitação atual:** ainda existem 54 tarefas sem cobertura estrutural ampliada, incluindo 3 orientações iniciais. Os demais assuntos exigem leitura, elaboração e revisão editorial.
