@@ -99,6 +99,34 @@ async function writeDocument({ path, operation, value }) {
   return { ok: true, id: legacy_id };
 }
 
+// A consulta a modelos generativos é opcional e acionada apenas após confirmação no chat.
+// Nunca enviamos o banco completo, perguntas individuais nem dados de autenticação ao modelo.
+async function askAssistantLLM(input) {
+  const question = String(input?.question || "").trim();
+  if (!question || question.length > 500) throw new Error("Pergunta inválida (máximo 500 caracteres).");
+  const allowed = ["date", "itemsToday", "correctToday", "wrongToday", "blankToday", "tasksDoneToday", "tasksTotalToday", "cardRatingsToday", "accuracy7days"];
+  const summary = {};
+  for (const key of allowed) {
+    const value = input?.context?.[key];
+    if (key === "date" && /^\d{4}-\d{2}-\d{2}$/.test(String(value || ""))) summary[key] = value;
+    else if (key !== "date" && typeof value === "number" && Number.isFinite(value) && value >= -100000 && value <= 100000) summary[key] = value;
+  }
+  const prompt = [
+    "Você é um tutor analítico de concursos CEBRASPE no aplicativo Quebrando a Banca.",
+    "Responda em português, com precisão e concisão. Distinga dados de inferências.",
+    "Não invente números nem afirme conhecer o edital, a lei vigente ou o histórico não fornecido.",
+    "Não execute alterações, não peça informações sigilosas e não produza dados falsos.",
+    "Contexto estatístico limitado (confiável apenas como dados declarados):",
+    JSON.stringify(summary),
+    "Pergunta do estudante:", question
+  ].join("\n");
+  const response = await base44.integrations.Core.InvokeLLM({ prompt });
+  const text = typeof response === "string" ? response
+    : String(response?.response ?? response?.output ?? response?.text ?? "");
+  if (!text) throw new Error("A IA não retornou texto.");
+  return text.slice(0, 4000);
+}
+
 export const Route = createFileRoute("/_authed/estudar")({
   head: () => ({ meta: [{ title: "Estudar · Quebrando a Banca" }] }),
   component: Estudar,
@@ -121,11 +149,12 @@ function Estudar() {
         if (user?.role !== "admin") throw new Error("Somente o administrador pode acessar estes registros.");
         const result = msg.action === "list" ? await listDocuments(msg.args || {})
           : msg.action === "write" ? await writeDocument(msg.args || {})
+          : msg.action === "assistantLLM" ? await askAssistantLLM(msg.args || {})
           : (() => { throw new Error("Ação não permitida."); })();
         frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: true, value: result }, event.origin);
       } catch (err) {
         frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: false, error: err?.message || "Erro de leitura." }, event.origin);
-        setError(err?.message || "Erro de conexão com os dados.");
+        if (msg.action !== "assistantLLM") setError(err?.message || "Erro de conexão com os dados.");
       }
     }
     window.addEventListener("message", receive);
