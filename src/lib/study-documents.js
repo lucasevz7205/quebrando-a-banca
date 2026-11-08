@@ -77,7 +77,8 @@ export async function writeDocument(storage, { path, operation, value }) {
     }
     if (old.length && next.kind !== "weekly") {
       const [existing] = await hydrated(storage, collection, old);
-      const canonical = value => JSON.stringify(value, Object.keys(value).sort());
+      const normalize = value => Array.isArray(value) ? value.map(normalize) : value && typeof value === "object" ? Object.fromEntries(Object.keys(value).sort().map(key => [key, normalize(value[key])])) : value;
+      const canonical = value => JSON.stringify(normalize(value));
       if (canonical(existing) === canonical(next)) return { ok: true, id: legacy_id, replay: true };
       throw new Error("Evento já registrado. A tentativa original foi preservada.");
     }
