@@ -1,0 +1,1691 @@
+{
+  "topic": "fiscal-t26",
+  "source": "2. Governança de dados.pdf",
+  "sourcePages": "34–71",
+  "questions": [
+    {
+      "id": "fiscal-t26-ce02",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "A arquitetura de dados estabelece uma visão de organização, integração, armazenamento e uso dos dados, alinhada à arquitetura de negócio e TI.",
+      "gabarito": "C",
+      "comentario": "O capítulo define arquitetura como ponte entre necessidades estratégicas e soluções técnicas, com princípios e padrões.",
+      "ordem": 2602,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 34",
+      "tema": "Arquitetura corporativa de dados",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "arq-corporativa",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 34,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce03",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "O framework de Zachman é apresentado como matriz 6 × 6 que cruza perspectivas organizacionais com interrogativas como o quê, como e quem.",
+      "gabarito": "C",
+      "comentario": "A apostila descreve seis perspectivas e seis perguntas de arquitetura na matriz de Zachman.",
+      "ordem": 2603,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 35",
+      "tema": "Framework de Zachman",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "arq-zachman",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 35,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce04",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "O Enterprise Data Model busca fornecer visão integrada de dados corporativos, independente de uma solução tecnológica única.",
+      "gabarito": "C",
+      "comentario": "O EDM é blueprint holístico, que pode abranger modelos conceituais e lógicos.",
+      "ordem": 2604,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 35",
+      "tema": "Modelo de Dados Corporativo",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "arq-edm",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 35,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce05",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "O roadmap de arquitetura de dados trata da transição entre estado atual e estado futuro desejado, com prioridades e horizonte de evolução.",
+      "gabarito": "C",
+      "comentario": "A apostila menciona planos pragmáticos para aproximar arquitetura existente do estado-alvo.",
+      "ordem": 2605,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 36",
+      "tema": "Roadmap As-Is × To-Be",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "arq-roadmap",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 36,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce06",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "A modelagem conceitual descreve conceitos e entidades essenciais de negócio sem depender das características do SGBD escolhido.",
+      "gabarito": "C",
+      "comentario": "O modelo conceitual captura requisitos de alto nível, garantindo linguagem comum ao negócio.",
+      "ordem": 2606,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 37",
+      "tema": "Modelo conceitual",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "mod-conceitual",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 37,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce07",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "O modelo lógico acrescenta atributos, chaves e relacionamentos detalhados ao modelo conceitual, ainda sem exigir uma implementação física específica.",
+      "gabarito": "C",
+      "comentario": "A apostila o descreve como detalhamento independente das limitações tecnológicas concretas.",
+      "ordem": 2607,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 37",
+      "tema": "Modelo lógico",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "mod-logico",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 37,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce08",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "O modelo físico é independente da tecnologia de banco de dados e ignora índices, particionamento e opções de armazenamento.",
+      "gabarito": "E",
+      "comentario": "O PDM depende de hardware/software e representa tabelas, colunas, índices e características físicas.",
+      "ordem": 2608,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 38",
+      "tema": "Modelo físico",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "mod-fisico",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 38,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce09",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "A normalização busca reduzir redundâncias e anomalias de inserção, alteração e exclusão em estruturas de dados.",
+      "gabarito": "C",
+      "comentario": "O texto associa a organização por dependências à redução de inconsistências.",
+      "ordem": 2609,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 39",
+      "tema": "Normalização e anomalias",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "mod-normalizacao",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 39,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce10",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "O administrador de banco de dados atua em backup, recuperação, ajustes de desempenho e gestão técnica das estruturas de dados.",
+      "gabarito": "C",
+      "comentario": "O papel do DBA é operacional, com foco em confiabilidade, disponibilidade e mudanças documentadas.",
+      "ordem": 2610,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 41",
+      "tema": "Responsabilidades do DBA",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "ops-dba",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 41,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce11",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "A realização periódica de backups torna desnecessário testar restauração em ambientes de contingência.",
+      "gabarito": "E",
+      "comentario": "Apostila enfatiza que backups ilegíveis ou irrecuperáveis são inúteis; é necessário testar recuperação.",
+      "ordem": 2611,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 42",
+      "tema": "Backup e recuperação",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "ops-backup",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 42,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce12",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Clustering e failover podem ser adotados para aumentar a disponibilidade de sistemas de dados.",
+      "gabarito": "C",
+      "comentario": "O material relaciona essas soluções a alta disponibilidade e continuidade de operações.",
+      "ordem": 2612,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 41",
+      "tema": "Continuidade operacional",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "ops-continu",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 41,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce13",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Gerenciamento do ciclo de vida não exige guardar todo registro indefinidamente no banco de produção, sendo possíveis arquivamento e expurgo regidos por política.",
+      "gabarito": "C",
+      "comentario": "A seção trata retenção e descarte como atividades planejadas, sem armazenamento operacional permanente de tudo.",
+      "ordem": 2613,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 42",
+      "tema": "Ciclo de vida e descarte",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "ops-retencao",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 42,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce14",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Acesso, autenticação, autorização e auditoria são os chamados quatro As destacados no capítulo.",
+      "gabarito": "C",
+      "comentario": "O quadro diferencia conexão, identificação, privilégios e verificação das ações praticadas.",
+      "ordem": 2614,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 44",
+      "tema": "Quatro As da segurança",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "seg-4as",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 44,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce15",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Autenticar significa determinar as operações permitidas a uma conta, enquanto autorizar significa comprovar a identidade do usuário.",
+      "gabarito": "E",
+      "comentario": "A assertiva inverte os papéis: autenticação verifica identidade; autorização define privilégios.",
+      "ordem": 2615,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 44",
+      "tema": "Autenticação × autorização",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "seg-auth-authz",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 44,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce16",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Um mesmo conjunto de dados não pode estar simultaneamente sujeito a categorias regulatórias de saúde e dados pessoais.",
+      "gabarito": "E",
+      "comentario": "O material distingue nível de confidencialidade de classificações regulatórias, que podem se sobrepor.",
+      "ordem": 2616,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 45",
+      "tema": "Classificação regulatória",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "seg-classificacao",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 45,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce17",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "A criptografia pode proteger dados tanto em transmissão quanto armazenados, incluindo backups sensíveis.",
+      "gabarito": "C",
+      "comentario": "O capítulo menciona técnicas simétricas/assimétricas para proteção de dados em movimento ou em repouso.",
+      "ordem": 2617,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 45",
+      "tema": "Criptografia em trânsito e repouso",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "seg-criptografia",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 45,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce18",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Mascaramento altera representação de dados sensíveis e pode apoiar a criação de ambientes de testes com menor exposição.",
+      "gabarito": "C",
+      "comentario": "O texto cita ofuscação para uso de bases com proteção de atributos em ambientes de teste.",
+      "ordem": 2618,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 45",
+      "tema": "Mascaramento",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "seg-mascaramento",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 45,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce19",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Injeção de SQL é ameaça técnica na qual entradas não tratadas podem ser usadas para inserir comandos indevidos em consultas.",
+      "gabarito": "C",
+      "comentario": "O texto a descreve como abuso de canais de entrada vulneráveis, com risco de acesso não autorizado.",
+      "ordem": 2619,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 46",
+      "tema": "SQL Injection",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "seg-sqlinj",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 46,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce20",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "No processo ETL, a transformação dos dados ocorre antes do carregamento no destino.",
+      "gabarito": "C",
+      "comentario": "ETL = extrair, transformar e carregar; é distinto de ELT.",
+      "ordem": 2620,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 47",
+      "tema": "ETL: ordem",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "int-etl",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 47,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce21",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "No ELT, dados podem ser carregados no destino antes de sua transformação, aproveitando capacidade de processamento do ambiente-alvo.",
+      "gabarito": "C",
+      "comentario": "ELT = extrair, carregar e transformar; comum em ambientes de maior capacidade analítica.",
+      "ordem": 2621,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 47",
+      "tema": "ELT: ordem",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "int-elt",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 47,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce22",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Processamento em lote com intervalos agendados geralmente apresenta latência maior do que fluxos por eventos de atualização quase imediata.",
+      "gabarito": "C",
+      "comentario": "Apostila contrasta cargas periódicas e near-real-time orientado a eventos.",
+      "ordem": 2622,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 48",
+      "tema": "Batch e latência",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "int-batch-latencia",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 48,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce23",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "APIs, mensageria e padrões de integração podem ser usados para intercâmbio confiável de dados entre sistemas.",
+      "gabarito": "C",
+      "comentario": "O capítulo apresenta integração como fluxo de dados padronizado com preservação do significado.",
+      "ordem": 2623,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 47",
+      "tema": "Interoperabilidade",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "int-apis",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 47,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce24",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Clientes e produtos são exemplos de dados mestres, associados a entidades centrais do negócio.",
+      "gabarito": "C",
+      "comentario": "A apostila contrapõe entidades estáveis de negócio aos registros de eventos transacionais.",
+      "ordem": 2624,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 57",
+      "tema": "Dados mestres",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "mdm-mestre",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 57,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce25",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Tabelas de códigos e categorias padronizadas são exemplos típicos de dados de referência, não de registros individuais de clientes.",
+      "gabarito": "C",
+      "comentario": "O capítulo distingue domínios de valores de dados mestres das entidades de negócio.",
+      "ordem": 2625,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 57",
+      "tema": "Dados de referência",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "mdm-referencia",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 57,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce26",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Uma venda registrada em determinado momento constitui dado transacional que costuma referenciar clientes e produtos.",
+      "gabarito": "C",
+      "comentario": "O material trata dados transacionais como eventos/ações, em contraste com entidades mestras.",
+      "ordem": 2626,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 57",
+      "tema": "Dados transacionais",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "mdm-transacional",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 57,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce27",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "A resolução de entidades pode reconciliar registros duplicados para formar um registro confiável consolidado.",
+      "gabarito": "C",
+      "comentario": "A apostila associa matching e merging à construção de Golden Record/Trusted Source.",
+      "ordem": 2627,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 58",
+      "tema": "Golden Record",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "mdm-golden",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 58,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce28",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "A abordagem de Inmon parte de DW corporativo central e normalizado, enquanto Kimball enfatiza data marts dimensionais com dimensões conformadas.",
+      "gabarito": "C",
+      "comentario": "O capítulo contrasta CIF (Inmon) e bus dimensional (Kimball).",
+      "ordem": 2628,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 60",
+      "tema": "Inmon × Kimball",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "bi-inmon",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 60,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce29",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Na modelagem dimensional, tabelas de fatos armazenam medidas, enquanto dimensões descrevem contexto para consultas e agrupamentos.",
+      "gabarito": "C",
+      "comentario": "O capítulo atribui métricas a fatos e atributos descritivos a dimensões.",
+      "ordem": 2629,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 61",
+      "tema": "Fato × dimensão",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "bi-fato-dimensao",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 61,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce30",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Linhagem de dados permite rastrear origem, transformação e movimentação dos dados por sistemas e processos.",
+      "gabarito": "C",
+      "comentario": "A apostila relaciona lineage à identificação de falhas, migrações e auditoria.",
+      "ordem": 2630,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 65",
+      "tema": "Data lineage",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "md-linhagem",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 65,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce31",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Logs de jobs e histórico de extrações podem ser metadados operacionais, e não meramente descrições de negócio.",
+      "gabarito": "C",
+      "comentario": "O texto diferencia definições de negócio, estrutura técnica e rastros de execução.",
+      "ordem": 2631,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 63",
+      "tema": "Metadados de negócio/técnicos/operacionais",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "md-tipos",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 63,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce32",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "Um valor que respeita o tipo e o formato de uma coluna pode, ainda assim, ser incorreto em relação à realidade.",
+      "gabarito": "C",
+      "comentario": "Validade verifica regras sintáticas/domínio; acurácia requer correspondência ao fato verdadeiro.",
+      "ordem": 2632,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 68",
+      "tema": "Acurácia × validade",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "qd-accuracia",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 68,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce33",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "A dimensão unicidade busca evitar múltiplos registros referentes à mesma entidade real em um conjunto de dados.",
+      "gabarito": "C",
+      "comentario": "Duplicatas indesejadas violam a unicidade.",
+      "ordem": 2633,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 69",
+      "tema": "Unicidade",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "qd-unicidade",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 69,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce34",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "A perfilagem pode analisar nulos, distribuição, máximos e mínimos para descobrir problemas, mas não determina automaticamente todas as causas-raiz.",
+      "gabarito": "C",
+      "comentario": "O material caracteriza profiling como descoberta estatística; remediação exige investigação além do diagnóstico.",
+      "ordem": 2634,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 70",
+      "tema": "Data profiling",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "qd-profiling",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 70,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    },
+    {
+      "id": "fiscal-t26-ce35",
+      "cap": "FISCAL-TI-26",
+      "capNome": "Trilha 01 · Tarefa 26 · Governança: arquitetura, ciclo e controles",
+      "enunciado": "No ciclo PDCA, a etapa Check acompanha resultados e conformidade com requisitos, enquanto Act trata novos problemas e melhorias.",
+      "gabarito": "C",
+      "comentario": "A apostila aplica Plan, Do, Check e Act ao tratamento contínuo de problemas de dados.",
+      "ordem": 2635,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "2. Governança de dados.pdf, p. 71",
+      "tema": "PDCA da qualidade de dados",
+      "topico": "fiscal-t26",
+      "assuntoId": "fiscal-ti-governanca-arquitetura-controles",
+      "mapaNoId": "qd-pdca",
+      "fonte": {
+        "documento": "2. Governança de dados.pdf",
+        "pagina": 71,
+        "tipo": "apostila fornecida pelo usuário"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Arquitetura corporativa de dados",
+      "q": "Qual é a missão da arquitetura de dados?",
+      "a": [
+        "Descrever e orientar a organização, integração, armazenamento e utilização de dados conforme objetivos do negócio."
+      ],
+      "src": "2. Governança de dados.pdf, p. 34",
+      "mapaNoId": "arq-corporativa",
+      "questaoIds": [
+        "fiscal-t26-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Framework de Zachman",
+      "q": "Quais são os eixos fundamentais da matriz de Zachman?",
+      "a": [
+        "Seis perspectivas e seis interrogativas: o quê, como, onde, quem, quando e por quê."
+      ],
+      "src": "2. Governança de dados.pdf, p. 35",
+      "mapaNoId": "arq-zachman",
+      "questaoIds": [
+        "fiscal-t26-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo de Dados Corporativo",
+      "q": "Por que o EDM não é um esquema físico isolado?",
+      "a": [
+        "Ele padroniza conceitos e relacionamentos entre áreas independentemente de implementação específica."
+      ],
+      "src": "2. Governança de dados.pdf, p. 35",
+      "mapaNoId": "arq-edm",
+      "questaoIds": [
+        "fiscal-t26-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Roadmap As-Is × To-Be",
+      "q": "Que diferença há entre As-Is e To-Be na arquitetura?",
+      "a": [
+        "As-Is descreve o estado atual; To-Be, o estado desejado de evolução."
+      ],
+      "src": "2. Governança de dados.pdf, p. 36",
+      "mapaNoId": "arq-roadmap",
+      "questaoIds": [
+        "fiscal-t26-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo conceitual",
+      "q": "Que detalhamento predomina no modelo conceitual?",
+      "a": [
+        "Entidades e conceitos essenciais de negócio, em alto nível, sem tecnologia específica."
+      ],
+      "src": "2. Governança de dados.pdf, p. 37",
+      "mapaNoId": "mod-conceitual",
+      "questaoIds": [
+        "fiscal-t26-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo lógico",
+      "q": "Como o modelo lógico evolui em relação ao conceitual?",
+      "a": [
+        "Detalha atributos, chaves, normalização e relacionamentos, ainda independente da implantação física."
+      ],
+      "src": "2. Governança de dados.pdf, p. 37",
+      "mapaNoId": "mod-logico",
+      "questaoIds": [
+        "fiscal-t26-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Modelo físico",
+      "q": "Quais elementos caracterizam o modelo físico?",
+      "a": [
+        "Tabelas, colunas, índices, particionamento e características do SGBD escolhido."
+      ],
+      "src": "2. Governança de dados.pdf, p. 38",
+      "mapaNoId": "mod-fisico",
+      "questaoIds": [
+        "fiscal-t26-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Normalização e anomalias",
+      "q": "Por que normalizar uma estrutura relacional?",
+      "a": [
+        "Para reduzir redundâncias e anomalias, preservando dependências funcionais apropriadas."
+      ],
+      "src": "2. Governança de dados.pdf, p. 39",
+      "mapaNoId": "mod-normalizacao",
+      "questaoIds": [
+        "fiscal-t26-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Responsabilidades do DBA",
+      "q": "Quais funções típicas são exercidas pelo DBA?",
+      "a": [
+        "Manutenção, backup, restauração, tuning, segurança e controle técnico de alterações."
+      ],
+      "src": "2. Governança de dados.pdf, p. 41",
+      "mapaNoId": "ops-dba",
+      "questaoIds": [
+        "fiscal-t26-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Backup e recuperação",
+      "q": "Por que é preciso testar restauração de backups?",
+      "a": [
+        "Para confirmar que os dados podem ser efetivamente recuperados diante de falhas."
+      ],
+      "src": "2. Governança de dados.pdf, p. 42",
+      "mapaNoId": "ops-backup",
+      "questaoIds": [
+        "fiscal-t26-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Continuidade operacional",
+      "q": "Qual é a finalidade de clustering/failover em operações de dados?",
+      "a": [
+        "Reduzir indisponibilidade e permitir continuidade diante de falhas."
+      ],
+      "src": "2. Governança de dados.pdf, p. 41",
+      "mapaNoId": "ops-continu",
+      "questaoIds": [
+        "fiscal-t26-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Ciclo de vida e descarte",
+      "q": "O ciclo de vida termina necessariamente com dado em produção?",
+      "a": [
+        "Não. Pode haver arquivamento e expurgo conforme políticas de retenção e requisitos."
+      ],
+      "src": "2. Governança de dados.pdf, p. 42",
+      "mapaNoId": "ops-retencao",
+      "questaoIds": [
+        "fiscal-t26-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Quatro As da segurança",
+      "q": "Quais são os quatro As?",
+      "a": [
+        "Acesso, Autenticação, Autorização e Auditoria."
+      ],
+      "src": "2. Governança de dados.pdf, p. 44",
+      "mapaNoId": "seg-4as",
+      "questaoIds": [
+        "fiscal-t26-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Autenticação × autorização",
+      "q": "Diferencie autenticação de autorização.",
+      "a": [
+        "Autenticação: quem você é; autorização: o que você pode acessar ou fazer."
+      ],
+      "src": "2. Governança de dados.pdf, p. 44",
+      "mapaNoId": "seg-auth-authz",
+      "questaoIds": [
+        "fiscal-t26-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Classificação regulatória",
+      "q": "Classificações regulatórias de dados são mutuamente exclusivas?",
+      "a": [
+        "Não. Informações podem estar sujeitas a múltiplas obrigações regulatórias."
+      ],
+      "src": "2. Governança de dados.pdf, p. 45",
+      "mapaNoId": "seg-classificacao",
+      "questaoIds": [
+        "fiscal-t26-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Criptografia em trânsito e repouso",
+      "q": "Quais dois estados dos dados podem exigir criptografia?",
+      "a": [
+        "Em trânsito e em repouso."
+      ],
+      "src": "2. Governança de dados.pdf, p. 45",
+      "mapaNoId": "seg-criptografia",
+      "questaoIds": [
+        "fiscal-t26-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Mascaramento",
+      "q": "Qual é a finalidade do mascaramento em ambiente de testes?",
+      "a": [
+        "Reduzir exposição de dados sensíveis mantendo alguma utilidade para ensaios."
+      ],
+      "src": "2. Governança de dados.pdf, p. 45",
+      "mapaNoId": "seg-mascaramento",
+      "questaoIds": [
+        "fiscal-t26-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "SQL Injection",
+      "q": "Que falha explorada por SQL Injection deve ser evitada?",
+      "a": [
+        "Tratamento inseguro de entradas usadas em comandos SQL."
+      ],
+      "src": "2. Governança de dados.pdf, p. 46",
+      "mapaNoId": "seg-sqlinj",
+      "questaoIds": [
+        "fiscal-t26-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "ETL: ordem",
+      "q": "Qual a sequência do ETL?",
+      "a": [
+        "Extrair → Transformar → Carregar."
+      ],
+      "src": "2. Governança de dados.pdf, p. 47",
+      "mapaNoId": "int-etl",
+      "questaoIds": [
+        "fiscal-t26-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "ELT: ordem",
+      "q": "Qual a sequência do ELT?",
+      "a": [
+        "Extrair → Carregar → Transformar."
+      ],
+      "src": "2. Governança de dados.pdf, p. 47",
+      "mapaNoId": "int-elt",
+      "questaoIds": [
+        "fiscal-t26-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Batch e latência",
+      "q": "Como batch e processamento por eventos diferem em latência?",
+      "a": [
+        "Lotes tendem a atrasos maiores; eventos reduzem o intervalo entre origem e destino."
+      ],
+      "src": "2. Governança de dados.pdf, p. 48",
+      "mapaNoId": "int-batch-latencia",
+      "questaoIds": [
+        "fiscal-t26-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Interoperabilidade",
+      "q": "Cite três ferramentas ou mecanismos de integração.",
+      "a": [
+        "APIs, mensageria e ETL/ELT."
+      ],
+      "src": "2. Governança de dados.pdf, p. 47",
+      "mapaNoId": "int-apis",
+      "questaoIds": [
+        "fiscal-t26-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dados mestres",
+      "q": "Cite dois exemplos de dados mestres.",
+      "a": [
+        "Cliente e Produto."
+      ],
+      "src": "2. Governança de dados.pdf, p. 57",
+      "mapaNoId": "mdm-mestre",
+      "questaoIds": [
+        "fiscal-t26-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dados de referência",
+      "q": "Qual a diferença entre dado mestre e dado de referência?",
+      "a": [
+        "Mestre: entidade como Cliente; referência: domínio/código como status de pedido."
+      ],
+      "src": "2. Governança de dados.pdf, p. 57",
+      "mapaNoId": "mdm-referencia",
+      "questaoIds": [
+        "fiscal-t26-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dados transacionais",
+      "q": "Dê exemplo que relacione dado transacional a dados mestres.",
+      "a": [
+        "Venda (transação) referenciando Cliente e Produto (mestres)."
+      ],
+      "src": "2. Governança de dados.pdf, p. 57",
+      "mapaNoId": "mdm-transacional",
+      "questaoIds": [
+        "fiscal-t26-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Golden Record",
+      "q": "Para que serve a resolução de entidades no MDM?",
+      "a": [
+        "Identificar registros do mesmo objeto e consolidá-los numa referência confiável."
+      ],
+      "src": "2. Governança de dados.pdf, p. 58",
+      "mapaNoId": "mdm-golden",
+      "questaoIds": [
+        "fiscal-t26-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Inmon × Kimball",
+      "q": "Qual a principal diferença entre Inmon e Kimball?",
+      "a": [
+        "Inmon: DW corporativo integrado e normalizado antes dos marts; Kimball: marts dimensionais integrados por dimensões conformadas."
+      ],
+      "src": "2. Governança de dados.pdf, p. 60",
+      "mapaNoId": "bi-inmon",
+      "questaoIds": [
+        "fiscal-t26-ce28"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Fato × dimensão",
+      "q": "O que cada tipo de tabela representa?",
+      "a": [
+        "Fato: métricas quantitativas; dimensão: atributos de contexto (tempo, produto, região)."
+      ],
+      "src": "2. Governança de dados.pdf, p. 61",
+      "mapaNoId": "bi-fato-dimensao",
+      "questaoIds": [
+        "fiscal-t26-ce29"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Data lineage",
+      "q": "Qual pergunta o data lineage responde?",
+      "a": [
+        "De onde veio o dado, por quais transformações passou e para onde foi."
+      ],
+      "src": "2. Governança de dados.pdf, p. 65",
+      "mapaNoId": "md-linhagem",
+      "questaoIds": [
+        "fiscal-t26-ce30"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Metadados de negócio/técnicos/operacionais",
+      "q": "Qual metadado indica execução de job de ETL?",
+      "a": [
+        "Operacional, por documentar processamento e eventos em tempo de execução."
+      ],
+      "src": "2. Governança de dados.pdf, p. 63",
+      "mapaNoId": "md-tipos",
+      "questaoIds": [
+        "fiscal-t26-ce31"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Acurácia × validade",
+      "q": "Pode um dado ser válido e não acurado?",
+      "a": [
+        "Sim. O formato pode estar correto apesar de o valor representar incorretamente o objeto real."
+      ],
+      "src": "2. Governança de dados.pdf, p. 68",
+      "mapaNoId": "qd-accuracia",
+      "questaoIds": [
+        "fiscal-t26-ce32"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Unicidade",
+      "q": "Qual anomalia está diretamente ligada à unicidade?",
+      "a": [
+        "Duplicação de registros da mesma entidade."
+      ],
+      "src": "2. Governança de dados.pdf, p. 69",
+      "mapaNoId": "qd-unicidade",
+      "questaoIds": [
+        "fiscal-t26-ce33"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Data profiling",
+      "q": "Qual a limitação do data profiling?",
+      "a": [
+        "Identifica padrões e suspeitas, sem provar sozinho as causas-raiz dos problemas."
+      ],
+      "src": "2. Governança de dados.pdf, p. 70",
+      "mapaNoId": "qd-profiling",
+      "questaoIds": [
+        "fiscal-t26-ce34"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "PDCA da qualidade de dados",
+      "q": "Qual é a função do Check e do Act no PDCA?",
+      "a": [
+        "Check monitora qualidade e requisitos; Act age sobre problemas e realimenta melhorias."
+      ],
+      "src": "2. Governança de dados.pdf, p. 71",
+      "mapaNoId": "qd-pdca",
+      "questaoIds": [
+        "fiscal-t26-ce35"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Governança de dados: arquitetura, ciclo e controles · Trilha 01 · T26",
+    "versao": 2,
+    "fonte": "2. Governança de dados.pdf, pp. 34–71",
+    "ramos": [
+      {
+        "id": "conceito-1",
+        "t": "Arquitetura corporativa",
+        "n": "Visão de dados, Zachman, EDM e roadmap de evolução As-Is → To-Be.",
+        "cor": 1,
+        "x": {
+          "e": "Visão de dados, Zachman, EDM e roadmap de evolução As-Is → To-Be.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "arq-corporativa",
+            "t": "Arquitetura corporativa de dados",
+            "n": "Descrever e orientar a organização, integração, armazenamento e utilização de dados conforme objetivos do negócio.",
+            "x": {
+              "e": "O capítulo define arquitetura como ponte entre necessidades estratégicas e soluções técnicas, com princípios e padrões.",
+              "src": "2. Governança de dados.pdf, p. 34",
+              "questaoIds": [
+                "fiscal-t26-ce02"
+              ]
+            }
+          },
+          {
+            "id": "arq-zachman",
+            "t": "Framework de Zachman",
+            "n": "Seis perspectivas e seis interrogativas: o quê, como, onde, quem, quando e por quê.",
+            "x": {
+              "e": "A apostila descreve seis perspectivas e seis perguntas de arquitetura na matriz de Zachman.",
+              "src": "2. Governança de dados.pdf, p. 35",
+              "questaoIds": [
+                "fiscal-t26-ce03"
+              ]
+            }
+          },
+          {
+            "id": "arq-edm",
+            "t": "Modelo de Dados Corporativo",
+            "n": "Ele padroniza conceitos e relacionamentos entre áreas independentemente de implementação específica.",
+            "x": {
+              "e": "O EDM é blueprint holístico, que pode abranger modelos conceituais e lógicos.",
+              "src": "2. Governança de dados.pdf, p. 35",
+              "questaoIds": [
+                "fiscal-t26-ce04"
+              ]
+            }
+          },
+          {
+            "id": "arq-roadmap",
+            "t": "Roadmap As-Is × To-Be",
+            "n": "As-Is descreve o estado atual; To-Be, o estado desejado de evolução.",
+            "x": {
+              "e": "A apostila menciona planos pragmáticos para aproximar arquitetura existente do estado-alvo.",
+              "src": "2. Governança de dados.pdf, p. 36",
+              "questaoIds": [
+                "fiscal-t26-ce05"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-modelagem",
+        "t": "Modelagem e normalização",
+        "n": "Níveis conceitual, lógico e físico; normalização para reduzir anomalias.",
+        "cor": 2,
+        "x": {
+          "e": "Níveis conceitual, lógico e físico; normalização para reduzir anomalias.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "mod-conceitual",
+            "t": "Modelo conceitual",
+            "n": "Entidades e conceitos essenciais de negócio, em alto nível, sem tecnologia específica.",
+            "x": {
+              "e": "O modelo conceitual captura requisitos de alto nível, garantindo linguagem comum ao negócio.",
+              "src": "2. Governança de dados.pdf, p. 37",
+              "questaoIds": [
+                "fiscal-t26-ce06"
+              ]
+            }
+          },
+          {
+            "id": "mod-logico",
+            "t": "Modelo lógico",
+            "n": "Detalha atributos, chaves, normalização e relacionamentos, ainda independente da implantação física.",
+            "x": {
+              "e": "A apostila o descreve como detalhamento independente das limitações tecnológicas concretas.",
+              "src": "2. Governança de dados.pdf, p. 37",
+              "questaoIds": [
+                "fiscal-t26-ce07"
+              ]
+            }
+          },
+          {
+            "id": "mod-fisico",
+            "t": "Modelo físico",
+            "n": "Tabelas, colunas, índices, particionamento e características do SGBD escolhido.",
+            "x": {
+              "e": "O PDM depende de hardware/software e representa tabelas, colunas, índices e características físicas.",
+              "src": "2. Governança de dados.pdf, p. 38",
+              "questaoIds": [
+                "fiscal-t26-ce08"
+              ]
+            }
+          },
+          {
+            "id": "mod-normalizacao",
+            "t": "Normalização e anomalias",
+            "n": "Para reduzir redundâncias e anomalias, preservando dependências funcionais apropriadas.",
+            "x": {
+              "e": "O texto associa a organização por dependências à redução de inconsistências.",
+              "src": "2. Governança de dados.pdf, p. 39",
+              "questaoIds": [
+                "fiscal-t26-ce09"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-operacoes",
+        "t": "Armazenamento e ciclo de vida",
+        "n": "DBA, backup, recuperação, disponibilidade, retenção e descarte.",
+        "cor": 3,
+        "x": {
+          "e": "DBA, backup, recuperação, disponibilidade, retenção e descarte.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "ops-dba",
+            "t": "Responsabilidades do DBA",
+            "n": "Manutenção, backup, restauração, tuning, segurança e controle técnico de alterações.",
+            "x": {
+              "e": "O papel do DBA é operacional, com foco em confiabilidade, disponibilidade e mudanças documentadas.",
+              "src": "2. Governança de dados.pdf, p. 41",
+              "questaoIds": [
+                "fiscal-t26-ce10"
+              ]
+            }
+          },
+          {
+            "id": "ops-backup",
+            "t": "Backup e recuperação",
+            "n": "Para confirmar que os dados podem ser efetivamente recuperados diante de falhas.",
+            "x": {
+              "e": "Apostila enfatiza que backups ilegíveis ou irrecuperáveis são inúteis; é necessário testar recuperação.",
+              "src": "2. Governança de dados.pdf, p. 42",
+              "questaoIds": [
+                "fiscal-t26-ce11"
+              ]
+            }
+          },
+          {
+            "id": "ops-continu",
+            "t": "Continuidade operacional",
+            "n": "Reduzir indisponibilidade e permitir continuidade diante de falhas.",
+            "x": {
+              "e": "O material relaciona essas soluções a alta disponibilidade e continuidade de operações.",
+              "src": "2. Governança de dados.pdf, p. 41",
+              "questaoIds": [
+                "fiscal-t26-ce12"
+              ]
+            }
+          },
+          {
+            "id": "ops-retencao",
+            "t": "Ciclo de vida e descarte",
+            "n": "Não. Pode haver arquivamento e expurgo conforme políticas de retenção e requisitos.",
+            "x": {
+              "e": "A seção trata retenção e descarte como atividades planejadas, sem armazenamento operacional permanente de tudo.",
+              "src": "2. Governança de dados.pdf, p. 42",
+              "questaoIds": [
+                "fiscal-t26-ce13"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-2",
+        "t": "Segurança e controles",
+        "n": "Quatro As, níveis de proteção, criptografia, mascaramento e riscos.",
+        "cor": 4,
+        "x": {
+          "e": "Quatro As, níveis de proteção, criptografia, mascaramento e riscos.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "seg-4as",
+            "t": "Quatro As da segurança",
+            "n": "Acesso, Autenticação, Autorização e Auditoria.",
+            "x": {
+              "e": "O quadro diferencia conexão, identificação, privilégios e verificação das ações praticadas.",
+              "src": "2. Governança de dados.pdf, p. 44",
+              "questaoIds": [
+                "fiscal-t26-ce14"
+              ]
+            }
+          },
+          {
+            "id": "seg-auth-authz",
+            "t": "Autenticação × autorização",
+            "n": "Autenticação: quem você é; autorização: o que você pode acessar ou fazer.",
+            "x": {
+              "e": "A assertiva inverte os papéis: autenticação verifica identidade; autorização define privilégios.",
+              "src": "2. Governança de dados.pdf, p. 44",
+              "questaoIds": [
+                "fiscal-t26-ce15"
+              ]
+            }
+          },
+          {
+            "id": "seg-classificacao",
+            "t": "Classificação regulatória",
+            "n": "Não. Informações podem estar sujeitas a múltiplas obrigações regulatórias.",
+            "x": {
+              "e": "O material distingue nível de confidencialidade de classificações regulatórias, que podem se sobrepor.",
+              "src": "2. Governança de dados.pdf, p. 45",
+              "questaoIds": [
+                "fiscal-t26-ce16"
+              ]
+            }
+          },
+          {
+            "id": "seg-criptografia",
+            "t": "Criptografia em trânsito e repouso",
+            "n": "Em trânsito e em repouso.",
+            "x": {
+              "e": "O capítulo menciona técnicas simétricas/assimétricas para proteção de dados em movimento ou em repouso.",
+              "src": "2. Governança de dados.pdf, p. 45",
+              "questaoIds": [
+                "fiscal-t26-ce17"
+              ]
+            }
+          },
+          {
+            "id": "seg-mascaramento",
+            "t": "Mascaramento",
+            "n": "Reduzir exposição de dados sensíveis mantendo alguma utilidade para ensaios.",
+            "x": {
+              "e": "O texto cita ofuscação para uso de bases com proteção de atributos em ambientes de teste.",
+              "src": "2. Governança de dados.pdf, p. 45",
+              "questaoIds": [
+                "fiscal-t26-ce18"
+              ]
+            }
+          },
+          {
+            "id": "seg-sqlinj",
+            "t": "SQL Injection",
+            "n": "Tratamento inseguro de entradas usadas em comandos SQL.",
+            "x": {
+              "e": "O texto a descreve como abuso de canais de entrada vulneráveis, com risco de acesso não autorizado.",
+              "src": "2. Governança de dados.pdf, p. 46",
+              "questaoIds": [
+                "fiscal-t26-ce19"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-integracao",
+        "t": "Integração e interoperabilidade",
+        "n": "ETL/ELT, processamento em lotes, eventos e APIs.",
+        "cor": 5,
+        "x": {
+          "e": "ETL/ELT, processamento em lotes, eventos e APIs.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "int-etl",
+            "t": "ETL: ordem",
+            "n": "Extrair → Transformar → Carregar.",
+            "x": {
+              "e": "ETL = extrair, transformar e carregar; é distinto de ELT.",
+              "src": "2. Governança de dados.pdf, p. 47",
+              "questaoIds": [
+                "fiscal-t26-ce20"
+              ]
+            }
+          },
+          {
+            "id": "int-elt",
+            "t": "ELT: ordem",
+            "n": "Extrair → Carregar → Transformar.",
+            "x": {
+              "e": "ELT = extrair, carregar e transformar; comum em ambientes de maior capacidade analítica.",
+              "src": "2. Governança de dados.pdf, p. 47",
+              "questaoIds": [
+                "fiscal-t26-ce21"
+              ]
+            }
+          },
+          {
+            "id": "int-batch-latencia",
+            "t": "Batch e latência",
+            "n": "Lotes tendem a atrasos maiores; eventos reduzem o intervalo entre origem e destino.",
+            "x": {
+              "e": "Apostila contrasta cargas periódicas e near-real-time orientado a eventos.",
+              "src": "2. Governança de dados.pdf, p. 48",
+              "questaoIds": [
+                "fiscal-t26-ce22"
+              ]
+            }
+          },
+          {
+            "id": "int-apis",
+            "t": "Interoperabilidade",
+            "n": "APIs, mensageria e ETL/ELT.",
+            "x": {
+              "e": "O capítulo apresenta integração como fluxo de dados padronizado com preservação do significado.",
+              "src": "2. Governança de dados.pdf, p. 47",
+              "questaoIds": [
+                "fiscal-t26-ce23"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-mdm",
+        "t": "Dados mestres e de referência",
+        "n": "Mestres, referências, eventos transacionais e golden record.",
+        "cor": 6,
+        "x": {
+          "e": "Mestres, referências, eventos transacionais e golden record.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "mdm-mestre",
+            "t": "Dados mestres",
+            "n": "Cliente e Produto.",
+            "x": {
+              "e": "A apostila contrapõe entidades estáveis de negócio aos registros de eventos transacionais.",
+              "src": "2. Governança de dados.pdf, p. 57",
+              "questaoIds": [
+                "fiscal-t26-ce24"
+              ]
+            }
+          },
+          {
+            "id": "mdm-referencia",
+            "t": "Dados de referência",
+            "n": "Mestre: entidade como Cliente; referência: domínio/código como status de pedido.",
+            "x": {
+              "e": "O capítulo distingue domínios de valores de dados mestres das entidades de negócio.",
+              "src": "2. Governança de dados.pdf, p. 57",
+              "questaoIds": [
+                "fiscal-t26-ce25"
+              ]
+            }
+          },
+          {
+            "id": "mdm-transacional",
+            "t": "Dados transacionais",
+            "n": "Venda (transação) referenciando Cliente e Produto (mestres).",
+            "x": {
+              "e": "O material trata dados transacionais como eventos/ações, em contraste com entidades mestras.",
+              "src": "2. Governança de dados.pdf, p. 57",
+              "questaoIds": [
+                "fiscal-t26-ce26"
+              ]
+            }
+          },
+          {
+            "id": "mdm-golden",
+            "t": "Golden Record",
+            "n": "Identificar registros do mesmo objeto e consolidá-los numa referência confiável.",
+            "x": {
+              "e": "A apostila associa matching e merging à construção de Golden Record/Trusted Source.",
+              "src": "2. Governança de dados.pdf, p. 58",
+              "questaoIds": [
+                "fiscal-t26-ce27"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-bi",
+        "t": "Inteligência de negócios",
+        "n": "DW corporativo de Inmon versus marts dimensionais de Kimball.",
+        "cor": 7,
+        "x": {
+          "e": "DW corporativo de Inmon versus marts dimensionais de Kimball.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "bi-inmon",
+            "t": "Inmon × Kimball",
+            "n": "Inmon: DW corporativo integrado e normalizado antes dos marts; Kimball: marts dimensionais integrados por dimensões conformadas.",
+            "x": {
+              "e": "O capítulo contrasta CIF (Inmon) e bus dimensional (Kimball).",
+              "src": "2. Governança de dados.pdf, p. 60",
+              "questaoIds": [
+                "fiscal-t26-ce28"
+              ]
+            }
+          },
+          {
+            "id": "bi-fato-dimensao",
+            "t": "Fato × dimensão",
+            "n": "Fato: métricas quantitativas; dimensão: atributos de contexto (tempo, produto, região).",
+            "x": {
+              "e": "O capítulo atribui métricas a fatos e atributos descritivos a dimensões.",
+              "src": "2. Governança de dados.pdf, p. 61",
+              "questaoIds": [
+                "fiscal-t26-ce29"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-metadados",
+        "t": "Gestão de metadados",
+        "n": "Linhagem e funções de metadados técnicos, operacionais e de negócio.",
+        "cor": 8,
+        "x": {
+          "e": "Linhagem e funções de metadados técnicos, operacionais e de negócio.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "md-linhagem",
+            "t": "Data lineage",
+            "n": "De onde veio o dado, por quais transformações passou e para onde foi.",
+            "x": {
+              "e": "A apostila relaciona lineage à identificação de falhas, migrações e auditoria.",
+              "src": "2. Governança de dados.pdf, p. 65",
+              "questaoIds": [
+                "fiscal-t26-ce30"
+              ]
+            }
+          },
+          {
+            "id": "md-tipos",
+            "t": "Metadados de negócio/técnicos/operacionais",
+            "n": "Operacional, por documentar processamento e eventos em tempo de execução.",
+            "x": {
+              "e": "O texto diferencia definições de negócio, estrutura técnica e rastros de execução.",
+              "src": "2. Governança de dados.pdf, p. 63",
+              "questaoIds": [
+                "fiscal-t26-ce31"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "g-qualidade",
+        "t": "Qualidade e melhoria contínua",
+        "n": "Acurácia, validade, unicidade, data profiling e PDCA.",
+        "cor": 1,
+        "x": {
+          "e": "Acurácia, validade, unicidade, data profiling e PDCA.",
+          "src": "2. Governança de dados.pdf"
+        },
+        "f": [
+          {
+            "id": "qd-accuracia",
+            "t": "Acurácia × validade",
+            "n": "Sim. O formato pode estar correto apesar de o valor representar incorretamente o objeto real.",
+            "x": {
+              "e": "Validade verifica regras sintáticas/domínio; acurácia requer correspondência ao fato verdadeiro.",
+              "src": "2. Governança de dados.pdf, p. 68",
+              "questaoIds": [
+                "fiscal-t26-ce32"
+              ]
+            }
+          },
+          {
+            "id": "qd-unicidade",
+            "t": "Unicidade",
+            "n": "Duplicação de registros da mesma entidade.",
+            "x": {
+              "e": "Duplicatas indesejadas violam a unicidade.",
+              "src": "2. Governança de dados.pdf, p. 69",
+              "questaoIds": [
+                "fiscal-t26-ce33"
+              ]
+            }
+          },
+          {
+            "id": "qd-profiling",
+            "t": "Data profiling",
+            "n": "Identifica padrões e suspeitas, sem provar sozinho as causas-raiz dos problemas.",
+            "x": {
+              "e": "O material caracteriza profiling como descoberta estatística; remediação exige investigação além do diagnóstico.",
+              "src": "2. Governança de dados.pdf, p. 70",
+              "questaoIds": [
+                "fiscal-t26-ce34"
+              ]
+            }
+          },
+          {
+            "id": "qd-pdca",
+            "t": "PDCA da qualidade de dados",
+            "n": "Check monitora qualidade e requisitos; Act age sobre problemas e realimenta melhorias.",
+            "x": {
+              "e": "A apostila aplica Plan, Do, Check e Act ao tratamento contínuo de problemas de dados.",
+              "src": "2. Governança de dados.pdf, p. 71",
+              "questaoIds": [
+                "fiscal-t26-ce35"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": [
+      [
+        "conceito-1",
+        "g-modelagem",
+        "Arquitetura orienta modelagem"
+      ],
+      [
+        "g-modelagem",
+        "g-operacoes",
+        "Modelos materializados e operados"
+      ],
+      [
+        "g-operacoes",
+        "conceito-2",
+        "Retenção e segurança"
+      ],
+      [
+        "conceito-2",
+        "g-integracao",
+        "Proteção no intercâmbio"
+      ],
+      [
+        "g-integracao",
+        "g-mdm",
+        "Mestres sustentam transações"
+      ],
+      [
+        "g-mdm",
+        "g-bi",
+        "Entidades compartilhadas nas análises"
+      ],
+      [
+        "g-metadados",
+        "g-qualidade",
+        "Linhagem e qualidade"
+      ]
+    ]
+  }
+}
