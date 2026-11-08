@@ -1,0 +1,1676 @@
+{
+  "topic": "fiscal-t06",
+  "source": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf",
+  "sourcePages": "3–28",
+  "questions": [
+    {
+      "id": "fiscal-t06-ce02",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "No regime de direito público, a Administração pode exercer prerrogativas e se submete a restrições voltadas a finalidades coletivas, enquanto as relações privadas são em regra horizontais.",
+      "gabarito": "C",
+      "comentario": "O regime público admite poderes especiais e limitações; no regime privado, os particulares normalmente se relacionam sem prerrogativas estatais.",
+      "ordem": 602,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 3, seções 1.1–1.2",
+      "tema": "Regime público × privado",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "reg-publico"
+    },
+    {
+      "id": "fiscal-t06-ce03",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "Ao firmar contratos típicos do mercado, uma empresa estatal exploradora de atividade econômica fica sempre completamente afastada de qualquer regra de direito público.",
+      "gabarito": "E",
+      "comentario": "A atuação privada da estatal não exclui exigências públicas, como concurso e licitação nas condições legais. Os regimes convivem.",
+      "ordem": 603,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 4, seções 1.1–1.2",
+      "tema": "Convivência de regimes",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "reg-misto"
+    },
+    {
+      "id": "fiscal-t06-ce04",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A expressão regime jurídico da Administração Pública, em sentido amplo, abrange tanto normas de direito público quanto regras de direito privado.",
+      "gabarito": "C",
+      "comentario": "O regime da Administração é amplo; o regime jurídico administrativo designa mais especificamente prerrogativas e sujeições da atuação pública.",
+      "ordem": 604,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 5, seções 1.1–1.2",
+      "tema": "Regime da Administração × administrativo",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "reg-amplo"
+    },
+    {
+      "id": "fiscal-t06-ce05",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "O regime jurídico administrativo pode ser adequadamente descrito apenas por prerrogativas, pois nele não existem sujeições especiais.",
+      "gabarito": "E",
+      "comentario": "A bipolaridade é essencial: prerrogativas para atuar no interesse coletivo e sujeições para impedir desvio e proteger direitos.",
+      "ordem": 605,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 5, seções 1.1–1.2",
+      "tema": "Prerrogativas e sujeições",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "reg-bipolar"
+    },
+    {
+      "id": "fiscal-t06-ce06",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A possibilidade legal de alterar unilateralmente certos contratos administrativos é exemplo de prerrogativa vinculada ao interesse público.",
+      "gabarito": "C",
+      "comentario": "A prerrogativa traduz posição jurídica diferenciada, utilizada como instrumento para alcançar finalidades públicas.",
+      "ordem": 606,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 4, seções 1.1–1.2",
+      "tema": "Poderes instrumentais",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "reg-prerrog"
+    },
+    {
+      "id": "fiscal-t06-ce07",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "Exigências de licitação e concurso são exemplos de sujeições especiais, não de simples faculdades discricionárias equivalentes à liberdade de um particular.",
+      "gabarito": "C",
+      "comentario": "As sujeições reduzem a liberdade de agir da Administração e visam resguardar a igualdade, a finalidade e o patrimônio público.",
+      "ordem": 607,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 5, seções 1.1–1.2",
+      "tema": "Limitações da ação estatal",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "reg-sujeicao"
+    },
+    {
+      "id": "fiscal-t06-ce08",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A supremacia do interesse público sobre o privado legitima o agente administrativo a preferir seus interesses pessoais aos interesses dos cidadãos.",
+      "gabarito": "E",
+      "comentario": "A supremacia é instrumento para satisfação do interesse público primário, não fundamento para conveniência pessoal do agente.",
+      "ordem": 608,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 6, seções 1.1–1.2",
+      "tema": "Supremacia instrumental",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "reg-supremacia"
+    },
+    {
+      "id": "fiscal-t06-ce09",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A indisponibilidade decorre da circunstância de que o administrador não é dono do patrimônio público nem titular livre do interesse coletivo.",
+      "gabarito": "C",
+      "comentario": "O agente administra bens e interesses alheios: não pode dispor deles como proprietário nem agir fora das autorizações legais.",
+      "ordem": 609,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 6, seções 1.1–1.2",
+      "tema": "Indisponibilidade",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "reg-indisponivel"
+    },
+    {
+      "id": "fiscal-t06-ce10",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "Na exposição de Maria Sylvia Di Pietro, a bipolaridade do direito administrativo é descrita por supremacia e legalidade, em vez da dupla supremacia e indisponibilidade indicada por outros autores.",
+      "gabarito": "C",
+      "comentario": "A apostila registra essa diferença de formulação doutrinária, sem alterar a existência de prerrogativas e sujeições.",
+      "ordem": 610,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 6, seções 1.1–1.2",
+      "tema": "Divergência doutrinária de bases",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "reg-di-pietro"
+    },
+    {
+      "id": "fiscal-t06-ce11",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "O interesse meramente arrecadatório do Estado pode, por si só, prevalecer sobre o interesse coletivo primário quando houver conflito entre ambos.",
+      "gabarito": "E",
+      "comentario": "A finalidade pública justifica restrições pelo interesse primário da coletividade, não pelo interesse financeiro secundário isolado do aparelho estatal.",
+      "ordem": 611,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 19, seções 1.1–1.2",
+      "tema": "Interesse público primário × secundário",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "reg-primeiro"
+    },
+    {
+      "id": "fiscal-t06-ce12",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "Os princípios do art. 37, caput, da Constituição Federal obrigam exclusivamente os órgãos do Poder Executivo federal.",
+      "gabarito": "E",
+      "comentario": "Legalidade, impessoalidade, moralidade, publicidade e eficiência aplicam-se à administração direta e indireta de todos os Poderes e entes federativos.",
+      "ordem": 612,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 9, seções 1.1–1.2",
+      "tema": "LIMPE · alcance constitucional",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "limpe-alcance"
+    },
+    {
+      "id": "fiscal-t06-ce13",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "Legalidade, impessoalidade, moralidade, publicidade e eficiência são os cinco princípios nominalmente previstos no caput do art. 37 da Constituição de 1988.",
+      "gabarito": "C",
+      "comentario": "O mnemônico LIMPE reúne os cinco princípios previstos expressamente no dispositivo constitucional.",
+      "ordem": 613,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 9, seções 1.1–1.2",
+      "tema": "Princípios expressos",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "limpe-mnemonico"
+    },
+    {
+      "id": "fiscal-t06-ce14",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "Um particular pode realizar ato não vedado pelo ordenamento, ainda que não exista lei que o autorize expressamente; a Administração se sujeita a autorização ou determinação legal.",
+      "gabarito": "C",
+      "comentario": "A autonomia privada admite condutas não proibidas, enquanto a função administrativa depende de previsão jurídica habilitadora.",
+      "ordem": 614,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 13, seções 1.1–1.2",
+      "tema": "Legalidade particular × administrativa",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "legal-particular"
+    },
+    {
+      "id": "fiscal-t06-ce15",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A Administração pode conceder vantagem funcional não prevista em lei desde que também não haja lei que a proíba explicitamente.",
+      "gabarito": "E",
+      "comentario": "Diferentemente do particular, a Administração não age pela simples ausência de vedação, devendo haver fundamento jurídico que autorize a vantagem.",
+      "ordem": 615,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 14, seções 1.1–1.2",
+      "tema": "Criação de direito sem lei",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "legal-ato-novo"
+    },
+    {
+      "id": "fiscal-t06-ce16",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "Portarias e instruções normativas podem inovar livremente a ordem jurídica e criar direitos primários sem suporte em lei.",
+      "gabarito": "E",
+      "comentario": "Os atos infralegais devem ser observados pela Administração, mas não podem inovar criando direitos e obrigações sem fundamento legal.",
+      "ordem": 616,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 14, seções 1.1–1.2",
+      "tema": "Regulamentos e hierarquia",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "legal-regulamentos"
+    },
+    {
+      "id": "fiscal-t06-ce17",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A reserva legal diz respeito às matérias que a Constituição exige sejam disciplinadas por lei formal, e não se confunde integralmente com a sujeição geral da Administração à legalidade.",
+      "gabarito": "C",
+      "comentario": "Apostila diferencia disciplina reservada à lei formal da regra geral de atuação segundo o ordenamento.",
+      "ordem": 617,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 15, seções 1.1–1.2",
+      "tema": "Legalidade × reserva legal",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "legal-reserva"
+    },
+    {
+      "id": "fiscal-t06-ce18",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "O material apresenta medidas provisórias, estado de defesa e estado de sítio como hipóteses excepcionais relacionadas à mitigação da legalidade, e não como autorização geral para agir arbitrariamente.",
+      "gabarito": "C",
+      "comentario": "São situações constitucionais excepcionais indicadas pela doutrina, com pressupostos e controles próprios; não afastam o ordenamento como um todo.",
+      "ordem": 618,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 15, seções 1.1–1.2",
+      "tema": "Restrições excepcionais",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "legal-excepc"
+    },
+    {
+      "id": "fiscal-t06-ce19",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "O respeito à lei em sentido estrito dispensa o administrador de observar os princípios constitucionais, conforme o princípio da juridicidade.",
+      "gabarito": "E",
+      "comentario": "Juridicidade amplia a legalidade: conduta e atos submetem-se à totalidade do ordenamento, incluindo princípios e normas infralegais válidas.",
+      "ordem": 619,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 16, seções 1.1–1.2",
+      "tema": "Legalidade × juridicidade",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "juridicidade"
+    },
+    {
+      "id": "fiscal-t06-ce20",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "Um ato pode atender genericamente ao interesse público e ainda ser inválido por contrariar a finalidade específica prevista para a competência utilizada.",
+      "gabarito": "C",
+      "comentario": "A impessoalidade requer finalidade pública ampla e finalidade legal específica. Desvio de finalidade torna inválida a utilização da competência.",
+      "ordem": 620,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 17, seções 1.1–1.2",
+      "tema": "Finalidade em dois sentidos",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "imp-finalidade"
+    },
+    {
+      "id": "fiscal-t06-ce21",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A remoção de servidor feita exclusivamente como punição informal é compatível com a finalidade específica do instituto de reorganizar pessoal.",
+      "gabarito": "E",
+      "comentario": "Usar remoção em substituição a sanção disciplinar desvia sua finalidade específica, ainda que o agente alegue algum benefício público.",
+      "ordem": 621,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 17, seções 1.1–1.2",
+      "tema": "Remoção punitiva",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "imp-remocao"
+    },
+    {
+      "id": "fiscal-t06-ce22",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A irregularidade da investidura de um agente implica necessariamente a nulidade de todos os atos por ele praticados contra terceiros de boa-fé.",
+      "gabarito": "E",
+      "comentario": "A teoria do agente de fato protege terceiros de boa-fé: os atos podem conservar validade, apesar do vício na investidura do agente.",
+      "ordem": 622,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 17, seções 1.1–1.2",
+      "tema": "Agente de fato",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "imp-agente-fato"
+    },
+    {
+      "id": "fiscal-t06-ce23",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A exigência de concurso e de procedimentos competitivos para contratar concretiza a impessoalidade ao limitar favorecimentos arbitrários.",
+      "gabarito": "C",
+      "comentario": "A igualdade perante a Administração demanda critérios imparciais de seleção e afastamento de perseguições ou privilégios pessoais.",
+      "ordem": 623,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 17, seções 1.1–1.2",
+      "tema": "Isonomia e concurso/licitação",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "imp-isonomia"
+    },
+    {
+      "id": "fiscal-t06-ce24",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A identificação da autoridade responsável por obra pública permite que campanhas institucionais incluam slogans pessoais que a promovam.",
+      "gabarito": "E",
+      "comentario": "A publicidade deve ter caráter educativo, informativo ou de orientação social, sem nomes, imagens e símbolos de promoção pessoal (CF, art. 37, §1º).",
+      "ordem": 624,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 18, seções 1.1–1.2",
+      "tema": "Publicidade sem autopromoção",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "imp-promocao"
+    },
+    {
+      "id": "fiscal-t06-ce25",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "O princípio da impessoalidade vincula-se ao interesse público primário, e não à busca de conveniências privadas da autoridade.",
+      "gabarito": "C",
+      "comentario": "A finalidade pública é orientada à coletividade, com tratamento igualitário e objetivo.",
+      "ordem": 625,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 19, seções 1.1–1.2",
+      "tema": "Interesse primário e finalidade",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "imp-primario"
+    },
+    {
+      "id": "fiscal-t06-ce26",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "Um ato pode ser formalmente compatível com uma lei e ainda assim ofender a moralidade administrativa, sujeitando-se ao controle judicial.",
+      "gabarito": "C",
+      "comentario": "Moralidade tem sentido jurídico próprio e exige padrões éticos de probidade, decoro e boa-fé, para além do cumprimento literal de regras.",
+      "ordem": 626,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 21, seções 1.1–1.2",
+      "tema": "Moralidade autônoma",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "mor-indep"
+    },
+    {
+      "id": "fiscal-t06-ce27",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A proteção da moralidade administrativa é estranha à ação popular, que se destina exclusivamente à defesa de valores patrimoniais.",
+      "gabarito": "E",
+      "comentario": "O art. 5º, LXXIII, da Constituição contempla a ação popular contra ato lesivo à moralidade administrativa.",
+      "ordem": 627,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 21, seções 1.1–1.2",
+      "tema": "Moralidade e ação popular",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "mor-acao-pop"
+    },
+    {
+      "id": "fiscal-t06-ce28",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A moralidade administrativa vincula somente as relações externas com administrados, sem aplicação à organização interna do poder público.",
+      "gabarito": "E",
+      "comentario": "A moralidade alcança relações internas e contatos com particulares; inclui honestidade, decoro e boa-fé administrativa.",
+      "ordem": 628,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 23, seções 1.1–1.2",
+      "tema": "Moralidade nas relações",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "mor-interna"
+    },
+    {
+      "id": "fiscal-t06-ce29",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "Uma conduta administrativa pode ser considerada incompatível com a moralidade mesmo sem intenção subjetiva de praticar uma imoralidade.",
+      "gabarito": "C",
+      "comentario": "O material destaca a avaliação do conteúdo do ato: a intenção subjetiva não esgota o juízo de moralidade administrativa.",
+      "ordem": 629,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 24, seções 1.1–1.2",
+      "tema": "Conteúdo imoral e intenção",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "mor-sem-dolo"
+    },
+    {
+      "id": "fiscal-t06-ce30",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "Nos casos em que a publicação oficial é necessária, a ausência de publicação impede a eficácia do ato, mas não significa automaticamente que ele seja inválido.",
+      "gabarito": "C",
+      "comentario": "A apostila distingue requisitos de validade do ato e sua produção de efeitos externos; a publicação pode ser condição de eficácia.",
+      "ordem": 630,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 24, seções 1.1–1.2",
+      "tema": "Publicação × validade",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "pub-eficacia"
+    },
+    {
+      "id": "fiscal-t06-ce31",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A publicidade administrativa inclui somente a publicação no diário oficial, sem qualquer relação com transparência e acesso à informação.",
+      "gabarito": "E",
+      "comentario": "O capítulo identifica dois sentidos: publicação necessária à eficácia de determinados atos e transparência para controle da atuação administrativa.",
+      "ordem": 631,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 24, seções 1.1–1.2",
+      "tema": "Dois sentidos de publicidade",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "pub-dois"
+    },
+    {
+      "id": "fiscal-t06-ce32",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A divulgação espontânea de informação pública caracteriza transparência ativa, ao passo que a resposta a solicitação caracteriza transparência passiva.",
+      "gabarito": "C",
+      "comentario": "A distinção decorre da iniciativa de disponibilização: de ofício ou após requerimento do interessado.",
+      "ordem": 632,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26, seções 1.1–1.2",
+      "tema": "Transparência ativa × passiva",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "pub-ativa-passiva"
+    },
+    {
+      "id": "fiscal-t06-ce33",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "O princípio da publicidade impõe revelar todo dado pessoal e qualquer informação de segurança, ainda que exista justificativa constitucional de sigilo.",
+      "gabarito": "E",
+      "comentario": "Publicidade é regra, mas existem hipóteses de resguardo da intimidade e de informações cuja divulgação comprometa segurança da sociedade ou do Estado.",
+      "ordem": 633,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26, seções 1.1–1.2",
+      "tema": "Publicidade não absoluta",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "pub-excecao"
+    },
+    {
+      "id": "fiscal-t06-ce34",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A divulgação institucional do nome e remuneração do servidor pode ser legítima sem autorização para expor indiscriminadamente seus dados íntimos.",
+      "gabarito": "C",
+      "comentario": "A apostila cita entendimento do STF que admite transparência remuneratória, preservando informações pessoais sem interesse público.",
+      "ordem": 634,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26, seções 1.1–1.2",
+      "tema": "Remuneração pública × dados íntimos",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "pub-salarios"
+    },
+    {
+      "id": "fiscal-t06-ce35",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "O princípio da eficiência já constava nominalmente do art. 37, caput, no texto original de 1988 e foi retirado pela Emenda Constitucional 19/1998.",
+      "gabarito": "E",
+      "comentario": "A eficiência foi acrescentada expressamente ao art. 37 pela EC 19/1998, associada à reforma gerencial.",
+      "ordem": 635,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26, seções 1.1–1.2",
+      "tema": "Eficiência constitucional",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "efi-ec19"
+    },
+    {
+      "id": "fiscal-t06-ce36",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A eficiência refere-se tanto à qualidade do desempenho do agente público quanto à organização racional da Administração para obter resultados.",
+      "gabarito": "C",
+      "comentario": "Conforme a exposição doutrinária do material, eficiência diz respeito ao agente e à estrutura administrativa.",
+      "ordem": 636,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 27, seções 1.1–1.2",
+      "tema": "Duas faces da eficiência",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "efi-dois"
+    },
+    {
+      "id": "fiscal-t06-ce37",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A ênfase gerencial em resultados permite maior preocupação com avaliação de desempenho e resultados das políticas, sem eliminar controles.",
+      "gabarito": "C",
+      "comentario": "O capítulo relaciona eficiência a gestão racional, transparência, prestação de serviços, controle e avaliação de resultados.",
+      "ordem": 637,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 27, seções 1.1–1.2",
+      "tema": "Gestão por resultados",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "efi-gerencial"
+    },
+    {
+      "id": "fiscal-t06-ce38",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "Se uma contratação ilegal produzir economia comprovada, a eficiência necessariamente legitima o ato e afasta o dever de cumprir os outros princípios.",
+      "gabarito": "E",
+      "comentario": "A eficiência deve ser perseguida em conjunto com legalidade, impessoalidade, moralidade e publicidade; resultado não convalida ilicitude.",
+      "ordem": 638,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 27, seções 1.1–1.2",
+      "tema": "Eficiência não afasta LIMPE",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "efi-ilicito"
+    },
+    {
+      "id": "fiscal-t06-ce39",
+      "cap": "FISCAL-DA-06",
+      "capNome": "Trilha 00 · Tarefa 06 · Regime jurídico administrativo e princípios expressos",
+      "enunciado": "A redução do custo acompanhada de grave deterioração da qualidade do serviço não representa, por si só, cumprimento adequado do princípio da eficiência.",
+      "gabarito": "C",
+      "comentario": "A eficiência exige bons resultados, qualidade, tempo e emprego racional de recursos; poupar gastos não basta isoladamente.",
+      "ordem": 639,
+      "origem": "Autoral original · elaborado para treino a partir da apostila",
+      "ref": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26, seções 1.1–1.2",
+      "tema": "Custo × qualidade",
+      "topico": "fiscal-t06",
+      "assuntoId": "fiscal-da-regime-e-principios-expressos",
+      "mapaNoId": "efi-qualidade"
+    }
+  ],
+  "cards": [
+    {
+      "tema": "Regime público × privado",
+      "q": "Qual contraste estrutural separa o regime público do privado?",
+      "a": [
+        "Público: prerrogativas e sujeições ligadas ao interesse coletivo; privado: relação em regra horizontal entre sujeitos."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 3",
+      "mapaNoId": "reg-publico",
+      "questaoIds": [
+        "fiscal-t06-ce02"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Convivência de regimes",
+      "q": "Empresas estatais econômicas se submetem exclusivamente ao regime privado?",
+      "a": [
+        "Não. O regime privado predomina em certas relações, mas convivem exigências de direito público."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 4",
+      "mapaNoId": "reg-misto",
+      "questaoIds": [
+        "fiscal-t06-ce03"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Regime da Administração × administrativo",
+      "q": "Diferencie regime jurídico da Administração e regime jurídico administrativo.",
+      "a": [
+        "O primeiro compreende regras públicas e privadas; o segundo é o conjunto peculiar de poderes e restrições da função administrativa."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 5",
+      "mapaNoId": "reg-amplo",
+      "questaoIds": [
+        "fiscal-t06-ce04"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Prerrogativas e sujeições",
+      "q": "Quais são as duas faces do regime jurídico administrativo?",
+      "a": [
+        "Prerrogativas/poderes especiais e sujeições/restrições especiais."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 5",
+      "mapaNoId": "reg-bipolar",
+      "questaoIds": [
+        "fiscal-t06-ce05"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Poderes instrumentais",
+      "q": "Dê um exemplo de prerrogativa do poder público e sua finalidade.",
+      "a": [
+        "Alteração unilateral de contrato administrativo nas condições legais, para atender necessidade pública."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 4",
+      "mapaNoId": "reg-prerrog",
+      "questaoIds": [
+        "fiscal-t06-ce06"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Limitações da ação estatal",
+      "q": "Cite duas sujeições administrativas e diga por que existem.",
+      "a": [
+        "Concurso e licitação; restringem escolhas para proteger isonomia, impessoalidade e o interesse coletivo."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 5",
+      "mapaNoId": "reg-sujeicao",
+      "questaoIds": [
+        "fiscal-t06-ce07"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Supremacia instrumental",
+      "q": "O que justifica prerrogativas decorrentes da supremacia do interesse público?",
+      "a": [
+        "A realização de finalidades coletivas definidas pelo ordenamento, não ganhos pessoais ou mera arrecadação estatal."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 6",
+      "mapaNoId": "reg-supremacia",
+      "questaoIds": [
+        "fiscal-t06-ce08"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Indisponibilidade",
+      "q": "Por que o administrador não pode renunciar livremente a interesses públicos?",
+      "a": [
+        "Porque atua em nome da coletividade, não como proprietário dos bens ou titular dos direitos públicos."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 6",
+      "mapaNoId": "reg-indisponivel",
+      "questaoIds": [
+        "fiscal-t06-ce09"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Divergência doutrinária de bases",
+      "q": "Qual diferença doutrinária de Di Pietro é destacada na base do regime jurídico?",
+      "a": [
+        "Di Pietro destaca supremacia e legalidade; outros autores destacam supremacia e indisponibilidade."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 6",
+      "mapaNoId": "reg-di-pietro",
+      "questaoIds": [
+        "fiscal-t06-ce10"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Interesse público primário × secundário",
+      "q": "O interesse público secundário autoriza impor restrições em detrimento do primário?",
+      "a": [
+        "Não. A atuação deve buscar o interesse coletivo primário; interesse institucional do Estado não autoriza prejuízo arbitrário aos cidadãos."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 19",
+      "mapaNoId": "reg-primeiro",
+      "questaoIds": [
+        "fiscal-t06-ce11"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "LIMPE · alcance constitucional",
+      "q": "A quem se aplicam os cinco princípios constitucionais expressos?",
+      "a": [
+        "A toda administração direta e indireta de todos os Poderes e esferas federativas."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 9",
+      "mapaNoId": "limpe-alcance",
+      "questaoIds": [
+        "fiscal-t06-ce12"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Princípios expressos",
+      "q": "Expanda o mnemônico LIMPE.",
+      "a": [
+        "Legalidade, impessoalidade, moralidade, publicidade e eficiência."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 9",
+      "mapaNoId": "limpe-mnemonico",
+      "questaoIds": [
+        "fiscal-t06-ce13"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Legalidade particular × administrativa",
+      "q": "Compare a legalidade do particular com a da Administração.",
+      "a": [
+        "Particular: tudo que não é proibido; Administração: atuação de acordo com determinação ou autorização legal."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 13",
+      "mapaNoId": "legal-particular",
+      "questaoIds": [
+        "fiscal-t06-ce14"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Criação de direito sem lei",
+      "q": "A falta de proibição legal basta para criar vantagem a servidor?",
+      "a": [
+        "Não. A Administração precisa de autorização ou determinação normativa adequada."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 14",
+      "mapaNoId": "legal-ato-novo",
+      "questaoIds": [
+        "fiscal-t06-ce15"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Regulamentos e hierarquia",
+      "q": "Quais limites recaem sobre atos normativos secundários?",
+      "a": [
+        "Devem respeitar a lei e não podem criar obrigações ou direitos primários sem base legal."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 14",
+      "mapaNoId": "legal-regulamentos",
+      "questaoIds": [
+        "fiscal-t06-ce16"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Legalidade × reserva legal",
+      "q": "Diferencie o princípio da legalidade da reserva legal.",
+      "a": [
+        "Legalidade: dever de agir segundo a lei; reserva legal: certas matérias exigem lei formal nos termos da Constituição."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 15",
+      "mapaNoId": "legal-reserva",
+      "questaoIds": [
+        "fiscal-t06-ce17"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Restrições excepcionais",
+      "q": "Quais situações excepcionais a apostila relaciona à legalidade?",
+      "a": [
+        "Medida provisória; estado de defesa; estado de sítio, cada qual nos limites constitucionais."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 15",
+      "mapaNoId": "legal-excepc",
+      "questaoIds": [
+        "fiscal-t06-ce18"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Legalidade × juridicidade",
+      "q": "Qual é o acréscimo trazido pela juridicidade?",
+      "a": [
+        "Vinculação da Administração à ordem jurídica completa, inclusive aos princípios, e não apenas ao texto de lei."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 16",
+      "mapaNoId": "juridicidade",
+      "questaoIds": [
+        "fiscal-t06-ce19"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Finalidade em dois sentidos",
+      "q": "Distinga finalidade ampla e estrita na atuação administrativa.",
+      "a": [
+        "Ampla: interesse coletivo; estrita: objetivo definido pela norma que confere a competência."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 17",
+      "mapaNoId": "imp-finalidade",
+      "questaoIds": [
+        "fiscal-t06-ce20"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Remoção punitiva",
+      "q": "Por que remoção punitiva pode ser inválida?",
+      "a": [
+        "Porque o instituto tem finalidade administrativa de alocação de pessoal, e não de aplicar punição informal."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 17",
+      "mapaNoId": "imp-remocao",
+      "questaoIds": [
+        "fiscal-t06-ce21"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Agente de fato",
+      "q": "O que ocorre com atos de agente de fato perante terceiros de boa-fé?",
+      "a": [
+        "Em regra, são preservados para proteger quem não causou o vício da investidura."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 17",
+      "mapaNoId": "imp-agente-fato",
+      "questaoIds": [
+        "fiscal-t06-ce22"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Isonomia e concurso/licitação",
+      "q": "Como concurso e licitação se relacionam à impessoalidade?",
+      "a": [
+        "Substituem escolhas pessoais por critérios de igualdade e competição previstos no ordenamento."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 17",
+      "mapaNoId": "imp-isonomia",
+      "questaoIds": [
+        "fiscal-t06-ce23"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Publicidade sem autopromoção",
+      "q": "Qual limite constitucional distingue publicidade institucional de autopromoção?",
+      "a": [
+        "Vedação de nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridade ou servidor."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 18",
+      "mapaNoId": "imp-promocao",
+      "questaoIds": [
+        "fiscal-t06-ce24"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Interesse primário e finalidade",
+      "q": "Qual interesse dirige a finalidade administrativa segundo a apostila?",
+      "a": [
+        "Interesse público primário: necessidades e direitos da coletividade."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 19",
+      "mapaNoId": "imp-primario",
+      "questaoIds": [
+        "fiscal-t06-ce25"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Moralidade autônoma",
+      "q": "A legalidade formal afasta a análise da moralidade?",
+      "a": [
+        "Não. Ato legal pode ser imoral; ambos os princípios têm autonomia e podem fundamentar controle."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 21",
+      "mapaNoId": "mor-indep",
+      "questaoIds": [
+        "fiscal-t06-ce26"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Moralidade e ação popular",
+      "q": "Qual instrumento constitucional permite ao cidadão atacar ato lesivo à moralidade?",
+      "a": [
+        "Ação popular, nos termos constitucionais."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 21",
+      "mapaNoId": "mor-acao-pop",
+      "questaoIds": [
+        "fiscal-t06-ce27"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Moralidade nas relações",
+      "q": "Em quais relações a moralidade administrativa deve ser observada?",
+      "a": [
+        "Nas relações internas e externas, inclusive com particulares que interagem com a Administração."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 23",
+      "mapaNoId": "mor-interna",
+      "questaoIds": [
+        "fiscal-t06-ce28"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Conteúdo imoral e intenção",
+      "q": "A ausência de intenção de favorecimento elimina por si a imoralidade do ato?",
+      "a": [
+        "Não. A moralidade pode ser violada pelo conteúdo do ato, independentemente da intenção alegada."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 24",
+      "mapaNoId": "mor-sem-dolo",
+      "questaoIds": [
+        "fiscal-t06-ce29"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Publicação × validade",
+      "q": "Publicação é requisito de validade ou eficácia nos casos indicados?",
+      "a": [
+        "De eficácia: um ato pode ser válido, mas ainda não produzir efeitos externos por ausência da publicação exigida."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 24",
+      "mapaNoId": "pub-eficacia",
+      "questaoIds": [
+        "fiscal-t06-ce30"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Dois sentidos de publicidade",
+      "q": "Quais são os dois sentidos da publicidade na apostila?",
+      "a": [
+        "Publicação oficial dos atos pertinentes e transparência/acesso à informação para controle da Administração."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 24",
+      "mapaNoId": "pub-dois",
+      "questaoIds": [
+        "fiscal-t06-ce31"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Transparência ativa × passiva",
+      "q": "Diferencie transparência ativa e passiva.",
+      "a": [
+        "Ativa: divulgação de ofício; passiva: informação fornecida por solicitação."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26",
+      "mapaNoId": "pub-ativa-passiva",
+      "questaoIds": [
+        "fiscal-t06-ce32"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Publicidade não absoluta",
+      "q": "Quais limites impedem que a publicidade seja absoluta?",
+      "a": [
+        "Proteção de dados pessoais e intimidade, além das hipóteses legais e constitucionais de sigilo vinculadas à segurança."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26",
+      "mapaNoId": "pub-excecao",
+      "questaoIds": [
+        "fiscal-t06-ce33"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Remuneração pública × dados íntimos",
+      "q": "Como conciliar transparência remuneratória com privacidade?",
+      "a": [
+        "É legítima a divulgação de nome e valores remuneratórios em contexto de controle, mas não a exposição de endereço e dados estritamente privados."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26",
+      "mapaNoId": "pub-salarios",
+      "questaoIds": [
+        "fiscal-t06-ce34"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Eficiência constitucional",
+      "q": "Qual reforma introduziu a eficiência nominalmente no art. 37?",
+      "a": [
+        "Emenda Constitucional 19, de 1998."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26",
+      "mapaNoId": "efi-ec19",
+      "questaoIds": [
+        "fiscal-t06-ce35"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Duas faces da eficiência",
+      "q": "Quais são os dois aspectos da eficiência destacados por Di Pietro?",
+      "a": [
+        "Modo de atuação do agente e modo de organizar/estruturar a Administração."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 27",
+      "mapaNoId": "efi-dois",
+      "questaoIds": [
+        "fiscal-t06-ce36"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Gestão por resultados",
+      "q": "Que mudança de foco caracteriza a gestão gerencial ligada à eficiência?",
+      "a": [
+        "Maior atenção à qualidade e a resultados, sem excluir controle de legalidade."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 27",
+      "mapaNoId": "efi-gerencial",
+      "questaoIds": [
+        "fiscal-t06-ce37"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Eficiência não afasta LIMPE",
+      "q": "Pode a eficiência justificar contratar ilegalmente para economizar?",
+      "a": [
+        "Não. A economia não substitui a legalidade nem os demais princípios administrativos."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 27",
+      "mapaNoId": "efi-ilicito",
+      "questaoIds": [
+        "fiscal-t06-ce38"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    },
+    {
+      "tema": "Custo × qualidade",
+      "q": "Qual a relação exigida pela eficiência entre custo e qualidade?",
+      "a": [
+        "Melhores resultados e serviços de qualidade com uso racional de recursos e tempo, sem sacrificar os padrões necessários."
+      ],
+      "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26",
+      "mapaNoId": "efi-qualidade",
+      "questaoIds": [
+        "fiscal-t06-ce39"
+      ],
+      "tipo": "recuperacao_e_aplicacao"
+    }
+  ],
+  "map": {
+    "centro": "Regime jurídico administrativo e princípios expressos · T06",
+    "versao": 2,
+    "fonte": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, pp. 3–28",
+    "ramos": [
+      {
+        "id": "conceito-1",
+        "t": "Regime jurídico: prerrogativas e sujeições",
+        "n": "Dois regimes podem coexistir. Na atuação pública predominam prerrogativas instrumentais e sujeições para proteger interesses coletivos.",
+        "cor": 1,
+        "x": {
+          "e": "Dois regimes podem coexistir. Na atuação pública predominam prerrogativas instrumentais e sujeições para proteger interesses coletivos.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seções 1.1–1.2"
+        },
+        "f": [
+          {
+            "id": "reg-publico",
+            "t": "Regime público × privado",
+            "n": "Público: prerrogativas e sujeições ligadas ao interesse coletivo; privado: relação em regra horizontal entre sujeitos.",
+            "x": {
+              "e": "O regime público admite poderes especiais e limitações; no regime privado, os particulares normalmente se relacionam sem prerrogativas estatais.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 3",
+              "trap": "Confundir direito público com liberdade irrestrita do administrador.",
+              "questaoIds": [
+                "fiscal-t06-ce02"
+              ]
+            }
+          },
+          {
+            "id": "reg-misto",
+            "t": "Convivência de regimes",
+            "n": "Não. O regime privado predomina em certas relações, mas convivem exigências de direito público.",
+            "x": {
+              "e": "A atuação privada da estatal não exclui exigências públicas, como concurso e licitação nas condições legais. Os regimes convivem.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 4",
+              "trap": "Palavra absoluta: 'completamente'.",
+              "questaoIds": [
+                "fiscal-t06-ce03"
+              ]
+            }
+          },
+          {
+            "id": "reg-amplo",
+            "t": "Regime da Administração × administrativo",
+            "n": "O primeiro compreende regras públicas e privadas; o segundo é o conjunto peculiar de poderes e restrições da função administrativa.",
+            "x": {
+              "e": "O regime da Administração é amplo; o regime jurídico administrativo designa mais especificamente prerrogativas e sujeições da atuação pública.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 5",
+              "trap": "Tomar as duas expressões como equivalentes.",
+              "questaoIds": [
+                "fiscal-t06-ce04"
+              ]
+            }
+          },
+          {
+            "id": "reg-bipolar",
+            "t": "Prerrogativas e sujeições",
+            "n": "Prerrogativas/poderes especiais e sujeições/restrições especiais.",
+            "x": {
+              "e": "A bipolaridade é essencial: prerrogativas para atuar no interesse coletivo e sujeições para impedir desvio e proteger direitos.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 5",
+              "trap": "Trocar regime público por privilégio ilimitado.",
+              "questaoIds": [
+                "fiscal-t06-ce05"
+              ]
+            }
+          },
+          {
+            "id": "reg-prerrog",
+            "t": "Poderes instrumentais",
+            "n": "Alteração unilateral de contrato administrativo nas condições legais, para atender necessidade pública.",
+            "x": {
+              "e": "A prerrogativa traduz posição jurídica diferenciada, utilizada como instrumento para alcançar finalidades públicas.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 4",
+              "trap": "Prerrogativa não é poder para interesse pessoal.",
+              "questaoIds": [
+                "fiscal-t06-ce06"
+              ]
+            }
+          },
+          {
+            "id": "reg-sujeicao",
+            "t": "Limitações da ação estatal",
+            "n": "Concurso e licitação; restringem escolhas para proteger isonomia, impessoalidade e o interesse coletivo.",
+            "x": {
+              "e": "As sujeições reduzem a liberdade de agir da Administração e visam resguardar a igualdade, a finalidade e o patrimônio público.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 5",
+              "trap": "Confundir seleção por critério impessoal com faculdade de escolher livremente.",
+              "questaoIds": [
+                "fiscal-t06-ce07"
+              ]
+            }
+          },
+          {
+            "id": "reg-supremacia",
+            "t": "Supremacia instrumental",
+            "n": "A realização de finalidades coletivas definidas pelo ordenamento, não ganhos pessoais ou mera arrecadação estatal.",
+            "x": {
+              "e": "A supremacia é instrumento para satisfação do interesse público primário, não fundamento para conveniência pessoal do agente.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 6",
+              "trap": "Supremacia não significa arbitrariedade.",
+              "questaoIds": [
+                "fiscal-t06-ce08"
+              ]
+            }
+          },
+          {
+            "id": "reg-indisponivel",
+            "t": "Indisponibilidade",
+            "n": "Porque atua em nome da coletividade, não como proprietário dos bens ou titular dos direitos públicos.",
+            "x": {
+              "e": "O agente administra bens e interesses alheios: não pode dispor deles como proprietário nem agir fora das autorizações legais.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 6",
+              "trap": "Confundir gestão pública com titularidade privada.",
+              "questaoIds": [
+                "fiscal-t06-ce09"
+              ]
+            }
+          },
+          {
+            "id": "reg-di-pietro",
+            "t": "Divergência doutrinária de bases",
+            "n": "Di Pietro destaca supremacia e legalidade; outros autores destacam supremacia e indisponibilidade.",
+            "x": {
+              "e": "A apostila registra essa diferença de formulação doutrinária, sem alterar a existência de prerrogativas e sujeições.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 6",
+              "trap": "Atribuir indisponibilidade como segunda base a todos os autores indistintamente.",
+              "questaoIds": [
+                "fiscal-t06-ce10"
+              ]
+            }
+          },
+          {
+            "id": "reg-primeiro",
+            "t": "Interesse público primário × secundário",
+            "n": "Não. A atuação deve buscar o interesse coletivo primário; interesse institucional do Estado não autoriza prejuízo arbitrário aos cidadãos.",
+            "x": {
+              "e": "A finalidade pública justifica restrições pelo interesse primário da coletividade, não pelo interesse financeiro secundário isolado do aparelho estatal.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 19",
+              "trap": "Interesse do erário nem sempre equivale ao da sociedade.",
+              "questaoIds": [
+                "fiscal-t06-ce11"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "legalidade",
+        "t": "Legalidade e juridicidade",
+        "n": "A atuação pública exige base normativa; distingue-se da autonomia do particular e alcança princípios da ordem jurídica.",
+        "cor": 2,
+        "x": {
+          "e": "A atuação pública exige base normativa; distingue-se da autonomia do particular e alcança princípios da ordem jurídica.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seções 1.1–1.2"
+        },
+        "f": [
+          {
+            "id": "limpe-alcance",
+            "t": "LIMPE · alcance constitucional",
+            "n": "A toda administração direta e indireta de todos os Poderes e esferas federativas.",
+            "x": {
+              "e": "Legalidade, impessoalidade, moralidade, publicidade e eficiência aplicam-se à administração direta e indireta de todos os Poderes e entes federativos.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 9",
+              "trap": "Exclusivamente é restrição indevida.",
+              "questaoIds": [
+                "fiscal-t06-ce12"
+              ]
+            }
+          },
+          {
+            "id": "limpe-mnemonico",
+            "t": "Princípios expressos",
+            "n": "Legalidade, impessoalidade, moralidade, publicidade e eficiência.",
+            "x": {
+              "e": "O mnemônico LIMPE reúne os cinco princípios previstos expressamente no dispositivo constitucional.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 9",
+              "trap": "Trocar impessoalidade por indivisibilidade ou probidade.",
+              "questaoIds": [
+                "fiscal-t06-ce13"
+              ]
+            }
+          },
+          {
+            "id": "legal-particular",
+            "t": "Legalidade particular × administrativa",
+            "n": "Particular: tudo que não é proibido; Administração: atuação de acordo com determinação ou autorização legal.",
+            "x": {
+              "e": "A autonomia privada admite condutas não proibidas, enquanto a função administrativa depende de previsão jurídica habilitadora.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 13",
+              "trap": "Transportar autonomia da vontade ao agente público.",
+              "questaoIds": [
+                "fiscal-t06-ce14"
+              ]
+            }
+          },
+          {
+            "id": "legal-ato-novo",
+            "t": "Criação de direito sem lei",
+            "n": "Não. A Administração precisa de autorização ou determinação normativa adequada.",
+            "x": {
+              "e": "Diferentemente do particular, a Administração não age pela simples ausência de vedação, devendo haver fundamento jurídico que autorize a vantagem.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 14",
+              "trap": "Confundir liberdade particular com legalidade estrita.",
+              "questaoIds": [
+                "fiscal-t06-ce15"
+              ]
+            }
+          },
+          {
+            "id": "legal-regulamentos",
+            "t": "Regulamentos e hierarquia",
+            "n": "Devem respeitar a lei e não podem criar obrigações ou direitos primários sem base legal.",
+            "x": {
+              "e": "Os atos infralegais devem ser observados pela Administração, mas não podem inovar criando direitos e obrigações sem fundamento legal.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 14",
+              "trap": "Decreto regulamentar não equivale a lei em sentido formal.",
+              "questaoIds": [
+                "fiscal-t06-ce16"
+              ]
+            }
+          },
+          {
+            "id": "legal-reserva",
+            "t": "Legalidade × reserva legal",
+            "n": "Legalidade: dever de agir segundo a lei; reserva legal: certas matérias exigem lei formal nos termos da Constituição.",
+            "x": {
+              "e": "Apostila diferencia disciplina reservada à lei formal da regra geral de atuação segundo o ordenamento.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 15",
+              "trap": "Tratar qualquer matéria administrativa como necessariamente reservada a lei formal.",
+              "questaoIds": [
+                "fiscal-t06-ce17"
+              ]
+            }
+          },
+          {
+            "id": "legal-excepc",
+            "t": "Restrições excepcionais",
+            "n": "Medida provisória; estado de defesa; estado de sítio, cada qual nos limites constitucionais.",
+            "x": {
+              "e": "São situações constitucionais excepcionais indicadas pela doutrina, com pressupostos e controles próprios; não afastam o ordenamento como um todo.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 15",
+              "trap": "Exceção não é poder ilimitado.",
+              "questaoIds": [
+                "fiscal-t06-ce18"
+              ]
+            }
+          },
+          {
+            "id": "juridicidade",
+            "t": "Legalidade × juridicidade",
+            "n": "Vinculação da Administração à ordem jurídica completa, inclusive aos princípios, e não apenas ao texto de lei.",
+            "x": {
+              "e": "Juridicidade amplia a legalidade: conduta e atos submetem-se à totalidade do ordenamento, incluindo princípios e normas infralegais válidas.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 16",
+              "trap": "Legalidade formal não imuniza ato incompatível com princípios.",
+              "questaoIds": [
+                "fiscal-t06-ce19"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "impessoalidade",
+        "t": "Impessoalidade, finalidade e isonomia",
+        "n": "O Estado atua em nome da coletividade, com finalidade legal, sem favorecimento ou promoção pessoal.",
+        "cor": 3,
+        "x": {
+          "e": "O Estado atua em nome da coletividade, com finalidade legal, sem favorecimento ou promoção pessoal.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seções 1.1–1.2"
+        },
+        "f": [
+          {
+            "id": "imp-finalidade",
+            "t": "Finalidade em dois sentidos",
+            "n": "Ampla: interesse coletivo; estrita: objetivo definido pela norma que confere a competência.",
+            "x": {
+              "e": "A impessoalidade requer finalidade pública ampla e finalidade legal específica. Desvio de finalidade torna inválida a utilização da competência.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 17",
+              "trap": "Finalidade pública genérica não corrige desvio de finalidade específico.",
+              "questaoIds": [
+                "fiscal-t06-ce20"
+              ]
+            }
+          },
+          {
+            "id": "imp-remocao",
+            "t": "Remoção punitiva",
+            "n": "Porque o instituto tem finalidade administrativa de alocação de pessoal, e não de aplicar punição informal.",
+            "x": {
+              "e": "Usar remoção em substituição a sanção disciplinar desvia sua finalidade específica, ainda que o agente alegue algum benefício público.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 17",
+              "trap": "Confundir interesse geral com finalidade da competência.",
+              "questaoIds": [
+                "fiscal-t06-ce21"
+              ]
+            }
+          },
+          {
+            "id": "imp-agente-fato",
+            "t": "Agente de fato",
+            "n": "Em regra, são preservados para proteger quem não causou o vício da investidura.",
+            "x": {
+              "e": "A teoria do agente de fato protege terceiros de boa-fé: os atos podem conservar validade, apesar do vício na investidura do agente.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 17",
+              "trap": "Invalidar automaticamente licenças de particulares inocentes.",
+              "questaoIds": [
+                "fiscal-t06-ce22"
+              ]
+            }
+          },
+          {
+            "id": "imp-isonomia",
+            "t": "Isonomia e concurso/licitação",
+            "n": "Substituem escolhas pessoais por critérios de igualdade e competição previstos no ordenamento.",
+            "x": {
+              "e": "A igualdade perante a Administração demanda critérios imparciais de seleção e afastamento de perseguições ou privilégios pessoais.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 17",
+              "trap": "Isonomia não impede tratamento diferenciado autorizado por lei.",
+              "questaoIds": [
+                "fiscal-t06-ce23"
+              ]
+            }
+          },
+          {
+            "id": "imp-promocao",
+            "t": "Publicidade sem autopromoção",
+            "n": "Vedação de nomes, símbolos ou imagens que caracterizem promoção pessoal de autoridade ou servidor.",
+            "x": {
+              "e": "A publicidade deve ter caráter educativo, informativo ou de orientação social, sem nomes, imagens e símbolos de promoção pessoal (CF, art. 37, §1º).",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 18",
+              "trap": "Confundir divulgação de obra com propaganda do agente.",
+              "questaoIds": [
+                "fiscal-t06-ce24"
+              ]
+            }
+          },
+          {
+            "id": "imp-primario",
+            "t": "Interesse primário e finalidade",
+            "n": "Interesse público primário: necessidades e direitos da coletividade.",
+            "x": {
+              "e": "A finalidade pública é orientada à coletividade, com tratamento igualitário e objetivo.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 19",
+              "trap": "Confundir benefício da organização ou do agente com interesse coletivo.",
+              "questaoIds": [
+                "fiscal-t06-ce25"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "moralidade",
+        "t": "Moralidade e probidade",
+        "n": "Comportamento administrativo deve ser ético, íntegro e juridicamente controlável mesmo diante da legalidade formal.",
+        "cor": 4,
+        "x": {
+          "e": "Comportamento administrativo deve ser ético, íntegro e juridicamente controlável mesmo diante da legalidade formal.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seções 1.1–1.2"
+        },
+        "f": [
+          {
+            "id": "mor-indep",
+            "t": "Moralidade autônoma",
+            "n": "Não. Ato legal pode ser imoral; ambos os princípios têm autonomia e podem fundamentar controle.",
+            "x": {
+              "e": "Moralidade tem sentido jurídico próprio e exige padrões éticos de probidade, decoro e boa-fé, para além do cumprimento literal de regras.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 21",
+              "trap": "Legal não significa necessariamente moral.",
+              "questaoIds": [
+                "fiscal-t06-ce26"
+              ]
+            }
+          },
+          {
+            "id": "mor-acao-pop",
+            "t": "Moralidade e ação popular",
+            "n": "Ação popular, nos termos constitucionais.",
+            "x": {
+              "e": "O art. 5º, LXXIII, da Constituição contempla a ação popular contra ato lesivo à moralidade administrativa.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 21",
+              "trap": "Reduzir ação popular somente a dano material.",
+              "questaoIds": [
+                "fiscal-t06-ce27"
+              ]
+            }
+          },
+          {
+            "id": "mor-interna",
+            "t": "Moralidade nas relações",
+            "n": "Nas relações internas e externas, inclusive com particulares que interagem com a Administração.",
+            "x": {
+              "e": "A moralidade alcança relações internas e contatos com particulares; inclui honestidade, decoro e boa-fé administrativa.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 23",
+              "trap": "Concluir que moralidade só existe em publicidade externa.",
+              "questaoIds": [
+                "fiscal-t06-ce28"
+              ]
+            }
+          },
+          {
+            "id": "mor-sem-dolo",
+            "t": "Conteúdo imoral e intenção",
+            "n": "Não. A moralidade pode ser violada pelo conteúdo do ato, independentemente da intenção alegada.",
+            "x": {
+              "e": "O material destaca a avaliação do conteúdo do ato: a intenção subjetiva não esgota o juízo de moralidade administrativa.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 24",
+              "trap": "Não confundir juízo de moralidade com requisitos subjetivos próprios de sanções.",
+              "questaoIds": [
+                "fiscal-t06-ce29"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "conceito-2",
+        "t": "Publicidade e transparência",
+        "n": "Atos administrativos podem exigir publicação para eficácia; transparência é regra com ressalvas de privacidade e sigilo.",
+        "cor": 5,
+        "x": {
+          "e": "Atos administrativos podem exigir publicação para eficácia; transparência é regra com ressalvas de privacidade e sigilo.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seções 1.1–1.2"
+        },
+        "f": [
+          {
+            "id": "pub-eficacia",
+            "t": "Publicação × validade",
+            "n": "De eficácia: um ato pode ser válido, mas ainda não produzir efeitos externos por ausência da publicação exigida.",
+            "x": {
+              "e": "A apostila distingue requisitos de validade do ato e sua produção de efeitos externos; a publicação pode ser condição de eficácia.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 24",
+              "trap": "Trocar validade por eficácia.",
+              "questaoIds": [
+                "fiscal-t06-ce30"
+              ]
+            }
+          },
+          {
+            "id": "pub-dois",
+            "t": "Dois sentidos de publicidade",
+            "n": "Publicação oficial dos atos pertinentes e transparência/acesso à informação para controle da Administração.",
+            "x": {
+              "e": "O capítulo identifica dois sentidos: publicação necessária à eficácia de determinados atos e transparência para controle da atuação administrativa.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 24",
+              "trap": "Diário Oficial não esgota o princípio.",
+              "questaoIds": [
+                "fiscal-t06-ce31"
+              ]
+            }
+          },
+          {
+            "id": "pub-ativa-passiva",
+            "t": "Transparência ativa × passiva",
+            "n": "Ativa: divulgação de ofício; passiva: informação fornecida por solicitação.",
+            "x": {
+              "e": "A distinção decorre da iniciativa de disponibilização: de ofício ou após requerimento do interessado.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26",
+              "trap": "Inverter os rótulos ativo/passivo.",
+              "questaoIds": [
+                "fiscal-t06-ce32"
+              ]
+            }
+          },
+          {
+            "id": "pub-excecao",
+            "t": "Publicidade não absoluta",
+            "n": "Proteção de dados pessoais e intimidade, além das hipóteses legais e constitucionais de sigilo vinculadas à segurança.",
+            "x": {
+              "e": "Publicidade é regra, mas existem hipóteses de resguardo da intimidade e de informações cuja divulgação comprometa segurança da sociedade ou do Estado.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26",
+              "trap": "Usar 'todo' para apagar as exceções.",
+              "questaoIds": [
+                "fiscal-t06-ce33"
+              ]
+            }
+          },
+          {
+            "id": "pub-salarios",
+            "t": "Remuneração pública × dados íntimos",
+            "n": "É legítima a divulgação de nome e valores remuneratórios em contexto de controle, mas não a exposição de endereço e dados estritamente privados.",
+            "x": {
+              "e": "A apostila cita entendimento do STF que admite transparência remuneratória, preservando informações pessoais sem interesse público.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26",
+              "trap": "Confundir informação funcional com vida privada.",
+              "questaoIds": [
+                "fiscal-t06-ce34"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "eficiencia",
+        "t": "Eficiência e resultados",
+        "n": "Qualidade e racionalidade na atuação do agente e organização do serviço, respeitando todos os princípios.",
+        "cor": 6,
+        "x": {
+          "e": "Qualidade e racionalidade na atuação do agente e organização do serviço, respeitando todos os princípios.",
+          "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, seções 1.1–1.2"
+        },
+        "f": [
+          {
+            "id": "efi-ec19",
+            "t": "Eficiência constitucional",
+            "n": "Emenda Constitucional 19, de 1998.",
+            "x": {
+              "e": "A eficiência foi acrescentada expressamente ao art. 37 pela EC 19/1998, associada à reforma gerencial.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26",
+              "trap": "Inverter inclusão e supressão da eficiência.",
+              "questaoIds": [
+                "fiscal-t06-ce35"
+              ]
+            }
+          },
+          {
+            "id": "efi-dois",
+            "t": "Duas faces da eficiência",
+            "n": "Modo de atuação do agente e modo de organizar/estruturar a Administração.",
+            "x": {
+              "e": "Conforme a exposição doutrinária do material, eficiência diz respeito ao agente e à estrutura administrativa.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 27",
+              "trap": "Reduzir eficiência apenas à velocidade do servidor.",
+              "questaoIds": [
+                "fiscal-t06-ce36"
+              ]
+            }
+          },
+          {
+            "id": "efi-gerencial",
+            "t": "Gestão por resultados",
+            "n": "Maior atenção à qualidade e a resultados, sem excluir controle de legalidade.",
+            "x": {
+              "e": "O capítulo relaciona eficiência a gestão racional, transparência, prestação de serviços, controle e avaliação de resultados.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 27",
+              "trap": "Resultados não dispensam integridade e fiscalização.",
+              "questaoIds": [
+                "fiscal-t06-ce37"
+              ]
+            }
+          },
+          {
+            "id": "efi-ilicito",
+            "t": "Eficiência não afasta LIMPE",
+            "n": "Não. A economia não substitui a legalidade nem os demais princípios administrativos.",
+            "x": {
+              "e": "A eficiência deve ser perseguida em conjunto com legalidade, impessoalidade, moralidade e publicidade; resultado não convalida ilicitude.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 27",
+              "trap": "Economia não é salvo-conduto jurídico.",
+              "questaoIds": [
+                "fiscal-t06-ce38"
+              ]
+            }
+          },
+          {
+            "id": "efi-qualidade",
+            "t": "Custo × qualidade",
+            "n": "Melhores resultados e serviços de qualidade com uso racional de recursos e tempo, sem sacrificar os padrões necessários.",
+            "x": {
+              "e": "A eficiência exige bons resultados, qualidade, tempo e emprego racional de recursos; poupar gastos não basta isoladamente.",
+              "src": "DIREITO ADMINISTRATIVO.zip › 1. Princípios da Administração.pdf, p. 26",
+              "trap": "Confundir eficiência com menor gasto a qualquer preço.",
+              "questaoIds": [
+                "fiscal-t06-ce39"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "ligacoes": [
+      [
+        "conceito-1",
+        "legalidade",
+        "Sujeições impõem legalidade"
+      ],
+      [
+        "impessoalidade",
+        "conceito-2",
+        "Publicidade sem promoção"
+      ],
+      [
+        "legalidade",
+        "eficiencia",
+        "Eficiência não derroga legalidade"
+      ],
+      [
+        "conceito-1",
+        "impessoalidade",
+        "Finalidade coletiva"
+      ]
+    ]
+  },
+  "groups": [
+    "regime",
+    "legalidade",
+    "impessoalidade",
+    "moralidade",
+    "publicidade",
+    "eficiencia"
+  ]
+}
