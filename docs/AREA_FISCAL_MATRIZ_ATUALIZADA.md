@@ -128,6 +128,24 @@ As fontes efetivamente lidas para estes seis tópicos foram **1. Análise de Inf
 | 03 | 74 | Português | Bateria: preposições e conjunções | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 03 | 75 | Direito Tributário | Bateria: imunidades tributárias | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 
+## Expansão de Bancos de Dados e Modelagem (08/11/2026)
+
+Fonte 4: **4. Análise de Informações - Conceitos Básicos de Bancos de Dados.pdf** (199 páginas). Fonte 5: **5. Análise de Informações - Modelagem Conceitual.pdf** (217 páginas). Foram consultadas as páginas correspondentes ao recorte da trilha, sem inserir textos literais extensos nem atribuir à banca questões novas.
+
+| Trilha / tarefa | Escopo | Questões acessíveis | Flashcards | Nós do mapa |
+|---|---|---:|---:|---:|
+| 01 / 35 | Banco, SGBD, compartilhamento, ACID e exemplos de transação | 31 | 32 | 34 |
+| 02 / 38 | ANSI/SPARC, independência, classificação, DBA/AD e projeto | 31 | 32 | 34 |
+| 02 / 44 | Bateria: banco compartilhado das T35/T38 | 63 (62 referências + 1 própria) | 2 | 4 |
+| 02 / 50 | MER, entidades, atributos, relacionamentos e cardinalidade | 31 | 32 | 35 |
+| 03 / 59 | Atributos, MER estendido, especialização, agregação e Crow's Foot | 31 | 32 | 33 |
+| 03 / 65 | Bateria: banco compartilhado das T50/T59 | 63 (62 referências + 1 própria) | 2 | 4 |
+| 03 / 71 | Revisão: mesmo banco DIKW/metadados T05/T11 | 62 (61 referências + 1 própria) | 2 | 4 |
+
+Foram criadas **120 questões originais** de Certo/Errado, com gabarito, comentário, página do PDF, ID estável de origem, mapaNoId e vínculos a cartão. As quatro tarefas teóricas preservam os dois flashcards anteriores e sua questão original. As baterias e revisões **não copiam** questões nem modificam respostas, histórico ou repetição espaçada do candidato.
+
+**Auditoria desta etapa:** 516 questões físicas distintas; 75 mapas, 785 nós (727 com ID), 607 flashcards e 499 vínculos explícitos válidos. **21 tarefas com cobertura estrutural ampliada** e 54 ainda pendentes, incluindo orientações de estudo. A análise técnica não homologa automaticamente a qualidade pedagógica nem comprova domínio das matérias.
+
 ## Critérios para avançar
 
 1. Fonte realmente consultada, com páginas referenciadas.
