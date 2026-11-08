@@ -163,3 +163,11 @@ Foram criadas **120 questões originais** de Certo/Errado, com gabarito, coment�
 - A T08 exige atenção especial à ressalva jurisprudencial sobre dação de bens móveis (ADI 1.917 e ADI 2.405) e ao caráter finalístico de certas espécies tributárias, tal como tratado nas páginas da apostila, sem extrapolações.
 - **Histórico:** os marcos anteriores eram 273 questões / 364 cartões, e depois 396 questões / 487 cartões. A auditoria atualizada está no primeiro quadro: 516 questões e 607 cartões, sem duplicar registros de baterias.
 - **Limitação atual:** ainda existem 54 tarefas sem cobertura estrutural ampliada, incluindo 3 orientações iniciais. Os demais assuntos exigem leitura, elaboração e revisão editorial.
+
+## Suplementos de TI a partir dos PDFs 3, 6 e 7 (08/11/2026)
+
+Foram agregados **três módulos suplementares** sem adulterar o roteiro oficial das 75 tarefas. Qualidade de Dados (`fiscal-sup-qualidade`): 24 questões e 24 cartões; Modelagem Lógica (`fiscal-sup-modelagem-logica`): 24 e 24; Normalização (`fiscal-sup-normalizacao`): 27 e 27. Seus mapas têm 91 nós ao todo, incluídos 16 ramos e 75 folhas; os 75 flashcards ligam-se a 75 questões por ID.
+
+**Banco total auditado na Área Fiscal:** 591 questões únicas, das quais 516 anteriores e 75 recém-incluídas; 78 documentos em `edital`, sendo 75 tarefas oficiais e 3 suplementos não numerados; 78 mapas em `revisao`. Totais de cartões, nós e links derivados da auditoria anterior: 682, 876 e 574, respectivamente. Preservaram-se o histórico de respostas e os mecanismos de repetição espaçada; nenhuma nota foi fabricada. A marcação `SUP` não se confunde com as trilhas 00–03.
+
+Conteúdo registrado em `docs/AREA_FISCAL_TI_SUPLEMENTOS_3_6_7.md`, com fontes e páginas. Os itens são autorais, estruturalmente testados, porém ainda **não homologados pedagogicamente**.
