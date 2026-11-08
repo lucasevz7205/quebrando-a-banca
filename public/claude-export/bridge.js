@@ -5,13 +5,15 @@
 (() => {
   "use strict";
   const FLAG = "__qb44_bridge_v1__";
+  // about:srcdoc inherits its effective origin from the study page.
+  const origin = window.origin;
   let seq = 0;
   const pending = new Map();
   const listeners = new Map();
   const updating = new Set();
 
   window.addEventListener("message", event => {
-    if (event.origin !== window.location.origin || event.source !== window.parent) return;
+    if (event.origin !== origin || event.source !== window.parent) return;
     const msg = event.data;
     if (!msg || msg.flag !== FLAG || !msg.responseTo) return;
     const p = pending.get(msg.responseTo);
@@ -33,7 +35,7 @@
         reject(new Error("Não houve resposta do Base44. Recarregue a página Estudar."));
       }, 90000);
       pending.set(id, { resolve, reject, timer });
-      window.parent.postMessage({ flag: FLAG, id, action, args }, window.location.origin);
+      window.parent.postMessage({ flag: FLAG, id, action, args }, origin);
     });
   }
 
