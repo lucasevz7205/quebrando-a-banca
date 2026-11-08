@@ -35,10 +35,28 @@
       byQuestion.set(question.id,{question,topicId,matchedIds:matched.map(t=>t.id),
         linkedBy:'capitulo',hasMap,hasFlashcards,source:asText(question.ref),hasComment:!!asText(question.comentario)});
     }
+    /* Reutilização explícita dos mesmos IDs de questões por uma bateria de trilha.
+     * O banco permanece único; esta associação não duplica o registro nem a nota.
+     * Apenas refs presentes no banco deste login e declaradas no documento da bateria. */
+    const referencedBy=new Map();
+    for(const [topicId,doc] of (r instanceof Map?r.entries():[])){
+      if(!doc||!Array.isArray(doc.questaoIds)||!ed.some(t=>t.id===topicId))continue;
+      const seen=new Set();
+      for(const id of doc.questaoIds){
+        if(typeof id!=='string'||seen.has(id)||!byQuestion.has(id))continue;
+        seen.add(id);
+        const info=byQuestion.get(id),target=info.question;
+        if(!byTopic.has(topicId))byTopic.set(topicId,[]);
+        if(!byTopic.get(topicId).some(q=>q.id===id))byTopic.get(topicId).push(target);
+        if(!info.matchedIds.includes(topicId))info.matchedIds.push(topicId);
+        if(!referencedBy.has(id))referencedBy.set(id,[]);
+        referencedBy.get(id).push(topicId);
+      }
+    }
     for(const qs of byTopic.values())qs.sort((a,b)=>(Number(a.ordem)||0)-(Number(b.ordem)||0)||a.id.localeCompare(b.id,'pt-BR',{numeric:true}));
     return {byTopic,byQuestion,virtualTopics,total:byQuestion.size,
       withTopic:byQuestion.size-withoutTopic,withoutTopic,withoutResources,
-      withMap,withFlashcards,coveredWithMaterials};
+      withMap,withFlashcards,coveredWithMaterials,referencedBy};
   }
   function card(question) {
     if(!question?.id)return null;
