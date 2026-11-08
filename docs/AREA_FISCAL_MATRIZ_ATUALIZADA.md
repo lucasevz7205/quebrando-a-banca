@@ -41,34 +41,34 @@ Atualizada em **08/11/2026**, após aprofundamento das tarefas **04, 05, 06, 07,
 | 00 | 02 | Orientações de estudo | Crie constância no ciclo | 0 | 3 | 2 | 0/2 | Orientação: não requer 20 questões |
 | 00 | 03 | Orientações de estudo | Planeje a revisão com resumos e mapas | 0 | 3 | 2 | 0/2 | Orientação: não requer 20 questões |
 | 00 | 04 | Direito Constitucional | Constitucionalismo e neoconstitucionalismo | 25 | 44 | 39 | 39/39 | Cobertura estrutural; revisão editorial pendente |
-| 00 | 05 | Tecnologia da Informação | Pirâmide DIKW e dados abertos | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 00 | 05 | Tecnologia da Informação | Pirâmide DIKW e dados abertos | **32** | **35** | **33** | **33/33** | Cobertura estrutural; revisão editorial pendente |
 | 00 | 06 | Direito Administrativo | Regime jurídico administrativo e princípios expressos | 39 | 44 | 40 | 40/40 | Cobertura estrutural; revisão editorial pendente |
 | 00 | 07 | Português | Ortografia, acentuação e acentos diferenciais | **40** | **46** | **41** | **41/41** | Cobertura estrutural; revisão editorial pendente |
 | 00 | 08 | Direito Tributário | Tributo: conceito e natureza jurídica | **33** | **39** | **34** | **34/34** | Cobertura estrutural; revisão editorial pendente |
 | 00 | 09 | Contabilidade Geral e Avançada | Contabilidade: objeto, finalidade e usuários | **33** | **40** | **34** | **34/34** | Cobertura estrutural; revisão editorial pendente |
 | 00 | 10 | Direito Constitucional | Sentidos, estrutura e classificação da Constituição | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 00 | 11 | Tecnologia da Informação | Metadados de arquivos | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 00 | 11 | Tecnologia da Informação | Metadados de arquivos | **29** | **36** | **30** | **30/30** | Cobertura estrutural; revisão editorial pendente |
 | 00 | 12 | Direito Administrativo | Princípios administrativos implícitos | 37 | 46 | 38 | 38/38 | Cobertura estrutural; revisão editorial pendente |
 | 00 | 13 | Raciocínio Lógico e Matemática | Proposições e sentenças simples | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 00 | 14 | Direito Tributário | Impostos, taxas e contribuição de melhoria | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 00 | 15 | Português | Hífen, grafia, siglas e abreviações | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 00 | 16 | Direito Constitucional | Aplicabilidade das normas e poder constituinte | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 00 | 17 | Tecnologia da Informação | Bateria: DIKW, dados abertos e metadados | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 00 | 17 | Tecnologia da Informação | Bateria: DIKW, dados abertos e metadados | **62** | 4 | 2 | **2/2** | Bateria: banco compartilhado |
 | 00 | 18 | Direito Administrativo | Bateria: princípios administrativos | 77 | 4 | 2 | 2/2 | Bateria: banco compartilhado |
 | 00 | 19 | Contabilidade Geral e Avançada | Bateria: aspectos introdutórios da contabilidade | **34** | 4 | 2 | **2/2** | Bateria: banco compartilhado |
 | 00 | 20 | Raciocínio Lógico e Matemática | Proposições compostas e conectivos | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 01 | 21 | Tecnologia da Informação | Governança de dados: fundamentos, papéis e organização | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 01 | 21 | Tecnologia da Informação | Governança de dados: fundamentos, papéis e organização | **31** | **35** | **32** | **32/32** | Cobertura estrutural; revisão editorial pendente |
 | 01 | 22 | Contabilidade Geral e Avançada | Estática patrimonial, situações líquidas, atos e fatos | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 01 | 23 | Direito Constitucional | Princípios fundamentais da Constituição | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 01 | 24 | Raciocínio Lógico e Matemática | Conversão de linguagem e tabela-verdade | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 01 | 25 | Direito Administrativo | Estado, governo e Direito Administrativo | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 01 | 26 | Tecnologia da Informação | Governança: arquitetura, ciclo e controles | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 01 | 26 | Tecnologia da Informação | Governança: arquitetura, ciclo e controles | **35** | **43** | **36** | **36/36** | Cobertura estrutural; revisão editorial pendente |
 | 01 | 27 | Direito Tributário | Empréstimos compulsórios, contribuições especiais e classificações | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 01 | 28 | Português | Expressões problemáticas e regras de grafia | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 01 | 29 | Contabilidade Geral e Avançada | Patrimônio líquido, classificação e teoria das contas | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 01 | 30 | Direito Administrativo | Administração Pública em sentidos subjetivo e objetivo | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 01 | 31 | Raciocínio Lógico e Matemática | Bateria: proposições simples e compostas | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
-| 01 | 32 | Tecnologia da Informação | Bateria: governança de dados | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
+| 01 | 32 | Tecnologia da Informação | Bateria: governança de dados | **67** | 4 | 2 | **2/2** | Bateria: banco compartilhado |
 | 01 | 33 | Direito Administrativo | Bateria: introdução ao Direito Administrativo | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 01 | 34 | Contabilidade Geral e Avançada | Plano de contas e método das partidas dobradas | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
 | 01 | 35 | Tecnologia da Informação | Banco de dados, SGBD e transações | 1 | 4 | 2 | 0/2 | Pendente de aprofundamento |
