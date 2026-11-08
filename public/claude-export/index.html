@@ -447,6 +447,7 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/assistant.js"></script>
 <script src="/claude-export/strategies.js"></script>
 <script src="/claude-export/learning.js"></script>
+<script src="/claude-export/question-links.js"></script>
 <link rel="stylesheet" href="/claude-export/learning.css">
 <script>
 (function(){
@@ -612,8 +613,8 @@ const multiCap=cap=>cap==='MIX'||cap==='PEG';
 
 /* ---------- navegação ---------- */
 /* Estudo reúne a prática e o acompanhamento pedagógico; Desempenho mantém a análise histórica. */
-const PAI={cartoes:'estudo',mapa:'estudo',revisao:'estudo',pegadinhas:'estudo',conteudo:'estudo',aprendizagem:'estudo',caderno:'treinar',metodo:'historico',analiseDia:'historico'};
-const SUBS={estudo:[['revisao','Revisão'],['mapa','Mapas mentais'],['cartoes','Flashcards'],['pegadinhas','Pegadinhas'],['conteudo','Materiais'],['aprendizagem','Aprendizagem']],treinar:[['treinar','Treinar'],['caderno','Caderno de erros']],historico:[['analiseDia','Análise diária'],['historico','Análise histórica'],['metodo','Método']]};
+const PAI={cartoes:'estudo',mapa:'estudo',pegadinhas:'estudo',conteudo:'estudo',aprendizagem:'estudo',caderno:'treinar',metodo:'historico',analiseDia:'historico'};
+const SUBS={estudo:[['mapa','Mapas mentais'],['cartoes','Flashcards'],['pegadinhas','Pegadinhas'],['conteudo','Materiais'],['aprendizagem','Aprendizagem']],treinar:[['treinar','Treinar'],['caderno','Caderno de erros']],historico:[['analiseDia','Análise diária'],['historico','Análise histórica'],['metodo','Método']]};
 function subnav(){
   const pai=PAI[S.view]||S.view, l=SUBS[pai]; if(!l) return '';
   const cnt={caderno:cadernoItens().length,pegadinhas:S.pg.size};
@@ -624,8 +625,8 @@ const SECTION_INTROS={
   treinar:['PRÁTICA ATIVA','Treine com estratégia','Escolha um assunto, ajuste a rodada e desenvolva precisão nas questões do CEBRASPE.'],
   caderno:['CADERNO DE ERROS','Erros que viram acertos','Reveja as questões que exigem atenção e transforme suas dificuldades em retenção.'],
   revisao:['REVISÃO ATIVA','Revisar é consolidar','Retome conceitos no momento certo, evoque antes de revelar e acompanhe sua memória.'],
-  mapa:['MAPAS MENTAIS','O conteúdo, em conexões','Explore relações entre temas, abra os ramos e revise com evocação ativa.'],
-  cartoes:['FLASHCARDS','Sua memória em construção','Responda antes de revelar e use a repetição espaçada para fixar conceitos importantes.'],
+  mapa:['MAPAS MENTAIS','Conceitos e questões em conexão','Explore relações entre os temas e as questões ligadas a cada tópico, sem duplicar o edital verticalizado.'],
+  cartoes:['FLASHCARDS · REVISÃO ATIVA','Conhecimento e questões conectados','Revise os cartões originais, consulte as questões vinculadas e confira gabaritos e comentários depois de responder.'],
   pegadinhas:['INTELIGÊNCIA DE BANCA','Antecipe as armadilhas','Reconheça os mecanismos recorrentes do CEBRASPE e aprenda a escapar deles.'],
   conteudo:['BIBLIOTECA DE ESTUDOS','Conhecimento organizado','Acesse seus materiais, resumos e fontes por disciplina e assunto.'],
   simulado:['SIMULADOS · CEBRASPE','Pratique como na prova','Teste domínio, ritmo e estratégia com exercícios em condições de prova.'],
@@ -638,7 +639,8 @@ function sectionIntro(v){
   return '<section class="qb-section-intro qb-page-hero" aria-label="Cabeçalho da seção"><div class="qb-page-hero-copy"><span class="qb-section-kicker">'+info[0]+' · QUEBRANDO A BANCA</span><h2>'+info[1]+'</h2><p>'+info[2]+'</p></div></section>';
 }
 function setView(v,push=true){
-  if(v==='estudo') v=S.ultEstudo||'revisao';
+  if(v==='estudo') v=S.ultEstudo||'mapa';
+  if(v==='revisao') v='edital'; /* antigas URLs continuam úteis sem duplicar o edital em Estudo */
   if(!VIEWS.includes(v)) v='treinar';
   S.view=v; if(PAI[v]==='estudo') S.ultEstudo=v;
   const pai=PAI[v]||v;
@@ -2169,7 +2171,7 @@ function wire(){
   document.querySelectorAll('[data-cf]').forEach(b=>b.addEventListener('click',()=>{S.cartFech=new Set();if(b.dataset.cf==='0'){const rv=S.rv.get(S.cartId);for(const c of (rv&&rv.cartoes)||[])S.cartFech.add(S.cartId+'#'+(c.tema||'Geral'))}render(true)}));
   const cr=$('#cart-reset'); if(cr) cr.addEventListener('click',()=>{for(const k of [...S.cartAbertos]) if(k.startsWith(S.cartId+'@')){S.cartAbertos.delete(k);S.cartRated.delete(k);S.cartResp.delete(k);S.ia.delete(k)}render(true)});
   const mt=$('#mapa-top'); if(mt) mt.addEventListener('change',()=>{S.mapaId=mt.value;S.mapaAb=null;S.revelados.clear();render(true)});
-  document.querySelectorAll('[data-ir-rev]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.irRev,t=S.ed.get(id);S.fMat=t?t.sigla:'';if(t)S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+id);setView('revisao');setTimeout(()=>{const el=document.getElementById('rv-'+id);if(el)el.scrollIntoView({block:'start'})},30)}));
+  /* O detalhamento do edital está exclusivamente na aba Edital. */
   const ra=$('#rv-abrir'); if(ra) ra.addEventListener('click',()=>{for(const t of S.ed.values()){if(S.rv.has(t.id)||S.pt.has(t.id)){S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+t.id)}}render(true)});
   const rf=$('#rv-fechar'); if(rf) rf.addEventListener('click',()=>{for(const k of [...S.abertos]) if(k.startsWith('rv:')||k.startsWith('rvt:')) S.abertos.delete(k); S.fMat=''; render(true)});
   const chart=document.querySelector('.qb-history-chart');
@@ -2585,7 +2587,7 @@ function wireSim(){
 
 function init(){
   $('#qb-logout').addEventListener('click',()=>{window.QBBridge.ask('logout').catch(()=>{});});
-  let v='painel'; try{ const h=(location.hash||'').slice(1); if(VIEWS.includes(h)) v=h; }catch(e){}
+  let v='painel'; try{ const h=(location.hash||'').slice(1); if(VIEWS.includes(h)) v=h==='revisao'?'edital':h; }catch(e){}
   window.QBBridge.ask('account').then(account=>{
     if(!account.legacy){
       S.studyAccount=true;
