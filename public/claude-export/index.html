@@ -778,6 +778,7 @@ function chipsOrigem(qid,atual){
 }
 function viewItem(){
   const rd=S.round, q=S.q.get(rd.fila[rd.idx]);
+  if(rd.learningShown?.idx!==rd.idx)rd.learningShown={idx:rd.idx,at:Date.now()};
   if(!q){ rd.idx++; if(rd.idx>=rd.fila.length){ finalizar(); return viewFim(); } return viewItem(); }
   const a=rd.atual, pend=rd.pend;
   const bub=(L)=>{
