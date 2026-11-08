@@ -11,7 +11,9 @@ const fileNames=[
   "t11-metadados",
   "t12-principios-implicitos",
   "t21-governanca-dados-fundamentos",
-  "t26-governanca-arquitetura-controles"
+  "t26-governanca-arquitetura-controles",
+  "t35-banco-sgbd-transacoes",
+  "t38-ansi-sparc-papeis-projetos"
 ];
 
 for(const file of fileNames){
