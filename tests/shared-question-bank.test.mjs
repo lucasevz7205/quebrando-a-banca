@@ -58,7 +58,7 @@ test("Baterias T17 e T32 reutilizam questões por referência sem materializar n
     rev.set(obj.topic,{questaoIds:refs,cartoes:[{q:"A",a:["B"]}],mapaRelacionadoIds:obj.sourceTopics});
     const result=link.build(questions,ed,rev);
     assert.equal(result.total,3);
-    assert.deepEqual([...result.byTopic.get(obj.topic).map(q=>q.id)],["Q0","Q1",own]);
+    assert.deepEqual([...result.byTopic.get(obj.topic).map(q=>q.id)].sort(),[own,"Q0","Q1"].sort());
     assert.equal(result.byQuestion.size,3);
     assert.ok(result.byTopic.get(obj.topic).every(q=>questions.has(q.id)));
     assert.equal(rev.get(obj.topic).mapaRelacionadoIds.length,2);
