@@ -1,0 +1,21 @@
+{
+  "name": "StudyRequestGate",
+  "type": "object",
+  "properties": {
+    "lease_until": {
+      "type": "number"
+    },
+    "lease_token": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "lease_until"
+  ],
+  "rls": {
+    "create": false,
+    "read": false,
+    "update": false,
+    "delete": false
+  }
+}

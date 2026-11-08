@@ -15,6 +15,12 @@
     "active": {
       "type": "boolean",
       "default": false
+    },
+    "access_pending": {
+      "type": "boolean"
+    },
+    "access_requested_at": {
+      "type": "number"
     }
   },
   "required": [

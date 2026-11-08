@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { requireUser } from "@/lib/auth-middleware";
+import { pendingStudyRequest, requestStudyAccess, studyRequestSchema } from "@/lib/study-onboarding";
 import { listDocuments, writeDocument } from "@/lib/study-documents";
 
 async function resolveAccount(base44, user) {
@@ -15,7 +16,17 @@ export const getStudyAccount = createServerFn({ method: "GET" })
   .middleware([requireUser])
   .handler(async ({ context }) => {
     if (context.user.role === "admin") return { legacy: true };
-    return resolveAccount(context.getBase44().asServiceRole, context.user);
+    const service = context.getBase44().asServiceRole;
+    const account = await resolveAccount(service, context.user);
+    return account ?? { pending: await pendingStudyRequest(service.entities.StudyAccount, context.user) };
+  });
+
+export const submitStudyRequest = createServerFn({ method: "POST" })
+  .middleware([requireUser])
+  .validator(studyRequestSchema)
+  .handler(({ context, data }) => {
+    if (!context.user.id || context.user.role !== "user") throw new Error("Esta solicitação é exclusiva para candidatos.");
+    return requestStudyAccess(context.getBase44().asServiceRole.entities, context.user, data);
   });
 
 const requestSchema = z.discriminatedUnion("action", [

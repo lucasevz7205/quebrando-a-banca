@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { requireUser } from "@/lib/auth-middleware";
+import { withStudyRequestGate } from "@/lib/study-onboarding";
 import { writeDocument } from "@/lib/study-documents";
 import {
   assertStudyAdministrator, canActivateStudyAccount,
@@ -36,7 +37,7 @@ export const listStudyAccountsForAdmin = createServerFn({method:"GET"})
     const accounts=await entities.StudyAccount.filter({},"created_date",1000,0);
     const result=await Promise.all(accounts.map(async a => ({
       id:a.id,userId:a.user_id,examName:a.exam_name,examDate:a.exam_date||null,
-      active:Boolean(a.active),ready:await materialReady(entities,a.id)
+      active:Boolean(a.active),pending:!a.active && a.access_pending === true,ready:await materialReady(entities,a.id)
     })));
     return result.sort((a,b)=>a.examName.localeCompare(b.examName,"pt-BR"));
   });
@@ -51,12 +52,14 @@ export const createStudyAccountForAdmin = createServerFn({method:"POST"})
   .handler(async ({context,data}) => {
     const entities=service(context);
     const draft=validateStudyAccountDraft(data,context.user.id);
-    const existing=await entities.StudyAccount.filter({user_id:draft.user_id},"created_date",1000,0);
-    if (existing.some(row=>row.exam_name.toLowerCase()===draft.exam_name.toLowerCase())) {
-      throw new Error("Este login já possui um vínculo com esse concurso.");
-    }
-    const created=await entities.StudyAccount.create(draft);
-    return {id:created.id,active:false};
+    const result = await withStudyRequestGate(entities.StudyRequestGate, async () => {
+      const existing=await entities.StudyAccount.filter({user_id:draft.user_id},"created_date",1000,0);
+      if (existing.some(row=>row.exam_name.toLowerCase()===draft.exam_name.toLowerCase())) return null;
+      const created=await entities.StudyAccount.create(draft);
+      return {id:created.id,active:false};
+    });
+    if (!result) throw new Error("Este login já possui um vínculo com esse concurso.");
+    return result;
   });
 
 export const setStudyAccountActiveForAdmin = createServerFn({method:"POST"})
@@ -70,12 +73,19 @@ export const setStudyAccountActiveForAdmin = createServerFn({method:"POST"})
       if(!canActivateStudyAccount(materials)) {
         throw new Error("Carregue pelo menos um tópico de edital e uma questão válida antes de ativar.");
       }
-      const existing=await entities.StudyAccount.filter({user_id:account.user_id,active:true},"created_date",10,0);
-      if(existing.some(row=>row.id!==account.id)) {
-        throw new Error("Outro concurso já está ativo para esse login. Desative-o primeiro.");
-      }
     }
-    await entities.StudyAccount.update(account.id,{active:data.active});
+    const changed = await withStudyRequestGate(entities.StudyRequestGate, async () => {
+      if (data.active) {
+        const existing=await entities.StudyAccount.filter({user_id:account.user_id,active:true},"created_date",2,0);
+        if (existing.some(row=>row.id!==account.id)) return false;
+      }
+      await entities.StudyAccount.update(account.id,{
+        active:data.active,
+        ...(data.active ? {access_pending:false} : {})
+      });
+      return true;
+    });
+    if (!changed) throw new Error("Outro concurso já está ativo para esse login. Desative-o primeiro.");
     return {id:account.id,active:data.active};
   });
 
