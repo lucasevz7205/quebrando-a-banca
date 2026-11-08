@@ -412,6 +412,7 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/experience.css">
 <link rel="stylesheet" href="/claude-export/weekly.css">
 <link rel="stylesheet" href="/claude-export/analytics.css">
+<link rel="stylesheet" href="/claude-export/page-hero.css">
 
 <div class="wrap">
   <header class="top">
@@ -606,7 +607,7 @@ const SUBS={estudo:[['revisao','Revisão'],['mapa','Mapas mentais'],['cartoes','
 function subnav(){
   const pai=PAI[S.view]||S.view, l=SUBS[pai]; if(!l) return '';
   const cnt={caderno:cadernoItens().length,pegadinhas:S.pg.size};
-  return `<div class="seg subnav" role="group" aria-label="Seções">${l.map(([v,t])=>`<button data-sub="${v}" aria-pressed="${S.view===v}">${t}${cnt[v]?` <span class="count${v==='caderno'?' hot':''}">${cnt[v]}</span>`:''}</button>`).join('')}</div>`;
+  return `<div class="seg subnav qb-header-tabs" role="group" aria-label="Seções">${l.map(([v,t])=>`<button data-sub="${v}" aria-pressed="${S.view===v}">${t}${cnt[v]?` <span class="count${v==='caderno'?' hot':''}">${cnt[v]}</span>`:''}</button>`).join('')}</div>`;
 }
 const SECTION_INTROS={
   edital:['COBERTURA DO EDITAL','Edital verticalizado','Expanda uma disciplina para ver seus tópicos, status, mapas e exercícios.'],
@@ -624,7 +625,7 @@ const SECTION_INTROS={
 };
 function sectionIntro(v){
   const info=SECTION_INTROS[v]; if(!info) return '';
-  return '<section class="qb-section-intro"><span class="qb-section-kicker">'+info[0]+'</span><h2>'+info[1]+'</h2><p>'+info[2]+'</p></section>';
+  return '<section class="qb-section-intro qb-page-hero" aria-label="Cabeçalho da seção"><div class="qb-page-hero-copy"><span class="qb-section-kicker">'+info[0]+' · QUEBRANDO A BANCA</span><h2>'+info[1]+'</h2><p>'+info[2]+'</p></div></section>';
 }
 function setView(v,push=true){
   if(v==='estudo') v=S.ultEstudo||'revisao';
@@ -648,7 +649,7 @@ function render(force){
   S.pendingRender=false;
   updateCounts();
   const main=$('#main');
-  if(S.view==='metodo'){ main.innerHTML=sectionIntro('metodo')+`<div class="wrap" style="gap:14px">${subnav()}${viewMetodo()}</div>`; wire(); return; }
+  if(S.view==='metodo'){ main.innerHTML=`<div class="qb-tab-shell">${subnav()}</div>`+sectionIntro('metodo')+`<div class="wrap" style="gap:14px">${viewMetodo()}</div>`; wire(); return; }
   if(S.dbState==='loading'){ main.innerHTML=`<div class="notice">Abrindo o caderno…</div>`; return; }
   if(S.dbState==='missing'){ main.innerHTML=`<div class="notice"><strong>Não foi possível abrir o banco de respostas nesta visualização.</strong> Abra este caderno pelo claude.ai com a sua conta para treinar e guardar as respostas.</div>`; return; }
   if(!S.qLoaded){ main.innerHTML=`<div class="notice">Carregando as questões…</div>`; return; }
@@ -665,8 +666,9 @@ function render(force){
   else if(S.view==='analiseDia') main.innerHTML=window.QBInsights ? window.QBInsights.render(S,hoje) : '<div class="notice">Análise diária indisponível.</div>';
   else if(S.view==='simulado'){ main.innerHTML=viewSimulado(); if(!simLS('obj')&&!simLS('disc')) main.insertAdjacentHTML('afterbegin',sectionIntro('simulado')); wireSim(); return; }
   else main.innerHTML=viewHistorico();
-  const sn=subnav(); if(sn&&!(S.view==='treinar'&&S.round)) main.insertAdjacentHTML('afterbegin',`<div class="wrap" style="margin-bottom:14px">${sn}</div>`);
+  const sn=subnav();
   if(S.view!=='painel'&&S.view!=='analiseDia'&&!(S.view==='treinar'&&S.round)) main.insertAdjacentHTML('afterbegin',sectionIntro(S.view));
+  if(sn&&!(S.view==='treinar'&&S.round)) main.insertAdjacentHTML('afterbegin',`<div class="qb-tab-shell">${sn}</div>`);
   wire();
 }
 function updateCounts(){
