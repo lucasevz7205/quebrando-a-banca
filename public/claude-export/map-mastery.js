@@ -51,10 +51,33 @@
     else {result.status="em-desenvolvimento";result.label="Em desenvolvimento";}
     return result;
   }
-  function build({topicId, map, cards=[], questions, responses, topic=null}={}) {
-    const q=asMap(questions),r=asMap(responses),nodes=[],byPath=new Map(),byId=new Map(),parentByPath=new Map();
+  function cardStats(indexes, topicId, assessments) {
+    const result={total:indexes.size,avaliados:0,lembrados:0,dificeis:0,novamente:0,percentual:null};
+    for(const index of indexes){
+      const card=assessments.get(topicId+"@"+index);
+      const score=card?.hist?.at(-1)?.v||card?.ult;
+      if(!["n","d","b","f","s","p"].includes(score))continue;
+      result.avaliados++;
+      if(["b","f","s"].includes(score))result.lembrados++;
+      else if(score==="n")result.novamente++;
+      else result.dificeis++;
+    }
+    if(result.avaliados)result.percentual=result.lembrados/result.avaliados;
+    return result;
+  }
+  function addCardEvidence(stat, review) {
+    if(review.avaliados<3)return;
+    if(stat.respondidas<5){
+      const weak=review.percentual<.7;
+      Object.assign(stat,{status:weak?"deficiente":"em-desenvolvimento",label:weak?"Reforçar nos flashcards":"Em desenvolvimento nos flashcards"});
+    } else if(review.percentual<.7&&["forte","bom-sem-retencao"].includes(stat.status)){
+      Object.assign(stat,{status:"em-desenvolvimento",label:"Bom no treino; reforçar nos flashcards"});
+    }
+  }
+  function build({topicId, map, cards=[], questions, responses, assessments, resolveCard, topic=null}={}) {
+    const q=asMap(questions),r=asMap(responses),reviews=asMap(assessments),nodes=[],byPath=new Map(),byId=new Map(),parentByPath=new Map();
     const visit=(node,path,parent)=> {
-      const entry={path,parent,id:node?.id||null,title:text(node?.t||"Conceito"),node,children:[],direct:new Set(),all:new Set()};
+      const entry={path,parent,id:node?.id||null,title:text(node?.t||"Conceito"),node,children:[],direct:new Set(),all:new Set(),cardIndexes:new Set()};
       nodes.push(entry);byPath.set(path,entry);parentByPath.set(path,parent);
       if (entry.id) {
         if(!byId.has(entry.id))byId.set(entry.id,[]);
@@ -78,31 +101,45 @@
         connect(byId.get(question.mapaNoId)[0],question.id);
     }
     // Flashcards têm links exatos nó-pergunta, não links inferidos pelo texto.
-    for(const card of cards||[]) {
-      if (!card?.mapaNoId || byId.get(card.mapaNoId)?.length!==1)continue;
-      for(const id of card.questaoIds||[])connect(byId.get(card.mapaNoId)[0],id);
-    }
+    (cards||[]).forEach((card,index)=>{
+      const resolved=resolveCard?.(map,card);
+      const exact=card?.mapaNoId && byId.get(card.mapaNoId)?.length===1 ? byId.get(card.mapaNoId)[0] : null;
+      const entry=exact||(resolved?.status==="exact" ? byPath.get(resolved.path) : null);
+      if(!entry)return;
+      entry.cardIndexes.add(index);
+      for(const id of card.questaoIds||[])connect(entry,id);
+    });
     for(const entry of nodes.slice().reverse()){
       for(const id of entry.direct)entry.all.add(id);
-      for(const childPath of entry.children)
-        for(const id of byPath.get(childPath).all)entry.all.add(id);
+      for(const childPath of entry.children){
+        const child=byPath.get(childPath);
+        for(const id of child.all)entry.all.add(id);
+        for(const index of child.cardIndexes)entry.cardIndexes.add(index);
+      }
       entry.stat=stats([...entry.all],q,r);
+      entry.review=cardStats(entry.cardIndexes,topicId,reviews);
+      addCardEvidence(entry.stat,entry.review);
       entry.directStat=stats([...entry.direct],q,r);
     }
     const linked = new Set(nodes.flatMap(n=>[...n.direct]));
     // A estatística do edital engloba todas as questões de seus capítulos, mesmo sem vínculo semântico exato.
     const chapterIds=[...q.values()].filter(item=>eligible(item) && (topic?.caps||[]).includes(item.cap)).map(item=>item.id);
     const unlinked=chapterIds.filter(id=>!linked.has(id));
-    return {topicId,topic,title:map?.centro||topic?.titulo||topicId,nodes,
-      byPath,byId,linked,unlinked,chapterIds,edital:stats(chapterIds,q,r),
-      linkedStats:stats([...linked],q,r),questions:q,responses:r};
+    const title=map?.centro||topic?.titulo||topicId;
+    const rootCards=new Set(nodes.flatMap(node=>[...node.cardIndexes]));
+    const root={path:"root",title,children:nodes.filter(n=>n.parent==null).map(n=>n.path),all:linked,
+      cardIndexes:rootCards,review:cardStats(rootCards,topicId,reviews),stat:stats([...linked],q,r)};
+    addCardEvidence(root.stat,root.review);
+    byPath.set("root",root);
+    return {topicId,topic,title,nodes,root,cards,byPath,byId,linked,unlinked,chapterIds,edital:stats(chapterIds,q,r),
+      linkedStats:root.stat,questions:q,responses:r};
   }
   function percent(x){return x==null?"–":Math.round(x*100)+"%";}
   function badge(entry) {
     if(!entry) return "";
     const s=entry.stat||entry,attr=escapeHtml(s.label||"Não avaliado");
     return '<span class="qb-mastery-badge qb-mastery-'+escapeHtml(s.status)+
-      '" title="'+attr+'">'+escapeHtml(s.respondidas?percent(s.percentual)+" · "+s.respondidas+"/"+s.total+" respondidas":s.label)+
+      '" title="'+attr+'">'+escapeHtml(s.label+(s.respondidas?" · "+percent(s.percentual)+" · "+s.respondidas+"/"+s.total+" respondidas":""))+
       '</span>';
   }
   function detail(result,path,{limit=40}={}){
@@ -115,15 +152,19 @@
       return '<li><button type="button" class="lnk" data-qcard="'+esc(q.id)+'">'+esc(q.enunciado)+'</button><span class="qb-mastery-qstatus">'+esc(mark)+'</span></li>';
     }).join("");
     const remaining=qs.length-limit;
+    const review=entry.review;
+    const cards=review?.total?'<details class="qb-map-card-links"><summary>Flashcards vinculados · '+review.total+'</summary><p class="qb-mastery-caption">'+
+      (review.avaliados?review.lembrados+'/'+review.avaliados+' lembrados (Bom/Fácil) · '+review.dificeis+' difíceis · '+review.novamente+' novamente.':'Sem avaliações registradas.')+
+      '</p><ul>'+[...entry.cardIndexes].sort((a,b)=>a-b).map(i=>'<li><button type="button" class="lnk" data-map-card-index="'+i+'">'+esc(result.cards[i]?.q||"Cartão "+(i+1))+'</button></li>').join("")+'</ul></details>':"";
     const evidence=s.respondidas?percent(s.percentual)+" de acerto na última resposta":"Nenhuma resposta válida";
     return '<details class="qb-mastery-detail"><summary>Diagnóstico do '+esc(entry.children.length?"ramo":"conceito")+
       ' · '+esc(s.label)+' · '+esc(s.respondidas)+'/'+esc(s.total)+' respondidas</summary>'+
       '<div class="qb-mastery-inside"><p class="qb-mastery-metrics">'+esc(evidence)+
-      ' · '+esc(s.caderno)+' no caderno de erros · '+esc(s.retidasEntreAcertos)+' retenções confirmadas</p>'+
+      ' · '+s.acertos+' acertos · '+s.erros+' erros · '+s.brancos+' em branco · '+esc(s.caderno)+' no caderno de erros · '+esc(s.retidasEntreAcertos)+' retenções confirmadas</p>'+
       '<p class="qb-mastery-caption">Agrega apenas questões vinculadas exatamente a este nó ou a seus descendentes. O percentual não inclui questões sem resposta nem simulado fora do edital.</p>'+
       (rows?'<ol class="qb-mastery-questions">'+rows+'</ol>':'<p class="qb-mastery-caption">Ainda não há questões com vínculo exato a este ramo.</p>')+
       (qs.length?'<button type="button" class="btn small" data-mastery-practice="'+esc(path)+'">Treinar '+qs.length+' questões deste ramo</button>':"")+
-      (remaining>0?'<p>Mais '+remaining+' questões vinculadas no banco.</p>':"")+'</div></details>';
+      (remaining>0?'<p>Mais '+remaining+' questões vinculadas no banco.</p>':"")+cards+'</div></details>';
   }
   function overview(result){
     const roots=result.nodes.filter(n=>n.parent==null);
@@ -137,7 +178,7 @@
       (result.topic?.id?'<button class="btn ghost small" data-mastery-edital type="button">Ver assunto no edital</button>':"")+ 
       (result.unlinked.length?'<p class="qb-mastery-caption">'+result.unlinked.length+
       ' questões do edital ainda não têm vínculo semântico com um nó e não são atribuídas artificialmente aos ramos.</p>':"")+
-      '<p class="qb-mastery-caption">Forte exige 5+ questões respondidas, ≥85% de acerto, cobertura ≥80%, retenção em pelo menos 60% e nenhum item no caderno. Amostra pequena ou ausência de resposta não significam domínio nem deficiência.</p>'+
+      '<p class="qb-mastery-caption">Forte exige 5+ questões respondidas, ≥85% de acerto, cobertura ≥80%, retenção em pelo menos 60% e nenhum item no caderno. Com 3 ou mais flashcards avaliados, menos de 70% em Bom/Fácil pode sinalizar reforço ou limitar um diagnóstico de força. As duas métricas são exibidas separadamente.</p>'+
       '</section>';
   }
   const api={build,stats,badge,detail,overview,percent,escapeHtml};
