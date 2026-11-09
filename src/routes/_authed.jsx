@@ -7,7 +7,7 @@ import Layout from "@/components/qb/Layout";
 function ProtectedLayout() {
   const { pathname } = useLocation();
   const path = pathname.replace(/\/+$/, "") || "/";
-  if (path === "/" || path === "/estudar" || path === "/axon") return <Outlet />;
+  if (path === "/" || path === "/estudar") return <Outlet />;
   return <Layout><Outlet /></Layout>;
 }
 

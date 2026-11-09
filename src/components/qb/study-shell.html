@@ -416,16 +416,26 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/page-hero.css">
 <link rel="stylesheet" href="/claude-export/top-nav.css">
 <link rel="stylesheet" href="/claude-export/traps.css">
+<link rel="stylesheet" href="/claude-export/study-motion.css">
 
 <div class="wrap">
   <header class="top qb-app-header">
 <!-- QB_LEGACY_BEGIN -->    <div class="eyebrow qb-header-kicker">Câmara dos Deputados · Analista Legislativo ARR · Cebraspe</div><!-- QB_LEGACY_END -->
     <div class="head-row qb-header-row">
-      <div class="qb-header-brand"><span class="qb-header-brand-mark" aria-hidden="true">QB</span><h1>Quebrando a banca</h1></div>
+      <div class="qb-study-art" aria-hidden="true"><canvas data-study-motion></canvas></div>
+      <div class="qb-header-brand">
+        <span class="qb-header-brand-mark" aria-hidden="true">QB</span>
+        <div class="qb-study-brand-copy"><span class="qb-study-label">Ambiente de estudo</span><h1>Quebrando a Banca</h1>
+          <p>Treine questões, revise os erros e acompanhe sua evolução.</p>
+        </div>
+      </div>
       <div class="row qb-header-utilities" role="group" aria-label="Informações e controles do aplicativo">
         <span class="countdown qb-utility-countdown" id="countdown" aria-live="off"></span>
         <button class="theme-b qb-utility-action" id="theme-b" aria-label="Trocar tema">Tema</button>
         <a class="theme-b qb-utility-action qb-utility-lab" href="/questoes" target="_top" rel="noopener">Laboratório</a>
+        <button type="button" class="theme-b qb-utility-action qb-motion-toggle" data-motion-toggle hidden aria-label="Pausar animação">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 12h4l3-7 5 14 3-7h5"/></svg>
+        </button>
         <button type="button" class="theme-b qb-utility-action" id="qb-logout">Sair</button>
       </div>
     </div>

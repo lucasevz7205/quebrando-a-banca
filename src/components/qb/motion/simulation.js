@@ -8,8 +8,8 @@ import { fluidFragment, passVertex, pointFragment, pointVertex, positionFragment
 const value = initial => ({ value: initial });
 const clamp01 = n => Math.max(0, Math.min(1, n));
 
-function sphereTexture() {
-  const canvas = document.createElement("canvas");
+function sphereTexture(doc) {
+  const canvas = doc.createElement("canvas");
   canvas.width = canvas.height = 64;
   const ctx = canvas.getContext("2d");
   const gradient = ctx.createRadialGradient(24, 21, 3, 35, 36, 36);
@@ -22,12 +22,14 @@ function sphereTexture() {
   return new CanvasTexture(canvas);
 }
 
-export function startMotion(canvas) {
+export function startMotion(canvas, host) {
+  const doc = canvas.ownerDocument;
+  const view = doc.defaultView;
   const context = canvas.getContext("webgl2", { alpha: false, antialias: false, powerPreference: "high-performance" });
   if (!context?.getExtension("EXT_color_buffer_float")) return null;
   const renderer = new WebGLRenderer({ canvas, context, alpha: false, antialias: false });
-  const mobile = window.matchMedia("(max-width: 760px), (pointer: coarse)").matches;
-  const size = mobile ? 128 : 512;
+  const mobile = view.matchMedia("(max-width: 760px), (pointer: coarse)").matches;
+  const size = mobile ? 128 : 256;
   const sim = 256;
   const resources = [];
   const keep = resource => { resources.push(resource); return resource; };
@@ -36,7 +38,7 @@ export function startMotion(canvas) {
   camera.lookAt(0, 0, 0);
   const scene = new Scene();
   const sculpture = new Group();
-  sculpture.position.set(0.343, 0.16, -1);
+  sculpture.position.set(0, 0, -1);
   sculpture.rotation.set(-28.4 * Math.PI / 180, 390 * Math.PI / 180, 4.92 * Math.PI / 180);
   sculpture.scale.set(5, 5, 6);
   scene.add(sculpture);
@@ -75,7 +77,7 @@ export function startMotion(canvas) {
   geometry.setAttribute("random", new BufferAttribute(random, 4));
   const renderPoints = keep(new ShaderMaterial({
     vertexShader: pointVertex, fragmentShader: pointFragment,
-    uniforms: { field: value(origin), matcap: value(keep(sphereTexture())), clockTime: value(0), pixelRatio: value(1) },
+    uniforms: { field: value(origin), matcap: value(keep(sphereTexture(doc))), clockTime: value(0), pixelRatio: value(1) },
     transparent: true, blending: AdditiveBlending, depthTest: true, depthWrite: false,
   }));
   const points = new Points(geometry, renderPoints);
@@ -138,7 +140,7 @@ export function startMotion(canvas) {
   function resize() {
     width = Math.max(1, canvas.clientWidth);
     height = Math.max(1, canvas.clientHeight);
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const dpr = Math.min(view.devicePixelRatio || 1, mobile ? 1.25 : 1.5);
     renderer.setPixelRatio(dpr);
     renderer.setSize(width, height, false);
     camera.aspect = width / height;
@@ -149,8 +151,9 @@ export function startMotion(canvas) {
     clear(mask);
   }
   function move(event) {
-    const x = clamp01(event.clientX / width);
-    const y = 1 - clamp01(event.clientY / height);
+    const rect = canvas.getBoundingClientRect();
+    const x = clamp01((event.clientX - rect.left) / width);
+    const y = 1 - clamp01((event.clientY - rect.top) / height);
     if (event.type === "pointerdown" || !previousSplat) {
       previous.set(x, y);
     }
@@ -168,7 +171,7 @@ export function startMotion(canvas) {
         u.startPoint.value.copy(now - previousSplat > 50 ? pointer : previous);
         u.endPoint.value.copy(pointer);
         u.radius.value = Math.min(1, length / 5) * 60 * (mobile ? 0.8 : 0.6) / 200;
-        const force = Math.min(1, length / 15) * 10;
+        const force = Math.min(1, length / 15) * 14;
         u.impulse.value.set(dx * force, dy * force, 1);
         apply(0, wind);
         u.impulse.value.set(1, 1, 1);
@@ -204,8 +207,8 @@ export function startMotion(canvas) {
 
   function frame(now) {
     if (!running) return;
-    frameId = requestAnimationFrame(frame);
-    if (document.hidden) { lastFrame = 0; return; }
+    frameId = view.requestAnimationFrame(frame);
+    if (doc.hidden) { lastFrame = 0; return; }
     const dt = lastFrame ? Math.min((now - lastFrame) / 1000, 1 / 24) : 1 / 60;
     lastFrame = now;
     clock += dt;
@@ -231,22 +234,23 @@ export function startMotion(canvas) {
   function lost(event) {
     event.preventDefault();
     running = false;
-    cancelAnimationFrame(frameId);
+    view.cancelAnimationFrame(frameId);
     delete canvas.dataset.live;
   }
   resize();
-  window.addEventListener("resize", resize);
-  window.addEventListener("pointermove", move, { passive: true });
-  window.addEventListener("pointerdown", move, { passive: true });
+  const observer = new view.ResizeObserver(resize);
+  observer.observe(canvas);
+  host.addEventListener("pointermove", move, { passive: true });
+  host.addEventListener("pointerdown", move, { passive: true });
   canvas.addEventListener("webglcontextlost", lost);
-  frameId = requestAnimationFrame(frame);
+  frameId = view.requestAnimationFrame(frame);
   return () => {
     running = false;
-    cancelAnimationFrame(frameId);
+    view.cancelAnimationFrame(frameId);
     delete canvas.dataset.live;
-    window.removeEventListener("resize", resize);
-    window.removeEventListener("pointermove", move);
-    window.removeEventListener("pointerdown", move);
+    observer.disconnect();
+    host.removeEventListener("pointermove", move);
+    host.removeEventListener("pointerdown", move);
     canvas.removeEventListener("webglcontextlost", lost);
     resources.forEach(resource => resource.dispose());
     renderer.dispose();

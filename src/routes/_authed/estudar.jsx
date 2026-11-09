@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { createFileRoute, Link, redirect } from "@tanstack/react-router";
+import { observeStudyMotion } from "@/components/qb/motion/study-motion";
 import StudyOnboarding from "@/components/qb/StudyOnboarding";
 import { base44 } from "@/api/base44Client";
 import { useAuth } from "@/lib/AuthContext";
@@ -109,6 +110,11 @@ function StudyScreen({ account }) {
     setReady(true);
     return () => window.removeEventListener("message", receive);
   }, [user?.id, legacy, preview, accountId, account?.name, account?.date, logout]);
+
+  useEffect(() => {
+    if (!ready || preview || !frameRef.current) return;
+    return observeStudyMotion(frameRef.current);
+  }, [ready, preview, accountId, frameVersion]);
 
   if (!legacy && !accountId) {
     return <StudyOnboarding key={user?.id} pending={account?.pending} logout={logout} />;
