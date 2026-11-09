@@ -461,11 +461,11 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/learning.js"></script>
 <script src="/claude-export/question-links.js"></script>
 <script src="/claude-export/map-origin.js"></script>
-<script src="/claude-export/map-mastery.js"></script>
+<script src="/claude-export/map-mastery.js?v=2"></script>
 <link rel="stylesheet" href="/claude-export/learning.css">
 <link rel="stylesheet" href="/claude-export/study-palette.css">
-<link rel="stylesheet" href="/claude-export/map-3d.css">
-<link rel="stylesheet" href="/claude-export/map-mastery.css">
+<link rel="stylesheet" href="/claude-export/map-3d.css?v=2">
+<link rel="stylesheet" href="/claude-export/map-mastery.css?v=2">
 <script>
 (function(){
 const S = {
@@ -1778,6 +1778,7 @@ function viewRevisao(){
   </div>`;
 }
 /* mapa mental no estilo do modelo do Lucas (End-to-End): centro, ramos coloridos, rótulos curtos com etiqueta, tabela, caixa e ligações cruzadas */
+let drawMapDetail;
 function mapa3D(m,t,lig,diagnostico){
   const list=[];
   const visit=(n,path,parent,branch)=>{
@@ -1788,7 +1789,7 @@ function mapa3D(m,t,lig,diagnostico){
   const roots=m.ramos||[];
   if(!roots.length)return '';
   roots.forEach((n,i)=>visit(n,String(i),'root',i));
-  const data=esc(JSON.stringify({topic:S.mapaId,title:m.centro||t.titulo||'Mapa mental',nodes:list,links:lig.map(l=>l.slice(0,2))}));
+  const data=esc(JSON.stringify({topic:S.mapaId,title:m.centro||t.titulo||'Mapa mental',nodes:list,rootStatus:diagnostico?.root.stat.status,links:lig.map(l=>l.slice(0,2))}));
   return `<section class="qb-map3" data-map3 data-graph="${data}" hidden aria-label="Visualização do mapa mental">
     <div class="qb-map3-choices" role="group" aria-label="Formato do mapa">
       <button type="button" data-map-mode="list" aria-pressed="true">Em lista</button>
@@ -1805,9 +1806,11 @@ function mapa3D(m,t,lig,diagnostico){
       </div></div>
       <div class="qb-map3-stage" data-map-stage><div class="qb-map3-labels" data-map-labels></div></div>
       <div class="qb-map3-footer"><label>Conceito<select data-map-select aria-label="Selecionar conceito no mapa 3D"></select></label>
-        <button type="button" class="btn small" data-map-open disabled>Abrir detalhes na lista</button>
+        <button type="button" class="btn small" data-map-open>Focar conceito</button>
       </div>
-      <p class="qb-map3-legend"><span>● Conceito</span><span>─ Ramo</span><span>┄ Ligação cruzada</span></p>
+      <nav class="qb-map3-path" data-map-path aria-label="Caminho do conceito"></nav>
+      <div class="qb-map3-detail" data-map-detail></div>
+      <p class="qb-map3-legend"><span class="qb-mastery-forte">● Forte</span><span class="qb-mastery-em-desenvolvimento">● Em desenvolvimento</span><span class="qb-mastery-deficiente">● Reforçar</span><span class="qb-mastery-bom-sem-retencao">● Bom acerto</span><span class="qb-mastery-amostra-insuficiente">● Amostra pequena</span><span class="qb-mastery-sem-evidencia">● Não avaliado</span><span>┄ Ligação cruzada</span></p>
     </div>
   </section>`;
 }
@@ -1820,23 +1823,33 @@ function viewMapa(){
   const t=S.ed.get(S.mapaId)||{}, m=revMapa.mapa, ab=S.mapaAb||new Set(['*']), tudo=ab.has('*');
   const nomes={}; const walk=(n)=>{if(n.id)nomes[n.id]=n.t;(n.f||[]).forEach(walk)}; (m.ramos||[]).forEach(walk);
   const lig=m.ligacoes||[];
-  const diagnostico=window.QBMapMastery?.build({topicId:S.mapaId,map:m,cards:revMapa.cartoes||[],questions:S.q,responses:S.r,topic:t});
-  const no=(n,cor,path)=>{
+  const diagnostico=window.QBMapMastery?.build({topicId:S.mapaId,map:m,cards:revMapa.cartoes||[],questions:S.q,responses:S.r,assessments:S.cav,resolveCard:window.QBMapLinks?.resolve,topic:t});
+  const no=(n,cor,path,single=false)=>{
     const k=path, kids=n.f||[], aberto=tudo||ab.has(k), key='mp:'+S.mapaId+':'+k, oc=S.evocar&&n.n&&!S.revelados.has(key);
     const out=lig.filter(l=>l[0]===n.id).map(l=>`<button class="m-link" data-mir="${esc(l[1])}" title="${esc(l[2]||'')}">↗ ${esc(nomes[l[1]]||l[1])}</button>`).join('');
     const inn=lig.filter(l=>l[1]===n.id).map(l=>`<button class="m-link" data-mir="${esc(l[0])}" title="${esc(l[2]||'')}">↙ ${esc(nomes[l[0]]||l[0])}</button>`).join('');
     const tab=n.tabela?`<table class="m-tab">${n.tabela.map(([c,vs])=>`<tr><th>${esc(c)}</th><td>${vs.map(v=>`<div>${esc(v)}</div>`).join('')}</td></tr>`).join('')}</table>`:'';
-    const nota=n.n?(oc?`<button class="m-nota ev" data-revelar="${esc(key)}">evocar</button>`:`<span class="m-nota">${esc(n.n)}</span>`):'';
-    const tog=kids.length?`<button class="m-tog" data-mtog="${esc(k)}" aria-expanded="${aberto}">${aberto?'−':'+'}${aberto?'':' '+kids.length}</button>`:'';
-    const xk='mx:'+S.mapaId+':'+k, xa=n.x&&(S.mapaX||new Set()).has(xk);
-    const lab=n.x?`<button class="m-t m-tx" data-mx="${esc(xk)}" aria-expanded="${!!xa}">${esc(n.t)} <span class="m-i">${xa?'▾':'ⓘ'}</span></button>`:`<span class="m-t">${esc(n.t)}</span>`;
+    const nota=n.n?(oc&&single?`<details class="qb-map-recall"><summary>Evocar antes de ler a nota</summary><p>${esc(n.n)}</p></details>`:oc?`<button class="m-nota ev" data-revelar="${esc(key)}">evocar</button>`:`<span class="m-nota">${esc(n.n)}</span>`):'';
+    const tog=!single&&kids.length?`<button class="m-tog" data-mtog="${esc(k)}" aria-expanded="${aberto}">${aberto?'−':'+'}${aberto?'':' '+kids.length}</button>`:'';
+    const xk='mx:'+S.mapaId+':'+k, xa=n.x&&(single||(S.mapaX||new Set()).has(xk));
+    const lab=n.x&&!single?`<button class="m-t m-tx" data-mx="${esc(xk)}" aria-expanded="${!!xa}">${esc(n.t)} <span class="m-i">${xa?'▾':'ⓘ'}</span></button>`:`<span class="m-t">${esc(n.t)}</span>`;
     const selo=diagnostico?window.QBMapMastery.badge(diagnostico.byPath.get(k)):'';
     const diagnosticoDoNo=diagnostico?window.QBMapMastery.detail(diagnostico,k,{limit:35}):'';
     /* Questões com associação editorial direta ao nó; só exibimos gabarito após revelar o item. */
     const ligadasAoNo=(n.x?.questaoIds||[]).map(id=>S.q.get(id)).filter(Boolean);
     const exemplos=ligadasAoNo.length?`<details class="qb-map-questions"><summary>Questões deste conceito · ${ligadasAoNo.length}</summary>${ligadasAoNo.map(q=>`<details class="qb-qsource-item"><summary>${esc(q.enunciado)}</summary><div><p><b>Gabarito: ${q.gabarito==='C'?'Certo':'Errado'}</b></p><p>${esc(q.comentario||'Comentário indisponível.')}</p><small>${esc(q.ref||'Fonte não cadastrada')}</small>${atalhosQuestao(q,indice)}</div></details>`).join('')}</details>`:'';
     const det=xa?`<div class="m-det"><p>${esc(n.x.e||'')}</p>${n.x.ex?`<p><b>Exemplo:</b> ${esc(n.x.ex)}</p>`:''}${n.x.trap?`<p class="m-trap"><b>Pegadinha:</b> ${esc(n.x.trap)}</p>`:''}${n.x.src?`<span class="ps">${esc(n.x.src)}</span>`:''}${exemplos}</div>`:'';
-    return `<li class="m-no${n.caixa?' m-caixa':''}" data-map-node="${esc(S.mapaId+':'+k)}" ${n.id?`id="mn-${esc(n.id)}"`:''}><div class="m-l">${lab}${tog}${out}${inn}${selo}</div>${nota}${det}${diagnosticoDoNo}${tab}${kids.length&&aberto?`<ul>${kids.map((c,i)=>no(c,cor,k+'.'+i)).join('')}</ul>`:''}</li>`;
+    return `<li class="m-no${n.caixa?' m-caixa':''}" data-map-node="${esc(S.mapaId+':'+k)}" ${n.id&&!single?`id="mn-${esc(n.id)}"`:''}><div class="m-l">${lab}${tog}${out}${inn}${selo}</div>${nota}${det}${diagnosticoDoNo}${tab}${!single&&kids.length&&aberto?`<ul>${kids.map((c,i)=>no(c,cor,k+'.'+i)).join('')}</ul>`:''}</li>`;
+  };
+  drawMapDetail=path=>{
+    if(path==='root')return `<h3>${esc(m.centro||t.titulo||'Mapa mental')}</h3>
+      ${diagnostico?window.QBMapMastery.badge(diagnostico.root):''}
+      ${diagnostico?window.QBMapMastery.detail(diagnostico,'root'):''}
+      ${t.id?'<button type="button" class="btn ghost small" data-mastery-edital>Ver assunto no edital</button>':''}`;
+    const indexes=path.split('.').map(Number),root=m.ramos?.[indexes[0]];
+    const n=indexes.slice(1).reduce((parent,index)=>parent?.f?.[index],root);
+    if(!n)return '';
+    return '<ul class="m-raiz">'+no(n,'',path,true)+'</ul>';
   };
   const ramos=(m.ramos||[]).map((r,i)=>{const cor=`var(--qb-map-${((r.cor||i+1)-1)%8+1})`;return `<section class="m-ramo" style="--mc:${cor}"><span class="qb-map-branch" aria-hidden="true">RAMO ${String(i+1).padStart(2,'0')}</span><ul class="m-raiz">${no(r,cor,String(i))}</ul></section>`}).join('');
   return `<div class="wrap" style="gap:14px;max-width:1100px">
@@ -2215,6 +2228,38 @@ function viewMetodo(){
 }
 
 /* ---------- ações ---------- */
+function abrirCartaoQuestao(id){
+  const info=recursosQuestao(id);
+  if(!info)return;
+  S.cartQuestionFocus=id;S.cartId=info.topicId;S.cartPend=false;S.cmix=null;
+  setView('cartoes');
+  setTimeout(()=>document.getElementById('qbq-'+id)?.scrollIntoView({block:'center'}),60);
+}
+function abrirCartaoDoMapa(index){
+  const topic=S.mapaId,card=S.rv.get(topic)?.cartoes?.[index];
+  if(!card)return;
+  const key=topic+'@'+index;
+  S.mapaBack={k:key,cartId:topic};S.cartId=topic;S.cartPend=false;S.cmix=null;S.cartQuestionFocus=null;
+  S.cartFech?.delete(topic+'#'+(card.tema||'Geral'));
+  setView('cartoes');
+  setTimeout(()=>document.getElementById('qbflash-'+key)?.scrollIntoView({block:'center'}),60);
+}
+function abrirEditalDoMapa(){
+  const t=S.ed.get(S.mapaId);
+  if(!t)return;
+  S.abertos.add(t.sigla);S.fSt='';S.fMat=t.sigla;
+  setView('edital');
+  requestAnimationFrame(()=>document.getElementById('tp-'+t.id)?.scrollIntoView({block:'center'}));
+}
+function treinarNoMapa(path){
+  const rv=S.rv.get(S.mapaId),t=S.ed.get(S.mapaId);
+  if(!rv?.mapa||!window.QBMapMastery)return;
+  const diagnostico=window.QBMapMastery.build({topicId:S.mapaId,map:rv.mapa,cards:rv.cartoes||[],questions:S.q,responses:S.r,topic:t});
+  const ramo=diagnostico.byPath.get(path);
+  const fila=[...(ramo?.all||[])].filter(id=>S.q.has(id)&&!foraQ(S.q.get(id)));
+  if(!fila.length){toast('Este ramo ainda não possui questões de treino vinculadas.');return;}
+  setView('treinar');novaRodada('MIX','Reforço · '+ramo.title,'aprendizagem',fila);
+}
 function wire(){
   if(window.QBLearning)window.QBLearning.wire(S,{render,hoje,setView,startSource:(ids,title)=>{setView('treinar');novaRodada('MIX',title,'aprendizagem',ids)}});
   if(S.view==='analiseDia' && window.QBInsights) window.QBInsights.wire(S,render,hoje);
@@ -2250,13 +2295,25 @@ function wire(){
   document.querySelectorAll('details[data-grupo]').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.abertos.add(d.dataset.grupo);else S.abertos.delete(d.dataset.grupo)}));
   document.querySelectorAll('[data-status]').forEach(s=>s.addEventListener('change',()=>salvarStatus(s.dataset.status,s.value)));
   document.querySelectorAll('[data-ir-mapa]').forEach(b=>b.addEventListener('click',()=>{S.mapaId=b.dataset.irMapa;S.mapaAb=null;S.revelados.clear();setView('mapa');window.scrollTo({top:0})}));
-  document.querySelectorAll('[data-qcard]').forEach(b=>b.addEventListener('click',()=>{
-    const id=b.dataset.qcard,info=recursosQuestao(id);
-    if(!info)return;
-    S.cartQuestionFocus=id;S.cartId=info.topicId;S.cartPend=false;S.cmix=null;
-    setView('cartoes');
-    setTimeout(()=>document.getElementById('qbq-'+id)?.scrollIntoView({block:'center',behavior:'smooth'}),60);
-  }));
+  document.querySelectorAll('[data-qcard]').forEach(b=>b.addEventListener('click',()=>abrirCartaoQuestao(b.dataset.qcard)));
+  document.querySelectorAll('[data-map-card-index]').forEach(b=>b.addEventListener('click',()=>abrirCartaoDoMapa(Number(b.dataset.mapCardIndex))));
+  const map3=$('[data-map3]'), mapDetail=map3?.querySelector('[data-map-detail]');
+  if(mapDetail){
+    map3.addEventListener('qb-map-render-node',event=>{
+      if(S.view==='mapa'&&event.detail?.topic===S.mapaId){
+        mapDetail.innerHTML=drawMapDetail?.(event.detail.path)||'';
+      }
+    });
+    mapDetail.addEventListener('click',event=>{
+      const b=event.target.closest('button');
+      if(!b)return;
+      if(b.hasAttribute('data-qcard'))abrirCartaoQuestao(b.dataset.qcard);
+      else if(b.hasAttribute('data-map-card-index'))abrirCartaoDoMapa(Number(b.dataset.mapCardIndex));
+      else if(b.hasAttribute('data-mastery-practice'))treinarNoMapa(b.dataset.masteryPractice);
+      else if(b.hasAttribute('data-mastery-edital'))abrirEditalDoMapa();
+      else if(b.dataset.irMapa){S.mapaId=b.dataset.irMapa;S.mapaAb=null;S.revelados.clear();setView('mapa');}
+    });
+  }
   document.querySelectorAll('[data-mx]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.mx;S.mapaX=S.mapaX||new Set();if(S.mapaX.has(k))S.mapaX.delete(k);else S.mapaX.add(k);render(true)}));
   document.querySelectorAll('[data-mtog]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.mtog;S.mapaAb=S.mapaAb||new Set();if(S.mapaAb.has(k))S.mapaAb.delete(k);else S.mapaAb.add(k);render(true)}));
   document.querySelectorAll('[data-mtodos]').forEach(b=>b.addEventListener('click',()=>{S.mapaAb=b.dataset.mtodos==='1'?new Set(['*']):new Set();render(true)}));
@@ -2267,7 +2324,7 @@ function wire(){
   document.querySelectorAll('[data-cf]').forEach(b=>b.addEventListener('click',()=>{S.cartFech=new Set();if(b.dataset.cf==='0'){const rv=S.rv.get(S.cartId);for(const c of (rv&&rv.cartoes)||[])S.cartFech.add(S.cartId+'#'+(c.tema||'Geral'))}render(true)}));
   const cr=$('#cart-reset'); if(cr) cr.addEventListener('click',()=>{const qs=indiceQuestoes().byTopic.get(S.cartId)||[],keys=new Set(qs.map(q=>chaveQuestao(q.id)));for(const k of [...S.cartAbertos]) if(k.startsWith(S.cartId+'@')||keys.has(k)){S.cartAbertos.delete(k);S.cartRated.delete(k);S.cartResp.delete(k);S.ia.delete(k)}render(true)});
   const mt=$('#mapa-top'); if(mt) mt.addEventListener('change',()=>{S.mapaId=mt.value;S.mapaAb=null;S.revelados.clear();render(true)});
-  document.querySelectorAll('[data-mastery-edital]').forEach(b=>b.addEventListener('click',()=>{const t=S.ed.get(S.mapaId);if(!t)return;S.abertos.add(t.sigla);S.fSt='';setView('edital');requestAnimationFrame(()=>document.getElementById('tp-'+t.id)?.scrollIntoView({block:'center',behavior:'smooth'}));}));
+  document.querySelectorAll('[data-mastery-edital]').forEach(b=>b.addEventListener('click',abrirEditalDoMapa));
   /* O detalhamento do edital está exclusivamente na aba Edital. */
   const ra=$('#rv-abrir'); if(ra) ra.addEventListener('click',()=>{for(const t of S.ed.values()){if(S.rv.has(t.id)||S.pt.has(t.id)){S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+t.id)}}render(true)});
   const rf=$('#rv-fechar'); if(rf) rf.addEventListener('click',()=>{for(const k of [...S.abertos]) if(k.startsWith('rv:')||k.startsWith('rvt:')) S.abertos.delete(k); S.fMat=''; render(true)});
@@ -2349,14 +2406,7 @@ function wire(){
   const pa=$('#pg-abrir'); if(pa) pa.addEventListener('click',()=>{for(const p of S.pg.values()){const t=S.ed.get(p.topico);if(t)S.abertos.add('pg:'+t.sigla);S.abertos.add('pgt:'+p.topico)}render(true)});
   const pf=$('#pg-fechar'); if(pf) pf.addEventListener('click',()=>{for(const k of [...S.abertos]) if(k.startsWith('pg:')||k.startsWith('pgt:')) S.abertos.delete(k); S.fPgMat=''; render(true)});
   document.querySelectorAll('[data-treinar]').forEach(b=>b.addEventListener('click',()=>{S.cap=b.dataset.treinar;S.capEscolhido=true;S.modo='novos';{const t=topicoDoCap(S.cap);if(t)S.abertos.add('tr:'+t.sigla);}S.round=null;setView('treinar');window.scrollTo({top:0})}));
-  document.querySelectorAll('[data-mastery-practice]').forEach(b=>b.addEventListener('click',()=>{
-    const rv=S.rv.get(S.mapaId),t=S.ed.get(S.mapaId);if(!rv?.mapa||!window.QBMapMastery)return;
-    const diagnostico=window.QBMapMastery.build({topicId:S.mapaId,map:rv.mapa,cards:rv.cartoes||[],questions:S.q,responses:S.r,topic:t});
-    const ramo=diagnostico.byPath.get(b.dataset.masteryPractice);
-    const fila=[...(ramo?.all||[])].filter(id=>S.q.has(id)&&!foraQ(S.q.get(id)));
-    if(!fila.length){toast('Este ramo ainda não possui questões de treino vinculadas.');return;}
-    setView('treinar');novaRodada('MIX','Reforço · '+ramo.title,'aprendizagem',fila);
-  }));
+  document.querySelectorAll('[data-mastery-practice]').forEach(b=>b.addEventListener('click',()=>treinarNoMapa(b.dataset.masteryPractice)));
   const conf1=document.querySelector('[data-conf="1"]'); if(conf1&&S.round&&S.round.pend&&S.round.pend.focus){ S.round.pend.focus=false; conf1.focus({preventScroll:true}); }
 }
 function novaRodada(cap,capNome,modo,fila){
@@ -2700,24 +2750,6 @@ function wireSim(){
 }
 
 function init(){
-  document.addEventListener('qb-map-open-node',event=>{
-    const path=event.detail?.path;
-    if(S.view!=='mapa'||event.detail?.topic!==S.mapaId||typeof path!=='string'||!/^\d+(?:\.\d+)*$/.test(path)) return;
-    S.mapaAb=S.mapaAb||new Set(['*']);
-    const parts=path.split('.');
-    for(let i=1;i<parts.length;i++)S.mapaAb.add(parts.slice(0,i).join('.'));
-    S.mapaX=S.mapaX||new Set();
-    S.mapaX.add('mx:'+S.mapaId+':'+path);
-    render(true);
-    const node=document.querySelector('[data-map-node="'+CSS.escape(S.mapaId+':'+path)+'"]');
-    if(!node)return;
-    node.scrollIntoView({block:'center'});
-    const focus=node.querySelector(':scope > .m-l > button')||node;
-    if(focus===node)node.tabIndex=-1;
-    focus.focus({preventScroll:true});
-    node.classList.add('m-foco');
-    setTimeout(()=>node.classList.remove('m-foco'),2500);
-  });
   $('#qb-logout').addEventListener('click',()=>{window.QBBridge.ask('logout').catch(()=>{});});
   let v='painel'; try{ const h=(location.hash||'').slice(1); if(VIEWS.includes(h)) v=h==='revisao'?'edital':h; }catch(e){}
   window.QBBridge.ask('account').then(account=>{
