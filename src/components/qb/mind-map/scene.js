@@ -87,21 +87,78 @@ export function startMapScene(panel, graph, onSelect, onLost) {
   scene.add(focus);
 
   const point = new Vector3();
-  const tagList = coords.flatMap((node,i) => {
+  const visibleSlots = [];
+  let visiblePaths = branches.visiblePaths();
+  const tagList = coords.map((node,i) => {
+    const wrapper=doc.createElement("span");
+    wrapper.className="qb-map3-node-actions";
     const tag = doc.createElement("button");
     tag.type = "button";
     tag.textContent = node.title;
     const sample=node.respondidas ? " · Questões: " + Math.round(node.percentual*100) + "%, " + node.respondidas + "/" + node.questoes + " respondidas" : " · Questões: sem respostas válidas";
     const cards=node.flashcardsAvaliados ? " · Flashcards: " + node.flashcardsLembrados + "/" + node.flashcardsAvaliados + " lembrados" : node.flashcards ? " · Flashcards: nenhum avaliado" : "";
-    tag.title=node.title + (node.statusLabel ? " · " + node.statusLabel + sample + cards : "");
+    tag.title=node.title + (node.statusLabel ? " · " + node.statusLabel + sample + cards : "") + " · Um clique seleciona; dois cliques abrem o conceito";
     tag.style.setProperty("--qb-node-dot",colorFor(node));
     tag.className = node.depth ? "qb-map3-tag" : "qb-map3-tag qb-map3-origin";
     tag.setAttribute("aria-pressed", "false");
-    tag.addEventListener("click", () => onSelect(node.path));
-    labels.append(tag);
-    return [{ tag, i }];
+    tag.addEventListener("click", event => onSelect(node.path,true,event.detail>=2));
+    wrapper.append(tag);
+    let toggle=null;
+    if(branches.hasChildren(node.path)){
+      toggle=doc.createElement("button");
+      toggle.type="button";
+      toggle.className="qb-map3-branch-toggle";
+      toggle.dataset.mapToggleNode=node.path;
+      toggle.title="Abrir ou fechar os subramos de " + node.title;
+      toggle.setAttribute("aria-label","Abrir ou fechar ramificações de " + node.title);
+      toggle.addEventListener("click",event=>{
+        event.stopPropagation();
+        toggleBranch(node.path);
+        onSelect(node.path,false,false);
+      });
+      wrapper.append(toggle);
+    }
+    labels.append(wrapper);
+    return {wrapper,tag,toggle,i};
   });
   let width = 0, height = 0, distance = 0, selected = "root", animation = 0;
+  function syncVisibility(){
+    visiblePaths=branches.visiblePaths();
+    visibleSlots.length=0;
+    let slot=0;
+    for(let i=0;i<coords.length;i++){
+      const node=coords[i];
+      if(!visiblePaths.has(node.path))continue;
+      const scale=node.depth===0?.54:node.depth===1?.37:.22;
+      spheres.setMatrixAt(slot,new Matrix4().makeScale(scale,scale,scale).setPosition(world[i]));
+      spheres.setColorAt(slot,new Color(colorFor(node)));
+      visibleSlots.push(i);
+      slot++;
+    }
+    spheres.count=slot;
+    spheres.instanceMatrix.needsUpdate=true;
+    if(spheres.instanceColor)spheres.instanceColor.needsUpdate=true;
+    hierarchy.geometry.dispose();
+    hierarchy.geometry=lineGeometry(hierarchyPairs.filter(([parent,child])=>visiblePaths.has(parent)&&visiblePaths.has(child)));
+    cross.geometry.dispose();
+    cross.geometry=lineGeometry(crossPairs.filter(([from,to])=>visiblePaths.has(from)&&visiblePaths.has(to)),true);
+    cross.computeLineDistances();
+    render();
+  }
+  function toggleBranch(path){
+    if(!branches.toggle(path))return branches.summary();
+    syncVisibility();
+    return branches.summary();
+  }
+  function setBranchMode(action,path="root"){
+    if(action==="all")branches.openAll();
+    else if(action==="minimal")branches.collapseAll();
+    else if(action==="open")branches.open(path);
+    else if(action==="close")branches.close(path);
+    else if(action==="toggle")branches.toggle(path);
+    syncVisibility();
+    return branches.summary();
+  }
   const motion=view.matchMedia("(prefers-reduced-motion: reduce)");
   const targetStart=new Vector3(),cameraStart=new Vector3(),targetEnd=new Vector3(),cameraEnd=new Vector3();
   function cancelZoom(){view.cancelAnimationFrame(animation);animation=0;}
