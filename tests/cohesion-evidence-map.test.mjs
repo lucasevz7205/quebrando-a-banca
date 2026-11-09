@@ -40,12 +40,12 @@ test("67 questões e 39 cartões de Coesão ligados de modo exato por caminho",(
  for(const path of f.w.QBEditorialCohesion.questionPaths) assert.ok(f.summary.byPath.has(path),path);
  for(const path of f.w.QBEditorialCohesion.cardPaths) assert.ok(f.summary.byPath.has(path),path);
 });
-test("50 respostas reais do arquivo histórico: nenhuma previsão nem cor arbitrária",()=>{
+test("arquivo histórico é calculado sem confundir snapshot com banco atual",()=>{
  const f=fixture();
  const s=f.summary.root.stat, cards=f.summary.root.review;
  assert.equal(s.respondidas,50);
- assert.equal(s.acertos,50);
- assert.equal(s.percentual,1);
+ assert.equal(s.acertos,48);
+ assert.equal(s.percentual,48/50);
  assert.equal(s.total-s.respondidas,17);
  assert.equal(cards.avaliados,22);
  assert.equal(cards.lembrados,15);
