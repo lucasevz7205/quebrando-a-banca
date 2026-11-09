@@ -462,6 +462,7 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/question-links.js"></script>
 <script src="/claude-export/map-origin.js"></script>
 <link rel="stylesheet" href="/claude-export/learning.css">
+<link rel="stylesheet" href="/claude-export/study-palette.css">
 <script>
 (function(){
 const S = {
@@ -1716,7 +1717,7 @@ function viewCartoes(){
     const vis=cs.filter(([c,i])=>{if(!S.cartPend)return true;const k=S.cartId+'@'+i;return cartVence(k)||novosOk.has(k)||S.cartRated.has(k)});
     if(!vis.length) return '';
     const fk=S.cartId+'#'+g, fe=(S.cartFech||new Set()).has(fk);
-    return `<section class="m-ramo" style="--mc:var(--s${(gi-1)%8+1})"><button class="m-l m-tx" data-cfech="${esc(fk)}" aria-expanded="${!fe}" style="margin-bottom:6px;width:100%"><span class="m-t" style="font-size:16px;font-weight:800">${fe?'▸':'▾'} ${esc(g)}</span><span class="ps">${vis.length}</span></button>${fe?'':vis.map(([c,i])=>{const k=S.cartId+'@'+i,ab=S.cartAbertos.has(k);
+    return `<section class="m-ramo" style="--mc:var(--qb-map-${(gi-1)%8+1})"><button class="m-l m-tx" data-cfech="${esc(fk)}" aria-expanded="${!fe}" style="margin-bottom:6px;width:100%"><span class="m-t" style="font-size:16px;font-weight:800">${fe?'▸':'▾'} ${esc(g)}</span><span class="ps">${vis.length}</span></button>${fe?'':vis.map(([c,i])=>{const k=S.cartId+'@'+i,ab=S.cartAbertos.has(k);
       return `<article class="card-r ck qb-flashcard" data-revealed="${ab}" id="qbflash-${esc(k)}">${flashState(ab)}<p class="cq">${esc(c.q)}</p>${ab?flashAnswer(c):''}${cartAval(k,ab)}</article>`}).join('')}</section>`}).join('');
   /* fim dos ramos de cartões */
   const tot=(rv.cartoes||[]).length;
@@ -1798,7 +1799,7 @@ function viewMapa(){
     const det=xa?`<div class="m-det"><p>${esc(n.x.e||'')}</p>${n.x.ex?`<p><b>Exemplo:</b> ${esc(n.x.ex)}</p>`:''}${n.x.trap?`<p class="m-trap"><b>Pegadinha:</b> ${esc(n.x.trap)}</p>`:''}${n.x.src?`<span class="ps">${esc(n.x.src)}</span>`:''}${exemplos}</div>`:'';
     return `<li class="m-no${n.caixa?' m-caixa':''}" data-map-node="${esc(S.mapaId+':'+k)}" ${n.id?`id="mn-${esc(n.id)}"`:''}><div class="m-l">${lab}${tog}${out}${inn}</div>${nota}${det}${tab}${kids.length&&aberto?`<ul>${kids.map((c,i)=>no(c,cor,k+'.'+i)).join('')}</ul>`:''}</li>`;
   };
-  const ramos=(m.ramos||[]).map((r,i)=>{const cor=`var(--s${((r.cor||i+1)-1)%8+1})`;return `<section class="m-ramo" style="--mc:${cor}"><span class="qb-map-branch" aria-hidden="true">RAMO ${String(i+1).padStart(2,'0')}</span><ul class="m-raiz">${no(r,cor,String(i))}</ul></section>`}).join('');
+  const ramos=(m.ramos||[]).map((r,i)=>{const cor=`var(--qb-map-${((r.cor||i+1)-1)%8+1})`;return `<section class="m-ramo" style="--mc:${cor}"><span class="qb-map-branch" aria-hidden="true">RAMO ${String(i+1).padStart(2,'0')}</span><ul class="m-raiz">${no(r,cor,String(i))}</ul></section>`}).join('');
   return `<div class="wrap" style="gap:14px;max-width:1100px">
     <div class="filters"><select id="mapa-top" aria-label="Tópico">${ids.map(id=>`<option value="${esc(id)}" ${id===S.mapaId?'selected':''}>${esc(lblT(S.ed.get(id))||id)} · ${esc((S.ed.get(id)||{}).titulo||'')}</option>`).join('')}</select>
       <label class="check"><input type="checkbox" id="evocar" ${S.evocar?'checked':''}> Evocar antes de ler</label>
