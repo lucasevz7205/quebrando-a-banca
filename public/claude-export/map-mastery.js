@@ -122,6 +122,7 @@
       ' · '+esc(s.caderno)+' no caderno de erros · '+esc(s.retidasEntreAcertos)+' retenções confirmadas</p>'+
       '<p class="qb-mastery-caption">Agrega apenas questões vinculadas exatamente a este nó ou a seus descendentes. O percentual não inclui questões sem resposta nem simulado fora do edital.</p>'+
       (rows?'<ol class="qb-mastery-questions">'+rows+'</ol>':'<p class="qb-mastery-caption">Ainda não há questões com vínculo exato a este ramo.</p>')+
+      (qs.length?'<button type="button" class="btn small" data-mastery-practice="'+esc(path)+'">Treinar '+qs.length+' questões deste ramo</button>':"")+
       (remaining>0?'<p>Mais '+remaining+' questões vinculadas no banco.</p>':"")+'</div></details>';
   }
   function overview(result){
