@@ -417,6 +417,7 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/top-nav.css">
 <link rel="stylesheet" href="/claude-export/traps.css">
 <link rel="stylesheet" href="/claude-export/study-motion.css">
+<link rel="stylesheet" href="/claude-export/study-detail.css">
 
 <div class="wrap">
   <header class="top qb-app-header">
@@ -1567,6 +1568,12 @@ function filaMix(){
   return out;
 }
 function iniciarMix(){const f=filaMix(); if(!f.length){toast('Nenhum cartão para hoje.');return} S.cmix={fila:f,idx:0,tot:f.length,feitos:0}; for(const k of f){S.cartAbertos.delete(k);S.cartRated.delete(k)} setView('cartoes'); window.scrollTo({top:0});}
+function flashState(revealed){
+  return '<span class="qb-flash-state">'+(revealed?'Resposta revelada':'Evocação ativa')+'</span>';
+}
+function flashAnswer(c){
+  return `<div class="qb-flash-answer"><b>Resposta de referência</b><ul class="exl">${(c.a||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${c.src?`<span class="ps">${esc(c.src)}</span>`:''}</div>`;
+}
 function viewCmix(){
   const m=S.cmix;
   if(m.idx>=m.fila.length) return `<div class="wrap" style="gap:14px"><div class="due calm"><div class="due-body"><h2 class="section-title">Sessão intercalada concluída</h2><div class="due-n"><span class="mono">${m.feitos}</span> avaliações</div><div class="due-meta">Cada cartão já tem a próxima data. Os marcados como Novamente voltaram no fim da sessão e voltam amanhã.</div></div><button class="btn" data-cmix-sair="1">Fechar</button></div></div>`;
@@ -1575,11 +1582,12 @@ function viewCmix(){
     t=S.ed.get(info?.topicId||id)||indiceQuestoes().virtualTopics.get(info?.topicId)||{},ab=S.cartAbertos.has(k);
   const rated=S.cartRated.has(k);
   return `<div class="wrap" style="gap:14px">
-    <div class="scorebar"><span class="progress">Cartão ${m.idx+1} de ${m.fila.length} · tópicos misturados</span><button class="btn ghost small" data-cmix-sair="1">Encerrar</button></div>
-    <div class="card-r ck" id="qbflash-${esc(k)}" style="--mc:var(--pen);padding:16px">
+    <div class="scorebar qb-deck-progress"><div><span class="progress">Cartão ${m.idx+1} de ${m.fila.length} · tópicos misturados</span><progress aria-label="Cartões percorridos na sessão" max="${m.fila.length}" value="${m.idx}"></progress></div><button class="btn ghost small" data-cmix-sair="1">Encerrar</button></div>
+    <div class="card-r ck qb-flashcard qb-flashcard-focus" data-revealed="${ab}" id="qbflash-${esc(k)}" style="--mc:var(--pen)">
+      ${flashState(ab)}
       <span class="tag">${ab?`${esc(lblT(t)||id)} · ${esc(c.tema||'')}`:'Assunto oculto até virar'}</span>
       <p class="cq" style="font-size:17px">${esc(c.q||'')}</p>
-      ${ab?`<ul class="exl">${(c.a||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${c.src?`<span class="ps">${esc(c.src)}</span>`:''}`:''}
+      ${ab?flashAnswer(c):''}
       ${cartAval(k,ab)}
       ${rated?`<button class="btn" data-cmix-next="1">Próximo cartão</button>`:''}
     </div>
@@ -1698,7 +1706,7 @@ function viewCartoes(){
   const qAberto=!!(S.cartQuestionFocus&&ligadas.some(q=>q.id===S.cartQuestionFocus));
   const qResumo=ligadas.length?`<details class="qb-qrev" ${qAberto?'open':''}><summary>Questões vinculadas · ${ligadas.length} ${ligadas.length===1?'item':'itens'} <small>(fonte original, gabarito e comentário)</small></summary><p class="rule">${bancoCompartilhado?'Esta bateria reutiliza os mesmos IDs de questões dos assuntos teóricos. Responder novamente não cria uma segunda questão; o histórico permanece associado ao ID original.':'Esses cartões são derivados diretamente das questões existentes.'} Não substituem os cartões conceituais e não entram como novos automaticamente na sessão diária. Uma vez avaliados, seguem a revisão espaçada já existente. A vinculação por capítulo não demonstra, sozinha, equivalência com um nó específico do mapa.</p>${qVisiveis.map(q=>{
     const k=chaveQuestao(q.id),c=cartaoDe(k),ab=S.cartAbertos.has(k);
-    return `<article class="card-r ck qb-qrev-card" id="qbq-${esc(q.id)}"><span class="tag">Questão ${esc(q.ordem||q.id)} · ${esc(q.cap||'')}</span><p class="cq">${esc(c.q)}</p>${ab?`<ul class="exl">${(c.a||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${c.src?`<span class="ps">Fonte: ${esc(c.src)}</span>`:''}`:''}${cartAval(k,ab)}</article>`;
+    return `<article class="card-r ck qb-qrev-card qb-flashcard" data-revealed="${ab}" id="qbq-${esc(q.id)}">${flashState(ab)}<span class="tag">Questão ${esc(q.ordem||q.id)} · ${esc(q.cap||'')}</span><p class="cq">${esc(c.q)}</p>${ab?`<ul class="exl">${(c.a||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${c.src?`<span class="ps">Fonte: ${esc(c.src)}</span>`:''}`:''}${cartAval(k,ab)}</article>`;
   }).join('')||'<p class="notice">Nenhuma questão vinculada vence hoje. Desmarque “Só os de hoje” para consultar todas.</p>'}</details>`:'';
   const vagas=Math.max(0,NOVOS_DIA-novosHoje()), novosOk=new Set();
   (rv.cartoes||[]).forEach((c,i)=>{const k=S.cartId+'@'+i;if(cartNovo(cav.get(k))&&novosOk.size<vagas)novosOk.add(k)});
@@ -1709,7 +1717,7 @@ function viewCartoes(){
     if(!vis.length) return '';
     const fk=S.cartId+'#'+g, fe=(S.cartFech||new Set()).has(fk);
     return `<section class="m-ramo" style="--mc:var(--s${(gi-1)%8+1})"><button class="m-l m-tx" data-cfech="${esc(fk)}" aria-expanded="${!fe}" style="margin-bottom:6px;width:100%"><span class="m-t" style="font-size:16px;font-weight:800">${fe?'▸':'▾'} ${esc(g)}</span><span class="ps">${vis.length}</span></button>${fe?'':vis.map(([c,i])=>{const k=S.cartId+'@'+i,ab=S.cartAbertos.has(k);
-      return `<div class="card-r ck" id="qbflash-${esc(k)}"><p class="cq">${esc(c.q)}</p>${ab?`<ul class="exl">${(c.a||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${c.src?`<span class="ps">${esc(c.src)}</span>`:''}`:''}${cartAval(k,ab)}</div>`}).join('')}</section>`}).join('');
+      return `<article class="card-r ck qb-flashcard" data-revealed="${ab}" id="qbflash-${esc(k)}">${flashState(ab)}<p class="cq">${esc(c.q)}</p>${ab?flashAnswer(c):''}${cartAval(k,ab)}</article>`}).join('')}</section>`}).join('');
   /* fim dos ramos de cartões */
   const tot=(rv.cartoes||[]).length;
   return `<div class="wrap" style="gap:14px;max-width:1100px">
@@ -1720,7 +1728,7 @@ function viewCartoes(){
       <button class="btn ghost small" data-cf="1">Abrir tudo</button><button class="btn ghost small" data-cf="0">Fechar tudo</button>
       ${rv.mapa?`<button class="lnk" data-ir-mapa="${esc(S.cartId)}">Mapa mental</button>`:''}
       ${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
-    <div class="m-centro">${esc((rv.mapa&&rv.mapa.centro)||t.titulo||'')} · revisão ativa</div>
+    <div class="m-centro qb-topic-hub"><span>BARALHO · REVISÃO ATIVA</span><strong>${esc((rv.mapa&&rv.mapa.centro)||t.titulo||'')}</strong><small>${tot} cartões conceituais · ${ligadas.length} questões vinculadas</small></div>
     <p class="rule" style="align-self:center">${tot} cartões · <b>${Math.min(cs0.hoje,Math.max(0,CART_REV_DIA-cartRevHoje()))} para hoje</b> (${cs0.hoje} vencidos; teto de ${CART_REV_DIA} revisões por dia) · ${cs0.novos} novos · <span class="pos">${cs0.firmes} firmes</span> (intervalo de ${FIRME}+ dias) · última marcação: <span class="neg">${cnt.n} novamente</span>, <span style="color:var(--duvida)">${cnt.d} difícil</span>, <span class="pos">${cnt.b} bom</span>, <span style="color:var(--pen)">${cnt.f} fácil</span>. Responda de memória, vire e marque: cada botão mostra quando o cartão volta.</p>
     <div class="m-grid">${ramos||`<div class="notice">Nenhum cartão conceitual disponível neste tópico${vagas?'':` (limite de ${NOVOS_DIA} novos no dia atingido)`}. As questões originais comentadas permanecem acessíveis abaixo.</div>`}</div>
     ${qResumo}
@@ -1775,7 +1783,6 @@ function viewMapa(){
   const t=S.ed.get(S.mapaId)||{}, m=revMapa.mapa, ab=S.mapaAb||new Set(['*']), tudo=ab.has('*');
   const nomes={}; const walk=(n)=>{if(n.id)nomes[n.id]=n.t;(n.f||[]).forEach(walk)}; (m.ramos||[]).forEach(walk);
   const lig=m.ligacoes||[];
-  let seq=0;
   const no=(n,cor,path)=>{
     const k=path, kids=n.f||[], aberto=tudo||ab.has(k), key='mp:'+S.mapaId+':'+k, oc=S.evocar&&n.n&&!S.revelados.has(key);
     const out=lig.filter(l=>l[0]===n.id).map(l=>`<button class="m-link" data-mir="${esc(l[1])}" title="${esc(l[2]||'')}">↗ ${esc(nomes[l[1]]||l[1])}</button>`).join('');
@@ -1791,7 +1798,7 @@ function viewMapa(){
     const det=xa?`<div class="m-det"><p>${esc(n.x.e||'')}</p>${n.x.ex?`<p><b>Exemplo:</b> ${esc(n.x.ex)}</p>`:''}${n.x.trap?`<p class="m-trap"><b>Pegadinha:</b> ${esc(n.x.trap)}</p>`:''}${n.x.src?`<span class="ps">${esc(n.x.src)}</span>`:''}${exemplos}</div>`:'';
     return `<li class="m-no${n.caixa?' m-caixa':''}" data-map-node="${esc(S.mapaId+':'+k)}" ${n.id?`id="mn-${esc(n.id)}"`:''}><div class="m-l">${lab}${tog}${out}${inn}</div>${nota}${det}${tab}${kids.length&&aberto?`<ul>${kids.map((c,i)=>no(c,cor,k+'.'+i)).join('')}</ul>`:''}</li>`;
   };
-  const ramos=(m.ramos||[]).map((r,i)=>{const cor=`var(--s${((r.cor||i+1)-1)%8+1})`;return `<section class="m-ramo" style="--mc:${cor}"><ul class="m-raiz">${no(r,cor,String(i))}</ul></section>`}).join('');
+  const ramos=(m.ramos||[]).map((r,i)=>{const cor=`var(--s${((r.cor||i+1)-1)%8+1})`;return `<section class="m-ramo" style="--mc:${cor}"><span class="qb-map-branch" aria-hidden="true">RAMO ${String(i+1).padStart(2,'0')}</span><ul class="m-raiz">${no(r,cor,String(i))}</ul></section>`}).join('');
   return `<div class="wrap" style="gap:14px;max-width:1100px">
     <div class="filters"><select id="mapa-top" aria-label="Tópico">${ids.map(id=>`<option value="${esc(id)}" ${id===S.mapaId?'selected':''}>${esc(lblT(S.ed.get(id))||id)} · ${esc((S.ed.get(id)||{}).titulo||'')}</option>`).join('')}</select>
       <label class="check"><input type="checkbox" id="evocar" ${S.evocar?'checked':''}> Evocar antes de ler</label>
@@ -1800,8 +1807,8 @@ function viewMapa(){
       ${((S.rv.get(S.mapaId)||{}).cartoes||[]).length?`<button class="lnk" data-ir-cart="${esc(S.mapaId)}">Revisão ativa · ${(S.rv.get(S.mapaId).cartoes||[]).length}</button>`:''}
       ${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
     <p class="rule">Toque num ramo com ⓘ para abrir a explicação. Com "Evocar antes de ler", tente explicar antes de abrir.</p>
-    <div class="m-centro">${esc(m.centro||t.titulo||'')}</div>
-    <div class="m-grid">${ramos}</div>
+    <div class="m-centro qb-topic-hub"><span>MAPA MENTAL · CONCEITO CENTRAL</span><strong>${esc(m.centro||t.titulo||'')}</strong><small>${(m.ramos||[]).length} ramos · ${lig.length} ligações cruzadas</small></div>
+    <div class="m-grid qb-map-network">${ramos}</div>
     ${questoesEmMapa(indice.byTopic.get(S.mapaId)||[],indice)}
     ${m.autor?`<p class="rule">${esc(m.autor)}</p>`:''}
   </div>`;
