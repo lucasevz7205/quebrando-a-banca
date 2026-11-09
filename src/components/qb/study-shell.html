@@ -2349,6 +2349,14 @@ function wire(){
   const pa=$('#pg-abrir'); if(pa) pa.addEventListener('click',()=>{for(const p of S.pg.values()){const t=S.ed.get(p.topico);if(t)S.abertos.add('pg:'+t.sigla);S.abertos.add('pgt:'+p.topico)}render(true)});
   const pf=$('#pg-fechar'); if(pf) pf.addEventListener('click',()=>{for(const k of [...S.abertos]) if(k.startsWith('pg:')||k.startsWith('pgt:')) S.abertos.delete(k); S.fPgMat=''; render(true)});
   document.querySelectorAll('[data-treinar]').forEach(b=>b.addEventListener('click',()=>{S.cap=b.dataset.treinar;S.capEscolhido=true;S.modo='novos';{const t=topicoDoCap(S.cap);if(t)S.abertos.add('tr:'+t.sigla);}S.round=null;setView('treinar');window.scrollTo({top:0})}));
+  document.querySelectorAll('[data-mastery-practice]').forEach(b=>b.addEventListener('click',()=>{
+    const rv=S.rv.get(S.mapaId),t=S.ed.get(S.mapaId);if(!rv?.mapa||!window.QBMapMastery)return;
+    const diagnostico=window.QBMapMastery.build({topicId:S.mapaId,map:rv.mapa,cards:rv.cartoes||[],questions:S.q,responses:S.r,topic:t});
+    const ramo=diagnostico.byPath.get(b.dataset.masteryPractice);
+    const fila=[...(ramo?.all||[])].filter(id=>S.q.has(id)&&!foraQ(S.q.get(id)));
+    if(!fila.length){toast('Este ramo ainda não possui questões de treino vinculadas.');return;}
+    setView('treinar');novaRodada('MIX','Reforço · '+ramo.title,'aprendizagem',fila);
+  }));
   const conf1=document.querySelector('[data-conf="1"]'); if(conf1&&S.round&&S.round.pend&&S.round.pend.focus){ S.round.pend.focus=false; conf1.focus({preventScroll:true}); }
 }
 function novaRodada(cap,capNome,modo,fila){
