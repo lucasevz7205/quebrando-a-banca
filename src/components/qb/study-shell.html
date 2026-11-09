@@ -1803,13 +1803,20 @@ function mapa3D(m,t,lig,diagnostico){
       <span data-map-status role="status"></span>
     </div>
     <div class="qb-map3-explore" data-map-explore hidden>
-      <div class="qb-map3-bar"><span>Arraste para girar · pinça ou rolagem para aproximar</span><div role="group" aria-label="Controles do mapa 3D">
+      <div class="qb-map3-bar"><span>Um clique seleciona · dois cliques explicam · use +/− para abrir ou fechar ramos · arraste para girar</span><div role="group" aria-label="Controles do mapa 3D">
         <button type="button" data-map-camera="left" aria-label="Girar à esquerda">↶</button>
         <button type="button" data-map-camera="right" aria-label="Girar à direita">↷</button>
         <button type="button" data-map-camera="in" aria-label="Aproximar">+</button>
         <button type="button" data-map-camera="out" aria-label="Afastar">−</button>
         <button type="button" data-map-camera="reset">Centralizar</button>
       </div></div>
+      <div class="qb-map3-branch-bar" role="group" aria-label="Abrir e fechar ramificações do mapa 3D">
+        <button type="button" data-map-branch="open">Abrir ramo</button>
+        <button type="button" data-map-branch="close">Fechar ramo</button>
+        <button type="button" data-map-branch="all">Expandir todos</button>
+        <button type="button" data-map-branch="minimal">Recolher todos</button>
+        <span data-map-branch-status role="status" aria-live="polite"></span>
+      </div>
       <div class="qb-map3-stage" data-map-stage>
         <div class="qb-map3-labels" data-map-labels></div>
         <canvas class="qb-map3-axon" data-map-axon aria-hidden="true" hidden></canvas>
@@ -1829,7 +1836,7 @@ function mapa3D(m,t,lig,diagnostico){
         </div>
       </div>
       <div class="qb-map3-footer"><label>Conceito<select data-map-select aria-label="Selecionar conceito no mapa 3D"></select></label>
-        <button type="button" class="btn small" data-map-open>Expandir conceito</button>
+        <button type="button" class="btn small" data-map-open title="Abrir a explicação do conceito selecionado">Expandir conceito</button>
       </div>
       <p class="qb-map3-legend"><span class="qb-map3-legend-title">Cor da conexão = evidência no subramo</span><span class="qb-mastery-forte">● Forte</span><span class="qb-mastery-em-desenvolvimento">● Em desenvolvimento</span><span class="qb-mastery-deficiente">● Reforçar</span><span class="qb-mastery-bom-sem-retencao">● Bom acerto</span><span class="qb-mastery-amostra-insuficiente">● Amostra pequena</span><span class="qb-mastery-sem-evidencia">● Não avaliado</span><span>┄ Ligação cruzada</span></p>
     </div>
