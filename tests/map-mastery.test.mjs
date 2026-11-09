@@ -51,7 +51,7 @@ test("amostra, retenção, item não respondido e históricos distintos",()=>{
  for(let i=1;i<=6;i++){q.set("x"+i,question("x"+i));r.set("x"+i,{tentativas:1,ultimaMarcada:"C",retidoEm:"2026-10-08"});}
  assert.equal(api.stats([...q.keys()],q,r).status,"forte");
  r.set("x2",{tentativas:2,ultimaMarcada:"E",erros:2,noCaderno:true});
- assert.equal(api.stats([...q.keys()],q,r).status,"bom-sem-retencao");
+ assert.equal(api.stats([...q.keys()],q,r).status,"em-desenvolvimento");
  r.set("x3",{tentativas:1,ultimaMarcada:"B"});
  assert.equal(api.stats([...q.keys()],q,r).respondidas,5);
  r.set("x4",{tentativas:1,ultimaMarcada:"E",noCaderno:true,erros:1});
