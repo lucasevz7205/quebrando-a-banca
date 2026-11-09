@@ -1,0 +1,106 @@
+/* 3D mind map: explicit node-branch controls, preserving diagnostic palette. */
+.qb-map3-branch-bar {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:7px;
+  padding:9px 10px;
+  background:linear-gradient(120deg,#121a35bd,#21193dbd);
+  border:1px solid #5e66ad67;
+  border-radius:11px;
+}
+.qb-map3-branch-bar button {
+  min-height:34px;
+  padding:7px 11px;
+  border:1px solid #6978b794;
+  border-radius:8px;
+  background:#253054c9;
+  color:#e6e8ff;
+  font:650 12px/1.2 var(--display,sans-serif);
+  cursor:pointer;
+}
+.qb-map3-branch-bar button:hover:not(:disabled),
+.qb-map3-branch-bar button:focus-visible {
+  background:#3d3970;
+  border-color:#b1a2f8;
+}
+.qb-map3-branch-bar button:disabled {
+  opacity:.43;
+  cursor:not-allowed;
+}
+.qb-map3-branch-bar [role="status"] {
+  margin-inline-start:auto;
+  color:#adbde3;
+  font:550 11px/1.45 var(--mono,monospace);
+  font-variant-numeric:tabular-nums;
+}
+.qb-map3-labels .qb-map3-node-actions {
+  position:absolute;
+  z-index:2;
+  display:inline-flex;
+  flex-wrap:nowrap;
+  align-items:center;
+  justify-content:center;
+  max-width:min(60%,360px);
+  gap:5px;
+  transform:translate(-50%,9px);
+  pointer-events:none;
+  white-space:nowrap;
+}
+.qb-map3-labels .qb-map3-node-actions[hidden] {display:none!important}
+.qb-map3-node-actions > .qb-map3-tag {
+  position:static;
+  display:inline-flex;
+  flex:0 1 auto;
+  min-width:0;
+  max-width:min(245px,56vw);
+  transform:none;
+  pointer-events:auto;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  align-items:center;
+  gap:0;
+}
+.qb-map3-node-actions > .qb-map3-origin {
+  max-width:min(300px,55vw);
+}
+.qb-map3-labels .qb-map3-branch-toggle {
+  flex:0 0 auto;
+  pointer-events:auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:29px;
+  height:29px;
+  border:1px solid #a9a3eea9;
+  border-radius:9px;
+  background:#262b53ed;
+  color:#dfd5ff;
+  font:800 19px/1 var(--display,sans-serif);
+  box-shadow:0 0 8px #9b82ee42;
+  cursor:pointer;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+.qb-map3-labels .qb-map3-branch-toggle[aria-expanded="true"] {
+  background:#453774ed;
+  border-color:#b5a6f7;
+}
+.qb-map3-labels .qb-map3-branch-toggle:hover,
+.qb-map3-labels .qb-map3-branch-toggle:focus-visible {
+  background:#64529a;
+  border-color:#e0d4ff;
+  transform:scale(1.06);
+}
+.qb-map3-node-actions:has(.qb-map3-tag[aria-pressed="true"]){z-index:5}
+@media(max-width:680px){
+  .qb-map3-branch-bar {gap:6px;padding:8px;}
+  .qb-map3-branch-bar button {flex:1 0 auto;font-size:11px;padding:7px 8px;}
+  .qb-map3-branch-bar [role="status"] {flex:1 1 100%;margin-inline-start:0;text-align:center}
+  .qb-map3-labels .qb-map3-node-actions {max-width:min(75%,315px);gap:3px}
+  .qb-map3-node-actions > .qb-map3-tag {max-width: min(190px,53vw);font-size:10px}
+  .qb-map3-labels .qb-map3-branch-toggle {height:28px;width:28px;min-width:28px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .qb-map3-labels .qb-map3-branch-toggle {transition:none!important}
+}
