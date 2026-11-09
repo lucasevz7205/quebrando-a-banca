@@ -86,3 +86,32 @@ test("HTML de enunciados e nós deve ser escapado",()=>{
  const escaped=api.escapeHtml("<img src=x onerror=alert(1)>");
  assert.ok(!escaped.includes("<img"));
 });
+
+test("flashcards exatos usam a última avaliação e são agregados sem inflar a taxa do treino",()=>{
+ const api=load();
+ const cards=[{mapaNoId:"a1",q:"Cartão A"},{mapaPath:"0.0",q:"Cartão B"},{mapaNoId:"a2",q:"Cartão C"},{q:"Ramo A"}];
+ const assessments=new Map([
+   ["T01@0",{ult:"b",hist:[{v:"b"},{v:"n"}]}],
+   ["T01@1",{ult:"p"}],["T01@2",{ult:"s"}],["T01@3",{ult:"f"}],
+ ]);
+ const resolveCard=(_,c)=>c.mapaPath?{status:"exact",path:c.mapaPath}:{status:"suggested",path:"0"};
+ const result=api.build({topicId:"T01",map,cards,questions,responses,assessments,resolveCard});
+ const node=result.byPath.get("0");
+ assert.equal(node.stat.respondidas,2);
+ assert.equal(node.stat.percentual,.5);
+ assert.equal(node.review.total,3);
+ assert.equal(node.review.avaliados,3);
+ assert.equal(node.review.lembrados,1);
+ assert.equal(node.review.percentual,1/3);
+ assert.equal(node.stat.status,"deficiente");
+ assert.equal(result.root.review.total,3);
+ assert.match(api.detail(result,"0"),/data-map-card-index="1"/);
+ assert.match(api.detail(result,"0"),/1\/3 lembrados/);
+});
+test("amostra de cartões pequena mantém diagnóstico de questões",()=>{
+ const api=load();
+ const result=api.build({topicId:"T01",map,cards:[{mapaNoId:"isolado",q:"Cartão"}],
+   questions,responses,assessments:new Map([["T01@0",{ult:"n"}]])});
+ assert.equal(result.byPath.get("1").stat.status,"sem-evidencia");
+ assert.equal(result.byPath.get("1").review.novamente,1);
+});

@@ -154,7 +154,7 @@
     const remaining=qs.length-limit;
     const review=entry.review;
     const cards=review?.total?'<details class="qb-map-card-links"><summary>Flashcards vinculados · '+review.total+'</summary><p class="qb-mastery-caption">'+
-      (review.avaliados?review.lembrados+'/'+review.avaliados+' lembrados (Bom/Fácil) · '+review.dificeis+' difíceis · '+review.novamente+' novamente.':'Sem avaliações registradas.')+
+      (review.avaliados?review.lembrados+'/'+review.avaliados+' lembrados ('+percent(review.percentual)+' em Bom/Fácil) · '+review.dificeis+' difíceis · '+review.novamente+' novamente.':'Sem avaliações registradas.')+
       '</p><ul>'+[...entry.cardIndexes].sort((a,b)=>a-b).map(i=>'<li><button type="button" class="lnk" data-map-card-index="'+i+'">'+esc(result.cards[i]?.q||"Cartão "+(i+1))+'</button></li>').join("")+'</ul></details>':"";
     const evidence=s.respondidas?percent(s.percentual)+" de acerto na última resposta":"Nenhuma resposta válida";
     return '<details class="qb-mastery-detail"><summary>Diagnóstico do '+esc(entry.children.length?"ramo":"conceito")+

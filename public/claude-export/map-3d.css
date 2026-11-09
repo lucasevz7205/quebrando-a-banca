@@ -89,3 +89,74 @@
   .qb-map3-origin { max-width: 46%; }
   .qb-map3-stage { height: 340px; }
 }
+
+.qb-map3 {
+  --qb-node-forte: #80e5ba;
+  --qb-node-deficiente: #ffa6b6;
+  --qb-node-em-desenvolvimento: #f5cd83;
+  --qb-node-bom-sem-retencao: #99baff;
+  --qb-node-amostra-insuficiente: #c4b3f0;
+  --qb-node-sem-evidencia: #a2adca;
+}
+.qb-map3-explore {
+  background: radial-gradient(ellipse at 84% -28%, #292253, transparent 54%), #0c0e1c;
+  box-shadow: 0 18px 38px -28px #8a75f69c, inset 0 1px 0 #f2edff0f;
+}
+.qb-map3-stage {
+  background:
+    radial-gradient(ellipse at 52% 48%, #242344 0%, #111225 53%, transparent 82%),
+    radial-gradient(circle, #ad98fa36 0 1px, transparent 1.6px) 0 0 / 18px 18px,
+    #080a13;
+}
+.qb-map3-tag::before {
+  content: "";
+  display: inline-block;
+  vertical-align: .1em;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--qb-node-dot);
+  box-shadow: 0 0 6px var(--qb-node-dot);
+}
+.qb-map3-tag[aria-pressed="true"] {
+  color: #f1ecff;
+  border-color: var(--qb-node-dot);
+  box-shadow: 0 0 11px #b3a1ff3c;
+}
+.qb-map3-path { display: flex; flex-wrap: wrap; gap: 5px; margin-block: 2px; }
+.qb-map3-path button {
+  border: 1px solid #41446f;
+  background: #1a1933;
+  color: #cec5ed;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 8px;
+  font: 550 11px/1.4 var(--mono);
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.qb-map3-path button[aria-current] { color: #eee7ff; border-color: #a18ce2; }
+.qb-map3-detail {
+  min-width: 0;
+  border: 1px solid var(--qb-detail-outline);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 12px;
+  overflow-wrap: anywhere;
+}
+.qb-map3-detail h3 { margin: 0 0 7px; }
+.qb-map3-detail > .m-raiz { margin: 0; padding: 0; list-style: none; --mc: var(--pen); }
+.qb-map3-detail > .m-raiz > li { margin: 0; }
+.qb-map3-detail .m-det { margin-top: 10px; }
+.qb-map3-detail .m-tab { table-layout: fixed; }
+.qb-map3-detail .m-nota { color: var(--ink); background: var(--pen-soft); }
+.qb-map3-detail .qb-map-recall { margin-top: 7px; }
+.qb-map3-detail .qb-map-recall p { margin: 6px 0; }
+.qb-map3-legend > .qb-mastery-forte { color: var(--qb-node-forte); }
+.qb-map3-legend > .qb-mastery-deficiente { color: var(--qb-node-deficiente); }
+.qb-map3-legend > .qb-mastery-em-desenvolvimento { color: var(--qb-node-em-desenvolvimento); }
+.qb-map3-legend > .qb-mastery-bom-sem-retencao { color: var(--qb-node-bom-sem-retencao); }
+.qb-map3-legend > .qb-mastery-amostra-insuficiente { color: var(--qb-node-amostra-insuficiente); }
+.qb-map3-legend > .qb-mastery-sem-evidencia { color: var(--qb-node-sem-evidencia); }

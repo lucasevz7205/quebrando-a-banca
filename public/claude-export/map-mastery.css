@@ -26,3 +26,31 @@
 .qb-mastery-questions button{font-size:12px;text-align:left;white-space:normal}
 .qb-mastery-qstatus{font-size:10px;color:var(--muted)}
 @media (max-width:640px){.qb-map-diagnostic{padding:11px}.m-l>.qb-mastery-badge{margin-left:0}.qb-mastery-roots{grid-template-columns:1fr}}
+
+.qb-map-card-links { margin-top: 9px; }
+.qb-map-card-links > summary { cursor: pointer; color: var(--pen); font-weight: 650; font-size: 12px; }
+.qb-map-card-links ul { list-style: none; border: 0; margin: 5px 0 0; padding: 0; }
+.qb-map-card-links li { padding: 5px 0; border-bottom: 1px solid var(--line); }
+.qb-map-card-links button { text-align: left; white-space: normal; }
+.qb-mastery-sem-evidencia { color: #555e78; }
+.qb-mastery-amostra-insuficiente { color: #4c508e; }
+.qb-mastery-deficiente { color: #a13251; }
+.qb-mastery-em-desenvolvimento { color: #815415; }
+.qb-mastery-bom-sem-retencao { color: #36598f; }
+.qb-mastery-forte { color: #1c6c51; }
+:root[data-theme="dark"] {
+  --map-no-evidence:#a2adca; --map-small:#c4b3f0; --map-weak:#ffa6b6;
+  --map-growing:#f5cd83; --map-good:#99baff; --map-strong:#80e5ba;
+}
+@media(prefers-color-scheme:dark) {
+  :root:not([data-theme="light"]) {
+    --map-no-evidence:#a2adca; --map-small:#c4b3f0; --map-weak:#ffa6b6;
+    --map-growing:#f5cd83; --map-good:#99baff; --map-strong:#80e5ba;
+  }
+}
+.qb-mastery-sem-evidencia { color: var(--map-no-evidence,#555e78); }
+.qb-mastery-amostra-insuficiente { color: var(--map-small,#4c508e); }
+.qb-mastery-deficiente { color: var(--map-weak,#a13251); }
+.qb-mastery-em-desenvolvimento { color: var(--map-growing,#815415); }
+.qb-mastery-bom-sem-retencao { color: var(--map-good,#36598f); }
+.qb-mastery-forte { color: var(--map-strong,#1c6c51); }

@@ -1846,6 +1846,7 @@ function viewMapa(){
       ${diagnostico?window.QBMapMastery.badge(diagnostico.root):''}
       ${diagnostico?window.QBMapMastery.detail(diagnostico,'root'):''}
       ${t.id?'<button type="button" class="btn ghost small" data-mastery-edital>Ver assunto no edital</button>':''}`;
+    if(typeof path!=='string'||!/^\d+(?:\.\d+)*$/.test(path))return '';
     const indexes=path.split('.').map(Number),root=m.ramos?.[indexes[0]];
     const n=indexes.slice(1).reduce((parent,index)=>parent?.f?.[index],root);
     if(!n)return '';
