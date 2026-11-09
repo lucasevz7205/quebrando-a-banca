@@ -173,22 +173,37 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
   function render() {
     if (!width || !height) return;
     renderer.render(scene,camera);
-    for (const {wrapper,tag,toggle,i} of tagList) {
+    // Prioritize selected concept, its direct neighborhood and main branches.
+    // Colliding labels are suppressed, NOT their spheres or diagnostic edges.
+    const selectedParent=coords[byPath.get(selected)]?.parent;
+    const candidates=[];
+    for (const {i,toggle} of tagList) {
       const node=coords[i];
-      const show=visiblePaths.has(node.path) && (node.path===selected||node.parent===selected||node.path==="root"||node.parent==="root");
-      if(!show){wrapper.hidden=true;continue;}
+      if(!visiblePaths.has(node.path))continue;
+      const ancestor=selected.startsWith(node.path+".");
+      const adjacent=node.path===selected||node.parent===selected||node.parent===selectedParent;
+      if(!(adjacent||ancestor||node.path==="root"||node.parent==="root"))continue;
       point.copy(world[i]).project(camera);
-      wrapper.hidden = Math.abs(point.x) > .95 || Math.abs(point.y) > .93 || Math.abs(point.z) > 1;
-      if (!wrapper.hidden) {
-        wrapper.style.left = ((point.x + 1) * width / 2) + "px";
-        wrapper.style.top = ((1 - point.y) * height / 2) + "px";
-        tag.setAttribute("aria-pressed", String(selected === node.path));
-        if(toggle){
-          const isOpen=branches.isExpanded(node.path);
-          toggle.textContent=isOpen?"−":"+";
-          toggle.setAttribute("aria-expanded",String(isOpen));
-          toggle.setAttribute("aria-label",(isOpen?"Recolher":"Abrir")+" "+branches.childCount(node.path)+" subramos de "+node.title);
-        }
+      if(Math.abs(point.z)>1||Math.abs(point.x)>1||Math.abs(point.y)>1)continue;
+      const priority=node.path===selected?0:node.path==="root"?1:ancestor?2:node.parent===selected?3:node.parent==="root"?4:5;
+      candidates.push({path:node.path,index:i,priority,
+        x:(point.x+1)*width/2,y:(1-point.y)*height/2,
+        width:Math.min(270,Math.max(75,node.title.length*6.4+22+(toggle?34:0))),
+        height:30});
+    }
+    const displayed=resolveLabelPositions(candidates,{width,height,padding:8});
+    for(const {wrapper,tag,toggle,i} of tagList){
+      const node=coords[i],place=displayed.get(node.path);
+      wrapper.hidden=!place;
+      if(!place)continue;
+      wrapper.style.left=place.x+"px";
+      wrapper.style.top=place.y+"px";
+      tag.setAttribute("aria-pressed",String(selected===node.path));
+      if(toggle){
+        const open=branches.isExpanded(node.path);
+        toggle.textContent=open?"−":"+";
+        toggle.setAttribute("aria-expanded",String(open));
+        toggle.setAttribute("aria-label",(open?"Recolher":"Abrir")+" "+branches.childCount(node.path)+" subramos de "+node.title);
       }
     }
   }
