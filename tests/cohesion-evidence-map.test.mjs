@@ -84,7 +84,8 @@ test("linhas 3D usam cores por nó de destino, separadas de notas e histórico",
  assert.match(scene,/Flashcards: /);
  assert.match(shell,/QBEditorialCohesion\?\.decorate/);
  assert.match(shell,/map:m,cards:mapCards/);
- assert.match(shell,/function treinarNoMapa\(path\)[\s\S]*QBEditorialCohesion\?\.decorate/);
+ assert.match(shell,/function mapaComVinculos\([\s\S]*QBEditorialCohesion\?\.decorate/);
+ assert.match(shell,/function treinarNoMapa\(path\)[\s\S]*mapaComVinculos/);
  assert.match(shell,/map-evidence\.css/);
  assert.match(shell,/Cor da conexão = evidência no subramo/);
 });
