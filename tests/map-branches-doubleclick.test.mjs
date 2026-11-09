@@ -70,7 +70,7 @@ test("um clique seleciona, dois cliques/taps abrem; mudanças de nó não viram 
  const actions=[];
  const activate=createNodeActivation((...args)=>actions.push(args));
  assert.equal(activate("0",{detail:1,timeStamp:100}),false);
- assert.deepEqual(actions.at(-1),["0",false,false]);
+ assert.deepEqual(actions.at(-1),["0",true,false]);
  assert.equal(activate("1",{detail:1,timeStamp:180}),false);
  assert.equal(activate("0",{detail:1,timeStamp:260}),false);
  assert.equal(activate("0",{detail:1,timeStamp:390}),true);
@@ -115,7 +115,7 @@ test("as linhas e esferas 3D são filtradas juntas sem perder colorações de de
  assert.match(scene,/const tip=new Color\(colorFor\(target\)\)/);
  assert.match(scene,/createNodeActivation\(onSelect\)/);
  assert.match(observe,/function select\(path, zoom = true, expand = false\)/);
- assert.match(observe,/function change\(\) \{ select\(chooser\.value,false,false\)/);
+ assert.match(observe,/function change\(\) \{ select\(chooser\.value,true,false\)/);
  assert.match(observe,/data-map-branch-status/);
  assert.match(observe,/select\(lastPath, true, true\)/);
  assert.match(observe,/rememberedBranches=scene\.expandedPaths\(\)/);
