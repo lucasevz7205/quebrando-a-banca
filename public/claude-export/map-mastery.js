@@ -4,7 +4,7 @@
  */
 (function (root) {
   "use strict";
-  const asMap = v => v instanceof Map ? v : new Map(Array.isArray(v) ? v : Object.entries(v || {}));
+  const asMap = v => v && typeof v.get === "function" && typeof v.values === "function" ? v : new Map(Array.isArray(v) ? v : Object.entries(v || {}));
   const text = v => String(v == null ? "" : v);
   const escapeHtml = v => text(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const unique = items => [...new Set(items)];
