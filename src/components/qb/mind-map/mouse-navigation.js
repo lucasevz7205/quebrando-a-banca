@@ -5,6 +5,23 @@ export function wheelZoomFactor(deltaY, deltaMode = 0, viewportHeight = 600) {
   // One notch: ~14% distance change; fine trackpads remain controllable.
   return Math.exp(pixels * .00135);
 }
+/* Directional screen-space pan for the on-map arrow pad.
+ * Returns the displacement in camera right/up units (not rotation).
+ * Scales with zoom so a button tap remains useful both near and far.
+ */
+export function directionalPanOffset(action,distance,fovDegrees=42,aspect=1) {
+  const direction={
+    "pan-up":[0,1],
+    "pan-down":[0,-1],
+    "pan-left":[-1,0],
+    "pan-right":[1,0]
+  }[action];
+  if(!direction)return null;
+  const vertical=2*Math.max(0,Number(distance)||0)*Math.tan(fovDegrees*Math.PI/360);
+  const verticalStep=Math.max(.5,Math.min(14,vertical*.15));
+  const horizontalStep=Math.max(.5,Math.min(14,vertical*Math.max(.3,Number(aspect)||1)*.15));
+  return {right:direction[0]*horizontalStep,up:direction[1]*verticalStep};
+}
 export function nearestProjectedHit(nodes, pointer, radius=26){
   let best=null, distance=Infinity;
   for(const n of nodes){
