@@ -1,7 +1,7 @@
 /* Pure, account-agnostic visibility state for the Three.js mental map.
  * Only changes which existing concepts are drawn. Never edits any study data.
  */
-export function createBranchVisibility(graph, {initialDepth = 1} = {}) {
+export function createBranchVisibility(graph, {initialDepth = 1, expandedPaths = null} = {}) {
   const nodes = new Map([["root", {path:"root",parent:null,title:graph.title}],
     ...(graph.nodes||[]).map(n=>[n.path,n])]);
   const children = new Map([...nodes.keys()].map(path=>[path,[]]));
@@ -9,9 +9,12 @@ export function createBranchVisibility(graph, {initialDepth = 1} = {}) {
     if(children.has(n.parent))children.get(n.parent).push(n.path);
   }
   const hasChildren = path => (children.get(path)?.length||0)>0;
-  const expanded = new Set(["root"]);
-  for(const [path] of nodes)
-    if(path!=="root" && path.split(".").length<=initialDepth && hasChildren(path)) expanded.add(path);
+  const expanded = expandedPaths
+    ? new Set([...expandedPaths].filter(path=>nodes.has(path)&&hasChildren(path)))
+    : new Set(["root"]);
+  if(!expandedPaths)
+    for(const [path] of nodes)
+      if(path!=="root" && path.split(".").length<=initialDepth && hasChildren(path)) expanded.add(path);
   function ancestors(path) {
     const chain=[];
     let cursor=path,seen=new Set();
@@ -76,6 +79,7 @@ export function createBranchVisibility(graph, {initialDepth = 1} = {}) {
     };
   }
   return {visiblePaths,reveal,open,close,toggle,openAll,collapseAll,summary,
+    expandedPaths:()=>[...expanded],
     isExpanded:path=>expanded.has(path),hasChildren,
     childCount:path=>children.get(path)?.length||0,
     has:path=>nodes.has(path),
