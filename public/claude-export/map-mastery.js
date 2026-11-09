@@ -175,7 +175,7 @@
       '<div class="qb-map-diagnostic-head"><h3>Diagnóstico dos ramos</h3><span>'+escapeHtml(percentText)+' no edital</span></div>'+
       '<p>'+escapeHtml(result.topic?.titulo||result.title)+' · '+s.respondidas+'/'+s.total+' questões respondidas no assunto</p>'+
       '<ul class="qb-mastery-roots">'+row+'</ul>'+
-      (result.topic?.id?'<button class="btn ghost small" data-mastery-edital type="button">Ver assunto no edital</button>':"")+ 
+      (result.topic?.id?'<button class="btn ghost small" data-mastery-edital type="button">Ver assunto no edital</button>':"")+
       (result.unlinked.length?'<p class="qb-mastery-caption">'+result.unlinked.length+
       ' questões do edital ainda não têm vínculo semântico com um nó e não são atribuídas artificialmente aos ramos.</p>':"")+
       '<p class="qb-mastery-caption">Forte exige 5+ questões respondidas, ≥85% de acerto, cobertura ≥80%, retenção em pelo menos 60% e nenhum item no caderno. Com 3 ou mais flashcards avaliados, menos de 70% em Bom/Fácil pode sinalizar reforço ou limitar um diagnóstico de força. As duas métricas são exibidas separadamente.</p>'+
