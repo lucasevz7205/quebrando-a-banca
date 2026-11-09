@@ -22,13 +22,13 @@ export function createAxonReveal(stage, win) {
     particles.width = Math.max(1, Math.round(rect.width * ratio));
     particles.height = Math.max(1, Math.round(rect.height * ratio));
     context.setTransform(ratio, 0, 0, ratio, 0, 0);
-    const bounds = card.getBoundingClientRect();
+    // offset geometry is measured before CSS scale/blur, unlike getBoundingClientRect.
     return {
       width: rect.width, height: rect.height,
-      x: Math.min(rect.width - 10, Math.max(10, Number(origin?.x) || rect.width / 2)),
-      y: Math.min(rect.height - 10, Math.max(10, Number(origin?.y) || rect.height / 2)),
-      left: bounds.left - rect.left, top: bounds.top - rect.top,
-      cw: bounds.width, ch: bounds.height,
+      x: Math.min(rect.width - 10, Math.max(10, Number.isFinite(origin?.x) ? origin.x : rect.width / 2)),
+      y: Math.min(rect.height - 10, Math.max(10, Number.isFinite(origin?.y) ? origin.y : rect.height / 2)),
+      left: card.offsetLeft, top: card.offsetTop,
+      cw: card.offsetWidth, ch: card.offsetHeight,
     };
   }
   // Stable random values avoid visual jumps when a different node is selected.
