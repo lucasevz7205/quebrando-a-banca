@@ -11,16 +11,22 @@ export function placeMap(graph) {
     weights.set(node.path, n);
     return n;
   }
-  function visit(node, depth, a, b, branchAngle) {
+  function visit(node, depth, a, b, branchAngle, siblingIndex = 0, siblings = 1) {
     const angle = (a + b) / 2;
-    const radius = 2.8 + (depth - 1) * 1.62;
+    // Wide, stable radial bands. Each level occupies its own navigable ring.
+    const radius = 4.7 + (depth - 1) * 3.35 + Math.pow(Math.max(0, depth - 1), 1.15) * .23;
+    // Dense sibling groups also fan out in depth, so nodes do not share
+    // nearly identical mouse hit areas when the angular sector is narrow.
+    const siblingSpread = Math.min(11, Math.max(2.4, siblings * .95));
+    const siblingZ = siblings > 1 ? (siblingIndex / (siblings - 1) - .5) * siblingSpread : 0;
+    const branchZ = Math.sin(branchAngle * 1.35 + depth * .45) * Math.min(2.4, radius * .24);
     positions.push({ ...node, depth, x: Math.cos(angle) * radius, y: Math.sin(angle) * radius,
-      z: Math.sin(branchAngle * 1.5 + depth * .72) * Math.min(2.8, radius * .34) });
+      z: branchZ + siblingZ });
     let start = a;
     const children = tree.get(node.path), total = children.reduce((sum, child) => sum + weights.get(child.path), 0);
-    for (const child of children) {
+    for (const [index,child] of children.entries()) {
       const end = start + (b - a) * weights.get(child.path) / total;
-      visit(child, depth + 1, start, end, branchAngle);
+      visit(child, depth + 1, start, end, branchAngle, index, children.length);
       start = end;
     }
   }
