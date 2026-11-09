@@ -455,7 +455,7 @@ details.diario .feed{margin-top:10px}
 
 <script src="/claude-export/bridge.js?v=3"></script>
 <script src="/claude-export/planner.js?v=2"></script>
-<script src="/claude-export/insights.js"></script>
+<script src="/claude-export/insights.js?v=2"></script>
 <script src="/claude-export/assistant.js"></script>
 <script src="/claude-export/strategies.js"></script>
 <script src="/claude-export/learning.js"></script>
@@ -1571,8 +1571,8 @@ function iniciarMix(){const f=filaMix(); if(!f.length){toast('Nenhum cartão par
 function flashState(revealed){
   return '<span class="qb-flash-state">'+(revealed?'Resposta revelada':'Evocação ativa')+'</span>';
 }
-function flashAnswer(c){
-  return `<div class="qb-flash-answer"><b>Resposta de referência</b><ul class="exl">${(c.a||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${c.src?`<span class="ps">${esc(c.src)}</span>`:''}</div>`;
+function flashAnswer(c, prefix=''){
+  return `<div class="qb-flash-answer"><b>Resposta de referência</b><ul class="exl">${(c.a||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${c.src?`<span class="ps">${prefix}${esc(c.src)}</span>`:''}</div>`;
 }
 function viewCmix(){
   const m=S.cmix;
@@ -1706,7 +1706,7 @@ function viewCartoes(){
   const qAberto=!!(S.cartQuestionFocus&&ligadas.some(q=>q.id===S.cartQuestionFocus));
   const qResumo=ligadas.length?`<details class="qb-qrev" ${qAberto?'open':''}><summary>Questões vinculadas · ${ligadas.length} ${ligadas.length===1?'item':'itens'} <small>(fonte original, gabarito e comentário)</small></summary><p class="rule">${bancoCompartilhado?'Esta bateria reutiliza os mesmos IDs de questões dos assuntos teóricos. Responder novamente não cria uma segunda questão; o histórico permanece associado ao ID original.':'Esses cartões são derivados diretamente das questões existentes.'} Não substituem os cartões conceituais e não entram como novos automaticamente na sessão diária. Uma vez avaliados, seguem a revisão espaçada já existente. A vinculação por capítulo não demonstra, sozinha, equivalência com um nó específico do mapa.</p>${qVisiveis.map(q=>{
     const k=chaveQuestao(q.id),c=cartaoDe(k),ab=S.cartAbertos.has(k);
-    return `<article class="card-r ck qb-qrev-card qb-flashcard" data-revealed="${ab}" id="qbq-${esc(q.id)}">${flashState(ab)}<span class="tag">Questão ${esc(q.ordem||q.id)} · ${esc(q.cap||'')}</span><p class="cq">${esc(c.q)}</p>${ab?`<ul class="exl">${(c.a||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${c.src?`<span class="ps">Fonte: ${esc(c.src)}</span>`:''}`:''}${cartAval(k,ab)}</article>`;
+    return `<article class="card-r ck qb-qrev-card qb-flashcard" data-revealed="${ab}" id="qbq-${esc(q.id)}">${flashState(ab)}<span class="tag">Questão ${esc(q.ordem||q.id)} · ${esc(q.cap||'')}</span><p class="cq">${esc(c.q)}</p>${ab?flashAnswer(c,'Fonte: '):''}${cartAval(k,ab)}</article>`;
   }).join('')||'<p class="notice">Nenhuma questão vinculada vence hoje. Desmarque “Só os de hoje” para consultar todas.</p>'}</details>`:'';
   const vagas=Math.max(0,NOVOS_DIA-novosHoje()), novosOk=new Set();
   (rv.cartoes||[]).forEach((c,i)=>{const k=S.cartId+'@'+i;if(cartNovo(cav.get(k))&&novosOk.size<vagas)novosOk.add(k)});

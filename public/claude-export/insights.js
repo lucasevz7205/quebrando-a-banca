@@ -57,7 +57,7 @@
     return p;
   }
   function graph(S,date){
-    const a=trend(S,date),w=850,h=262,L=43,T=20,B=45,R=18;
+    const a=trend(S,date),w=850,h=262,L=78,T=24,B=45,R=24;
     const x=i=>+(L+(w-L-R)*i/13).toFixed(1),y=v=>+(T+(h-T-B)*(1-v/100)).toFixed(1);
     const pts=a.map((v,i)=>v.c+v.e?[x(i),y(100*v.c/(v.c+v.e)),v]:null).filter(Boolean);
     const line=curve(pts),area=pts.length>1?`${line} L ${pts.at(-1)[0]} ${h-B} L ${pts[0][0]} ${h-B} Z`:'';
