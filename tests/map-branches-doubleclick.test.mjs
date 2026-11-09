@@ -113,7 +113,9 @@ test("as linhas e esferas 3D são filtradas juntas sem perder colorações de de
  assert.match(scene,/spheres\.count=slot/);
  assert.match(scene,/visiblePaths\.has\(node\.path\)/);
  assert.match(scene,/const tip=new Color\(colorFor\(target\)\)/);
- assert.match(scene,/createNodeActivation\(onSelect\)/);
+ assert.match(scene,/createNodeActivation\(\(path,_zoom,explain\)=>/);
+ assert.match(scene,/pendingFocus=view\.setTimeout/);
+ assert.match(scene,/cancelPendingFocus\(\)/);
  assert.match(observe,/function select\(path, zoom = true, expand = false\)/);
  assert.match(observe,/function change\(\) \{ select\(chooser\.value,true,false\)/);
  assert.match(observe,/data-map-branch-status/);
