@@ -4,6 +4,7 @@ import {
 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { placeMap } from "./layout";
+import { createBranchVisibility } from "./branch-visibility";
 
 export function startMapScene(panel, graph, onSelect, onLost) {
   const doc = panel.ownerDocument, view = doc.defaultView;
@@ -23,6 +24,7 @@ export function startMapScene(panel, graph, onSelect, onLost) {
   controls.zoomSpeed = .8;
 
   const coords = placeMap(graph);
+  const branches = createBranchVisibility(graph);
   const byPath = new Map(coords.map((node,i) => [node.path, i]));
   const byId = new Map(coords.filter(n => n.id).map(n => [n.id, n.path]));
   const world = coords.map(n => new Vector3(n.x,n.y,n.z));
@@ -30,6 +32,7 @@ export function startMapScene(panel, graph, onSelect, onLost) {
   const geometry = new SphereGeometry(1, 12, 8);
   const material = new MeshBasicMaterial();
   const spheres = new InstancedMesh(geometry, material, coords.length);
+  spheres.frustumCulled = false; // visible instance slots are compacted on each branch toggle
   const computed = view.getComputedStyle(panel);
   const colorFor = node => computed.getPropertyValue("--qb-node-" + (node.status || "sem-evidencia")).trim() || "#9da8c4";
   const dust = new Float32Array(390 * 3);
@@ -53,6 +56,8 @@ export function startMapScene(panel, graph, onSelect, onLost) {
    * A conexão começa num tom de fundo e termina na cor da evidência do filho.
    * Falta de respostas/cartões continua neutra mesmo que o pai esteja forte.
    */
+  const hierarchyPairs=coords.slice(1).map(n=>[n.parent,n.path]);
+  const crossPairs=graph.links.map(([a,b])=>[byId.get(a),byId.get(b)]);
   function lineGeometry(pairs, crossLink = false) {
     const positions=[],colors=[];
     const backdrop=new Color("#232d4e");
@@ -71,9 +76,9 @@ export function startMapScene(panel, graph, onSelect, onLost) {
     geometry.setAttribute("color",new Float32BufferAttribute(colors,3));
     return geometry;
   }
-  const hierarchy = new LineSegments(lineGeometry(coords.slice(1).map(n => [n.parent,n.path])),
+  const hierarchy = new LineSegments(lineGeometry(hierarchyPairs),
     new LineBasicMaterial({vertexColors:true,transparent:true,opacity:.94}));
-  const cross = new LineSegments(lineGeometry(graph.links.map(([a,b]) => [byId.get(a),byId.get(b)]),true),
+  const cross = new LineSegments(lineGeometry(crossPairs,true),
     new LineDashedMaterial({vertexColors:true,dashSize:.28,gapSize:.16,transparent:true,opacity:.83}));
   cross.computeLineDistances();
   scene.add(hierarchy,cross);
