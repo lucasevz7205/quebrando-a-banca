@@ -463,6 +463,7 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/map-origin.js"></script>
 <script src="/claude-export/map-mastery.js?v=2"></script>
 <script src="/claude-export/cohesion-links.js?v=1"></script>
+<script src="/claude-export/map-global-links.js?v=1"></script>
 <link rel="stylesheet" href="/claude-export/learning.css">
 <link rel="stylesheet" href="/claude-export/study-palette.css">
 <link rel="stylesheet" href="/claude-export/map-3d.css?v=2">
@@ -1833,13 +1834,22 @@ function mapa3D(m,t,lig,diagnostico){
     </div>
   </section>`;
 }
+/* Vínculos por conta e tópico; Coesão usa associações revisadas e os demais
+   mapas só recebem correspondências conservadoras. Nunca grava no banco. */
+function mapaComVinculos(topicId,revision,topic){
+  const map=revision?.mapa,cards=revision?.cartoes||[];
+  if(!map)return null;
+  const special=window.QBEditorialCohesion?.decorate(topicId,map,cards,S.q);
+  const generic=window.QBEditorialCoverage?.decorate(topicId,special?.map||map,special?.cards||cards,S.q,topic);
+  return generic||special||{map,cards};
+}
 function viewMapa(){
   const indice=indiceQuestoes();
   const ids=[...S.rv.entries()].filter(([k,v])=>v&&v.mapa).map(([k])=>k).sort((a,b)=>((S.ed.get(a)||{}).ordem||0)-((S.ed.get(b)||{}).ordem||0));
   if(!ids.length) return `<div class="wrap"><div class="notice">Nenhum mapa no formato novo ainda. Os chats de matéria gravam o mapa no documento de revisão do tópico.</div></div>`;
   if(!S.mapaId||!ids.includes(S.mapaId)) S.mapaId=ids[0];
   const revMapa=S.rv.get(S.mapaId),mapasRelacionados=(revMapa.mapaRelacionadoIds||[]).filter(id=>id!==S.mapaId&&S.rv.get(id)?.mapa);
-  const t=S.ed.get(S.mapaId)||{}, editorial=window.QBEditorialCohesion?.decorate(S.mapaId,revMapa.mapa,revMapa.cartoes||[],S.q);
+  const t=S.ed.get(S.mapaId)||{}, editorial=mapaComVinculos(S.mapaId,revMapa,t);
   const m=editorial?.map||revMapa.mapa, mapCards=editorial?.cards||revMapa.cartoes||[];
   const ab=S.mapaAb||new Set(['*']), tudo=ab.has('*');
   const nomes={}; const walk=(n)=>{if(n.id)nomes[n.id]=n.t;(n.f||[]).forEach(walk)}; (m.ramos||[]).forEach(walk);
@@ -2276,7 +2286,7 @@ function abrirEditalDoMapa(){
 function treinarNoMapa(path){
   const rv=S.rv.get(S.mapaId),t=S.ed.get(S.mapaId);
   if(!rv?.mapa||!window.QBMapMastery)return;
-  const editorial=window.QBEditorialCohesion?.decorate(S.mapaId,rv.mapa,rv.cartoes||[],S.q);
+  const editorial=mapaComVinculos(S.mapaId,rv,t);
   const diagnostico=window.QBMapMastery.build({topicId:S.mapaId,map:editorial?.map||rv.mapa,cards:editorial?.cards||rv.cartoes||[],
     questions:S.q,responses:S.r,assessments:S.cav,resolveCard:window.QBMapLinks?.resolve,topic:t});
   const ramo=diagnostico.byPath.get(path);
