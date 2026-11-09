@@ -51,7 +51,19 @@ test("arquivo histórico é calculado sem confundir snapshot com banco atual",()
  assert.equal(cards.lembrados,15);
  assert.ok(cards.percentual<.70);
  // 100% na bateria não prova domínio de todos os cartões.
- assert.equal(s.status,"em-desenvolvimento");
+ assert.equal(s.status,"deficiente"); // Snapshot: ainda havia duas respostas erradas e itens no caderno.
+ const corrected=new Map(f.responses);
+ for(const [id,q] of f.questions) {
+   const old=corrected.get(id);
+   if(old && old.tentativas>0 && old.ultimaMarcada!==q.gabarito)
+     corrected.set(id,{...old,ultimaMarcada:q.gabarito});
+ }
+ const after=f.w.QBMapMastery.build({topicId:f.src.id,topic:f.ed,map:f.editorial.map,
+   cards:f.editorial.cards,questions:f.questions,responses:corrected,
+   assessments:f.assessments,resolveCard:f.w.QBMapLinks.resolve});
+ assert.equal(after.root.stat.acertos,50);
+ assert.equal(after.root.stat.erros,0);
+ assert.equal(after.root.stat.status,"em-desenvolvimento");
  assert.ok(f.summary.nodes.some(n=>n.stat.status==="sem-evidencia"));
  assert.ok(f.summary.nodes.some(n=>n.stat.respondidas>0));
 });
