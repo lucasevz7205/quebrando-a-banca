@@ -74,6 +74,17 @@ test("mudanças rápidas não deixam animação anterior em execução",()=>{
   assert.equal(f.frames,0);
   assert.equal(f.panel.hidden,true);
 });
+test("sem canvas secundário, a explicação permanece acessível",()=>{
+  const f=fixture();
+  f.particles.getContext=()=>null;
+  const fx=createAxonReveal(f.stage,f.win);
+  fx.show({x:110,y:90},"sem-canvas");
+  assert.equal(f.panel.hidden,false);
+  assert.equal(f.panel.dataset.open,"true");
+  assert.equal(f.focused,1);
+  fx.hide();
+  assert.equal(f.panel.hidden,true);
+});
 test("integração 3D exibe detalhes dentro da cena, sem criar outra seção inferior",()=>{
  const shell=fs.readFileSync("src/components/qb/study-shell.html","utf8");
  const observer=fs.readFileSync("src/components/qb/mind-map/observe.js","utf8");
