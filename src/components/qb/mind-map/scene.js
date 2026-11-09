@@ -1,5 +1,5 @@
 import {
-  BufferAttribute, BufferGeometry, Color, InstancedMesh, LineBasicMaterial, LineDashedMaterial, LineSegments, Matrix4, AdditiveBlending,
+  BufferAttribute, BufferGeometry, Color, Float32BufferAttribute, InstancedMesh, LineBasicMaterial, LineDashedMaterial, LineSegments, Matrix4, AdditiveBlending,
   MeshBasicMaterial, PerspectiveCamera, Points, PointsMaterial, Raycaster, Scene, SphereGeometry, Vector2, Vector3, WebGLRenderer,
 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
@@ -49,14 +49,32 @@ export function startMapScene(panel, graph, onSelect, onLost) {
     spheres.setColorAt(i, new Color(colorFor(node)));
   });
   scene.add(spheres);
-  function lineGeometry(pairs) {
-    const points = pairs.flatMap(([a,b]) => byPath.has(a) && byPath.has(b) ? [world[byPath.get(a)],world[byPath.get(b)]] : []);
-    return new BufferGeometry().setFromPoints(points);
+  /* Cada ligação herda o indicador do conceito de destino.
+   * A conexão começa num tom de fundo e termina na cor da evidência do filho.
+   * Falta de respostas/cartões continua neutra mesmo que o pai esteja forte.
+   */
+  function lineGeometry(pairs, crossLink = false) {
+    const positions=[],colors=[];
+    const backdrop=new Color("#232d4e");
+    for(const [a,b] of pairs) {
+      if(!byPath.has(a)||!byPath.has(b))continue;
+      const source=coords[byPath.get(a)], target=coords[byPath.get(b)];
+      const from=world[byPath.get(a)],to=world[byPath.get(b)];
+      positions.push(from.x,from.y,from.z,to.x,to.y,to.z);
+      const tip=new Color(colorFor(target));
+      const base=crossLink ? new Color(colorFor(source)).lerp(backdrop,.3)
+                            : tip.clone().lerp(backdrop,.57);
+      colors.push(base.r,base.g,base.b,tip.r,tip.g,tip.b);
+    }
+    const geometry=new BufferGeometry();
+    geometry.setAttribute("position",new Float32BufferAttribute(positions,3));
+    geometry.setAttribute("color",new Float32BufferAttribute(colors,3));
+    return geometry;
   }
   const hierarchy = new LineSegments(lineGeometry(coords.slice(1).map(n => [n.parent,n.path])),
-    new LineBasicMaterial({color: "#7b88ce", transparent: true, opacity: .69}));
-  const cross = new LineSegments(lineGeometry(graph.links.map(([a,b]) => [byId.get(a),byId.get(b)])),
-    new LineDashedMaterial({color: "#b1a2ff", dashSize: .28, gapSize: .16, transparent: true, opacity: .8}));
+    new LineBasicMaterial({vertexColors:true,transparent:true,opacity:.94}));
+  const cross = new LineSegments(lineGeometry(graph.links.map(([a,b]) => [byId.get(a),byId.get(b)]),true),
+    new LineDashedMaterial({vertexColors:true,dashSize:.28,gapSize:.16,transparent:true,opacity:.83}));
   cross.computeLineDistances();
   scene.add(hierarchy,cross);
   const focus = new InstancedMesh(geometry, new MeshBasicMaterial({color: "#e2ddff", wireframe: true, transparent: true, opacity: .7}), 1);
@@ -68,8 +86,9 @@ export function startMapScene(panel, graph, onSelect, onLost) {
     const tag = doc.createElement("button");
     tag.type = "button";
     tag.textContent = node.title;
-    const sample=node.respondidas ? " · " + Math.round(node.percentual*100) + "%, " + node.respondidas + "/" + node.questoes + " respondidas" : "";
-    tag.title=node.title + (node.statusLabel ? " · " + node.statusLabel + sample : "");
+    const sample=node.respondidas ? " · Questões: " + Math.round(node.percentual*100) + "%, " + node.respondidas + "/" + node.questoes + " respondidas" : " · Questões: sem respostas válidas";
+    const cards=node.flashcardsAvaliados ? " · Flashcards: " + node.flashcardsLembrados + "/" + node.flashcardsAvaliados + " lembrados" : node.flashcards ? " · Flashcards: nenhum avaliado" : "";
+    tag.title=node.title + (node.statusLabel ? " · " + node.statusLabel + sample + cards : "");
     tag.style.setProperty("--qb-node-dot",colorFor(node));
     tag.className = node.depth ? "qb-map3-tag" : "qb-map3-tag qb-map3-origin";
     tag.setAttribute("aria-pressed", "false");
