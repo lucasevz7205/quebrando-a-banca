@@ -130,6 +130,10 @@ const { messages, sendMessage, isLoading } = useChat({
 
 - For AI work without a chat (summaries, classification, background agents), call `chat({ adapter, messages, stream: false })` inside a server function and return its result, or pass `outputSchema` (a zod schema) for typed JSON.
 
+## Question authoring — Quebrando a Banca
+
+For tasks that create, review or classify examination questions, first read `docs/PROTOCOLO_EDITORIAL_CEBRASPE.md` and the project's current pedagogical rules. Preserve C/E format, existing F1–F10 and V1–V4 identifiers, question provenance and all student history. This is an editorial protocol, not model training or validated frequency data. Do not automatically generate questions or change production records merely because this document exists.
+
 ## Working Notes
 
 - `npm run dev` runs the TanStack dev server (Vite); server code runs in `workerd`, exactly as in production.
