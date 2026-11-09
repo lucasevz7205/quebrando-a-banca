@@ -8,7 +8,7 @@
   const text = v => String(v == null ? "" : v);
   const escapeHtml = v => text(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const unique = items => [...new Set(items)];
-  const eligible = q => !!q && q.foraNivel !== true && !/^SIM/i.test(text(q.cap)) && (q.gabarito==="C" || q.gabarito==="E");
+  const eligible = q => !!q && q.foraNivel !== true && q.anulado !== true && q.foraEdital !== true && !/^SIM/i.test(text(q.cap)) && (q.gabarito==="C" || q.gabarito==="E");
   const days = (a,b) => { const v=Date.parse(b)-Date.parse(a);return Number.isFinite(v)?v/86400000:null; };
   function retained(r) {
     if (!r || !r.tentativas) return false;
@@ -148,7 +148,7 @@
     const esc=escapeHtml;
     const rows=qs.slice(0,limit).map(q=>{
       const r=result.responses.get(q.id),marcou=text(r?.ultimaMarcada),answered=Number(r?.tentativas)>0&&(marcou==="C"||marcou==="E");
-      const correct=answered&&marcou===q.gabarito,mark=!answered?"Não respondida":correct?"Acerto recente":"Erro recente";
+      const correct=answered&&marcou===q.gabarito,mark=!answered?(marcou==="B"?"Em branco":"Não respondida"):correct?"Acerto recente":"Erro recente";
       return '<li><button type="button" class="lnk" data-qcard="'+esc(q.id)+'">'+esc(q.enunciado)+'</button><span class="qb-mastery-qstatus">'+esc(mark)+'</span></li>';
     }).join("");
     const remaining=qs.length-limit;
@@ -160,7 +160,7 @@
     return '<details class="qb-mastery-detail"><summary>Diagnóstico do '+esc(entry.children.length?"ramo":"conceito")+
       ' · '+esc(s.label)+' · '+esc(s.respondidas)+'/'+esc(s.total)+' respondidas</summary>'+
       '<div class="qb-mastery-inside"><p class="qb-mastery-metrics">'+esc(evidence)+
-      ' · '+s.acertos+' acertos · '+s.erros+' erros · '+s.brancos+' em branco · '+esc(s.caderno)+' no caderno de erros · '+esc(s.retidasEntreAcertos)+' retenções confirmadas</p>'+
+      ' · '+s.acertos+' acertos · '+s.erros+' erros'+(s.respondidas?' ('+percent(s.erros/s.respondidas)+')':'')+' · '+s.brancos+' em branco · '+esc(s.caderno)+' no caderno de erros · '+esc(s.retidasEntreAcertos)+' retenções confirmadas</p>'+
       '<p class="qb-mastery-caption">Agrega apenas questões vinculadas exatamente a este nó ou a seus descendentes. O percentual não inclui questões sem resposta nem simulado fora do edital.</p>'+
       (rows?'<ol class="qb-mastery-questions">'+rows+'</ol>':'<p class="qb-mastery-caption">Ainda não há questões com vínculo exato a este ramo.</p>')+
       (qs.length?'<button type="button" class="btn small" data-mastery-practice="'+esc(path)+'">Treinar '+qs.length+' questões deste ramo</button>':"")+

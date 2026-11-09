@@ -1789,7 +1789,7 @@ function mapa3D(m,t,lig,diagnostico){
   const roots=m.ramos||[];
   if(!roots.length)return '';
   roots.forEach((n,i)=>visit(n,String(i),'root',i));
-  const data=esc(JSON.stringify({topic:S.mapaId,title:m.centro||t.titulo||'Mapa mental',nodes:list,rootStatus:diagnostico?.root.stat.status,links:lig.map(l=>l.slice(0,2))}));
+  const data=esc(JSON.stringify({topic:S.mapaId,title:m.centro||t.titulo||'Mapa mental',nodes:list,rootStatus:diagnostico?.root?.stat?.status,links:lig.map(l=>l.slice(0,2))}));
   return `<section class="qb-map3" data-map3 data-graph="${data}" hidden aria-label="Visualização do mapa mental">
     <div class="qb-map3-choices" role="group" aria-label="Formato do mapa">
       <button type="button" data-map-mode="list" aria-pressed="true">Em lista</button>
@@ -1834,7 +1834,7 @@ function viewMapa(){
     const xk='mx:'+S.mapaId+':'+k, xa=n.x&&(single||(S.mapaX||new Set()).has(xk));
     const lab=n.x&&!single?`<button class="m-t m-tx" data-mx="${esc(xk)}" aria-expanded="${!!xa}">${esc(n.t)} <span class="m-i">${xa?'▾':'ⓘ'}</span></button>`:`<span class="m-t">${esc(n.t)}</span>`;
     const selo=diagnostico?window.QBMapMastery.badge(diagnostico.byPath.get(k)):'';
-    const diagnosticoDoNo=diagnostico?window.QBMapMastery.detail(diagnostico,k,{limit:35}):'';
+    const diagnosticoDoNo=diagnostico?window.QBMapMastery.detail(diagnostico,k,{limit:single?Infinity:35}):'';
     /* Questões com associação editorial direta ao nó; só exibimos gabarito após revelar o item. */
     const ligadasAoNo=(n.x?.questaoIds||[]).map(id=>S.q.get(id)).filter(Boolean);
     const exemplos=ligadasAoNo.length?`<details class="qb-map-questions"><summary>Questões deste conceito · ${ligadasAoNo.length}</summary>${ligadasAoNo.map(q=>`<details class="qb-qsource-item"><summary>${esc(q.enunciado)}</summary><div><p><b>Gabarito: ${q.gabarito==='C'?'Certo':'Errado'}</b></p><p>${esc(q.comentario||'Comentário indisponível.')}</p><small>${esc(q.ref||'Fonte não cadastrada')}</small>${atalhosQuestao(q,indice)}</div></details>`).join('')}</details>`:'';
@@ -1844,7 +1844,7 @@ function viewMapa(){
   drawMapDetail=path=>{
     if(path==='root')return `<h3>${esc(m.centro||t.titulo||'Mapa mental')}</h3>
       ${diagnostico?window.QBMapMastery.badge(diagnostico.root):''}
-      ${diagnostico?window.QBMapMastery.detail(diagnostico,'root'):''}
+      ${diagnostico?window.QBMapMastery.detail(diagnostico,'root',{limit:Infinity}):''}
       ${t.id?'<button type="button" class="btn ghost small" data-mastery-edital>Ver assunto no edital</button>':''}`;
     if(typeof path!=='string'||!/^\d+(?:\.\d+)*$/.test(path))return '';
     const indexes=path.split('.').map(Number),root=m.ramos?.[indexes[0]];
