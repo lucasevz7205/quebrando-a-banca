@@ -1778,10 +1778,11 @@ function viewRevisao(){
   </div>`;
 }
 /* mapa mental no estilo do modelo do Lucas (End-to-End): centro, ramos coloridos, rótulos curtos com etiqueta, tabela, caixa e ligações cruzadas */
-function mapa3D(m,t,lig){
+function mapa3D(m,t,lig,diagnostico){
   const list=[];
   const visit=(n,path,parent,branch)=>{
-    list.push({path,parent,branch,id:n.id||null,title:n.t||'Conceito sem título'});
+    const stat=diagnostico?.byPath.get(path)?.stat;
+    list.push({path,parent,branch,id:n.id||null,title:n.t||'Conceito sem título',status:stat?.status||'sem-evidencia',statusLabel:stat?.label||'Não avaliado',percentual:stat?.percentual??null,questoes:stat?.total||0,respondidas:stat?.respondidas||0,retidas:stat?.retidasEntreAcertos||0});
     (n.f||[]).forEach((child,i)=>visit(child,path+'.'+i,path,branch));
   };
   const roots=m.ramos||[];
@@ -2266,6 +2267,7 @@ function wire(){
   document.querySelectorAll('[data-cf]').forEach(b=>b.addEventListener('click',()=>{S.cartFech=new Set();if(b.dataset.cf==='0'){const rv=S.rv.get(S.cartId);for(const c of (rv&&rv.cartoes)||[])S.cartFech.add(S.cartId+'#'+(c.tema||'Geral'))}render(true)}));
   const cr=$('#cart-reset'); if(cr) cr.addEventListener('click',()=>{const qs=indiceQuestoes().byTopic.get(S.cartId)||[],keys=new Set(qs.map(q=>chaveQuestao(q.id)));for(const k of [...S.cartAbertos]) if(k.startsWith(S.cartId+'@')||keys.has(k)){S.cartAbertos.delete(k);S.cartRated.delete(k);S.cartResp.delete(k);S.ia.delete(k)}render(true)});
   const mt=$('#mapa-top'); if(mt) mt.addEventListener('change',()=>{S.mapaId=mt.value;S.mapaAb=null;S.revelados.clear();render(true)});
+  document.querySelectorAll('[data-mastery-edital]').forEach(b=>b.addEventListener('click',()=>{const t=S.ed.get(S.mapaId);if(!t)return;S.abertos.add(t.sigla);S.fSt='';setView('edital');requestAnimationFrame(()=>document.getElementById('tp-'+t.id)?.scrollIntoView({block:'center',behavior:'smooth'}));}));
   /* O detalhamento do edital está exclusivamente na aba Edital. */
   const ra=$('#rv-abrir'); if(ra) ra.addEventListener('click',()=>{for(const t of S.ed.values()){if(S.rv.has(t.id)||S.pt.has(t.id)){S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+t.id)}}render(true)});
   const rf=$('#rv-fechar'); if(rf) rf.addEventListener('click',()=>{for(const k of [...S.abertos]) if(k.startsWith('rv:')||k.startsWith('rvt:')) S.abertos.delete(k); S.fMat=''; render(true)});
