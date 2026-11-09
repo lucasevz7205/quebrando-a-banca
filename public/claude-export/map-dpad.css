@@ -1,0 +1,73 @@
+/* Bússola de navegação do mapa 3D.
+ * Controles de PAN (deslocamento da visão), independentes de giro e zoom.
+ * Visível sobre o palco em desktop e mobile; não intercepta o restante da cena. */
+.qb-map3 .qb-map3-stage .qb-map3-dpad {
+  position: absolute;
+  z-index: 6;
+  right: clamp(10px, 2vw, 18px);
+  bottom: clamp(10px, 2vw, 18px);
+  display: grid;
+  grid-template-columns: repeat(3, 44px);
+  grid-template-rows: repeat(3, 44px);
+  gap: 5px;
+  padding: 9px;
+  border: 1px solid #9795d473;
+  border-radius: 19px;
+  background: linear-gradient(140deg, #101930e9, #262044dd);
+  box-shadow: 0 8px 26px #02071199, inset 0 1px 0 #ffffff13;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  pointer-events: auto;
+}
+.qb-map3 .qb-map3-dpad button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 11px;
+  border: 1px solid #7f8bc3a8;
+  color: #eef0ff;
+  background: linear-gradient(160deg, #354269, #202746);
+  font: 700 25px/1 var(--display, sans-serif);
+  box-shadow: inset 0 1px 0 #ffffff1b;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.qb-map3 .qb-map3-dpad button:is(:hover, :focus-visible) {
+  color: #fff;
+  background: linear-gradient(155deg, #6554a0, #394981);
+  border-color: #d0c4ff;
+  outline: 2px solid #b6aaff;
+  outline-offset: 1px;
+}
+.qb-map3 .qb-map3-dpad button:active {
+  background: #7660ac;
+  transform: scale(.95);
+}
+.qb-map3 .qb-map3-dpad-up { grid-column: 2; grid-row: 1; }
+.qb-map3 .qb-map3-dpad-left { grid-column: 1; grid-row: 2; }
+.qb-map3 .qb-map3-dpad-center { grid-column: 2; grid-row: 2; font-size: 23px !important; }
+.qb-map3 .qb-map3-dpad-right { grid-column: 3; grid-row: 2; }
+.qb-map3 .qb-map3-dpad-down { grid-column: 2; grid-row: 3; }
+@media (max-width: 520px) {
+  .qb-map3 .qb-map3-stage .qb-map3-dpad {
+    grid-template-columns: repeat(3, 39px);
+    grid-template-rows: repeat(3, 39px);
+    gap: 4px;
+    padding: 7px;
+    border-radius: 15px;
+  }
+  .qb-map3 .qb-map3-dpad button {
+    min-width: 39px;
+    min-height: 39px;
+    font-size: 22px;
+    border-radius: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .qb-map3 .qb-map3-dpad button { transition: none; }
+}
