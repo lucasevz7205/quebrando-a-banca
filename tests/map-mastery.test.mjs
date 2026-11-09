@@ -65,6 +65,22 @@ test("simulados, itens fora do nível e sem resposta não adulteram taxa",()=>{
  assert.equal(st.total,1);assert.equal(st.respondidas,0);assert.equal(st.brancos,1);
  assert.equal(st.percentual,null);
 });
+test("vínculo real dos lotes fiscal T50 e suplementos preserva cada questão exatamente uma vez",()=>{
+ const api=load();
+ for(const name of ["t50-mer-entidades-relacionamentos","sup-qualidade-dados","sup-modelagem-logica","sup-normalizacao"]){
+  const pack=JSON.parse(fs.readFileSync("scripts/fiscal/"+name+".seed.json","utf8"));
+  const questions=new Map(pack.questions.map(q=>[q.id,q]));
+  const result=api.build({topicId:pack.topic,map:pack.map,cards:pack.cards,questions,responses:new Map(),topic:{id:pack.topic,caps:[pack.questions[0].cap]}});
+  assert.equal(result.linked.size,pack.questions.length,name+" vincula todos os itens por IDs exatos");
+  assert.equal(result.edital.total,pack.questions.length);
+  assert.ok(result.nodes.every(n=>n.stat.status==="sem-evidencia"),"não deduz domínio sem respostas");
+ }
+});
+test("a página autenticada injeta a fonte de estatísticas nos mapas 2D e 3D",()=>{
+ const shell=fs.readFileSync("src/components/qb/study-shell.html","utf8");
+ for(const marker of ["/claude-export/map-mastery.js","/claude-export/map-mastery.css","QBMapMastery?.build","QBMapMastery.overview","data-mastery-practice","statusLabel:stat?.label","data-mastery-edital"])
+   assert.ok(shell.includes(marker),"integração ausente: "+marker);
+});
 test("HTML de enunciados e nós deve ser escapado",()=>{
  const api=load();
  const escaped=api.escapeHtml("<img src=x onerror=alert(1)>");
