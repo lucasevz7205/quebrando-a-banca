@@ -461,9 +461,11 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/learning.js"></script>
 <script src="/claude-export/question-links.js"></script>
 <script src="/claude-export/map-origin.js"></script>
+<script src="/claude-export/map-mastery.js"></script>
 <link rel="stylesheet" href="/claude-export/learning.css">
 <link rel="stylesheet" href="/claude-export/study-palette.css">
 <link rel="stylesheet" href="/claude-export/map-3d.css">
+<link rel="stylesheet" href="/claude-export/map-mastery.css">
 <script>
 (function(){
 const S = {
@@ -1817,6 +1819,7 @@ function viewMapa(){
   const t=S.ed.get(S.mapaId)||{}, m=revMapa.mapa, ab=S.mapaAb||new Set(['*']), tudo=ab.has('*');
   const nomes={}; const walk=(n)=>{if(n.id)nomes[n.id]=n.t;(n.f||[]).forEach(walk)}; (m.ramos||[]).forEach(walk);
   const lig=m.ligacoes||[];
+  const diagnostico=window.QBMapMastery?.build({topicId:S.mapaId,map:m,cards:revMapa.cartoes||[],questions:S.q,responses:S.r,topic:t});
   const no=(n,cor,path)=>{
     const k=path, kids=n.f||[], aberto=tudo||ab.has(k), key='mp:'+S.mapaId+':'+k, oc=S.evocar&&n.n&&!S.revelados.has(key);
     const out=lig.filter(l=>l[0]===n.id).map(l=>`<button class="m-link" data-mir="${esc(l[1])}" title="${esc(l[2]||'')}">↗ ${esc(nomes[l[1]]||l[1])}</button>`).join('');
@@ -1826,11 +1829,13 @@ function viewMapa(){
     const tog=kids.length?`<button class="m-tog" data-mtog="${esc(k)}" aria-expanded="${aberto}">${aberto?'−':'+'}${aberto?'':' '+kids.length}</button>`:'';
     const xk='mx:'+S.mapaId+':'+k, xa=n.x&&(S.mapaX||new Set()).has(xk);
     const lab=n.x?`<button class="m-t m-tx" data-mx="${esc(xk)}" aria-expanded="${!!xa}">${esc(n.t)} <span class="m-i">${xa?'▾':'ⓘ'}</span></button>`:`<span class="m-t">${esc(n.t)}</span>`;
+    const selo=diagnostico?window.QBMapMastery.badge(diagnostico.byPath.get(k)):'';
+    const diagnosticoDoNo=diagnostico?window.QBMapMastery.detail(diagnostico,k,{limit:35}):'';
     /* Questões com associação editorial direta ao nó; só exibimos gabarito após revelar o item. */
     const ligadasAoNo=(n.x?.questaoIds||[]).map(id=>S.q.get(id)).filter(Boolean);
     const exemplos=ligadasAoNo.length?`<details class="qb-map-questions"><summary>Questões deste conceito · ${ligadasAoNo.length}</summary>${ligadasAoNo.map(q=>`<details class="qb-qsource-item"><summary>${esc(q.enunciado)}</summary><div><p><b>Gabarito: ${q.gabarito==='C'?'Certo':'Errado'}</b></p><p>${esc(q.comentario||'Comentário indisponível.')}</p><small>${esc(q.ref||'Fonte não cadastrada')}</small>${atalhosQuestao(q,indice)}</div></details>`).join('')}</details>`:'';
     const det=xa?`<div class="m-det"><p>${esc(n.x.e||'')}</p>${n.x.ex?`<p><b>Exemplo:</b> ${esc(n.x.ex)}</p>`:''}${n.x.trap?`<p class="m-trap"><b>Pegadinha:</b> ${esc(n.x.trap)}</p>`:''}${n.x.src?`<span class="ps">${esc(n.x.src)}</span>`:''}${exemplos}</div>`:'';
-    return `<li class="m-no${n.caixa?' m-caixa':''}" data-map-node="${esc(S.mapaId+':'+k)}" ${n.id?`id="mn-${esc(n.id)}"`:''}><div class="m-l">${lab}${tog}${out}${inn}</div>${nota}${det}${tab}${kids.length&&aberto?`<ul>${kids.map((c,i)=>no(c,cor,k+'.'+i)).join('')}</ul>`:''}</li>`;
+    return `<li class="m-no${n.caixa?' m-caixa':''}" data-map-node="${esc(S.mapaId+':'+k)}" ${n.id?`id="mn-${esc(n.id)}"`:''}><div class="m-l">${lab}${tog}${out}${inn}${selo}</div>${nota}${det}${diagnosticoDoNo}${tab}${kids.length&&aberto?`<ul>${kids.map((c,i)=>no(c,cor,k+'.'+i)).join('')}</ul>`:''}</li>`;
   };
   const ramos=(m.ramos||[]).map((r,i)=>{const cor=`var(--qb-map-${((r.cor||i+1)-1)%8+1})`;return `<section class="m-ramo" style="--mc:${cor}"><span class="qb-map-branch" aria-hidden="true">RAMO ${String(i+1).padStart(2,'0')}</span><ul class="m-raiz">${no(r,cor,String(i))}</ul></section>`}).join('');
   return `<div class="wrap" style="gap:14px;max-width:1100px">
@@ -1842,7 +1847,8 @@ function viewMapa(){
       ${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
     <p class="rule">Toque num ramo com ⓘ para abrir a explicação. Com "Evocar antes de ler", tente explicar antes de abrir.</p>
     <div class="m-centro qb-topic-hub"><span>MAPA MENTAL · CONCEITO CENTRAL</span><strong>${esc(m.centro||t.titulo||'')}</strong><small>${(m.ramos||[]).length} ramos · ${lig.length} ligações cruzadas</small></div>
-    ${mapa3D(m, t, lig)}
+    ${diagnostico?window.QBMapMastery.overview(diagnostico):''}
+    ${mapa3D(m, t, lig, diagnostico)}
     <div class="m-grid qb-map-network" data-map-list>${ramos}</div>
     ${questoesEmMapa(indice.byTopic.get(S.mapaId)||[],indice)}
     ${m.autor?`<p class="rule">${esc(m.autor)}</p>`:''}
