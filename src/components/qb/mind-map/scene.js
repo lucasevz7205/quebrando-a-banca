@@ -101,7 +101,7 @@ export function startMapScene(panel, graph, onSelect, onLost) {
     tag.style.setProperty("--qb-node-dot",colorFor(node));
     tag.className = node.depth ? "qb-map3-tag" : "qb-map3-tag qb-map3-origin";
     tag.setAttribute("aria-pressed", "false");
-    tag.addEventListener("click", event => onSelect(node.path,true,event.detail>=2));
+    tag.addEventListener("click", event => activateNode(node.path,event));
     wrapper.append(tag);
     let toggle=null;
     if(branches.hasChildren(node.path)){
@@ -122,6 +122,17 @@ export function startMapScene(panel, graph, onSelect, onLost) {
     return {wrapper,tag,toggle,i};
   });
   let width = 0, height = 0, distance = 0, selected = "root", animation = 0;
+  let lastTapPath=null,lastTapAt=-Infinity;
+  function activateNode(path,event){
+    // Native double-click or two taps on the same label within 350 ms.
+    // A single click never triggers the AXON explanation.
+    const now=Number.isFinite(event?.timeStamp)?event.timeStamp:view.performance.now();
+    const repeated=event?.detail>0 && lastTapPath===path && now-lastTapAt>0 && now-lastTapAt<350;
+    const double=event?.detail>=2||repeated;
+    lastTapPath=double?null:path;
+    lastTapAt=now;
+    onSelect(path,double,double);
+  }
   function syncVisibility(){
     visiblePaths=branches.visiblePaths();
     visibleSlots.length=0;
@@ -166,16 +177,22 @@ export function startMapScene(panel, graph, onSelect, onLost) {
   function render() {
     if (!width || !height) return;
     renderer.render(scene,camera);
-    for (const {tag,i} of tagList) {
+    for (const {wrapper,tag,toggle,i} of tagList) {
       const node=coords[i];
-      const show=node.path===selected||node.parent===selected||node.path==="root";
-      if(!show){tag.hidden=true;continue;}
+      const show=visiblePaths.has(node.path) && (node.path===selected||node.parent===selected||node.path==="root"||node.parent==="root");
+      if(!show){wrapper.hidden=true;continue;}
       point.copy(world[i]).project(camera);
-      tag.hidden = Math.abs(point.x) > .95 || Math.abs(point.y) > .93 || Math.abs(point.z) > 1;
-      if (!tag.hidden) {
-        tag.style.left = ((point.x + 1) * width / 2) + "px";
-        tag.style.top = ((1 - point.y) * height / 2) + "px";
-        tag.setAttribute("aria-pressed", String(selected === coords[i].path));
+      wrapper.hidden = Math.abs(point.x) > .95 || Math.abs(point.y) > .93 || Math.abs(point.z) > 1;
+      if (!wrapper.hidden) {
+        wrapper.style.left = ((point.x + 1) * width / 2) + "px";
+        wrapper.style.top = ((1 - point.y) * height / 2) + "px";
+        tag.setAttribute("aria-pressed", String(selected === node.path));
+        if(toggle){
+          const isOpen=branches.isExpanded(node.path);
+          toggle.textContent=isOpen?"−":"+";
+          toggle.setAttribute("aria-expanded",String(isOpen));
+          toggle.setAttribute("aria-label",(isOpen?"Recolher":"Abrir")+" "+branches.childCount(node.path)+" subramos de "+node.title);
+        }
       }
     }
   }
@@ -225,6 +242,7 @@ export function startMapScene(panel, graph, onSelect, onLost) {
     animation=view.requestAnimationFrame(tick);
   }
   function select(path, shouldZoom = false) {
+    if(branches.reveal(path))syncVisibility();
     selected = path;
     const i = byPath.get(path);
     focus.visible = i !== undefined;
@@ -255,26 +273,36 @@ export function startMapScene(panel, graph, onSelect, onLost) {
     render();
   }
   const ray = new Raycaster(), mouse = new Vector2();
-  let down = null;
-  function pointerDown(e) { down = [e.clientX,e.clientY]; }
+  let down = null, allowClick = false;
+  function pointerDown(e) { down = [e.clientX,e.clientY]; allowClick=false; }
   function pointerUp(e) {
-    if (!down || Math.hypot(e.clientX-down[0],e.clientY-down[1]) > 7) { down = null; return; }
-    down = null;
-    const box = canvas.getBoundingClientRect();
-    mouse.set((e.clientX-box.left)/box.width*2-1, 1-(e.clientY-box.top)/box.height*2);
+    allowClick=!!down && Math.hypot(e.clientX-down[0],e.clientY-down[1])<=7;
+    down=null;
+  }
+  function clickNode(e) {
+    if(!allowClick)return; // drag/rotation should not select a concept
+    allowClick=false;
+    const box=canvas.getBoundingClientRect();
+    mouse.set((e.clientX-box.left)/box.width*2-1,1-(e.clientY-box.top)/box.height*2);
     ray.setFromCamera(mouse,camera);
-    const hit = ray.intersectObject(spheres)[0];
-    if (hit) onSelect(coords[hit.instanceId].path);
+    const hit=ray.intersectObject(spheres)[0];
+    const index=hit&&visibleSlots[hit.instanceId];
+    if(index!==undefined)activateNode(coords[index].path,e);
   }
   const observer = new view.ResizeObserver(resize);
   observer.observe(stage);
   controls.addEventListener("change",render);
   canvas.addEventListener("pointerdown",pointerDown);
   canvas.addEventListener("pointerup",pointerUp);
+  canvas.addEventListener("click",clickNode);
   canvas.addEventListener("webglcontextlost",onLost);
+  syncVisibility();
   resize();
   return {
-    select, adjust, pointFor,
+    select, adjust, pointFor, setBranchMode,
+    branchSummary:()=>branches.summary(),
+    hasChildren:path=>branches.hasChildren(path),
+    isExpanded:path=>branches.isExpanded(path),
     dispose() {
       observer.disconnect();
       cancelZoom();
@@ -282,6 +310,7 @@ export function startMapScene(panel, graph, onSelect, onLost) {
       controls.dispose();
       canvas.removeEventListener("pointerdown",pointerDown);
       canvas.removeEventListener("pointerup",pointerUp);
+      canvas.removeEventListener("click",clickNode);
       canvas.removeEventListener("webglcontextlost",onLost);
       dustGeometry.dispose();
       dustMaterial.dispose();
