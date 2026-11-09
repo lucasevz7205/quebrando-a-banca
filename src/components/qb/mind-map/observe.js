@@ -1,3 +1,5 @@
+import { createAxonReveal } from "./axon-reveal";
+
 export function observeMindMap(frame) {
   let detach = () => {};
   function attach() {
@@ -28,6 +30,7 @@ export function observeMindMap(frame) {
       const detail = next.querySelector("[data-map-detail]");
       const modes = [...next.querySelectorAll("[data-map-mode]")];
       let scene = null, version = 0, disposed = false;
+      const reveal = createAxonReveal(next.querySelector("[data-map-stage]"), view);
       const nodes = new Map(graph.nodes.map(n => [n.path,n]));
       chooser.add(new view.Option(graph.title + " · conceito central", "root"));
       for (const node of graph.nodes) {
@@ -36,9 +39,10 @@ export function observeMindMap(frame) {
       }
       const byId = new Map();
       for (const node of graph.nodes) byId.set(node.id, byId.has(node.id) ? null : node.path);
-      function select(path, zoom = true) {
+      function select(path, zoom = true, expand = true) {
         lastPath = nodes.has(path) ? path : "root";
         chooser.value = lastPath;
+        const origin = scene?.pointFor(lastPath);
         scene?.select(lastPath, zoom);
         pathBar.replaceChildren();
         const parts = lastPath === "root" ? [] : lastPath.split(".");
@@ -53,8 +57,13 @@ export function observeMindMap(frame) {
         }
         next.dispatchEvent(new view.CustomEvent("qb-map-render-node", { detail: { topic: graph.topic, path: lastPath } }));
         detail.querySelector(":scope > .qb-mastery-detail, .m-no > .qb-mastery-detail")?.setAttribute("open", "");
+        if(mode === "3d") {
+          if(expand) reveal.show(origin,graph.topic+":"+lastPath);
+          else reveal.hide(true);
+        }
       }
       function showList(message = "") {
+        reveal.hide(true);
         version++;
         mode = "list";
         scene?.dispose();
@@ -78,7 +87,7 @@ export function observeMindMap(frame) {
           status.textContent = "";
           list.hidden = true;
           modes.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.mapMode === "3d")));
-          select(lastPath || "root", lastPath !== "" && lastPath !== "root");
+          select(lastPath || "root", lastPath !== "" && lastPath !== "root", false);
         } catch {
           if (!disposed && request === version) showList("O 3D está indisponível neste navegador. A lista está aberta.");
         }
@@ -86,22 +95,37 @@ export function observeMindMap(frame) {
       function act(event) {
         const button = event.target.closest("button");
         if (!button) return;
+        if (button.hasAttribute("data-map-close")) {
+          reveal.hide();
+          chooser.focus({preventScroll:true});
+          return;
+        }
         if (button.dataset.mapMode === "list") showList();
         if (button.dataset.mapMode === "3d") show3d();
-        if (button.dataset.mapCamera === "reset") select("root");
+        if (button.dataset.mapCamera === "reset") {select("root", true, false);reveal.hide();}
         else if (button.dataset.mapCamera) scene?.adjust(button.dataset.mapCamera);
         if (button.dataset.mapPathTarget) select(button.dataset.mapPathTarget);
         if (button.dataset.mir && byId.get(button.dataset.mir)) select(byId.get(button.dataset.mir));
-        if (button.hasAttribute("data-map-open")) scene?.select(lastPath, true);
+        if (button.hasAttribute("data-map-open")) select(lastPath, true, true);
       }
       function change() { select(chooser.value); }
+      function keydown(event) {
+        if(event.key === "Escape" && reveal.active) {
+          reveal.hide();
+          chooser.focus({preventScroll:true});
+          event.preventDefault();
+        }
+      }
       next.addEventListener("click", act);
+      next.addEventListener("keydown", keydown);
       chooser.addEventListener("change", change);
       release = () => {
         disposed = true;
         version++;
+        reveal.dispose();
         scene?.dispose();
         next.removeEventListener("click", act);
+        next.removeEventListener("keydown", keydown);
         chooser.removeEventListener("change", change);
       };
       next.hidden = false;
