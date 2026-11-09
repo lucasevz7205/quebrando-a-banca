@@ -1794,7 +1794,8 @@ function mapa3D(m,t,lig,diagnostico){
   const roots=m.ramos||[];
   if(!roots.length)return '';
   roots.forEach((n,i)=>visit(n,String(i),'root',i));
-  const data=esc(JSON.stringify({topic:S.mapaId,title:m.centro||t.titulo||'Mapa mental',nodes:list,rootStatus:diagnostico?.root?.stat?.status,links:lig.map(l=>l.slice(0,2))}));
+  const geral=diagnostico?.edital;
+  const data=esc(JSON.stringify({topic:S.mapaId,title:m.centro||t.titulo||'Mapa mental',nodes:list,rootStatus:geral?.status,rootStatusLabel:geral?'Geral do edital · '+geral.label:'Não avaliado',rootPercentual:geral?.percentual??null,rootRespondidas:geral?.respondidas||0,rootQuestoes:geral?.total||0,rootFlashcards:diagnostico?.root?.review?.total||0,rootFlashcardsAvaliados:diagnostico?.root?.review?.avaliados||0,rootFlashcardsLembrados:diagnostico?.root?.review?.lembrados||0,links:lig.map(l=>l.slice(0,2))}));
   return `<section class="qb-map3" data-map3 data-graph="${data}" hidden aria-label="Visualização do mapa mental">
     <div class="qb-map3-choices" role="group" aria-label="Formato do mapa">
       <button type="button" data-map-mode="list" aria-pressed="true">Em lista</button>
@@ -1894,6 +1895,7 @@ function viewMapa(){
     <p class="rule">Toque num ramo com ⓘ para abrir a explicação. Com "Evocar antes de ler", tente explicar antes de abrir.</p>
     <div class="m-centro qb-topic-hub"><span>MAPA MENTAL · CONCEITO CENTRAL</span><strong>${esc(m.centro||t.titulo||'')}</strong><small>${(m.ramos||[]).length} ramos · ${lig.length} ligações cruzadas</small></div>
     ${diagnostico?window.QBMapMastery.overview(diagnostico):''}
+    ${editorial?.unmatchedQuestions?.length!==undefined?`<p class="qb-map-link-audit">Vínculos do mapa: <strong>${editorial.linked}/${editorial.linked+editorial.unmatchedQuestions.length}</strong> questões e <strong>${editorial.cardLinks.length}/${editorial.cards.length}</strong> flashcards associados a conceitos. Os demais permanecem sem atribuição de subramo até que haja correspondência verificável. O nó central usa o resultado geral do edital.</p>`:''}
     ${mapa3D(m, t, lig, diagnostico)}
     <div class="m-grid qb-map-network" data-map-list>${ramos}</div>
     ${questoesEmMapa(indice.byTopic.get(S.mapaId)||[],indice)}
