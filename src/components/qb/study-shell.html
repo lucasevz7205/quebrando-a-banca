@@ -1874,10 +1874,16 @@ function viewMapa(){
     return `<li class="m-no${n.caixa?' m-caixa':''}" data-map-node="${esc(S.mapaId+':'+k)}" ${n.id&&!single?`id="mn-${esc(n.id)}"`:''}><div class="m-l">${lab}${tog}${out}${inn}${selo}</div>${nota}${det}${diagnosticoDoNo}${tab}${!single&&kids.length&&aberto?`<ul>${kids.map((c,i)=>no(c,cor,k+'.'+i)).join('')}</ul>`:''}</li>`;
   };
   drawMapDetail=path=>{
-    if(path==='root')return `<h3>${esc(m.centro||t.titulo||'Mapa mental')}</h3>
-      ${diagnostico?window.QBMapMastery.badge(diagnostico.root):''}
-      ${diagnostico?window.QBMapMastery.detail(diagnostico,'root',{limit:Infinity}):''}
-      ${t.id?'<button type="button" class="btn ghost small" data-mastery-edital>Ver assunto no edital</button>':''}`;
+    if(path==='root') {
+      const global=diagnostico?.edital;
+      const globalLabel=global?(global.respondidas?Math.round(global.percentual*100)+'% de acertos · '+global.respondidas+'/'+global.total+' questões respondidas':'Sem respostas do edital registradas'):'Desempenho ainda indisponível';
+      return `<h3>${esc(m.centro||t.titulo||'Mapa mental')}</h3>
+        <p class="qb-map-root-summary"><b>Desempenho geral no edital:</b> ${esc(globalLabel)}. Esse indicador não certifica domínio de cada subramo.</p>
+        ${global?window.QBMapMastery.badge(global):''}
+        <h4 class="qb-map-root-heading">Questões e flashcards já vinculados ao mapa</h4>
+        ${diagnostico?window.QBMapMastery.detail(diagnostico,'root',{limit:Infinity}):''}
+        ${t.id?'<button type="button" class="btn ghost small" data-mastery-edital>Ver assunto no edital</button>':''}`;
+    }
     if(typeof path!=='string'||!/^\d+(?:\.\d+)*$/.test(path))return '';
     const indexes=path.split('.').map(Number),root=m.ramos?.[indexes[0]];
     const n=indexes.slice(1).reduce((parent,index)=>parent?.f?.[index],root);
