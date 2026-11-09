@@ -74,6 +74,12 @@ test("câmera usa apenas nós visíveis, zoom centralizado no cursor e mouse dir
  assert.match(scene,/resolveLabelPositions/);
  assert.match(scene,/onPointerMove/);
  assert.match(scene,/onContextMenu/);
+ assert.match(scene,/370\);/);
+ assert.match(scene,/if\(stamp-lastHover<38\)return/);
+ assert.match(shell,/data-map-quick-branches/);
+ const observer=fs.readFileSync("src/components/qb/mind-map/observe.js","utf8");
+ assert.match(observer,/button\.dataset\.mapJump=node\.path/);
+ assert.match(observer,/select\(button\.dataset\.mapJump,true,false\)/);
  assert.match(shell,/map-navigation\.css/);
  assert.match(shell,/Roda do mouse: zoom no cursor/);
  assert.match(scene,/const tip=new Color\(colorFor\(target\)\)/,"cores do diagnóstico intactas");
