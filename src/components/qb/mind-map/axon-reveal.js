@@ -7,7 +7,14 @@ export function createAxonReveal(stage, win) {
   const card = panel?.querySelector("[data-map-concept-card]");
   const particles = stage.querySelector("[data-map-axon]");
   const context = particles?.getContext("2d", { alpha: true });
-  if (!panel || !card || !context) return { show() {}, hide() {}, dispose() {} };
+  if (!panel || !card) return { show() {}, hide() {}, dispose() {} };
+  // The explanation remains usable even when the secondary canvas is unavailable.
+  if (!context) return {
+    show() {panel.hidden=false;panel.dataset.open="true";panel.querySelector(".qb-map3-concept-close")?.focus({preventScroll:true});},
+    hide() {panel.hidden=true;panel.dataset.open="false";},
+    dispose() {panel.hidden=true;panel.dataset.open="false";},
+    get active(){return !panel.hidden;},
+  };
   const reduce = win.matchMedia("(prefers-reduced-motion: reduce)");
   let frame = 0, closing = 0, serial = 0, active = false;
   const cancelFrame = () => { if (frame) win.cancelAnimationFrame(frame); frame = 0; };
