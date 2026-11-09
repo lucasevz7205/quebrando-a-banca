@@ -462,6 +462,7 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/question-links.js"></script>
 <script src="/claude-export/map-origin.js"></script>
 <script src="/claude-export/map-mastery.js?v=2"></script>
+<script src="/claude-export/cohesion-links.js?v=1"></script>
 <link rel="stylesheet" href="/claude-export/learning.css">
 <link rel="stylesheet" href="/claude-export/study-palette.css">
 <link rel="stylesheet" href="/claude-export/map-3d.css?v=2">
@@ -1836,10 +1837,12 @@ function viewMapa(){
   if(!ids.length) return `<div class="wrap"><div class="notice">Nenhum mapa no formato novo ainda. Os chats de matéria gravam o mapa no documento de revisão do tópico.</div></div>`;
   if(!S.mapaId||!ids.includes(S.mapaId)) S.mapaId=ids[0];
   const revMapa=S.rv.get(S.mapaId),mapasRelacionados=(revMapa.mapaRelacionadoIds||[]).filter(id=>id!==S.mapaId&&S.rv.get(id)?.mapa);
-  const t=S.ed.get(S.mapaId)||{}, m=revMapa.mapa, ab=S.mapaAb||new Set(['*']), tudo=ab.has('*');
+  const t=S.ed.get(S.mapaId)||{}, editorial=window.QBEditorialCohesion?.decorate(S.mapaId,revMapa.mapa,revMapa.cartoes||[],S.q);
+  const m=editorial?.map||revMapa.mapa, mapCards=editorial?.cards||revMapa.cartoes||[];
+  const ab=S.mapaAb||new Set(['*']), tudo=ab.has('*');
   const nomes={}; const walk=(n)=>{if(n.id)nomes[n.id]=n.t;(n.f||[]).forEach(walk)}; (m.ramos||[]).forEach(walk);
   const lig=m.ligacoes||[];
-  const diagnostico=window.QBMapMastery?.build({topicId:S.mapaId,map:m,cards:revMapa.cartoes||[],questions:S.q,responses:S.r,assessments:S.cav,resolveCard:window.QBMapLinks?.resolve,topic:t});
+  const diagnostico=window.QBMapMastery?.build({topicId:S.mapaId,map:m,cards:mapCards,questions:S.q,responses:S.r,assessments:S.cav,resolveCard:window.QBMapLinks?.resolve,topic:t});
   const no=(n,cor,path,single=false)=>{
     const k=path, kids=n.f||[], aberto=tudo||ab.has(k), key='mp:'+S.mapaId+':'+k, oc=S.evocar&&n.n&&!S.revelados.has(key);
     const out=lig.filter(l=>l[0]===n.id).map(l=>`<button class="m-link" data-mir="${esc(l[1])}" title="${esc(l[2]||'')}">↗ ${esc(nomes[l[1]]||l[1])}</button>`).join('');
