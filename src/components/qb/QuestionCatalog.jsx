@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { incidence } from "@/lib/qb-catalog";
+import { creationBrief } from "@/lib/question-authoring";
 
 const groups = [["autoral", "Inéditas"], ["prova", "Provas analisadas"], ["cebraspe", "Referências CEBRASPE"]];
 const sorted = values => [...new Set(values.filter(Boolean))].sort((a, b) => String(a).localeCompare(String(b), "pt-BR", { numeric: true }));
@@ -69,14 +70,11 @@ export default function QuestionCatalog({ items }) {
         <h3>Caçador de Pegadinhas · mecanismos de falsificação</h3>
         <p>{stats.falsos} itens falsos no assunto; {stats.semMecanismo} sem classificação disponível.</p>
         <ul>{stats.rows.map(row => <li key={row.mecanismo}>{row.mecanismo} · {row.n}/{stats.falsos} ({pct(row.proporcao)})</li>)}</ul>
-        <button type="button" disabled={!stats.rows.length} onClick={() => download("quebrando-a-banca-pauta.json", {
-          versao: 1, materia, assunto, cargo, ano: ano || null, base: "amostra de provas analisadas", ...stats,
-          formatoImportacao: "Array JSON; use IDs estáveis novos, tipo autoral e documento identificando o lote. Importe apenas após revisão editorial.",
-          campos: ["id", "documento", "tipo", "ambiente", "materia", "assunto", "cargo", "enunciado", "gabarito", "justificativa", "fonte", "mecanismo", "referencias"],
-          orientacao: "Crie itens inéditos de Certo/Errado. Priorize os mecanismos com maior frequência observada. Use novos cenários e redação própria. Inclua gabarito, justificativa, fonte e mecanismo. Submeta os itens à revisão editorial.",
+        <button type="button" disabled={!stats.rows.length} onClick={() => download("quebrando-a-banca-pauta.json", creationBrief({
+          materia, assunto, cargo, ano, stats,
           evidencias: results.filter(q => stats.rows.some(row => row.referencias.includes(q.id)))
             .map(({ id, prova, item, evidencia, mecanismo, vacina }) => ({ id, prova, item, evidencia, mecanismo, vacina })),
-        })}>Exportar pauta de criação</button>
+        }))}>Exportar pauta de criação</button>
       </> : <p>Selecione matéria, assunto e cargo com itens válidos para calcular a incidência observada.</p>}
     </div>}
     <div className="qb-table"><table>
