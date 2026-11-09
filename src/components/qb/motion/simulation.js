@@ -179,7 +179,10 @@ export function startMotion(canvas) {
       previousSplat = now;
     }
     if (now > fluidUntil) {
-      if (fluidUntil) { clear(mask); fluidUntil = 0; }
+      if (fluidUntil) {
+        for (const output of [mask, wind.front, dye.front, pressure.front]) clear(output);
+        fluidUntil = 0;
+      }
       return;
     }
     pass(1, curl, null, wind.front.texture);

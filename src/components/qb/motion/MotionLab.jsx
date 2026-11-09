@@ -62,7 +62,7 @@ export default function MotionLab() {
     <canvas id="bg" ref={canvas} aria-hidden="true"/>
     <div className="qbm-ui">
       <Link className="qbm-brand" to="/questoes" aria-label="Voltar ao Laboratório de Questões">
-        <Mark/><span><strong>Quebrando a Banca</strong><small>Laboratório de questões</small></span>
+        <Mark/><span><h1>Quebrando a Banca</h1><small>Laboratório de questões</small></span>
       </Link>
       <div className="qbm-tools">
         <button type="button" className="qbm-motion-toggle" onClick={() => setMoving(!moving)}>
