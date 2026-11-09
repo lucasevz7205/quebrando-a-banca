@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { createFileRoute, Link, redirect } from "@tanstack/react-router";
+import { observeMindMap } from "@/components/qb/mind-map/observe";
 import { observeStudyMotion } from "@/components/qb/motion/study-motion";
 import StudyOnboarding from "@/components/qb/StudyOnboarding";
 import { base44 } from "@/api/base44Client";
@@ -113,7 +114,9 @@ function StudyScreen({ account }) {
 
   useEffect(() => {
     if (!ready || preview || !frameRef.current) return;
-    return observeStudyMotion(frameRef.current);
+    const stopMotion = observeStudyMotion(frameRef.current);
+    const stopMap = observeMindMap(frameRef.current);
+    return () => { stopMap(); stopMotion(); };
   }, [ready, preview, accountId, frameVersion]);
 
   if (!legacy && !accountId) {
