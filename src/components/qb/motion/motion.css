@@ -1,0 +1,124 @@
+.qbm {
+  --accent: #aa88ff;
+  --text: #ddd;
+  --muted: #a1a1a1;
+  --chip: #1c1c1c;
+  --line: #2a2a2a;
+  position: fixed;
+  inset: 0;
+  isolation: isolate;
+  overflow: hidden;
+  background: #000;
+  color: var(--text);
+  font: 13px/1.35 "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.qbm *, .qbm *::before { box-sizing: border-box; }
+.qbm::before {
+  position: absolute;
+  inset: 0;
+  background: url("./still.svg") 54% 50% / auto 94% no-repeat;
+  content: "";
+}
+.qbm canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.qbm canvas[data-live] { visibility: visible; }
+.qbm-ui { position: fixed; inset: 0; z-index: 1; pointer-events: none; }
+.qbm a { color: inherit; transition: opacity .3s; }
+.qbm a:hover { opacity: .7; }
+.qbm :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.qbm-brand {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  color: #fff !important;
+  text-decoration: none;
+  pointer-events: auto;
+  mix-blend-mode: plus-lighter;
+}
+.qbm-brand svg { flex: none; }
+.qbm-brand strong { display: block; font-size: 20px; font-weight: 500; }
+.qbm-brand small { display: block; margin-top: 2px; color: var(--muted); font-size: 11px; }
+.qbm-tools { position: absolute; right: 24px; top: 24px; display: flex; gap: 10px; align-items: center; }
+.qbm-counter {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #0a0a0a;
+  color: #fff;
+  font-size: 14px;
+}
+.qbm button { border: 0; color: #cfcfcf; background: var(--chip); font: inherit; text-transform: inherit; cursor: pointer; }
+.qbm-motion-toggle { padding: 7px 9px; font-size: 10px !important; pointer-events: auto; }
+.qbm-tags, .qbm-list {
+  position: absolute;
+  left: 24px;
+  width: min(320px, calc(100vw - 48px));
+  pointer-events: auto;
+}
+.qbm-tags { top: 120px; display: flex; flex-wrap: wrap; gap: 6px; }
+.qbm-tags button { padding: 5px 9px; font-size: 11px; }
+.qbm-tags button[aria-pressed="true"] { background: #e6e6e6; color: #000; }
+.qbm-list { top: 250px; bottom: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; }
+.qbm-list::-webkit-scrollbar, .qbm-about::-webkit-scrollbar { display: none; }
+.qbm-card { display: block; padding: 18px 0; border-top: 1px solid var(--line); text-decoration: none; }
+.qbm-card:focus-visible { outline-offset: -3px; }
+.qbm-thumb { height: 160px; overflow: hidden; border-radius: 2px; background: #0a0a0a; }
+.qbm-thumb video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.qbm-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 12px;
+  white-space: pre-line;
+}
+.qbm-meta span:last-child { color: var(--muted); text-align: right; }
+.qbm-about {
+  position: absolute;
+  right: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 380px;
+  max-height: calc(100% - 168px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  mix-blend-mode: plus-lighter;
+  pointer-events: auto;
+}
+.qbm-about section + section { margin-top: 2.2em; }
+.qbm-about h2 { margin: 0 0 1em; color: var(--accent); font: inherit; }
+.qbm-about p { margin: 0 0 1em; text-align: justify; }
+.qbm-about p:last-child { margin-bottom: 0; }
+.qbm-about ul { margin: 0; padding: 0; list-style: disc inside; }
+.qbm-about a { display: block; width: fit-content; margin: 4px 0; text-decoration: underline; }
+@media (max-width: 1100px) {
+  .qbm-about { right: 24px; width: 320px; }
+}
+@media (max-width: 760px), (max-height: 500px) {
+  .qbm-list, .qbm-tags { display: none; }
+  .qbm-about { left: 24px; right: 24px; top: auto; bottom: 24px; width: auto; transform: none; max-height: calc(100% - 154px); }
+  .qbm-about p { text-align: left; }
+  .qbm-tools { top: 80px; left: 24px; right: auto; }
+  .qbm-counter { display: none; }
+  .qbm::before { background-position: 52% 36%; background-size: auto 80%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .qbm a { transition: none; }
+}
