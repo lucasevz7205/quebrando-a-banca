@@ -28,12 +28,25 @@ export function observeMindMap(frame) {
       const chooser = next.querySelector("[data-map-select]");
       const pathBar = next.querySelector("[data-map-path]");
       const detail = next.querySelector("[data-map-detail]");
+      const quickBranches = next.querySelector("[data-map-quick-branches]");
       const branchStatus = next.querySelector("[data-map-branch-status]");
       const branchButtons = [...next.querySelectorAll("[data-map-branch]")];
       const modes = [...next.querySelectorAll("[data-map-mode]")];
       let scene = null, version = 0, disposed = false;
       const reveal = createAxonReveal(next.querySelector("[data-map-stage]"), view);
       const nodes = new Map(graph.nodes.map(n => [n.path,n]));
+      const quickButtons=[];
+      for(const node of graph.nodes.filter(n=>n.parent==="root")){
+        const button=doc.createElement("button");
+        button.type="button";
+        button.dataset.mapJump=node.path;
+        button.textContent=node.title;
+        button.title="Focar "+node.title+" no mapa tridimensional";
+        button.setAttribute("aria-pressed","false");
+        button.style.setProperty("--qb-jump-dot","var(--qb-node-"+(node.status||"sem-evidencia")+")");
+        quickBranches?.append(button);
+        quickButtons.push(button);
+      }
       chooser.add(new view.Option(graph.title + " · conceito central", "root"));
       for (const node of graph.nodes) {
         const indent = "› ".repeat(node.path.split(".").length);
@@ -56,6 +69,10 @@ export function observeMindMap(frame) {
       function select(path, zoom = true, expand = false) {
         lastPath = nodes.has(path) ? path : "root";
         chooser.value = lastPath;
+        for(const button of quickButtons){
+          const p=button.dataset.mapJump;
+          button.setAttribute("aria-pressed",String(lastPath===p||lastPath.startsWith(p+".")));
+        }
         const origin = scene?.pointFor(lastPath);
         scene?.select(lastPath, zoom);
         updateBranchControls();
@@ -128,6 +145,7 @@ export function observeMindMap(frame) {
           updateBranchControls();
           return;
         }
+        if (button.dataset.mapJump) select(button.dataset.mapJump,true,false);
         if (button.dataset.mapPathTarget) select(button.dataset.mapPathTarget,true,true);
         if (button.dataset.mir && byId.get(button.dataset.mir)) select(byId.get(button.dataset.mir));
         if (button.hasAttribute("data-map-open")) select(lastPath, true, true);
