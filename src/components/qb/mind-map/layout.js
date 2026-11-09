@@ -4,7 +4,7 @@ export function placeMap(graph) {
   for (const node of graph.nodes) tree.set(node.path, []);
   for (const node of graph.nodes) tree.get(node.parent)?.push(node);
   const roots = tree.get("root");
-  const positions = [{ path: "root", title: graph.title, branch: -1, depth: 0, x: 0, y: 0, z: 0 }];
+  const positions = [{ path: "root", title: graph.title, branch: -1, status: graph.rootStatus, depth: 0, x: 0, y: 0, z: 0 }];
   const weights = new Map();
   function weight(node) {
     const n = tree.get(node.path).reduce((sum, child) => sum + weight(child), 0) || 1;

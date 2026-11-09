@@ -24,7 +24,8 @@ export function observeMindMap(frame) {
       const explore = next.querySelector("[data-map-explore]");
       const status = next.querySelector("[data-map-status]");
       const chooser = next.querySelector("[data-map-select]");
-      const open = next.querySelector("[data-map-open]");
+      const pathBar = next.querySelector("[data-map-path]");
+      const detail = next.querySelector("[data-map-detail]");
       const modes = [...next.querySelectorAll("[data-map-mode]")];
       let scene = null, version = 0, disposed = false;
       const nodes = new Map(graph.nodes.map(n => [n.path,n]));
@@ -33,11 +34,25 @@ export function observeMindMap(frame) {
         const indent = "› ".repeat(node.path.split(".").length);
         chooser.add(new view.Option(indent + node.title, node.path));
       }
-      function select(path) {
+      const byId = new Map();
+      for (const node of graph.nodes) byId.set(node.id, byId.has(node.id) ? null : node.path);
+      function select(path, zoom = true) {
         lastPath = nodes.has(path) ? path : "root";
         chooser.value = lastPath;
-        open.disabled = lastPath === "root";
-        scene?.select(lastPath);
+        scene?.select(lastPath, zoom);
+        pathBar.replaceChildren();
+        const parts = lastPath === "root" ? [] : lastPath.split(".");
+        const paths = ["root", ...parts.map((_, i) => parts.slice(0, i + 1).join("."))];
+        for (const path of paths) {
+          const button = doc.createElement("button");
+          button.type = "button";
+          button.dataset.mapPathTarget = path;
+          button.textContent = path === "root" ? "Visão geral" : nodes.get(path).title;
+          if (path === lastPath) button.setAttribute("aria-current", "location");
+          pathBar.append(button);
+        }
+        next.dispatchEvent(new view.CustomEvent("qb-map-render-node", { detail: { topic: graph.topic, path: lastPath } }));
+        detail.querySelector(":scope > .qb-mastery-detail, .m-no > .qb-mastery-detail")?.setAttribute("open", "");
       }
       function showList(message = "") {
         version++;
@@ -63,7 +78,7 @@ export function observeMindMap(frame) {
           status.textContent = "";
           list.hidden = true;
           modes.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.mapMode === "3d")));
-          select(lastPath || "root");
+          select(lastPath || "root", lastPath !== "" && lastPath !== "root");
         } catch {
           if (!disposed && request === version) showList("O 3D está indisponível neste navegador. A lista está aberta.");
         }
@@ -73,12 +88,11 @@ export function observeMindMap(frame) {
         if (!button) return;
         if (button.dataset.mapMode === "list") showList();
         if (button.dataset.mapMode === "3d") show3d();
-        if (button.dataset.mapCamera) scene?.adjust(button.dataset.mapCamera);
-        if (button.hasAttribute("data-map-open") && nodes.has(lastPath)) {
-          const path = lastPath;
-          showList();
-          doc.dispatchEvent(new view.CustomEvent("qb-map-open-node", { detail: { topic: graph.topic, path } }));
-        }
+        if (button.dataset.mapCamera === "reset") select("root");
+        else if (button.dataset.mapCamera) scene?.adjust(button.dataset.mapCamera);
+        if (button.dataset.mapPathTarget) select(button.dataset.mapPathTarget);
+        if (button.dataset.mir && byId.get(button.dataset.mir)) select(byId.get(button.dataset.mir));
+        if (button.hasAttribute("data-map-open")) scene?.select(lastPath, true);
       }
       function change() { select(chooser.value); }
       next.addEventListener("click", act);

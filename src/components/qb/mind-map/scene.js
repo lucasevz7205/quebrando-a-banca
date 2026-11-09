@@ -1,6 +1,6 @@
 import {
-  BufferGeometry, Color, InstancedMesh, LineBasicMaterial, LineDashedMaterial, LineSegments, Matrix4,
-  MeshBasicMaterial, PerspectiveCamera, Raycaster, Scene, SphereGeometry, Vector2, Vector3, WebGLRenderer,
+  BufferAttribute, BufferGeometry, Color, InstancedMesh, LineBasicMaterial, LineDashedMaterial, LineSegments, Matrix4, AdditiveBlending,
+  MeshBasicMaterial, PerspectiveCamera, Points, PointsMaterial, Raycaster, Scene, SphereGeometry, Vector2, Vector3, WebGLRenderer,
 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { placeMap } from "./layout";
@@ -31,8 +31,18 @@ export function startMapScene(panel, graph, onSelect, onLost) {
   const material = new MeshBasicMaterial();
   const spheres = new InstancedMesh(geometry, material, coords.length);
   const computed = view.getComputedStyle(panel);
-  const colorFor = node => node.depth === 0 ? "#f0efff" : node.depth === 1 ? "#b9bbff"
-    : computed.getPropertyValue("--qb-map-" + (node.branch % 8 + 1)).trim() || "#858cdd";
+  const colorFor = node => computed.getPropertyValue("--qb-node-" + (node.status || "sem-evidencia")).trim() || "#9da8c4";
+  const dust = new Float32Array(390 * 3);
+  // Stationary particle field inspired by AXON; the renderer runs only on interaction.
+  let seed = 431;
+  for(let i=0;i<dust.length;i++){
+    seed=(Math.imul(1664525,seed)+1013904223)>>>0;
+    dust[i]=(seed/4294967296-.5)*reach*4;
+  }
+  const dustGeometry=new BufferGeometry().setAttribute("position",new BufferAttribute(dust,3));
+  const dustMaterial=new PointsMaterial({size:.045,color:"#a9a6ff",transparent:true,opacity:.42,
+    blending:AdditiveBlending,depthWrite:false});
+  scene.add(new Points(dustGeometry,dustMaterial));
   coords.forEach((node,i) => {
     const scale = node.depth === 0 ? .54 : node.depth === 1 ? .37 : .22;
     spheres.setMatrixAt(i, new Matrix4().makeScale(scale,scale,scale).setPosition(world[i]));
@@ -55,22 +65,30 @@ export function startMapScene(panel, graph, onSelect, onLost) {
 
   const point = new Vector3();
   const tagList = coords.flatMap((node,i) => {
-    if (node.depth > 1) return [];
     const tag = doc.createElement("button");
     tag.type = "button";
     tag.textContent = node.title;
-    tag.title = node.title;
+    const sample=node.respondidas ? " · " + Math.round(node.percentual*100) + "%, " + node.respondidas + "/" + node.questoes + " respondidas" : "";
+    tag.title=node.title + (node.statusLabel ? " · " + node.statusLabel + sample : "");
+    tag.style.setProperty("--qb-node-dot",colorFor(node));
     tag.className = node.depth ? "qb-map3-tag" : "qb-map3-tag qb-map3-origin";
     tag.setAttribute("aria-pressed", "false");
     tag.addEventListener("click", () => onSelect(node.path));
     labels.append(tag);
     return [{ tag, i }];
   });
-  let width = 0, height = 0, distance = 0, selected = "";
+  let width = 0, height = 0, distance = 0, selected = "root", animation = 0;
+  const motion=view.matchMedia("(prefers-reduced-motion: reduce)");
+  const targetStart=new Vector3(),cameraStart=new Vector3(),targetEnd=new Vector3(),cameraEnd=new Vector3();
+  function cancelZoom(){view.cancelAnimationFrame(animation);animation=0;}
+  controls.addEventListener("start",cancelZoom);
   function render() {
     if (!width || !height) return;
     renderer.render(scene,camera);
     for (const {tag,i} of tagList) {
+      const node=coords[i];
+      const show=node.path===selected||node.parent===selected||node.path==="root";
+      if(!show){tag.hidden=true;continue;}
       point.copy(world[i]).project(camera);
       tag.hidden = Math.abs(point.x) > .95 || Math.abs(point.y) > .93 || Math.abs(point.z) > 1;
       if (!tag.hidden) {
@@ -94,13 +112,38 @@ export function startMapScene(panel, graph, onSelect, onLost) {
     camera.aspect = width / height;
     const initial = !distance;
     distance = reach * 1.28 / (Math.tan(camera.fov * Math.PI / 360) * Math.min(1,camera.aspect));
-    controls.minDistance = reach * .54;
+    controls.minDistance = 1.45;
     controls.maxDistance = distance * 2.2;
     camera.updateProjectionMatrix();
     renderer.setSize(width,height,false);
     if (initial) reset(); else render();
   }
-  function select(path) {
+  function zoom(path) {
+    if(!distance)return;
+    cancelZoom();
+    const i=byPath.get(path);
+    if(i===undefined)return;
+    const center=world[i];
+    const span=coords.reduce((r,node,j)=>node.parent===path?Math.max(r,center.distanceTo(world[j])):r,1);
+    const zoomDistance=path==="root"?distance:Math.max(3, span*1.2/(Math.tan(camera.fov*Math.PI/360)*Math.min(1,camera.aspect)));
+    targetStart.copy(controls.target);cameraStart.copy(camera.position);
+    targetEnd.copy(center);
+    const direction=camera.position.clone().sub(controls.target).normalize();
+    cameraEnd.copy(center).addScaledVector(direction,zoomDistance);
+    if(motion.matches){
+      controls.target.copy(targetEnd);camera.position.copy(cameraEnd);controls.update();render();return;
+    }
+    const start=view.performance.now();
+    const tick=now=>{
+      const t=Math.min(1,(now-start)/420), eased=t*t*(3-2*t);
+      controls.target.lerpVectors(targetStart,targetEnd,eased);
+      camera.position.lerpVectors(cameraStart,cameraEnd,eased);
+      controls.update();
+      if(t<1) animation=view.requestAnimationFrame(tick); else animation=0;
+    };
+    animation=view.requestAnimationFrame(tick);
+  }
+  function select(path, shouldZoom = false) {
     selected = path;
     const i = byPath.get(path);
     focus.visible = i !== undefined;
@@ -110,9 +153,11 @@ export function startMapScene(panel, graph, onSelect, onLost) {
       focus.instanceMatrix.needsUpdate = true;
       focus.frustumCulled = false;
     }
+    if(shouldZoom)zoom(path);
     render();
   }
   function adjust(action) {
+    cancelZoom();
     if (action === "reset") { reset(); return; }
     const offset = new Vector3().subVectors(camera.position,controls.target);
     if (action === "left" || action === "right") offset.applyAxisAngle(new Vector3(0,1,0), action === "left" ? .28 : -.28);
@@ -144,10 +189,14 @@ export function startMapScene(panel, graph, onSelect, onLost) {
     select, adjust,
     dispose() {
       observer.disconnect();
+      cancelZoom();
+      controls.removeEventListener("start",cancelZoom);
       controls.dispose();
       canvas.removeEventListener("pointerdown",pointerDown);
       canvas.removeEventListener("pointerup",pointerUp);
       canvas.removeEventListener("webglcontextlost",onLost);
+      dustGeometry.dispose();
+      dustMaterial.dispose();
       hierarchy.geometry.dispose();
       hierarchy.material.dispose();
       cross.geometry.dispose();
