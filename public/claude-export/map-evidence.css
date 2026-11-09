@@ -1,0 +1,32 @@
+/* Desempenho na malha conceitual: manter a identidade em azul-marinho e roxo.
+ * As linhas recebem o estado do nó de destino, nunca um aproveitamento genérico.
+ */
+.qb-map3 {
+  --qb-node-forte: #7ed3ec;
+  --qb-node-bom-sem-retencao: #84b2f3;
+  --qb-node-em-desenvolvimento: #ab98e9;
+  --qb-node-deficiente: #d99cc9;
+  --qb-node-amostra-insuficiente: #8897c7;
+  --qb-node-sem-evidencia: #667495;
+}
+.qb-map3 .qb-map3-legend {
+  align-items:center;
+  gap:9px 16px;
+  padding:10px 12px;
+  border:1px solid #6b65993b;
+  border-radius:10px;
+  background:#12162a8c;
+}
+.qb-map3-legend-title {
+  flex-basis:100%;
+  font:650 11px/1.5 var(--display,sans-serif);
+  letter-spacing:.025em;
+  color:#c3ceec;
+}
+.qb-map3 .qb-map3-tag[aria-pressed="true"] {
+  box-shadow:0 0 12px #a7b3f655, 0 0 3px var(--qb-node-dot);
+}
+@media (prefers-contrast:more){
+  .qb-map3 .qb-map3-tag {border-width:2px}
+  .qb-map3 .qb-map3-legend {border-color:#9993bc}
+}
