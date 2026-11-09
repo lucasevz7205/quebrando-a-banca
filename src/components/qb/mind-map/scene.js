@@ -296,6 +296,42 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     controls.update();
     render();
   }
+  // Scroll always zooms toward the pointer, including when it is over a label.
+  // Capture the wheel before OrbitControls can apply its separate wheel zoom;
+  // pinch gestures still belong to OrbitControls.
+  const wheelRay=new Raycaster(), wheelPointer=new Vector2(), wheelPlane=new Plane();
+  const wheelNormal=new Vector3(), wheelBefore=new Vector3(), wheelAfter=new Vector3();
+  function onWheel(event){
+    const concept=stage.querySelector("[data-map-concept]");
+    if(concept&&!concept.hidden)return; // explanation must scroll independently
+    if(!event.deltaY)return;
+    event.preventDefault();
+    event.stopPropagation();
+    if(!width||!height)return;
+    const rect=canvas.getBoundingClientRect();
+    if(!rect.width||!rect.height)return;
+    cancelZoom();
+    wheelPointer.set((event.clientX-rect.left)/rect.width*2-1,1-(event.clientY-rect.top)/rect.height*2);
+    camera.getWorldDirection(wheelNormal);
+    wheelPlane.setFromNormalAndCoplanarPoint(wheelNormal,controls.target);
+    wheelRay.setFromCamera(wheelPointer,camera);
+    const anchored=!!wheelRay.ray.intersectPlane(wheelPlane,wheelBefore);
+    const offset=camera.position.clone().sub(controls.target);
+    const nextDistance=Math.max(controls.minDistance,Math.min(controls.maxDistance,
+      offset.length()*wheelZoomFactor(event.deltaY,event.deltaMode,height)));
+    camera.position.copy(controls.target).add(offset.setLength(nextDistance));
+    controls.update();
+    if(anchored){
+      wheelRay.setFromCamera(wheelPointer,camera);
+      if(wheelRay.ray.intersectPlane(wheelPlane,wheelAfter)){
+        const translation=wheelBefore.clone().sub(wheelAfter);
+        controls.target.add(translation);
+        camera.position.add(translation);
+        controls.update();
+      }
+    }
+    render();
+  }
   const ray = new Raycaster(), mouse = new Vector2();
   let down = null, allowClick = false;
   function pointerDown(e) { down = [e.clientX,e.clientY]; allowClick=false; }
@@ -311,14 +347,38 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     ray.setFromCamera(mouse,camera);
     const hit=ray.intersectObject(spheres)[0];
     const index=hit&&visibleSlots[hit.instanceId];
-    if(index!==undefined)activateNode(coords[index].path,e);
+    let path=index!==undefined?coords[index].path:null;
+    if(!path){
+      const targets=visibleSlots.map(i=>{
+        const p=world[i].clone().project(camera);
+        return {path:coords[i].path,x:(p.x+1)*width/2,y:(1-p.y)*height/2,
+          visible:p.z>=-1&&p.z<=1, radius:coords[i].depth<2?10:7};
+      });
+      path=nearestProjectedHit(targets,{x:(e.clientX-box.left)*width/box.width,
+        y:(e.clientY-box.top)*height/box.height},view.matchMedia("(pointer:coarse)").matches?34:23);
+    }
+    if(path)activateNode(path,e);
   }
+  function onPointerMove(e){
+    if(e.buttons||!width||!height)return;
+    const box=canvas.getBoundingClientRect();
+    if(!box.width||!box.height)return;
+    mouse.set((e.clientX-box.left)/box.width*2-1,1-(e.clientY-box.top)/box.height*2);
+    ray.setFromCamera(mouse,camera);
+    canvas.style.cursor=ray.intersectObject(spheres).length?"pointer":"grab";
+  }
+  function onContextMenu(e){e.preventDefault();}
+  function onPointerCancel(){down=null;allowClick=false;}
   const observer = new view.ResizeObserver(resize);
   observer.observe(stage);
   controls.addEventListener("change",render);
   canvas.addEventListener("pointerdown",pointerDown);
   canvas.addEventListener("pointerup",pointerUp);
+  canvas.addEventListener("pointercancel",onPointerCancel);
+  canvas.addEventListener("pointermove",onPointerMove);
   canvas.addEventListener("click",clickNode);
+  canvas.addEventListener("contextmenu",onContextMenu);
+  stage.addEventListener("wheel",onWheel,{capture:true,passive:false});
   canvas.addEventListener("webglcontextlost",onLost);
   syncVisibility();
   resize();
@@ -335,7 +395,11 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
       controls.dispose();
       canvas.removeEventListener("pointerdown",pointerDown);
       canvas.removeEventListener("pointerup",pointerUp);
+      canvas.removeEventListener("pointercancel",onPointerCancel);
+      canvas.removeEventListener("pointermove",onPointerMove);
       canvas.removeEventListener("click",clickNode);
+      canvas.removeEventListener("contextmenu",onContextMenu);
+      stage.removeEventListener("wheel",onWheel,true);
       canvas.removeEventListener("webglcontextlost",onLost);
       dustGeometry.dispose();
       dustMaterial.dispose();
