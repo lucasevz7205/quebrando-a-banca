@@ -132,7 +132,7 @@ export function observeMindMap(frame) {
         if (button.dataset.mir && byId.get(button.dataset.mir)) select(byId.get(button.dataset.mir));
         if (button.hasAttribute("data-map-open")) select(lastPath, true, true);
       }
-      function change() { select(chooser.value,false,false); }
+      function change() { select(chooser.value,true,false); }
       function keydown(event) {
         if(event.key === "Escape" && reveal.active) {
           reveal.hide();
