@@ -15,7 +15,7 @@ export function createNodeActivation(onSelect,{doubleClickMs=350}={}){
       previousPath=null;
       previousAt=-Infinity;
     }
-    onSelect(path,double,double);
+    onSelect(path,true,double); // single click now brings the selected branch into view
     return double;
   };
 }
