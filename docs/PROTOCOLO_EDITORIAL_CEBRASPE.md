@@ -1,9 +1,9 @@
 # Protocolo editorial CEBRASPE — Quebrando a Banca
-Versão 1.0 · 09/11/2026 · Pesquisa qualitativa inicial
+Versão 2.0 · 09/11/2026 · Segunda pesquisa e implementação no laboratório
 Responsável: assistente do projeto, por solicitação de Lucas.
 
 ## Status e limites
-Este é um protocolo de elaboração, recuperação de referências e revisão; não é treinamento dos pesos do modelo, certificação da banca ou medição de equivalência psicométrica. Sua adoção em chats depende da leitura deste arquivo. Não há aqui um gerador automático integrado, importação de provas ou alteração de questões/progresso. Nenhuma incidência foi estimada nesta pesquisa.
+Este é um protocolo de elaboração, recuperação de referências e revisão; não é treinamento dos pesos do modelo, certificação da banca ou medição de equivalência psicométrica. Sua adoção em chats depende da leitura deste arquivo. O laboratório agora possui geração assistida de rascunhos por fonte fornecida, revisão cega por IA e validação da importação dos itens identificados com ce braspe-2.0 (identificador técnico: cebraspe-2.0). Não houve importação de provas nem alteração de questões/progresso nesta implementação. Nenhuma incidência foi estimada nesta pesquisa.
 
 Amostra consultada: dois cadernos oficiais CEBRASPE da Câmara (conhecimentos gerais e específicos, edital 2025), justificativas oficiais FUB 2025 e caderno FGV Câmara 2023 Técnica Legislativa, tarde, tipo 1, acompanhado de gabarito definitivo. A leitura de formatos não homologa os gabaritos CEBRASPE: os definitivos dos dois cadernos da Câmara ainda precisam ser associados item a item antes de constituírem corpus de calibração. Exemplos de falsificação abaixo são classificação editorial, não taxonomia oficial das bancas. Não extrapolar para toda banca ou área fiscal a partir desta amostra.
 
