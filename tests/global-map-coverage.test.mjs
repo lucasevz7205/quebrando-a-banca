@@ -55,6 +55,16 @@ test("global só associa candidatos com capítulo e não força questões genér
  const noCross=sys.QBEditorialCoverage.decorate(m.id,m.mapa,m.cartoes,fake,byTopic.get(m.id));
  assert.equal(noCross.linked,0);
 });
+test("nó central usa somente o indicador agregado do edital e separa subramos",()=>{
+ const shell=fs.readFileSync("src/components/qb/study-shell.html","utf8");
+ const layout=fs.readFileSync("src/components/qb/mind-map/layout.js","utf8");
+ assert.match(shell,/rootStatus:geral\?\.status/);
+ assert.match(shell,/Geral do edital/);
+ assert.match(shell,/Desempenho geral no edital/);
+ assert.match(shell,/Esse indicador não certifica domínio de cada subramo/);
+ assert.match(layout,/status: graph\.rootStatus/);
+ assert.match(shell,/Os demais permanecem sem atribuição de subramo/);
+});
 test("o leitor de mapa, treino e HTML carregam o mesmo resolvedor global",()=>{
  const shell=fs.readFileSync("src/components/qb/study-shell.html","utf8");
  assert.match(shell,/map-global-links\.js/);
