@@ -2276,7 +2276,9 @@ function abrirEditalDoMapa(){
 function treinarNoMapa(path){
   const rv=S.rv.get(S.mapaId),t=S.ed.get(S.mapaId);
   if(!rv?.mapa||!window.QBMapMastery)return;
-  const diagnostico=window.QBMapMastery.build({topicId:S.mapaId,map:rv.mapa,cards:rv.cartoes||[],questions:S.q,responses:S.r,topic:t});
+  const editorial=window.QBEditorialCohesion?.decorate(S.mapaId,rv.mapa,rv.cartoes||[],S.q);
+  const diagnostico=window.QBMapMastery.build({topicId:S.mapaId,map:editorial?.map||rv.mapa,cards:editorial?.cards||rv.cartoes||[],
+    questions:S.q,responses:S.r,assessments:S.cav,resolveCard:window.QBMapLinks?.resolve,topic:t});
   const ramo=diagnostico.byPath.get(path);
   const fila=[...(ramo?.all||[])].filter(id=>S.q.has(id)&&!foraQ(S.q.get(id)));
   if(!fila.length){toast('Este ramo ainda não possui questões de treino vinculadas.');return;}
