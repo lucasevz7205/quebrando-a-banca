@@ -1822,6 +1822,13 @@ function mapa3D(m,t,lig,diagnostico){
       <div class="qb-map3-jump" role="group" aria-label="Acesso direto aos ramos principais"><span>Ir para o ramo</span><div data-map-quick-branches></div></div>
       <div class="qb-map3-stage" data-map-stage>
         <div class="qb-map3-labels" data-map-labels></div>
+        <div class="qb-map3-dpad" role="group" aria-label="Deslocar a visão do mapa">
+          <button type="button" class="qb-map3-dpad-up" data-map-camera="pan-up" aria-label="Mover visão para cima" title="Mover visão para cima">↑</button>
+          <button type="button" class="qb-map3-dpad-left" data-map-camera="pan-left" aria-label="Mover visão para a esquerda" title="Mover visão para a esquerda">←</button>
+          <button type="button" class="qb-map3-dpad-center" data-map-camera="reset" aria-label="Centralizar mapa" title="Centralizar mapa">⌖</button>
+          <button type="button" class="qb-map3-dpad-right" data-map-camera="pan-right" aria-label="Mover visão para a direita" title="Mover visão para a direita">→</button>
+          <button type="button" class="qb-map3-dpad-down" data-map-camera="pan-down" aria-label="Mover visão para baixo" title="Mover visão para baixo">↓</button>
+        </div>
         <canvas class="qb-map3-axon" data-map-axon aria-hidden="true" hidden></canvas>
         <div class="qb-map3-concept" data-map-concept data-open="false" role="region" aria-label="Explicação do conceito selecionado" hidden>
           <button type="button" class="qb-map3-concept-backdrop" data-map-close aria-label="Retornar ao mapa 3D" tabindex="-1"></button>
