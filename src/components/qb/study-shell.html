@@ -463,6 +463,7 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/map-origin.js"></script>
 <link rel="stylesheet" href="/claude-export/learning.css">
 <link rel="stylesheet" href="/claude-export/study-palette.css">
+<link rel="stylesheet" href="/claude-export/map-3d.css">
 <script>
 (function(){
 const S = {
@@ -1775,6 +1776,38 @@ function viewRevisao(){
   </div>`;
 }
 /* mapa mental no estilo do modelo do Lucas (End-to-End): centro, ramos coloridos, rótulos curtos com etiqueta, tabela, caixa e ligações cruzadas */
+function mapa3D(m,t,lig){
+  const list=[];
+  const visit=(n,path,parent,branch)=>{
+    list.push({path,parent,branch,id:n.id||null,title:n.t||'Conceito sem título'});
+    (n.f||[]).forEach((child,i)=>visit(child,path+'.'+i,path,branch));
+  };
+  const roots=m.ramos||[];
+  if(!roots.length)return '';
+  roots.forEach((n,i)=>visit(n,String(i),'root',i));
+  const data=esc(JSON.stringify({topic:S.mapaId,title:m.centro||t.titulo||'Mapa mental',nodes:list,links:lig.map(l=>l.slice(0,2))}));
+  return `<section class="qb-map3" data-map3 data-graph="${data}" hidden aria-label="Visualização do mapa mental">
+    <div class="qb-map3-choices" role="group" aria-label="Formato do mapa">
+      <button type="button" data-map-mode="list" aria-pressed="true">Em lista</button>
+      <button type="button" data-map-mode="3d" aria-pressed="false">Mapa 3D</button>
+      <span data-map-status role="status"></span>
+    </div>
+    <div class="qb-map3-explore" data-map-explore hidden>
+      <div class="qb-map3-bar"><span>Arraste para girar · pinça ou rolagem para aproximar</span><div role="group" aria-label="Controles do mapa 3D">
+        <button type="button" data-map-camera="left" aria-label="Girar à esquerda">↶</button>
+        <button type="button" data-map-camera="right" aria-label="Girar à direita">↷</button>
+        <button type="button" data-map-camera="in" aria-label="Aproximar">+</button>
+        <button type="button" data-map-camera="out" aria-label="Afastar">−</button>
+        <button type="button" data-map-camera="reset">Centralizar</button>
+      </div></div>
+      <div class="qb-map3-stage" data-map-stage><div class="qb-map3-labels" data-map-labels></div></div>
+      <div class="qb-map3-footer"><label>Conceito<select data-map-select aria-label="Selecionar conceito no mapa 3D"></select></label>
+        <button type="button" class="btn small" data-map-open disabled>Abrir detalhes na lista</button>
+      </div>
+      <p class="qb-map3-legend"><span>● Conceito</span><span>─ Ramo</span><span>┄ Ligação cruzada</span></p>
+    </div>
+  </section>`;
+}
 function viewMapa(){
   const indice=indiceQuestoes();
   const ids=[...S.rv.entries()].filter(([k,v])=>v&&v.mapa).map(([k])=>k).sort((a,b)=>((S.ed.get(a)||{}).ordem||0)-((S.ed.get(b)||{}).ordem||0));
@@ -1809,7 +1842,8 @@ function viewMapa(){
       ${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
     <p class="rule">Toque num ramo com ⓘ para abrir a explicação. Com "Evocar antes de ler", tente explicar antes de abrir.</p>
     <div class="m-centro qb-topic-hub"><span>MAPA MENTAL · CONCEITO CENTRAL</span><strong>${esc(m.centro||t.titulo||'')}</strong><small>${(m.ramos||[]).length} ramos · ${lig.length} ligações cruzadas</small></div>
-    <div class="m-grid qb-map-network">${ramos}</div>
+    ${mapa3D(m, t, lig)}
+    <div class="m-grid qb-map-network" data-map-list>${ramos}</div>
     ${questoesEmMapa(indice.byTopic.get(S.mapaId)||[],indice)}
     ${m.autor?`<p class="rule">${esc(m.autor)}</p>`:''}
   </div>`;
@@ -2650,6 +2684,24 @@ function wireSim(){
 }
 
 function init(){
+  document.addEventListener('qb-map-open-node',event=>{
+    const path=event.detail?.path;
+    if(S.view!=='mapa'||event.detail?.topic!==S.mapaId||typeof path!=='string'||!/^\d+(?:\.\d+)*$/.test(path)) return;
+    S.mapaAb=S.mapaAb||new Set(['*']);
+    const parts=path.split('.');
+    for(let i=1;i<parts.length;i++)S.mapaAb.add(parts.slice(0,i).join('.'));
+    S.mapaX=S.mapaX||new Set();
+    S.mapaX.add('mx:'+S.mapaId+':'+path);
+    render(true);
+    const node=document.querySelector('[data-map-node="'+CSS.escape(S.mapaId+':'+path)+'"]');
+    if(!node)return;
+    node.scrollIntoView({block:'center'});
+    const focus=node.querySelector(':scope > .m-l > button')||node;
+    if(focus===node)node.tabIndex=-1;
+    focus.focus({preventScroll:true});
+    node.classList.add('m-foco');
+    setTimeout(()=>node.classList.remove('m-foco'),2500);
+  });
   $('#qb-logout').addEventListener('click',()=>{window.QBBridge.ask('logout').catch(()=>{});});
   let v='painel'; try{ const h=(location.hash||'').slice(1); if(VIEWS.includes(h)) v=h==='revisao'?'edital':h; }catch(e){}
   window.QBBridge.ask('account').then(account=>{
