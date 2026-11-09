@@ -1,9 +1,9 @@
 import {createServerFn} from "@tanstack/react-start";
 import {requireUser} from "@/lib/auth-middleware";
-import {requestSchema,generationPrompt,reviewPrompt,validateDrafts,applyReview,METHOD_VERSION} from "./question-authoring";
+import {groupRequestSchema,generationPrompt,reviewPrompt,validateDrafts,applyReview,METHOD_VERSION} from "./question-authoring";
 const inFlight=new Set();
 const extract=result=>typeof result==="string"?result:(result?.response??result?.output??result?.text??result);
-export const generateLabDrafts=createServerFn({method:"POST"}).middleware([requireUser]).validator(requestSchema)
+export const generateLabDrafts=createServerFn({method:"POST"}).middleware([requireUser]).validator(groupRequestSchema)
 .handler(async({context,data})=>{
  if(context.user.role!=="admin")throw new Error("Geração restrita ao administrador do laboratório.");
  if(inFlight.has(context.user.id))throw new Error("Já há um lote em geração. Aguarde.");

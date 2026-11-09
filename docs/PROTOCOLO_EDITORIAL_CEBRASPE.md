@@ -129,7 +129,7 @@ Fonte: https://www.cebraspe.org.br/avaliacoes/avaliacoes-educacionais/
 
 Implementação:
 - `src/lib/question-authoring.js`: protocolo, limites, fundamentação literal, formato, duplicidade exata e revisão cega.
-- `src/lib/question-authoring-server.js`: somente administrador autenticado; até cinco itens e duas chamadas de IA, sem gravação de questões ou respostas.
+- `src/lib/question-authoring-server.js`: somente administrador autenticado. Cada assunto aceita até 20 itens, em grupos de até cinco, com duas chamadas de IA por grupo. A elaboração não grava questões ou respostas.
 - `src/components/qb/QuestionAuthoring.jsx`: fonte informada, geração de rascunhos e exportação de pareceres. URL é referência, não consulta automática.
 - `src/lib/question-editorial-gate.js`: impede importação direta de rascunhos do novo protocolo sem declaração de revisão humana. Importações legadas permanecem compatíveis; não é garantia antifraude de autoria nem validação semântica automática.
 - A pauta de criação exportada usa o mesmo protocolo.
