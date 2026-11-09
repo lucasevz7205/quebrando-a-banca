@@ -6,7 +6,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { placeMap } from "./layout";
 import { createBranchVisibility } from "./branch-visibility";
 
-export function startMapScene(panel, graph, onSelect, onLost) {
+export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = null) {
   const doc = panel.ownerDocument, view = doc.defaultView;
   const stage = panel.querySelector("[data-map-stage]"), labels = panel.querySelector("[data-map-labels]");
   const canvas = doc.createElement("canvas");
@@ -24,7 +24,7 @@ export function startMapScene(panel, graph, onSelect, onLost) {
   controls.zoomSpeed = .8;
 
   const coords = placeMap(graph);
-  const branches = createBranchVisibility(graph);
+  const branches = createBranchVisibility(graph, {expandedPaths});
   const byPath = new Map(coords.map((node,i) => [node.path, i]));
   const byId = new Map(coords.filter(n => n.id).map(n => [n.id, n.path]));
   const world = coords.map(n => new Vector3(n.x,n.y,n.z));
@@ -301,6 +301,7 @@ export function startMapScene(panel, graph, onSelect, onLost) {
   return {
     select, adjust, pointFor, setBranchMode,
     branchSummary:()=>branches.summary(),
+    expandedPaths:()=>branches.expandedPaths(),
     hasChildren:path=>branches.hasChildren(path),
     isExpanded:path=>branches.isExpanded(path),
     dispose() {
