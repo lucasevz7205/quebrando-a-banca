@@ -26,6 +26,16 @@
 .qb-map3 .qb-map3-tag[aria-pressed="true"] {
   box-shadow:0 0 12px #a7b3f655, 0 0 3px var(--qb-node-dot);
 }
+.qb-map-link-audit {
+ margin:0;
+ padding:10px 13px;
+ font:500 12px/1.55 var(--display,sans-serif);
+ background:linear-gradient(95deg,rgba(57,51,113,.13),rgba(21,37,77,.12));
+ color:var(--muted);
+ border:1px solid rgba(105,109,171,.30);
+ border-radius:10px;
+}
+.qb-map-link-audit strong{color:var(--ink);font-variant-numeric:tabular-nums}
 @media (prefers-contrast:more){
   .qb-map3 .qb-map3-tag {border-width:2px}
   .qb-map3 .qb-map3-legend {border-color:#9993bc}
