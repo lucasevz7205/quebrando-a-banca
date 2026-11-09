@@ -1,11 +1,12 @@
 import {
   BufferAttribute, BufferGeometry, Color, Float32BufferAttribute, InstancedMesh, LineBasicMaterial, LineDashedMaterial, LineSegments, Matrix4, AdditiveBlending,
-  MeshBasicMaterial, PerspectiveCamera, Points, PointsMaterial, Raycaster, Scene, SphereGeometry, Vector2, Vector3, WebGLRenderer,
+  MOUSE, MeshBasicMaterial, PerspectiveCamera, Plane, Points, PointsMaterial, Raycaster, Scene, SphereGeometry, Vector2, Vector3, WebGLRenderer,
 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { placeMap } from "./layout";
 import { createBranchVisibility } from "./branch-visibility";
 import { createNodeActivation } from "./node-activation";
+import { nearestProjectedHit, resolveLabelPositions, wheelZoomFactor } from "./mouse-navigation";
 
 export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = null) {
   const doc = panel.ownerDocument, view = doc.defaultView;
@@ -21,8 +22,12 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
   const camera = new PerspectiveCamera(42, 1, .1, 5000), scene = new Scene();
   const controls = new OrbitControls(camera, canvas);
   controls.enableDamping = false;
-  controls.rotateSpeed = .7;
-  controls.zoomSpeed = .8;
+  controls.enablePan = true;
+  controls.screenSpacePanning = true;
+  controls.zoomToCursor = true;
+  controls.rotateSpeed = .52;
+  controls.zoomSpeed = .74;
+  controls.mouseButtons = {LEFT:MOUSE.ROTATE,MIDDLE:MOUSE.DOLLY,RIGHT:MOUSE.PAN};
 
   const coords = placeMap(graph);
   const branches = createBranchVisibility(graph, {expandedPaths});
