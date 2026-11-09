@@ -36,6 +36,10 @@
  border-radius:10px;
 }
 .qb-map-link-audit strong{color:var(--ink);font-variant-numeric:tabular-nums}
+.qb-map-root-summary{font-size:13px;line-height:1.55;margin:8px 0 12px;color:#b8c6e9}
+.qb-map-root-summary b{color:#e5eaff}
+.qb-map-root-heading{font-size:12px;letter-spacing:.015em;margin:16px 0 8px;color:#c1c8ee;font-weight:700}
+
 @media (prefers-contrast:more){
   .qb-map3 .qb-map3-tag {border-width:2px}
   .qb-map3 .qb-map3-legend {border-color:#9993bc}
