@@ -128,7 +128,22 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     return {wrapper,tag,toggle,i};
   });
   let width = 0, height = 0, distance = 0, selected = "root", animation = 0;
-  const activateNode=createNodeActivation(onSelect);
+  // Keep the target stationary during the double-click window.
+  // The first click selects immediately; zoom follows only if no second click.
+  let pendingFocus=0;
+  function cancelPendingFocus(){
+    if(pendingFocus){view.clearTimeout(pendingFocus);pendingFocus=0;}
+  }
+  const activateNode=createNodeActivation((path,_zoom,explain)=>{
+    cancelPendingFocus();
+    onSelect(path,false,explain);
+    if(!explain){
+      pendingFocus=view.setTimeout(()=>{
+        pendingFocus=0;
+        onSelect(path,true,false);
+      },370);
+    }
+  });
   function syncVisibility(){
     visiblePaths=branches.visiblePaths();
     visibleSlots.length=0;
@@ -153,12 +168,14 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     render();
   }
   function toggleBranch(path){
+    cancelPendingFocus();
     if(!branches.toggle(path))return branches.summary();
     syncVisibility();
     zoom(path);
     return branches.summary();
   }
   function setBranchMode(action,path="root"){
+    cancelPendingFocus();
     if(action==="all")branches.openAll();
     else if(action==="minimal")branches.collapseAll();
     else if(action==="open")branches.open(path);
@@ -172,7 +189,8 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
   const motion=view.matchMedia("(prefers-reduced-motion: reduce)");
   const targetStart=new Vector3(),cameraStart=new Vector3(),targetEnd=new Vector3(),cameraEnd=new Vector3();
   function cancelZoom(){view.cancelAnimationFrame(animation);animation=0;}
-  controls.addEventListener("start",cancelZoom);
+  function onControlStart(){cancelPendingFocus();cancelZoom();}
+  controls.addEventListener("start",onControlStart);
   function render() {
     if (!width || !height) return;
     renderer.render(scene,camera);
@@ -266,6 +284,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     animation=view.requestAnimationFrame(tick);
   }
   function select(path, shouldZoom = false) {
+    cancelPendingFocus();
     if(branches.reveal(path))syncVisibility();
     selected = path;
     const i = byPath.get(path);
@@ -287,6 +306,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     return {x:clamp((projected.x+1)*width/2,width),y:clamp((1-projected.y)*height/2,height)};
   }
   function adjust(action) {
+    cancelPendingFocus();
     cancelZoom();
     if (action === "reset") { reset(); return; }
     const offset = new Vector3().subVectors(camera.position,controls.target);
@@ -311,6 +331,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     const rect=canvas.getBoundingClientRect();
     if(!rect.width||!rect.height)return;
     cancelZoom();
+    cancelPendingFocus();
     wheelPointer.set((event.clientX-rect.left)/rect.width*2-1,1-(event.clientY-rect.top)/rect.height*2);
     camera.getWorldDirection(wheelNormal);
     wheelPlane.setFromNormalAndCoplanarPoint(wheelNormal,controls.target);
@@ -359,8 +380,12 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     }
     if(path)activateNode(path,e);
   }
+  let lastHover=0;
   function onPointerMove(e){
     if(e.buttons||!width||!height)return;
+    const stamp=Number(e.timeStamp)||view.performance.now();
+    if(stamp-lastHover<38)return;
+    lastHover=stamp;
     const box=canvas.getBoundingClientRect();
     if(!box.width||!box.height)return;
     mouse.set((e.clientX-box.left)/box.width*2-1,1-(e.clientY-box.top)/box.height*2);
@@ -390,8 +415,9 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     isExpanded:path=>branches.isExpanded(path),
     dispose() {
       observer.disconnect();
+      cancelPendingFocus();
       cancelZoom();
-      controls.removeEventListener("start",cancelZoom);
+      controls.removeEventListener("start",onControlStart);
       controls.dispose();
       canvas.removeEventListener("pointerdown",pointerDown);
       canvas.removeEventListener("pointerup",pointerUp);
