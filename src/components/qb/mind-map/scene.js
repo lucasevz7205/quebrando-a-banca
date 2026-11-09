@@ -156,6 +156,13 @@ export function startMapScene(panel, graph, onSelect, onLost) {
     if(shouldZoom)zoom(path);
     render();
   }
+  function pointFor(path) {
+    const i=byPath.get(path);
+    if(i===undefined || !width || !height)return {x:width/2,y:height/2};
+    const projected=world[i].clone().project(camera);
+    const clamp=(n,limit)=>Math.min(limit-14,Math.max(14,n));
+    return {x:clamp((projected.x+1)*width/2,width),y:clamp((1-projected.y)*height/2,height)};
+  }
   function adjust(action) {
     cancelZoom();
     if (action === "reset") { reset(); return; }
@@ -186,7 +193,7 @@ export function startMapScene(panel, graph, onSelect, onLost) {
   canvas.addEventListener("webglcontextlost",onLost);
   resize();
   return {
-    select, adjust,
+    select, adjust, pointFor,
     dispose() {
       observer.disconnect();
       cancelZoom();
