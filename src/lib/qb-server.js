@@ -4,6 +4,7 @@ import { requireUser } from "@/lib/auth-middleware";
 import { project, validateProposal, planImport, fields } from "./qb-domain";
 import { listDocuments } from "./study-documents";
 import { editorialAuthorals, proofCatalog, studyCatalog } from "./qb-catalog";
+import { assertEditorialImport } from "./question-editorial-gate";
 function client(context){if(context.user.role!=="admin")throw new Error("Acesso restrito ao administrador durante a preparação.");return context.getBase44().asServiceRole;}
 async function all(entity){const out=[];for(let skip=0;;skip+=500){const page=await entity.list("created_date",500,skip);out.push(...page);if(page.length<500)return out;if(skip>50000)throw new Error("Limite de leitura excedido.");}}
 async function snapshot(b){const [questions,proposals,decisions,tasks,sources]=await Promise.all(["Question","Proposal","Decision","TaskEvent","Source"].map(n=>all(b.entities[n])));return {originals:questions.map(q=>JSON.parse(q.original_json)),proposals,decisions,tasks,sources:sources.map(({content_base64,...s})=>s)};}
@@ -39,6 +40,7 @@ export const saveTask=createServerFn({method:"POST"}).middleware([requireUser]).
 export const readSource=createServerFn({method:"GET"}).middleware([requireUser]).validator(z.object({id:z.string().max(100)})).handler(async({context,data})=>{const b=client(context),s=await b.entities.Source.get(data.id);if(s.content_base64)return s;const parts=await b.entities.SourcePart.filter({sha256:s.sha256},"part",500);return {...s,content_base64:parts.map(p=>p.content_base64).join("")};});
 export const importQuestions=createServerFn({method:"POST"}).middleware([requireUser]).validator(z.object({text:z.string().max(2000000),name:z.string().min(1).max(200),commit:z.boolean()})).handler(async({context,data})=>{
  const b=client(context),s=await snapshot(b),incoming=JSON.parse(data.text),plan=planImport(incoming,s.originals);
+ assertEditorialImport(plan.fresh);
  if(!data.commit)return {added:plan.fresh.length,skipped:plan.skipped,conflicts:plan.conflicts};
  if(plan.conflicts.length)throw new Error("Há IDs com conteúdo divergente. Use propostas de correção; os originais foram preservados.");
  if(plan.fresh.length>100)throw new Error("Importe no máximo 100 itens novos por arquivo nesta versão.");
