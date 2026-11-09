@@ -155,6 +155,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
   function toggleBranch(path){
     if(!branches.toggle(path))return branches.summary();
     syncVisibility();
+    zoom(path);
     return branches.summary();
   }
   function setBranchMode(action,path="root"){
@@ -164,6 +165,8 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     else if(action==="close")branches.close(path);
     else if(action==="toggle")branches.toggle(path);
     syncVisibility();
+    if(action==="all"||action==="minimal")reset();
+    else if(action==="open"||action==="close"||action==="toggle")zoom(path);
     return branches.summary();
   }
   const motion=view.matchMedia("(prefers-reduced-motion: reduce)");
@@ -207,9 +210,16 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
       }
     }
   }
+  function fitDistance(){
+    // Base the overview on VISIBLE nodes, not on hidden deep descendants.
+    const radius=Math.max(4,...visibleSlots.map(i=>world[i].length()));
+    return (radius+2.2)/(Math.tan(camera.fov*Math.PI/360)*Math.min(1,camera.aspect))*1.05;
+  }
   function reset() {
+    cancelZoom();
+    distance=fitDistance();
     controls.target.set(0,0,0);
-    camera.position.set(distance * .13,distance * .12,distance);
+    camera.position.set(distance*.09,distance*.08,distance);
     controls.update();
     render();
   }
@@ -219,13 +229,14 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     width = nextWidth;
     height = nextHeight;
     camera.aspect = width / height;
-    const initial = !distance;
-    distance = reach * 1.28 / (Math.tan(camera.fov * Math.PI / 360) * Math.min(1,camera.aspect));
-    controls.minDistance = 1.45;
-    controls.maxDistance = distance * 2.2;
+    const initial=!distance;
     camera.updateProjectionMatrix();
+    distance=fitDistance();
+    controls.minDistance=2.8;
+    controls.maxDistance=Math.max(distance*4.2,reach*4.5,80);
     renderer.setSize(width,height,false);
-    if (initial) reset(); else render();
+    if(initial)reset();
+    else {controls.update();render();}
   }
   function zoom(path) {
     if(!distance)return;
@@ -233,8 +244,10 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     const i=byPath.get(path);
     if(i===undefined)return;
     const center=world[i];
-    const span=coords.reduce((r,node,j)=>node.parent===path?Math.max(r,center.distanceTo(world[j])):r,1);
-    const zoomDistance=path==="root"?distance:Math.max(3, span*1.2/(Math.tan(camera.fov*Math.PI/360)*Math.min(1,camera.aspect)));
+    const span=coords.reduce((r,node,j)=>node.parent===path&&visiblePaths.has(node.path)
+      ?Math.max(r,center.distanceTo(world[j])):r,1.5);
+    const zoomDistance=path==="root"?fitDistance():Math.max(5.5,
+      (span+2.7)/(Math.tan(camera.fov*Math.PI/360)*Math.min(1,camera.aspect)));
     targetStart.copy(controls.target);cameraStart.copy(camera.position);
     targetEnd.copy(center);
     const direction=camera.position.clone().sub(controls.target).normalize();
