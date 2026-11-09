@@ -1804,12 +1804,27 @@ function mapa3D(m,t,lig,diagnostico){
         <button type="button" data-map-camera="out" aria-label="Afastar">−</button>
         <button type="button" data-map-camera="reset">Centralizar</button>
       </div></div>
-      <div class="qb-map3-stage" data-map-stage><div class="qb-map3-labels" data-map-labels></div></div>
-      <div class="qb-map3-footer"><label>Conceito<select data-map-select aria-label="Selecionar conceito no mapa 3D"></select></label>
-        <button type="button" class="btn small" data-map-open>Focar conceito</button>
+      <div class="qb-map3-stage" data-map-stage>
+        <div class="qb-map3-labels" data-map-labels></div>
+        <canvas class="qb-map3-axon" data-map-axon aria-hidden="true" hidden></canvas>
+        <div class="qb-map3-concept" data-map-concept data-open="false" role="region" aria-label="Explicação do conceito selecionado" hidden>
+          <button type="button" class="qb-map3-concept-backdrop" data-map-close aria-label="Retornar ao mapa 3D"></button>
+          <article class="qb-map3-concept-card" data-map-concept-card>
+            <div class="qb-map3-concept-head">
+              <div><span class="qb-map3-concept-kicker">AXON · CONCEITO EM FOCO</span><p>Da estrutura ao significado, sem sair do mapa</p></div>
+              <button type="button" class="qb-map3-concept-close" data-map-close aria-label="Fechar conceito e retornar ao mapa">Voltar ao mapa <span aria-hidden="true">×</span></button>
+            </div>
+            <nav class="qb-map3-path" data-map-path aria-label="Caminho do conceito"></nav>
+            <div class="qb-map3-concept-scroll" data-map-concept-scroll>
+              <div class="qb-map3-detail" data-map-detail></div>
+            </div>
+            <div class="qb-map3-concept-foot"><span>Explore a definição, os vínculos e as questões deste nó.</span><span>ESC para fechar</span></div>
+          </article>
+        </div>
       </div>
-      <nav class="qb-map3-path" data-map-path aria-label="Caminho do conceito"></nav>
-      <div class="qb-map3-detail" data-map-detail></div>
+      <div class="qb-map3-footer"><label>Conceito<select data-map-select aria-label="Selecionar conceito no mapa 3D"></select></label>
+        <button type="button" class="btn small" data-map-open>Expandir conceito</button>
+      </div>
       <p class="qb-map3-legend"><span class="qb-mastery-forte">● Forte</span><span class="qb-mastery-em-desenvolvimento">● Em desenvolvimento</span><span class="qb-mastery-deficiente">● Reforçar</span><span class="qb-mastery-bom-sem-retencao">● Bom acerto</span><span class="qb-mastery-amostra-insuficiente">● Amostra pequena</span><span class="qb-mastery-sem-evidencia">● Não avaliado</span><span>┄ Ligação cruzada</span></p>
     </div>
   </section>`;
