@@ -202,6 +202,7 @@
         <div class="qb-plan-kpi"><b>${hours(plannedMinutes)}</b><small>tempo planejado</small></div>
         <div class="qb-plan-kpi"><b>${hours(usedMinutes)}</b><small>tempo registrado${outstanding ? ` · ${outstanding} em atraso` : ""}</small></div>
       </div>
+      ${window.QBInsights ? window.QBInsights.compact(S, S.planSelectedDay) : ""}
       <section class="qb-week-calendar" aria-label="Calendário de estudos da semana"><div class="qb-calendar-scroll"><div class="qb-week-grid">${days.map(d => dayColumn(S, d, today, due)).join("")}</div></div></section>
       ${backlog.length ? `<details class="qb-plan-overdue"><summary><strong>${backlog.length} atividades pendentes de semanas anteriores</strong><span>Abra para reprogramar ou concluir</span></summary><div class="qb-plan-overdue-list">${backlog.map(t => `<div><div><strong>${esc(t.titulo)}</strong><small>${short(t.data)} · ${esc(KINDS[t.tipo] || "Estudo")}${t.materia ? ` · ${esc(t.materia)}` : ""}</small></div><button type="button" class="btn ghost small" data-plan-action="move" data-plan-id="${esc(t.id)}">Mover para ${short(S.planSelectedDay)}</button></div>`).join("")}</div></details>` : ""}
       <div class="qb-plan-bottom">
@@ -212,7 +213,6 @@
           </div>
         </section>
         <aside class="qb-plan-side"><section class="qb-plan-tips"><h3>Tipos de atividade</h3><div class="qb-plan-legend">${Object.entries(KINDS).map(([id, name]) => `<span><i class="qb-kind-dot qb-kind-${id}"></i>${esc(name)}</span>`).join("")}</div><p>Marque as tarefas concluídas, inicie uma sessão para contar o tempo ou edite o dia de execução quando necessário.</p></section>
-          ${window.QBInsights ? window.QBInsights.compact(S, S.planSelectedDay) : ""}
         </aside>
       </div>
       ${form(S)}
@@ -277,7 +277,7 @@
       }
     }));
     document.querySelectorAll("[data-qb-go-daily]").forEach(b => b.addEventListener("click", () => {
-      S.insightsDay = S.planSelectedDay;
+      S.insightsDay = b.dataset.qbGoDaily;
       callbacks.setView("analiseDia");
     }));
     const f = document.getElementById("qb-plan-form");

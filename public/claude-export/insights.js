@@ -69,7 +69,34 @@
     const labels=a.map((v,i)=>i%3===1||i===13?`<text class="qb-da" x="${x(i)}" y="${h-14}" text-anchor="middle">${short(v.day)}</text>`:'').join('');
     return `<section class="qb-analytics-card"><div class="qb-analytics-head"><div><span>EVOLUÇÃO DE ACERTOS</span><h3>Precisão diária</h3></div><small>14 dias</small></div><p class="qb-chart-sub">Resultados das rodadas de treino, sem misturar notas de simulados.</p><div class="qb-chart-screen">${recentSummary}<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Precisão de acertos nas rodadas por dia. ${esc(description)}"><defs><linearGradient id="qb-daily-grad" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#aa88ff" stop-opacity=".42"/><stop offset="1" stop-color="#7654db" stop-opacity=".02"/></linearGradient></defs>${grid}${area?`<path fill="url(#qb-daily-grad)" d="${area}"/>`:''}${line?`<path class="qb-daily-line" d="${line}"/>`:''}${marks}${labels}</svg></div>${pts.length<2?'<p class="qb-chart-sub">A curva aparecerá com resultados de pelo menos dois dias.</p>':''}</section>`;
   }
-  function compact(S,day){const x=analyze(S,day),a=advice(x)[0];return `<section class="qb-plan-tips qb-analytics-compact"><div class="qb-analytics-mini-h"><h3>Análise diária</h3><span>${short(day)}</span></div><div class="qb-analytics-mini-grid"><div><strong>${x.items}</strong><small>itens</small></div><div><strong>${pct(x.c,x.c+x.e)}</strong><small>acerto</small></div><div><strong>${x.done}/${x.tasks}</strong><small>tarefas</small></div></div><p>${esc(a?a[1]:'Nenhum dado de desempenho registrado.')}</p><button type="button" class="qb-analytics-link" data-qb-go-daily="1">Ver relatório completo →</button></section>`}
+  function compact(S,day){
+    const selected=analyze(S,day), series=trend(S,day,7);
+    const correct=series.reduce((sum,row)=>sum+row.c,0);
+    const judged=series.reduce((sum,row)=>sum+row.c+row.e,0);
+    const bars=series.map(row=>{
+      const n=row.c+row.e, percent=pct(row.c,n);
+      const label=n?`${short(row.day)}: ${row.c} de ${n} acertos, ${percent}`:`${short(row.day)}: sem respostas válidas para calcular a taxa`;
+      return `<button type="button" data-qb-go-daily="${esc(row.day)}" aria-label="${esc(label)}. Abrir análise diária." title="${esc(label)}">
+        <span>${percent}</span><span class="qb-pulse-track"${n&&!row.c?' data-zero':''}>${n?`<i style="--accuracy:${percent}"></i>`:''}</span><span>${short(row.day)}</span>
+      </button>`;
+    }).join('');
+    return `<section class="qb-study-pulse" aria-label="Panorama do desempenho">
+      <div><div class="qb-pulse-head"><div><span class="qb-pulse-kicker">Dados do dia selecionado</span><h3>Panorama do desempenho</h3></div><span class="qb-pulse-date">${short(day)}</span></div>
+        <div class="qb-pulse-metrics">
+          <div><strong>${selected.c+selected.e}</strong><small>Respostas C/E</small></div>
+          <div><strong>${pct(selected.c,selected.c+selected.e)}</strong><small>Taxa de acerto</small></div>
+          <div><strong>${selected.done}/${selected.tasks}</strong><small>Tarefas concluídas</small></div>
+        </div>
+        <button type="button" class="qb-pulse-link" data-qb-go-daily="${esc(day)}">Abrir análise diária →</button>
+      </div>
+      <div class="qb-pulse-plot">
+        <span class="qb-pulse-range">7 dias · ${short(series[0].day)} a ${short(day)}</span>
+        <h4>Acertos nas rodadas de treino</h4>
+        <div class="qb-pulse-bars" role="group" aria-label="Abrir análise de um dia">${bars}</div>
+        <p class="qb-pulse-note">${judged?`No período: ${correct}/${judged} acertos (${pct(correct,judged)}). Em branco fora do cálculo.`:'Sem respostas C/E registradas neste período.'}</p>
+      </div>
+    </section>`;
+  }
   function render(S,now){
     if(!S.insightsDay)S.insightsDay=now();
     const d=S.insightsDay,x=analyze(S,d),pr=analyze(S,shift(d,-1)),t=trend(S,d,7),weekC=t.reduce((s,v)=>s+v.c,0),weekN=t.reduce((s,v)=>s+v.c+v.e,0);
