@@ -6,7 +6,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { placeMap } from "./layout";
 import { createBranchVisibility } from "./branch-visibility";
 import { createNodeActivation } from "./node-activation";
-import { nearestProjectedHit, resolveLabelPositions, wheelZoomFactor } from "./mouse-navigation";
+import { directionalPanOffset, nearestProjectedHit, resolveLabelPositions, wheelZoomFactor } from "./mouse-navigation";
 
 export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = null) {
   const doc = panel.ownerDocument, view = doc.defaultView;
@@ -309,6 +309,18 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     cancelPendingFocus();
     cancelZoom();
     if (action === "reset") { reset(); return; }
+    const pan=directionalPanOffset(action,camera.position.distanceTo(controls.target),camera.fov,camera.aspect);
+    if (pan) {
+      camera.updateMatrixWorld();
+      const right=new Vector3().setFromMatrixColumn(camera.matrixWorld,0);
+      const up=new Vector3().setFromMatrixColumn(camera.matrixWorld,1);
+      const shift=right.multiplyScalar(pan.right).add(up.multiplyScalar(pan.up));
+      camera.position.add(shift);
+      controls.target.add(shift);
+      controls.update();
+      render();
+      return;
+    }
     const offset = new Vector3().subVectors(camera.position,controls.target);
     if (action === "left" || action === "right") offset.applyAxisAngle(new Vector3(0,1,0), action === "left" ? .28 : -.28);
     else offset.setLength(Math.max(controls.minDistance,Math.min(controls.maxDistance,offset.length() * (action === "in" ? .82 : 1.22))));
