@@ -3,7 +3,7 @@ Versão 2.0 · 09/11/2026 · Segunda pesquisa e implementação no laboratório
 Responsável: assistente do projeto, por solicitação de Lucas.
 
 ## Status e limites
-Este é um protocolo de elaboração, recuperação de referências e revisão; não é treinamento dos pesos do modelo, certificação da banca ou medição de equivalência psicométrica. Sua adoção em chats depende da leitura deste arquivo. O laboratório agora possui geração assistida de rascunhos por fonte fornecida, revisão cega por IA e validação da importação dos itens identificados com ce braspe-2.0 (identificador técnico: cebraspe-2.0). Não houve importação de provas nem alteração de questões/progresso nesta implementação. Nenhuma incidência foi estimada nesta pesquisa.
+Este é um protocolo de elaboração, recuperação de referências e revisão; não é treinamento dos pesos do modelo, certificação da banca ou medição de equivalência psicométrica. Sua adoção em chats depende da leitura deste arquivo. O laboratório agora possui geração assistida de rascunhos por fonte fornecida, revisão cega por IA e validação da importação dos itens identificados com `cebraspe-2.0`. Não houve importação de provas nem alteração de questões/progresso nesta implementação. Nenhuma incidência foi estimada nesta pesquisa.
 
 Amostra consultada: dois cadernos oficiais CEBRASPE da Câmara (conhecimentos gerais e específicos, edital 2025), justificativas oficiais FUB 2025 e caderno FGV Câmara 2023 Técnica Legislativa, tarde, tipo 1, acompanhado de gabarito definitivo. A leitura de formatos não homologa os gabaritos CEBRASPE: os definitivos dos dois cadernos da Câmara ainda precisam ser associados item a item antes de constituírem corpus de calibração. Exemplos de falsificação abaixo são classificação editorial, não taxonomia oficial das bancas. Não extrapolar para toda banca ou área fiscal a partir desta amostra.
 
@@ -119,6 +119,23 @@ Antes de alegar alta fidelidade:
 
 ## 10. Prompt reutilizável
 Leia este protocolo e as regras pedagógicas atuais do projeto. Elabore itens inéditos exclusivamente C/E para o recorte solicitado. Use CEBRASPE como referência e, se útil, contextualização inspirada na FGV. Recupere fontes verificáveis; não invente fonte, gabarito oficial ou frequência. Para cada item, construa conceito, contexto, relação, operação e ponto decisivo. Varie corretos e errados sem pistas lexicais ou sequência previsível. Em E, indique mecanismo principal da taxonomia existente e correção mínima; em C, justifique a validade no domínio. Faça revisão por contraexemplo e interpretação alternativa. Retenha em rascunho qualquer item sem fundamento ou com ambiguidade. Entregue enunciados separados do gabarito/comentários e metadados exportáveis, com rótulo de autoria inédita. Não altere histórico, contas, questões existentes ou métricas. Não alegue treinamento interno do modelo ou equivalência validada com a banca.
+
+## 11. Segunda rodada: pesquisa aplicada ao código
+O guia BNI/Enade do Inep recomenda precisão, habilidade focal, alternativas plausíveis, independência e fundamentação das justificativas. Aplicação editorial nossa ao C/E: uma falsificação precisa representar erro de raciocínio plausível; não basta inserir uma negação. Não se está atribuindo o guia ao CEBRASPE nem transplantando o formato de múltipla escolha.
+Fonte: https://download.inep.gov.br/bni/enade/guia_de_elaboracao_revisao_de_itens_v1.pdf
+
+A página institucional do CEBRASPE descreve matriz de referência e avaliação de qualidade por dificuldade e discriminação. Aplicação no projeto: a dificuldade do gerador permanece “planejada”; não recebe rótulo de calibração TRI ou validação estatística.
+Fonte: https://www.cebraspe.org.br/avaliacoes/avaliacoes-educacionais/
+
+Implementação:
+- `src/lib/question-authoring.js`: protocolo, limites, fundamentação literal, formato, duplicidade exata e revisão cega.
+- `src/lib/question-authoring-server.js`: somente administrador autenticado; até cinco itens e duas chamadas de IA, sem gravação de questões ou respostas.
+- `src/components/qb/QuestionAuthoring.jsx`: fonte informada, geração de rascunhos e exportação de pareceres. URL é referência, não consulta automática.
+- `src/lib/question-editorial-gate.js`: impede importação direta de rascunhos do novo protocolo sem declaração de revisão humana. Importações legadas permanecem compatíveis; não é garantia antifraude de autoria nem validação semântica automática.
+- A pauta de criação exportada usa o mesmo protocolo.
+- A conferência literal da evidência apenas comprova presença no trecho fornecido, não autenticidade ou vigência. A revisão por IA pode errar. Sem aprovação humana não se publica no treino.
+- Não há pesquisa automática em cada geração nem detecção completa de plágio semântico contra o banco. A validação de duplicidade do lote é textual.
+- A pessoa revisora pode corrigir o JSON e registrar responsável, data e parecer antes da importação; conflitos de ID continuam preservando originais.
 
 ## Fontes consultadas
 [S1] CEBRASPE, Câmara, edital 2025, conhecimentos gerais, comandos e itens de Português:
