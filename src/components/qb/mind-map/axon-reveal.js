@@ -103,15 +103,18 @@ export function createAxonReveal(stage, win) {
     const scroller=panel.querySelector("[data-map-concept-scroll]");
     if(scroller)scroller.scrollTop=0;
     // Animations are optional. Reduced-motion users get an instantaneous, accessible explanation.
-    if(reduce.matches) {panel.dataset.open="true";return;}
+    const focusClose=()=>panel.querySelector(".qb-map3-concept-close")?.focus({preventScroll:true});
+    if(reduce.matches) {panel.dataset.open="true";focusClose();return;}
     const field=buildParticles(size,key);
     const start=win.performance.now(), duration=860;
+    let focused=false;
     particles.hidden=false;
     const tick=now=>{
       if(turn!==serial)return;
       const t=Math.min(1,(now-start)/duration);
       paint(field,size,t);
       if(t>.20)panel.dataset.open="true";
+      if(t>.30 && !focused){focused=true;focusClose();}
       if(t<1)frame=win.requestAnimationFrame(tick);
       else {frame=0;particles.hidden=true;context.clearRect(0,0,size.width,size.height);}
     };
