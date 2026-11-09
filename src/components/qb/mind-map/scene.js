@@ -5,6 +5,7 @@ import {
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { placeMap } from "./layout";
 import { createBranchVisibility } from "./branch-visibility";
+import { createNodeActivation } from "./node-activation";
 
 export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = null) {
   const doc = panel.ownerDocument, view = doc.defaultView;
@@ -122,17 +123,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     return {wrapper,tag,toggle,i};
   });
   let width = 0, height = 0, distance = 0, selected = "root", animation = 0;
-  let lastTapPath=null,lastTapAt=-Infinity;
-  function activateNode(path,event){
-    // Native double-click or two taps on the same label within 350 ms.
-    // A single click never triggers the AXON explanation.
-    const now=Number.isFinite(event?.timeStamp)?event.timeStamp:view.performance.now();
-    const repeated=event?.detail>0 && lastTapPath===path && now-lastTapAt>0 && now-lastTapAt<350;
-    const double=event?.detail>=2||repeated;
-    lastTapPath=double?null:path;
-    lastTapAt=now;
-    onSelect(path,double,double);
-  }
+  const activateNode=createNodeActivation(onSelect);
   function syncVisibility(){
     visiblePaths=branches.visiblePaths();
     visibleSlots.length=0;
