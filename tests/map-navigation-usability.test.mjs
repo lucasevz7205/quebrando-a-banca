@@ -2,7 +2,7 @@ import {test} from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import {placeMap} from "../src/components/qb/mind-map/layout.js";
-import {wheelZoomFactor,nearestProjectedHit,resolveLabelPositions} from "../src/components/qb/mind-map/mouse-navigation.js";
+import {wheelZoomFactor,directionalPanOffset,nearestProjectedHit,resolveLabelPositions} from "../src/components/qb/mind-map/mouse-navigation.js";
 
 test("a roda aproxima/afasta suavemente sem saltos de trackpad ou valores extremos",()=>{
  const out=wheelZoomFactor(120),into=wheelZoomFactor(-120);
@@ -12,6 +12,38 @@ test("a roda aproxima/afasta suavemente sem saltos de trackpad ou valores extrem
  assert.ok(wheelZoomFactor(3,1)>wheelZoomFactor(3));
  assert.ok(wheelZoomFactor(2000)<1.22,"picos de rolagem devem ser limitados");
  assert.ok(wheelZoomFactor(-2000)>.8);
+});
+test("as quatro setas deslocam a câmera no plano da tela sem alterar o zoom",()=>{
+ const up=directionalPanOffset("pan-up",20,42,1.5);
+ const down=directionalPanOffset("pan-down",20,42,1.5);
+ const left=directionalPanOffset("pan-left",20,42,1.5);
+ const right=directionalPanOffset("pan-right",20,42,1.5);
+ assert.ok(up.up>0 && up.right===0);
+ assert.equal(down.up,-up.up);
+ assert.ok(left.right<0 && left.up===0);
+ assert.equal(right.right,-left.right);
+ assert.equal(Math.hypot(right.right,right.up),Math.hypot(left.right,left.up));
+ assert.ok(directionalPanOffset("pan-right",70,42,1.5).right>right.right);
+ assert.ok(directionalPanOffset("pan-right",5,42,1.5).right<right.right);
+ assert.equal(directionalPanOffset("rotate",20),null);
+});
+test("controles de setas ficam dentro do palco 3D e usam deslocamento da visão",()=>{
+ const shell=fs.readFileSync("src/components/qb/study-shell.html","utf8");
+ const scene=fs.readFileSync("src/components/qb/mind-map/scene.js","utf8");
+ const css=fs.readFileSync("public/claude-export/map-dpad.css","utf8");
+ const start=shell.indexOf('class="qb-map3-stage" data-map-stage');
+ const close=shell.indexOf('data-map-concept data-open=',start);
+ const pad=shell.indexOf('class="qb-map3-dpad"',start);
+ assert.ok(start>=0&&pad>start&&pad<close);
+ for(const action of ["pan-up","pan-down","pan-left","pan-right"]){
+   assert.ok(shell.includes('data-map-camera="'+action+'"'));
+ }
+ assert.match(shell,/map-dpad\.css\?v=1/);
+ assert.match(scene,/directionalPanOffset\(action,camera\.position\.distanceTo\(controls\.target\),camera\.fov,camera\.aspect\)/);
+ assert.match(scene,/camera\.position\.add\(shift\)/);
+ assert.match(scene,/controls\.target\.add\(shift\)/);
+ assert.match(css,/z-index: 6/);
+ assert.match(css,/touch-action: manipulation/);
 });
 test("nós próximos ao clique são alcançáveis mesmo fora do raio da pequena esfera",()=>{
  const nodes=[{path:"0",x:100,y:100,visible:true,radius:7},
