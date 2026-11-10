@@ -95,7 +95,9 @@ test("botões funcionais: em modo de movimento reduzido navega e retorna sem esp
      target:{dataset:{radialTarget:"mapa"},hasAttribute:k=>k==="data-radial-target"},
      back:{dataset:{},hasAttribute:k=>k==="data-radial-back"}
    };
-   const root={dataset:{radialScreen:section},querySelector:()=>null,contains:el=>Object.values(controls).includes(el),
+   const root={dataset:{radialScreen:section},
+     querySelector:selector=>selector==="[data-radial-back]"?controls.back:null,
+     contains:el=>Object.values(controls).includes(el),
      addEventListener:(event,fn)=>{events[event]=fn}};
    app.wire({querySelector:q=>q===".qb-radial-hub"?root:null},{
      onModule:key=>calls.push("module:"+key),
@@ -115,7 +117,12 @@ test("botões funcionais: em modo de movimento reduzido navega e retorna sem esp
  s=scene("estudo");
  s.events.click({target:{closest:()=>s.controls.back}});
  assert.equal(calls.at(-1),"back");
- assert.equal(calls.length,3);
+ s=scene("estudo");
+ let stopped=false;
+ s.events.keydown({key:"Escape",preventDefault(){stopped=true;}});
+ assert.equal(calls.at(-1),"back");
+ assert.equal(stopped,true);
+ assert.equal(calls.length,4);
 });
 test("hub não altera armazenamento pedagógico e preserva vídeo de fundo existente",()=>{
  assert.doesNotMatch(script,/writeDocument|ClaudeDocument|assistantLLM|asServiceRole|fetch\(/);
