@@ -488,15 +488,17 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/radial-dashboard.css?v=1">
 <link rel="stylesheet" href="/claude-export/radial-annulus.css?v=1">
 <link rel="stylesheet" href="/claude-export/training-radial.css?v=1">
+<link rel="stylesheet" href="/claude-export/area-radial.css?v=1">
 <script src="/claude-export/radial-axon-flow.js?v=1"></script>
-<script src="/claude-export/training-radial.js?v=1"></script>
+<script src="/claude-export/training-radial.js?v=2"></script>
+<script src="/claude-export/area-radial.js?v=1"></script>
 <script src="/claude-export/radial-dashboard.js?v=2"></script>
 <script>
 (function(){
 const S = {
   db:null, dbState:'loading', // loading | ok | missing
   q:new Map(), r:new Map(), rodadas:[], qLoaded:false,
-  view:'portal', radialSection:null, trRadial:null, cap:null, modo:'novos', shuffle:false,
+  view:'portal', radialSection:null, trRadial:null, areaHub:null, cap:null, modo:'novos', shuffle:false,
   round:null, pendingRender:false,
   ed:new Map(), mat:new Map(), pt:new Map(), di:[], edLoaded:false,
   fEvo:'', evoCap:'', evoGrafico:'tempo', evoOrdem:'menor', evoModo:'n', evoPer:'d', evoDe:'', evoAte:'', evoFaixa:'', evoPagina:0,
@@ -707,6 +709,7 @@ function syncNavigation(active){
   if(back)back.hidden=S.view==='portal';
 }
 function openPortal(section=null,push=true,focus=true){
+  S.areaHub=null;
   const available=['painel','edital','treinar','estudo',...($('#tab-simulado')?['simulado']:[]),'historico'];
   S.radialSection=available.includes(section)?section:null;
   S.view='portal';
@@ -720,8 +723,9 @@ function openPortal(section=null,push=true,focus=true){
     window.scrollTo({top:0,behavior:'instant'});
   }
 }
-function setView(v,push=true){
+function setView(v,push=true,radialArea=null){
   if(v==='portal'){openPortal(null,push);return;}
+  S.areaHub=radialArea?{area:radialArea,level:'main',matter:null,tool:null,page:0}:null;
   if(v==='treinar'&&S.view==='portal'&&!S.round)S.trRadial=null;
   if(v==='estudo') v=S.ultEstudo||'mapa';
   if(v==='revisao') v='edital'; /* antigas URLs continuam úteis sem duplicar o edital em Estudo */
@@ -732,7 +736,12 @@ function setView(v,push=true){
   if(push){ try{ history.replaceState(null,'',location.href.split('#')[0]+'#'+v);}catch(e){} }
   render(true);
 }
-document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.view==='treinar'&&!S.round)S.trRadial=null;setView(b.dataset.view)}));
+document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('click',()=>{
+  const v=b.dataset.view;
+  if(v==='treinar'&&!S.round)S.trRadial=null;
+  const radial=['painel','edital','estudo','historico','simulado'].includes(v)?v:null;
+  setView(v,true,radial);
+}));
 $('#qb-radial-return-action')?.addEventListener('click',()=>openPortal(null));
 /* tema: automático → escuro → claro (preferência guardada neste navegador) */
 (function(){const ORD=['auto','dark','light'],LBL={auto:'Tema: automático',dark:'Tema: escuro',light:'Tema: claro'};let t='dark';try{t=localStorage.getItem('qb-tema')||'dark'}catch(e){}
@@ -760,6 +769,20 @@ function render(force){
       onModule:key=>openPortal(key),
       onBack:()=>openPortal(null),
       onOpen:target=>{setView(target);window.scrollTo({top:0,behavior:'instant'});}
+    })||null;
+    return;
+  }
+  if(S.areaHub&&S.qLoaded&&S.dbState==='ok'&&S.q.size>0 &&
+     !(S.areaHub.area==='simulado'&&(S.studyAccount||simLS('obj')||simLS('disc')))){
+    radialCleanup?.();radialCleanup=null;
+    const config=configAreaRadial();
+    main.innerHTML=window.QBAreaRadial?.render(config)||
+      '<div class="notice">O menu radial está indisponível. Use as abas superiores.</div>';
+    radialCleanup=window.QBAreaRadial?.wire(main,config,{
+      onSelect:selecionarAreaRadial,
+      onBack:voltarAreaRadial,
+      onOriginal:()=>abrirAreaOriginal(),
+      onPage:page=>{S.areaHub.page=page;render(true)}
     })||null;
     return;
   }
