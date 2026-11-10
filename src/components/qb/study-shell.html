@@ -509,7 +509,7 @@ const S = {
   fMat:'', fSt:'', abertos:new Set(), ptsAbertos:new Set(), evocar:false, revelados:new Set(),
   rv:new Map(), cfg:new Map(), cartAbertos:new Set(), mapaFocus:null, mapaFocusCounter:0,
   pg:new Map(), fPgMat:'', fPgTipo:'',
-  pl:[], // planejamento semanal; nunca mistura com o histórico de respostas
+  pl:[], plLoaded:false, cfgLoaded:false, // planejamento semanal e ciclos privados por concurso
   an:new Map(), mecQ:new Map(), pgModo:'mec', fMecMat:'', mecFoco:'todos', mecOpen:new Set()
 };
 const VIEWS=['portal','cartoes','mapa','simulado','painel','edital','revisao','pegadinhas','conteudo','treinar','caderno','analiseDia','historico','metodo','aprendizagem'];
