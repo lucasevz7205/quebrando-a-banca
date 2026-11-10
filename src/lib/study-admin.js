@@ -62,6 +62,30 @@ export const createStudyAccountForAdmin = createServerFn({method:"POST"})
     return result;
   });
 
+// Um projeto reservado por apelido só pode ser atribuído a um login real pelo administrador.
+// Proibimos transferir projetos que já pertençam a um usuário cadastrado, preservando
+// a separação entre materiais, respostas e histórico.
+export const bindReservedStudyAccountForAdmin = createServerFn({method:"POST"})
+  .middleware([requireUser])
+  .validator(z.object({accountId:accountIdSchema,userId:z.string().min(1).max(160)}))
+  .handler(async ({context,data}) => {
+    const entities=service(context);
+    return withStudyRequestGate(entities.StudyRequestGate, async () => {
+      const account=await getAccount(entities,data.accountId);
+      if(account.active)throw new Error("Desative o projeto antes de vincular um login.");
+      const candidate=await entities.User.get(data.userId).catch(()=>null);
+      if(!candidate||candidate.role!=="user")throw new Error("Informe o ID de um candidato já cadastrado no aplicativo.");
+      if(candidate.id===context.user.id)throw new Error("A conta do administrador deve permanecer separada.");
+      const oldUser=await entities.User.get(account.user_id).catch(()=>null);
+      if(oldUser&&oldUser.id!==candidate.id)throw new Error("Este projeto já pertence a outro usuário cadastrado.");
+      const existing=await entities.StudyAccount.filter({user_id:candidate.id},"created_date",1000,0);
+      if(existing.some(row=>row.id!==account.id&&row.active))throw new Error("O candidato já possui um projeto de estudo ativo.");
+      if(existing.some(row=>row.id!==account.id&&row.exam_name===account.exam_name))throw new Error("O login já possui um projeto com este nome.");
+      await entities.StudyAccount.update(account.id,{user_id:candidate.id,access_pending:false});
+      return {id:account.id,userId:candidate.id};
+    });
+  });
+
 export const setStudyAccountActiveForAdmin = createServerFn({method:"POST"})
   .middleware([requireUser])
   .validator(z.object({accountId:accountIdSchema,active:z.boolean()}))
