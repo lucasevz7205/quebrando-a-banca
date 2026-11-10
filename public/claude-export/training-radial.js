@@ -40,7 +40,8 @@ function build({questions,topics,responses,index}){
   const byMatter=new Map();
   const courseTopics=value(topics).filter(t=>t?.id&&t.sigla).sort((a,b)=>(a.materiaOrdem??999)-(b.materiaOrdem??999)||(a.ordem??9999)-(b.ordem??9999));
   const assigned=new Set(),chapterOwner=new Map();
-  for(const t of courseTopics)for(const cap of t.caps||[])if(!chapterOwner.has(cap))chapterOwner.set(cap,t.sigla);
+  // Mesmo critério de topicoDoCap() no Histórico: menor ordem do edital.
+  for(const t of courseTopics.slice().sort((a,b)=>(a.ordem||0)-(b.ordem||0)))for(const cap of t.caps||[])if(!chapterOwner.has(cap))chapterOwner.set(cap,t.sigla);
   for(const t of courseTopics){
     if(!byMatter.has(t.sigla))byMatter.set(t.sigla,{
       id:t.sigla,name:t.materia||t.sigla,short:SHORT[t.sigla]||t.materia||t.sigla,
