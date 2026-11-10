@@ -55,12 +55,24 @@
   const allowedKeys=new Set(MODULES.map(m=>m.key));
   const escape=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const moduleFor=key=>MODULES.find(m=>m.key===key)||null;
+  const COLORS=["#79c8ff","#5fa1ff","#a895ff","#ff906f","#b88dff","#38d9fa"];
   function positions(count){
-    const radius=count>5?35:count===5?34:33;
+    // Nodes live INSIDE the luminous annular band, never outside as cards.
+    // Keep labels stationary while its electric filaments move.
+    const radius=count>=6?37:36.5;
     return Array.from({length:count},(_,i)=>{
       const a=(-Math.PI/2)+(Math.PI*2*i/count);
-      return {x:50+Math.cos(a)*radius,y:50+Math.sin(a)*radius};
+      return {x:50+Math.cos(a)*radius,y:50+Math.sin(a)*radius,angle:i*360/count};
     });
+  }
+  function ringPoint(radius,angle){
+    const rad=(angle-90)*Math.PI/180;
+    return {x:500+Math.cos(rad)*radius,y:500+Math.sin(rad)*radius};
+  }
+  function arc(radius,start,end){
+    const from=ringPoint(radius,start),to=ringPoint(radius,end);
+    const fixed=n=>n.toFixed(2);
+    return "M"+fixed(from.x)+" "+fixed(from.y)+" A"+radius+" "+radius+" 0 "+(end-start>180?1:0)+" 1 "+fixed(to.x)+" "+fixed(to.y);
   }
   function render(section=null,availableKeys=null){
     const keys=Array.isArray(availableKeys)?availableKeys.filter(k=>allowedKeys.has(k)):MODULES.map(m=>m.key);
@@ -68,15 +80,21 @@
     const selected=moduleFor(normalized);
     const list=selected?SUBMODULES[normalized]:MODULES.filter(m=>keys.includes(m.key));
     const pts=positions(list.length);
+    const step=360/list.length;
     const links=pts.map((p,i)=>{
-      const x=p.x*10,y=p.y*10;
-      const cpx=500+(x-500)*.48,cpy=500+(y-500)*.48;
-      return '<path class="qb-radial-link" style="--index:'+i+'" d="M500 500 Q'+cpx.toFixed(1)+' '+cpy.toFixed(1)+' '+x.toFixed(1)+' '+y.toFixed(1)+'" />';
+      const start=p.angle-step*.48,end=p.angle+step*.48;
+      return '<path class="qb-radial-link" style="--index:'+i+'" d="'+arc(368,start,end)+'" />';
+    }).join("");
+    const sectors=pts.map((p,i)=>{
+      const start=p.angle-step*.47,end=p.angle+step*.47;
+      return '<path class="qb-radial-sector" data-ring-sector="'+i+'"'
+        +' style="--index:'+i+';--sector-color:'+COLORS[i%COLORS.length]+'"'
+        +' d="'+arc(368,start,end)+'" />';
     }).join("");
     const nodes=list.map((node,i)=>{
       const p=pts[i],isRoot=!selected,prop=isRoot?'data-radial-module':'data-radial-target';
       const target=isRoot?node.key:node.target;
-      return '<button type="button" class="qb-radial-node" '+prop+'="'+escape(target)+'" style="--node-x:'+p.x.toFixed(3)+'%;--node-y:'+p.y.toFixed(3)+'%;--index:'+i+';" aria-label="'+escape(node.label)+': '+escape(node.description)+'">'
+      return '<button type="button" class="qb-radial-node" '+prop+'="'+escape(target)+'" data-radial-index="'+i+'" style="--node-x:'+p.x.toFixed(3)+'%;--node-y:'+p.y.toFixed(3)+'%;--index:'+i+';--sector-color:'+COLORS[i%COLORS.length]+';" aria-label="'+escape(node.label)+': '+escape(node.description)+'">'
         +'<span class="qb-radial-node-icon" aria-hidden="true">'+node.icon+'</span>'
         +'<span class="qb-radial-node-label">'+escape(node.label)+'</span>'
         +'<span class="qb-radial-node-caption">'+escape(node.description)+'</span>'
@@ -96,10 +114,13 @@
       +'<h2 class="qb-radial-screen-title" tabindex="-1">'+(selected?escape(selected.label):"Menu principal")+'</h2>'
       +'</div>'+(selected?'<button type="button" class="qb-radial-return-top" data-radial-back>← Voltar ao menu principal</button>':'<span class="qb-radial-top-status"><i aria-hidden="true"></i>'+list.length+' módulos disponíveis</span>')+'</div>'
       +'<div class="qb-radial-stage" data-radial-stage>'
+      +'<div class="qb-radial-annulus" aria-hidden="true"><div class="qb-radial-annulus-light"></div><div class="qb-radial-annulus-texture"></div><div class="qb-radial-annulus-filaments"></div></div>'
       +'<svg class="qb-radial-network" viewBox="0 0 1000 1000" aria-hidden="true">'
       +'<defs><linearGradient id="qb-radial-trace" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4784ff"/><stop offset="52%" stop-color="#a998ff"/><stop offset="100%" stop-color="#3b70ff"/></linearGradient></defs>'
-      +'<circle cx="500" cy="500" r="345" class="qb-radial-orbit"/><circle cx="500" cy="500" r="230" class="qb-radial-orbit qb-radial-orbit-inner"/>'
-      +links+'</svg><div class="qb-radial-aura" aria-hidden="true"></div>'
+      +'<circle cx="500" cy="500" r="368" class="qb-radial-orbit"/><circle cx="500" cy="500" r="251" class="qb-radial-orbit qb-radial-orbit-inner"/>'
+      +sectors+links+'</svg>'
+      +'<canvas class="qb-radial-flow" data-radial-flow aria-hidden="true"></canvas>'
+      +'<div class="qb-radial-aura" aria-hidden="true"></div>'
       +center+nodes
       +'<canvas class="qb-radial-particles" data-radial-particles aria-hidden="true" hidden></canvas>'
       +'</div><div class="qb-radial-footer">'
