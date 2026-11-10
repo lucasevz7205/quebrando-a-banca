@@ -19,7 +19,7 @@ const empty=()=>({total:0,respondidas:0,acertos:0,erros:0,brancos:0,pendentes:0}
  */
 const eligible=q=>!!q&&!/^SIM/i.test(str(q.cap))&&!q.foraNivel;
 const everWrong=r=>Number(r?.erros||0)>0||Number(r?.brancos||0)>0||
-  (r?.hist||[]).some(h=>h?.ok===false||h?.m==="B");
+  (r?.hist||[]).some(h=>!h?.ok);
 function summary(ids,questions,responses){
   const result=empty(),distinct=unique(ids);
   for(const id of distinct){
