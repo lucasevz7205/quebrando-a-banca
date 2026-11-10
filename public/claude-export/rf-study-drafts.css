@@ -1,0 +1,21 @@
+/* Editorial notice for practice-only C/E drafts RF 2.1–2.3.
+   This notices the reader without interrupting existing answer flow. */
+.qb-rf-pending{
+  display:block;
+  margin:8px 0 12px;
+  padding:10px 13px;
+  border:1px solid rgba(236,180,91,.52);
+  border-left:3px solid #dfad62;
+  border-radius:9px;
+  background:linear-gradient(110deg,rgba(118,76,30,.25),rgba(55,43,36,.42));
+  color:#f0dcb8;
+  font:500 11px/1.55 var(--display,system-ui);
+}
+.qb-rf-pending strong{color:#ffe4a7}
+:root[data-theme="light"] .qb-rf-pending{
+  background:#fff5df;
+  color:#66471d;
+  border-color:#dfbd87;
+}
+:root[data-theme="light"] .qb-rf-pending strong{color:#795122}
+@media(max-width:600px){.qb-rf-pending{padding:8px 10px;font-size:11px}}
