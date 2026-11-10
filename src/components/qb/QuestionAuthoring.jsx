@@ -7,7 +7,7 @@ const quantities = Array.from({length: SUBJECT_QUESTION_LIMIT}, (_, i) => i + 1)
 
 export default function QuestionAuthoring(){
  const run=useServerFn(generateLabDrafts);
- const [form,setForm]=useState({materia:"",assunto:"",cargo:"",quantidade:3,fonte:"",localizacao:"",textoFonte:"",mecanismos:[]});
+ const [form,setForm]=useState({materia:"",assunto:"",cargo:"",quantidade:3,fonte:"",localizacao:"",textoFonte:"",topicoId:"",mapaNoId:"",mecanismos:[]});
  const [busy,setBusy]=useState(false),[error,setError]=useState(""),[result,setResult]=useState(null);
  const field=(key,label,max,multiline=false)=><label key={key}>{label}{multiline?<textarea required minLength={100} maxLength={max} rows={8} value={form[key]} onChange={e=>setForm({...form,[key]:e.target.value})}/>:<input required maxLength={max} value={form[key]} onChange={e=>setForm({...form,[key]:e.target.value})}/>}</label>;
  const [activeForm,setActiveForm]=useState(null);
@@ -35,6 +35,10 @@ export default function QuestionAuthoring(){
  <form onSubmit={submit}><fieldset disabled={busy} style={{border:0,padding:0,display:"grid",gap:12}}>
  <div className="qb-filters">{field("materia","Matéria",150)}{field("assunto","Assunto / tópico",200)}{field("cargo","Cargo-alvo",200)}
  <label>Quantidade<select value={form.quantidade} onChange={e=>setForm({...form,quantidade:Number(e.target.value)})}>{quantities.map(n=><option key={n}>{n}</option>)}</select></label></div>
+ <div className="qb-filters">
+ <label>ID do assunto no mapa (opcional)<input maxLength={120} value={form.topicoId} placeholder="Ex.: rf-2-1" onChange={e=>setForm({...form,topicoId:e.target.value})}/></label>
+ <label>ID exato do nó no mapa (opcional)<input maxLength={180} value={form.mapaNoId} placeholder="Ex.: rf-2-1-r1-1" onChange={e=>setForm({...form,mapaNoId:e.target.value})}/></label></div>
+ <p>Informe ambos os IDs para ativar o protocolo editorial 3.0 com remissão específica. Confira o nó no mapa antes da importação; um ID digitado não é verificação de existência.</p>
  {field("fonte","Referência da fonte (título ou URL)",1000)}{field("localizacao","Artigo, página ou seção e versão/data",300)}{field("textoFonte","Texto-fonte para fundamentação",14000,true)}
  <p>Até {SUBJECT_QUESTION_LIMIT} rascunhos por assunto. Cada grupo de até {QUESTION_GROUP_SIZE} utiliza duas chamadas de IA com créditos Base44 para elaboração e revisão.</p>
  <button className="qb-primary" type="submit">{busy?"Elaborando e revisando…":"Gerar rascunhos com IA (usa créditos)"}</button></fieldset></form>
@@ -51,6 +55,6 @@ export default function QuestionAuthoring(){
  {q.revisaoIA.problemas.length>0&&<ul>{q.revisaoIA.problemas.map((p,j)=><li key={j}>{p}</li>)}</ul>}
  </details>)}
  <button onClick={download}>Exportar rascunhos e pareceres em JSON</button>
- <p>Para importar, revise o arquivo e preencha revisaoHumana com responsavel, data e parecer; altere statusEditorial para revisado. Itens bloqueados exigem correção e nova revisão antes da importação.</p>
+ <p>Antes de importar, registre a revisão humana e mantenha os IDs originais. Para protocolo 3.0, informe responsável, data, parecer e as quatro confirmações booleanas: fonteConferida, gabaritoConferido, univocidadeConferida e remissaoConferida. Itens bloqueados exigem correção e nova revisão antes da importação.</p>
  </div>}</section>;
 }
