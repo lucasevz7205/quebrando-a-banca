@@ -2441,8 +2441,9 @@ function wire(){
   const ev=$('#evocar'); if(ev) ev.addEventListener('change',()=>{S.evocar=ev.checked;S.revelados.clear();render(true)});
   document.querySelectorAll('details[data-grupo]').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.abertos.add(d.dataset.grupo);else S.abertos.delete(d.dataset.grupo)}));
   document.querySelectorAll('[data-status]').forEach(s=>s.addEventListener('change',()=>salvarStatus(s.dataset.status,s.value)));
-  document.querySelectorAll('[data-ir-mapa]').forEach(b=>b.addEventListener('click',()=>{S.mapaId=b.dataset.irMapa;S.mapaAb=null;S.revelados.clear();setView('mapa');window.scrollTo({top:0})}));
+  document.querySelectorAll('[data-ir-mapa]').forEach(b=>b.addEventListener('click',()=>{S.mapaId=b.dataset.irMapa;S.mapaAb=null;S.mapaFocus=null;S.mapaBack=null;S.revelados.clear();setView('mapa');window.scrollTo({top:0})}));
   document.querySelectorAll('[data-qcard]').forEach(b=>b.addEventListener('click',()=>abrirCartaoQuestao(b.dataset.qcard)));
+  document.querySelectorAll('[data-qmap-question]').forEach(b=>b.addEventListener('click',()=>irQuestaoMapa(b.dataset.qmapQuestion)));
   document.querySelectorAll('[data-map-card-index]').forEach(b=>b.addEventListener('click',()=>abrirCartaoDoMapa(Number(b.dataset.mapCardIndex))));
   const map3=$('[data-map3]'), mapDetail=map3?.querySelector('[data-map-detail]');
   if(mapDetail){
@@ -2455,10 +2456,11 @@ function wire(){
       const b=event.target.closest('button');
       if(!b)return;
       if(b.hasAttribute('data-qcard'))abrirCartaoQuestao(b.dataset.qcard);
+      else if(b.hasAttribute('data-qmap-question'))irQuestaoMapa(b.dataset.qmapQuestion);
       else if(b.hasAttribute('data-map-card-index'))abrirCartaoDoMapa(Number(b.dataset.mapCardIndex));
       else if(b.hasAttribute('data-mastery-practice'))treinarNoMapa(b.dataset.masteryPractice);
       else if(b.hasAttribute('data-mastery-edital'))abrirEditalDoMapa();
-      else if(b.dataset.irMapa){S.mapaId=b.dataset.irMapa;S.mapaAb=null;S.revelados.clear();setView('mapa');}
+      else if(b.dataset.irMapa){S.mapaId=b.dataset.irMapa;S.mapaAb=null;S.mapaFocus=null;S.mapaBack=null;S.revelados.clear();setView('mapa');}
     });
   }
   document.querySelectorAll('[data-mx]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.mx;S.mapaX=S.mapaX||new Set();if(S.mapaX.has(k))S.mapaX.delete(k);else S.mapaX.add(k);render(true)}));
@@ -2470,7 +2472,7 @@ function wire(){
   document.querySelectorAll('[data-cfech]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.cfech;S.cartFech=S.cartFech||new Set();if(S.cartFech.has(k))S.cartFech.delete(k);else S.cartFech.add(k);render(true)}));
   document.querySelectorAll('[data-cf]').forEach(b=>b.addEventListener('click',()=>{S.cartFech=new Set();if(b.dataset.cf==='0'){const rv=S.rv.get(S.cartId);for(const c of (rv&&rv.cartoes)||[])S.cartFech.add(S.cartId+'#'+(c.tema||'Geral'))}render(true)}));
   const cr=$('#cart-reset'); if(cr) cr.addEventListener('click',()=>{const qs=indiceQuestoes().byTopic.get(S.cartId)||[],keys=new Set(qs.map(q=>chaveQuestao(q.id)));for(const k of [...S.cartAbertos]) if(k.startsWith(S.cartId+'@')||keys.has(k)){S.cartAbertos.delete(k);S.cartRated.delete(k);S.cartResp.delete(k);S.ia.delete(k)}render(true)});
-  const mt=$('#mapa-top'); if(mt) mt.addEventListener('change',()=>{S.mapaId=mt.value;S.mapaAb=null;S.revelados.clear();render(true)});
+  const mt=$('#mapa-top'); if(mt) mt.addEventListener('change',()=>{S.mapaId=mt.value;S.mapaAb=null;S.mapaFocus=null;S.mapaBack=null;S.revelados.clear();render(true)});
   document.querySelectorAll('[data-mastery-edital]').forEach(b=>b.addEventListener('click',abrirEditalDoMapa));
   /* O detalhamento do edital está exclusivamente na aba Edital. */
   const ra=$('#rv-abrir'); if(ra) ra.addEventListener('click',()=>{for(const t of S.ed.values()){if(S.rv.has(t.id)||S.pt.has(t.id)){S.abertos.add('rv:'+t.sigla);S.abertos.add('rvt:'+t.id)}}render(true)});
@@ -2527,9 +2529,17 @@ function wire(){
   document.querySelectorAll('[data-cresp]').forEach(t=>{t.addEventListener('input',()=>S.cartResp.set(t.dataset.cresp,t.value));t.addEventListener('blur',()=>{if(S.pendingRender)setTimeout(()=>render(),0)})});
   document.querySelectorAll('[data-exab]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.exab;if(S.exAb.has(k))S.exAb.delete(k);else S.exAb.add(k);render(true)}));
   document.querySelectorAll('[data-irmapa]').forEach(b=>b.addEventListener('click',()=>irMapa(b.dataset.irmapa)));
+  document.querySelectorAll('[data-voltar-questao]').forEach(b=>b.addEventListener('click',()=>{
+    const back=S.mapaBack;if(!back||back.kind!=='question')return;
+    const previous=back.view||'treinar',qid=back.qid;
+    if(previous==='cartoes'){S.cartQuestionFocus=qid;S.cartId=recursosQuestao(qid)?.topicId||S.cartId;}
+    if(previous==='mapa')S.mapaId=back.topicId;
+    S.mapaBack=null;S.mapaFocus=null;setView(previous);
+    if(previous==='cartoes')setTimeout(()=>document.getElementById('qbq-'+qid)?.scrollIntoView({block:'center',behavior:'smooth'}),60);
+  }));
   document.querySelectorAll('[data-voltar-flash]').forEach(b=>b.addEventListener('click',()=>{
-    const back=S.mapaBack;if(!back)return;
-    S.cartId=back.cartId;setView('cartoes');
+    const back=S.mapaBack;if(!back||back.kind!=='flashcard')return;
+    S.mapaBack=null;S.cartId=back.cartId;setView('cartoes');
     const qid=window.QBQuestionLinks?.questionId(back.k);
     setTimeout(()=>document.getElementById(qid?'qbq-'+qid:'qbflash-'+back.k)?.scrollIntoView({block:'center',behavior:'smooth'}),80);
   }));
