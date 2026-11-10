@@ -18,9 +18,11 @@ function fakePage({saved=null,reduced=false,saveData=false}={}){
   const poster=document=>undefined;
   const video={
     listeners:{},muted:false,defaultMuted:false,playsInline:false,
-    preload:"",readyState:0,duration:4,currentTime:0,
-    playCalls:0,pauseCalls:0,
+    preload:"",readyState:0,duration:4,currentTime:0,src:"",
+    dataset:{qbVideoSrc:"https://d8j0ntlcm91z4.cloudfront.net/example.mp4"},
+    playCalls:0,pauseCalls:0,loadCalls:0,
     addEventListener(type,cb){this.listeners[type]=cb;},
+    load(){this.loadCalls++;},
     play(){this.playCalls++;return Promise.resolve();},
     pause(){this.pauseCalls++;}
   };
@@ -56,7 +58,7 @@ test("O fundo usa exatamente o vídeo público do usuário e fica antes de TODA 
   const header=shell.indexOf('class="head-row qb-header-row"');
   assert.ok(background>0&&wrap>background&&header>wrap);
   assert.ok(shell.includes(url));
-  assert.match(shell,/data-qb-background-video muted playsinline loop preload="none"/);
+  assert.match(shell,/data-qb-background-video data-qb-video-src="https:\/\/d8j0ntlcm91z4.cloudfront.net\/[^"]+" muted playsinline loop preload="none"/);
   assert.match(shell,/poster="\/claude-export\/ambient-poster\.jpg"/);
   assert.match(shell,/id="qb-background-toggle"/);
   assert.match(shell,/ambient-background\.css\?v=1/);
@@ -89,6 +91,7 @@ test("modo em movimento é inicial e alterna para um quadro pausado",()=>{
   assert.equal(page.toggle.attributes["aria-pressed"],"true");
   assert.equal(page.doc.documentElement.dataset.qbAmbient,"motion");
   assert.equal(page.video.playCalls,1);
+  assert.equal(page.video.loadCalls,1);
   page.toggle.handlers.click();
   assert.equal(page.toggle.textContent,"Fundo: estático");
   assert.equal(page.toggle.attributes["aria-pressed"],"false");
@@ -105,6 +108,8 @@ test("modo em movimento é inicial e alterna para um quadro pausado",()=>{
 test("preferência estática impede download de vídeo e reaproveita a imagem",()=>{
   const page=fakePage({saved:"still"});
   assert.equal(page.video.playCalls,0);
+  assert.equal(page.video.loadCalls,0);
+  assert.equal(page.video.src,"");
   assert.equal(page.video.preload,"none");
   assert.equal(page.toggle.attributes["aria-pressed"],"false");
   assert.match(css, /url\("\/claude-export\/ambient-poster\.jpg"\)/);
@@ -146,4 +151,6 @@ test("dados de questões e mecanismo de IA não foram alterados pela camada visu
   assert.match(js,/video\.muted=true/);
   assert.match(js,/video\.pause\(\)/);
   assert.match(js,/video\.play\(\)/);
+  assert.match(js,/video\.src=source/);
+  assert.match(js,/video\.load\(\)/);
 });
