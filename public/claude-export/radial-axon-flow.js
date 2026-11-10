@@ -28,6 +28,7 @@
     const doc=stage.ownerDocument;
     const reduced=win.matchMedia("(prefers-reduced-motion: reduce)");
     const rand=seeded(319071);
+    const moduleCount=Math.max(1,root.querySelectorAll(".qb-radial-node").length);
     const strands=Array.from({length:132},(_,i)=>({
       a:TAU*i/132+(rand()-.5)*.13,
       r:.357+(rand()-.5)*.10,
@@ -59,7 +60,7 @@
         const angle=s.a+time*s.speed;
         const radius=size*(s.r+.008*Math.sin(time*.77+s.phase));
         const centerIndex=((angle+Math.PI/2+TAU)%TAU)/TAU;
-        const sector=Math.floor(centerIndex*root.querySelectorAll(".qb-radial-node").length);
+        const sector=Math.floor(centerIndex*moduleCount);
         const highlighted=focusIndex===sector;
         const length=.018+s.size*.018;
         ctx.strokeStyle="rgba("+colorAt(angle)+","+(s.opacity*(highlighted?1.9:1)).toFixed(3)+")";
