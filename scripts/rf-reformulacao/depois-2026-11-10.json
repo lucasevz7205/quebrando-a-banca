@@ -229,48 +229,18 @@
       "ligacoes": [
         [
           "rf-2-1-r1-1",
-          "rf-2-1-r1-1-1",
-          "ASR e Ao vivo: Usar “automático” e “degravação” como categorias excludentes."
-        ],
-        [
-          "rf-2-1-r1-1-1",
           "rf-2-1-r1-2",
-          "Ao vivo e Gravação: Reduzir degravação a gravações exclusivamente sonoras."
-        ],
-        [
-          "rf-2-1-r1-2",
-          "rf-2-1-r1-2-1",
-          "Gravação e Manual: Confundir auxílio computacional com ausência de intervenção humana."
-        ],
-        [
-          "rf-2-1-r1-2-1",
-          "rf-2-1-r1-3",
-          "Manual e Versão: Restringir revisão humana às saídas de IA."
-        ],
-        [
-          "rf-2-1-r1-3",
-          "rf-2-1-r1-3-1",
-          "Versão e Fidelidade: Substituir uma afirmação do orador pela que o revisor julga verdadeira."
+          "ASR classifica o agente; degravação classifica a origem gravada."
         ],
         [
           "rf-2-1-r1-3-1",
-          "rf-2-1-r2-1",
-          "Fidelidade e Literal: Aplicar automaticamente os critérios da versão limpa a um registro literal."
-        ],
-        [
-          "rf-2-1-r2-1",
-          "rf-2-1-r2-1-1",
-          "Literal e Autocorreção: Tratar a primeira cifra como erro do reconhecedor quando ela foi pronunciada."
-        ],
-        [
-          "rf-2-1-r2-1-1",
-          "rf-2-1-r2-2",
-          "Autocorreção e Limpeza: Atribuir às aulas uma nomenclatura única quando elas distinguem os níveis de edição de maneiras diferentes."
-        ],
-        [
-          "rf-2-1-r2-2",
           "rf-2-1-r2-2-1",
-          "Limpeza e Ressalva: Confundir redução de palavras com preservação automática da proposição."
+          "Corrigir reconhecimento e limpar oralidade preservam o sentido pronunciado."
+        ],
+        [
+          "rf-2-1-r2-1-1",
+          "rf-2-1-r2-2",
+          "A convenção editorial define como tratar uma autocorreção."
         ]
       ]
     },
@@ -346,7 +316,7 @@
           "Caso: Uma audiência é legendada ao vivo e seu arquivo é transcrito novamente no dia seguinte."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
-        "tema": "Aplicação ao vivo",
+        "tema": "Quem gera o texto?",
         "mapaNoId": "rf-2-1-r1-1-1"
       },
       {
@@ -366,7 +336,7 @@
           "Caso: Dois profissionais recebem a mesma gravação; um digita do zero, outro corrige um rascunho de ASR."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
-        "tema": "Manual ou assistida",
+        "tema": "De onde se parte?",
         "mapaNoId": "rf-2-1-r1-2-1"
       },
       {
@@ -386,7 +356,7 @@
           "Caso: O orador cita “Recife”; o sistema escreve “Resende”, e a gravação permite identificar a cidade."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
-        "tema": "Erro de reconhecimento",
+        "tema": "O que se faz com o texto?",
         "mapaNoId": "rf-2-1-r1-3-1"
       },
       {
@@ -406,7 +376,7 @@
           "Caso: O orador diz “foram vinte, corrijo, trinta participantes”."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
-        "tema": "Autocorreção",
+        "tema": "Literal",
         "mapaNoId": "rf-2-1-r2-1-1"
       },
       {
@@ -426,7 +396,7 @@
           "Caso: “Apoio a proposta, salvo o artigo terceiro” não equivale a “apoio a proposta”."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
-        "tema": "Fronteira de fidelidade",
+        "tema": "Limpa ou editada",
         "mapaNoId": "rf-2-1-r2-2-1"
       }
     ],
@@ -729,49 +699,19 @@
       },
       "ligacoes": [
         [
-          "rf-2-2-r1-1",
           "rf-2-2-r1-1-1",
-          "Captação e VAD: Trocar detecção de voz por identificação do orador."
-        ],
-        [
-          "rf-2-2-r1-1-1",
-          "rf-2-2-r1-2",
-          "VAD e Hipótese: Usar velocidade de entrega como indicador suficiente de fidelidade."
-        ],
-        [
-          "rf-2-2-r1-2",
           "rf-2-2-r1-2-1",
-          "Hipótese e Diarização: Tomar a numeração dos falantes como ordem oficial da lista de presença."
-        ],
-        [
-          "rf-2-2-r1-2-1",
-          "rf-2-2-r2-1",
-          "Diarização e Triagem: Ordenar a revisão exclusivamente pelo escore e ignorar o impacto do erro."
-        ],
-        [
-          "rf-2-2-r2-1",
-          "rf-2-2-r2-1-1",
-          "Triagem e Negação: Equiparar alta confiança a baixo risco semântico."
+          "VAD localiza voz; diarização distingue falantes."
         ],
         [
           "rf-2-2-r2-1-1",
           "rf-2-2-r2-2",
-          "Negação e Validação: Confundir acabamento textual com validação do conteúdo."
-        ],
-        [
-          "rf-2-2-r2-2",
-          "rf-2-2-r2-2-1",
-          "Validação e Versão: Confundir registro de uma alteração com prova de sua correção."
+          "Risco semântico orienta a conferência antes da liberação."
         ],
         [
           "rf-2-2-r2-2-1",
-          "rf-2-2-r3-1",
-          "Versão e Recorrência: Converter recorrência em indicação automática de retreinamento."
-        ],
-        [
-          "rf-2-2-r3-1",
           "rf-2-2-r3-1-1",
-          "Recorrência e Glossário: Supor aprendizado automático dos pesos a cada edição de texto."
+          "Correções rastreáveis alimentam um glossário confirmado."
         ]
       ]
     },
@@ -847,7 +787,7 @@
           "Caso: Um componente marca os intervalos 00:10–00:18 e 00:25–00:40 como contendo fala."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
-        "tema": "VAD",
+        "tema": "Preparar áudio",
         "mapaNoId": "rf-2-2-r1-1-1"
       },
       {
@@ -867,7 +807,7 @@
           "Caso: A transcrição alterna os rótulos “Falante 1” e “Falante 2”."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
-        "tema": "Diarização",
+        "tema": "Produzir hipótese",
         "mapaNoId": "rf-2-2-r1-2-1"
       },
       {
@@ -887,7 +827,7 @@
           "Caso: O áudio diz “não aprovo”, enquanto a hipótese registra “aprovo” com alta confiança."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
-        "tema": "Trecho crítico",
+        "tema": "Triagem",
         "mapaNoId": "rf-2-2-r2-1-1"
       },
       {
@@ -907,7 +847,7 @@
           "Caso: A equipe registra a versão anterior, a nova redação e o minuto de uma correção."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
-        "tema": "Trilha de revisão",
+        "tema": "Validação",
         "mapaNoId": "rf-2-2-r2-2-1"
       },
       {
@@ -927,7 +867,7 @@
           "Caso: Um revisor corrige um nome e o acrescenta ao glossário da equipe."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
-        "tema": "Atualizar glossário",
+        "tema": "Correção recorrente",
         "mapaNoId": "rf-2-2-r3-1-1"
       }
     ],
@@ -1238,49 +1178,19 @@
       },
       "ligacoes": [
         [
+          "rf-2-3-r2-1",
+          "rf-2-3-r2-1-1",
+          "Inserções explicam por que a WER pode superar 100%."
+        ],
+        [
+          "rf-2-3-r2-2-1",
           "rf-2-3-r1-1",
-          "rf-2-3-r1-1-1",
-          "Fidelidade e Uma palavra: Deduzir baixo impacto a partir de uma única substituição."
-        ],
-        [
-          "rf-2-3-r1-1-1",
-          "rf-2-3-r1-2",
-          "Uma palavra e Legibilidade: Usar correção lexical para concluir que há sincronismo."
-        ],
-        [
-          "rf-2-3-r1-2",
-          "rf-2-3-r1-2-1",
-          "Legibilidade e Pontuação: Supor que igualdade de palavras garante igualdade de sentido."
-        ],
-        [
-          "rf-2-3-r1-2-1",
-          "rf-2-3-r2-1",
-          "Pontuação e WER: Usar a extensão da hipótese no denominador ou deixar inserções fora da soma."
+          "Autoria integra a fidelidade, mas pode escapar da WER textual."
         ],
         [
           "rf-2-3-r2-1",
-          "rf-2-3-r2-1-1",
-          "WER e Inserções: Confundir taxa de edições com proporção limitada ao universo da referência."
-        ],
-        [
-          "rf-2-3-r2-1-1",
-          "rf-2-3-r2-2",
-          "Inserções e CER: Tratar CER e DER como sinônimos de uma mesma taxa textual."
-        ],
-        [
-          "rf-2-3-r2-2",
-          "rf-2-3-r2-2-1",
-          "CER e Palavras: Concluir autoria correta a partir da WER textual zero."
-        ],
-        [
-          "rf-2-3-r2-2-1",
           "rf-2-3-r3-1",
-          "Palavras e Severidade: Classificar a severidade somente pela contagem de palavras alteradas."
-        ],
-        [
-          "rf-2-3-r3-1",
-          "rf-2-3-r3-1-1",
-          "Severidade e Referência: Tratar número plausível como número confirmado."
+          "Quantidade de erros e severidade são dimensões diferentes."
         ]
       ]
     },
@@ -1365,7 +1275,7 @@
           "Caso: Em uma nota de mil palavras, “rejeitado” foi substituído por “aprovado”."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
-        "tema": "Inversão",
+        "tema": "Fidelidade e completude",
         "mapaNoId": "rf-2-3-r1-1-1"
       },
       {
@@ -1385,7 +1295,7 @@
           "Caso: Dois textos têm as mesmas palavras, mas usam vírgulas que produzem leituras diferentes."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
-        "tema": "Pontuação de risco",
+        "tema": "Legibilidade e sincronismo",
         "mapaNoId": "rf-2-3-r1-2-1"
       },
       {
@@ -1405,7 +1315,7 @@
           "Caso: Um alinhamento com referência de 10 palavras contabiliza 12 inserções, sem substituições ou exclusões."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
-        "tema": "WER acima de 100%",
+        "tema": "WER",
         "mapaNoId": "rf-2-3-r2-1-1"
       },
       {
@@ -1425,7 +1335,7 @@
           "Caso: As mesmas palavras e a mesma ordem foram mantidas, mas os rótulos externos de dois falantes foram trocados."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
-        "tema": "Autoria",
+        "tema": "CER e DER",
         "mapaNoId": "rf-2-3-r2-2-1"
       },
       {
@@ -1445,7 +1355,7 @@
           "Caso: A fala menciona o PL 315, e a nota registra o PL 351, existente e sobre tema diferente."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
-        "tema": "Número de proposição",
+        "tema": "Crítico, maior e menor",
         "mapaNoId": "rf-2-3-r3-1-1"
       }
     ],
@@ -1756,49 +1666,19 @@
       },
       "ligacoes": [
         [
-          "rf-2-4-r1-1",
-          "rf-2-4-r1-1-1",
-          "Sessão e Turnos: Agrupar por pessoa ou assunto apagando a sequência dos turnos."
-        ],
-        [
-          "rf-2-4-r1-1-1",
-          "rf-2-4-r1-2",
-          "Turnos e Rótulo: Converter rótulo numérico em nome sem confirmação."
-        ],
-        [
           "rf-2-4-r1-2",
           "rf-2-4-r1-2-1",
-          "Rótulo e Presidência: Atribuir ao titular todas as falas da presidência."
-        ],
-        [
-          "rf-2-4-r1-2-1",
-          "rf-2-4-r2-1",
-          "Presidência e Evento: Ler a indicação editorial como palavra pronunciada."
-        ],
-        [
-          "rf-2-4-r2-1",
-          "rf-2-4-r2-1-1",
-          "Evento e Aparte: Usar a plausibilidade política para preencher fala inaudível."
+          "A autoria acompanha a pessoa que efetivamente exerce a presidência."
         ],
         [
           "rf-2-4-r2-1-1",
           "rf-2-4-r2-2",
-          "Aparte e Limitação: Apagar a lacuna para dar aparência de continuidade completa."
-        ],
-        [
-          "rf-2-4-r2-2",
-          "rf-2-4-r2-2-1",
-          "Limitação e Convenção: Transformar exemplo didático em regra universal obrigatória."
-        ],
-        [
-          "rf-2-4-r2-2-1",
-          "rf-2-4-r3-1",
-          "Convenção e Blocos: Confundir repetição técnica na entrada com repetição efetivamente pronunciada."
+          "A evidência disponível limita o conteúdo que pode ser registrado."
         ],
         [
           "rf-2-4-r3-1",
-          "rf-2-4-r3-1-1",
-          "Blocos e Junção: Supor que a concatenação de arquivos assegura uma nota completa."
+          "rf-2-4-r1-1-1",
+          "A consolidação deve preservar a sequência dos turnos."
         ]
       ]
     },
@@ -1874,7 +1754,7 @@
           "Caso: Uma pergunta é seguida de resposta e, depois, de um esclarecimento do primeiro orador."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
-        "tema": "Corpo do registro",
+        "tema": "Identificação da sessão",
         "mapaNoId": "rf-2-4-r1-1-1"
       },
       {
@@ -1894,7 +1774,7 @@
           "Caso: O vice-presidente assume a condução da sessão durante a ausência do presidente."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
-        "tema": "Presidência em exercício",
+        "tema": "Identificação do turno",
         "mapaNoId": "rf-2-4-r1-2-1"
       },
       {
@@ -1914,7 +1794,7 @@
           "Caso: Há manifestação audível no plenário, mas não é possível reconhecer a pessoa nem entender as palavras."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
-        "tema": "Manifestação ou aparte",
+        "tema": "Ocorrência de plenário",
         "mapaNoId": "rf-2-4-r2-1-1"
       },
       {
@@ -1934,7 +1814,7 @@
           "Caso: Uma aula exemplifica colchetes para indicar limitação técnica; outra relata o padrão observado nas notas examinadas."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
-        "tema": "Convenções das aulas",
+        "tema": "Limitação técnica",
         "mapaNoId": "rf-2-4-r2-2-1"
       },
       {
@@ -1954,7 +1834,7 @@
           "Caso: Uma frase começa no fim do bloco A e termina no início do bloco B."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
-        "tema": "Junção",
+        "tema": "Fronteiras de blocos",
         "mapaNoId": "rf-2-4-r3-1-1"
       }
     ],
@@ -2033,6 +1913,10 @@
       },
       {
         "titulo": "Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF"
+      },
+      {
+        "titulo": "Conferência complementar: LC 95/1998, arts. 10 e 11, texto atualizado — Câmara dos Deputados",
+        "url": "https://www2.camara.leg.br/legin/fed/leicom/1998/leicomplementar-95-26-fevereiro-1998-363948-normaatualizada-pl.html"
       }
     ],
     "resumo": [
@@ -2368,47 +2252,17 @@
         [
           "rf-2-5-r1-1-1",
           "rf-2-5-r1-1-2",
-          "TN e ITN: Confundir mudança de representação com licença para alterar o valor."
-        ],
-        [
-          "rf-2-5-r1-1-2",
-          "rf-2-5-r1-2-1",
-          "ITN e Contexto: Converter toda ocorrência de “segundo” no ordinal “2º”."
-        ],
-        [
-          "rf-2-5-r1-2-1",
-          "rf-2-5-r1-2-2",
-          "Contexto e Remissão: Aceitar uma referência por estar sintaticamente bem formatada."
-        ],
-        [
-          "rf-2-5-r1-2-2",
-          "rf-2-5-r2-1",
-          "Remissão e Gênero: Transferir automaticamente uma regra de gênero para outro."
-        ],
-        [
-          "rf-2-5-r2-1",
-          "rf-2-5-r2-1-2",
-          "Gênero e Extenso: Transformar a preferência normativa por extenso em proibição absoluta de algarismos."
+          "TN e ITN percorrem direções diferentes de representação."
         ],
         [
           "rf-2-5-r2-1-2",
-          "rf-2-5-r2-2-1",
-          "Extenso e Artigo: Uniformizar unidades diferentes por conveniência gráfica."
+          "rf-2-5-r2-1-1",
+          "O gênero e a norma aplicável delimitam a convenção numérica."
         ],
         [
-          "rf-2-5-r2-2-1",
-          "rf-2-5-r2-2-2",
-          "Artigo e Sigla: Aplicar a todo símbolo a pontuação típica de uma abreviação."
-        ],
-        [
-          "rf-2-5-r2-2-2",
-          "rf-2-5-r3-1",
-          "Sigla e Regra: Usar plausibilidade contextual para aceitar referência não pronunciada."
-        ],
-        [
-          "rf-2-5-r3-1",
-          "rf-2-5-r3-2",
-          "Regra e Grafia: Apagar aproximação como se fosse apenas ruído de oralidade."
+          "rf-2-5-r1-2-2",
+          "rf-2-5-r3-2-2",
+          "Uma referência errada exige conferir a fala, não só a grafia."
         ]
       ]
     },
@@ -2501,7 +2355,7 @@
           "Caso: Um sintetizador recebe “2026” e prepara “dois mil e vinte e seis” para pronúncia."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
-        "tema": "TN na síntese",
+        "tema": "TN e ITN",
         "mapaNoId": "rf-2-5-r1-1-1"
       },
       {
@@ -2511,7 +2365,7 @@
           "Caso: Após o ASR reconhecer “doze vírgula cinco por cento”, o sistema apresenta “12,5%”."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
-        "tema": "ITN no reconhecimento",
+        "tema": "TN e ITN",
         "mapaNoId": "rf-2-5-r1-1-2"
       },
       {
@@ -2521,7 +2375,7 @@
           "Caso: O texto reconhecido contém “segundo o relator, a sessão terminou”."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
-        "tema": "Ambiguidade",
+        "tema": "Preservação semântica",
         "mapaNoId": "rf-2-5-r1-2-1"
       },
       {
@@ -2531,7 +2385,7 @@
           "Caso: A gravação cita o artigo 155, mas o texto normalizado apresenta “art. 165”."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
-        "tema": "Erro irrecuperável",
+        "tema": "Preservação semântica",
         "mapaNoId": "rf-2-5-r1-2-2"
       },
       {
@@ -2551,7 +2405,7 @@
           "Caso: Uma minuta inclui uma data e o número de uma lei."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
-        "tema": "Redação normativa",
+        "tema": "Grafia de números",
         "mapaNoId": "rf-2-5-r2-1-2"
       },
       {
@@ -2561,7 +2415,7 @@
           "Caso: Uma referência reúne artigo, parágrafo, inciso e alínea."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
-        "tema": "Remissões normativas",
+        "tema": "Remissões e formas reduzidas",
         "mapaNoId": "rf-2-5-r2-2-1"
       },
       {
@@ -2571,7 +2425,7 @@
           "Caso: O texto contém “PEC”, “art.” e “km”."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
-        "tema": "Sigla, abreviação e símbolo",
+        "tema": "Remissões e formas reduzidas",
         "mapaNoId": "rf-2-5-r2-2-2"
       },
       {
@@ -3007,49 +2861,19 @@
       },
       "ligacoes": [
         [
-          "rf-2-6-r1-1-1",
-          "rf-2-6-r1-1-2",
-          "Humano e Dicionário: Concluir correção contextual só porque houve tradução."
-        ],
-        [
-          "rf-2-6-r1-1-2",
-          "rf-2-6-r1-2-1",
-          "Dicionário e Sem entrada: Tratar ausência de tradução e tradução errada como o mesmo diagnóstico."
-        ],
-        [
           "rf-2-6-r1-2-1",
           "rf-2-6-r1-2-2",
-          "Sem entrada e Palavra existente: Limitar a conferência a sinais ou códigos visivelmente estranhos."
-        ],
-        [
-          "rf-2-6-r1-2-2",
-          "rf-2-6-r2-1-1",
-          "Palavra existente e Pedal: Confundir repetição na escuta com repetição no conteúdo a transcrever."
-        ],
-        [
-          "rf-2-6-r2-1-1",
-          "rf-2-6-r2-1-2",
-          "Pedal e Áudio + texto: Confundir atribuição de tempos com verificação da verdade do texto."
+          "Ausência de tradução e tradução inadequada pedem diagnósticos distintos."
         ],
         [
           "rf-2-6-r2-1-2",
-          "rf-2-6-r2-2-1",
-          "Áudio + texto e Orador: Supor que toda correção de autoria exige modificar o texto verbal."
-        ],
-        [
-          "rf-2-6-r2-2-1",
           "rf-2-6-r2-2-2",
-          "Orador e Histórico: Tratar rastreabilidade como prova automática da decisão."
+          "O vínculo temporal auxilia a conferência de alterações."
         ],
         [
-          "rf-2-6-r2-2-2",
-          "rf-2-6-r3-1",
-          "Histórico e Provisório: Equiparar exibição pública imediata a homologação editorial."
-        ],
-        [
-          "rf-2-6-r3-1",
-          "rf-2-6-r3-2",
-          "Provisório e Legenda: Confundir capacidade do formato com preenchimento obrigatório correto."
+          "rf-2-6-r3-1-1",
+          "rf-2-6-r3-1-2",
+          "A exibição ao vivo pode anteceder a validação editorial."
         ]
       ]
     },
@@ -3133,7 +2957,7 @@
           "Caso: Uma profissional ouve a sessão e registra combinações num teclado de estenotipia."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
-        "tema": "Estenotipia",
+        "tema": "Entrada e conversão",
         "mapaNoId": "rf-2-6-r1-1-1"
       },
       {
@@ -3143,7 +2967,7 @@
           "Caso: Uma sequência encontra correspondência no dicionário e produz uma palavra inadequada à fala."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
-        "tema": "Dicionário",
+        "tema": "Entrada e conversão",
         "mapaNoId": "rf-2-6-r1-1-2"
       },
       {
@@ -3153,7 +2977,7 @@
           "Caso: A saída apresenta um código estenotípico onde deveria haver uma palavra."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
-        "tema": "Não traduzido",
+        "tema": "Diagnóstico de tradução",
         "mapaNoId": "rf-2-6-r1-2-1"
       },
       {
@@ -3163,7 +2987,7 @@
           "Caso: O CAT exibe uma palavra comum, porém incompatível com o trecho ouvido."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
-        "tema": "Mal traduzido",
+        "tema": "Diagnóstico de tradução",
         "mapaNoId": "rf-2-6-r1-2-2"
       },
       {
@@ -3173,7 +2997,7 @@
           "Caso: Ao retomar, o editor volta dois segundos e reproduz novamente o fim da frase."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
-        "tema": "Atalho ou pedal",
+        "tema": "Reprodução e alinhamento",
         "mapaNoId": "rf-2-6-r2-1-1"
       },
       {
@@ -3183,7 +3007,7 @@
           "Caso: Um editor recebe a gravação e uma transcrição pronta e estima o tempo de cada palavra."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
-        "tema": "Alinhamento forçado",
+        "tema": "Reprodução e alinhamento",
         "mapaNoId": "rf-2-6-r2-1-2"
       },
       {
@@ -3193,7 +3017,7 @@
           "Caso: Após conferir o vídeo, a equipe troca o nome do responsável por um turno sem editar suas palavras."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
-        "tema": "Rótulos de orador",
+        "tema": "Intervenções humanas",
         "mapaNoId": "rf-2-6-r2-2-1"
       },
       {
@@ -3203,7 +3027,7 @@
           "Caso: Uma alteração registra o responsável e preserva o vínculo com o minuto correspondente."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
-        "tema": "Rastreabilidade",
+        "tema": "Intervenções humanas",
         "mapaNoId": "rf-2-6-r2-2-2"
       },
       {
@@ -3642,47 +3466,17 @@
         [
           "rf-2-7-r1-1-1",
           "rf-2-7-r1-1-2",
-          "Sequencial e Independente: Confundir independência da análise com dispensa de conciliação."
-        ],
-        [
-          "rf-2-7-r1-1-2",
-          "rf-2-7-r1-2-1",
-          "Independente e Conciliação: Resolver a divergência apenas pela segurança subjetiva de um revisor."
-        ],
-        [
-          "rf-2-7-r1-2-1",
-          "rf-2-7-r1-2-2",
-          "Conciliação e Divergência: Equiparar concordância a acurácia."
-        ],
-        [
-          "rf-2-7-r1-2-2",
-          "rf-2-7-r2-1-1",
-          "Divergência e Sorteio: Chamar seleção por risco de sorteio aleatório do conjunto inteiro."
-        ],
-        [
-          "rf-2-7-r2-1-1",
-          "rf-2-7-r2-1-2",
-          "Sorteio e Estratos: Confundir estratificar com examinar somente o grupo de maior risco."
-        ],
-        [
-          "rf-2-7-r2-1-2",
-          "rf-2-7-r2-2-1",
-          "Estratos e Amostra: Transformar zero observado em garantia universal."
-        ],
-        [
-          "rf-2-7-r2-2-1",
-          "rf-2-7-r2-2-2",
-          "Amostra e Crítico: Deixar o indicador médio ocultar uma falha de alto impacto."
+          "Acesso às decisões anteriores distingue os desenhos de revisão."
         ],
         [
           "rf-2-7-r2-2-2",
           "rf-2-7-r3-1",
-          "Crítico e SLI: Trocar o valor observado pela meta."
+          "Metas globais devem conviver com controle de falhas críticas."
         ],
         [
-          "rf-2-7-r3-1",
-          "rf-2-7-r3-2",
-          "SLI e SLA: Confundir prazo nominal com regra de medição completa."
+          "rf-2-7-r3-1-1",
+          "rf-2-7-r3-1-2",
+          "Compare o indicador observado com a meta estabelecida."
         ]
       ]
     },
@@ -3766,7 +3560,7 @@
           "Caso: Beatriz revisa a versão já corrigida por André."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
-        "tema": "Sequencial",
+        "tema": "Desenhos",
         "mapaNoId": "rf-2-7-r1-1-1"
       },
       {
@@ -3776,7 +3570,7 @@
           "Caso: Dois revisores recebem a gravação e trabalham sem ver as escolhas um do outro."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
-        "tema": "Independente",
+        "tema": "Desenhos",
         "mapaNoId": "rf-2-7-r1-1-2"
       },
       {
@@ -3786,7 +3580,7 @@
           "Caso: Dois revisores divergem sobre um número e voltam ao trecho da gravação."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
-        "tema": "Conciliação",
+        "tema": "Calibração",
         "mapaNoId": "rf-2-7-r1-2-1"
       },
       {
@@ -3796,7 +3590,7 @@
           "Caso: Os revisores concordam numa palavra que ambos ouviram incorretamente."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
-        "tema": "Divergências",
+        "tema": "Calibração",
         "mapaNoId": "rf-2-7-r1-2-2"
       },
       {
@@ -3806,7 +3600,7 @@
           "Caso: Uma equipe sorteia trechos de todas as sessões; outra escolhe apenas segmentos de baixa confiança."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
-        "tema": "Aleatória simples",
+        "tema": "Como selecionar",
         "mapaNoId": "rf-2-7-r2-1-1"
       },
       {
@@ -3816,7 +3610,7 @@
           "Caso: A auditoria separa sessões por qualidade de áudio e sorteia trechos em cada grupo."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
-        "tema": "Estratificada",
+        "tema": "Como selecionar",
         "mapaNoId": "rf-2-7-r2-1-2"
       },
       {
@@ -3826,7 +3620,7 @@
           "Caso: A auditoria não encontra erros nos sessenta trechos sorteados."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
-        "tema": "Amostra sem erros",
+        "tema": "Como interpretar",
         "mapaNoId": "rf-2-7-r2-2-1"
       },
       {
@@ -3836,7 +3630,7 @@
           "Caso: O relatório tem baixa WER geral e uma troca no resultado de uma votação."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
-        "tema": "Erros críticos",
+        "tema": "Como interpretar",
         "mapaNoId": "rf-2-7-r2-2-2"
       },
       {
@@ -4324,49 +4118,24 @@
       },
       "ligacoes": [
         [
-          "rf-2-8-r1-1",
-          "rf-2-8-r1-2-1",
-          "Saída e OOV: Aplicar a mesma noção de palavra ausente sem considerar tokenização."
-        ],
-        [
           "rf-2-8-r1-2-1",
           "rf-2-8-r1-2-2",
-          "OOV e Subpalavras: Confundir capacidade de representação com acerto garantido."
-        ],
-        [
-          "rf-2-8-r1-2-2",
-          "rf-2-8-r2-1-1",
-          "Subpalavras e Após saída: Atribuir ao reconhecimento uma correção aplicada somente depois."
-        ],
-        [
-          "rf-2-8-r2-1-1",
-          "rf-2-8-r2-1-2",
-          "Após saída e Contexto: Confundir reforço contextual em execução com atualização dos pesos."
+          "A arquitetura e a tokenização condicionam o problema de OOV."
         ],
         [
           "rf-2-8-r2-1-2",
-          "rf-2-8-r2-2",
-          "Contexto e Texto: Tratar os dois conjuntos como intercambiáveis para qualquer objetivo."
-        ],
-        [
-          "rf-2-8-r2-2",
-          "rf-2-8-r2-3-1",
-          "Texto e Durante busca: Interpretar peso externo zero como ausência de toda informação linguística no ASR."
+          "rf-2-8-r3-1-1",
+          "Reforçar termos pode aumentar falsas inclusões."
         ],
         [
           "rf-2-8-r2-3-1",
           "rf-2-8-r2-3-2",
-          "Durante busca e Após geração: Atribuir geração de novo texto a um módulo definido apenas como reordenador."
+          "Fusão atua durante a busca; reordenação sobre candidatos já produzidos."
         ],
         [
-          "rf-2-8-r2-3-2",
-          "rf-2-8-r3-1",
-          "Após geração e Reforço: Medir apenas ganhos nos exemplos positivos e ignorar falsas inclusões."
-        ],
-        [
-          "rf-2-8-r3-1",
-          "rf-2-8-r3-2",
-          "Reforço e Validar: Supor que a simples atualização comprova ganho mensurável no ASR."
+          "rf-2-8-r3-1-2",
+          "rf-2-8-r3-2-2",
+          "Perplexidade textual e erros do ASR exigem avaliações distintas."
         ]
       ]
     },
@@ -4469,7 +4238,7 @@
           "Caso: Um nome novo não possui entrada num sistema baseado em palavras de léxico fechado."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
-        "tema": "OOV",
+        "tema": "Termos raros",
         "mapaNoId": "rf-2-8-r1-2-1"
       },
       {
@@ -4479,7 +4248,7 @@
           "Caso: Um reconhecedor usa subpalavras para representar um nome pouco frequente."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
-        "tema": "Subpalavras",
+        "tema": "Termos raros",
         "mapaNoId": "rf-2-8-r1-2-2"
       },
       {
@@ -4489,7 +4258,7 @@
           "Caso: Após a transcrição, uma regra substitui a grafia recorrente de uma sigla."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
-        "tema": "Lista lexical",
+        "tema": "Pós-processamento e contexto",
         "mapaNoId": "rf-2-8-r2-1-1"
       },
       {
@@ -4499,7 +4268,7 @@
           "Caso: Antes da sessão, nomes da pauta são fornecidos como lista de frases a um serviço que aceita esse recurso."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
-        "tema": "Prompt ou lista com reforço",
+        "tema": "Pós-processamento e contexto",
         "mapaNoId": "rf-2-8-r2-1-2"
       },
       {
@@ -4519,7 +4288,7 @@
           "Caso: A busca combina o escore do ASR com λ vezes o escore de um modelo externo."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
-        "tema": "Fusão superficial",
+        "tema": "End-to-end",
         "mapaNoId": "rf-2-8-r2-3-1"
       },
       {
@@ -4529,7 +4298,7 @@
           "Caso: Um módulo recebe cinco hipóteses fixas e apenas as ordena por uma nova pontuação."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
-        "tema": "Reordenação",
+        "tema": "End-to-end",
         "mapaNoId": "rf-2-8-r2-3-2"
       },
       {
