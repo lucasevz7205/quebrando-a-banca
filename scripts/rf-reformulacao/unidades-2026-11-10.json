@@ -1,0 +1,898 @@
+{
+  "rf-2-1": [
+    [
+      "r1-1",
+      "ASR · hipótese · conferência",
+      "O reconhecimento automático transforma sinais de fala em uma hipótese textual. Fluência e boa ortografia não demonstram fidelidade ao áudio.",
+      "Uma legenda automática registra “deferido” onde o orador disse “indeferido”.",
+      "Confundir texto bem formado com transcrição validada.",
+      "Por que uma saída de ASR deve ser tratada como hipótese?",
+      "Uma saída gramaticalmente correta de ASR pode conter uma troca lexical que inverta o resultado anunciado.",
+      "A identificação de erro semântico numa saída automática demonstra que o processo empregado deixou de ser ASR.",
+      "O processo continua sendo ASR, embora sua hipótese contenha erro semântico."
+    ],
+    [
+      "r1-1-1",
+      "Ao vivo · arquivo · dois recortes",
+      "Tempo real descreve quando o processamento ocorre. A origem gravada da entrada permite também classificá-lo como degravação.",
+      "Uma audiência é legendada ao vivo e seu arquivo é transcrito novamente no dia seguinte.",
+      "Usar “automático” e “degravação” como categorias excludentes.",
+      "Como classificar o ASR que processa um arquivo gravado?",
+      "O processamento automático do arquivo de uma audiência pode integrar sua degravação.",
+      "Gerar legendas diretamente da fala ao vivo caracteriza degravação pelo simples fato de produzir texto.",
+      "Produzir texto ao vivo caracteriza transcrição; a degravação pressupõe uma gravação como entrada."
+    ],
+    [
+      "r1-2",
+      "Gravação · suporte · origem",
+      "A degravação é definida pelo ponto de partida gravado. O suporte pode conter áudio sozinho ou associado a vídeo.",
+      "Uma equipe converte a trilha sonora de uma sessão arquivada em vídeo em texto.",
+      "Reduzir degravação a gravações exclusivamente sonoras.",
+      "Qual elemento da entrada caracteriza a degravação?",
+      "A conversão em texto da fala contida em um vídeo gravado é uma atividade de degravação.",
+      "Na degravação de uma sessão em vídeo, a presença de imagens dispensa conferir a fala quando o texto divergir do áudio.",
+      "A presença de imagens não dispensa conferir a fala quando texto e áudio divergem."
+    ],
+    [
+      "r1-2-1",
+      "Manual · assistida · revisão",
+      "A produção manual digita a partir da escuta. A assistida usa uma primeira hipótese automática, que continua sujeita a conferência.",
+      "Dois profissionais recebem a mesma gravação; um digita do zero, outro corrige um rascunho de ASR.",
+      "Confundir auxílio computacional com ausência de intervenção humana.",
+      "O uso de ASR impede chamar o trabalho de degravação assistida?",
+      "O trabalho dos dois profissionais pode ser classificado como degravação, embora difira a forma de obter a primeira versão.",
+      "A degravação assistida termina necessariamente com a geração do rascunho pelo reconhecedor.",
+      "A degravação assistida pode incluir revisão humana depois da geração do rascunho."
+    ],
+    [
+      "r1-3",
+      "Versão · confronto · finalidade",
+      "Revisar pressupõe uma versão a conferir, independentemente de sua origem manual ou automática. A pós-edição da hipótese de ASR é uma modalidade desse trabalho.",
+      "Um revisor compara uma nota digitada manualmente com a gravação original.",
+      "Restringir revisão humana às saídas de IA.",
+      "Uma transcrição manual também admite revisão humana?",
+      "A conferência de uma nota manual com o áudio integra a revisão humana.",
+      "O emprego de um revisor humano transforma retroativamente uma transcrição manual em transcrição automática.",
+      "A revisão humana não altera a origem manual da primeira versão."
+    ],
+    [
+      "r1-3-1",
+      "Fidelidade · erro do ASR · declaração",
+      "Corrigir reconhecimento significa recuperar o que foi dito. Corrigir o mérito da declaração pode atribuir ao orador algo que ele não afirmou.",
+      "O orador cita “Recife”; o sistema escreve “Resende”, e a gravação permite identificar a cidade.",
+      "Substituir uma afirmação do orador pela que o revisor julga verdadeira.",
+      "Qual limite separa correção de reconhecimento e alteração de conteúdo?",
+      "Substituir “Resende” por “Recife”, confirmado na gravação, recupera a declaração.",
+      "Se o orador citar conscientemente um dado inexato, o revisor preserva a fidelidade ao substituí-lo silenciosamente pelo dado correto.",
+      "A substituição silenciosa do dado efetivamente declarado altera a fala atribuída ao orador."
+    ],
+    [
+      "r2-1",
+      "Literal · oralidade · função",
+      "O registro literal conserva marcas da fala conforme a finalidade e as convenções adotadas. A escolha do produto deve anteceder a decisão de retirar hesitações.",
+      "Uma transcrição destinada a estudar hesitações registra pausas e repetições relevantes.",
+      "Aplicar automaticamente os critérios da versão limpa a um registro literal.",
+      "O que orienta a preservação de marcas da oralidade?",
+      "A finalidade do registro influencia a decisão de manter hesitações e repetições.",
+      "A redução das marcas de oralidade é o critério que define o registro literal em qualquer finalidade.",
+      "O registro literal preserva marcas da oralidade conforme a finalidade e as convenções do produto."
+    ],
+    [
+      "r2-1-1",
+      "Autocorreção · sequência · valor",
+      "Uma autocorreção explícita integra a sequência da fala. Em registro literal, a formulação inicial e a retificação podem ser relevantes.",
+      "O orador diz “foram vinte, corrijo, trinta participantes”.",
+      "Tratar a primeira cifra como erro do reconhecedor quando ela foi pronunciada.",
+      "Como representar uma autocorreção explícita em registro literal?",
+      "Conservar “vinte, corrijo, trinta” pode representar fielmente a autocorreção do orador.",
+      "O aparecimento de dois valores sucessivos em uma transcrição prova, por si só, falha de reconhecimento.",
+      "Dois valores sucessivos podem registrar uma autocorreção pronunciada; a origem da divergência exige conferir o áudio."
+    ],
+    [
+      "r2-2",
+      "Limpeza · convenção · legibilidade",
+      "Limpar a oralidade pode retirar tropeços sem função e organizar a pontuação. O alcance dessa intervenção depende do padrão editorial adotado.",
+      "Um “né” incidental é retirado de uma versão limpa sem modificar a informação.",
+      "Atribuir às aulas uma nomenclatura única quando elas distinguem os níveis de edição de maneiras diferentes.",
+      "Por que o rótulo “limpa” exige conhecer a convenção adotada?",
+      "Uma convenção de versão limpa pode permitir retirar um bordão incidental preservando a informação.",
+      "As denominações “limpa” e “editada” têm obrigatoriamente a mesma extensão em todo material didático.",
+      "A extensão de “limpa” e “editada” depende da convenção explicitada no material."
+    ],
+    [
+      "r2-2-1",
+      "Ressalva · ênfase · sentido",
+      "A fidelidade limita a limpeza: não se eliminam ressalvas ou repetições que desempenhem função de sentido. Primeiro identifique a função, depois decida a intervenção.",
+      "“Apoio a proposta, salvo o artigo terceiro” não equivale a “apoio a proposta”.",
+      "Confundir redução de palavras com preservação automática da proposição.",
+      "Que teste deve preceder a exclusão de um trecho na versão limpa?",
+      "A retirada de “salvo o artigo terceiro” amplia o alcance do apoio expresso na declaração.",
+      "Uma repetição enfática pode ser retirada apenas porque já existe uma ocorrência da mesma palavra no período.",
+      "A retirada de repetição exige verificar sua função de sentido e a convenção editorial."
+    ]
+  ],
+  "rf-2-2": [
+    [
+      "r1-1",
+      "Captação · preparação · integridade",
+      "A preparação organiza o sinal para processamento, sem substituir a informação ausente. Uma etapa posterior não recupera necessariamente fala que não foi captada.",
+      "O áudio tem ruído e um intervalo em que o microfone ficou desligado.",
+      "Supor que limpar ruído recria conteúdo não registrado.",
+      "Qual é o limite de preparar um áudio incompleto?",
+      "Melhorar o sinal disponível não assegura recuperar a fala ocorrida com o microfone desligado.",
+      "A remoção de ruído permite tratar como confirmadas as palavras inferidas no intervalo sem captação.",
+      "Palavras inferidas em intervalo sem captação não se tornam confirmadas pela remoção de ruído."
+    ],
+    [
+      "r1-1-1",
+      "VAD · presença de voz · segmentos",
+      "VAD detecta regiões de atividade vocal e auxilia a segmentação. Detectar fala não informa, por si só, a identidade civil do falante.",
+      "Um componente marca os intervalos 00:10–00:18 e 00:25–00:40 como contendo fala.",
+      "Trocar detecção de voz por identificação do orador.",
+      "O que a VAD fornece antes da transcrição?",
+      "A marcação dos intervalos com voz pode orientar quais segmentos serão processados.",
+      "O componente que apenas detecta atividade vocal já fornece o nome do parlamentar responsável por cada intervalo.",
+      "Detectar atividade vocal não basta para fornecer o nome do parlamentar."
+    ],
+    [
+      "r1-2",
+      "Hipótese · reconhecimento · validação",
+      "A saída do reconhecedor é uma hipótese. Sua validação exige confrontar o texto e as informações de contexto com a evidência disponível.",
+      "O sistema produz um texto fluente em poucos segundos, sem revisão.",
+      "Usar velocidade de entrega como indicador suficiente de fidelidade.",
+      "O que diferencia uma hipótese automática de uma versão validada?",
+      "A rapidez da saída não demonstra que nomes e números tenham sido reconhecidos corretamente.",
+      "Uma transcrição passa à condição de validada assim que o reconhecedor conclui o processamento do arquivo.",
+      "A conclusão do reconhecimento produz a hipótese; a validação depende das conferências do fluxo editorial."
+    ],
+    [
+      "r1-2-1",
+      "Diarização · agrupamento · identidade",
+      "A diarização atribui segmentos a rótulos de falantes. Associar um rótulo a um nome exige evidência adicional, como conferência do vídeo ou da identificação da sessão.",
+      "A transcrição alterna os rótulos “Falante 1” e “Falante 2”.",
+      "Tomar a numeração dos falantes como ordem oficial da lista de presença.",
+      "Como passar de “Falante 2” ao nome de uma pessoa?",
+      "A associação de “Falante 2” a um parlamentar pode exigir conferir o vídeo da sessão.",
+      "O segundo nome da lista de presença deve ser atribuído ao rótulo “Falante 2” por correspondência de ordem.",
+      "A ordem da lista de presença não determina a identidade do rótulo “Falante 2”."
+    ],
+    [
+      "r2-1",
+      "Triagem · risco · confiança",
+      "A triagem prioriza trechos pelo risco e pelos sinais disponíveis. O escore de confiança ajuda a ordenar trabalho, mas não substitui a conferência de conteúdo sensível.",
+      "Um trecho de baixa confiança contém um bordão; outro, de alta confiança, contém o número de uma proposição.",
+      "Ordenar a revisão exclusivamente pelo escore e ignorar o impacto do erro.",
+      "Quais dois fatores devem orientar a priorização da revisão?",
+      "O número da proposição pode merecer revisão prioritária mesmo com escore superior ao do bordão.",
+      "Selecionar somente trechos de baixa confiança garante a cobertura de todos os erros semanticamente críticos.",
+      "A seleção apenas por baixa confiança pode deixar erros críticos fora da revisão."
+    ],
+    [
+      "r2-1-1",
+      "Negação · números · impacto",
+      "Palavras curtas e números podem decidir o sentido de uma declaração. A confiança atribuída pelo sistema não determina a gravidade da eventual troca.",
+      "O áudio diz “não aprovo”, enquanto a hipótese registra “aprovo” com alta confiança.",
+      "Equiparar alta confiança a baixo risco semântico.",
+      "Por que conferir uma negação mesmo com alta confiança?",
+      "A omissão de “não” pode inverter a posição do orador apesar do escore alto.",
+      "O escore alto torna a omissão da negação um problema meramente gráfico.",
+      "A omissão da negação é semanticamente relevante, independentemente do escore."
+    ],
+    [
+      "r2-2",
+      "Validação · confronto · liberação",
+      "Validar é verificar a adequação da versão ao registro e ao padrão exigido. Corrigir ortografia não esgota a conferência de autoria, números e sentido.",
+      "Uma nota foi pontuada e recebeu correção ortográfica, mas não foi comparada ao áudio.",
+      "Confundir acabamento textual com validação do conteúdo.",
+      "Por que a revisão ortográfica não basta para validar a nota?",
+      "Uma versão ortograficamente correta ainda pode atribuir uma fala à pessoa errada.",
+      "A correção ortográfica dispensa a conferência de nomes e números contra as fontes do registro.",
+      "A correção ortográfica não dispensa conferir nomes e números nas fontes do registro."
+    ],
+    [
+      "r2-2-1",
+      "Versão · tempo · decisão",
+      "A trilha de revisão preserva alterações, responsáveis e referências temporais úteis à conferência. Rastrear uma decisão permite reavaliá-la; não prova automaticamente que ela esteja correta.",
+      "A equipe registra a versão anterior, a nova redação e o minuto de uma correção.",
+      "Confundir registro de uma alteração com prova de sua correção.",
+      "Para que servem versão e marca temporal na revisão?",
+      "Registrar o minuto da correção facilita retornar ao trecho que a motivou.",
+      "A existência de histórico de versões certifica, por si só, a fidelidade de todas as alterações.",
+      "O histórico permite auditar as alterações, mas sua fidelidade ainda precisa ser conferida."
+    ],
+    [
+      "r3-1",
+      "Recorrência · diagnóstico · intervenção",
+      "Erros recorrentes permitem identificar necessidades de melhoria. A ação depende da causa: glossário, regra editorial, configuração ou treinamento são intervenções distintas.",
+      "O mesmo nome de comissão aparece incorreto em várias sessões.",
+      "Converter recorrência em indicação automática de retreinamento.",
+      "O que deve vir entre detectar recorrência e escolher uma correção técnica?",
+      "A repetição do erro justifica investigar sua causa antes de escolher a intervenção.",
+      "A recorrência de um erro demonstra que a única solução possível é atualizar os pesos do reconhecedor.",
+      "A solução para um erro recorrente depende de sua causa e pode envolver outras intervenções além de atualizar pesos."
+    ],
+    [
+      "r3-1-1",
+      "Glossário · conhecimento · pesos",
+      "Atualizar o glossário acrescenta uma referência lexical confirmada. A aplicação dessa referência ao reconhecimento depende da integração; corrigir o texto não altera automaticamente os pesos do ASR.",
+      "Um revisor corrige um nome e o acrescenta ao glossário da equipe.",
+      "Supor aprendizado automático dos pesos a cada edição de texto.",
+      "Acrescentar um nome ao glossário equivale a retreinar o ASR?",
+      "O glossário atualizado pode apoiar sessões posteriores, conforme seu uso no fluxo.",
+      "A edição manual do nome no documento realiza, por si só, uma etapa de treinamento dos pesos do ASR.",
+      "A edição manual do documento não realiza, por si só, treinamento dos pesos do ASR."
+    ]
+  ],
+  "rf-2-3": [
+    [
+      "r1-1",
+      "Fidelidade · conteúdo · completude",
+      "Fidelidade exige correspondência de sentido com a fala; completude verifica se o conteúdo necessário foi registrado. Um texto curto e elegante pode omitir uma condição decisiva.",
+      "A fala condiciona o apoio a uma emenda, mas a versão registra apenas o apoio.",
+      "Tomar fluência textual por fidelidade.",
+      "Como uma omissão pode comprometer fidelidade e completude?",
+      "A retirada da condição pode ampliar indevidamente o alcance do apoio registrado.",
+      "Uma versão mais curta é necessariamente mais fiel, pois reduz a chance de haver palavras erradas.",
+      "A fidelidade depende da correspondência com a fala, não de reduzir a extensão do texto."
+    ],
+    [
+      "r1-1-1",
+      "Uma palavra · decisão · severidade",
+      "A troca de um termo pode inverter uma decisão inteira. A contagem lexical do erro não expressa sozinha a gravidade institucional.",
+      "Em uma nota de mil palavras, “rejeitado” foi substituído por “aprovado”.",
+      "Deduzir baixo impacto a partir de uma única substituição.",
+      "Por que um erro lexical isolado pode ser crítico?",
+      "Uma substituição pode alterar o resultado de uma votação registrado no documento.",
+      "Por corresponder a uma palavra entre mil, a troca do resultado é necessariamente um erro de baixa severidade.",
+      "A troca do resultado pode ter alta severidade mesmo sendo uma palavra entre mil."
+    ],
+    [
+      "r1-2",
+      "Legibilidade · tempo · dimensões",
+      "Legibilidade trata da compreensão do texto; sincronismo relaciona sua apresentação ao momento da fala. As duas dimensões devem ser avaliadas separadamente.",
+      "As legendas estão corretas, mas chegam vinte segundos depois da fala.",
+      "Usar correção lexical para concluir que há sincronismo.",
+      "Qual dimensão falha quando a legenda correta chega atrasada?",
+      "O atraso descrito indica problema de sincronismo mesmo com palavras corretas.",
+      "O acerto integral das palavras demonstra que o sincronismo das legendas foi preservado.",
+      "O acerto das palavras não demonstra sincronismo; o atraso deve ser avaliado separadamente."
+    ],
+    [
+      "r1-2-1",
+      "Pontuação · interpretação · áudio",
+      "A pontuação organiza relações de sentido e pode alterar o alcance de uma negação. Sua revisão exige contexto e escuta, e sua avaliação depende também do pré-processamento usado na métrica.",
+      "Dois textos têm as mesmas palavras, mas usam vírgulas que produzem leituras diferentes.",
+      "Supor que igualdade de palavras garante igualdade de sentido.",
+      "Como a pontuação pode escapar da WER e ainda alterar o sentido?",
+      "Se a avaliação remove a pontuação antes do cálculo, a diferença de vírgulas pode não alterar a WER.",
+      "A mesma WER obtida após remover pontuação prova equivalência semântica entre as duas versões.",
+      "A mesma WER após remover pontuação não prova equivalência semântica entre as versões."
+    ],
+    [
+      "r2-1",
+      "WER · S+D+I · referência",
+      "WER soma substituições, exclusões e inserções e divide pelo número de palavras da referência. Antes do cálculo, fixe a tokenização e os critérios de comparação.",
+      "Uma referência de 80 palavras apresenta, no alinhamento, 4 substituições, 2 exclusões e 2 inserções.",
+      "Usar a extensão da hipótese no denominador ou deixar inserções fora da soma.",
+      "Qual é a WER de 4S, 2D e 2I para 80 palavras de referência?",
+      "A WER do exemplo é 10%, pois oito erros são divididos por oitenta palavras.",
+      "O denominador da WER deve ser o total de palavras da hipótese, mesmo quando difere do tamanho da referência.",
+      "O denominador da WER é o número de palavras da referência."
+    ],
+    [
+      "r2-1-1",
+      "Inserções · limite · acima de 100%",
+      "Inserções acrescentam erros sem aumentar o número de palavras da referência. Por isso a WER pode superar 100%; não se deve truncá-la como se fosse uma proporção de palavras de referência erradas.",
+      "Um alinhamento com referência de 10 palavras contabiliza 12 inserções, sem substituições ou exclusões.",
+      "Confundir taxa de edições com proporção limitada ao universo da referência.",
+      "Como inserções tornam possível WER superior a 100%?",
+      "A WER do alinhamento apresentado é 120%.",
+      "Uma implementação deve limitar a 100% a WER calculada para esse alinhamento, para manter a definição da métrica.",
+      "A definição permite WER de 120% nesse alinhamento; truncá-la altera o resultado da métrica."
+    ],
+    [
+      "r2-2",
+      "CER · caracteres · DER · falantes",
+      "CER avalia edições no nível de caracteres. DER avalia erros de diarização segundo o protocolo adotado, incluindo a atribuição temporal de falantes. As unidades e os objetos diferem.",
+      "Uma avaliação deseja separar grafia das palavras e atribuição temporal de quem falou.",
+      "Tratar CER e DER como sinônimos de uma mesma taxa textual.",
+      "Qual distinção separa CER e DER?",
+      "A CER permite avaliar discrepâncias em caracteres, enquanto a DER se dirige à diarização.",
+      "A CER identifica diretamente se cada trecho foi atribuído ao parlamentar correto.",
+      "A CER mede discrepâncias de caracteres; a atribuição de falantes requer avaliação própria."
+    ],
+    [
+      "r2-2-1",
+      "Palavras · autoria · eixos",
+      "A WER textual convencional compara palavras, não identidades civis. Se a sequência verbal foi mantida e os nomes dos falantes são metadados externos, a troca de autoria pode escapar desse cálculo.",
+      "As mesmas palavras e a mesma ordem foram mantidas, mas os rótulos externos de dois falantes foram trocados.",
+      "Concluir autoria correta a partir da WER textual zero.",
+      "Uma WER textual zero garante autoria correta?",
+      "A troca dos rótulos externos pode coexistir com WER textual zero no cenário descrito.",
+      "A WER textual, calculada somente sobre as palavras, contabiliza necessariamente a troca dos rótulos externos de falante.",
+      "A WER calculada somente sobre as palavras não contabiliza necessariamente a troca desses rótulos."
+    ],
+    [
+      "r3-1",
+      "Severidade · efeito · critério",
+      "A severidade decorre do efeito do erro sobre o produto e seus usos. Critérios explícitos ajudam revisores a distinguir falhas críticas, maiores e menores com consistência.",
+      "Duas notas têm a mesma quantidade de erros: uma erra um bordão, outra o resultado de uma deliberação.",
+      "Classificar a severidade somente pela contagem de palavras alteradas.",
+      "Por que notas com igual WER podem ter riscos diferentes?",
+      "As notas podem demandar prioridades distintas de correção, apesar da mesma contagem de erros.",
+      "A igualdade na quantidade de erros impõe a mesma classificação de severidade às duas notas.",
+      "A classificação de severidade depende do efeito dos erros, além de sua quantidade."
+    ],
+    [
+      "r3-1-1",
+      "Referência · objeto · conferência",
+      "Números identificadores podem remeter a objetos distintos. Uma diferença gráfica pequena deve ser conferida pelo efeito da mudança sobre a referência.",
+      "A fala menciona o PL 315, e a nota registra o PL 351, existente e sobre tema diferente.",
+      "Tratar número plausível como número confirmado.",
+      "O que torna crítica a troca de um número de proposição?",
+      "A existência real do PL 351 não torna fiel sua inclusão no lugar do PL 315 pronunciado.",
+      "Como ambos os números correspondem a projetos existentes, a alteração preserva a referência da fala.",
+      "A alteração para outro projeto muda a referência, ainda que ambos existam."
+    ]
+  ],
+  "rf-2-4": [
+    [
+      "r1-1",
+      "Sessão · contexto · metadados",
+      "A identificação da sessão situa o registro: órgão, reunião e dados exigidos pelo padrão editorial. Esse cabeçalho não substitui a atribuição de cada fala.",
+      "Uma nota identifica a comissão e a data, mas seus turnos não têm indicação de orador.",
+      "Confundir identificação do evento com identificação individual das falas.",
+      "O cabeçalho da sessão basta para identificar os autores das falas?",
+      "O cabeçalho pode estar correto e ainda faltar atribuição de autoria nos turnos.",
+      "Identificar comissão e data torna dispensável atribuir as falas aos respectivos oradores.",
+      "Identificar comissão e data não dispensa atribuir as falas aos respectivos oradores."
+    ],
+    [
+      "r1-1-1",
+      "Turnos · sequência · encadeamento",
+      "O corpo do registro acompanha o andamento dos trabalhos e delimita os turnos. Reorganizar por assunto pode alterar a sequência documentada.",
+      "Uma pergunta é seguida de resposta e, depois, de um esclarecimento do primeiro orador.",
+      "Agrupar por pessoa ou assunto apagando a sequência dos turnos.",
+      "Por que a sequência dos turnos deve permanecer reconhecível?",
+      "Manter pergunta, resposta e esclarecimento na sequência ajuda a interpretar as intervenções.",
+      "Reunir todas as falas de cada pessoa em bloco único preserva necessariamente o encadeamento original do diálogo.",
+      "Agrupar falas por pessoa pode alterar o encadeamento original do diálogo."
+    ],
+    [
+      "r1-2",
+      "Rótulo · evidência · autoria",
+      "A identificação do turno vincula o segmento a quem efetivamente falou. Rótulos automáticos precisam ser resolvidos com evidências, não com a posição de um nome numa lista.",
+      "O sistema entrega “Orador 1”; a equipe dispõe de vídeo e lista de presença para conferir o segmento.",
+      "Converter rótulo numérico em nome sem confirmação.",
+      "Qual evidência deve sustentar a identificação de um turno?",
+      "A equipe pode usar o vídeo para confirmar a correspondência entre rótulo e pessoa.",
+      "O rótulo “Orador 1” autoriza atribuir a fala ao primeiro nome da lista, sem conferência adicional.",
+      "O rótulo “Orador 1” não autoriza atribuição nominal apenas pela ordem da lista."
+    ],
+    [
+      "r1-2-1",
+      "Presidência · exercício · trecho",
+      "O registro da presidência acompanha quem exerce a função em cada intervalo. A titularidade habitual do cargo não resolve sozinha a autoria de uma intervenção.",
+      "O vice-presidente assume a condução da sessão durante a ausência do presidente.",
+      "Atribuir ao titular todas as falas da presidência.",
+      "Quem deve ser identificado quando a presidência muda durante a sessão?",
+      "A atribuição do trecho deve refletir quem efetivamente o conduziu.",
+      "As intervenções do vice no período devem ser atribuídas ao presidente titular para manter uniforme o cabeçalho.",
+      "As intervenções devem ser atribuídas à pessoa que efetivamente presidiu o período."
+    ],
+    [
+      "r2-1",
+      "Evento · fala · marcação",
+      "Uma ocorrência de plenário é registrada conforme a convenção e a evidência. A indicação de uma pausa ou manifestação não é uma fala atribuída ao orador.",
+      "O registro intercala a marca “(Pausa.)” entre dois turnos.",
+      "Ler a indicação editorial como palavra pronunciada.",
+      "Como distinguir indicação editorial de conteúdo verbal?",
+      "A marca “(Pausa.)” pode indicar uma ocorrência sem integrar o conteúdo verbal de um turno.",
+      "A presença de “(Pausa.)” permite concluir que o orador pronunciou a palavra “pausa”.",
+      "A marca editorial não permite concluir que a palavra “pausa” foi pronunciada."
+    ],
+    [
+      "r2-1-1",
+      "Aparte · inteligibilidade · identificação",
+      "Uma intervenção identificável pode ser transcrita e atribuída. Quando só se confirma a ocorrência, a marcação não deve inventar seu conteúdo ou autor.",
+      "Há manifestação audível no plenário, mas não é possível reconhecer a pessoa nem entender as palavras.",
+      "Usar a plausibilidade política para preencher fala inaudível.",
+      "O que registrar quando se confirma a intervenção, mas não suas palavras?",
+      "É possível indicar a ocorrência confirmada sem inventar conteúdo verbal.",
+      "O contexto do debate basta para atribuir à manifestação a frase mais provável do parlamentar oposicionista.",
+      "O contexto não basta para atribuir uma frase ou autoria não confirmadas."
+    ],
+    [
+      "r2-2",
+      "Limitação · transparência · tempo",
+      "Uma limitação técnica deve ficar visível conforme o padrão adotado. A marca temporal auxilia a localizar o problema, mas não transforma uma inferência em fala comprovada.",
+      "Uma falha de captação atinge o intervalo 12:10–12:14 da gravação.",
+      "Apagar a lacuna para dar aparência de continuidade completa.",
+      "Como tornar verificável um trecho prejudicado pela captação?",
+      "Registrar a limitação e sua localização temporal permite retornar ao ponto problemático.",
+      "Eliminar a indicação da falha melhora a completude documental, ainda que o trecho permaneça desconhecido.",
+      "Eliminar a indicação oculta a lacuna; não recupera o conteúdo desconhecido."
+    ],
+    [
+      "r2-2-1",
+      "Convenção · fonte · escopo",
+      "As aulas apresentam exemplos e observações com escopos próprios. Um sinal gráfico exemplificado num material não deve virar exigência universal de todas as notas.",
+      "Uma aula exemplifica colchetes para indicar limitação técnica; outra relata o padrão observado nas notas examinadas.",
+      "Transformar exemplo didático em regra universal obrigatória.",
+      "Como usar convenções diferentes apresentadas pelas duas aulas?",
+      "A escolha do sinal deve observar o padrão editorial aplicável ao produto.",
+      "A ocorrência de colchetes em um exemplo prova que toda instituição deve usar esse sinal para qualquer ocorrência.",
+      "Um exemplo de colchetes não estabelece obrigação universal para todas as instituições e ocorrências."
+    ],
+    [
+      "r3-1",
+      "Blocos · sobreposição · fronteira",
+      "A divisão do trabalho em blocos exige conferir a transição entre eles. Sobreposição pode ajudar a escuta, mas o texto consolidado não deve duplicar o mesmo segmento de fala.",
+      "Dois arquivos usados pelos revisores compartilham os últimos cinco segundos do primeiro bloco.",
+      "Confundir repetição técnica na entrada com repetição efetivamente pronunciada.",
+      "Que risco a sobreposição de blocos cria na consolidação?",
+      "A sobreposição pode produzir duplicação textual se a junção não for conferida.",
+      "Toda frase presente nos dois arquivos deve aparecer duas vezes na nota, para respeitar a entrada recebida.",
+      "Uma mesma ocorrência de fala presente nos dois arquivos deve ser consolidada sem duplicação artificial."
+    ],
+    [
+      "r3-1-1",
+      "Junção · continuidade · omissão",
+      "A conferência das bordas verifica continuidade, autoria e integridade. Não basta unir arquivos por ordem numérica quando uma frase atravessa o corte.",
+      "Uma frase começa no fim do bloco A e termina no início do bloco B.",
+      "Supor que a concatenação de arquivos assegura uma nota completa.",
+      "O que conferir quando uma frase atravessa a divisão de blocos?",
+      "A junção deve preservar a frase e sua atribuição, evitando perdas na fronteira.",
+      "A concatenação automática dos textos garante que nenhuma palavra da transição tenha sido omitida.",
+      "A concatenação não garante integridade; a transição precisa ser conferida."
+    ]
+  ],
+  "rf-2-5": [
+    [
+      "r1-1-1",
+      "TN · escrita para fala",
+      "A normalização textual para síntese transforma representações escritas em formas pronunciáveis. O sentido da conversão é o critério decisivo para distingui-la da ITN.",
+      "Um sintetizador recebe “2026” e prepara “dois mil e vinte e seis” para pronúncia.",
+      "Trocar a direção da transformação por reconhecer a presença de um numeral.",
+      "Qual direção caracteriza TN para síntese?",
+      "Preparar a leitura por extenso do ano escrito integra a normalização textual para síntese.",
+      "A conversão de “2026” para sua leitura por extenso exemplifica ITN aplicada à saída do reconhecimento.",
+      "A conversão do ano escrito para uma forma pronunciável exemplifica TN para síntese."
+    ],
+    [
+      "r1-1-2",
+      "ITN · fala para escrita",
+      "A normalização textual inversa converte formas reconhecidas da fala em grafias convencionais. O resultado deve conservar valor, unidade e alcance da expressão.",
+      "Após o ASR reconhecer “doze vírgula cinco por cento”, o sistema apresenta “12,5%”.",
+      "Confundir mudança de representação com licença para alterar o valor.",
+      "O que a ITN preserva ao converter um percentual?",
+      "A representação “12,5%” pode conservar o valor da expressão reconhecida.",
+      "Representar a mesma expressão por “125%” é uma escolha de estilo da ITN, sem mudança quantitativa.",
+      "Representar a expressão por “125%” altera o valor; a forma correspondente é “12,5%”."
+    ],
+    [
+      "r1-2-1",
+      "Contexto · classe · desambiguação",
+      "A conversão depende da função que a palavra exerce. Em “segundo o relator”, o termo introduz uma referência à fonte da informação e não enumera uma posição.",
+      "O texto reconhecido contém “segundo o relator, a sessão terminou”.",
+      "Converter toda ocorrência de “segundo” no ordinal “2º”.",
+      "Por que “segundo o relator” não deve virar “2º o relator”?",
+      "O contexto impede tratar “segundo” como um ordinal nessa expressão.",
+      "A presença da palavra “segundo” basta para justificar sua normalização automática para “2º”.",
+      "A função contextual deve ser verificada antes de converter “segundo” em ordinal."
+    ],
+    [
+      "r1-2-2",
+      "Remissão · identidade · precisão",
+      "A normalização pode padronizar uma referência, mas deve conservar qual objeto foi citado. Uma troca de dígitos muda o dispositivo, mesmo que a saída permaneça bem formada.",
+      "A gravação cita o artigo 155, mas o texto normalizado apresenta “art. 165”.",
+      "Aceitar uma referência por estar sintaticamente bem formatada.",
+      "Por que “art. 165” não normaliza fielmente “artigo 155”?",
+      "A alteração do número muda a referência e precisa ser corrigida contra a fala.",
+      "A abreviação “art.” compensa a troca dos dígitos e torna fiel a referência normalizada.",
+      "A abreviação não compensa a troca dos dígitos; o número referido deve ser preservado."
+    ],
+    [
+      "r2-1",
+      "Gênero · manual · convenção",
+      "Antes de padronizar números, identifique o gênero e o manual aplicável. Convenções administrativas, redação normativa e transcrição da oralidade têm finalidades distintas.",
+      "A equipe prepara uma nota de fala e também uma minuta normativa.",
+      "Transferir automaticamente uma regra de gênero para outro.",
+      "Qual escolha vem antes da padronização numérica?",
+      "A escolha da convenção deve considerar o gênero de cada documento.",
+      "Uma regra apresentada para minuta normativa aplica-se automaticamente, com o mesmo alcance, à transcrição literal da sessão.",
+      "A regra deve ser aplicada dentro de seu gênero e escopo, sem transferência automática à transcrição literal."
+    ],
+    [
+      "r2-1-2",
+      "Extenso · exceções · norma",
+      "Na redação normativa, o art. 11, II, f, da LC 95 prevê números e percentuais por extenso, com exceções expressas. A leitura da regra exige conservar essas ressalvas.",
+      "Uma minuta inclui uma data e o número de uma lei.",
+      "Transformar a preferência normativa por extenso em proibição absoluta de algarismos.",
+      "A regra de números por extenso da LC 95 admite exceções?",
+      "Datas e números de lei integram as ressalvas da regra citada.",
+      "A LC 95 exige números por extenso mesmo quando essa forma prejudicar a compreensão do texto.",
+      "A LC 95 ressalva os casos em que a grafia por extenso prejudicar a compreensão."
+    ],
+    [
+      "r2-2-1",
+      "Artigo · parágrafo · inciso",
+      "A identificação das unidades normativas usa convenções diferentes: artigo e parágrafo, inciso, alínea e item não têm o mesmo padrão de numeração.",
+      "Uma referência reúne artigo, parágrafo, inciso e alínea.",
+      "Uniformizar unidades diferentes por conveniência gráfica.",
+      "Como se distinguem inciso, alínea e item na articulação normativa?",
+      "Incisos, alíneas e itens usam, respectivamente, romanos, letras minúsculas e arábicos na LC 95.",
+      "Na LC 95, os incisos são identificados por letras minúsculas e as alíneas por romanos.",
+      "Na LC 95, incisos usam romanos e alíneas usam letras minúsculas."
+    ],
+    [
+      "r2-2-2",
+      "Sigla · abreviação · símbolo",
+      "Sigla condensa uma denominação; abreviação reduz uma palavra; símbolo segue uma convenção de representação. Reconhecer a categoria evita padronizações indevidas.",
+      "O texto contém “PEC”, “art.” e “km”.",
+      "Aplicar a todo símbolo a pontuação típica de uma abreviação.",
+      "Como classificar PEC, art. e km?",
+      "“PEC”, “art.” e “km” exemplificam, respectivamente, sigla, abreviação e símbolo.",
+      "Como “km” é uma abreviação comum, deve receber ponto final como parte obrigatória de sua grafia.",
+      "“km” é símbolo e não recebe ponto como parte de sua grafia."
+    ],
+    [
+      "r3-1",
+      "Regra · modelo · verificação",
+      "Regras explícitas tornam a transformação rastreável; modelos contextuais podem lidar com variações, mas suas saídas também exigem validação. A técnica não é garantia de fidelidade.",
+      "Um normalizador neural produz uma referência coerente com o assunto, porém diferente da fala.",
+      "Usar plausibilidade contextual para aceitar referência não pronunciada.",
+      "Por que um modelo contextual ainda precisa de conferência?",
+      "Uma referência plausível pode estar errada em relação à entrada e exigir correção.",
+      "A coerência da referência com o assunto demonstra que o modelo preservou o conteúdo pronunciado.",
+      "A coerência temática não demonstra fidelidade à referência pronunciada."
+    ],
+    [
+      "r3-2",
+      "Grafia · valor · original",
+      "A validação separa padronização gráfica de correção de reconhecimento. Glossários ajudam na grafia de termos confirmados; quantificadores de aproximação também carregam sentido.",
+      "A fala diz “uns dois mil participantes”, e a versão apresenta “2.000 participantes”.",
+      "Apagar aproximação como se fosse apenas ruído de oralidade.",
+      "Que informação se perde ao retirar “uns” de uma quantidade aproximada?",
+      "A versão sem o marcador pode transformar uma estimativa em quantidade apresentada como exata.",
+      "Retirar “uns” preserva necessariamente o alcance quantitativo porque o numeral continuou sendo dois mil.",
+      "Retirar “uns” pode alterar o alcance quantitativo ao apagar a aproximação."
+    ]
+  ],
+  "rf-2-6": [
+    [
+      "r1-1-1",
+      "Humano · toques · entrada",
+      "No CAT estenotípico clássico, a pessoa produz combinações de teclas. O software converte essa entrada em texto; isso difere de reconhecer diretamente o sinal acústico.",
+      "Uma profissional ouve a sessão e registra combinações num teclado de estenotipia.",
+      "Atribuir ao software a percepção acústica que, nesse fluxo, é da profissional.",
+      "Qual entrada distingue CAT estenotípico clássico de ASR?",
+      "A entrada imediata do conversor CAT é formada pelos toques registrados pela profissional.",
+      "O conversor CAT descrito obtém sua entrada imediata diretamente das ondas sonoras, como um reconhecedor de fala.",
+      "Nesse CAT, a entrada imediata do conversor são os toques estenotípicos."
+    ],
+    [
+      "r1-1-2",
+      "Dicionário · mapeamento · contexto",
+      "O dicionário associa toques ou sequências a formas textuais. A existência de uma entrada não garante que o toque tenha sido usado corretamente naquele contexto.",
+      "Uma sequência encontra correspondência no dicionário e produz uma palavra inadequada à fala.",
+      "Concluir correção contextual só porque houve tradução.",
+      "Uma entrada encontrada no dicionário garante palavra correta?",
+      "Pode haver palavra inadequada mesmo quando a sequência possui entrada no dicionário.",
+      "Encontrar a sequência no dicionário dispensa conferir se a palavra resultante corresponde à fala.",
+      "A correspondência no dicionário não dispensa conferir a adequação da palavra à fala."
+    ],
+    [
+      "r1-2-1",
+      "Sem entrada · não traduzido",
+      "Um toque sem correspondência pode permanecer como código ou representação fonética. O problema é de ausência de tradução, e não necessariamente uma palavra já traduzida para outra incorreta.",
+      "A saída apresenta um código estenotípico onde deveria haver uma palavra.",
+      "Tratar ausência de tradução e tradução errada como o mesmo diagnóstico.",
+      "O que caracteriza um segmento não traduzido?",
+      "A falta de correspondência no dicionário pode explicar a permanência do código na saída.",
+      "A permanência de um código comprova que o sistema selecionou uma palavra portuguesa inadequada ao contexto.",
+      "Um código remanescente pode indicar ausência de tradução, sem seleção de palavra portuguesa."
+    ],
+    [
+      "r1-2-2",
+      "Palavra existente · tradução inadequada",
+      "Um segmento mal traduzido já recebeu forma textual, mas essa forma não corresponde ao pretendido. O diagnóstico deve distinguir o que foi digitado, o mapeamento e a fala.",
+      "O CAT exibe uma palavra comum, porém incompatível com o trecho ouvido.",
+      "Limitar a conferência a sinais ou códigos visivelmente estranhos.",
+      "Por que revisar palavras aparentemente normais numa saída CAT?",
+      "Uma palavra comum pode ser resultado de tradução inadequada e passar despercebida na leitura superficial.",
+      "A ausência de códigos na saída demonstra que não houve erro de tradução estenotípica.",
+      "A ausência de códigos não exclui palavras mal traduzidas."
+    ],
+    [
+      "r2-1-1",
+      "Pedal · reprodução · retomada",
+      "Atalhos ou pedais comandam a reprodução para facilitar a escuta durante a digitação. O retrocesso automático repete um trecho para recuperar contexto; não altera o áudio original.",
+      "Ao retomar, o editor volta dois segundos e reproduz novamente o fim da frase.",
+      "Confundir repetição na escuta com repetição no conteúdo a transcrever.",
+      "Por que o retrocesso automático não exige duplicar o texto?",
+      "A repetição de reprodução serve à conferência e não significa nova ocorrência de fala.",
+      "Cada repetição produzida pelo retrocesso deve ser acrescentada à nota como outra fala do orador.",
+      "O retrocesso repete a escuta do mesmo segmento e não exige duplicar a transcrição."
+    ],
+    [
+      "r2-1-2",
+      "Áudio + texto · tempos",
+      "O alinhamento forçado usa áudio e um texto já fornecido para estimar correspondências temporais. Ele não equivale, por definição, a produzir do zero a transcrição nem a validar o conteúdo dado.",
+      "Um editor recebe a gravação e uma transcrição pronta e estima o tempo de cada palavra.",
+      "Confundir atribuição de tempos com verificação da verdade do texto.",
+      "Quais entradas e saída caracterizam o alinhamento forçado?",
+      "A estimação temporal a partir da gravação e do texto fornecido caracteriza alinhamento forçado.",
+      "Obter tempos para o texto fornecido certifica que todas as palavras desse texto foram efetivamente pronunciadas.",
+      "Obter tempos não certifica, por si só, que todas as palavras fornecidas correspondam à fala."
+    ],
+    [
+      "r2-2-1",
+      "Orador · conferência · correção",
+      "O editor permite corrigir rótulos de oradores a partir de conferência. A edição muda a atribuição registrada, não a sequência de palavras necessariamente.",
+      "Após conferir o vídeo, a equipe troca o nome do responsável por um turno sem editar suas palavras.",
+      "Supor que toda correção de autoria exige modificar o texto verbal.",
+      "Como corrigir autoria preservando as palavras confirmadas?",
+      "É possível ajustar a atribuição do turno mantendo seu conteúdo verbal.",
+      "Se nenhuma palavra foi alterada, não houve correção relevante no documento.",
+      "A correção da autoria é relevante mesmo quando as palavras permanecem iguais."
+    ],
+    [
+      "r2-2-2",
+      "Histórico · vínculo · auditoria",
+      "Versões e referências ao áudio permitem localizar e reconstruir alterações. Esses recursos apoiam a auditoria sem substituir a validação do conteúdo.",
+      "Uma alteração registra o responsável e preserva o vínculo com o minuto correspondente.",
+      "Tratar rastreabilidade como prova automática da decisão.",
+      "O que a rastreabilidade permite verificar depois de uma edição?",
+      "O vínculo temporal facilita conferir a evidência usada na alteração.",
+      "A indicação do responsável torna desnecessário ouvir o segmento quando houver dúvida sobre a alteração.",
+      "A identificação do responsável não dispensa conferir o segmento quando houver dúvida."
+    ],
+    [
+      "r3-1",
+      "Provisório · validado · fluxo",
+      "Uma saída ao vivo pode servir ao acompanhamento e ainda ser provisória. A condição de registro validado depende das etapas editoriais adotadas pelo órgão.",
+      "O público acompanha texto em tempo real antes da revisão final da sessão.",
+      "Equiparar exibição pública imediata a homologação editorial.",
+      "O texto exibido ao vivo já é necessariamente o registro validado?",
+      "A versão usada para acompanhamento pode ser posteriormente corrigida no fluxo editorial.",
+      "A primeira exibição pública transforma automaticamente o texto em versão editorial definitiva.",
+      "A exibição pública não substitui a validação editorial exigida pelo fluxo."
+    ],
+    [
+      "r3-2",
+      "Legenda · estrutura · metadados",
+      "SRT e WebVTT organizam legendas com tempos. XML e JSON podem estruturar dados adicionais conforme o esquema; o formato, sozinho, não garante a presença nem a correção dos metadados.",
+      "Uma exportação oferece legendas temporizadas e outra inclui campos de orador e confiança.",
+      "Confundir capacidade do formato com preenchimento obrigatório correto.",
+      "Como distinguir formato de legenda e estrutura de metadados?",
+      "XML ou JSON podem representar orador e confiança quando esses campos integram o esquema de exportação.",
+      "A escolha de JSON garante automaticamente que os nomes dos oradores estejam corretos.",
+      "JSON permite representar dados, mas não garante a correção dos nomes registrados."
+    ]
+  ],
+  "rf-2-7": [
+    [
+      "r1-1-1",
+      "Sequencial · versão anterior",
+      "Na revisão sequencial, o segundo profissional trabalha a partir da versão recebida da etapa anterior. Isso favorece continuidade, mas difere de duas avaliações feitas sem acesso às decisões recíprocas.",
+      "Beatriz revisa a versão já corrigida por André.",
+      "Chamar de independente qualquer revisão com duas pessoas.",
+      "O que caracteriza a revisão sequencial?",
+      "O acesso de Beatriz à versão corrigida caracteriza a sequência descrita.",
+      "A participação de dois profissionais torna esse procedimento independente, mesmo com acesso às correções anteriores.",
+      "Dois profissionais não tornam a revisão independente quando o segundo usa as decisões anteriores."
+    ],
+    [
+      "r1-1-2",
+      "Independente · comparação posterior",
+      "Na revisão independente, as decisões são produzidas antes de um revisor conhecer as do outro. A comparação vem depois e pode revelar divergências que exigem conciliação.",
+      "Dois revisores recebem a gravação e trabalham sem ver as escolhas um do outro.",
+      "Confundir independência da análise com dispensa de conciliação.",
+      "Quando se comparam os resultados numa revisão independente?",
+      "A comparação posterior permite identificar diferenças entre as duas análises.",
+      "A independência dispensa resolver divergências antes de publicar a versão final.",
+      "A independência não dispensa resolver divergências antes da publicação."
+    ],
+    [
+      "r1-2-1",
+      "Conciliação · áudio · critério",
+      "Conciliar é resolver diferenças com base na evidência e nas convenções adotadas. Uma maioria ou concordância não substitui a conferência da fala.",
+      "Dois revisores divergem sobre um número e voltam ao trecho da gravação.",
+      "Resolver a divergência apenas pela segurança subjetiva de um revisor.",
+      "Qual deve ser a base da conciliação de uma divergência?",
+      "Retornar à gravação ajuda a fundamentar a escolha entre as versões divergentes.",
+      "A versão defendida com maior confiança subjetiva deve prevalecer independentemente do áudio.",
+      "A escolha deve apoiar-se na evidência e nos critérios editoriais, não apenas na confiança subjetiva."
+    ],
+    [
+      "r1-2-2",
+      "Divergência · calibração · acerto",
+      "O padrão de divergências ajuda a localizar critérios pouco claros. Concordância entre revisores mede consistência entre decisões, mas não assegura correspondência com a fala.",
+      "Os revisores concordam numa palavra que ambos ouviram incorretamente.",
+      "Equiparar concordância a acurácia.",
+      "Dois revisores concordarem prova que acertaram?",
+      "Pode haver concordância entre revisores e erro compartilhado em relação à gravação.",
+      "A concordância integral exclui a necessidade de investigar erros comuns às duas versões.",
+      "A concordância integral não exclui erros comuns às duas versões."
+    ],
+    [
+      "r2-1-1",
+      "Sorteio · universo · cobertura",
+      "A amostragem aleatória simples seleciona unidades do universo definido por sorteio segundo seu desenho. Examinar somente casos suspeitos responde a uma pergunta de risco diferente.",
+      "Uma equipe sorteia trechos de todas as sessões; outra escolhe apenas segmentos de baixa confiança.",
+      "Chamar seleção por risco de sorteio aleatório do conjunto inteiro.",
+      "Como distinguir amostra aleatória e seleção por risco?",
+      "A seleção apenas de baixa confiança não equivale ao sorteio de trechos de todo o universo.",
+      "A escolha exclusiva de segmentos suspeitos produz automaticamente uma amostra representativa de todas as transcrições.",
+      "A escolha de suspeitos pode ser útil à inspeção, mas não garante representatividade de todas as transcrições."
+    ],
+    [
+      "r2-1-2",
+      "Estratos · grupos · sorteio",
+      "A amostragem estratificada separa o universo em grupos relevantes e seleciona dentro deles. A estimativa global precisa considerar o desenho, inclusive proporções diferentes dos grupos.",
+      "A auditoria separa sessões por qualidade de áudio e sorteia trechos em cada grupo.",
+      "Confundir estratificar com examinar somente o grupo de maior risco.",
+      "Qual é a sequência da amostragem estratificada?",
+      "Separar por qualidade de áudio e sortear em cada grupo caracteriza o desenho estratificado descrito.",
+      "A estratificação exige abandonar todos os grupos de boa qualidade e examinar apenas os de áudio ruim.",
+      "A estratificação separa grupos e seleciona dentro deles conforme o desenho; não exige excluir os de boa qualidade."
+    ],
+    [
+      "r2-2-1",
+      "Amostra · limite · inferência",
+      "Uma amostra sem erros mostra ausência de erros detectados nas unidades examinadas. O resultado não certifica que todas as unidades não examinadas estejam corretas.",
+      "A auditoria não encontra erros nos sessenta trechos sorteados.",
+      "Transformar zero observado em garantia universal.",
+      "O que se pode concluir de sessenta trechos sem erros detectados?",
+      "O resultado descreve os trechos examinados e não exclui falhas nos demais.",
+      "A ausência de erros nos sessenta trechos demonstra que todas as sessões do período estão livres de falhas.",
+      "A ausência de erros na amostra não demonstra ausência de falhas em todas as sessões."
+    ],
+    [
+      "r2-2-2",
+      "Crítico · impacto · indicador",
+      "A contagem de falhas críticas complementa medidas agregadas. Um único erro sobre autoria ou resultado pode merecer ação mesmo quando a taxa lexical média é baixa.",
+      "O relatório tem baixa WER geral e uma troca no resultado de uma votação.",
+      "Deixar o indicador médio ocultar uma falha de alto impacto.",
+      "Por que acompanhar erros críticos além da WER?",
+      "A troca do resultado merece avaliação própria apesar da baixa taxa média.",
+      "Uma baixa WER torna dispensável registrar separadamente erros críticos de resultado.",
+      "Uma baixa WER não dispensa acompanhar falhas críticas de resultado."
+    ],
+    [
+      "r3-1",
+      "SLI · medição / SLO · meta",
+      "SLI é o indicador observado; SLO é o objetivo estabelecido para ele. Compará-los permite verificar cumprimento da meta sem confundir desempenho com exigência.",
+      "O objetivo é entregar 98% das notas no prazo; o resultado medido foi 96,5%.",
+      "Trocar o valor observado pela meta.",
+      "Quais valores representam SLI e SLO nesse caso?",
+      "96,5% é o resultado do indicador, enquanto 98% é a meta definida.",
+      "O resultado de 96,5% demonstra cumprimento do objetivo mínimo de 98%.",
+      "O resultado de 96,5% fica abaixo do objetivo mínimo de 98%."
+    ],
+    [
+      "r3-2",
+      "SLA · medição · compromisso",
+      "O acordo de nível de serviço estabelece compromissos e critérios de apuração, podendo prever tratamento do descumprimento. A meta isolada não resolve ambiguidades sobre início, fim e exceções da medição.",
+      "Um acordo exige entrega em duas horas, mas é necessário definir quando o relógio começa.",
+      "Confundir prazo nominal com regra de medição completa.",
+      "Que definição falta num prazo sem marco inicial?",
+      "Definir o marco inicial é necessário para apurar de modo consistente o prazo acordado.",
+      "Dois relatórios com o mesmo prazo nominal são diretamente comparáveis mesmo usando marcos iniciais diferentes e não informados.",
+      "A comparação exige conhecer e compatibilizar os critérios de medição, inclusive o marco inicial."
+    ]
+  ],
+  "rf-2-8": [
+    [
+      "r1-1",
+      "Saída · domínio · indexação",
+      "Vocabulário pode designar unidades de saída do reconhecedor, termos de uma área ou descritores usados na recuperação documental. Identificar a função evita tratar estruturas diferentes como equivalentes.",
+      "Uma equipe mantém tokens do ASR, um glossário de comissões e um tesauro de assuntos.",
+      "Supor que o tesauro de indexação é necessariamente o léxico interno do ASR.",
+      "Quais três sentidos de vocabulário devem ser separados?",
+      "O tesauro e o glossário podem compartilhar termos sem terem a mesma função.",
+      "Um tesauro destinado a indexar documentos determina necessariamente todas as unidades que o ASR consegue emitir.",
+      "O tesauro de indexação não determina necessariamente o conjunto de unidades de saída do ASR."
+    ],
+    [
+      "r1-2-1",
+      "OOV · léxico fechado",
+      "Em um reconhecedor de léxico fechado, OOV indica termo fora do vocabulário considerado pelo sistema. A caracterização depende da unidade e da arquitetura usadas.",
+      "Um nome novo não possui entrada num sistema baseado em palavras de léxico fechado.",
+      "Aplicar a mesma noção de palavra ausente sem considerar tokenização.",
+      "Em que contexto um nome ausente caracteriza OOV?",
+      "O nome ausente da lista de palavras do léxico fechado é OOV nesse sistema.",
+      "O fato de um nome ser raro prova que ele é OOV em qualquer arquitetura de ASR.",
+      "Raridade não prova OOV em qualquer arquitetura; é necessário conhecer o vocabulário e a tokenização."
+    ],
+    [
+      "r1-2-2",
+      "Subpalavras · composição · erro",
+      "Unidades menores podem compor nomes que não estavam armazenados como palavras inteiras. Essa possibilidade amplia a cobertura, mas não garante a seleção correta da sequência.",
+      "Um reconhecedor usa subpalavras para representar um nome pouco frequente.",
+      "Confundir capacidade de representação com acerto garantido.",
+      "Por que subpalavras não eliminam todos os erros em nomes raros?",
+      "O sistema pode conseguir representar o nome e ainda escolher uma sequência incorreta.",
+      "O uso de subpalavras torna desnecessária a avaliação de erros em nomes próprios.",
+      "O uso de subpalavras não dispensa avaliar o reconhecimento de nomes próprios."
+    ],
+    [
+      "r2-1-1",
+      "Após saída · substituição",
+      "O pós-processamento lexical opera sobre uma hipótese já produzida. Uma troca textual posterior não demonstra que o decodificador tenha reconhecido originalmente a forma corrigida.",
+      "Após a transcrição, uma regra substitui a grafia recorrente de uma sigla.",
+      "Atribuir ao reconhecimento uma correção aplicada somente depois.",
+      "Como localizar o pós-processamento no fluxo?",
+      "A regra descrita atua depois da geração da hipótese textual.",
+      "A substituição posterior prova que os pesos do reconhecedor foram atualizados.",
+      "A substituição posterior não prova atualização dos pesos do reconhecedor."
+    ],
+    [
+      "r2-1-2",
+      "Contexto · reforço · inferência",
+      "Listas de frases ou pistas contextuais podem favorecer termos plausíveis durante o reconhecimento, quando o sistema oferece esse recurso. Esse uso em execução difere de retreinamento.",
+      "Antes da sessão, nomes da pauta são fornecidos como lista de frases a um serviço que aceita esse recurso.",
+      "Confundir reforço contextual em execução com atualização dos pesos.",
+      "Uma lista contextual exige necessariamente retreinar o modelo?",
+      "O recurso pode favorecer nomes da pauta sem um novo treinamento dos pesos.",
+      "A inclusão de um nome na lista garante que ele será reconhecido corretamente em qualquer condição acústica.",
+      "A lista favorece o reconhecimento, mas não garante acerto em qualquer condição acústica."
+    ],
+    [
+      "r2-2",
+      "Texto · áudio pareado · objetivo",
+      "Adaptar um modelo de linguagem pode usar textos do domínio. O ajuste fino supervisionado de reconhecimento de fala usa exemplos que relacionam áudio e transcrição para o objetivo de reconhecimento.",
+      "Há um corpus de debates escritos e outro de gravações com transcrições conferidas.",
+      "Tratar os dois conjuntos como intercambiáveis para qualquer objetivo.",
+      "Que dados distinguem adaptação de linguagem e ajuste supervisionado de ASR?",
+      "Os debates escritos podem apoiar adaptação linguística, enquanto os pares áudio–texto apoiam o ajuste supervisionado do ASR.",
+      "Um corpus somente textual fornece, por si só, os exemplos acústicos pareados necessários ao ajuste supervisionado descrito.",
+      "Um corpus somente textual não fornece os exemplos acústicos pareados desse ajuste supervisionado."
+    ],
+    [
+      "r2-3-1",
+      "Durante busca · escore externo",
+      "Na fusão superficial, uma pontuação externa de linguagem é combinada com a do ASR durante a busca. O peso controla sua contribuição na fórmula de combinação adotada.",
+      "A busca combina o escore do ASR com λ vezes o escore de um modelo externo.",
+      "Interpretar peso externo zero como ausência de toda informação linguística no ASR.",
+      "O que zera quando λ é zero na combinação descrita?",
+      "Com λ igual a zero, a parcela externa dessa combinação deixa de contribuir para a pontuação.",
+      "Zerar λ elimina necessariamente toda informação linguística aprendida internamente pelo ASR.",
+      "Zerar λ elimina a parcela externa da combinação, não necessariamente a informação linguística interna do ASR."
+    ],
+    [
+      "r2-3-2",
+      "Após geração · hipóteses · ordem",
+      "A reordenação compara hipóteses já produzidas e muda sua classificação. Uma reordenação restrita a um conjunto fixo só pode selecionar entre seus candidatos.",
+      "Um módulo recebe cinco hipóteses fixas e apenas as ordena por uma nova pontuação.",
+      "Atribuir geração de novo texto a um módulo definido apenas como reordenador.",
+      "Qual limite tem uma reordenação restrita a candidatos fixos?",
+      "O módulo descrito pode escolher como primeira uma hipótese antes classificada em outra posição.",
+      "O módulo descrito pode selecionar uma sexta transcrição que não pertence ao conjunto recebido.",
+      "Um módulo limitado a reordenar o conjunto fixo seleciona apenas entre as hipóteses recebidas."
+    ],
+    [
+      "r3-1",
+      "Reforço · falso viés · teste",
+      "Reforço excessivo pode favorecer um termo não pronunciado. Avaliar o efeito exige testar tanto ocorrências desejadas quanto trechos em que o termo não aparece.",
+      "Depois de aumentar o peso de uma sigla, ela passa a surgir também em áudios que não a contêm.",
+      "Medir apenas ganhos nos exemplos positivos e ignorar falsas inclusões.",
+      "Como detectar o efeito indesejado de um reforço contextual?",
+      "As inclusões indevidas mostram a necessidade de avaliar trechos negativos além dos que contêm a sigla.",
+      "O aumento do acerto nos trechos que contêm a sigla basta para provar melhoria global, independentemente das novas inserções.",
+      "A melhoria global exige considerar também as inserções indevidas e outros efeitos do reforço."
+    ],
+    [
+      "r3-2",
+      "Validar · versionar · medir",
+      "A manutenção do glossário combina coleta em fontes do domínio, confirmação e avaliação posterior. WER global e erros em entidades respondem a perguntas complementares sobre a qualidade.",
+      "Uma comissão muda de nome e o glossário é atualizado após conferência nos registros institucionais.",
+      "Supor que a simples atualização comprova ganho mensurável no ASR.",
+      "O que fazer depois de atualizar um nome no glossário?",
+      "É necessário avaliar o efeito sobre o reconhecimento, inclusive os erros em nomes e outras entidades.",
+      "A redução da perplexidade de um modelo de linguagem em textos de teste demonstra, por si só, queda da WER em qualquer áudio.",
+      "A redução de perplexidade em texto não demonstra, por si só, queda da WER; o ASR deve ser avaliado com áudio e referência."
+    ]
+  ]
+}
