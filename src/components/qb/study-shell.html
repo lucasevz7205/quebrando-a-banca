@@ -722,6 +722,7 @@ function openPortal(section=null,push=true,focus=true){
 }
 function setView(v,push=true){
   if(v==='portal'){openPortal(null,push);return;}
+  if(v==='treinar'&&S.view==='portal'&&!S.round)S.trRadial=null;
   if(v==='estudo') v=S.ultEstudo||'mapa';
   if(v==='revisao') v='edital'; /* antigas URLs continuam úteis sem duplicar o edital em Estudo */
   if(!VIEWS.includes(v)) v='treinar';
@@ -758,11 +759,11 @@ function render(force){
     radialCleanup=window.QBRadialDashboard?.wire(main,{
       onModule:key=>openPortal(key),
       onBack:()=>openPortal(null),
-      onOpen:target=>{if(target==='treinar'&&!S.round)S.trRadial=null;setView(target);window.scrollTo({top:0,behavior:'instant'});}
+      onOpen:target=>{setView(target);window.scrollTo({top:0,behavior:'instant'});}
     })||null;
     return;
   }
-  if(S.view==='treinar'&&!S.round&&!S.trRadial?.setup&&!S.trRadial?.classic&&S.qLoaded){
+  if(S.view==='treinar'&&!S.round&&!S.trRadial?.setup&&!S.trRadial?.classic&&S.qLoaded&&S.dbState==='ok'&&S.q.size>0){
     radialCleanup?.();
     radialCleanup=null;
     const model=treinoRadialDados();
