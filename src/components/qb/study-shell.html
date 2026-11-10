@@ -481,6 +481,7 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/map-dpad.css?v=1">
 <link rel="stylesheet" href="/claude-export/map-mastery.css?v=2">
 <link rel="stylesheet" href="/claude-export/map-evidence.css?v=1">
+<link rel="stylesheet" href="/claude-export/map-remission.css?v=1">
 <link rel="stylesheet" href="/claude-export/glass-iris.css?v=1">
 <link rel="stylesheet" href="/claude-export/ambient-background.css?v=1">
 <script src="/claude-export/ambient-background.js?v=1" defer></script>
@@ -600,12 +601,13 @@ function chaveQuestao(qid){return window.QBQuestionLinks.key(qid)}
 function recursosQuestao(qid){return indiceQuestoes().byQuestion.get(qid)||null}
 function atalhosQuestao(q,indice){
   const info=(indice?.byQuestion.get(q.id))||recursosQuestao(q.id);
-  const mapped=[q.topico,...(info?.matchedIds||[])].some(id=>!!S.rv.get(id)?.mapa);
+  const mapped=[q.topico,...(info?.matchedIds||[])].some(id=>!!S.rv.get(id)?.mapa)
+    ||[...S.rv.values()].some(rev=>rev?.mapa&&rev.questaoIds?.includes(q.id));
   return `<div class="qb-qsource-actions"><button type="button" class="btn ghost small" data-qcard="${esc(q.id)}">Revisar este item nos Flashcards</button>${mapped?`<button type="button" class="btn ghost small" data-qmap-question="${esc(q.id)}" aria-label="Localizar o conceito da questão no mapa mental">Localizar conceito no mapa ↗</button>`:''}</div>`;
 }
 function questoesEmMapa(qs,indice){
   if(!qs.length)return '';
-  return `<details class="qb-qsource-list"><summary>Questões relacionadas ao capítulo · ${qs.length}</summary><p class="rule">O vínculo é por capítulo do edital, não por nó semântico do mapa. Revele cada gabarito e comentário quando desejar conferir a regra.</p>${qs.map(q=>`<details class="qb-qsource-item"><summary>${esc(q.enunciado)}</summary><div><p><b>Gabarito: ${esc(LETRA[q.gabarito]||q.gabarito)}</b></p><p>${esc(q.comentario||'Comentário indisponível; confira a fonte.')}</p><small>${esc(q.ref||'Fonte não cadastrada')}</small>${atalhosQuestao(q,indice)}</div></details>`).join('')}</details>`;
+  return `<details class="qb-qsource-list"><summary>Questões relacionadas ao capítulo · ${qs.length}</summary><p class="rule">Para cada questão, use “Localizar conceito no mapa”. A remissão busca o nó associado por ID ou conteúdo; quando só houver correspondência por capítulo, isso será informado sem inventar um subramo.</p>${qs.map(q=>`<details class="qb-qsource-item"><summary>${esc(q.enunciado)}</summary><div><p><b>Gabarito: ${esc(LETRA[q.gabarito]||q.gabarito)}</b></p><p>${esc(q.comentario||'Comentário indisponível; confira a fonte.')}</p><small>${esc(q.ref||'Fonte não cadastrada')}</small>${atalhosQuestao(q,indice)}</div></details>`).join('')}</details>`;
 }
 function nomeTopicoIndice(id,idx){return S.ed.get(id)||idx.virtualTopics.get(id)||{id,titulo:id}}
 function capNome(cap){for(const q of S.q.values()) if(q.cap===cap) return q.capNome||''; return ''}
@@ -978,7 +980,7 @@ function viewCaderno(){
     if(!m.tops.has(tk)) m.tops.set(tk,{k:tk,num:t?t.num:'',tit:t?t.titulo:(it.q.capNome||it.q.cap),ord:t?(t.ordem||0):9999,caps:new Set(),its:[]});
     const g=m.tops.get(tk); g.caps.add(it.q.cap); g.its.push(it);
   }
-  const hj=hoje();
+  const hj=hoje(),questionIndex=indiceQuestoes();
   const cntHoje=l=>l.filter(({r})=>{const p=proxDe(r);return p&&p<=hj}).length;
   let html=`<p class="rule">${its.length} ${its.length===1?'item':'itens'} no caderno, agrupados por matéria e assunto do edital. Abra a matéria e depois o assunto; "Revisar" faz uma rodada só com os erros daquele capítulo.</p>`;
   for(const pv of ['P1','P2','']){
@@ -993,7 +995,7 @@ function viewCaderno(){
         const gk='cd:t:'+tp.k;
         html+=`<details class="rv-top" data-grupo="${esc(gk)}" ${S.abertos.has(gk)?'open':''}><summary><div class="t-h"><span class="t-num">${esc(tp.num||'')}</span><span class="t-tit">${esc(tp.tit||'')} <span class="mono" style="font-size:12px;color:var(--muted)">· ${tp.its.length} ${tp.its.length===1?'item':'itens'}</span></span></div></summary>
           <div class="acts">${[...tp.caps].map(c=>{const k=tp.its.filter(x=>x.q.cap===c).length;return `<button class="btn small" data-revisar="${esc(c)}">Revisar ${k} · cap. ${esc(c)}</button>`}).join('')}</div>`;
-        html+=entradasCaderno(tp.its);
+        html+=entradasCaderno(tp.its,questionIndex);
         html+=`</details>`;
       }
       html+=`</details>`;
@@ -1001,7 +1003,7 @@ function viewCaderno(){
   }
   return `<div class="wrap" style="gap:14px">${html}</div>`;
 }
-function entradasCaderno(lista){
+function entradasCaderno(lista,indice){
   let html='';
   {
     for(const {q,r} of lista){
@@ -1021,6 +1023,7 @@ function entradasCaderno(lista){
           ${prox?`<span class="pill p">Revisão ${prox<=hoje()?'hoje':'em '+ddmm(prox)}</span>`:''}
         </div>
         ${chipsOrigem(q.id,r.origem)}
+        ${atalhosQuestao(q,indice)}
         <details class="why"><summary>Ver o gabarito comentado</summary><p>${esc(q.comentario)}</p>${q.ref?`<p class="ref">Ver ${esc(q.ref)}</p>`:''}</details>
         <div class="note"><label for="nota-${esc(q.id)}">Por que errei / o que lembrar</label>
           <textarea id="nota-${esc(q.id)}" data-nota="${esc(q.id)}" placeholder="Escreva a regra com as suas palavras e um exemplo próprio.">${esc(r.nota||'')}</textarea>
