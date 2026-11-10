@@ -78,6 +78,12 @@ body > .wrap {
   -webkit-backdrop-filter:blur(14px);
   backdrop-filter:blur(14px);
 }
+/* Heavily repeated question/list cards do not blur the 58 MB video per tile. */
+:root[data-theme="dark"] :is(.item,.cap,.topic,.entry,.book,.prog,.heat,.tbl-wrap,.agenda-wrap) {
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+  background-color:rgba(23,25,34,.94);
+}
 :root[data-theme="dark"] .qb-page-hero,
 :root[data-theme="dark"] .qb-section-intro.qb-page-hero,
 :root[data-theme="dark"] .qb-plan-intro.qb-page-hero,
