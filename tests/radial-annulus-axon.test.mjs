@@ -22,6 +22,7 @@ test("anel real incorpora o poster do MP4 e reproduz as cores visíveis do víde
  assert.match(style,/mask-image:radial-gradient\(circle closest-side/);
  assert.match(style,/qb-radial-annulus-texture/);
  assert.match(style,/qb-radial-annulus-filaments/);
+ assert.match(style,/pointer-events:stroke/,"anywhere on the arc should be clickable");
  const poster=fs.readFileSync("public/claude-export/ambient-poster.jpg");
  assert.ok(poster.byteLength>10000);
 });
@@ -84,7 +85,10 @@ test("passagem do mouse e teclado destacam o setor correto e a seleção usa o f
  const events={};
  const root={
    dataset:{radialScreen:"menu"},
-   querySelector:()=>null,
+   querySelector:selector=>{
+     const idx=selector.match(/data-radial-index="(\d+)"/);
+     return idx?nodes[Number(idx[1])]:null;
+   },
    querySelectorAll:selector=>selector===".qb-radial-node"?nodes:selector===".qb-radial-sector"?sectors:[],
    contains:()=>true,
    addEventListener:(type,handler)=>{events[type]=handler;}
@@ -105,6 +109,15 @@ test("passagem do mouse e teclado destacam o setor correto e a seleção usa o f
  events.click({target:{closest:()=>nodes[0]}});
  assert.deepEqual(calls.slice(0,2),["axon:select","module:painel"]);
  assert.equal(focused.at(-1),0);
+ // A click on the SVG arc, not the label, opens the same real destination.
+ const arc=sectors[0];
+ arc.closest=selector=>selector==="[data-ring-sector]"?arc:null;
+ // Remount is not needed for hover; simulate selection in a fresh dashboard.
+ const another=model(host);
+ const root2={...root,dataset:{radialScreen:"menu"},addEventListener(type,fn){events["second:"+type]=fn;}};
+ another.wire({querySelector:()=>root2},{onModule:key=>calls.push("arc:"+key)});
+ events["second:click"]({target:arc});
+ assert.equal(calls.at(-1),"arc:painel");
  cleanup();
  assert.equal(calls.at(-1),"dispose");
 });
