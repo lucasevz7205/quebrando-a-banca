@@ -26,7 +26,7 @@
     function frame(){
       // A short seek asks the browser for a real still from the owner's MP4.
       // The server supports byte ranges, so static mode need not fetch 58 MB.
-      if(video.readyState<1 || video.readyState>=2 || video.currentTime>.04 || mode==="motion")return;
+      if(video.readyState<1 || video.readyState>=2 || video.currentTime>.04 || (mode==="motion"&&!reduce.matches))return;
       try{
         const at=Number.isFinite(video.duration)?Math.min(.12,video.duration*.02):.12;
         video.currentTime=Math.max(.02,at);
