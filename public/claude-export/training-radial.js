@@ -12,17 +12,25 @@ const str=v=>String(v??"").trim();
 const value=map=>map&&typeof map.values==="function"?[...map.values()]:[];
 const unique=items=>[...new Set(items.filter(Boolean))];
 const empty=()=>({total:0,respondidas:0,acertos:0,erros:0,brancos:0,pendentes:0});
+/* Mesma regra do percentual consolidado de Desempenho/Histórico:
+ * já errou OU deixou em branco alguma vez = não é acerto consolidado,
+ * ainda que a última resposta seja C. A regra é propositalmente distinta
+ * da precisão por tentativa na Análise diária. SIM e foraNivel não entram.
+ */
+const eligible=q=>!!q&&!/^SIM/i.test(str(q.cap))&&!q.foraNivel;
+const everWrong=r=>Number(r?.erros||0)>0||Number(r?.brancos||0)>0||
+  (r?.hist||[]).some(h=>h?.ok===false||h?.m==="B");
 function summary(ids,questions,responses){
   const result=empty(),distinct=unique(ids);
-  result.total=distinct.length;
   for(const id of distinct){
     const q=questions?.get(id),resp=responses?.get(id);
-    if(!q)continue;
-    const last=str(resp?.ultimaMarcada||[...(resp?.hist||[])].reverse().find(e=>["C","E","B"].includes(e.m))?.m);
-    if(!["C","E","B"].includes(last))continue;
+    if(!eligible(q))continue;
+    result.total++;
+    if(!resp?.tentativas)continue;
     result.respondidas++;
+    const last=str(resp.ultimaMarcada||[...(resp.hist||[])].reverse().find(e=>["C","E","B"].includes(e.m))?.m);
     if(last==="B")result.brancos++;
-    else if(last===q.gabarito)result.acertos++;
+    else if(last===q.gabarito&&!everWrong(resp))result.acertos++;
     else result.erros++;
   }
   result.pendentes=Math.max(0,result.total-result.respondidas);
@@ -31,7 +39,8 @@ function summary(ids,questions,responses){
 function build({questions,topics,responses,index}){
   const byMatter=new Map();
   const courseTopics=value(topics).filter(t=>t?.id&&t.sigla).sort((a,b)=>(a.materiaOrdem??999)-(b.materiaOrdem??999)||(a.ordem??9999)-(b.ordem??9999));
-  const assigned=new Set();
+  const assigned=new Set(),chapterOwner=new Map();
+  for(const t of courseTopics)for(const cap of t.caps||[])if(!chapterOwner.has(cap))chapterOwner.set(cap,t.sigla);
   for(const t of courseTopics){
     if(!byMatter.has(t.sigla))byMatter.set(t.sigla,{
       id:t.sigla,name:t.materia||t.sigla,short:SHORT[t.sigla]||t.materia||t.sigla,
@@ -41,9 +50,11 @@ function build({questions,topics,responses,index}){
     const fromExplicit=value(questions).filter(q=>q.topico===t.id).map(q=>q.id);
     const ids=unique([...fromIndex,...fromExplicit]).filter(id=>questions?.has(id));
     ids.forEach(id=>assigned.add(id));
+    const historicIds=value(questions).filter(q=>(t.caps||[]).includes(q.cap)).map(q=>q.id);
     byMatter.get(t.sigla).topics.push({
       id:t.id,title:t.titulo||t.id,num:t.num||"",sigla:t.sigla,
-      caption:t.titulo||t.id,questionIds:ids,stats:summary(ids,questions,responses),
+      caption:t.titulo||t.id,questionIds:ids,statIds:historicIds,
+      stats:summary(historicIds,questions,responses),
       ordem:t.ordem??9999
     });
   }
@@ -67,7 +78,7 @@ function build({questions,topics,responses,index}){
       subject.topics.push({
         id:"cap:"+cap,title:qs[0].capNome||cap,num:cap,
         caption:qs[0].capNome||cap,sigla:"_outros",
-        questionIds:ids,stats:summary(ids,questions,responses),ordem:9999
+        questionIds:ids,statIds:ids,stats:summary(ids,questions,responses),ordem:9999
       });
     }
     byMatter.set("_outros",subject);
@@ -76,10 +87,13 @@ function build({questions,topics,responses,index}){
   for(const mat of matters){
     mat.topics.sort((a,b)=>a.ordem-b.ordem||String(a.num).localeCompare(String(b.num),"pt-BR",{numeric:true}));
     mat.questionIds=unique(mat.topics.flatMap(t=>t.questionIds));
-    mat.stats=summary(mat.questionIds,questions,responses);
+    const byHistoricalCap=value(questions).filter(q=>(mat.id==="_outros"?
+      !chapterOwner.has(q.cap):chapterOwner.get(q.cap)===mat.id)).map(q=>q.id);
+    mat.statIds=unique(byHistoricalCap);
+    mat.stats=summary(mat.statIds,questions,responses);
     mat.available=mat.topics.filter(t=>t.questionIds.length).length;
   }
-  return {matters,stats:summary(unique(matters.flatMap(m=>m.questionIds)),questions,responses),totalQuestions:questions?.size||0};
+  return {matters,stats:summary([...(questions?.keys?.()||[])],questions,responses),totalQuestions:questions?.size||0};
 }
 function percentages(s){
   const total=Math.max(0,Number(s?.respondidas)||0);
@@ -172,7 +186,7 @@ function render(model,selection={}){
     +'<span class="qb-train-core-eyebrow">SEU DESEMPENHO</span>'
     +'<strong data-train-core-title>'+esc(short)+'</strong>'
     +'<span class="qb-train-core-percent" data-train-percent>'+(baseline.respondidas?Math.round(pct.acertos)+'%':'–')+'</span>'
-    +'<span class="qb-train-core-caption">acertos nas respondidas</span>'
+    +'<span class="qb-train-core-caption">acertos consolidados</span>'
     +'<div class="qb-train-core-bar" data-train-bar role="img" aria-label="'+esc(baseline.acertos+' acertos, '+baseline.erros+' erros e '+baseline.brancos+' em branco, em '+baseline.respondidas+' questões respondidas')+'">'
       +metrics(baseline,pct)+'</div>'
     +'<div class="qb-train-core-stats"><span class="qb-train-score-ok" data-train-ok>'+baseline.acertos+' acertos</span>'
@@ -188,7 +202,7 @@ function render(model,selection={}){
     +'<button type="button" data-train-errors>Caderno de erros</button>'
     +'</nav>'
     +'<p class="qb-train-bottom-note">Passe o cursor ou use as setas para ver o desempenho de cada '+(matterMode?'matéria':'assunto')
-    +' no centro. A barra usa a última resposta de cada questão; itens não feitos ficam fora do percentual.'
+    +' no centro. Regra de Desempenho histórico: um erro ou branco anterior impede contar o item como acerto consolidado, mesmo após acertá-lo. SIM e fora do nível não entram.'
     +(withoutQuestions?' '+withoutQuestions+' assuntos do edital ainda não têm questões neste banco e não aparecem no círculo.':'')
     +'</p></section>';
 }
