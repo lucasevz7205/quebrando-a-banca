@@ -15,11 +15,13 @@ body {
   height:100%;
   height:100dvh;
   overflow:hidden;
-  background:
-    radial-gradient(ellipse at 51% -11%,#273b85 0%,transparent 46%),
-    radial-gradient(ellipse at 91% 29%,#43276e6b 0%,transparent 54%),
-    radial-gradient(ellipse at 14% 80%,#10234194 0%,transparent 48%),
-    #0a0c14;
+  background-color:#0a0c14;
+  background-image:
+    radial-gradient(ellipse at 51% -11%,#273b8560 0%,transparent 46%),
+    url("/claude-export/ambient-poster.jpg");
+  background-position:center,center;
+  background-size:cover,cover;
+  background-repeat:no-repeat;
   pointer-events:none;
   isolation:isolate;
   contain:paint;
