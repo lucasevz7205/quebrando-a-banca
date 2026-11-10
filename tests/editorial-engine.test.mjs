@@ -41,7 +41,7 @@ test("IDs de nós são únicos e os vínculos do corpus estão referenciados",()
  }
 });
 test("nó sem enriquecimento e ID duplicado bloqueiam pacote",()=>{
- const d=structuredClone(revisions["rf-2-1"]);
+ const d=JSON.parse(JSON.stringify(revisions["rf-2-1"]));
  d.mapa.ramos[0].x.ex="";
  d.mapa.ramos[1].id=d.mapa.ramos[0].id;
  const r=auditEditorialBundle(d,questions.filter(q=>q.topico===d.id));
@@ -50,7 +50,7 @@ test("nó sem enriquecimento e ID duplicado bloqueiam pacote",()=>{
  assert.equal(r.canPublish,false);
 });
 test("flashcard sem fonte e vínculo errado são bloqueados",()=>{
- const d=structuredClone(revisions["rf-2-2"]);
+ const d=JSON.parse(JSON.stringify(revisions["rf-2-2"]));
  d.cartoes[0].src="";
  d.cartoes[0].mapaNoId="no-fabricado";
  const report=auditEditorialBundle(d,[]);
