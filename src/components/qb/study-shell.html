@@ -484,7 +484,9 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/ambient-background.css?v=1">
 <script src="/claude-export/ambient-background.js?v=1" defer></script>
 <link rel="stylesheet" href="/claude-export/radial-dashboard.css?v=1">
-<script src="/claude-export/radial-dashboard.js?v=1"></script>
+<link rel="stylesheet" href="/claude-export/radial-annulus.css?v=1">
+<script src="/claude-export/radial-axon-flow.js?v=1"></script>
+<script src="/claude-export/radial-dashboard.js?v=2"></script>
 <script>
 (function(){
 const S = {
@@ -730,6 +732,7 @@ $('#qb-radial-return-action')?.addEventListener('click',()=>openPortal(null));
   ap();$('#theme-b').addEventListener('click',()=>{t=ORD[(ORD.indexOf(t)+1)%3];try{localStorage.setItem('qb-tema',t)}catch(e){}ap()});})();
 
 /* ---------- render ---------- */
+let radialCleanup=null;
 function render(force){
   const ae=document.activeElement;
   if(!force && ae && ae.dataset && (ae.dataset.nota||ae.dataset.cresp||ae.dataset.learnDraft||ae.id?.startsWith('learn-'))){ S.pendingRender=true; updateCounts(); return; }
@@ -737,16 +740,23 @@ function render(force){
   updateCounts();
   const main=$('#main');
   if(S.view==='portal'){
+    const screen=S.radialSection||'menu';
+    // Database updates must NOT restart the ambient ring or steal its focus.
+    if(main.querySelector('.qb-radial-hub')?.dataset.radialScreen===screen)return;
+    radialCleanup?.();
+    radialCleanup=null;
     const available=['painel','edital','treinar','estudo',...($('#tab-simulado')?['simulado']:[]),'historico'];
     main.innerHTML=window.QBRadialDashboard?.render(S.radialSection,available)
       ||'<div class="notice">O menu radial não pôde ser carregado. Use as abas superiores.</div>';
-    window.QBRadialDashboard?.wire(main,{
+    radialCleanup=window.QBRadialDashboard?.wire(main,{
       onModule:key=>openPortal(key),
       onBack:()=>openPortal(null),
       onOpen:target=>{setView(target);window.scrollTo({top:0,behavior:'instant'});}
-    });
+    })||null;
     return;
   }
+  radialCleanup?.();
+  radialCleanup=null;
   if(S.view==='metodo'){ main.innerHTML=`<div class="qb-tab-shell">${subnav()}</div>`+sectionIntro('metodo')+`<div class="wrap" style="gap:14px">${viewMetodo()}</div>`; wire(); return; }
   if(S.dbState==='loading'){ main.innerHTML=`<div class="notice">Abrindo o caderno…</div>`; return; }
   if(S.dbState==='missing'){ main.innerHTML=`<div class="notice"><strong>Não foi possível abrir o banco de respostas nesta visualização.</strong> Abra a página Estudar do Quebrando a Banca com a sua conta.</div>`; return; }
