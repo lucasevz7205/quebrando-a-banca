@@ -446,6 +446,7 @@ details.diario .feed{margin-top:10px}
       </div>
     </div>
     <nav class="tabs qb-primary-nav" aria-label="Navegação principal">
+      <button id="tab-portal" class="qb-radial-nav-item" data-view="portal">Menu principal</button>
       <button id="tab-painel" data-view="painel">Hoje</button>
       <button id="tab-edital" data-view="edital">Edital</button>
       <button id="tab-treinar" data-view="treinar">Treinar <span class="count" id="cnt-hoje">0</span></button>
@@ -454,6 +455,7 @@ details.diario .feed{margin-top:10px}
       <button id="tab-historico" data-view="analiseDia">Desempenho</button>
     </nav>
   </header>
+  <div class="qb-radial-nav-return" id="qb-radial-return" hidden><button type="button" id="qb-radial-return-action" aria-label="Voltar ao menu principal circular">← Menu principal</button></div>
   <main id="main" aria-live="polite"></main>
 </div>
 <div class="toast" id="toast" hidden></div>
@@ -481,12 +483,14 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/glass-iris.css?v=1">
 <link rel="stylesheet" href="/claude-export/ambient-background.css?v=1">
 <script src="/claude-export/ambient-background.js?v=1" defer></script>
+<link rel="stylesheet" href="/claude-export/radial-dashboard.css?v=1">
+<script src="/claude-export/radial-dashboard.js?v=1"></script>
 <script>
 (function(){
 const S = {
   db:null, dbState:'loading', // loading | ok | missing
   q:new Map(), r:new Map(), rodadas:[], qLoaded:false,
-  view:'painel', cap:null, modo:'novos', shuffle:false,
+  view:'portal', radialSection:null, cap:null, modo:'novos', shuffle:false,
   round:null, pendingRender:false,
   ed:new Map(), mat:new Map(), pt:new Map(), di:[], edLoaded:false,
   fEvo:'', evoCap:'', evoGrafico:'tempo', evoOrdem:'menor', evoModo:'n', evoPer:'d', evoDe:'', evoAte:'', evoFaixa:'', evoPagina:0,
@@ -496,7 +500,7 @@ const S = {
   pl:[], // planejamento semanal; nunca mistura com o histórico de respostas
   an:new Map(), mecQ:new Map(), pgModo:'mec', fMecMat:'', mecFoco:'todos', mecOpen:new Set()
 };
-const VIEWS=['cartoes','mapa','simulado','painel','edital','revisao','pegadinhas','conteudo','treinar','caderno','analiseDia','historico','metodo','aprendizagem'];
+const VIEWS=['portal','cartoes','mapa','simulado','painel','edital','revisao','pegadinhas','conteudo','treinar','caderno','analiseDia','historico','metodo','aprendizagem'];
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmtPct=x=>isFinite(x)?(Math.round(x*100)+'%'):'–';
