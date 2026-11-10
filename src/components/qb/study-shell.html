@@ -1309,12 +1309,24 @@ function viewHistorico(){
   const agenda=dias.map((d,i)=>{const [y,m,dd]=d.split('-').map(Number);const w=sem[new Date(y,m-1,dd).getDay()];
     return `<div class="day${i===0?' today':''}"><span class="n">${cnt[i]||''}</span><span class="col"><i style="height:${cnt[i]/mx*100}%"></i></span><span class="d">${i===0?'hoje':w}<br>${ddmm(d)}</span></div>`}).join('');
 
-  /* questões respondidas: total, por matéria e por assunto */
-  const gm=new Map();
-  for(const c of cs){ if(foraCalc(c.cap)) continue; const t=topicoDoCap(c.cap), k=t?t.sigla:'_';
-    if(!gm.has(k)) gm.set(k,{k,nome:t?t.materia:'Sem tópico do edital',total:0,resp:0,ok:0,cs:[]});
-    const g=gm.get(k); g.total+=c.total; g.resp+=c.resp; g.ok+=c.okUlt; g.cs.push(c); }
-  const T={total:0,resp:0,ok:0}; for(const g of gm.values()){T.total+=g.total;T.resp+=g.resp;T.ok+=g.ok}
+  /* ÚNICA fonte do percentual do histórico e do radial de Treinar.
+   * Acerto consolidado: quem já errou ou marcou branco não é recontado
+   * como acerto por uma tentativa posterior; SIM/foraNivel são excluídos.
+   * A evolução por tentativa permanece uma métrica separada.
+   */
+  const ledger=treinoRadialDados(),gm=new Map();
+  for(const mat of ledger.matters){
+    const chapters=cs.filter(c=>!foraCalc(c.cap)&&
+      ((topicoDoCap(c.cap)?.sigla||'_outros')===mat.id));
+    const rows=chapters.map(c=>{
+      const x=window.QBTrainingRadial.summary(questoesDoCap(c.cap).map(q=>q.id),S.q,S.r);
+      return {...c,total:x.total,resp:x.respondidas,okUlt:x.acertos};
+    }).filter(c=>c.total);
+    if(!mat.stats.total&&!rows.length)continue;
+    gm.set(mat.id,{k:mat.id,nome:mat.name,total:mat.stats.total,
+      resp:mat.stats.respondidas,ok:mat.stats.acertos,cs:rows});
+  }
+  const T={total:ledger.stats.total,resp:ledger.stats.respondidas,ok:ledger.stats.acertos};
   const cel=o=>`<td class="num">${o.resp}<span style="color:var(--muted)">/${o.total}</span></td><td class="num">${fmtPct(o.resp/o.total)}</td><td class="num">${o.ok}</td><td class="num ${o.resp&&o.ok/o.resp<0.5?'neg':''}">${o.resp?fmtPct(o.ok/o.resp):'–'}</td>`;
   const qrRows=[...gm.values()].map(g=>{const ab=S.abertos.has('qr:'+g.k);
     return `<tr class="qr-m" data-qr="${esc(g.k)}" tabindex="0"><td><b>${ab?'▾':'▸'} ${esc(g.nome)}</b></td>${cel(g)}</tr>`+
