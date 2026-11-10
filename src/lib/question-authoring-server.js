@@ -13,7 +13,9 @@ export const generateLabDrafts=createServerFn({method:"POST"}).middleware([requi
   const questions=validateDrafts(extract(await core.InvokeLLM({prompt:generationPrompt(data)})),data);
   const reviewed=applyReview(questions,extract(await core.InvokeLLM({prompt:reviewPrompt(questions,data)})));
   const batch=crypto.randomUUID();
-  return {protocolo:METHOD_VERSION,questoes:reviewed.map((q,i)=>({...q,
+  const protocol=data.topicoId&&data.mapaNoId?"cebraspe-3.0":METHOD_VERSION;
+  return {protocolo:protocol,questoes:reviewed.map((q,i)=>({...q,
+   protocolo:protocol,topico:data.topicoId||undefined,mapaNoId:data.mapaNoId||undefined,
    id:"autoral/"+batch+"/"+(i+1),documento:"laboratorio/"+batch,tipo:"autoral",
    origem:"Inédita — Quebrando a Banca, formato C/E, inspirada no estilo CEBRASPE",
    materia:data.materia,assunto:data.assunto,cargo:data.cargo,
