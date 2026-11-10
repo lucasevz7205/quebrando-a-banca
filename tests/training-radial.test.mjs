@@ -98,6 +98,8 @@ test("primeira órbita exibe no máximo seis matérias, com páginas e índice c
  assert.match(first,/SEU DESEMPENHO/);
  assert.match(first,/data-train-default="/);
  assert.match(first,/data-train-classic/);
+ assert.match(first,/data-train-review/);
+ assert.match(first,/data-train-errors/);
  assert.doesNotMatch(first,/data-train-topic="/);
  const next=engine.render(real,{page:1});
  assert.match(next,/data-train-page="0"/);
@@ -194,6 +196,8 @@ test("navegação da aplicação conduz matéria → assunto → treino real e p
  assert.match(shell,/startRound\(S\.cap,S\.modo\)/);
  assert.match(shell,/S\.round\?\(S\.round\.fim\?viewFim\(\):viewItem\(\)\)/);
  assert.match(shell,/data-view="treinar"/);
+ assert.match(shell,/onReview:\(\)=>\{/);
+ assert.match(shell,/onErrors:\(\)=>setView\('caderno'\)/);
  assert.match(source,/data-train-page/);
 });
 test("cores semânticas e tamanhos responsivos seguem o AXON, sem chamadas externas",()=>{
