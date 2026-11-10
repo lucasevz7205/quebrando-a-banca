@@ -1,0 +1,40 @@
+{
+  "name": "Quebrando a Banca · AXON",
+  "short_name": "Quebrando a Banca",
+  "description": "Ambiente de estudo ativo, mapas mentais 3D AXON, flashcards e treino calibrado Cebraspe com Modo Academia offline-first.",
+  "lang": "pt-BR",
+  "start_url": "/estudar",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0E0E10",
+  "theme_color": "#0E0E10",
+  "icons": [
+    {
+      "src": "/qb-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Treinar Questões",
+      "short_name": "Treinar",
+      "description": "Iniciar rodada de questões Cebraspe",
+      "url": "/estudar#treinar"
+    },
+    {
+      "name": "Hoje · Agenda e Revisões",
+      "short_name": "Hoje",
+      "description": "Ver metas e revisões espaçadas de hoje",
+      "url": "/estudar#painel"
+    },
+    {
+      "name": "Mapas Mentais 3D AXON",
+      "short_name": "Mapas 3D",
+      "description": "Explorar conceitos no mapa 3D",
+      "url": "/estudar#mapa"
+    }
+  ]
+}

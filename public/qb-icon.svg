@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#1c2756"/>
+      <stop offset="55%" stop-color="#0e1120"/>
+      <stop offset="100%" stop-color="#080911"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6949"/>
+      <stop offset="32%" stop-color="#a58aff"/>
+      <stop offset="68%" stop-color="#37d9fa"/>
+      <stop offset="100%" stop-color="#4d84ff"/>
+    </linearGradient>
+    <radialGradient id="core" cx="35%" cy="28%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="28%" stop-color="#94b8ff" stop-opacity="0.85"/>
+      <stop offset="70%" stop-color="#4355e8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#131b42"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="184" stroke="url(#ring)" stroke-width="28" stroke-opacity="0.88"/>
+  <circle cx="256" cy="256" r="142" stroke="#9fb8ff" stroke-width="2.5" stroke-dasharray="6 14" stroke-opacity="0.55"/>
+  <circle cx="256" cy="256" r="92" fill="url(#core)" stroke="#cfe2ff" stroke-width="3"/>
+  <text x="256" y="274" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="56" letter-spacing="-2">QB</text>
+</svg>
