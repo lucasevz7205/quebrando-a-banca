@@ -22,14 +22,14 @@ vm.runInNewContext(fs.readFileSync("public/claude-export/question-links.js","utf
 const index=browser.QBQuestionLinks.build(questions,topics,new Map());
 const real=engine.build({questions,topics,responses,index});
 const cats=t=>t.reduce((s,x)=>s.concat(x.questionIds),[]);
-test("barra de acerto/erro usa somente a última resposta e separa brancos de pendentes",()=>{
+test("barra usa acertos consolidados do Histórico, distinguindo brancos e pendentes",()=>{
  const q=new Map([
    ["C",{id:"C",gabarito:"C"}],["E",{id:"E",gabarito:"C"}],
    ["B",{id:"B",gabarito:"E"}],["P",{id:"P",gabarito:"C"}],
    ["H",{id:"H",gabarito:"E"}]
  ]);
  const r=new Map([
-   ["C",{tentativas:3,ultimaMarcada:"C",hist:[{m:"E"},{m:"C"}]}],
+   ["C",{tentativas:3,ultimaMarcada:"C",hist:[{m:"C",ok:true},{m:"C",ok:true}]}],
    ["E",{tentativas:1,ultimaMarcada:"E"}],
    ["B",{tentativas:1,ultimaMarcada:"B"}],
    ["H",{tentativas:1,hist:[{m:"E"}]}]
@@ -47,8 +47,9 @@ test("barra de acerto/erro usa somente a última resposta e separa brancos de pe
 test("agregação usa o edital e preserva matérias, tópicos e IDs originais",()=>{
  assert.ok(real.matters.length>=9,"deve listar as matérias efetivas do edital");
  assert.equal(real.totalQuestions,questions.size);
- assert.equal(real.stats.total,questions.size,"questões compartilhadas não são duplicadas no centro");
- assert.equal(real.stats.respondidas+real.stats.pendentes,questions.size);
+ const eligible=qs.filter(q=>!/^SIM/i.test(q.cap||"")&&!q.foraNivel).length;
+ assert.equal(real.stats.total,eligible,"questões compartilhadas não se repetem; SIM e foraNivel ficam excluídos");
+ assert.equal(real.stats.respondidas+real.stats.pendentes,eligible);
  assert.equal(real.stats.acertos+real.stats.erros+real.stats.brancos,real.stats.respondidas);
  assert.ok(real.stats.respondidas>0,"o banco de respostas deve influenciar o índice");
  const listed=new Set(real.matters.flatMap(m=>cats(m.topics)));
@@ -58,11 +59,11 @@ test("agregação usa o edital e preserva matérias, tópicos e IDs originais",(
  assert.ok(da.topics.some(t=>t.questionIds.length>0));
  assert.ok(da.available>0);
  for(const m of real.matters){
-   assert.equal(m.stats.total,new Set(m.questionIds).size);
+   assert.equal(m.stats.total,new Set(m.statIds.filter(id=>!questions.get(id)?.foraNivel&&!/^SIM/i.test(questions.get(id)?.cap||""))).size);
    for(const t of m.topics){
      assert.ok(t.id);
      assert.ok(t.title);
-     assert.equal(t.stats.total,new Set(t.questionIds).size);
+     assert.equal(t.stats.total,new Set(t.statIds.filter(id=>!questions.get(id)?.foraNivel&&!/^SIM/i.test(questions.get(id)?.cap||""))).size);
    }
  }
 });
@@ -180,7 +181,7 @@ test("hover e foco mostram métricas específicas no centro sem mudar o históri
 });
 test("navegação da aplicação conduz matéria → assunto → treino real e preserva o modo clássico",()=>{
  assert.match(shell,/training-radial\.css\?v=1/);
- assert.match(shell,/training-radial\.js\?v=1/);
+ assert.match(shell,/training-radial\.js\?v=2/);
  assert.match(shell,/trRadial:null/);
  assert.match(shell,/function treinoRadialDados\(/);
  assert.match(shell,/onMatter:id=>\{S\.trRadial=\{matter:id,page:0,setup:false,classic:false\}/);
