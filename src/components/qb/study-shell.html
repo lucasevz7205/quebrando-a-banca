@@ -688,17 +688,42 @@ function sectionIntro(v){
   const info=SECTION_INTROS[v]; if(!info) return '';
   return '<section class="qb-section-intro qb-page-hero" aria-label="Cabeçalho da seção"><div class="qb-page-hero-copy"><span class="qb-section-kicker">'+info[0]+' · QUEBRANDO A BANCA</span><h2>'+info[1]+'</h2><p>'+info[2]+'</p></div></section>';
 }
+function syncNavigation(active){
+  for(const id of ['portal','painel','edital','treinar','estudo','simulado','historico']){
+    const button=$('#tab-'+id);
+    if(!button)continue;
+    if(id===active)button.setAttribute('aria-current','page');
+    else button.removeAttribute('aria-current');
+  }
+  const back=$('#qb-radial-return');
+  if(back)back.hidden=S.view==='portal';
+}
+function openPortal(section=null,push=true,focus=true){
+  const available=['painel','edital','treinar','estudo',...($('#tab-simulado')?['simulado']:[]),'historico'];
+  S.radialSection=available.includes(section)?section:null;
+  S.view='portal';
+  syncNavigation(S.radialSection||'portal');
+  if(push){
+    try{history.replaceState(null,'',location.href.split('#')[0]+'#menu'+(S.radialSection?'/'+S.radialSection:''));}catch(e){}
+  }
+  render(true);
+  if(focus){
+    $('#main .qb-radial-screen-title')?.focus({preventScroll:true});
+    window.scrollTo({top:0,behavior:'instant'});
+  }
+}
 function setView(v,push=true){
+  if(v==='portal'){openPortal(null,push);return;}
   if(v==='estudo') v=S.ultEstudo||'mapa';
   if(v==='revisao') v='edital'; /* antigas URLs continuam úteis sem duplicar o edital em Estudo */
   if(!VIEWS.includes(v)) v='treinar';
   S.view=v; if(PAI[v]==='estudo') S.ultEstudo=v;
-  const pai=PAI[v]||v;
-  for(const id of ['painel','edital','treinar','estudo','simulado','historico']){ const b=$('#tab-'+id); if(!b)continue; if(id===pai) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); }
+  syncNavigation(PAI[v]||v);
   if(push){ try{ history.replaceState(null,'',location.href.split('#')[0]+'#'+v);}catch(e){} }
   render(true);
 }
 document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
+$('#qb-radial-return-action')?.addEventListener('click',()=>openPortal(null));
 /* tema: automático → escuro → claro (preferência guardada neste navegador) */
 (function(){const ORD=['auto','dark','light'],LBL={auto:'Tema: automático',dark:'Tema: escuro',light:'Tema: claro'};let t='dark';try{t=localStorage.getItem('qb-tema')||'dark'}catch(e){}
   const ap=()=>{if(t==='auto')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',t);const b=$('#theme-b');if(b)b.textContent=LBL[t]};
@@ -711,6 +736,17 @@ function render(force){
   S.pendingRender=false;
   updateCounts();
   const main=$('#main');
+  if(S.view==='portal'){
+    const available=['painel','edital','treinar','estudo',...($('#tab-simulado')?['simulado']:[]),'historico'];
+    main.innerHTML=window.QBRadialDashboard?.render(S.radialSection,available)
+      ||'<div class="notice">O menu radial não pôde ser carregado. Use as abas superiores.</div>';
+    window.QBRadialDashboard?.wire(main,{
+      onModule:key=>openPortal(key),
+      onBack:()=>openPortal(null),
+      onOpen:target=>{setView(target);window.scrollTo({top:0,behavior:'instant'});}
+    });
+    return;
+  }
   if(S.view==='metodo'){ main.innerHTML=`<div class="qb-tab-shell">${subnav()}</div>`+sectionIntro('metodo')+`<div class="wrap" style="gap:14px">${viewMetodo()}</div>`; wire(); return; }
   if(S.dbState==='loading'){ main.innerHTML=`<div class="notice">Abrindo o caderno…</div>`; return; }
   if(S.dbState==='missing'){ main.innerHTML=`<div class="notice"><strong>Não foi possível abrir o banco de respostas nesta visualização.</strong> Abra a página Estudar do Quebrando a Banca com a sua conta.</div>`; return; }
@@ -2823,7 +2859,13 @@ function wireSim(){
 
 function init(){
   $('#qb-logout').addEventListener('click',()=>{window.QBBridge.ask('logout').catch(()=>{});});
-  let v='painel'; try{ const h=(location.hash||'').slice(1); if(VIEWS.includes(h)) v=h==='revisao'?'edital':h; }catch(e){}
+  let v='portal',entrySection=null;
+  try{
+    const h=(location.hash||'').slice(1);
+    if(h.startsWith('menu/')){entrySection=h.slice(5);v='portal';}
+    else if(h==='menu'||h==='portal')v='portal';
+    else if(VIEWS.includes(h))v=h==='revisao'?'edital':h;
+  }catch(e){}
   window.QBBridge.ask('account').then(account=>{
     if(!account.legacy){
       S.studyAccount=true;
@@ -2837,7 +2879,8 @@ function init(){
       $('.qb-utility-lab').remove();
       $('#tab-simulado').remove();
     }
-    setView(v,false);
+    if(v==='portal')openPortal(entrySection,false,false);
+    else setView(v,false);
     if(account.legacy&&window.QBAssistant)window.QBAssistant.mount(S);
     return window.claude.use('db');
   }).then(db=>{
