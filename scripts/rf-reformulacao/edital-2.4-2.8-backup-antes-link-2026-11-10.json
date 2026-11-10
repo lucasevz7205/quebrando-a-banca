@@ -1,0 +1,27 @@
+{
+  "rf-2-8": {
+    "legacy_id": "rf-2-8",
+    "payload_json": "{\"id\":\"rf-2-8\",\"caps\":[],\"materia\":\"Reconhecimento de Fala, Transcrição e IA\",\"materiaOrdem\":7,\"nota\":\"\",\"num\":\"2.8\",\"ordem\":136,\"prova\":\"P2\",\"sigla\":\"RF\",\"status\":null,\"titulo\":\"Vocabulário técnico parlamentar e adaptação de modelo de linguagem\",\"tutory\":{\"estudo\":0,\"exercicio\":0,\"itens\":[\"Reconhecimento de fala, transcrição e Inteligência Artificial · 2.8 Vocabulário técnico parlamentar e vocabulário adaptado (language model adaptation).\"],\"resumo\":0,\"revisao\":0,\"sinc\":\"2026-10-26\"}}",
+    "source": "claude-export-2026-11-07"
+  },
+  "rf-2-7": {
+    "legacy_id": "rf-2-7",
+    "payload_json": "{\"id\":\"rf-2-7\",\"caps\":[],\"materia\":\"Reconhecimento de Fala, Transcrição e IA\",\"materiaOrdem\":7,\"nota\":\"\",\"num\":\"2.7\",\"ordem\":135,\"prova\":\"P2\",\"sigla\":\"RF\",\"status\":null,\"titulo\":\"Controle de qualidade: revisão em dupla, auditorias de amostras, SLA\",\"tutory\":{\"estudo\":0,\"exercicio\":0,\"itens\":[\"Reconhecimento de fala, transcrição e Inteligência Artificial · 2.7 Controle de qualidade: revisão em dupla, auditorias de amostras, SLA.\"],\"resumo\":0,\"revisao\":0,\"sinc\":\"2026-10-26\"}}",
+    "source": "claude-export-2026-11-07"
+  },
+  "rf-2-6": {
+    "legacy_id": "rf-2-6",
+    "payload_json": "{\"id\":\"rf-2-6\",\"caps\":[],\"materia\":\"Reconhecimento de Fala, Transcrição e IA\",\"materiaOrdem\":7,\"nota\":\"\",\"num\":\"2.6\",\"ordem\":134,\"prova\":\"P2\",\"sigla\":\"RF\",\"status\":null,\"titulo\":\"Ferramentas de CAT (Computer Assisted Transcription) e editores de transcrição\",\"tutory\":{\"estudo\":0,\"exercicio\":0,\"itens\":[\"Reconhecimento de fala, transcrição e Inteligência Artificial · 2.6 Ferramentas de CAT (Computer Assisted Transcription) e editores de transcrição.\"],\"resumo\":0,\"revisao\":0,\"sinc\":\"2026-10-26\"}}",
+    "source": "claude-export-2026-11-07"
+  },
+  "rf-2-5": {
+    "legacy_id": "rf-2-5",
+    "payload_json": "{\"id\":\"rf-2-5\",\"caps\":[],\"materia\":\"Reconhecimento de Fala, Transcrição e IA\",\"materiaOrdem\":7,\"nota\":\"\",\"num\":\"2.5\",\"ordem\":133,\"prova\":\"P2\",\"sigla\":\"RF\",\"status\":null,\"titulo\":\"Normalização de texto: números, siglas, abreviações e termos técnicos\",\"tutory\":{\"estudo\":0,\"exercicio\":0,\"itens\":[\"Reconhecimento de fala, transcrição e Inteligência Artificial · 2.5 Normalização de texto: números, siglas, abreviações e termos técnicos.\"],\"resumo\":0,\"revisao\":0,\"sinc\":\"2026-10-26\"}}",
+    "source": "claude-export-2026-11-07"
+  },
+  "rf-2-4": {
+    "legacy_id": "rf-2-4",
+    "payload_json": "{\"id\":\"rf-2-4\",\"caps\":[],\"materia\":\"Reconhecimento de Fala, Transcrição e IA\",\"materiaOrdem\":7,\"nota\":\"\",\"num\":\"2.4\",\"ordem\":132,\"prova\":\"P2\",\"sigla\":\"RF\",\"status\":null,\"titulo\":\"Formatação de transcrições parlamentares: oradores, pausa, ruído\",\"tutory\":{\"estudo\":0,\"exercicio\":0,\"itens\":[\"Reconhecimento de fala, transcrição e Inteligência Artificial · 2.4 Formatação de transcrições parlamentares: identificação de oradores, marcação de pausa ruído, etc.\"],\"resumo\":0,\"revisao\":0,\"sinc\":\"2026-10-26\"}}",
+    "source": "claude-export-2026-11-07"
+  }
+}
