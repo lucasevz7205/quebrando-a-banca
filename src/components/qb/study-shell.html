@@ -1991,7 +1991,10 @@ function viewMapa(){
     const indexes=path.split('.').map(Number),root=m.ramos?.[indexes[0]];
     const n=indexes.slice(1).reduce((parent,index)=>parent?.f?.[index],root);
     if(!n)return '';
-    return '<ul class="m-raiz">'+no(n,'',path,true)+'</ul>';
+    const focus=S.mapaFocus?.topicId===S.mapaId&&S.mapaFocus.path===path?S.mapaFocus:null;
+    const source=focus?.questionId?S.q.get(focus.questionId):null;
+    const origin=source?`<div class="qb-map-remission-question"><strong>Questão que trouxe você até este conceito</strong><p>${esc(source.enunciado||'Enunciado não cadastrado.')}</p><small>Questão ${esc(source.id)} · gabarito preservado até você abrir a questão.</small></div>`:'';
+    return origin+'<ul class="m-raiz">'+no(n,'',path,true)+'</ul>';
   };
   const ramos=(m.ramos||[]).map((r,i)=>{const cor=`var(--qb-map-${((r.cor||i+1)-1)%8+1})`;return `<section class="m-ramo" style="--mc:${cor}"><span class="qb-map-branch" aria-hidden="true">RAMO ${String(i+1).padStart(2,'0')}</span><ul class="m-raiz">${no(r,cor,String(i))}</ul></section>`}).join('');
   return `<div class="wrap" style="gap:14px;max-width:1100px">
