@@ -849,6 +849,220 @@ function updateCounts(){
   cd.innerHTML=f>0?`Prova em ${data} · <b>${f}</b> ${f===1?'dia':'dias'}`:(f===0?'<b>Prova hoje</b>':'Prova realizada');
 }
 
+/* Menus AXON de todas as áreas que admitem seleção sem interromper
+ * uma atividade. Cada folha retorna à TELA ORIGINAL e aos IDs do banco.
+ * Somente a navegação superior cria um menu de entrada: remissões, questões,
+ * revisão, botões internos e deep links continuam indo direto à ferramenta.
+ */
+function configAreaRadial(){
+  const h=S.areaHub,area=h?.area||'painel',level=h?.level||'main';
+  const ledger=treinoRadialDados(),index=indiceQuestoes(),list=porMateria();
+  const areaNames={painel:'Hoje',edital:'Edital',estudo:'Estudo',historico:'Desempenho',simulado:'Simulado'};
+  const option=(id,name,caption,stats=null,icon='◇')=>({id,name,caption,stats,icon});
+  const title=areaNames[area]||'Quebrando a Banca';
+  const base={area,level,page:h?.page||0,title,
+    centerTitle:title,centerEyebrow:'AXON · '+title.toUpperCase(),
+    subtitle:'Selecione uma função no anel para abrir a interface correspondente.',
+    originalLabel:'Abrir tela completa',
+    footer:'O anel é apenas navegação. Todas as telas, vínculos, filtros e dados originais continuam disponíveis.',
+    items:[]};
+  const matStats=sig=>ledger.matters.find(m=>m.id===sig)?.stats||null;
+  const topicStats=t=>window.QBTrainingRadial.summary(
+    [...S.q.values()].filter(q=>(t.caps||[]).includes(q.cap)).map(q=>q.id),S.q,S.r);
+  if(area==='painel'){
+    base.title='Hoje · central de estudo';
+    base.centerTitle='Seu dia';
+    base.subtitle='Escolha o que deseja acompanhar ou executar hoje.';
+    const dv=devidas(),todayCards=[...S.rv.keys()].reduce((n,id)=>n+cartStats(id).hoje,0);
+    base.items=[
+      option('nav:planner','Planejamento','Agenda, tarefas e metas','', '◷'),
+      option('nav:review','Revisões vencidas',dv.fila.length+' itens previstos',null,'↺'),
+      option('nav:cards','Flashcards',todayCards+' cartões vencidos',null,'▧'),
+      option('nav:train','Treinar','Questões e CEBRASPE',null,'◎'),
+      option('nav:daily','Análise diária','Indicadores do dia',null,'↗'),
+      option('nav:edital','Edital','Disciplinas e prioridades',null,'▦')
+    ];
+    return base;
+  }
+  if(area==='simulado'){
+    base.title='Simulado · central de provas';
+    base.centerTitle='Simulado';
+    base.subtitle='A escolha abre a tela da prova; o cronômetro só começa ao confirmar o início.';
+    base.items=[
+      option('nav:objective','Objetiva','300 min · P1 + P2',null,'◈'),
+      option('nav:discursive','Discursiva','180 min · redação',null,'▤'),
+      option('nav:composition','Composição','Distribuição por matéria',null,'▦'),
+      option('nav:history','Resultados','Histórico de simulados',null,'↗')
+    ];
+    return base;
+  }
+  if(area==='historico'&&level==='main'){
+    base.title='Desempenho · central de análise';
+    base.centerTitle='Desempenho consolidado';
+    base.stats=ledger.stats;
+    base.subtitle='O percentual do centro é o mesmo do Histórico: questões com erro anterior não contam como acerto consolidado.';
+    base.items=[
+      option('nav:daily','Análise diária','Precisão das rodadas',null,'◷'),
+      option('nav:history','Análise histórica','Evolução e cobertura',ledger.stats,'↗'),
+      option('nav:subjects','Por matéria','Indicadores por disciplina',null,'◎'),
+      option('nav:method','Método','Estratégia e revisão',null,'◇'),
+      option('nav:errors','Caderno de erros','Erros para consolidar',null,'↺')
+    ];
+    return base;
+  }
+  if(area==='estudo'&&level==='main'){
+    base.title='Estudo · ferramentas';
+    base.centerTitle='Estudo';
+    base.subtitle='Escolha uma ferramenta. Mapas, flashcards, pegadinhas e materiais podem ser filtrados por matéria e assunto.';
+    base.items=[
+      option('tool:mapa','Mapa mental 3D','Navegação AXON',null,'◇'),
+      option('tool:cartoes','Flashcards','Evocação e revisão ativa',null,'▧'),
+      option('tool:pegadinhas','Pegadinhas','Armadilhas CEBRASPE',null,'⌁'),
+      option('tool:conteudo','Materiais','Biblioteca e fontes',null,'▤'),
+      option('nav:aprendizagem','Aprendizagem','Retenção e recuperação',null,'↗'),
+      option('nav:study-review','Revisar hoje','Cartões vencidos',null,'↺')
+    ];
+    return base;
+  }
+  function toolHas(topic,tool){
+    if(tool==='mapa')return !!S.rv.get(topic.id)?.mapa?.ramos?.length;
+    if(tool==='cartoes')return !!(S.rv.get(topic.id)?.cartoes?.length||index.byTopic.get(topic.id)?.length);
+    if(tool==='pegadinhas')return pgsDe(topic.id).length>0;
+    if(tool==='conteudo')return matsDe(topic.id).some(m=>['material','cobertura','fonte','metodo'].includes(m.tipo));
+    return true;
+  }
+  if(area==='edital'&&level==='main'){
+    base.title='Edital · matérias';
+    base.centerTitle='Cobertura do edital';
+    base.stats=ledger.stats;
+    base.subtitle='Primeiro selecione a disciplina. Depois, abra diretamente o assunto no edital completo.';
+    base.items=list.map(g=>option('m:'+g.sigla,g.nome,
+      g.ts.filter(x=>!x.t.foraEdital).length+' assuntos · '+g.prova,matStats(g.sigla),'▦'));
+    return base;
+  }
+  if(area==='historico'&&level==='matters'){
+    base.parent=true;base.title='Desempenho · matérias';base.centerTitle='Por matéria';
+    base.stats=ledger.stats;
+    base.subtitle='Selecione uma disciplina para abrir o Histórico filtrado, mantendo os gráficos e sessões.';
+    base.items=ledger.matters.filter(m=>m.stats.total).map(m=>option('m:'+m.id,m.name,
+      m.stats.respondidas+'/'+m.stats.total+' respondidas',m.stats,'↗'));
+    return base;
+  }
+  if(area==='estudo'&&level==='matters'){
+    base.parent=true;base.title='Estudo · '+({mapa:'Mapas 3D',cartoes:'Flashcards',pegadinhas:'Pegadinhas',conteudo:'Materiais'}[h.tool]||'Ferramenta');
+    base.centerTitle='Escolha a matéria';
+    base.subtitle='Selecione uma matéria com conteúdo cadastrado nesta ferramenta.';
+    base.items=list.map(g=>{
+      const available=g.ts.filter(x=>toolHas(x.t,h.tool));
+      return option('m:'+g.sigla,g.nome,available.length+' assuntos disponíveis',null,'◇');
+    }).filter(x=>!x.caption.startsWith('0 assuntos'));
+    return base;
+  }
+  if(level==='topics'&&(area==='edital'||area==='estudo')){
+    const group=list.find(g=>g.sigla===h.matter);
+    base.parent=true;base.title=group?.nome||'Assuntos';
+    base.centerTitle=group?.nome||'Assuntos';
+    base.subtitle=area==='edital'?'Selecione o tópico para abrir sua ficha completa no Edital.':'Selecione o assunto para abrir a ferramenta com esse conteúdo.';
+    const items=group?.ts.filter(x=>!x.t.foraEdital&&(area==='edital'||toolHas(x.t,h.tool)))||[];
+    base.items=items.map(({t,s})=>option('t:'+t.id,(t.num?t.num+' · ':'')+t.titulo,
+      area==='edital'?(s.resp+'/'+s.total+' respondidas · '+(s.ef||'')):'Abrir conteúdo do assunto',
+      area==='edital'?topicStats(t):null,'◇'));
+    base.quickSelect=base.items.length>6;
+    base.stats=area==='edital'?matStats(h.matter):null;
+    return base;
+  }
+  return base;
+}
+function alterarAreaRadial(state){
+  S.areaHub={...S.areaHub,...state};
+  render(true);
+  $('#main .qb-radial-screen-title')?.focus({preventScroll:true});
+}
+function voltarAreaRadial(){
+  const h=S.areaHub;if(!h)return;
+  if(h.level==='topics')alterarAreaRadial({level:h.area==='edital'?'main':'matters',matter:null,page:0});
+  else if(h.level==='matters')alterarAreaRadial({level:'main',matter:null,tool:null,page:0});
+  else openPortal(null);
+}
+function abrirAreaOriginal(){
+  const h=S.areaHub;if(!h)return;
+  if(h.area==='edital'&&h.matter){S.fMat=h.matter;S.fSt='';S.abertos.add(h.matter);}
+  const v=h.area==='estudo'?(h.tool||S.ultEstudo||'mapa'):h.area;
+  setView(v);
+}
+function selecionarAreaRadial(item){
+  const h=S.areaHub;if(!h||!item)return;
+  const id=item.id,area=h.area;
+  if(id.startsWith('tool:')){
+    alterarAreaRadial({tool:id.slice(5),level:'matters',matter:null,page:0});return;
+  }
+  if(id.startsWith('m:')){
+    const key=id.slice(2);
+    if(area==='historico'){
+      S.fEvo=key==='_outros'?'_':key;
+      S.evoPagina=0;setView('historico');return;
+    }
+    alterarAreaRadial({level:'topics',matter:key,page:0});return;
+  }
+  if(id.startsWith('t:')){
+    const topic=S.ed.get(id.slice(2));if(!topic)return;
+    if(area==='edital'){
+      S.fMat=topic.sigla;S.fSt='';
+      S.abertos.add(topic.sigla);setView('edital');
+      requestAnimationFrame(()=>{
+        const el=document.getElementById('tp-'+topic.id);
+        if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('flash');
+          setTimeout(()=>el.classList.remove('flash'),1800);}
+      });
+      return;
+    }
+    if(area==='estudo'){
+      const tool=h.tool;
+      if(tool==='mapa'){
+        if(!S.rv.get(topic.id)?.mapa)return;
+        S.mapaId=topic.id;S.mapaAb=null;S.mapaBack=null;S.mapaFocus=null;S.revelados.clear();
+        setView('mapa');
+      } else if(tool==='cartoes'){
+        S.cartId=topic.id;S.cartPend=false;setView('cartoes');
+      } else if(tool==='pegadinhas'){
+        S.pgModo='top';S.fPgMat=topic.sigla;S.fPgTipo='';
+        S.abertos.add('pg:'+topic.sigla);S.abertos.add('pgt:'+topic.id);setView('pegadinhas');
+        requestAnimationFrame(()=>document.getElementById('pg-'+topic.id)?.scrollIntoView({behavior:'smooth',block:'center'}));
+      } else if(tool==='conteudo'){
+        S.abertos.add('ct:'+topic.materia);setView('conteudo');
+        requestAnimationFrame(()=>{
+          const card=[...document.querySelectorAll('[data-content-topics]')]
+            .find(el=>el.dataset.contentTopics.split('|').includes(topic.id));
+          card?.scrollIntoView({behavior:'smooth',block:'center'});
+        });
+      }
+      return;
+    }
+  }
+  if(!id.startsWith('nav:'))return;
+  const target=id.slice(4);
+  const open=v=>{setView(v);window.scrollTo({top:0,behavior:'instant'})};
+  if(target==='planner'){open('painel');return;}
+  if(target==='review'){if(!devidas().fila.length){toast('Nenhuma revisão pendente.');return;}startRevisao();return;}
+  if(target==='cards'||target==='study-review'){open('cartoes');return;}
+  if(target==='train'){S.trRadial=null;open('treinar');return;}
+  if(target==='daily'){open('analiseDia');return;}
+  if(target==='edital'){setView('edital',true,'edital');return;}
+  if(target==='aprendizagem'){open('aprendizagem');return;}
+  if(target==='history'){open(area==='simulado'?'simulado':'historico');
+    if(area==='simulado')requestAnimationFrame(()=>document.getElementById('qb-sim-history')?.scrollIntoView({behavior:'smooth',block:'start'}));
+    return;
+  }
+  if(target==='subjects'){alterarAreaRadial({level:'matters',page:0});return;}
+  if(target==='method'){open('metodo');return;}
+  if(target==='errors'){open('caderno');return;}
+  if(['objective','discursive','composition'].includes(target)){
+    open('simulado');
+    const selector=target==='objective'?'#sim-obj':target==='discursive'?'#sim-disc':'#qb-sim-composition';
+    requestAnimationFrame(()=>document.querySelector(selector)?.scrollIntoView({behavior:'smooth',block:'center'}));
+  }
+}
+
 /* Radial de Treinar: as matérias e os assuntos usam IDs reais do edital.
  * A barra central usa uma única última resposta por questão, sem inventar
  * erros a partir de itens que ainda não foram respondidos. */
