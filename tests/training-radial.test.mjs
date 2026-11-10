@@ -32,7 +32,7 @@ test("barra usa acertos consolidados do Histórico, distinguindo brancos e pende
    ["C",{tentativas:3,ultimaMarcada:"C",hist:[{m:"C",ok:true},{m:"C",ok:true}]}],
    ["E",{tentativas:1,ultimaMarcada:"E"}],
    ["B",{tentativas:1,ultimaMarcada:"B"}],
-   ["H",{tentativas:1,hist:[{m:"E"}]}]
+   ["H",{tentativas:1,hist:[{m:"E",ok:true}]}]
  ]);
  const s=engine.summary(["C","E","B","P","H","C"],q,r);
  assert.deepEqual(JSON.parse(JSON.stringify(s)),{
