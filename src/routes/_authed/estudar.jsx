@@ -113,7 +113,7 @@ function StudyScreen({ account }) {
 
   return (
     <main aria-label="Quebrando a Banca · Ambiente de estudo"
-      style={{ width: "100%", minHeight: "100dvh", background: "#F3F6F5" }}>
+      style={{ width: "100%", minHeight: "100dvh", background: "#0E0E10" }}>
       {preview && (
         <header className="flex min-h-14 flex-wrap items-center justify-between gap-2 border-b bg-white px-4 py-2 text-sm text-slate-900">
           <span><strong>{account.name}</strong> · Visualização administrativa · Somente leitura</span>
@@ -143,7 +143,7 @@ function StudyScreen({ account }) {
           sandbox={preview ? "allow-scripts allow-popups allow-popups-to-escape-sandbox" : undefined}
           style={{
             display: "block", width: "100%", height: preview ? "calc(100dvh - 3.5rem)" : "100dvh",
-            border: 0, borderRadius: 0, background: "#F3F6F5"
+            border: 0, borderRadius: 0, background: "#0E0E10"
           }}
         />
       ) : (
