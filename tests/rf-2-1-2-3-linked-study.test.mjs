@@ -79,5 +79,5 @@ test("cartões derivados não apresentam gabarito provisório como oficial",()=>
  assert.equal(card.statusEditorial,"aguardando-revisao-humana");
  assert.match(card.a.join(" "),/Gabarito proposto, ainda sem revisão humana/);
  assert.doesNotMatch(card.a.join(" "),/Gabarito oficial/);
- assert.match(card.a.join(" "),/não é/);
+ assert.match(card.a.join(" "),/Questão autoral de estudo/);
 });
