@@ -8,9 +8,12 @@ export const requestSchema=z.object({
  materia:text(2,150), assunto:text(2,200), cargo:text(2,200),
  quantidade:z.number().int().min(1).max(SUBJECT_QUESTION_LIMIT),
  fonte:text(5,1000), localizacao:text(2,300), textoFonte:text(100,14000),
+ topicoId:z.string().trim().max(120).default(""), mapaNoId:z.string().trim().max(180).default(""),
  mecanismos:z.array(z.enum(mechanisms)).max(4).default([]),
+}).refine(d=>Boolean(d.topicoId)===Boolean(d.mapaNoId),{
+ message:"Informe ID do tópico e ID do nó do mapa juntos, ou deixe os dois vazios.",
 });
-export const groupRequestSchema = requestSchema.extend({
+export const groupRequestSchema = requestSchema.safeExtend({
  quantidade: z.number().int().min(1).max(QUESTION_GROUP_SIZE),
  enunciadosAnteriores: z.array(text(30, 4000)).max(SUBJECT_QUESTION_LIMIT - 1).default([]),
 }).refine(
@@ -18,7 +21,7 @@ export const groupRequestSchema = requestSchema.extend({
  { message: "O lote pode ter até 20 questões por assunto." },
 );
 export const itemSchema=z.object({
- enunciado:text(30,4000), gabarito:z.enum(["C","E"]),
+ enunciado:text(30,4000), gabarito:z.enum(["C","E"]), mapaNoId:z.string().trim().min(3).max(180).optional(),
  conceito:text(5,1000), contexto:text(3,1500), relacao:text(3,1000),
  operacao:z.enum(["recordar","distinguir","aplicar","inferir","calcular","reescrever"]),
  mecanismo:z.enum(mechanisms).nullable(), trechoDecisivo:text(3,1000),
@@ -41,6 +44,7 @@ export function validateDrafts(raw,request){
   if(seen.has(n))throw new Error("A IA repetiu uma questão no lote.");
   seen.add(n);
   if(!normalize(request.textoFonte).includes(normalize(q.evidenciaFonte)))throw new Error("Evidência não localizada no texto-fonte. Revise a fonte e tente novamente.");
+  if(request.mapaNoId&&q.mapaNoId!==request.mapaNoId)throw new Error("Nó conceitual diferente do ID informado; o item não pode ser associado arbitrariamente.");
   if(!n.includes(normalize(q.trechoDecisivo)))throw new Error("Trecho decisivo não localizado no enunciado.");
   if(q.gabarito==="E"&&!/^F(?:10|[1-9])$/.test(q.mecanismo||""))throw new Error("Item errado sem mecanismo de falsificação válido.");
   if(q.gabarito==="C"&&q.mecanismo!==null&&!/^V[1-4]$/.test(q.mecanismo))throw new Error("Item correto com mecanismo incompatível.");
@@ -59,9 +63,11 @@ export function generationPrompt(request){
   "F1 ampliação indevida; F2 restrição indevida; F3 troca de conceito/competência; F4 número/prazo/condição/modalidade; F5 regra-exceção; F6 nexo inválido; F7 extrapolação; F8 vigência; F9 composição com parte falsa; F10 reescrita inválida. V1 paráfrase; V2 recorte verdadeiro; V3 regra absoluta válida; V4 exceção válida. C direto pode ter mecanismo null. F9 secundário não substitui uma explicação mais específica.",
   "Cada questão precisa ser independente das demais. Evite pistas de gabarito, pares que revelam respostas, ambiguidade, conhecimento enciclopédico decorativo e sequência C/E previsível. Não force 50% C/E como frequência oficial.",
   "Verifique um contraexemplo e outra interpretação antes de devolver. Em E, forneça correção mínima que se sustente na fonte. Em C, correcaoMinima explica por que não há correção.",
-  "Responda JSON {questoes:[{enunciado,gabarito,conceito,contexto,relacao,operacao,mecanismo,trechoDecisivo,justificativa,correcaoMinima,perguntaPreventiva,evidenciaFonte,dificuldadePlanejada}]}.",
+  "Responda JSON {questoes:[{enunciado,gabarito,mapaNoId (quando informado),conceito,contexto,relacao,operacao,mecanismo,trechoDecisivo,justificativa,correcaoMinima,perguntaPreventiva,evidenciaFonte,dificuldadePlanejada}]}.",
   "operacao: recordar|distinguir|aplicar|inferir|calcular|reescrever. dificuldadePlanejada: basica|intermediaria|avancada. evidenciaFonte deve ser trecho LITERAL contínuo do texto-fonte (20 a 2000 caracteres); trechoDecisivo deve existir literalmente no enunciado. Todos os campos são strings exceto mecanismo que admite null.",
   "Se houver enunciados anteriores, use-os somente para evitar repetições, paráfrases e pistas entre itens. Cubra outras regras ou aplicações sustentadas pela fonte.",
+  "Quando topicoId e mapaNoId forem fornecidos, registre mapaNoId idêntico em TODOS os itens e avalie exclusivamente aquele conceito específico. Não invente um ID nem estenda o item para outro nó.",
+  "Para cada item, formule uma proposição falsificável de uma única habilidade; ligue o comentário à condição decisiva e explique a correção mínima do erro. Itens sem fonte suficiente devem ser recusados, não completados artificialmente.",
   "DADOS DA ENCOMENDA:",JSON.stringify(request)
  ].join("\n");
 }
