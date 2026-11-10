@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import console from 'node:console';
 import fs from 'node:fs';
+import {validateDrafts} from '../../src/lib/question-authoring.js';
 const before=JSON.parse(fs.readFileSync('scripts/rf-reformulacao/antes-2026-11-10.json'));
 const after=JSON.parse(fs.readFileSync('scripts/rf-reformulacao/depois-2026-11-10.json'));
 const qs=JSON.parse(fs.readFileSync('src/data/rf-questoes-revisao-2026-11-10.json'));
@@ -17,6 +18,6 @@ for(const [id,d] of Object.entries(after)){
  for(const c of d.cartoes)assert(nodes.has(c.mapaNoId),'Broken card '+c.q);
  for(const [a,b,label] of d.mapa.ligacoes){assert(nodes.has(a)&&nodes.has(b));assert(label);}
  const group=qs.filter(q=>q.topico===id);assert.equal(group.length,20);assert.equal(group.filter(q=>q.gabarito==='C').length,10);
- for(const q of group){assert(nodes.has(q.mapaNoId));assert.equal(q.statusEditorial,'aguardando-revisao-humana');assert(!q.revisaoHumana);assert(q.enunciado.includes('Assertiva:'));if(q.gabarito==='E'){assert(q.correcaoMinima);assert(q.comentario.includes('Versão correta:'));}}
+ for(const q of group){validateDrafts({questoes:[q]},{quantidade:1,textoFonte:q.textoFonte});assert(nodes.has(q.mapaNoId));assert.equal(q.statusEditorial,'aguardando-revisao-humana');assert(!q.revisaoHumana);assert(q.enunciado.includes('Assertiva:'));if(q.gabarito==='E'){assert(q.correcaoMinima);assert(q.comentario.includes('Versão correta:'));}}
 }
 console.log(JSON.stringify({topics:8,nodes:nodeCount,cards:cardCount,drafts:160,originalCardsPreserved:true,linksValid:true}));
