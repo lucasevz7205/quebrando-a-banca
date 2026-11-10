@@ -134,10 +134,35 @@
     if(!root)return;
     let moving=false;
     const reduce=window.matchMedia("(prefers-reduced-motion: reduce)");
+    const ring=window.QBAxonRingFlow?.mount(root);
+    function highlight(control){
+      const value=control?.dataset?.radialIndex;
+      const index=value===undefined?-1:Number(value);
+      const valid=Number.isInteger(index)&&index>=0?index:-1;
+      root.querySelectorAll?.(".qb-radial-node").forEach(node=>{
+        node.classList.toggle("is-focused",Number(node.dataset.radialIndex)===valid);
+      });
+      root.querySelectorAll?.(".qb-radial-sector").forEach(sector=>{
+        sector.classList.toggle("is-focused",Number(sector.dataset.ringSector)===valid);
+      });
+      ring?.focus?.(valid);
+    }
+    const nodeFrom=target=>target?.closest?.(".qb-radial-node");
+    root.addEventListener("pointerover",event=>highlight(nodeFrom(event.target)));
+    root.addEventListener("pointerout",event=>{
+      const current=nodeFrom(event.target);
+      if(current&&!current.contains?.(event.relatedTarget))highlight(nodeFrom(event.relatedTarget));
+    });
+    root.addEventListener("focusin",event=>highlight(nodeFrom(event.target)));
+    root.addEventListener("focusout",event=>{
+      if(!root.contains?.(event.relatedTarget))highlight(null);
+    });
     function transition(button,go){
       if(moving)return;
       moving=true;
+      highlight(button);
       if(reduce.matches){go();return;}
+      if(ring?.select){ring.select(button,go);return;}
       const stage=root.querySelector("[data-radial-stage]");
       const canvas=stage?.querySelector("[data-radial-particles]");
       const ctx=canvas?.getContext("2d");
@@ -179,11 +204,22 @@
       window.requestAnimationFrame(tick);
     }
     root.addEventListener("keydown",event=>{
-      if(event.key!=="Escape"||root.dataset.radialScreen==="menu"||moving)return;
-      const back=root.querySelector("[data-radial-back]");
-      if(!back)return;
-      event.preventDefault();
-      transition(back,()=>handlers.onBack?.());
+      if(moving)return;
+      if(event.key==="Escape"&&root.dataset.radialScreen!=="menu"){
+        const back=root.querySelector("[data-radial-back]");
+        if(!back)return;
+        event.preventDefault();
+        transition(back,()=>handlers.onBack?.());
+      } else if(["ArrowRight","ArrowDown","ArrowLeft","ArrowUp"].includes(event.key)){
+        const nodes=[...(root.querySelectorAll?.(".qb-radial-node")||[])];
+        if(!nodes.length)return;
+        const current=nodes.indexOf(nodeFrom(event.target));
+        const direction=["ArrowRight","ArrowDown"].includes(event.key)?1:-1;
+        const index=current<0?0:(current+direction+nodes.length)%nodes.length;
+        event.preventDefault();
+        nodes[index]?.focus();
+        highlight(nodes[index]);
+      }
     });
     root.addEventListener("click",event=>{
       const control=event.target.closest("[data-radial-module],[data-radial-target],[data-radial-back]");
@@ -199,6 +235,7 @@
           transition(control,()=>handlers.onOpen?.(target));
       }
     });
+    return ()=>ring?.dispose?.();
   }
   window.QBRadialDashboard={render,wire,modules:MODULES.map(m=>m.key),
     submodules:key=>(SUBMODULES[key]||[]).map(m=>m.target)};
