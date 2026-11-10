@@ -55,7 +55,7 @@
   const allowedKeys=new Set(MODULES.map(m=>m.key));
   const escape=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const moduleFor=key=>MODULES.find(m=>m.key===key)||null;
-  const COLORS=["#79c8ff","#5fa1ff","#a895ff","#ff906f","#b88dff","#38d9fa"];
+  const COLORS=["#ff9571","#d998ff","#8da2ff","#49d7fb","#44c5ff","#b4a2ff"];
   function positions(count){
     // Nodes live INSIDE the luminous annular band, never outside as cards.
     // Keep labels stationary while its electric filaments move.
@@ -126,7 +126,7 @@
       +'</div><div class="qb-radial-footer">'
       +(selected?'<span>Selecione uma função do círculo para abrir a interface existente.</span>'
         :'<span>Selecione uma área para explorar suas ferramentas.</span>')
-      +'<span>Também é possível navegar pelas abas superiores.</span></div></section>';
+      +'<span>Use as setas do teclado para percorrer o anel ou as abas superiores para ir direto.</span></div></section>';
   }
 
   function wire(container,handlers={}){
