@@ -52,10 +52,12 @@ function resolveQuestion({questionId,preferredTopicId=null,questions,index,revis
    const {score,...result}=ranked[0];
    return result;
  }
- // Rare case: an editorial source lacks an index declaration. Search only
- // within maps of this authenticated account and keep the same evidence rules.
- if(!candidates.length){
-   [...(revisions?.keys?.()||[])].filter(topicId=>hasMap(revisions,topicId)).forEach(evaluate);
+ // If the ordinary chapter index has no precise link, inspect the other
+ // maps of THIS user for an explicit shared question ID. The decorator only
+ // accepts eligible IDs; a coincidental text match in another chapter is not
+ // promoted into a verified association.
+ if(!ranked.length){
+   [...(revisions?.keys?.()||[])].filter(topicId=>hasMap(revisions,topicId)&&!candidates.includes(topicId)).forEach(evaluate);
    if(ranked.length){
      ranked.sort((a,b)=>b.score-a.score||a.topicId.localeCompare(b.topicId));
      const {score,...result}=ranked[0];return result;
