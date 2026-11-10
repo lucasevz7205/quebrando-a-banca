@@ -117,7 +117,7 @@ test("protocolo 3.0 impede importação sem fonte conferida e parecer cego",()=>
   const modified={...base,revisaoHumana:{...base.revisaoHumana,[attr]:false}};
   assert.throws(()=>assertEditorialImport([modified]),/conferência humana/);
  }
- assert.throws(()=>assertEditorialImport([{...base,mapaNoId:""}]),/nó do mapa/);
+ assert.throws(()=>assertEditorialImport([{...base,mapaNoId:undefined}]),/nó do mapa/);
  assert.throws(()=>assertEditorialImport([{...base,revisaoIA:{...base.revisaoIA,gabarito:"C"}}]),/revisão cega/);
  assert.throws(()=>assertEditorialImport([{...base,provenienciaFonte:"Reelaboração de material já cadastrado"}]),/fonte primária/);
 });
