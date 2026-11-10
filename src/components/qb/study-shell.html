@@ -471,6 +471,7 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/map-mastery.js?v=2"></script>
 <script src="/claude-export/cohesion-links.js?v=1"></script>
 <script src="/claude-export/map-global-links.js?v=1"></script>
+<script src="/claude-export/map-remission.js?v=1"></script>
 <link rel="stylesheet" href="/claude-export/learning.css">
 <link rel="stylesheet" href="/claude-export/study-palette.css">
 <link rel="stylesheet" href="/claude-export/map-3d.css?v=2">
@@ -497,7 +498,7 @@ const S = {
   ed:new Map(), mat:new Map(), pt:new Map(), di:[], edLoaded:false,
   fEvo:'', evoCap:'', evoGrafico:'tempo', evoOrdem:'menor', evoModo:'n', evoPer:'d', evoDe:'', evoAte:'', evoFaixa:'', evoPagina:0,
   fMat:'', fSt:'', abertos:new Set(), ptsAbertos:new Set(), evocar:false, revelados:new Set(),
-  rv:new Map(), cfg:new Map(), cartAbertos:new Set(),
+  rv:new Map(), cfg:new Map(), cartAbertos:new Set(), mapaFocus:null, mapaFocusCounter:0,
   pg:new Map(), fPgMat:'', fPgTipo:'',
   pl:[], // planejamento semanal; nunca mistura com o histórico de respostas
   an:new Map(), mecQ:new Map(), pgModo:'mec', fMecMat:'', mecFoco:'todos', mecOpen:new Set()
@@ -598,8 +599,9 @@ function indiceQuestoes(){return window.QBQuestionLinks.build(S.q,S.ed,S.rv)}
 function chaveQuestao(qid){return window.QBQuestionLinks.key(qid)}
 function recursosQuestao(qid){return indiceQuestoes().byQuestion.get(qid)||null}
 function atalhosQuestao(q,indice){
-  const info=(indice?.byQuestion.get(q.id))||recursosQuestao(q.id),mapa=info?.matchedIds.find(id=>!!S.rv.get(id)?.mapa);
-  return `<div class="qb-qsource-actions"><button type="button" class="btn ghost small" data-qcard="${esc(q.id)}">Revisar este item nos Flashcards</button>${mapa?`<button type="button" class="btn ghost small" data-ir-mapa="${esc(mapa)}">Abrir mapa do tópico</button>`:''}</div>`;
+  const info=(indice?.byQuestion.get(q.id))||recursosQuestao(q.id);
+  const mapped=[q.topico,...(info?.matchedIds||[])].some(id=>!!S.rv.get(id)?.mapa);
+  return `<div class="qb-qsource-actions"><button type="button" class="btn ghost small" data-qcard="${esc(q.id)}">Revisar este item nos Flashcards</button>${mapped?`<button type="button" class="btn ghost small" data-qmap-question="${esc(q.id)}" aria-label="Localizar o conceito da questão no mapa mental">Localizar conceito no mapa ↗</button>`:''}</div>`;
 }
 function questoesEmMapa(qs,indice){
   if(!qs.length)return '';
