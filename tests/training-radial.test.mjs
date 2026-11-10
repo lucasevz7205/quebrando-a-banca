@@ -194,7 +194,7 @@ test("navegação da aplicação conduz matéria → assunto → treino real e p
  assert.match(shell,/startRound\(S\.cap,S\.modo\)/);
  assert.match(shell,/S\.round\?\(S\.round\.fim\?viewFim\(\):viewItem\(\)\)/);
  assert.match(shell,/data-view="treinar"/);
- assert.match(shell,/data-train-page/);
+ assert.match(source,/data-train-page/);
 });
 test("cores semânticas e tamanhos responsivos seguem o AXON, sem chamadas externas",()=>{
  postcss.parse(css,{from:"training-radial.css"});
