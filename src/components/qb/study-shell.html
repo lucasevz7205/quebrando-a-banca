@@ -462,6 +462,7 @@ details.diario .feed{margin-top:10px}
 
 <script src="/claude-export/bridge.js?v=4"></script>
 <script src="/claude-export/study-cycles.js?v=1"></script>
+<script src="/claude-export/study-cycles-ui.js?v=1"></script>
 <script src="/claude-export/planner.js?v=4"></script>
 <script src="/claude-export/insights.js?v=3"></script>
 <script src="/claude-export/assistant.js?v=2"></script>
@@ -3101,13 +3102,14 @@ function subscribe(){
   central('cartoes_aval',ds=>{S.cav=new Map(ds.map(d=>[d.k||d.id,d]));});
   central('pegadinhas',ds=>{S.pg=new Map(ds.map(d=>[d.id,d]));updateCounts();});
   central('analise',ds=>{S.an=new Map(ds.map(d=>[d.id,d]));const m=new Map();const c=S.an.get('CONTROLE');for(const it of ((c&&c.itens)||[])) if(it.mecanismo&&typeof it.item==='string') m.set(it.item,{m:it.mecanismo,v:it.vacina||'',e:it.evidencia||''});S.mecQ=m;});
-  central('config',ds=>{S.cfg=new Map(ds.map(d=>[d.id,d]));});
+  central('config',ds=>{S.cfg=new Map(ds.map(d=>[d.id,d]));S.cfgLoaded=true;});
   central('edital',ds=>{S.ed=new Map(ds.map(d=>[d.id,d]));S.edLoaded=true;});
   central('materiais',ds=>{S.mat=new Map(ds.map(d=>[d.id,d]));});
   central('pontos',ds=>{S.pt=new Map(ds.map(d=>[d.id,d]));});
   central('diario',ds=>{S.di=ds;});
   db.collection('planejamento').onSnapshot(snap=>{
     S.pl=snap.docs.map(d=>Object.assign({id:d.id},d.data()));
+    S.plLoaded=true;
     if(['painel','analiseDia'].includes(S.view))render();
   },err=>{console.warn('O planejamento não pôde ser carregado.',err)});
   db.collection('textos').onSnapshot(snap=>{S.tx=new Map(snap.docs.map(d=>[d.id,Object.assign({id:d.id},d.data())]));if(['simulado','treinar'].includes(S.view))render();},()=>{});
