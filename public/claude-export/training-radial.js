@@ -183,6 +183,10 @@ function render(model,selection={}){
     +'<canvas class="qb-radial-particles" data-radial-particles aria-hidden="true" hidden></canvas>'
     +'</div>'
     +pages
+    +'<nav class="qb-train-shortcuts" aria-label="Outras formas de treinar">'
+    +'<button type="button" data-train-review>Revisões vencidas</button>'
+    +'<button type="button" data-train-errors>Caderno de erros</button>'
+    +'</nav>'
     +'<p class="qb-train-bottom-note">Passe o cursor ou use as setas para ver o desempenho de cada '+(matterMode?'matéria':'assunto')
     +' no centro. A barra usa a última resposta de cada questão; itens não feitos ficam fora do percentual.'
     +(withoutQuestions?' '+withoutQuestions+' assuntos do edital ainda não têm questões neste banco e não aparecem no círculo.':'')
@@ -269,12 +273,14 @@ function wire(container,handlers={}){
     if(select?.value)handlers.onTopic?.(select.value);
   });
   section.addEventListener("click",e=>{
-    const action=e.target.closest?.("[data-train-page],[data-train-classic],[data-train-back],[data-train-matter],[data-train-topic]")
+    const action=e.target.closest?.("[data-train-page],[data-train-classic],[data-train-back],[data-train-matter],[data-train-topic],[data-train-review],[data-train-errors]")
       ||nodeFrom(e.target);
     if(!action||action.disabled||!section.contains(action)||moving)return;
     if(action.hasAttribute("data-train-page"))handlers.onPage?.(Number(action.dataset.trainPage));
     else if(action.hasAttribute("data-train-back"))handlers.onBack?.();
     else if(action.hasAttribute("data-train-classic"))handlers.onClassic?.();
+    else if(action.hasAttribute("data-train-review"))handlers.onReview?.();
+    else if(action.hasAttribute("data-train-errors"))handlers.onErrors?.();
     else if(action.hasAttribute("data-train-matter"))transition(action,()=>handlers.onMatter?.(action.dataset.trainMatter));
     else if(action.hasAttribute("data-train-topic"))transition(action,()=>handlers.onTopic?.(action.dataset.trainTopic));
   });
