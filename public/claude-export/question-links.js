@@ -63,13 +63,15 @@
     const key=asText(question.gabarito);
     const interpretation=key==='C'?'Certo':key==='E'?'Errado':key==='X'?'Anulado':'Não confirmado';
     const explanation=asText(question.comentario);
-    const answers=['Gabarito oficial no banco: '+interpretation];
+    const pending=question.statusEditorial==='aguardando-revisao-humana';
+    const answers=[(pending?'Gabarito proposto, ainda sem revisão humana: ':'Gabarito registrado no banco: ')+interpretation];
     if(explanation)answers.push('Comentário: '+explanation);
     else answers.push('Comentário não cadastrado. Consulte a fonte antes de considerar o conceito dominado.');
+    if(pending)answers.push('Questão autoral de estudo. Valide a justificativa na fonte original antes de considerar o gabarito definitivo.');
     return {q:'Julgue CERTO ou ERRADO e explique: '+asText(question.enunciado),
       a:answers,tema:asText(question.tema||question.capNome||question.cap)||'Questão de revisão',
       src:asText(question.ref||question.origem||question.cap),questionId:question.id,
-      fromQuestion:true,graded:key==='C'||key==='E'};
+      fromQuestion:true,graded:key==='C'||key==='E',statusEditorial:question.statusEditorial||null};
   }
   const key=id=>'q~'+id+'@0';
   const questionId=key=>/^q~(.+)@0$/.exec(asText(key))?.[1]||null;
