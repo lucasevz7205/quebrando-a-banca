@@ -3,6 +3,18 @@
  * No fake metrics, no remote video, no changes to study logic.
  * Semantic correct / incorrect / pending colors remain independent.
  */
+/* Shared markup remains readable in the explicit light theme. */
+.qb-chat-header .qb-chat-heading{display:flex;flex-direction:row;align-items:center;gap:12px}
+.qb-chat-header .qb-chat-titles{display:flex;flex-direction:column;gap:4px;min-width:0}
+.qb-chat-heading .qb-chat-orb{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:conic-gradient(#416ce5,#8965ed,#56b7ed,#416ce5);border:1px solid #c3d7ff;box-shadow:inset -5px -6px 10px #0c1c6580,inset 4px 4px 8px #ffffffa3,0 0 18px #7098f180}
+.qb-chat-heading .qb-chat-orb>span{display:block;width:70%;height:70%;border-radius:50%;background:radial-gradient(circle at 34% 29%,#ffffffaa,#768aff88 44%,#6b43d6b0);filter:blur(3px)}
+.qb-chat-header .qb-chat-status{display:inline-flex;align-self:flex-start;align-items:center;gap:6px;border:1px solid #9db6eb83;border-radius:999px;background:#345b9e66;color:#f0f6ff;padding:4px 9px;font-size:10px;font-weight:600}
+.qb-chat-header .qb-chat-status::before{content:"";width:6px;height:6px;border-radius:50%;background:#a1c8ff}
+.qb-chat-chips button{display:inline-flex;align-items:center;gap:7px}
+.qb-chat-chips .qb-chat-chip-icon{display:grid;place-items:center;flex:0 0 24px;width:24px;height:24px;border-radius:7px;background:#345daa18;color:#748cef;font-size:15px}
+.qb-chat-chips .qb-chat-chip-label{display:grid;gap:2px;min-width:0;text-align:left}
+.qb-chat-chips .qb-chat-chip-label strong{font-size:11px}
+.qb-chat-chips .qb-chat-chip-label small{font-size:9px;opacity:.78}
 :root[data-theme="dark"] {
   color-scheme:dark;
   --paper:#0e0e10;
