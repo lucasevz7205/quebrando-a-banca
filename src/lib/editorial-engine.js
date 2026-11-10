@@ -92,7 +92,9 @@ export function auditEditorialBundle(revision,questions=[]){
    warn("SOURCE_VERIFICATION",at,"Texto derivado: confirmar as páginas originais e sua vigência.");
   if(!q?.revisaoIA?.justificativa)warn("BLIND_REVIEW",at,"Revisão cega independente não registrada.");
   if(q?.statusEditorial==="revisado"&&enough(q?.revisaoHumana?.responsavel,3)&&
-      enough(q?.revisaoHumana?.parecer,20))counts.reviewed++;
+      enough(q?.revisaoHumana?.parecer,20)&&q?.revisaoHumana?.fonteConferida===true&&
+      q?.revisaoHumana?.gabaritoConferido===true&&q?.revisaoHumana?.univocidadeConferida===true&&
+      q?.revisaoHumana?.remissaoConferida===true)counts.reviewed++;
   else warn("HUMAN_REVIEW",at,"Ainda aguarda homologação editorial humana.");
   if(key&&statements.has(key))block("QUESTION_DUPLICATE",at,"Enunciado duplicado.");
   statements.add(key);
@@ -154,12 +156,13 @@ export function buildEditorialPrompts({topicId,title,materia,cargo,source,locati
    "Se E, aplique UMA falsificação principal plausível F1–F10; se C, preserve condições e use V1–V4 ou null.",
    "Não criar falsos por inserir apenas não/sempre/somente, nem dar pistas de gabarito; não copiar itens oficiais.",
    "Variar recordar, distinguir, aplicar, inferir, calcular, reescrever quando sustentado; não forçar 50% C/E.",
-   "Campos: {id,topico,mapaNoId,enunciado,gabarito,conceito,contexto,relacao,operacao,mecanismo,trechoDecisivo,justificativa,correcaoMinima,perguntaPreventiva,evidenciaFonte,textoFonte,fonte,localizacaoFonte,dificuldadePlanejada,statusEditorial}.",
+   "Campos: {id,protocolo,topico,mapaNoId,enunciado,gabarito,conceito,contexto,relacao,operacao,mecanismo,trechoDecisivo,justificativa,correcaoMinima,perguntaPreventiva,evidenciaFonte,textoFonte,fonte,localizacaoFonte,dificuldadePlanejada,statusEditorial}.",
+   "protocolo=cebraspe-3.0; revisaoHumana deve ficar null até verificação presencial/independente da fonte e do gabarito.",
    "Evidência deve ser trecho LITERAL da fonte, trecho decisivo deve constar do enunciado; mapaNoId deve existir.",
    "Uma questão E exige correção mínima verdadeira; questão C exige fundamento e risco de leitura equivocada.",
    "Fazer revisão CEGA sem mostrar gabarito pretendido; comparar julgamento independente, contraexemplo e outra leitura possível.",
    "Conflitos, fonte insuficiente, ambiguidade e paráfrases de itens prévios bloqueiam. Sem fonte para 20? Entregar menos e listar lacunas.",
-   "Nunca publicar automaticamente: statusEditorial=aguardando-revisao-humana. CONTEXTO:",context].join("\n");
+   "Nunca publicar automaticamente: statusEditorial=aguardando-revisao-humana. Homologação humana v3 exige responsável, data, parecer, fonteConferida, gabaritoConferido, univocidadeConferida e remissaoConferida verdadeiros. CONTEXTO:",context].join("\n");
  const audit=[common,"ETAPA 5: PARECER EDITORIAL. Inspecione cada nó, flashcard e questão; verifique fonte, páginas, condições e vínculo.",
    "Revise C/E cegamente, detecte ambiguidade, duplicidade, extrapolação, pistas entre itens e mecanismos incoerentes.",
    "Registre problemas por ID e não trate revisão por IA como aprovação humana.",
