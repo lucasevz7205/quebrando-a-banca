@@ -1703,26 +1703,46 @@ async function corrigirIA(k){
   }
   render(true);
 }
-/* Cada cartão tem um mapa de origem verificável por identificador/caminho.
- * Sem vínculo explícito, busca lexical é SUGESTÃO e o capítulo é o fallback. */
+/* Ponte de remissão com IDs do banco para caminhos concretos no mapa.
+ * Primeiro usa vínculos explícitos/editados; nomes inequívocos vêm depois.
+ * Quando só sabemos o capítulo, não atribuímos um nó inventado. */
+function remissaoQuestao(qid,preferredTopicId=null){
+  return window.QBMapRemission.resolveQuestion({
+    questionId:qid,preferredTopicId,questions:S.q,index:indiceQuestoes(),revisions:S.rv,
+    topics:S.ed,decorate:mapaComVinculos
+  });
+}
 function origemDoMapa(k,c){
-  const qid=window.QBQuestionLinks?.questionId(k);
-  const id=qid?(recursosQuestao(qid)?.matchedIds||[]).find(t=>!!S.rv.get(t)?.mapa):k.slice(0,k.lastIndexOf('@'));
-  const mapa=id?S.rv.get(id)?.mapa:null;
-  return {id,link:window.QBMapLinks.resolve(mapa,c)};
+  const link=window.QBMapRemission.resolveCard({
+    key:k,card:c,questions:S.q,index:indiceQuestoes(),revisions:S.rv,topics:S.ed,
+    decorate:mapaComVinculos,resolveCard:window.QBMapLinks?.resolve,
+    questionIdFor:window.QBQuestionLinks?.questionId
+  });
+  return {id:link.topicId,link};
+}
+function abrirRemissaoNoMapa(link,back){
+  if(!link?.topicId||!S.rv.get(link.topicId)?.mapa){
+    toast('Nenhum mapa cadastrado para esta questão.');return;
+  }
+  S.mapaId=link.topicId;
+  S.mapaBack=back||null;
+  S.mapaFocus={...link,nonce:++S.mapaFocusCounter};
+  S.mapaAb=new Set(['*']);
+  S.mapaX=S.mapaX||new Set();
+  if(link.path)S.mapaX.add('mx:'+link.topicId+':'+link.path);
+  S.revelados.clear();
+  setView('mapa');
+  window.scrollTo({top:0,behavior:'instant'});
+}
+function irQuestaoMapa(qid){
+  const link=remissaoQuestao(qid,S.view==='mapa'?S.mapaId:null);
+  if(link.status==='unavailable'){toast('Ainda não há mapa associado a esta questão.');return;}
+  abrirRemissaoNoMapa(link,{kind:'question',qid,view:S.view,topicId:S.mapaId});
 }
 function irMapa(k){
-  const origem=origemDoMapa(k,cartaoDe(k));
-  if(!origem.id||origem.link.status==='unavailable')return;
-  S.mapaBack={k,cartId:S.cartId};
-  S.mapaId=origem.id;S.mapaAb=new Set(['*']);S.mapaX=S.mapaX||new Set();
-  if(origem.link.path)S.mapaX.add('mx:'+origem.id+':'+origem.link.path);
-  setView('mapa');
-  if(origem.link.path)setTimeout(()=>{
-    const selector='[data-map-node="'+CSS.escape(origem.id+':'+origem.link.path)+'"]';
-    const node=document.querySelector(selector);
-    if(node){node.scrollIntoView({block:'center',behavior:'smooth'});node.classList.add('m-foco');setTimeout(()=>node.classList.remove('m-foco'),2500);}
-  },90);
+  const {id,link}=origemDoMapa(k,cartaoDe(k));
+  if(!id||link.status==='unavailable'){toast('Este cartão ainda não tem mapa.');return;}
+  abrirRemissaoNoMapa(link,{kind:'flashcard',k,cartId:S.cartId});
 }
 S.exAb=new Set();
 function explicaBox(k){
