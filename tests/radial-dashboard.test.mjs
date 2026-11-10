@@ -111,6 +111,8 @@ test("botões funcionais: em modo de movimento reduzido navega e retorna sem esp
  s=scene("estudo");
  s.events.click({target:{closest:()=>s.controls.target}});
  assert.equal(calls.at(-1),"open:mapa");
+ // A real navigation remounts the screen, resetting its click/transition guard.
+ s=scene("estudo");
  s.events.click({target:{closest:()=>s.controls.back}});
  assert.equal(calls.at(-1),"back");
  assert.equal(calls.length,3);
