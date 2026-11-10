@@ -202,6 +202,7 @@
         <div class="qb-plan-kpi"><b>${hours(plannedMinutes)}</b><small>tempo planejado</small></div>
         <div class="qb-plan-kpi"><b>${hours(usedMinutes)}</b><small>tempo registrado${outstanding ? ` · ${outstanding} em atraso` : ""}</small></div>
       </div>
+      ${window.QBStudyCycleUI ? window.QBStudyCycleUI.render(S) : ""}
       ${window.QBInsights ? window.QBInsights.compact(S, S.planSelectedDay) : ""}
       <section class="qb-week-calendar" aria-label="Calendário de estudos da semana"><div class="qb-calendar-scroll"><div class="qb-week-grid">${days.map(d => dayColumn(S, d, today, due)).join("")}</div></div></section>
       ${backlog.length ? `<details class="qb-plan-overdue"><summary><strong>${backlog.length} atividades pendentes de semanas anteriores</strong><span>Abra para reprogramar ou concluir</span></summary><div class="qb-plan-overdue-list">${backlog.map(t => `<div><div><strong>${esc(t.titulo)}</strong><small>${short(t.data)} · ${esc(KINDS[t.tipo] || "Estudo")}${t.materia ? ` · ${esc(t.materia)}` : ""}</small></div><button type="button" class="btn ghost small" data-plan-action="move" data-plan-id="${esc(t.id)}">Mover para ${short(S.planSelectedDay)}</button></div>`).join("")}</div></details>` : ""}
@@ -222,6 +223,7 @@
 
   function wire(S, callbacks) {
     initialize(S);
+    if (window.QBStudyCycleUI) window.QBStudyCycleUI.wire(S, callbacks);
     const today = callbacks.hoje();
     const rerender = () => callbacks.render(true);
     const getTask = id => S.pl.find(t => t.id === id);
