@@ -5,14 +5,14 @@
 (function(){
   "use strict";
   const TAU=Math.PI*2;
-  const COLORS=[[66,216,255],[84,150,255],[167,129,255],[255,130,108],[182,131,255],[78,209,248]];
+  const COLORS=[[255,149,113],[217,152,255],[141,162,255],[73,215,251],[68,197,255],[180,162,255]];
   function seeded(seed){
     let current=(seed||17)>>>0;
     return ()=>{current=(Math.imul(current,1664525)+1013904223)>>>0;return current/4294967296;};
   }
   const ease=t=>t*t*(3-2*t);
   function colorAt(angle){
-    const fraction=((angle%TAU)+TAU)%TAU/TAU;
+    const fraction=(((angle+Math.PI/2)%TAU)+TAU)%TAU/TAU;
     const scaled=fraction*COLORS.length,lo=Math.floor(scaled)%COLORS.length;
     const next=(lo+1)%COLORS.length,t=scaled-Math.floor(scaled);
     return COLORS[lo].map((x,i)=>Math.round(x+(COLORS[next][i]-x)*t)).join(",");
