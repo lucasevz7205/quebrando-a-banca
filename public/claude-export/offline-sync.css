@@ -1,0 +1,50 @@
+/* Quebrando a Banca · Indicadores visuais do Modo Academia & PWA */
+.qb-sync-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+.qb-sync-pill .qb-sync-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #65d4ab;
+  box-shadow: 0 0 0 3px rgba(101, 212, 171, 0.18), 0 0 10px rgba(101, 212, 171, 0.65);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+.qb-sync-pill[data-sync-state="syncing"] .qb-sync-dot {
+  background: #49d7fb;
+  box-shadow: 0 0 0 3px rgba(73, 215, 251, 0.22), 0 0 12px rgba(73, 215, 251, 0.8);
+  animation: qb-sync-pulse 1.1s ease-in-out infinite;
+}
+.qb-sync-pill[data-sync-state="pending"],
+.qb-sync-pill[data-sync-state="offline-pending"] {
+  border-color: rgba(232, 199, 131, 0.55) !important;
+  color: #f8e5b8 !important;
+}
+.qb-sync-pill[data-sync-state="pending"] .qb-sync-dot,
+.qb-sync-pill[data-sync-state="offline-pending"] .qb-sync-dot {
+  background: #e8c783;
+  box-shadow: 0 0 0 3px rgba(232, 199, 131, 0.22), 0 0 12px rgba(232, 199, 131, 0.75);
+}
+.qb-sync-pill[data-sync-state="offline"] .qb-sync-dot {
+  background: #ff9571;
+  box-shadow: 0 0 0 3px rgba(255, 149, 113, 0.2), 0 0 10px rgba(255, 149, 113, 0.6);
+}
+.qb-pwa-install-btn {
+  background: linear-gradient(125deg, rgba(55, 217, 250, 0.22), rgba(141, 162, 255, 0.26)) !important;
+  border-color: rgba(114, 214, 255, 0.55) !important;
+  color: #f0f9ff !important;
+}
+@keyframes qb-sync-pulse {
+  0%, 100% { transform: scale(0.92); opacity: 0.75; }
+  50% { transform: scale(1.18); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .qb-sync-pill[data-sync-state="syncing"] .qb-sync-dot {
+    animation: none !important;
+  }
+}

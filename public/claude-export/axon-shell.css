@@ -1,0 +1,420 @@
+/* Quebrando a Banca · Unificação Visual AXON (Menu Superior Orbital, Transições,
+ * Modo Cockpit, Micro-Anéis de Setor e Gaveta Radial Rápida).
+ * Preserva 100% das cores semânticas de acerto/erro/dúvida e os modos claro/escuro/reduzido.
+ */
+
+:root {
+  --axon-portal: #7aa8ff;
+  --axon-painel: #ff9571;
+  --axon-edital: #d998ff;
+  --axon-treinar: #8da2ff;
+  --axon-estudo: #49d7fb;
+  --axon-simulado: #44c5ff;
+  --axon-historico: #b4a2ff;
+}
+
+/* 1. Dock Orbital AXON no Menu Superior */
+header.top.qb-app-header nav.tabs.qb-primary-nav {
+  position: relative;
+  isolation: isolate;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 999px;
+  padding: 7px 10px;
+  gap: 6px;
+  border: 1px solid rgba(154, 182, 255, 0.28);
+  background:
+    radial-gradient(ellipse 80% 140% at 50% 0%, rgba(72, 118, 255, 0.18), transparent 72%),
+    radial-gradient(ellipse 65% 120% at 85% 100%, rgba(165, 138, 255, 0.14), transparent 75%),
+    rgba(14, 18, 34, 0.88);
+  box-shadow:
+    0 18px 42px -24px rgba(8, 17, 52, 0.88),
+    0 0 28px rgba(71, 118, 255, 0.14),
+    inset 0 1px 0 rgba(216, 237, 255, 0.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: padding 0.28s cubic-bezier(0.2, 0.8, 0.25, 1), border-radius 0.28s ease, box-shadow 0.28s ease;
+}
+
+/* Camada de filamentos cônicos herdada do radial-annulus.css */
+header.top.qb-app-header nav.tabs.qb-primary-nav::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: -140% -10%;
+  pointer-events: none;
+  opacity: 0.22;
+  background: conic-gradient(
+    from -40deg,
+    #ff6949 0deg,
+    #ffa07b 31deg,
+    #f77ca9 65deg,
+    #ae87ff 113deg,
+    #5e95ff 171deg,
+    #37d9fa 220deg,
+    #21bafa 257deg,
+    #a58aff 307deg,
+    #ff7486 340deg,
+    #ff6949 360deg
+  );
+  filter: blur(22px);
+  animation: qb-axon-nav-orbit 34s linear infinite;
+}
+
+.qb-nav-flow-canvas {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.88;
+}
+
+/* Cores de setor por módulo (mesma paleta de radial-dashboard.js) */
+#tab-portal    { --sector-color: var(--axon-portal); }
+#tab-painel    { --sector-color: var(--axon-painel); }
+#tab-edital    { --sector-color: var(--axon-edital); }
+#tab-treinar   { --sector-color: var(--axon-treinar); }
+#tab-estudo    { --sector-color: var(--axon-estudo); }
+#tab-simulado  { --sector-color: var(--axon-simulado); }
+#tab-historico { --sector-color: var(--axon-historico); }
+
+header.top.qb-app-header nav.tabs.qb-primary-nav button {
+  position: relative;
+  isolation: isolate;
+  border-radius: 999px;
+  padding: 9px 15px;
+  min-height: 44px;
+  gap: 8px;
+  border: 1px solid transparent;
+  background: radial-gradient(ellipse 78% 72% at 50% 50%, rgba(12, 17, 35, 0.65), transparent 95%);
+  color: #cad6f3;
+  transition:
+    transform 0.2s cubic-bezier(0.2, 0.8, 0.25, 1),
+    color 0.2s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
+}
+
+/* Traço luminoso orbital inferior idêntico ao .qb-radial-node::after */
+header.top.qb-app-header nav.tabs.qb-primary-nav button::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0.55);
+  width: 28%;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--sector-color, #9eafff);
+  box-shadow: 0 0 10px var(--sector-color, #9eafff);
+  opacity: 0.38;
+  pointer-events: none;
+  transition: transform 0.24s cubic-bezier(0.2, 0.8, 0.25, 1), opacity 0.24s ease, width 0.24s ease;
+}
+
+header.top.qb-app-header nav.tabs.qb-primary-nav button:hover,
+header.top.qb-app-header nav.tabs.qb-primary-nav button:focus-visible {
+  color: #ffffff;
+  border-color: color-mix(in srgb, var(--sector-color, #8da2ff) 58%, transparent);
+  background: radial-gradient(ellipse at center, rgba(32, 48, 92, 0.78) 0%, rgba(12, 18, 38, 0.65) 72%, transparent 100%);
+  box-shadow: 0 0 18px -4px color-mix(in srgb, var(--sector-color, #8da2ff) 52%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+}
+
+header.top.qb-app-header nav.tabs.qb-primary-nav button:hover::after,
+header.top.qb-app-header nav.tabs.qb-primary-nav button:focus-visible::after {
+  opacity: 0.92;
+  transform: translateX(-50%) scaleX(1);
+  width: 42%;
+}
+
+header.top.qb-app-header nav.tabs.qb-primary-nav button[aria-current="page"] {
+  color: #ffffff !important;
+  border-color: color-mix(in srgb, var(--sector-color, #8da2ff) 76%, #ffffff 24%) !important;
+  background:
+    radial-gradient(circle at 26% 18%, rgba(255, 255, 255, 0.16), transparent 48%),
+    linear-gradient(125deg, rgba(28, 43, 86, 0.92), rgba(22, 28, 58, 0.92)) !important;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--sector-color, #8da2ff) 32%, transparent),
+    0 8px 24px -10px color-mix(in srgb, var(--sector-color, #8da2ff) 75%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
+}
+
+header.top.qb-app-header nav.tabs.qb-primary-nav button[aria-current="page"]::after {
+  opacity: 1;
+  width: 52%;
+  height: 2.5px;
+  transform: translateX(-50%) scaleX(1);
+  box-shadow: 0 0 14px var(--sector-color, #8da2ff), 0 0 24px var(--sector-color, #8da2ff);
+}
+
+/* Micro-anel orbital SVG em cada aba do menu superior */
+.qb-nav-orb {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--sector-color, #a8c0ff);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.qb-nav-orb svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+
+.qb-nav-orb-track {
+  fill: none;
+  stroke: rgba(186, 204, 255, 0.2);
+  stroke-width: 1.8;
+  stroke-dasharray: 2 3;
+}
+
+.qb-nav-orb-arc {
+  fill: none;
+  stroke: var(--sector-color, #8da2ff);
+  stroke-width: 2;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 4px var(--sector-color, #8da2ff));
+  transition: stroke-dashoffset 0.45s ease;
+}
+
+/* Subnav orbital (Mapas mentais, Flashcards, Pegadinhas, etc.) */
+.qb-tab-shell > .subnav.qb-header-tabs {
+  border-radius: 999px !important;
+  padding: 5px 8px !important;
+  gap: 6px;
+  background: rgba(16, 20, 36, 0.84) !important;
+  border: 1px solid rgba(132, 156, 232, 0.28) !important;
+  box-shadow: 0 14px 32px -22px rgba(7, 13, 40, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(12px);
+}
+
+.qb-tab-shell > .subnav.qb-header-tabs button {
+  position: relative;
+  border-radius: 999px !important;
+  padding: 7px 14px !important;
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.qb-tab-shell > .subnav.qb-header-tabs button[aria-pressed="true"] {
+  border-radius: 999px !important;
+  box-shadow: 0 0 18px -5px rgba(86, 138, 255, 0.72), inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
+}
+
+/* 2. Orbe QB Interativo (Lançador da Gaveta Radial Rápida) */
+.qb-header-brand-mark {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.24s cubic-bezier(0.2, 0.8, 0.25, 1), box-shadow 0.24s ease;
+}
+
+.qb-header-brand-mark::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 1px dashed rgba(168, 199, 255, 0.48);
+  pointer-events: none;
+  animation: qb-axon-nav-orbit 18s linear infinite;
+}
+
+.qb-header-brand-mark:hover,
+.qb-header-brand-mark:focus-visible {
+  transform: scale(1.08);
+  box-shadow: 0 0 28px rgba(102, 152, 255, 0.85), inset 0 1px 0 #fff !important;
+}
+
+/* 3. Modo Cockpit (Header Retrátil Inteligente em sessões profundas) */
+header.top.qb-app-header {
+  transition: padding-top 0.28s cubic-bezier(0.2, 0.8, 0.25, 1), gap 0.28s ease;
+}
+
+header.top.qb-app-header .qb-header-row {
+  transition:
+    min-height 0.32s cubic-bezier(0.2, 0.8, 0.25, 1),
+    padding 0.32s cubic-bezier(0.2, 0.8, 0.25, 1),
+    border-radius 0.32s ease;
+}
+
+header.top.qb-app-header[data-cockpit="true"] {
+  padding-top: 10px;
+  gap: 8px;
+}
+
+header.top.qb-app-header[data-cockpit="true"] .qb-header-kicker {
+  display: none;
+}
+
+header.top.qb-app-header[data-cockpit="true"] .qb-header-row {
+  min-height: 62px !important;
+  padding: 10px 16px !important;
+  border-radius: 999px !important;
+}
+
+header.top.qb-app-header[data-cockpit="true"] .qb-study-brand-copy p,
+header.top.qb-app-header[data-cockpit="true"] .qb-study-label {
+  display: none;
+}
+
+header.top.qb-app-header[data-cockpit="true"] .qb-header-brand h1 {
+  font-size: clamp(17px, 2vw, 21px) !important;
+}
+
+header.top.qb-app-header[data-cockpit="true"] .qb-header-brand-mark {
+  width: 34px;
+  height: 34px;
+  font-size: 12px;
+}
+
+.qb-cockpit-toggle {
+  padding-inline: 11px !important;
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+}
+
+/* 4. Transições Universais AXON entre Abas e Views */
+.qb-axon-transition-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  width: 100vw;
+  height: 100dvh;
+  pointer-events: none;
+}
+
+#main.qb-axon-view-entering {
+  animation: qb-axon-view-enter 0.38s cubic-bezier(0.2, 0.85, 0.25, 1) both;
+}
+
+@keyframes qb-axon-view-enter {
+  from {
+    opacity: 0.18;
+    transform: translateY(10px) scale(0.992);
+    filter: brightness(1.18);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: brightness(1);
+  }
+}
+
+/* 5. Cards e KPIs do Dashboard com Acabamento Orbital AXON */
+:root[data-theme="dark"] :is(.stat, .due, .cap, .qb-analytic-kpi) {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(116, 136, 204, 0.26);
+  background:
+    radial-gradient(ellipse 90% 80% at 50% -25%, rgba(76, 118, 255, 0.13), transparent 70%),
+    rgba(21, 24, 36, 0.86);
+  backdrop-filter: blur(10px);
+}
+
+:root[data-theme="dark"] .stat::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1px dashed rgba(142, 168, 255, 0.22);
+  pointer-events: none;
+}
+
+/* 6. Gaveta Radial Rápida (Quick Radial Command Overlay) */
+.qb-quick-radial-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  padding: clamp(12px, 3vw, 28px);
+  background:
+    radial-gradient(circle at center, rgba(24, 38, 88, 0.55) 0%, rgba(7, 9, 18, 0.88) 72%),
+    rgba(6, 8, 15, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  animation: qb-axon-modal-in 0.24s cubic-bezier(0.2, 0.8, 0.25, 1) both;
+}
+
+.qb-quick-radial-backdrop[hidden] {
+  display: none !important;
+}
+
+.qb-quick-radial-dialog {
+  position: relative;
+  width: min(100%, 760px);
+  max-height: 94dvh;
+  overflow-y: auto;
+  border-radius: 28px;
+  border: 1px solid rgba(145, 175, 255, 0.32);
+  background: rgba(11, 14, 26, 0.72);
+  box-shadow: 0 28px 90px -20px rgba(0, 0, 0, 0.92), 0 0 60px rgba(68, 114, 255, 0.22);
+  padding: 12px 16px 18px;
+}
+
+.qb-quick-radial-close {
+  position: sticky;
+  top: 8px;
+  float: right;
+  z-index: 10;
+  border-radius: 999px;
+  border: 1px solid rgba(156, 184, 255, 0.42);
+  background: rgba(20, 27, 48, 0.88);
+  color: #eef4ff;
+  padding: 6px 13px;
+  font: 600 12px/1.2 var(--mono);
+  cursor: pointer;
+}
+
+.qb-quick-radial-close:hover {
+  background: rgba(45, 68, 128, 0.95);
+  border-color: #b8d0ff;
+}
+
+@keyframes qb-axon-nav-orbit {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes qb-axon-modal-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+:root[data-qb-ambient="still"] header.top.qb-app-header nav.tabs.qb-primary-nav::before,
+:root[data-qb-ambient="still"] .qb-header-brand-mark::after {
+  animation-play-state: paused !important;
+}
+
+@media (max-width: 720px) {
+  header.top.qb-app-header nav.tabs.qb-primary-nav {
+    border-radius: 20px;
+    padding: 6px;
+  }
+  header.top.qb-app-header[data-cockpit="true"] .qb-header-row {
+    border-radius: 20px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header.top.qb-app-header nav.tabs.qb-primary-nav::before,
+  .qb-header-brand-mark::after,
+  #main.qb-axon-view-entering,
+  .qb-quick-radial-backdrop {
+    animation: none !important;
+    transition: none !important;
+  }
+}
