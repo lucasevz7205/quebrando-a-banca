@@ -134,6 +134,12 @@ const { messages, sendMessage, isLoading } = useChat({
 
 For tasks that create, review or classify examination questions, first read `docs/PROTOCOLO_EDITORIAL_CEBRASPE.md` and the project's current pedagogical rules. Preserve C/E format, existing F1–F10 and V1–V4 identifiers, question provenance and all student history. This is an editorial protocol, not model training or validated frequency data. Do not automatically generate questions or change production records merely because this document exists.
 
+### Integrated editorial engine — mandatory for new content
+
+When creating or enhancing **maps, revision summaries, flashcards or original C/E questions**, use `src/lib/editorial-engine.js`: `buildEditorialPrompts` for the shared source and structure, `auditEditorialBundle` or `auditEditorialCollection` for deterministic validation, and `enumerateNodes` for the graph. All four products must use the **same stable topic ID and real map-node IDs**; never assign a question or flashcard to a merely similar concept. The interactive read-only QA panel is `src/components/qb/EditorialQualityStudio.jsx` inside `/questoes`.
+
+Questions built with a supplied topic/node pair use strict **cebraspe-3.0** import rules: literal evidence in provided source, decisive substring in question, C/E F1–F10 or V1–V4, blind review without disagreement, and human declarations for original-source verification, key, univocity and node remission. The older **cebraspe-2.0** records, including the 160 RF-2.1–2.8 drafts, are preserved without automatic upgrades, publication or student-history mutations. Automated audit verifies *structure only*, never factual correctness, source authenticity, plagiarism or real CEBRASPE calibration. Treat URLs and bibliographies as leads until checked in their original documents. Never spend IA credits without an explicit click/authorization.
+
 ## Working Notes
 
 - `npm run dev` runs the TanStack dev server (Vite); server code runs in `workerd`, exactly as in production.
