@@ -110,7 +110,8 @@ export function auditEditorialBundle(revision,questions=[]){
     "Equilíbrio 50/50 é escolha do lote, não distribuição oficial do CEBRASPE.");
  }
  return {version:EDITORIAL_VERSION,topicId,title:text(doc.titulo),counts,blockers,warnings,
-   canPublish:blockers.length===0&&qs.length>0&&counts.reviewed===qs.length,
+   canPublish:blockers.length===0&&qs.length>0&&counts.reviewed===qs.length&&
+     !warnings.some(w=>["SOURCE_VERIFICATION","BLIND_REVIEW"].includes(w.code)),
    caveat:"Auditoria automática verifica estrutura e referências declaradas, não autenticidade da fonte, acerto do gabarito nem equivalência com a banca."};
 }
 export function auditEditorialCollection(revisions,questions){
