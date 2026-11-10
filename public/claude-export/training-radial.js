@@ -97,7 +97,10 @@ function arc(radius,start,end){
 function render(model,selection={}){
   const selected=model?.matters?.find(m=>m.id===selection.matter)||null;
   const matterMode=!selected;
-  const items=matterMode?model?.matters||[]:selected.topics;
+  // The training ring must not bury real practice under pages of empty topics.
+  // The full edital remains available in the Edital tab, without hiding data.
+  const items=matterMode?model?.matters||[]:selected.topics.filter(t=>t.questionIds.length);
+  const withoutQuestions=selected?selected.topics.length-items.length:0;
   const totalPages=Math.max(1,Math.ceil(items.length/PAGE_SIZE));
   const page=Math.max(0,Math.min(totalPages-1,Math.floor(Number(selection.page)||0)));
   const visible=items.slice(page*PAGE_SIZE,(page+1)*PAGE_SIZE);
@@ -156,7 +159,7 @@ function render(model,selection={}){
     +'</div></div>'
     +(selected?'<div class="qb-train-quick-jump"><label for="qb-train-topic-jump">Ir direto ao assunto</label>'
       +'<select id="qb-train-topic-jump" data-train-topic-select><option value="">Selecione…</option>'
-      +selected.topics.map(t=>'<option value="'+esc(t.id)+'" '+(t.questionIds.length?'':'disabled')+'>'+esc((t.num?t.num+' · ':'')+t.title)+' ('+t.stats.total+')</option>').join("")
+      +items.map(t=>'<option value="'+esc(t.id)+'">'+esc((t.num?t.num+' · ':'')+t.title)+' ('+t.stats.total+')</option>').join("")
       +'</select></div>':'')
     +'<div class="qb-radial-stage qb-train-stage" data-radial-stage>'
     +'<div class="qb-radial-annulus" aria-hidden="true"><div class="qb-radial-annulus-light"></div><div class="qb-radial-annulus-texture"></div><div class="qb-radial-annulus-filaments"></div></div>'
@@ -181,7 +184,9 @@ function render(model,selection={}){
     +'</div>'
     +pages
     +'<p class="qb-train-bottom-note">Passe o cursor ou use as setas para ver o desempenho de cada '+(matterMode?'matéria':'assunto')
-    +' no centro. A barra usa a última resposta de cada questão; itens não feitos ficam fora do percentual.</p></section>';
+    +' no centro. A barra usa a última resposta de cada questão; itens não feitos ficam fora do percentual.'
+    +(withoutQuestions?' '+withoutQuestions+' assuntos do edital ainda não têm questões neste banco e não aparecem no círculo.':'')
+    +'</p></section>';
 }
 function wire(container,handlers={}){
   const section=container?.querySelector(".qb-train-hub");
