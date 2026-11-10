@@ -300,100 +300,100 @@
         "mapaNoId": "rf-2-1-r2-2"
       },
       {
-        "q": "Por que uma saída de ASR deve ser tratada como hipótese?",
+        "q": "Uma legenda automática registra “deferido” onde o orador disse “indeferido”.\n\nPor que uma saída de ASR deve ser tratada como hipótese?",
         "a": [
-          "O reconhecimento automático transforma sinais de fala em uma hipótese textual. Fluência e boa ortografia não demonstram fidelidade ao áudio.",
-          "Caso: Uma legenda automática registra “deferido” onde o orador disse “indeferido”."
+          "Uma saída gramaticalmente correta de ASR pode conter uma troca lexical que inverta o resultado anunciado.",
+          "O reconhecimento automático transforma sinais de fala em uma hipótese textual. Fluência e boa ortografia não demonstram fidelidade ao áudio."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
         "tema": "Quem gera o texto?",
         "mapaNoId": "rf-2-1-r1-1"
       },
       {
-        "q": "Como classificar o ASR que processa um arquivo gravado?",
+        "q": "Uma audiência é legendada ao vivo e seu arquivo é transcrito novamente no dia seguinte.\n\nComo classificar o ASR que processa um arquivo gravado?",
         "a": [
-          "Tempo real descreve quando o processamento ocorre. A origem gravada da entrada permite também classificá-lo como degravação.",
-          "Caso: Uma audiência é legendada ao vivo e seu arquivo é transcrito novamente no dia seguinte."
+          "O processamento automático do arquivo de uma audiência pode integrar sua degravação.",
+          "Tempo real descreve quando o processamento ocorre. A origem gravada da entrada permite também classificá-lo como degravação."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
         "tema": "Quem gera o texto?",
         "mapaNoId": "rf-2-1-r1-1-1"
       },
       {
-        "q": "Qual elemento da entrada caracteriza a degravação?",
+        "q": "Uma equipe converte a trilha sonora de uma sessão arquivada em vídeo em texto.\n\nQual elemento da entrada caracteriza a degravação?",
         "a": [
-          "A degravação é definida pelo ponto de partida gravado. O suporte pode conter áudio sozinho ou associado a vídeo.",
-          "Caso: Uma equipe converte a trilha sonora de uma sessão arquivada em vídeo em texto."
+          "A conversão em texto da fala contida em um vídeo gravado é uma atividade de degravação.",
+          "A degravação é definida pelo ponto de partida gravado. O suporte pode conter áudio sozinho ou associado a vídeo."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
         "tema": "De onde se parte?",
         "mapaNoId": "rf-2-1-r1-2"
       },
       {
-        "q": "O uso de ASR impede chamar o trabalho de degravação assistida?",
+        "q": "Dois profissionais recebem a mesma gravação; um digita do zero, outro corrige um rascunho de ASR.\n\nO uso de ASR impede chamar o trabalho de degravação assistida?",
         "a": [
-          "A produção manual digita a partir da escuta. A assistida usa uma primeira hipótese automática, que continua sujeita a conferência.",
-          "Caso: Dois profissionais recebem a mesma gravação; um digita do zero, outro corrige um rascunho de ASR."
+          "O trabalho dos dois profissionais pode ser classificado como degravação, embora difira a forma de obter a primeira versão.",
+          "A produção manual digita a partir da escuta. A assistida usa uma primeira hipótese automática, que continua sujeita a conferência."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
         "tema": "De onde se parte?",
         "mapaNoId": "rf-2-1-r1-2-1"
       },
       {
-        "q": "Uma transcrição manual também admite revisão humana?",
+        "q": "Um revisor compara uma nota digitada manualmente com a gravação original.\n\nUma transcrição manual também admite revisão humana?",
         "a": [
-          "Revisar pressupõe uma versão a conferir, independentemente de sua origem manual ou automática. A pós-edição da hipótese de ASR é uma modalidade desse trabalho.",
-          "Caso: Um revisor compara uma nota digitada manualmente com a gravação original."
+          "A conferência de uma nota manual com o áudio integra a revisão humana.",
+          "Revisar pressupõe uma versão a conferir, independentemente de sua origem manual ou automática. A pós-edição da hipótese de ASR é uma modalidade desse trabalho."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
         "tema": "O que se faz com o texto?",
         "mapaNoId": "rf-2-1-r1-3"
       },
       {
-        "q": "Qual limite separa correção de reconhecimento e alteração de conteúdo?",
+        "q": "O orador cita “Recife”; o sistema escreve “Resende”, e a gravação permite identificar a cidade.\n\nQual limite separa correção de reconhecimento e alteração de conteúdo?",
         "a": [
-          "Corrigir reconhecimento significa recuperar o que foi dito. Corrigir o mérito da declaração pode atribuir ao orador algo que ele não afirmou.",
-          "Caso: O orador cita “Recife”; o sistema escreve “Resende”, e a gravação permite identificar a cidade."
+          "Substituir “Resende” por “Recife”, confirmado na gravação, recupera a declaração.",
+          "Corrigir reconhecimento significa recuperar o que foi dito. Corrigir o mérito da declaração pode atribuir ao orador algo que ele não afirmou."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
         "tema": "O que se faz com o texto?",
         "mapaNoId": "rf-2-1-r1-3-1"
       },
       {
-        "q": "O que orienta a preservação de marcas da oralidade?",
+        "q": "Uma transcrição destinada a estudar hesitações registra pausas e repetições relevantes.\n\nO que orienta a preservação de marcas da oralidade?",
         "a": [
-          "O registro literal conserva marcas da fala conforme a finalidade e as convenções adotadas. A escolha do produto deve anteceder a decisão de retirar hesitações.",
-          "Caso: Uma transcrição destinada a estudar hesitações registra pausas e repetições relevantes."
+          "A finalidade do registro influencia a decisão de manter hesitações e repetições.",
+          "O registro literal conserva marcas da fala conforme a finalidade e as convenções adotadas. A escolha do produto deve anteceder a decisão de retirar hesitações."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
         "tema": "Literal",
         "mapaNoId": "rf-2-1-r2-1"
       },
       {
-        "q": "Como representar uma autocorreção explícita em registro literal?",
+        "q": "O orador diz “foram vinte, corrijo, trinta participantes”.\n\nComo representar uma autocorreção explícita em registro literal?",
         "a": [
-          "Uma autocorreção explícita integra a sequência da fala. Em registro literal, a formulação inicial e a retificação podem ser relevantes.",
-          "Caso: O orador diz “foram vinte, corrijo, trinta participantes”."
+          "Conservar “vinte, corrijo, trinta” pode representar fielmente a autocorreção do orador.",
+          "Uma autocorreção explícita integra a sequência da fala. Em registro literal, a formulação inicial e a retificação podem ser relevantes."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
         "tema": "Literal",
         "mapaNoId": "rf-2-1-r2-1-1"
       },
       {
-        "q": "Por que o rótulo “limpa” exige conhecer a convenção adotada?",
+        "q": "Um “né” incidental é retirado de uma versão limpa sem modificar a informação.\n\nPor que o rótulo “limpa” exige conhecer a convenção adotada?",
         "a": [
-          "Limpar a oralidade pode retirar tropeços sem função e organizar a pontuação. O alcance dessa intervenção depende do padrão editorial adotado.",
-          "Caso: Um “né” incidental é retirado de uma versão limpa sem modificar a informação."
+          "Uma convenção de versão limpa pode permitir retirar um bordão incidental preservando a informação.",
+          "Limpar a oralidade pode retirar tropeços sem função e organizar a pontuação. O alcance dessa intervenção depende do padrão editorial adotado."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
         "tema": "Limpa ou editada",
         "mapaNoId": "rf-2-1-r2-2"
       },
       {
-        "q": "Que teste deve preceder a exclusão de um trecho na versão limpa?",
+        "q": "“Apoio a proposta, salvo o artigo terceiro” não equivale a “apoio a proposta”.\n\nQue teste deve preceder a exclusão de um trecho na versão limpa?",
         "a": [
-          "A fidelidade limita a limpeza: não se eliminam ressalvas ou repetições que desempenhem função de sentido. Primeiro identifique a função, depois decida a intervenção.",
-          "Caso: “Apoio a proposta, salvo o artigo terceiro” não equivale a “apoio a proposta”."
+          "A retirada de “salvo o artigo terceiro” amplia o alcance do apoio expresso na declaração.",
+          "A fidelidade limita a limpeza: não se eliminam ressalvas ou repetições que desempenhem função de sentido. Primeiro identifique a função, depois decida a intervenção."
         ],
         "src": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
         "tema": "Limpa ou editada",
@@ -771,100 +771,100 @@
         "mapaNoId": "rf-2-2-r3-1-1"
       },
       {
-        "q": "Qual é o limite de preparar um áudio incompleto?",
+        "q": "O áudio tem ruído e um intervalo em que o microfone ficou desligado.\n\nQual é o limite de preparar um áudio incompleto?",
         "a": [
-          "A preparação organiza o sinal para processamento, sem substituir a informação ausente. Uma etapa posterior não recupera necessariamente fala que não foi captada.",
-          "Caso: O áudio tem ruído e um intervalo em que o microfone ficou desligado."
+          "Melhorar o sinal disponível não assegura recuperar a fala ocorrida com o microfone desligado.",
+          "A preparação organiza o sinal para processamento, sem substituir a informação ausente. Uma etapa posterior não recupera necessariamente fala que não foi captada."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
         "tema": "Preparar áudio",
         "mapaNoId": "rf-2-2-r1-1"
       },
       {
-        "q": "O que a VAD fornece antes da transcrição?",
+        "q": "Um componente marca os intervalos 00:10–00:18 e 00:25–00:40 como contendo fala.\n\nO que a VAD fornece antes da transcrição?",
         "a": [
-          "VAD detecta regiões de atividade vocal e auxilia a segmentação. Detectar fala não informa, por si só, a identidade civil do falante.",
-          "Caso: Um componente marca os intervalos 00:10–00:18 e 00:25–00:40 como contendo fala."
+          "A marcação dos intervalos com voz pode orientar quais segmentos serão processados.",
+          "VAD detecta regiões de atividade vocal e auxilia a segmentação. Detectar fala não informa, por si só, a identidade civil do falante."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
         "tema": "Preparar áudio",
         "mapaNoId": "rf-2-2-r1-1-1"
       },
       {
-        "q": "O que diferencia uma hipótese automática de uma versão validada?",
+        "q": "O sistema produz um texto fluente em poucos segundos, sem revisão.\n\nO que diferencia uma hipótese automática de uma versão validada?",
         "a": [
-          "A saída do reconhecedor é uma hipótese. Sua validação exige confrontar o texto e as informações de contexto com a evidência disponível.",
-          "Caso: O sistema produz um texto fluente em poucos segundos, sem revisão."
+          "A rapidez da saída não demonstra que nomes e números tenham sido reconhecidos corretamente.",
+          "A saída do reconhecedor é uma hipótese. Sua validação exige confrontar o texto e as informações de contexto com a evidência disponível."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
         "tema": "Produzir hipótese",
         "mapaNoId": "rf-2-2-r1-2"
       },
       {
-        "q": "Como passar de “Falante 2” ao nome de uma pessoa?",
+        "q": "A transcrição alterna os rótulos “Falante 1” e “Falante 2”.\n\nComo passar de “Falante 2” ao nome de uma pessoa?",
         "a": [
-          "A diarização atribui segmentos a rótulos de falantes. Associar um rótulo a um nome exige evidência adicional, como conferência do vídeo ou da identificação da sessão.",
-          "Caso: A transcrição alterna os rótulos “Falante 1” e “Falante 2”."
+          "A associação de “Falante 2” a um parlamentar pode exigir conferir o vídeo da sessão.",
+          "A diarização atribui segmentos a rótulos de falantes. Associar um rótulo a um nome exige evidência adicional, como conferência do vídeo ou da identificação da sessão."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
         "tema": "Produzir hipótese",
         "mapaNoId": "rf-2-2-r1-2-1"
       },
       {
-        "q": "Quais dois fatores devem orientar a priorização da revisão?",
+        "q": "Um trecho de baixa confiança contém um bordão; outro, de alta confiança, contém o número de uma proposição.\n\nQuais dois fatores devem orientar a priorização da revisão?",
         "a": [
-          "A triagem prioriza trechos pelo risco e pelos sinais disponíveis. O escore de confiança ajuda a ordenar trabalho, mas não substitui a conferência de conteúdo sensível.",
-          "Caso: Um trecho de baixa confiança contém um bordão; outro, de alta confiança, contém o número de uma proposição."
+          "O número da proposição pode merecer revisão prioritária mesmo com escore superior ao do bordão.",
+          "A triagem prioriza trechos pelo risco e pelos sinais disponíveis. O escore de confiança ajuda a ordenar trabalho, mas não substitui a conferência de conteúdo sensível."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
         "tema": "Triagem",
         "mapaNoId": "rf-2-2-r2-1"
       },
       {
-        "q": "Por que conferir uma negação mesmo com alta confiança?",
+        "q": "O áudio diz “não aprovo”, enquanto a hipótese registra “aprovo” com alta confiança.\n\nPor que conferir uma negação mesmo com alta confiança?",
         "a": [
-          "Palavras curtas e números podem decidir o sentido de uma declaração. A confiança atribuída pelo sistema não determina a gravidade da eventual troca.",
-          "Caso: O áudio diz “não aprovo”, enquanto a hipótese registra “aprovo” com alta confiança."
+          "A omissão de “não” pode inverter a posição do orador apesar do escore alto.",
+          "Palavras curtas e números podem decidir o sentido de uma declaração. A confiança atribuída pelo sistema não determina a gravidade da eventual troca."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
         "tema": "Triagem",
         "mapaNoId": "rf-2-2-r2-1-1"
       },
       {
-        "q": "Por que a revisão ortográfica não basta para validar a nota?",
+        "q": "Uma nota foi pontuada e recebeu correção ortográfica, mas não foi comparada ao áudio.\n\nPor que a revisão ortográfica não basta para validar a nota?",
         "a": [
-          "Validar é verificar a adequação da versão ao registro e ao padrão exigido. Corrigir ortografia não esgota a conferência de autoria, números e sentido.",
-          "Caso: Uma nota foi pontuada e recebeu correção ortográfica, mas não foi comparada ao áudio."
+          "Uma versão ortograficamente correta ainda pode atribuir uma fala à pessoa errada.",
+          "Validar é verificar a adequação da versão ao registro e ao padrão exigido. Corrigir ortografia não esgota a conferência de autoria, números e sentido."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
         "tema": "Validação",
         "mapaNoId": "rf-2-2-r2-2"
       },
       {
-        "q": "Para que servem versão e marca temporal na revisão?",
+        "q": "A equipe registra a versão anterior, a nova redação e o minuto de uma correção.\n\nPara que servem versão e marca temporal na revisão?",
         "a": [
-          "A trilha de revisão preserva alterações, responsáveis e referências temporais úteis à conferência. Rastrear uma decisão permite reavaliá-la; não prova automaticamente que ela esteja correta.",
-          "Caso: A equipe registra a versão anterior, a nova redação e o minuto de uma correção."
+          "Registrar o minuto da correção facilita retornar ao trecho que a motivou.",
+          "A trilha de revisão preserva alterações, responsáveis e referências temporais úteis à conferência. Rastrear uma decisão permite reavaliá-la; não prova automaticamente que ela esteja correta."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
         "tema": "Validação",
         "mapaNoId": "rf-2-2-r2-2-1"
       },
       {
-        "q": "O que deve vir entre detectar recorrência e escolher uma correção técnica?",
+        "q": "O mesmo nome de comissão aparece incorreto em várias sessões.\n\nO que deve vir entre detectar recorrência e escolher uma correção técnica?",
         "a": [
-          "Erros recorrentes permitem identificar necessidades de melhoria. A ação depende da causa: glossário, regra editorial, configuração ou treinamento são intervenções distintas.",
-          "Caso: O mesmo nome de comissão aparece incorreto em várias sessões."
+          "A repetição do erro justifica investigar sua causa antes de escolher a intervenção.",
+          "Erros recorrentes permitem identificar necessidades de melhoria. A ação depende da causa: glossário, regra editorial, configuração ou treinamento são intervenções distintas."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
         "tema": "Correção recorrente",
         "mapaNoId": "rf-2-2-r3-1"
       },
       {
-        "q": "Acrescentar um nome ao glossário equivale a retreinar o ASR?",
+        "q": "Um revisor corrige um nome e o acrescenta ao glossário da equipe.\n\nAcrescentar um nome ao glossário equivale a retreinar o ASR?",
         "a": [
-          "Atualizar o glossário acrescenta uma referência lexical confirmada. A aplicação dessa referência ao reconhecimento depende da integração; corrigir o texto não altera automaticamente os pesos do ASR.",
-          "Caso: Um revisor corrige um nome e o acrescenta ao glossário da equipe."
+          "O glossário atualizado pode apoiar sessões posteriores, conforme seu uso no fluxo.",
+          "Atualizar o glossário acrescenta uma referência lexical confirmada. A aplicação dessa referência ao reconhecimento depende da integração; corrigir o texto não altera automaticamente os pesos do ASR."
         ],
         "src": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
         "tema": "Correção recorrente",
@@ -1279,100 +1279,100 @@
         "mapaNoId": "rf-2-3-r1-2-1"
       },
       {
-        "q": "Como uma omissão pode comprometer fidelidade e completude?",
+        "q": "A fala condiciona o apoio a uma emenda, mas a versão registra apenas o apoio.\n\nComo uma omissão pode comprometer fidelidade e completude?",
         "a": [
-          "Fidelidade exige correspondência de sentido com a fala; completude verifica se o conteúdo necessário foi registrado. Um texto curto e elegante pode omitir uma condição decisiva.",
-          "Caso: A fala condiciona o apoio a uma emenda, mas a versão registra apenas o apoio."
+          "A retirada da condição pode ampliar indevidamente o alcance do apoio registrado.",
+          "Fidelidade exige correspondência de sentido com a fala; completude verifica se o conteúdo necessário foi registrado. Um texto curto e elegante pode omitir uma condição decisiva."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
         "tema": "Fidelidade e completude",
         "mapaNoId": "rf-2-3-r1-1"
       },
       {
-        "q": "Por que um erro lexical isolado pode ser crítico?",
+        "q": "Em uma nota de mil palavras, “rejeitado” foi substituído por “aprovado”.\n\nPor que um erro lexical isolado pode ser crítico?",
         "a": [
-          "A troca de um termo pode inverter uma decisão inteira. A contagem lexical do erro não expressa sozinha a gravidade institucional.",
-          "Caso: Em uma nota de mil palavras, “rejeitado” foi substituído por “aprovado”."
+          "Uma substituição pode alterar o resultado de uma votação registrado no documento.",
+          "A troca de um termo pode inverter uma decisão inteira. A contagem lexical do erro não expressa sozinha a gravidade institucional."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
         "tema": "Fidelidade e completude",
         "mapaNoId": "rf-2-3-r1-1-1"
       },
       {
-        "q": "Qual dimensão falha quando a legenda correta chega atrasada?",
+        "q": "As legendas estão corretas, mas chegam vinte segundos depois da fala.\n\nQual dimensão falha quando a legenda correta chega atrasada?",
         "a": [
-          "Legibilidade trata da compreensão do texto; sincronismo relaciona sua apresentação ao momento da fala. As duas dimensões devem ser avaliadas separadamente.",
-          "Caso: As legendas estão corretas, mas chegam vinte segundos depois da fala."
+          "O atraso descrito indica problema de sincronismo mesmo com palavras corretas.",
+          "Legibilidade trata da compreensão do texto; sincronismo relaciona sua apresentação ao momento da fala. As duas dimensões devem ser avaliadas separadamente."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
         "tema": "Legibilidade e sincronismo",
         "mapaNoId": "rf-2-3-r1-2"
       },
       {
-        "q": "Como a pontuação pode escapar da WER e ainda alterar o sentido?",
+        "q": "Dois textos têm as mesmas palavras, mas usam vírgulas que produzem leituras diferentes.\n\nComo a pontuação pode escapar da WER e ainda alterar o sentido?",
         "a": [
-          "A pontuação organiza relações de sentido e pode alterar o alcance de uma negação. Sua revisão exige contexto e escuta, e sua avaliação depende também do pré-processamento usado na métrica.",
-          "Caso: Dois textos têm as mesmas palavras, mas usam vírgulas que produzem leituras diferentes."
+          "Se a avaliação remove a pontuação antes do cálculo, a diferença de vírgulas pode não alterar a WER.",
+          "A pontuação organiza relações de sentido e pode alterar o alcance de uma negação. Sua revisão exige contexto e escuta, e sua avaliação depende também do pré-processamento usado na métrica."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
         "tema": "Legibilidade e sincronismo",
         "mapaNoId": "rf-2-3-r1-2-1"
       },
       {
-        "q": "Qual é a WER de 4S, 2D e 2I para 80 palavras de referência?",
+        "q": "Uma referência de 80 palavras apresenta, no alinhamento, 4 substituições, 2 exclusões e 2 inserções.\n\nQual é a WER de 4S, 2D e 2I para 80 palavras de referência?",
         "a": [
-          "WER soma substituições, exclusões e inserções e divide pelo número de palavras da referência. Antes do cálculo, fixe a tokenização e os critérios de comparação.",
-          "Caso: Uma referência de 80 palavras apresenta, no alinhamento, 4 substituições, 2 exclusões e 2 inserções."
+          "A WER do exemplo é 10%, pois oito erros são divididos por oitenta palavras.",
+          "WER soma substituições, exclusões e inserções e divide pelo número de palavras da referência. Antes do cálculo, fixe a tokenização e os critérios de comparação."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
         "tema": "WER",
         "mapaNoId": "rf-2-3-r2-1"
       },
       {
-        "q": "Como inserções tornam possível WER superior a 100%?",
+        "q": "Um alinhamento com referência de 10 palavras contabiliza 12 inserções, sem substituições ou exclusões.\n\nComo inserções tornam possível WER superior a 100%?",
         "a": [
-          "Inserções acrescentam erros sem aumentar o número de palavras da referência. Por isso a WER pode superar 100%; não se deve truncá-la como se fosse uma proporção de palavras de referência erradas.",
-          "Caso: Um alinhamento com referência de 10 palavras contabiliza 12 inserções, sem substituições ou exclusões."
+          "A WER do alinhamento apresentado é 120%.",
+          "Inserções acrescentam erros sem aumentar o número de palavras da referência. Por isso a WER pode superar 100%; não se deve truncá-la como se fosse uma proporção de palavras de referência erradas."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
         "tema": "WER",
         "mapaNoId": "rf-2-3-r2-1-1"
       },
       {
-        "q": "Qual distinção separa CER e DER?",
+        "q": "Uma avaliação deseja separar grafia das palavras e atribuição temporal de quem falou.\n\nQual distinção separa CER e DER?",
         "a": [
-          "CER avalia edições no nível de caracteres. DER avalia erros de diarização segundo o protocolo adotado, incluindo a atribuição temporal de falantes. As unidades e os objetos diferem.",
-          "Caso: Uma avaliação deseja separar grafia das palavras e atribuição temporal de quem falou."
+          "A CER permite avaliar discrepâncias em caracteres, enquanto a DER se dirige à diarização.",
+          "CER avalia edições no nível de caracteres. DER avalia erros de diarização segundo o protocolo adotado, incluindo a atribuição temporal de falantes. As unidades e os objetos diferem."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
         "tema": "CER e DER",
         "mapaNoId": "rf-2-3-r2-2"
       },
       {
-        "q": "Uma WER textual zero garante autoria correta?",
+        "q": "As mesmas palavras e a mesma ordem foram mantidas, mas os rótulos externos de dois falantes foram trocados.\n\nUma WER textual zero garante autoria correta?",
         "a": [
-          "A WER textual convencional compara palavras, não identidades civis. Se a sequência verbal foi mantida e os nomes dos falantes são metadados externos, a troca de autoria pode escapar desse cálculo.",
-          "Caso: As mesmas palavras e a mesma ordem foram mantidas, mas os rótulos externos de dois falantes foram trocados."
+          "A troca dos rótulos externos pode coexistir com WER textual zero no cenário descrito.",
+          "A WER textual convencional compara palavras, não identidades civis. Se a sequência verbal foi mantida e os nomes dos falantes são metadados externos, a troca de autoria pode escapar desse cálculo."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
         "tema": "CER e DER",
         "mapaNoId": "rf-2-3-r2-2-1"
       },
       {
-        "q": "Por que notas com igual WER podem ter riscos diferentes?",
+        "q": "Duas notas têm a mesma quantidade de erros: uma erra um bordão, outra o resultado de uma deliberação.\n\nPor que notas com igual WER podem ter riscos diferentes?",
         "a": [
-          "A severidade decorre do efeito do erro sobre o produto e seus usos. Critérios explícitos ajudam revisores a distinguir falhas críticas, maiores e menores com consistência.",
-          "Caso: Duas notas têm a mesma quantidade de erros: uma erra um bordão, outra o resultado de uma deliberação."
+          "As notas podem demandar prioridades distintas de correção, apesar da mesma contagem de erros.",
+          "A severidade decorre do efeito do erro sobre o produto e seus usos. Critérios explícitos ajudam revisores a distinguir falhas críticas, maiores e menores com consistência."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
         "tema": "Crítico, maior e menor",
         "mapaNoId": "rf-2-3-r3-1"
       },
       {
-        "q": "O que torna crítica a troca de um número de proposição?",
+        "q": "A fala menciona o PL 315, e a nota registra o PL 351, existente e sobre tema diferente.\n\nO que torna crítica a troca de um número de proposição?",
         "a": [
-          "Números identificadores podem remeter a objetos distintos. Uma diferença gráfica pequena deve ser conferida pelo efeito da mudança sobre a referência.",
-          "Caso: A fala menciona o PL 315, e a nota registra o PL 351, existente e sobre tema diferente."
+          "A existência real do PL 351 não torna fiel sua inclusão no lugar do PL 315 pronunciado.",
+          "Números identificadores podem remeter a objetos distintos. Uma diferença gráfica pequena deve ser conferida pelo efeito da mudança sobre a referência."
         ],
         "src": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
         "tema": "Crítico, maior e menor",
@@ -1758,100 +1758,100 @@
         "mapaNoId": "rf-2-4-r2-2-1"
       },
       {
-        "q": "O cabeçalho da sessão basta para identificar os autores das falas?",
+        "q": "Uma nota identifica a comissão e a data, mas seus turnos não têm indicação de orador.\n\nO cabeçalho da sessão basta para identificar os autores das falas?",
         "a": [
-          "A identificação da sessão situa o registro: órgão, reunião e dados exigidos pelo padrão editorial. Esse cabeçalho não substitui a atribuição de cada fala.",
-          "Caso: Uma nota identifica a comissão e a data, mas seus turnos não têm indicação de orador."
+          "O cabeçalho pode estar correto e ainda faltar atribuição de autoria nos turnos.",
+          "A identificação da sessão situa o registro: órgão, reunião e dados exigidos pelo padrão editorial. Esse cabeçalho não substitui a atribuição de cada fala."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
         "tema": "Identificação da sessão",
         "mapaNoId": "rf-2-4-r1-1"
       },
       {
-        "q": "Por que a sequência dos turnos deve permanecer reconhecível?",
+        "q": "Uma pergunta é seguida de resposta e, depois, de um esclarecimento do primeiro orador.\n\nPor que a sequência dos turnos deve permanecer reconhecível?",
         "a": [
-          "O corpo do registro acompanha o andamento dos trabalhos e delimita os turnos. Reorganizar por assunto pode alterar a sequência documentada.",
-          "Caso: Uma pergunta é seguida de resposta e, depois, de um esclarecimento do primeiro orador."
+          "Manter pergunta, resposta e esclarecimento na sequência ajuda a interpretar as intervenções.",
+          "O corpo do registro acompanha o andamento dos trabalhos e delimita os turnos. Reorganizar por assunto pode alterar a sequência documentada."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
         "tema": "Identificação da sessão",
         "mapaNoId": "rf-2-4-r1-1-1"
       },
       {
-        "q": "Qual evidência deve sustentar a identificação de um turno?",
+        "q": "O sistema entrega “Orador 1”; a equipe dispõe de vídeo e lista de presença para conferir o segmento.\n\nQual evidência deve sustentar a identificação de um turno?",
         "a": [
-          "A identificação do turno vincula o segmento a quem efetivamente falou. Rótulos automáticos precisam ser resolvidos com evidências, não com a posição de um nome numa lista.",
-          "Caso: O sistema entrega “Orador 1”; a equipe dispõe de vídeo e lista de presença para conferir o segmento."
+          "A equipe pode usar o vídeo para confirmar a correspondência entre rótulo e pessoa.",
+          "A identificação do turno vincula o segmento a quem efetivamente falou. Rótulos automáticos precisam ser resolvidos com evidências, não com a posição de um nome numa lista."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
         "tema": "Identificação do turno",
         "mapaNoId": "rf-2-4-r1-2"
       },
       {
-        "q": "Quem deve ser identificado quando a presidência muda durante a sessão?",
+        "q": "O vice-presidente assume a condução da sessão durante a ausência do presidente.\n\nQuem deve ser identificado quando a presidência muda durante a sessão?",
         "a": [
-          "O registro da presidência acompanha quem exerce a função em cada intervalo. A titularidade habitual do cargo não resolve sozinha a autoria de uma intervenção.",
-          "Caso: O vice-presidente assume a condução da sessão durante a ausência do presidente."
+          "A atribuição do trecho deve refletir quem efetivamente o conduziu.",
+          "O registro da presidência acompanha quem exerce a função em cada intervalo. A titularidade habitual do cargo não resolve sozinha a autoria de uma intervenção."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
         "tema": "Identificação do turno",
         "mapaNoId": "rf-2-4-r1-2-1"
       },
       {
-        "q": "Como distinguir indicação editorial de conteúdo verbal?",
+        "q": "O registro intercala a marca “(Pausa.)” entre dois turnos.\n\nComo distinguir indicação editorial de conteúdo verbal?",
         "a": [
-          "Uma ocorrência de plenário é registrada conforme a convenção e a evidência. A indicação de uma pausa ou manifestação não é uma fala atribuída ao orador.",
-          "Caso: O registro intercala a marca “(Pausa.)” entre dois turnos."
+          "A marca “(Pausa.)” pode indicar uma ocorrência sem integrar o conteúdo verbal de um turno.",
+          "Uma ocorrência de plenário é registrada conforme a convenção e a evidência. A indicação de uma pausa ou manifestação não é uma fala atribuída ao orador."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
         "tema": "Ocorrência de plenário",
         "mapaNoId": "rf-2-4-r2-1"
       },
       {
-        "q": "O que registrar quando se confirma a intervenção, mas não suas palavras?",
+        "q": "Há manifestação audível no plenário, mas não é possível reconhecer a pessoa nem entender as palavras.\n\nO que registrar quando se confirma a intervenção, mas não suas palavras?",
         "a": [
-          "Uma intervenção identificável pode ser transcrita e atribuída. Quando só se confirma a ocorrência, a marcação não deve inventar seu conteúdo ou autor.",
-          "Caso: Há manifestação audível no plenário, mas não é possível reconhecer a pessoa nem entender as palavras."
+          "É possível indicar a ocorrência confirmada sem inventar conteúdo verbal.",
+          "Uma intervenção identificável pode ser transcrita e atribuída. Quando só se confirma a ocorrência, a marcação não deve inventar seu conteúdo ou autor."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
         "tema": "Ocorrência de plenário",
         "mapaNoId": "rf-2-4-r2-1-1"
       },
       {
-        "q": "Como tornar verificável um trecho prejudicado pela captação?",
+        "q": "Uma falha de captação atinge o intervalo 12:10–12:14 da gravação.\n\nComo tornar verificável um trecho prejudicado pela captação?",
         "a": [
-          "Uma limitação técnica deve ficar visível conforme o padrão adotado. A marca temporal auxilia a localizar o problema, mas não transforma uma inferência em fala comprovada.",
-          "Caso: Uma falha de captação atinge o intervalo 12:10–12:14 da gravação."
+          "Registrar a limitação e sua localização temporal permite retornar ao ponto problemático.",
+          "Uma limitação técnica deve ficar visível conforme o padrão adotado. A marca temporal auxilia a localizar o problema, mas não transforma uma inferência em fala comprovada."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
         "tema": "Limitação técnica",
         "mapaNoId": "rf-2-4-r2-2"
       },
       {
-        "q": "Como usar convenções diferentes apresentadas pelas duas aulas?",
+        "q": "Uma aula exemplifica colchetes para indicar limitação técnica; outra relata o padrão observado nas notas examinadas.\n\nComo usar convenções diferentes apresentadas pelas duas aulas?",
         "a": [
-          "As aulas apresentam exemplos e observações com escopos próprios. Um sinal gráfico exemplificado num material não deve virar exigência universal de todas as notas.",
-          "Caso: Uma aula exemplifica colchetes para indicar limitação técnica; outra relata o padrão observado nas notas examinadas."
+          "A escolha do sinal deve observar o padrão editorial aplicável ao produto.",
+          "As aulas apresentam exemplos e observações com escopos próprios. Um sinal gráfico exemplificado num material não deve virar exigência universal de todas as notas."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
         "tema": "Limitação técnica",
         "mapaNoId": "rf-2-4-r2-2-1"
       },
       {
-        "q": "Que risco a sobreposição de blocos cria na consolidação?",
+        "q": "Dois arquivos usados pelos revisores compartilham os últimos cinco segundos do primeiro bloco.\n\nQue risco a sobreposição de blocos cria na consolidação?",
         "a": [
-          "A divisão do trabalho em blocos exige conferir a transição entre eles. Sobreposição pode ajudar a escuta, mas o texto consolidado não deve duplicar o mesmo segmento de fala.",
-          "Caso: Dois arquivos usados pelos revisores compartilham os últimos cinco segundos do primeiro bloco."
+          "A sobreposição pode produzir duplicação textual se a junção não for conferida.",
+          "A divisão do trabalho em blocos exige conferir a transição entre eles. Sobreposição pode ajudar a escuta, mas o texto consolidado não deve duplicar o mesmo segmento de fala."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
         "tema": "Fronteiras de blocos",
         "mapaNoId": "rf-2-4-r3-1"
       },
       {
-        "q": "O que conferir quando uma frase atravessa a divisão de blocos?",
+        "q": "Uma frase começa no fim do bloco A e termina no início do bloco B.\n\nO que conferir quando uma frase atravessa a divisão de blocos?",
         "a": [
-          "A conferência das bordas verifica continuidade, autoria e integridade. Não basta unir arquivos por ordem numérica quando uma frase atravessa o corte.",
-          "Caso: Uma frase começa no fim do bloco A e termina no início do bloco B."
+          "A junção deve preservar a frase e sua atribuição, evitando perdas na fronteira.",
+          "A conferência das bordas verifica continuidade, autoria e integridade. Não basta unir arquivos por ordem numérica quando uma frase atravessa o corte."
         ],
         "src": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
         "tema": "Fronteiras de blocos",
@@ -2383,100 +2383,100 @@
         "mapaNoId": "rf-2-5-r3-2-2"
       },
       {
-        "q": "Qual direção caracteriza TN para síntese?",
+        "q": "Um sintetizador recebe “2026” e prepara “dois mil e vinte e seis” para pronúncia.\n\nQual direção caracteriza TN para síntese?",
         "a": [
-          "A normalização textual para síntese transforma representações escritas em formas pronunciáveis. O sentido da conversão é o critério decisivo para distingui-la da ITN.",
-          "Caso: Um sintetizador recebe “2026” e prepara “dois mil e vinte e seis” para pronúncia."
+          "Preparar a leitura por extenso do ano escrito integra a normalização textual para síntese.",
+          "A normalização textual para síntese transforma representações escritas em formas pronunciáveis. O sentido da conversão é o critério decisivo para distingui-la da ITN."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
         "tema": "TN e ITN",
         "mapaNoId": "rf-2-5-r1-1-1"
       },
       {
-        "q": "O que a ITN preserva ao converter um percentual?",
+        "q": "Após o ASR reconhecer “doze vírgula cinco por cento”, o sistema apresenta “12,5%”.\n\nO que a ITN preserva ao converter um percentual?",
         "a": [
-          "A normalização textual inversa converte formas reconhecidas da fala em grafias convencionais. O resultado deve conservar valor, unidade e alcance da expressão.",
-          "Caso: Após o ASR reconhecer “doze vírgula cinco por cento”, o sistema apresenta “12,5%”."
+          "A representação “12,5%” pode conservar o valor da expressão reconhecida.",
+          "A normalização textual inversa converte formas reconhecidas da fala em grafias convencionais. O resultado deve conservar valor, unidade e alcance da expressão."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
         "tema": "TN e ITN",
         "mapaNoId": "rf-2-5-r1-1-2"
       },
       {
-        "q": "Por que “segundo o relator” não deve virar “2º o relator”?",
+        "q": "O texto reconhecido contém “segundo o relator, a sessão terminou”.\n\nPor que “segundo o relator” não deve virar “2º o relator”?",
         "a": [
-          "A conversão depende da função que a palavra exerce. Em “segundo o relator”, o termo introduz uma referência à fonte da informação e não enumera uma posição.",
-          "Caso: O texto reconhecido contém “segundo o relator, a sessão terminou”."
+          "O contexto impede tratar “segundo” como um ordinal nessa expressão.",
+          "A conversão depende da função que a palavra exerce. Em “segundo o relator”, o termo introduz uma referência à fonte da informação e não enumera uma posição."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
         "tema": "Preservação semântica",
         "mapaNoId": "rf-2-5-r1-2-1"
       },
       {
-        "q": "Por que “art. 165” não normaliza fielmente “artigo 155”?",
+        "q": "A gravação cita o artigo 155, mas o texto normalizado apresenta “art. 165”.\n\nPor que “art. 165” não normaliza fielmente “artigo 155”?",
         "a": [
-          "A normalização pode padronizar uma referência, mas deve conservar qual objeto foi citado. Uma troca de dígitos muda o dispositivo, mesmo que a saída permaneça bem formada.",
-          "Caso: A gravação cita o artigo 155, mas o texto normalizado apresenta “art. 165”."
+          "A alteração do número muda a referência e precisa ser corrigida contra a fala.",
+          "A normalização pode padronizar uma referência, mas deve conservar qual objeto foi citado. Uma troca de dígitos muda o dispositivo, mesmo que a saída permaneça bem formada."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
         "tema": "Preservação semântica",
         "mapaNoId": "rf-2-5-r1-2-2"
       },
       {
-        "q": "Qual escolha vem antes da padronização numérica?",
+        "q": "A equipe prepara uma nota de fala e também uma minuta normativa.\n\nQual escolha vem antes da padronização numérica?",
         "a": [
-          "Antes de padronizar números, identifique o gênero e o manual aplicável. Convenções administrativas, redação normativa e transcrição da oralidade têm finalidades distintas.",
-          "Caso: A equipe prepara uma nota de fala e também uma minuta normativa."
+          "A escolha da convenção deve considerar o gênero de cada documento.",
+          "Antes de padronizar números, identifique o gênero e o manual aplicável. Convenções administrativas, redação normativa e transcrição da oralidade têm finalidades distintas."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
         "tema": "Grafia de números",
         "mapaNoId": "rf-2-5-r2-1"
       },
       {
-        "q": "A regra de números por extenso da LC 95 admite exceções?",
+        "q": "Uma minuta inclui uma data e o número de uma lei.\n\nA regra de números por extenso da LC 95 admite exceções?",
         "a": [
-          "Na redação normativa, o art. 11, II, f, da LC 95 prevê números e percentuais por extenso, com exceções expressas. A leitura da regra exige conservar essas ressalvas.",
-          "Caso: Uma minuta inclui uma data e o número de uma lei."
+          "Datas e números de lei integram as ressalvas da regra citada.",
+          "Na redação normativa, o art. 11, II, f, da LC 95 prevê números e percentuais por extenso, com exceções expressas. A leitura da regra exige conservar essas ressalvas."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
         "tema": "Grafia de números",
         "mapaNoId": "rf-2-5-r2-1-2"
       },
       {
-        "q": "Como se distinguem inciso, alínea e item na articulação normativa?",
+        "q": "Uma referência reúne artigo, parágrafo, inciso e alínea.\n\nComo se distinguem inciso, alínea e item na articulação normativa?",
         "a": [
-          "A identificação das unidades normativas usa convenções diferentes: artigo e parágrafo, inciso, alínea e item não têm o mesmo padrão de numeração.",
-          "Caso: Uma referência reúne artigo, parágrafo, inciso e alínea."
+          "Incisos, alíneas e itens usam, respectivamente, romanos, letras minúsculas e arábicos na LC 95.",
+          "A identificação das unidades normativas usa convenções diferentes: artigo e parágrafo, inciso, alínea e item não têm o mesmo padrão de numeração."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
         "tema": "Remissões e formas reduzidas",
         "mapaNoId": "rf-2-5-r2-2-1"
       },
       {
-        "q": "Como classificar PEC, art. e km?",
+        "q": "O texto contém “PEC”, “art.” e “km”.\n\nComo classificar PEC, art. e km?",
         "a": [
-          "Sigla condensa uma denominação; abreviação reduz uma palavra; símbolo segue uma convenção de representação. Reconhecer a categoria evita padronizações indevidas.",
-          "Caso: O texto contém “PEC”, “art.” e “km”."
+          "“PEC”, “art.” e “km” exemplificam, respectivamente, sigla, abreviação e símbolo.",
+          "Sigla condensa uma denominação; abreviação reduz uma palavra; símbolo segue uma convenção de representação. Reconhecer a categoria evita padronizações indevidas."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
         "tema": "Remissões e formas reduzidas",
         "mapaNoId": "rf-2-5-r2-2-2"
       },
       {
-        "q": "Por que um modelo contextual ainda precisa de conferência?",
+        "q": "Um normalizador neural produz uma referência coerente com o assunto, porém diferente da fala.\n\nPor que um modelo contextual ainda precisa de conferência?",
         "a": [
-          "Regras explícitas tornam a transformação rastreável; modelos contextuais podem lidar com variações, mas suas saídas também exigem validação. A técnica não é garantia de fidelidade.",
-          "Caso: Um normalizador neural produz uma referência coerente com o assunto, porém diferente da fala."
+          "Uma referência plausível pode estar errada em relação à entrada e exigir correção.",
+          "Regras explícitas tornam a transformação rastreável; modelos contextuais podem lidar com variações, mas suas saídas também exigem validação. A técnica não é garantia de fidelidade."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
         "tema": "Estratégias automáticas",
         "mapaNoId": "rf-2-5-r3-1"
       },
       {
-        "q": "Que informação se perde ao retirar “uns” de uma quantidade aproximada?",
+        "q": "A fala diz “uns dois mil participantes”, e a versão apresenta “2.000 participantes”.\n\nQue informação se perde ao retirar “uns” de uma quantidade aproximada?",
         "a": [
-          "A validação separa padronização gráfica de correção de reconhecimento. Glossários ajudam na grafia de termos confirmados; quantificadores de aproximação também carregam sentido.",
-          "Caso: A fala diz “uns dois mil participantes”, e a versão apresenta “2.000 participantes”."
+          "A versão sem o marcador pode transformar uma estimativa em quantidade apresentada como exata.",
+          "A validação separa padronização gráfica de correção de reconhecimento. Glossários ajudam na grafia de termos confirmados; quantificadores de aproximação também carregam sentido."
         ],
         "src": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
         "tema": "Validação",
@@ -2999,100 +2999,100 @@
         "mapaNoId": "rf-2-6-r3-1"
       },
       {
-        "q": "Qual entrada distingue CAT estenotípico clássico de ASR?",
+        "q": "Uma profissional ouve a sessão e registra combinações num teclado de estenotipia.\n\nQual entrada distingue CAT estenotípico clássico de ASR?",
         "a": [
-          "No CAT estenotípico clássico, a pessoa produz combinações de teclas. O software converte essa entrada em texto; isso difere de reconhecer diretamente o sinal acústico.",
-          "Caso: Uma profissional ouve a sessão e registra combinações num teclado de estenotipia."
+          "A entrada imediata do conversor CAT é formada pelos toques registrados pela profissional.",
+          "No CAT estenotípico clássico, a pessoa produz combinações de teclas. O software converte essa entrada em texto; isso difere de reconhecer diretamente o sinal acústico."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
         "tema": "Entrada e conversão",
         "mapaNoId": "rf-2-6-r1-1-1"
       },
       {
-        "q": "Uma entrada encontrada no dicionário garante palavra correta?",
+        "q": "Uma sequência encontra correspondência no dicionário e produz uma palavra inadequada à fala.\n\nUma entrada encontrada no dicionário garante palavra correta?",
         "a": [
-          "O dicionário associa toques ou sequências a formas textuais. A existência de uma entrada não garante que o toque tenha sido usado corretamente naquele contexto.",
-          "Caso: Uma sequência encontra correspondência no dicionário e produz uma palavra inadequada à fala."
+          "Pode haver palavra inadequada mesmo quando a sequência possui entrada no dicionário.",
+          "O dicionário associa toques ou sequências a formas textuais. A existência de uma entrada não garante que o toque tenha sido usado corretamente naquele contexto."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
         "tema": "Entrada e conversão",
         "mapaNoId": "rf-2-6-r1-1-2"
       },
       {
-        "q": "O que caracteriza um segmento não traduzido?",
+        "q": "A saída apresenta um código estenotípico onde deveria haver uma palavra.\n\nO que caracteriza um segmento não traduzido?",
         "a": [
-          "Um toque sem correspondência pode permanecer como código ou representação fonética. O problema é de ausência de tradução, e não necessariamente uma palavra já traduzida para outra incorreta.",
-          "Caso: A saída apresenta um código estenotípico onde deveria haver uma palavra."
+          "A falta de correspondência no dicionário pode explicar a permanência do código na saída.",
+          "Um toque sem correspondência pode permanecer como código ou representação fonética. O problema é de ausência de tradução, e não necessariamente uma palavra já traduzida para outra incorreta."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
         "tema": "Diagnóstico de tradução",
         "mapaNoId": "rf-2-6-r1-2-1"
       },
       {
-        "q": "Por que revisar palavras aparentemente normais numa saída CAT?",
+        "q": "O CAT exibe uma palavra comum, porém incompatível com o trecho ouvido.\n\nPor que revisar palavras aparentemente normais numa saída CAT?",
         "a": [
-          "Um segmento mal traduzido já recebeu forma textual, mas essa forma não corresponde ao pretendido. O diagnóstico deve distinguir o que foi digitado, o mapeamento e a fala.",
-          "Caso: O CAT exibe uma palavra comum, porém incompatível com o trecho ouvido."
+          "Uma palavra comum pode ser resultado de tradução inadequada e passar despercebida na leitura superficial.",
+          "Um segmento mal traduzido já recebeu forma textual, mas essa forma não corresponde ao pretendido. O diagnóstico deve distinguir o que foi digitado, o mapeamento e a fala."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
         "tema": "Diagnóstico de tradução",
         "mapaNoId": "rf-2-6-r1-2-2"
       },
       {
-        "q": "Por que o retrocesso automático não exige duplicar o texto?",
+        "q": "Ao retomar, o editor volta dois segundos e reproduz novamente o fim da frase.\n\nPor que o retrocesso automático não exige duplicar o texto?",
         "a": [
-          "Atalhos ou pedais comandam a reprodução para facilitar a escuta durante a digitação. O retrocesso automático repete um trecho para recuperar contexto; não altera o áudio original.",
-          "Caso: Ao retomar, o editor volta dois segundos e reproduz novamente o fim da frase."
+          "A repetição de reprodução serve à conferência e não significa nova ocorrência de fala.",
+          "Atalhos ou pedais comandam a reprodução para facilitar a escuta durante a digitação. O retrocesso automático repete um trecho para recuperar contexto; não altera o áudio original."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
         "tema": "Reprodução e alinhamento",
         "mapaNoId": "rf-2-6-r2-1-1"
       },
       {
-        "q": "Quais entradas e saída caracterizam o alinhamento forçado?",
+        "q": "Um editor recebe a gravação e uma transcrição pronta e estima o tempo de cada palavra.\n\nQuais entradas e saída caracterizam o alinhamento forçado?",
         "a": [
-          "O alinhamento forçado usa áudio e um texto já fornecido para estimar correspondências temporais. Ele não equivale, por definição, a produzir do zero a transcrição nem a validar o conteúdo dado.",
-          "Caso: Um editor recebe a gravação e uma transcrição pronta e estima o tempo de cada palavra."
+          "A estimação temporal a partir da gravação e do texto fornecido caracteriza alinhamento forçado.",
+          "O alinhamento forçado usa áudio e um texto já fornecido para estimar correspondências temporais. Ele não equivale, por definição, a produzir do zero a transcrição nem a validar o conteúdo dado."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
         "tema": "Reprodução e alinhamento",
         "mapaNoId": "rf-2-6-r2-1-2"
       },
       {
-        "q": "Como corrigir autoria preservando as palavras confirmadas?",
+        "q": "Após conferir o vídeo, a equipe troca o nome do responsável por um turno sem editar suas palavras.\n\nComo corrigir autoria preservando as palavras confirmadas?",
         "a": [
-          "O editor permite corrigir rótulos de oradores a partir de conferência. A edição muda a atribuição registrada, não a sequência de palavras necessariamente.",
-          "Caso: Após conferir o vídeo, a equipe troca o nome do responsável por um turno sem editar suas palavras."
+          "É possível ajustar a atribuição do turno mantendo seu conteúdo verbal.",
+          "O editor permite corrigir rótulos de oradores a partir de conferência. A edição muda a atribuição registrada, não a sequência de palavras necessariamente."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
         "tema": "Intervenções humanas",
         "mapaNoId": "rf-2-6-r2-2-1"
       },
       {
-        "q": "O que a rastreabilidade permite verificar depois de uma edição?",
+        "q": "Uma alteração registra o responsável e preserva o vínculo com o minuto correspondente.\n\nO que a rastreabilidade permite verificar depois de uma edição?",
         "a": [
-          "Versões e referências ao áudio permitem localizar e reconstruir alterações. Esses recursos apoiam a auditoria sem substituir a validação do conteúdo.",
-          "Caso: Uma alteração registra o responsável e preserva o vínculo com o minuto correspondente."
+          "O vínculo temporal facilita conferir a evidência usada na alteração.",
+          "Versões e referências ao áudio permitem localizar e reconstruir alterações. Esses recursos apoiam a auditoria sem substituir a validação do conteúdo."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
         "tema": "Intervenções humanas",
         "mapaNoId": "rf-2-6-r2-2-2"
       },
       {
-        "q": "O texto exibido ao vivo já é necessariamente o registro validado?",
+        "q": "O público acompanha texto em tempo real antes da revisão final da sessão.\n\nO texto exibido ao vivo já é necessariamente o registro validado?",
         "a": [
-          "Uma saída ao vivo pode servir ao acompanhamento e ainda ser provisória. A condição de registro validado depende das etapas editoriais adotadas pelo órgão.",
-          "Caso: O público acompanha texto em tempo real antes da revisão final da sessão."
+          "A versão usada para acompanhamento pode ser posteriormente corrigida no fluxo editorial.",
+          "Uma saída ao vivo pode servir ao acompanhamento e ainda ser provisória. A condição de registro validado depende das etapas editoriais adotadas pelo órgão."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
         "tema": "Estado do texto",
         "mapaNoId": "rf-2-6-r3-1"
       },
       {
-        "q": "Como distinguir formato de legenda e estrutura de metadados?",
+        "q": "Uma exportação oferece legendas temporizadas e outra inclui campos de orador e confiança.\n\nComo distinguir formato de legenda e estrutura de metadados?",
         "a": [
-          "SRT e WebVTT organizam legendas com tempos. XML e JSON podem estruturar dados adicionais conforme o esquema; o formato, sozinho, não garante a presença nem a correção dos metadados.",
-          "Caso: Uma exportação oferece legendas temporizadas e outra inclui campos de orador e confiança."
+          "XML ou JSON podem representar orador e confiança quando esses campos integram o esquema de exportação.",
+          "SRT e WebVTT organizam legendas com tempos. XML e JSON podem estruturar dados adicionais conforme o esquema; o formato, sozinho, não garante a presença nem a correção dos metadados."
         ],
         "src": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
         "tema": "Formatos",
@@ -3616,100 +3616,100 @@
         "mapaNoId": "rf-2-7-r2"
       },
       {
-        "q": "O que caracteriza a revisão sequencial?",
+        "q": "Beatriz revisa a versão já corrigida por André.\n\nO que caracteriza a revisão sequencial?",
         "a": [
-          "Na revisão sequencial, o segundo profissional trabalha a partir da versão recebida da etapa anterior. Isso favorece continuidade, mas difere de duas avaliações feitas sem acesso às decisões recíprocas.",
-          "Caso: Beatriz revisa a versão já corrigida por André."
+          "O acesso de Beatriz à versão corrigida caracteriza a sequência descrita.",
+          "Na revisão sequencial, o segundo profissional trabalha a partir da versão recebida da etapa anterior. Isso favorece continuidade, mas difere de duas avaliações feitas sem acesso às decisões recíprocas."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
         "tema": "Desenhos",
         "mapaNoId": "rf-2-7-r1-1-1"
       },
       {
-        "q": "Quando se comparam os resultados numa revisão independente?",
+        "q": "Dois revisores recebem a gravação e trabalham sem ver as escolhas um do outro.\n\nQuando se comparam os resultados numa revisão independente?",
         "a": [
-          "Na revisão independente, as decisões são produzidas antes de um revisor conhecer as do outro. A comparação vem depois e pode revelar divergências que exigem conciliação.",
-          "Caso: Dois revisores recebem a gravação e trabalham sem ver as escolhas um do outro."
+          "A comparação posterior permite identificar diferenças entre as duas análises.",
+          "Na revisão independente, as decisões são produzidas antes de um revisor conhecer as do outro. A comparação vem depois e pode revelar divergências que exigem conciliação."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
         "tema": "Desenhos",
         "mapaNoId": "rf-2-7-r1-1-2"
       },
       {
-        "q": "Qual deve ser a base da conciliação de uma divergência?",
+        "q": "Dois revisores divergem sobre um número e voltam ao trecho da gravação.\n\nQual deve ser a base da conciliação de uma divergência?",
         "a": [
-          "Conciliar é resolver diferenças com base na evidência e nas convenções adotadas. Uma maioria ou concordância não substitui a conferência da fala.",
-          "Caso: Dois revisores divergem sobre um número e voltam ao trecho da gravação."
+          "Retornar à gravação ajuda a fundamentar a escolha entre as versões divergentes.",
+          "Conciliar é resolver diferenças com base na evidência e nas convenções adotadas. Uma maioria ou concordância não substitui a conferência da fala."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
         "tema": "Calibração",
         "mapaNoId": "rf-2-7-r1-2-1"
       },
       {
-        "q": "Dois revisores concordarem prova que acertaram?",
+        "q": "Os revisores concordam numa palavra que ambos ouviram incorretamente.\n\nDois revisores concordarem prova que acertaram?",
         "a": [
-          "O padrão de divergências ajuda a localizar critérios pouco claros. Concordância entre revisores mede consistência entre decisões, mas não assegura correspondência com a fala.",
-          "Caso: Os revisores concordam numa palavra que ambos ouviram incorretamente."
+          "Pode haver concordância entre revisores e erro compartilhado em relação à gravação.",
+          "O padrão de divergências ajuda a localizar critérios pouco claros. Concordância entre revisores mede consistência entre decisões, mas não assegura correspondência com a fala."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
         "tema": "Calibração",
         "mapaNoId": "rf-2-7-r1-2-2"
       },
       {
-        "q": "Como distinguir amostra aleatória e seleção por risco?",
+        "q": "Uma equipe sorteia trechos de todas as sessões; outra escolhe apenas segmentos de baixa confiança.\n\nComo distinguir amostra aleatória e seleção por risco?",
         "a": [
-          "A amostragem aleatória simples seleciona unidades do universo definido por sorteio segundo seu desenho. Examinar somente casos suspeitos responde a uma pergunta de risco diferente.",
-          "Caso: Uma equipe sorteia trechos de todas as sessões; outra escolhe apenas segmentos de baixa confiança."
+          "A seleção apenas de baixa confiança não equivale ao sorteio de trechos de todo o universo.",
+          "A amostragem aleatória simples seleciona unidades do universo definido por sorteio segundo seu desenho. Examinar somente casos suspeitos responde a uma pergunta de risco diferente."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
         "tema": "Como selecionar",
         "mapaNoId": "rf-2-7-r2-1-1"
       },
       {
-        "q": "Qual é a sequência da amostragem estratificada?",
+        "q": "A auditoria separa sessões por qualidade de áudio e sorteia trechos em cada grupo.\n\nQual é a sequência da amostragem estratificada?",
         "a": [
-          "A amostragem estratificada separa o universo em grupos relevantes e seleciona dentro deles. A estimativa global precisa considerar o desenho, inclusive proporções diferentes dos grupos.",
-          "Caso: A auditoria separa sessões por qualidade de áudio e sorteia trechos em cada grupo."
+          "Separar por qualidade de áudio e sortear em cada grupo caracteriza o desenho estratificado descrito.",
+          "A amostragem estratificada separa o universo em grupos relevantes e seleciona dentro deles. A estimativa global precisa considerar o desenho, inclusive proporções diferentes dos grupos."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
         "tema": "Como selecionar",
         "mapaNoId": "rf-2-7-r2-1-2"
       },
       {
-        "q": "O que se pode concluir de sessenta trechos sem erros detectados?",
+        "q": "A auditoria não encontra erros nos sessenta trechos sorteados.\n\nO que se pode concluir de sessenta trechos sem erros detectados?",
         "a": [
-          "Uma amostra sem erros mostra ausência de erros detectados nas unidades examinadas. O resultado não certifica que todas as unidades não examinadas estejam corretas.",
-          "Caso: A auditoria não encontra erros nos sessenta trechos sorteados."
+          "O resultado descreve os trechos examinados e não exclui falhas nos demais.",
+          "Uma amostra sem erros mostra ausência de erros detectados nas unidades examinadas. O resultado não certifica que todas as unidades não examinadas estejam corretas."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
         "tema": "Como interpretar",
         "mapaNoId": "rf-2-7-r2-2-1"
       },
       {
-        "q": "Por que acompanhar erros críticos além da WER?",
+        "q": "O relatório tem baixa WER geral e uma troca no resultado de uma votação.\n\nPor que acompanhar erros críticos além da WER?",
         "a": [
-          "A contagem de falhas críticas complementa medidas agregadas. Um único erro sobre autoria ou resultado pode merecer ação mesmo quando a taxa lexical média é baixa.",
-          "Caso: O relatório tem baixa WER geral e uma troca no resultado de uma votação."
+          "A troca do resultado merece avaliação própria apesar da baixa taxa média.",
+          "A contagem de falhas críticas complementa medidas agregadas. Um único erro sobre autoria ou resultado pode merecer ação mesmo quando a taxa lexical média é baixa."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
         "tema": "Como interpretar",
         "mapaNoId": "rf-2-7-r2-2-2"
       },
       {
-        "q": "Quais valores representam SLI e SLO nesse caso?",
+        "q": "O objetivo é entregar 98% das notas no prazo; o resultado medido foi 96,5%.\n\nQuais valores representam SLI e SLO nesse caso?",
         "a": [
-          "SLI é o indicador observado; SLO é o objetivo estabelecido para ele. Compará-los permite verificar cumprimento da meta sem confundir desempenho com exigência.",
-          "Caso: O objetivo é entregar 98% das notas no prazo; o resultado medido foi 96,5%."
+          "96,5% é o resultado do indicador, enquanto 98% é a meta definida.",
+          "SLI é o indicador observado; SLO é o objetivo estabelecido para ele. Compará-los permite verificar cumprimento da meta sem confundir desempenho com exigência."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
         "tema": "Indicador e objetivo",
         "mapaNoId": "rf-2-7-r3-1"
       },
       {
-        "q": "Que definição falta num prazo sem marco inicial?",
+        "q": "Um acordo exige entrega em duas horas, mas é necessário definir quando o relógio começa.\n\nQue definição falta num prazo sem marco inicial?",
         "a": [
-          "O acordo de nível de serviço estabelece compromissos e critérios de apuração, podendo prever tratamento do descumprimento. A meta isolada não resolve ambiguidades sobre início, fim e exceções da medição.",
-          "Caso: Um acordo exige entrega em duas horas, mas é necessário definir quando o relógio começa."
+          "Definir o marco inicial é necessário para apurar de modo consistente o prazo acordado.",
+          "O acordo de nível de serviço estabelece compromissos e critérios de apuração, podendo prever tratamento do descumprimento. A meta isolada não resolve ambiguidades sobre início, fim e exceções da medição."
         ],
         "src": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
         "tema": "Acordo",
@@ -4284,100 +4284,100 @@
         "mapaNoId": "rf-2-8-r3-2-1"
       },
       {
-        "q": "Quais três sentidos de vocabulário devem ser separados?",
+        "q": "Uma equipe mantém tokens do ASR, um glossário de comissões e um tesauro de assuntos.\n\nQuais três sentidos de vocabulário devem ser separados?",
         "a": [
-          "Vocabulário pode designar unidades de saída do reconhecedor, termos de uma área ou descritores usados na recuperação documental. Identificar a função evita tratar estruturas diferentes como equivalentes.",
-          "Caso: Uma equipe mantém tokens do ASR, um glossário de comissões e um tesauro de assuntos."
+          "O tesauro e o glossário podem compartilhar termos sem terem a mesma função.",
+          "Vocabulário pode designar unidades de saída do reconhecedor, termos de uma área ou descritores usados na recuperação documental. Identificar a função evita tratar estruturas diferentes como equivalentes."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
         "tema": "Três sentidos",
         "mapaNoId": "rf-2-8-r1-1"
       },
       {
-        "q": "Em que contexto um nome ausente caracteriza OOV?",
+        "q": "Um nome novo não possui entrada num sistema baseado em palavras de léxico fechado.\n\nEm que contexto um nome ausente caracteriza OOV?",
         "a": [
-          "Em um reconhecedor de léxico fechado, OOV indica termo fora do vocabulário considerado pelo sistema. A caracterização depende da unidade e da arquitetura usadas.",
-          "Caso: Um nome novo não possui entrada num sistema baseado em palavras de léxico fechado."
+          "O nome ausente da lista de palavras do léxico fechado é OOV nesse sistema.",
+          "Em um reconhecedor de léxico fechado, OOV indica termo fora do vocabulário considerado pelo sistema. A caracterização depende da unidade e da arquitetura usadas."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
         "tema": "Termos raros",
         "mapaNoId": "rf-2-8-r1-2-1"
       },
       {
-        "q": "Por que subpalavras não eliminam todos os erros em nomes raros?",
+        "q": "Um reconhecedor usa subpalavras para representar um nome pouco frequente.\n\nPor que subpalavras não eliminam todos os erros em nomes raros?",
         "a": [
-          "Unidades menores podem compor nomes que não estavam armazenados como palavras inteiras. Essa possibilidade amplia a cobertura, mas não garante a seleção correta da sequência.",
-          "Caso: Um reconhecedor usa subpalavras para representar um nome pouco frequente."
+          "O sistema pode conseguir representar o nome e ainda escolher uma sequência incorreta.",
+          "Unidades menores podem compor nomes que não estavam armazenados como palavras inteiras. Essa possibilidade amplia a cobertura, mas não garante a seleção correta da sequência."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
         "tema": "Termos raros",
         "mapaNoId": "rf-2-8-r1-2-2"
       },
       {
-        "q": "Como localizar o pós-processamento no fluxo?",
+        "q": "Após a transcrição, uma regra substitui a grafia recorrente de uma sigla.\n\nComo localizar o pós-processamento no fluxo?",
         "a": [
-          "O pós-processamento lexical opera sobre uma hipótese já produzida. Uma troca textual posterior não demonstra que o decodificador tenha reconhecido originalmente a forma corrigida.",
-          "Caso: Após a transcrição, uma regra substitui a grafia recorrente de uma sigla."
+          "A regra descrita atua depois da geração da hipótese textual.",
+          "O pós-processamento lexical opera sobre uma hipótese já produzida. Uma troca textual posterior não demonstra que o decodificador tenha reconhecido originalmente a forma corrigida."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
         "tema": "Pós-processamento e contexto",
         "mapaNoId": "rf-2-8-r2-1-1"
       },
       {
-        "q": "Uma lista contextual exige necessariamente retreinar o modelo?",
+        "q": "Antes da sessão, nomes da pauta são fornecidos como lista de frases a um serviço que aceita esse recurso.\n\nUma lista contextual exige necessariamente retreinar o modelo?",
         "a": [
-          "Listas de frases ou pistas contextuais podem favorecer termos plausíveis durante o reconhecimento, quando o sistema oferece esse recurso. Esse uso em execução difere de retreinamento.",
-          "Caso: Antes da sessão, nomes da pauta são fornecidos como lista de frases a um serviço que aceita esse recurso."
+          "O recurso pode favorecer nomes da pauta sem um novo treinamento dos pesos.",
+          "Listas de frases ou pistas contextuais podem favorecer termos plausíveis durante o reconhecimento, quando o sistema oferece esse recurso. Esse uso em execução difere de retreinamento."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
         "tema": "Pós-processamento e contexto",
         "mapaNoId": "rf-2-8-r2-1-2"
       },
       {
-        "q": "Que dados distinguem adaptação de linguagem e ajuste supervisionado de ASR?",
+        "q": "Há um corpus de debates escritos e outro de gravações com transcrições conferidas.\n\nQue dados distinguem adaptação de linguagem e ajuste supervisionado de ASR?",
         "a": [
-          "Adaptar um modelo de linguagem pode usar textos do domínio. O ajuste fino supervisionado de reconhecimento de fala usa exemplos que relacionam áudio e transcrição para o objetivo de reconhecimento.",
-          "Caso: Há um corpus de debates escritos e outro de gravações com transcrições conferidas."
+          "Os debates escritos podem apoiar adaptação linguística, enquanto os pares áudio–texto apoiam o ajuste supervisionado do ASR.",
+          "Adaptar um modelo de linguagem pode usar textos do domínio. O ajuste fino supervisionado de reconhecimento de fala usa exemplos que relacionam áudio e transcrição para o objetivo de reconhecimento."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
         "tema": "Adaptação e ajuste fino",
         "mapaNoId": "rf-2-8-r2-2"
       },
       {
-        "q": "O que zera quando λ é zero na combinação descrita?",
+        "q": "A busca combina o escore do ASR com λ vezes o escore de um modelo externo.\n\nO que zera quando λ é zero na combinação descrita?",
         "a": [
-          "Na fusão superficial, uma pontuação externa de linguagem é combinada com a do ASR durante a busca. O peso controla sua contribuição na fórmula de combinação adotada.",
-          "Caso: A busca combina o escore do ASR com λ vezes o escore de um modelo externo."
+          "Com λ igual a zero, a parcela externa dessa combinação deixa de contribuir para a pontuação.",
+          "Na fusão superficial, uma pontuação externa de linguagem é combinada com a do ASR durante a busca. O peso controla sua contribuição na fórmula de combinação adotada."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
         "tema": "End-to-end",
         "mapaNoId": "rf-2-8-r2-3-1"
       },
       {
-        "q": "Qual limite tem uma reordenação restrita a candidatos fixos?",
+        "q": "Um módulo recebe cinco hipóteses fixas e apenas as ordena por uma nova pontuação.\n\nQual limite tem uma reordenação restrita a candidatos fixos?",
         "a": [
-          "A reordenação compara hipóteses já produzidas e muda sua classificação. Uma reordenação restrita a um conjunto fixo só pode selecionar entre seus candidatos.",
-          "Caso: Um módulo recebe cinco hipóteses fixas e apenas as ordena por uma nova pontuação."
+          "O módulo descrito pode escolher como primeira uma hipótese antes classificada em outra posição.",
+          "A reordenação compara hipóteses já produzidas e muda sua classificação. Uma reordenação restrita a um conjunto fixo só pode selecionar entre seus candidatos."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
         "tema": "End-to-end",
         "mapaNoId": "rf-2-8-r2-3-2"
       },
       {
-        "q": "Como detectar o efeito indesejado de um reforço contextual?",
+        "q": "Depois de aumentar o peso de uma sigla, ela passa a surgir também em áudios que não a contêm.\n\nComo detectar o efeito indesejado de um reforço contextual?",
         "a": [
-          "Reforço excessivo pode favorecer um termo não pronunciado. Avaliar o efeito exige testar tanto ocorrências desejadas quanto trechos em que o termo não aparece.",
-          "Caso: Depois de aumentar o peso de uma sigla, ela passa a surgir também em áudios que não a contêm."
+          "As inclusões indevidas mostram a necessidade de avaliar trechos negativos além dos que contêm a sigla.",
+          "Reforço excessivo pode favorecer um termo não pronunciado. Avaliar o efeito exige testar tanto ocorrências desejadas quanto trechos em que o termo não aparece."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
         "tema": "Risco do reforço",
         "mapaNoId": "rf-2-8-r3-1"
       },
       {
-        "q": "O que fazer depois de atualizar um nome no glossário?",
+        "q": "Uma comissão muda de nome e o glossário é atualizado após conferência nos registros institucionais.\n\nO que fazer depois de atualizar um nome no glossário?",
         "a": [
-          "A manutenção do glossário combina coleta em fontes do domínio, confirmação e avaliação posterior. WER global e erros em entidades respondem a perguntas complementares sobre a qualidade.",
-          "Caso: Uma comissão muda de nome e o glossário é atualizado após conferência nos registros institucionais."
+          "É necessário avaliar o efeito sobre o reconhecimento, inclusive os erros em nomes e outras entidades.",
+          "A manutenção do glossário combina coleta em fontes do domínio, confirmação e avaliação posterior. WER global e erros em entidades respondem a perguntas complementares sobre a qualidade."
         ],
         "src": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
         "tema": "Ciclo do glossário",
