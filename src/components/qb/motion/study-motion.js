@@ -10,6 +10,12 @@ export function observeStudyMotion(frame) {
     const toggle = doc?.querySelector("[data-motion-toggle]");
     const today = doc?.getElementById("tab-painel");
     if (!canvas || !toggle || !today) return;
+    // A single full-workspace ambient video now handles decorative motion.
+    // Do not run the old header-only WebGL effect behind it.
+    if (doc.getElementById("qb-ambient-background")) {
+      toggle.hidden = true;
+      return;
+    }
 
     const host = canvas.closest(".qb-header-row");
     const view = doc.defaultView;
