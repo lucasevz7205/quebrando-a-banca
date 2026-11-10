@@ -68,7 +68,7 @@ test("todos os cartões derivados mantêm aviso editorial sobre gabarito provis�
 test("o treino continua salvando as respostas por ID original e mostrando aviso de revisão",()=>{
  const html=fs.readFileSync("src/components/qb/study-shell.html","utf8");
  assert.match(html,/S\.db\.doc\('respostas\/'\+q\.id\)/);
- assert.match(html,/data-train-topic/);
+ assert.match(fs.readFileSync("public/claude-export/training-radial.js","utf8"),/data-train-topic/);
  assert.match(html,/function iniciarTreinoAssunto/);
  assert.match(html,/statusEditorial==='aguardando-revisao-humana'/);
  assert.match(html,/Questão autoral em revisão editorial/);
