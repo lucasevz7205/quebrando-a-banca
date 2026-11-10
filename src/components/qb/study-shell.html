@@ -783,7 +783,9 @@ function render(force){
       },
       onPage:page=>{S.trRadial.page=page;render(true);},
       onBack:()=>{S.trRadial={matter:null,page:0,setup:false,classic:false};render(true);},
-      onClassic:()=>{S.trRadial={...S.trRadial,setup:false,classic:true};render(true);}
+      onClassic:()=>{S.trRadial={...S.trRadial,setup:false,classic:true};render(true);},
+      onReview:()=>{if(!devidas().fila.length){toast('Nenhuma revisão vencida neste momento.');return;}startRevisao();},
+      onErrors:()=>setView('caderno'),
     })||null;
     return;
   }
