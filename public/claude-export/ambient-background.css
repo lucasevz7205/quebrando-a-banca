@@ -1,0 +1,145 @@
+/* Whole-workspace ambient video. Not a header decoration. */
+html {
+  background:#0e0e10;
+}
+body {
+  background:transparent!important;
+  min-height:100dvh;
+}
+#qb-ambient-background {
+  position:fixed;
+  z-index:0;
+  inset:0;
+  width:100%;
+  width:100vw;
+  height:100%;
+  height:100dvh;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 51% -11%,#273b85 0%,transparent 46%),
+    radial-gradient(ellipse at 91% 29%,#43276e6b 0%,transparent 54%),
+    radial-gradient(ellipse at 14% 80%,#10234194 0%,transparent 48%),
+    #0a0c14;
+  pointer-events:none;
+  isolation:isolate;
+  contain:paint;
+}
+#qb-ambient-background video {
+  position:absolute;
+  z-index:0;
+  width:100%;
+  height:100%;
+  inset:0;
+  object-fit:cover;
+  object-position:center;
+  opacity:0;
+  filter:saturate(.9) contrast(1.06);
+  transform:scale(1.015);
+  transition:opacity .65s ease;
+}
+#qb-ambient-background[data-ready="true"] video {opacity:1;}
+#qb-ambient-background .qb-ambient-veil {
+  position:absolute;
+  z-index:1;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(3,5,12,.42),rgba(7,8,15,.55) 42%,rgba(5,6,11,.7)),
+    radial-gradient(ellipse at 48% 10%,rgba(41,60,132,.21),transparent 62%);
+}
+body > .wrap {
+  position:relative;
+  z-index:1;
+}
+/* The animated art formerly lived inside the header. The shared video now
+   owns the motion layer for the entire workspace. */
+.qb-app-header .qb-study-art {display:none!important;}
+:root[data-theme="dark"] .qb-app-header .qb-header-row {
+  background:rgba(13,16,27,.73);
+  border-color:#9baaff5b;
+  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);
+}
+:root[data-theme="dark"] .qb-app-header .qb-header-row::after {
+  background:
+    linear-gradient(90deg,rgba(7,9,16,.68),rgba(8,11,22,.47) 44%,rgba(15,15,29,.3)),
+    radial-gradient(ellipse at 60% -40%,rgba(75,110,255,.25),transparent 76%);
+}
+:root[data-theme="dark"] header.top.qb-app-header nav.tabs.qb-primary-nav,
+:root[data-theme="dark"] .qb-tab-shell > .subnav {
+  background:rgba(19,21,31,.81);
+  -webkit-backdrop-filter:blur(15px);
+  backdrop-filter:blur(15px);
+}
+:root[data-theme="dark"] :is(.card-v,.stat,.ring,.cap,.mode,.item,.book,.notice,.entry,.insight,.heat,.prog,.nxt,.tbl-wrap,.agenda-wrap,.mat-g,.topic,.qb-analytics-card,.qb-analytic-kpi) {
+  background-color:rgba(23,25,34,.87);
+  border-color:rgba(120,134,174,.3);
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+}
+:root[data-theme="dark"] .qb-page-hero,
+:root[data-theme="dark"] .qb-section-intro.qb-page-hero,
+:root[data-theme="dark"] .qb-plan-intro.qb-page-hero,
+:root[data-theme="dark"] .qb-analytics-intro.qb-page-hero,
+:root[data-theme="dark"] .qb-welcome,
+:root[data-theme="dark"] .qb-trap-overview,
+:root[data-theme="dark"] .qb-trap-next,
+:root[data-theme="dark"] .learn-pilot-intro,
+:root[data-theme="dark"] .m-centro.qb-topic-hub,
+:root[data-theme="dark"] .qb-study-pulse {
+  background:
+    radial-gradient(ellipse 60% 130% at 55% -31%,rgba(49,91,247,.36),transparent 80%),
+    radial-gradient(ellipse 54% 100% at 93% 0%,rgba(89,54,189,.25),transparent 83%),
+    rgba(15,20,34,.84);
+  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);
+}
+:root[data-theme="dark"] .qb-chat-panel {
+  background:rgba(16,18,28,.95);
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+}
+#qb-background-toggle {
+  gap:8px;
+  min-height:42px;
+  white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+}
+#qb-background-toggle::before {
+  content:"";
+  display:block;
+  flex:0 0 auto;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#8c99b9;
+  box-shadow:0 0 0 3px #8c99b91a;
+}
+#qb-background-toggle[aria-pressed="true"]::before {
+  background:#6199ff;
+  box-shadow:0 0 0 3px #527df329,0 0 14px #5287ffac;
+}
+#qb-background-toggle:hover {border-color:#abc2ff;}
+#qb-background-toggle:disabled {opacity:.66;cursor:not-allowed;}
+/* With the light reader theme, retain high-contrast ink over a pale veil. */
+:root[data-theme="light"] #qb-ambient-background .qb-ambient-veil {
+  background:rgba(248,249,252,.90);
+}
+:root[data-theme="light"] .qb-app-header .qb-header-row {
+  background:rgba(14,19,31,.87);
+}
+@media (prefers-color-scheme:light) {
+  :root:not([data-theme]) #qb-ambient-background .qb-ambient-veil {
+    background:rgba(248,249,252,.90);
+  }
+}
+@media (max-width:700px) {
+  #qb-ambient-background video {object-position:50% 50%;}
+  :root[data-theme="dark"] :is(.card-v,.stat,.item,.cap,.mode) {
+    -webkit-backdrop-filter:blur(7px);
+    backdrop-filter:blur(7px);
+  }
+  #qb-background-toggle {min-height:38px;font-size:11px;}
+}
+@media (prefers-reduced-motion:reduce) {
+  #qb-ambient-background video {transition:none!important;transform:none!important;}
+}
