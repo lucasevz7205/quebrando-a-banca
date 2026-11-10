@@ -10,7 +10,7 @@ export function observeMindMap(frame) {
     if (!main) return;
 
     const view = doc.defaultView;
-    let panel = null, release = () => {}, mode = "list", lastPath = "", lastTopic = "", rememberedBranches = null;
+    let panel = null, release = () => {}, mode = "list", lastPath = "", lastTopic = "", rememberedBranches = null, consumedFocusNonce = "";
     function sync() {
       const next = main.querySelector("[data-map3]");
       if (next === panel) return;
@@ -20,6 +20,9 @@ export function observeMindMap(frame) {
       if (!next) { mode = "list"; lastPath = ""; lastTopic = ""; return; }
 
       const graph = JSON.parse(next.dataset.graph);
+      const incomingNonce=next.dataset.mapFocusNonce||"";
+      const requested=next.dataset.mapFocusPath||"";
+      const deepLink=!!incomingNonce && incomingNonce!==consumedFocusNonce;
       if (graph.topic !== lastTopic) {lastPath = "";rememberedBranches = null;}
       lastTopic = graph.topic;
       const list = next.parentElement.querySelector("[data-map-list]");
@@ -105,8 +108,17 @@ export function observeMindMap(frame) {
         list.hidden = false;
         status.textContent = message;
         modes.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.mapMode === "list")));
+        if(lastPath!=="root"){
+          // WebGL fallback must land on the SAME concept, not at the chapter.
+          const wanted=graph.topic+":"+lastPath;
+          const target=[...list.querySelectorAll("[data-map-node]")].find(n=>n.dataset.mapNode===wanted);
+          if(target){
+            target.classList.add("qb-map-remission-target");
+            view.requestAnimationFrame(()=>target.scrollIntoView({block:"center",behavior:"smooth"}));
+          }
+        }
       }
-      async function show3d() {
+      async function show3d(openRemission = false) {
         if (scene) return;
         const request = ++version;
         mode = "3d";
@@ -120,7 +132,7 @@ export function observeMindMap(frame) {
           status.textContent = "";
           list.hidden = true;
           modes.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.mapMode === "3d")));
-          select(lastPath || "root", lastPath !== "" && lastPath !== "root", false);
+          select(lastPath || "root", lastPath !== "" && lastPath !== "root", openRemission && lastPath!=="root");
           updateBranchControls();
         } catch {
           if (!disposed && request === version) showList("O 3D está indisponível neste navegador. A lista está aberta.");
@@ -172,7 +184,11 @@ export function observeMindMap(frame) {
         chooser.removeEventListener("change", change);
       };
       next.hidden = false;
-      if (mode === "3d") show3d();
+      if(deepLink){
+        consumedFocusNonce=incomingNonce;
+        lastPath=nodes.has(requested)?requested:"root";
+        show3d(lastPath!=="root");
+      } else if (mode === "3d") show3d();
     }
     const observer = new view.MutationObserver(sync);
     observer.observe(main, { childList: true });
