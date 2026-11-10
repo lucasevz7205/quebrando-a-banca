@@ -1,0 +1,49 @@
+/* Unified AXON area menus: same band, motion, glass and touch targets
+   as Treinar and the portal. Underlying content is kept as-is. */
+.qb-area-hub {width:min(100%,1130px);padding-inline:clamp(8px,1.8vw,18px)}
+.qb-area-heading {align-items:flex-start;gap:14px;flex-wrap:wrap}
+.qb-area-heading .qb-radial-screen-title {max-width:35ch;overflow-wrap:anywhere}
+.qb-area-intro {margin:7px 0 0;color:#c3cfec;font:500 12px/1.45 var(--display,system-ui);max-width:58ch}
+.qb-area-actions {display:flex;flex-wrap:wrap;justify-content:flex-end;gap:9px}
+.qb-area-stage {width:min(100%,750px,72dvh)}
+.qb-area-hub .qb-radial-node {width:clamp(104px,22%,156px);min-height:clamp(74px,15%,100px);gap:5px}
+.qb-area-hub .qb-radial-node-label {font:650 clamp(11px,1.5vw,15px)/1.2 var(--display,system-ui);overflow-wrap:anywhere;text-wrap:balance}
+.qb-area-hub .qb-radial-node-caption {max-width:18ch;line-height:1.35;overflow-wrap:anywhere}
+.qb-area-hub .qb-radial-node:disabled {opacity:.38;cursor:not-allowed}
+.qb-area-core {width:clamp(159px,26%,216px);padding:15px 12px;gap:6px}
+.qb-area-core strong {font:650 clamp(12px,1.8vw,18px)/1.19 var(--display,system-ui);overflow-wrap:anywhere;text-wrap:balance}
+.qb-area-core-caption {font:500 11px/1.5 var(--display,system-ui);max-width:16ch;color:#c1d3fc}
+.qb-area-core .qb-train-core-percent {font-size:29px}
+.qb-area-core .qb-train-core-stats {font-size:9.5px}
+.qb-area-footer {max-width:720px;margin:13px auto 0;padding:10px 12px;border-top:1px solid #6178a84d;color:#b9c9ec;font:500 11px/1.5 var(--display,system-ui);text-align:center}
+.qb-area-hub .qb-train-pagination {margin-top:4px}
+.qb-area-hub .qb-radial-sector {pointer-events:stroke}
+@media(max-width:700px) {
+ .qb-area-stage {width:min(100%,590px,67dvh)}
+ .qb-area-hub .qb-radial-node {width:23.5%;padding:6px}
+ .qb-area-hub .qb-radial-node-caption {font-size:9px}
+ .qb-area-core {width:28%;padding:9px}
+}
+@media(max-width:500px) {
+ .qb-area-hub {padding:10px 4px}
+ .qb-area-heading {gap:8px}
+ .qb-area-intro {font-size:10px}
+ .qb-area-actions {width:100%;justify-content:space-between}
+ .qb-area-stage {width:min(100%,430px)}
+ .qb-area-hub .qb-radial-node {width:27%;min-height:59px;padding:5px 3px;gap:2px}
+ .qb-area-hub .qb-radial-node-label {font-size:10px;line-height:1.15}
+ .qb-area-hub .qb-radial-node-caption {display:none}
+ .qb-area-hub .qb-radial-node-icon {font-size:17px}
+ .qb-area-core {width:36%;padding:8px 4px;gap:2px}
+ .qb-area-core strong {font-size:11px;line-height:1.12}
+ .qb-area-core .qb-train-core-percent {font-size:21px}
+ .qb-area-core .qb-train-core-eyebrow {font-size:7px}
+ .qb-area-core .qb-train-core-caption {font-size:7px}
+ .qb-area-core .qb-train-core-stats {font-size:7px}
+ .qb-area-core small {font-size:8px}
+ .qb-area-core .qb-area-core-caption {font-size:8px}
+ .qb-area-core .qb-train-core-bar {height:6px}
+}
+@media(prefers-reduced-motion:reduce) {
+ .qb-area-core .qb-train-bar-segment {transition:none!important}
+}
