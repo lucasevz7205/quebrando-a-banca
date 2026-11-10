@@ -721,6 +721,7 @@ function setView(v,push=true){
   if(v==='estudo') v=S.ultEstudo||'mapa';
   if(v==='revisao') v='edital'; /* antigas URLs continuam úteis sem duplicar o edital em Estudo */
   if(!VIEWS.includes(v)) v='treinar';
+  if(v!=='mapa') S.mapaFocus=null;
   S.view=v; if(PAI[v]==='estudo') S.ultEstudo=v;
   syncNavigation(PAI[v]||v);
   if(push){ try{ history.replaceState(null,'',location.href.split('#')[0]+'#'+v);}catch(e){} }
@@ -1750,7 +1751,7 @@ function explicaBox(k){
   const bts=[];
   if(c.ex)bts.push('<button class="lnk" data-exab="'+esc(k)+'">'+(S.exAb.has(k)?'Esconder explicação':'Ver explicação')+'</button>');
   const origem=origemDoMapa(k,c);
-  const labels={exact:'Ver origem no mapa mental',suggested:'Ver sugestão no mapa (não validada)',topic:'Abrir mapa do capítulo'};
+  const labels={linked:origem.link.confidence==='sugerido'?'Ver conceito sugerido no mapa':'Ir diretamente ao conceito no mapa',topic:'Abrir mapa do capítulo (sem nó vinculado)'};
   if(origem.id&&labels[origem.link.status])bts.push('<button class="lnk" data-irmapa="'+esc(k)+'">'+labels[origem.link.status]+'</button>');
   else bts.push('<span class="ps">Sem mapa mental cadastrado para este cartão.</span>');
   let out='<div class="chips" style="gap:12px">'+bts.join('')+'</div>';
@@ -1879,7 +1880,8 @@ function mapa3D(m,t,lig,diagnostico){
   roots.forEach((n,i)=>visit(n,String(i),'root',i));
   const geral=diagnostico?.edital;
   const data=esc(JSON.stringify({topic:S.mapaId,title:m.centro||t.titulo||'Mapa mental',nodes:list,rootStatus:geral?.status,rootStatusLabel:geral?'Geral do edital · '+geral.label:'Não avaliado',rootPercentual:geral?.percentual??null,rootRespondidas:geral?.respondidas||0,rootQuestoes:geral?.total||0,rootFlashcards:diagnostico?.root?.review?.total||0,rootFlashcardsAvaliados:diagnostico?.root?.review?.avaliados||0,rootFlashcardsLembrados:diagnostico?.root?.review?.lembrados||0,links:lig.map(l=>l.slice(0,2))}));
-  return `<section class="qb-map3" data-map3 data-graph="${data}" hidden aria-label="Visualização do mapa mental">
+  const focus=S.mapaFocus?.topicId===S.mapaId?S.mapaFocus:null;
+  return `<section class="qb-map3" data-map3 data-graph="${data}" data-map-focus-path="${esc(focus?.path||'')}" data-map-focus-nonce="${esc(focus?.nonce||'')}" hidden aria-label="Visualização do mapa mental">
     <div class="qb-map3-choices" role="group" aria-label="Formato do mapa">
       <button type="button" data-map-mode="list" aria-pressed="true">Em lista</button>
       <button type="button" data-map-mode="3d" aria-pressed="false">Mapa 3D</button>
@@ -1969,7 +1971,7 @@ function viewMapa(){
     const ligadasAoNo=(n.x?.questaoIds||[]).map(id=>S.q.get(id)).filter(Boolean);
     const exemplos=ligadasAoNo.length?`<details class="qb-map-questions"><summary>Questões deste conceito · ${ligadasAoNo.length}</summary>${ligadasAoNo.map(q=>`<details class="qb-qsource-item"><summary>${esc(q.enunciado)}</summary><div><p><b>Gabarito: ${q.gabarito==='C'?'Certo':'Errado'}</b></p><p>${esc(q.comentario||'Comentário indisponível.')}</p><small>${esc(q.ref||'Fonte não cadastrada')}</small>${atalhosQuestao(q,indice)}</div></details>`).join('')}</details>`:'';
     const det=xa?`<div class="m-det"><p>${esc(n.x.e||'')}</p>${n.x.ex?`<p><b>Exemplo:</b> ${esc(n.x.ex)}</p>`:''}${n.x.trap?`<p class="m-trap"><b>Pegadinha:</b> ${esc(n.x.trap)}</p>`:''}${n.x.src?`<span class="ps">${esc(n.x.src)}</span>`:''}${exemplos}</div>`:'';
-    return `<li class="m-no${n.caixa?' m-caixa':''}" data-map-node="${esc(S.mapaId+':'+k)}" ${n.id&&!single?`id="mn-${esc(n.id)}"`:''}><div class="m-l">${lab}${tog}${out}${inn}${selo}</div>${nota}${det}${diagnosticoDoNo}${tab}${!single&&kids.length&&aberto?`<ul>${kids.map((c,i)=>no(c,cor,k+'.'+i)).join('')}</ul>`:''}</li>`;
+    return `<li class="m-no${n.caixa?' m-caixa':''}${S.mapaFocus?.topicId===S.mapaId&&S.mapaFocus.path===k?' qb-map-remission-target':''}" data-map-node="${esc(S.mapaId+':'+k)}" ${n.id&&!single?`id="mn-${esc(n.id)}"`:''}><div class="m-l">${lab}${tog}${out}${inn}${selo}</div>${nota}${det}${diagnosticoDoNo}${tab}${!single&&kids.length&&aberto?`<ul>${kids.map((c,i)=>no(c,cor,k+'.'+i)).join('')}</ul>`:''}</li>`;
   };
   drawMapDetail=path=>{
     if(path==='root') {
@@ -1993,9 +1995,14 @@ function viewMapa(){
     <div class="filters"><select id="mapa-top" aria-label="Tópico">${ids.map(id=>`<option value="${esc(id)}" ${id===S.mapaId?'selected':''}>${esc(lblT(S.ed.get(id))||id)} · ${esc((S.ed.get(id)||{}).titulo||'')}</option>`).join('')}</select>
       <label class="check"><input type="checkbox" id="evocar" ${S.evocar?'checked':''}> Evocar antes de ler</label>
       <button class="btn ghost small" data-mtodos="1">Abrir tudo</button><button class="btn ghost small" data-mtodos="0">Fechar tudo</button>
-      ${S.mapaBack?'<button class="btn ghost small" data-voltar-flash="1">Voltar ao flashcard</button>':''}
+      ${S.mapaBack?.kind==='flashcard'?'<button class="btn ghost small" data-voltar-flash="1">Voltar ao flashcard</button>':S.mapaBack?.kind==='question'?'<button class="btn ghost small" data-voltar-questao="1">← Voltar à questão</button>':''}
       ${((S.rv.get(S.mapaId)||{}).cartoes||[]).length?`<button class="lnk" data-ir-cart="${esc(S.mapaId)}">Revisão ativa · ${(S.rv.get(S.mapaId).cartoes||[]).length}</button>`:''}
       ${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
+    ${S.mapaFocus?.topicId===S.mapaId?`<div class="qb-map-remission-banner" role="status" aria-live="polite">
+      <strong>${S.mapaFocus.path?'Conceito localizado: '+esc(S.mapaFocus.title||'nó selecionado'):'Mapa do capítulo aberto'}</strong>
+      <span>${S.mapaFocus.path?(S.mapaFocus.confidence==='editorial'?'Vínculo explícito por ID/caminho do nó.':S.mapaFocus.confidence==='sugerido'?'Correspondência sugerida; confira o conteúdo antes de assumir como origem exata.':'Associação conceitual automática; confira a correspondência com a questão.'):'A questão pertence ao capítulo, mas ainda não há correspondência verificável com um nó específico. Nenhum nó foi atribuído artificialmente.'}</span>
+      ${S.mapaFocus.path?`<span class="qb-map-remission-path">Caminho: ${esc(S.mapaFocus.path.split('.').map((_,i)=>{const parts=S.mapaFocus.path.split('.').slice(0,i+1).map(Number);const node=parts.slice(1).reduce((n,p)=>n?.f?.[p],m.ramos[parts[0]]);return node?.t||''}).join(' › '))}</span>`:''}
+    </div>`:''}
     <p class="rule">Toque num ramo com ⓘ para abrir a explicação. Com "Evocar antes de ler", tente explicar antes de abrir.</p>
     <div class="m-centro qb-topic-hub"><span>MAPA MENTAL · CONCEITO CENTRAL</span><strong>${esc(m.centro||t.titulo||'')}</strong><small>${(m.ramos||[]).length} ramos · ${lig.length} ligações cruzadas</small></div>
     ${diagnostico?window.QBMapMastery.overview(diagnostico):''}
