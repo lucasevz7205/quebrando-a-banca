@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import console from 'node:console';
 import fs from 'node:fs';
 const before=JSON.parse(fs.readFileSync('scripts/rf-reformulacao/antes-2026-11-10.json'));
 const after=JSON.parse(fs.readFileSync('scripts/rf-reformulacao/depois-2026-11-10.json'));
