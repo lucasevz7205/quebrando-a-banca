@@ -111,7 +111,8 @@
   stroke-width:147;
   opacity:.058;
   transition:opacity .24s ease,stroke-width .24s ease,filter .24s ease;
-  pointer-events:none;
+  pointer-events:stroke;
+  cursor:pointer;
 }
 .qb-radial-network .qb-radial-sector.is-focused {
   opacity:.28;
