@@ -823,6 +823,72 @@ function updateCounts(){
   cd.innerHTML=f>0?`Prova em ${data} · <b>${f}</b> ${f===1?'dia':'dias'}`:(f===0?'<b>Prova hoje</b>':'Prova realizada');
 }
 
+/* Radial de Treinar: as matérias e os assuntos usam IDs reais do edital.
+ * A barra central usa uma única última resposta por questão, sem inventar
+ * erros a partir de itens que ainda não foram respondidos. */
+function treinoRadialDados(){
+  return window.QBTrainingRadial.build({
+    questions:S.q,topics:S.ed,responses:S.r,index:indiceQuestoes()
+  });
+}
+function treinoAssuntoSelecionado(){
+  const state=S.trRadial||{},data=treinoRadialDados();
+  const mat=data.matters.find(m=>m.id===state.matter);
+  return {data,mat,topic:mat?.topics.find(t=>t.id===state.topic)||null};
+}
+function filaTreinoAssunto(topic,modo){
+  if(!topic)return [];
+  const ids=topic.questionIds.filter(id=>S.q.has(id));
+  if(modo==='novos')return ids.filter(id=>!S.r.get(id)?.tentativas);
+  if(modo==='caderno')return ids.filter(id=>!!S.r.get(id)?.noCaderno);
+  return ids;
+}
+function viewTreinoAssunto(){
+  const {mat,topic}=treinoAssuntoSelecionado();
+  if(!mat||!topic)return '<div class="notice">O assunto selecionado já não está no edital. Volte à aba Treinar para escolher outro.</div>';
+  const nNew=filaTreinoAssunto(topic,'novos').length,
+    nAll=filaTreinoAssunto(topic,'todos').length,
+    nCad=filaTreinoAssunto(topic,'caderno').length;
+  if(S.modo==='novos'&&!nNew)S.modo='todos';
+  if(S.modo==='caderno'&&!nCad)S.modo='todos';
+  const n=filaTreinoAssunto(topic,S.modo).length;
+  const s=topic.stats,p=window.QBTrainingRadial.percentages(s);
+  const bar='<div class="qb-train-core-bar" role="img" aria-label="'+esc(s.acertos+' acertos, '+s.erros+' erros, '+s.brancos+' brancos em '+s.respondidas+' respondidas')+'">'
+    +'<span class="qb-train-bar-segment qb-train-bar-correct" style="width:'+p.acertos.toFixed(2)+'%"></span>'
+    +'<span class="qb-train-bar-segment qb-train-bar-wrong" style="width:'+p.erros.toFixed(2)+'%"></span>'
+    +'<span class="qb-train-bar-segment qb-train-bar-blank" style="width:'+p.brancos.toFixed(2)+'%"></span></div>';
+  const mode=(id,title,desc,count)=>'<label class="mode'+(count?'':' disabled')+'">'
+    +'<input type="radio" name="modo" id="modo-'+id+'" value="'+id+'" '+(S.modo===id?'checked':'')+' '+(count?'':'disabled')+'>'
+    +'<div><b>'+title+'</b> <span class="mono">('+count+')</span><span>'+desc+'</span></div></label>';
+  return '<section class="wrap qb-train-selection">'
+    +'<header class="qb-train-selected-heading"><div><small>'+esc(mat.name)+' · '+esc(topic.num?'Edital '+topic.num:'Assunto')+'</small>'
+    +'<h2>'+esc(topic.title)+'</h2>'
+    +'<p>Treino específico com as questões efetivamente associadas a este assunto.</p></div>'
+    +'<button type="button" data-train-return="topics">← Voltar aos assuntos</button></header>'
+    +'<div class="qb-train-selected-stats">'+bar
+    +'<span><b>'+s.acertos+'</b> acertos · <b>'+s.erros+'</b> erros · <b>'+s.brancos+'</b> em branco</span>'
+    +'<span>'+s.respondidas+' de '+s.total+' respondidas</span></div>'
+    +'<div class="qb-train-explanation">A barra considera o resultado mais recente de cada questão respondida. '
+    +'Questões ainda não realizadas não entram no percentual, e os registros anteriores continuam preservados para revisão.</div>'
+    +'<h3 class="section-title">Escolha a rodada</h3>'
+    +'<div class="modes">'
+    +mode('novos','Questões novas','Itens deste assunto que ainda não foram respondidos.',nNew)
+    +mode('todos','Todas as questões','Repetir todos os itens do assunto, inclusive os respondidos.',nAll)
+    +mode('caderno','Somente erros','Itens deste assunto que permanecem no Caderno de erros.',nCad)
+    +'</div><div class="row">'
+    +'<button class="btn" id="start" '+(n?'':'disabled')+'>Começar rodada · '+n+' '+(n===1?'questão':'questões')+'</button>'
+    +'<label class="check"><input type="checkbox" id="shuffle" '+(S.shuffle?'checked':'')+'> Embaralhar a ordem</label>'
+    +'</div></section>';
+}
+function iniciarTreinoAssunto(){
+  const {mat,topic}=treinoAssuntoSelecionado();
+  if(!topic||!mat)return;
+  const ids=filaTreinoAssunto(topic,S.modo).slice();
+  if(!ids.length){toast('Ainda não há questões para este filtro do assunto.');return;}
+  if(S.shuffle)for(let i=ids.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[ids[i],ids[j]]=[ids[j],ids[i]];}
+  novaRodada('MIX',mat.name+' · '+topic.title,S.modo,ids);
+}
+
 function viewSetup(){
   const cs=caps();
   if(!S.cap||!S.capEscolhido||!cs.find(c=>c.cap===S.cap)) S.cap=cs[0].cap;
@@ -873,6 +939,7 @@ function viewSetup(){
       <input type="radio" name="modo" id="modo-${id}" value="${id}" ${S.modo===id?'checked':''} ${count?'':'disabled'}>
       <div><b>${title}</b> <span class="mono">(${count})</span><br><span>${desc}</span></div></label>`;
   return `<div class="wrap" style="gap:18px">
+    ${S.trRadial?.classic?'<div class="row"><button type="button" class="btn ghost small" data-train-return="matters">← Voltar ao menu radial de matérias</button></div>':''}
     ${due}
     <h2 class="section-title">Capítulo · por matéria, na ordem do edital</h2>
     <div class="row"><button class="btn ghost small" id="tr-abrir">Abrir tudo</button><button class="btn ghost small" id="tr-fechar">Fechar tudo</button></div>
@@ -2444,9 +2511,10 @@ function wire(){
   if(S.view==='analiseDia' && window.QBInsights) window.QBInsights.wire(S,render,hoje);
   if(S.view==="painel" && window.QBPlanner) window.QBPlanner.wire(S,{render,enqueue,toast,hoje,startRevisao,iniciarMix,setView});
   document.querySelectorAll('[data-cap]').forEach(b=>b.addEventListener('click',()=>{S.cap=b.dataset.cap;S.capEscolhido=true;render(true)}));
+  document.querySelectorAll('[data-train-return]').forEach(b=>b.addEventListener('click',()=>{S.trRadial={matter:b.dataset.trainReturn==='topics'?S.trRadial?.matter:null,page:b.dataset.trainReturn==='topics'?(S.trRadial?.page||0):0,setup:false,classic:false};render(true)}));
   document.querySelectorAll('input[name="modo"]').forEach(i=>i.addEventListener('change',()=>{S.modo=i.value;render(true)}));
   const sh=$('#shuffle'); if(sh) sh.addEventListener('change',()=>{S.shuffle=sh.checked});
-  const st=$('#start'); if(st) st.addEventListener('click',()=>startRound(S.cap,S.modo));
+  const st=$('#start'); if(st) st.addEventListener('click',()=>S.view==='treinar'&&S.trRadial?.setup&&!S.trRadial?.classic?iniciarTreinoAssunto():startRound(S.cap,S.modo));
   const sr=$('#start-rev'); if(sr) sr.addEventListener('click',startRevisao);
   const rm=$('#rev-mais'); if(rm) rm.addEventListener('click',()=>{S.revExtra=(S.revExtra||0)+20;render(true)});
   document.querySelectorAll('[data-ans]').forEach(b=>b.addEventListener('click',()=>marcar(b.dataset.ans)));
@@ -2594,7 +2662,7 @@ function wire(){
   const tf=$('#tr-fechar'); if(tf) tf.addEventListener('click',()=>{for(const k of [...S.abertos]) if(k.startsWith('tr:')) S.abertos.delete(k); render(true)});
   const pa=$('#pg-abrir'); if(pa) pa.addEventListener('click',()=>{for(const p of S.pg.values()){const t=S.ed.get(p.topico);if(t)S.abertos.add('pg:'+t.sigla);S.abertos.add('pgt:'+p.topico)}render(true)});
   const pf=$('#pg-fechar'); if(pf) pf.addEventListener('click',()=>{for(const k of [...S.abertos]) if(k.startsWith('pg:')||k.startsWith('pgt:')) S.abertos.delete(k); S.fPgMat=''; render(true)});
-  document.querySelectorAll('[data-treinar]').forEach(b=>b.addEventListener('click',()=>{S.cap=b.dataset.treinar;S.capEscolhido=true;S.modo='novos';{const t=topicoDoCap(S.cap);if(t)S.abertos.add('tr:'+t.sigla);}S.round=null;setView('treinar');window.scrollTo({top:0})}));
+  document.querySelectorAll('[data-treinar]').forEach(b=>b.addEventListener('click',()=>{S.trRadial={matter:null,page:0,setup:false,classic:true};S.cap=b.dataset.treinar;S.capEscolhido=true;S.modo='novos';{const t=topicoDoCap(S.cap);if(t)S.abertos.add('tr:'+t.sigla);}S.round=null;setView('treinar');window.scrollTo({top:0})}));
   document.querySelectorAll('[data-mastery-practice]').forEach(b=>b.addEventListener('click',()=>treinarNoMapa(b.dataset.masteryPractice)));
   const conf1=document.querySelector('[data-conf="1"]'); if(conf1&&S.round&&S.round.pend&&S.round.pend.focus){ S.round.pend.focus=false; conf1.focus({preventScroll:true}); }
 }
