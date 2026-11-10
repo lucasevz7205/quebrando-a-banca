@@ -67,13 +67,14 @@ test("AXON existente empresta seed, curvatura e convergência ao fluxo do anel",
  assert.match(flow,/qbAmbient!=="still"/);
  assert.match(flow,/IntersectionObserver/);
  assert.match(flow,/ResizeObserver/);
- assert.match(flow,/\.dispose\?\.\(\)/m,"app cleans previous animation");
+ assert.match(hub,/ring\?\.dispose\?\.\(\)/m,"app cleans previous animation");
 });
 test("passagem do mouse e teclado destacam o setor correto e a seleção usa o fluxo AXON",()=>{
  const focused=[],calls=[],styles=[];
  const nodes=Array.from({length:6},(_,i)=>({
    dataset:{radialIndex:String(i),radialModule:i===0?"painel":"estudo"},
    classList:{toggle(type,on){styles.push([i,type,on]);}},
+   hasAttribute:key=>key==="data-radial-module",
    focus(){calls.push("focus:"+i);}
  }));
  const sectors=Array.from({length:6},(_,i)=>({
