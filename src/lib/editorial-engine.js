@@ -164,7 +164,7 @@ export function buildEditorialPrompts({topicId,title,materia,cargo,source,locati
    "Conflitos, fonte insuficiente, ambiguidade e paráfrases de itens prévios bloqueiam. Sem fonte para 20? Entregar menos e listar lacunas.",
    "Nunca publicar automaticamente: statusEditorial=aguardando-revisao-humana. Homologação humana v3 exige responsável, data, parecer, fonteConferida, gabaritoConferido, univocidadeConferida e remissaoConferida verdadeiros. CONTEXTO:",context].join("\n");
  const audit=[common,"ETAPA 5: PARECER EDITORIAL. Inspecione cada nó, flashcard e questão; verifique fonte, páginas, condições e vínculo.",
-   "Revise C/E cegamente, detecte ambiguidade, duplicidade, extrapolação, pistas entre itens e mecanismos incoerentes.",
+   "Revise C/E cegamente e derive o gabarito sem olhar a resposta prevista; detecte ambiguidade, duplicidade, extrapolação, pistas entre itens e mecanismos incoerentes.",
    "Registre problemas por ID e não trate revisão por IA como aprovação humana.",
    "Retorne JSON {aprovaveisAposRevisaoHumana:[ids],bloqueados:[{id,motivo}],pendenciasFonte:[...],diversidade:[...]}. CONTEXTO:",context].join("\n");
  return {version:EDITORIAL_VERSION,revision,mapa,flashcards,questions,audit};
