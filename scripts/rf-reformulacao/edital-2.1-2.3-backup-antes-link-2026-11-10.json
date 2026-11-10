@@ -1,0 +1,17 @@
+{
+  "rf-2-3": {
+    "legacy_id": "rf-2-3",
+    "payload_json": "{\"id\":\"rf-2-3\",\"caps\":[],\"materia\":\"Reconhecimento de Fala, Transcrição e IA\",\"materiaOrdem\":7,\"nota\":\"\",\"num\":\"2.3\",\"ordem\":131,\"prova\":\"P2\",\"sigla\":\"RF\",\"status\":null,\"titulo\":\"Revisão e edição de transcrições: critérios de qualidade e fidelidade\",\"tutory\":{\"estudo\":0,\"exercicio\":0,\"itens\":[\"Reconhecimento de fala, transcrição e Inteligência Artificial · 2.3 Revisão e edição de transcrições: critérios de qualidade e fidelidade.\"],\"resumo\":0,\"revisao\":0,\"sinc\":\"2026-10-26\"}}",
+    "source": "claude-export-2026-11-07"
+  },
+  "rf-2-2": {
+    "legacy_id": "rf-2-2",
+    "payload_json": "{\"id\":\"rf-2-2\",\"caps\":[],\"materia\":\"Reconhecimento de Fala, Transcrição e IA\",\"materiaOrdem\":7,\"nota\":\"\",\"num\":\"2.2\",\"ordem\":130,\"prova\":\"P2\",\"sigla\":\"RF\",\"status\":null,\"titulo\":\"Fluxo de degravação assistida por IA (human in the loop)\",\"tutory\":{\"estudo\":0,\"exercicio\":0,\"itens\":[\"Reconhecimento de fala, transcrição e Inteligência Artificial · 2.2 Fluxo de trabalho de degravação assistida por IA (Human in the loop).\"],\"resumo\":0,\"revisao\":0,\"sinc\":\"2026-10-26\"}}",
+    "source": "claude-export-2026-11-07"
+  },
+  "rf-2-1": {
+    "legacy_id": "rf-2-1",
+    "payload_json": "{\"id\":\"rf-2-1\",\"caps\":[],\"materia\":\"Reconhecimento de Fala, Transcrição e IA\",\"materiaOrdem\":7,\"nota\":\"\",\"num\":\"2.1\",\"ordem\":129,\"prova\":\"P2\",\"sigla\":\"RF\",\"status\":null,\"titulo\":\"Transcrição automática × degravação × revisão humana\",\"tutory\":{\"estudo\":0,\"exercicio\":0,\"itens\":[\"Reconhecimento de fala, transcrição e Inteligência Artificial · 2.1 Diferença entre transcrição automática, degravação e revisão humana.\"],\"resumo\":0,\"revisao\":0,\"sinc\":\"2026-10-26\"}}",
+    "source": "claude-export-2026-11-07"
+  }
+}
