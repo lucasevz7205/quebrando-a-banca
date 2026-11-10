@@ -2625,7 +2625,7 @@ function viewConteudo(){
     html+=`<details class="mat-g" data-grupo="ct:${esc(mat)}" ${S.abertos.has('ct:'+mat)?'open':''}><summary><span class="gn">${esc(mat)}</span><span></span><span class="mono" style="font-size:12.5px;color:var(--muted)">${ms.length} ${ms.length===1?'material':'materiais'}</span></summary>`;
     for(const m of ms){
       const tops=(m.topicos||[]).map(id=>S.ed.get(id)).filter(Boolean);
-      html+=`<article class="ct">
+      html+=`<article class="ct" data-content-topics="${esc((m.topicos||[]).join('|'))}">
         <div class="ct-h"><span class="mono" style="font-size:13px;font-weight:600">${tops.map(t=>esc(t.num)).join(', ')}</span><span class="mtype">${esc(MTIPO[m.tipo]||m.tipo)}</span></div>
         ${m.url?`<a class="ct-t" href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>`:`<div class="ct-t">${esc(m.titulo)}</div>`}
         ${m.descricao?`<p class="pd">${esc(m.descricao)}</p>`:''}
@@ -3167,7 +3167,7 @@ function viewSimulado(){
   const hist=(S.sims||[]).slice().sort((a,b)=>(b.data||'').localeCompare(a.data||''));
   return `<div class="wrap">
   <div class="due${dm.hoje?'':' calm'}"><div class="due-body"><span class="due-n">${dm.hoje?'Hoje é dia de simulado':'Próximo simulado: domingo, '+dm.prox}</span><span class="due-meta">Objetiva 300 min (P1 + P2, 180 itens) · Discursiva 180 min (2 questões de 20 linhas + peça técnica de 50 linhas). Mesma duração e pontuação do edital (itens 7 e 9).</span></div></div>
-  <h2 class="section-title">Composição da objetiva</h2>
+  <h2 class="section-title" id="qb-sim-composition">Composição da objetiva</h2>
   <div class="tbl-wrap"><table class="narrow"><thead><tr><th>Matéria</th><th class="num">Itens</th><th class="num">No banco</th></tr></thead><tbody>
   ${bp.blocos.map(b=>`<tr class="qr-m"><td><b>${b.prova} · ${esc(b.nome)}</b> <span class="ref">corte ${b.corte} pts</span></td><td class="num">${tot(b)}</td><td></td></tr>`+b.mats.map(([s,n,q])=>{const t=[...S.q.values()].filter(x=>simSigla(x.cap)===s).length;return `<tr><td style="padding-left:24px">${esc(n)}</td><td class="num">${q}</td><td class="num ${t<q?'neg':''}">${t}</td></tr>`}).join('')).join('')}
   </tbody></table></div>
@@ -3175,7 +3175,7 @@ function viewSimulado(){
   <details class="why"><summary>Antes de começar (opcional): 5 minutos de escrita sobre as preocupações</summary><p>Escreva livremente o que te preocupa nesta prova. Escrever logo antes da prova melhorou as notas, sobretudo de quem fica ansioso (Ramirez e Beilock, 2011). O texto não é salvo. Depois, use 30 segundos para olhar a prova inteira e planejar o tempo (Willingham).</p><div class="note"><textarea id="sim-exp" style="min-height:90px" placeholder="O que me preocupa nesta prova é…"></textarea></div></details>
   <div class="row"><button class="btn" id="sim-obj">Começar objetiva (300 min)</button><button class="btn ghost" id="sim-disc">Começar discursiva (180 min)</button></div>
   <p class="rule">Regra de decisão: certo +1, errado −1, branco 0. Marque só acima de 50% de chance. As respostas do simulado não alteram a agenda de revisão nem o Caderno de erros; os erros aparecem no resultado para você levar ao treino.</p>
-  <h2 class="section-title">Histórico</h2>
+  <h2 class="section-title" id="qb-sim-history">Histórico</h2>
   ${hist.length?`<div class="tbl-wrap"><table class="narrow"><thead><tr><th>Data</th><th>Tipo</th><th class="num">P1</th><th class="num">P2</th><th class="num">Total</th></tr></thead><tbody>${hist.map(h=>`<tr><td class="mono">${esc(h.data)}</td><td>${h.tipo==='obj'?'Objetiva':'Discursiva'}</td><td class="num">${h.tipo==='obj'?h.p1:'–'}</td><td class="num">${h.tipo==='obj'?h.p2:'–'}</td><td class="num">${h.tipo==='obj'?h.p1+h.p2:(h.nota??'–')+' / 60'}</td></tr>`).join('')}</tbody></table></div>`:`<div class="notice">Nenhum simulado registrado ainda.</div>`}
   </div>`;
 }
