@@ -129,6 +129,38 @@ test("compatibilidade das 160 questões 2.0 e importações legadas permanece in
  assert.equal(q.protocolo,"cebraspe-2.0");
  assert.doesNotThrow(()=>assertEditorialImport([q]));
 });
+
+test("geração do laboratório vincula tópico e nó exato quando solicitado",async()=>{
+ const mod=await import("../src/lib/question-authoring.js");
+ const q=questions.find(x=>x.topico==="rf-2-1"&&x.gabarito==="C");
+ const input={
+  materia:q.materia,assunto:q.assunto,cargo:q.cargo,quantidade:1,
+  fonte:q.fonte,localizacao:q.localizacaoFonte,textoFonte:q.textoFonte,
+  topicoId:q.topico,mapaNoId:q.mapaNoId,mecanismos:[]
+ };
+ assert.equal(mod.requestSchema.parse(input).mapaNoId,q.mapaNoId);
+ assert.equal(mod.groupRequestSchema.parse(input).topicoId,q.topico);
+ assert.equal(mod.validateDrafts({questoes:[q]},input).length,1);
+ assert.throws(()=>mod.validateDrafts({questoes:[{...q,mapaNoId:"nó-falso"}]},input),/Nó conceitual/);
+ assert.throws(()=>mod.requestSchema.parse({...input,topicoId:""}));
+ assert.throws(()=>mod.groupRequestSchema.parse({...input,mapaNoId:""}));
+ assert.match(mod.generationPrompt(input),/registre mapaNoId idêntico/);
+ const server=fs.readFileSync("src/lib/question-authoring-server.js","utf8");
+ const form=fs.readFileSync("src/components/qb/QuestionAuthoring.jsx","utf8");
+ assert.match(server,/cebraspe-3\.0/);
+ assert.match(server,/mapaNoId:data.mapaNoId/);
+ assert.match(form,/ID exato do nó no mapa/);
+ assert.match(form,/fonteConferida/);
+});
+test("manual de agente inclui obrigatoriedade do novo motor sem mutar os 160 rascunhos",()=>{
+ const rules=fs.readFileSync("AGENTS.md","utf8");
+ assert.match(rules,/Integrated editorial engine/);
+ assert.match(rules,/auditEditorialBundle/);
+ assert.match(rules,/cebraspe-3\.0/);
+ assert.match(rules,/cebraspe-2\.0/);
+ assert.equal(questions.filter(q=>q.statusEditorial==="aguardando-revisao-humana").length,160);
+});
+
 test("Laboratório exibe auditoria e orientações sem realizar chamadas de crédito",()=>{
  assert.match(route,/import EditorialQualityStudio/);
  assert.match(route,/<EditorialQualityStudio\/>/);
