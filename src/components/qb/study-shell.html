@@ -1103,7 +1103,9 @@ function viewTreinoAssunto(){
   return '<section class="wrap qb-train-selection">'
     +'<header class="qb-train-selected-heading"><div><small>'+esc(mat.name)+' · '+esc(topic.num?'Edital '+topic.num:'Assunto')+'</small>'
     +'<h2>'+esc(topic.title)+'</h2>'
-    +'<p>Treino específico com as questões efetivamente associadas a este assunto.</p></div>'
+    +'<p>Treino específico com as questões efetivamente associadas a este assunto.</p>'
+    +(topic.questionIds.some(id=>S.q.get(id)?.statusEditorial==='aguardando-revisao-humana')?'<p class="qb-rf-pending"><strong>Questões inéditas em revisão.</strong> Os gabaritos apresentados são provisórios. Você pode responder e revisar normalmente; a fonte original ainda deve ser conferida.</p>':'')
+    +'</div>'
     +'<button type="button" data-train-return="topics">← Voltar aos assuntos</button></header>'
     +'<div class="qb-train-selected-stats">'+bar
     +'<span><b>'+s.acertos+'</b> acertos · <b>'+s.erros+'</b> erros · <b>'+s.brancos+'</b> em branco</span>'
@@ -1261,6 +1263,7 @@ function viewItem(){
   return `${placar(rd)}
   <article class="item" style="margin-top:16px">
     <div class="item-head"><span class="item-num">${emRep(rd)?'REPESCAGEM · ':''}ITEM ${String(q.ordem||'').padStart(2,'0')}</span><span class="tag">${esc(tag)}</span></div>
+    ${q.statusEditorial==='aguardando-revisao-humana'?'<p class="qb-rf-pending" role="note"><strong>Questão autoral em revisão editorial.</strong> O gabarito é provisório e não corresponde a um item oficial do CEBRASPE. Use a explicação para estudo e confira a fonte quando necessário.</p>':''}
     ${textoHTML(q)}<div class="statement">${statementHTML(q,!!a)}</div>
     <div class="answers">${bub('C')}${bub('E')}
       <button class="blank${a&&a.marcada==='B'?' picked':''}" data-ans="B" ${a?'disabled':''}>Deixar em branco</button>
