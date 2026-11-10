@@ -5,7 +5,7 @@ import { useAuth } from "@/lib/AuthContext";
 import Heading from "@/components/qb/Heading";
 import {
   listStudyAccountsForAdmin, createStudyAccountForAdmin,
-  setStudyAccountActiveForAdmin, importStudyContentForAdmin
+  setStudyAccountActiveForAdmin, importStudyContentForAdmin, bindReservedStudyAccountForAdmin
 } from "@/lib/study-admin";
 import {STUDY_CONTENT_COLLECTIONS} from "@/lib/study-provisioning";
 
@@ -32,8 +32,11 @@ function StudyAccountsPage() {
   const create=useServerFn(createStudyAccountForAdmin);
   const change=useServerFn(setStudyAccountActiveForAdmin);
   const upload=useServerFn(importStudyContentForAdmin);
+  const bind=useServerFn(bindReservedStudyAccountForAdmin);
   const [form,setForm]=useState({userId:"",examName:"",examDate:""});
   const [target,setTarget]=useState("");
+  const [reservedTarget,setReservedTarget]=useState("");
+  const [registeredUserId,setRegisteredUserId]=useState("");
   const [collection,setCollection]=useState("edital");
   const [file,setFile]=useState(null);
   const [busy,setBusy]=useState(false);
@@ -94,6 +97,7 @@ function StudyAccountsPage() {
           </div>
           <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
             {a.pending&&<a href="#importar-materiais" onClick={()=>setTarget(a.id)}>Providenciar materiais</a>}
+            {!a.active&&!/^[a-f0-9]{24}$/i.test(a.userId)&&<button type="button" className="qb-primary" onClick={()=>{setReservedTarget(a.id);setRegisteredUserId("");}}>Vincular login</button>}
             {a.active&&<Link to="/estudar" search={{conta:a.id}} className="qb-primary">Ver ambiente</Link>}
             <button className="qb-primary" type="button" disabled={busy||!a.active&&(!a.ready.edital||!a.ready.questoes)}
               onClick={()=>run(async()=>{
@@ -104,6 +108,16 @@ function StudyAccountsPage() {
         </article>)}
       </div>}
     </section>)}
+    {reservedTarget&&<section className="qb-card">
+      <h2>Associar projeto reservado a um login cadastrado</h2>
+      <p>O apelido serve apenas para reservar o projeto. Depois que o candidato se cadastrar, informe o ID real dele. O vínculo não transfere projetos de outros usuários.</p>
+      <form onSubmit={event=>{event.preventDefault();run(async()=>{await bind({data:{accountId:reservedTarget,userId:registeredUserId.trim()}});setReservedTarget("");setRegisteredUserId("");setStatus("Projeto reservado associado ao candidato. Importe o edital e as questões antes de ativar.");});}} style={{display:"grid",gap:12}}>
+        <label>ID real do usuário cadastrado
+          <input required value={registeredUserId} onChange={e=>setRegisteredUserId(e.target.value)} placeholder="ID do candidato no Base44" maxLength={160}/></label>
+        <button className="qb-primary" type="submit" disabled={busy}>Associar o login ao projeto</button>
+        <button type="button" onClick={()=>setReservedTarget("")}>Cancelar</button>
+      </form>
+    </section>}
     <section className="qb-card">
       <h2>Vincular login a um concurso</h2>
       <p>Use o vínculo manual para um login existente. Candidatos que se cadastram por conta própria aparecem em Solicitações pendentes.</p>
