@@ -192,6 +192,28 @@
   border-color:#c0d9ff;
   background:#355a93;
 }
+.qb-train-shortcuts {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px 16px;
+  margin:14px auto 0;
+}
+.qb-train-shortcuts button {
+  padding:8px 12px;
+  border:1px solid #6c82b06e;
+  border-radius:10px;
+  background:rgba(23,36,62,.76);
+  color:#d5e2fc;
+  font:550 11px/1.3 var(--display,system-ui);
+  cursor:pointer;
+}
+.qb-train-shortcuts button:hover,.qb-train-shortcuts button:focus-visible {
+  background:#284977;
+  border-color:#9abde9;
+  color:#fff;
+}
 .qb-train-bottom-note {
   max-width:720px;
   margin:13px auto 0;
