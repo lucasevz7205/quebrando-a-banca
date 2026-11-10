@@ -487,14 +487,16 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/ambient-background.js?v=1" defer></script>
 <link rel="stylesheet" href="/claude-export/radial-dashboard.css?v=1">
 <link rel="stylesheet" href="/claude-export/radial-annulus.css?v=1">
+<link rel="stylesheet" href="/claude-export/training-radial.css?v=1">
 <script src="/claude-export/radial-axon-flow.js?v=1"></script>
+<script src="/claude-export/training-radial.js?v=1"></script>
 <script src="/claude-export/radial-dashboard.js?v=2"></script>
 <script>
 (function(){
 const S = {
   db:null, dbState:'loading', // loading | ok | missing
   q:new Map(), r:new Map(), rodadas:[], qLoaded:false,
-  view:'portal', radialSection:null, cap:null, modo:'novos', shuffle:false,
+  view:'portal', radialSection:null, trRadial:null, cap:null, modo:'novos', shuffle:false,
   round:null, pendingRender:false,
   ed:new Map(), mat:new Map(), pt:new Map(), di:[], edLoaded:false,
   fEvo:'', evoCap:'', evoGrafico:'tempo', evoOrdem:'menor', evoModo:'n', evoPer:'d', evoDe:'', evoAte:'', evoFaixa:'', evoPagina:0,
@@ -729,7 +731,7 @@ function setView(v,push=true){
   if(push){ try{ history.replaceState(null,'',location.href.split('#')[0]+'#'+v);}catch(e){} }
   render(true);
 }
-document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
+document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.view==='treinar'&&!S.round)S.trRadial=null;setView(b.dataset.view)}));
 $('#qb-radial-return-action')?.addEventListener('click',()=>openPortal(null));
 /* tema: automático → escuro → claro (preferência guardada neste navegador) */
 (function(){const ORD=['auto','dark','light'],LBL={auto:'Tema: automático',dark:'Tema: escuro',light:'Tema: claro'};let t='dark';try{t=localStorage.getItem('qb-tema')||'dark'}catch(e){}
@@ -756,7 +758,31 @@ function render(force){
     radialCleanup=window.QBRadialDashboard?.wire(main,{
       onModule:key=>openPortal(key),
       onBack:()=>openPortal(null),
-      onOpen:target=>{setView(target);window.scrollTo({top:0,behavior:'instant'});}
+      onOpen:target=>{if(target==='treinar'&&!S.round)S.trRadial=null;setView(target);window.scrollTo({top:0,behavior:'instant'});}
+    })||null;
+    return;
+  }
+  if(S.view==='treinar'&&!S.round&&!S.trRadial?.setup&&!S.trRadial?.classic&&S.qLoaded){
+    radialCleanup?.();
+    radialCleanup=null;
+    const model=treinoRadialDados();
+    if(!S.trRadial)S.trRadial={matter:null,page:0,setup:false,classic:false};
+    if(S.trRadial.matter&&!model.matters.some(m=>m.id===S.trRadial.matter)){
+      S.trRadial={matter:null,page:0,setup:false,classic:false};
+    }
+    main.innerHTML=window.QBTrainingRadial?.render(model,S.trRadial)
+      ||'<div class="notice">A navegação radial está indisponível. Use as abas superiores.</div>';
+    radialCleanup=window.QBTrainingRadial?.wire(main,{
+      onMatter:id=>{S.trRadial={matter:id,page:0,setup:false,classic:false};render(true);},
+      onTopic:id=>{
+        const mat=model.matters.find(m=>m.id===S.trRadial?.matter);
+        if(!mat?.topics.some(t=>t.id===id&&t.questionIds.length))return;
+        S.trRadial={...S.trRadial,topic:id,setup:true,classic:false};
+        S.modo='novos';render(true);
+      },
+      onPage:page=>{S.trRadial.page=page;render(true);},
+      onBack:()=>{S.trRadial={matter:null,page:0,setup:false,classic:false};render(true);},
+      onClassic:()=>{S.trRadial={...S.trRadial,setup:false,classic:true};render(true);}
     })||null;
     return;
   }
@@ -776,7 +802,7 @@ function render(force){
   else if(S.view==='pegadinhas') main.innerHTML=viewPegadinhas();
   else if(S.view==='conteudo') main.innerHTML=viewConteudo();
   else if(S.view==='aprendizagem') main.innerHTML=window.QBLearning.render(S,hoje());
-  else if(S.view==='treinar') main.innerHTML=S.round?(S.round.fim?viewFim():viewItem()):viewSetup();
+  else if(S.view==='treinar') main.innerHTML=S.round?(S.round.fim?viewFim():viewItem()):S.trRadial?.setup?viewTreinoAssunto():viewSetup();
   else if(S.view==='caderno') main.innerHTML=viewCaderno();
   else if(S.view==='analiseDia') main.innerHTML=window.QBInsights ? window.QBInsights.render(S,hoje) : '<div class="notice">Análise diária indisponível.</div>';
   else if(S.view==='simulado'){ main.innerHTML=viewSimulado(); if(!simLS('obj')&&!simLS('disc')) main.insertAdjacentHTML('afterbegin',sectionIntro('simulado')); wireSim(); return; }
