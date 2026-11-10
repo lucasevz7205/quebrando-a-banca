@@ -1,0 +1,279 @@
+/* AXON / living annulus — revision 2 of the approved circular dashboard.
+ * Reference: the user's ambient-poster.jpg from the 58 MB moving halo.
+ * No detached tiles: the label hit targets are embedded in the same annular band.
+ * Ring geometry is deterministic and labels remain stationary/readable.
+ */
+.qb-radial-hub {
+  overflow:visible;
+  border:none;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+  padding:clamp(8px,1.4vw,16px);
+}
+.qb-radial-hub::before {display:none;}
+.qb-radial-topline {
+  padding:2px clamp(4px,1.5vw,20px);
+  opacity:.91;
+}
+.qb-radial-stage {
+  width:min(100%,750px,74dvh);
+  aspect-ratio:1;
+  margin:0 auto;
+  isolation:isolate;
+}
+.qb-radial-stage::before {
+  z-index:0;
+  inset:5%;
+  background:radial-gradient(circle,transparent 23%,#17275a2b 42%,#263f8c22 48%,transparent 67%);
+  filter:blur(24px);
+}
+.qb-radial-stage::after {display:none;}
+.qb-radial-annulus {
+  position:absolute;
+  z-index:0;
+  inset:0;
+  border-radius:50%;
+  pointer-events:none;
+  isolation:isolate;
+}
+.qb-radial-annulus > div {
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  -webkit-mask-image:radial-gradient(circle closest-side,transparent 0 52%,#0009 58%,#000 64% 84%,#0008 90%,transparent 98%);
+  mask-image:radial-gradient(circle closest-side,transparent 0 52%,#0009 58%,#000 64% 84%,#0008 90%,transparent 98%);
+  will-change:transform;
+}
+/* Same cyan → electric-blue → violet → coral spectrum as the moving ring
+   in the supplied asset. Warm hues are confined to this original art,
+   not to performance or correctness indicators. */
+.qb-radial-annulus-light {
+  opacity:.84;
+  background:conic-gradient(from -40deg,
+    #ff6949 0deg,
+    #ffa07b 31deg,
+    #f77ca9 65deg,
+    #ae87ff 113deg,
+    #5e95ff 171deg,
+    #37d9fa 220deg,
+    #21bafa 257deg,
+    #a58aff 307deg,
+    #ff7486 340deg,
+    #ff6949 360deg);
+  filter:blur(13px) brightness(1.16);
+  box-shadow:0 0 0 transparent;
+}
+.qb-radial-annulus-texture {
+  opacity:.64;
+  background:
+    radial-gradient(circle at center,transparent 38%,#080d2b33),
+    url("/claude-export/ambient-poster.jpg") center / cover no-repeat;
+  filter:contrast(1.35) saturate(1.34) brightness(1.5);
+  mix-blend-mode:screen;
+}
+/* Slow translucent streams move *inside* the light band; modules stay fixed. */
+.qb-radial-annulus-filaments {
+  opacity:.54;
+  background:repeating-conic-gradient(from 0deg,
+    #7ceaff00 0deg,#e5f5ffb8 1.35deg,#487aff00 3.15deg,
+    #7666fb2b 5deg,#0000 8deg);
+  filter:blur(3px);
+  mix-blend-mode:screen;
+  animation:qb-radial-current 31s linear infinite;
+}
+.qb-radial-network {z-index:2;}
+.qb-radial-network .qb-radial-orbit {
+  stroke:#c8cfff30;
+  stroke-dasharray:2 15;
+  stroke-width:1.1;
+}
+.qb-radial-network .qb-radial-orbit-inner {
+  stroke:#8a9df22b;
+  stroke-dasharray:2 16;
+  stroke-width:1.3;
+}
+.qb-radial-network .qb-radial-link {
+  stroke:#c6e8ffb0;
+  stroke-width:1.85;
+  opacity:.56;
+  stroke-dasharray:6 11;
+  stroke-dashoffset:0;
+  filter:drop-shadow(0 0 6px #5495ffe5);
+  animation:qb-radial-ring-draw .8s ease-in both;
+  animation-delay:calc(.08s + var(--index)*.06s);
+}
+.qb-radial-network .qb-radial-sector {
+  fill:none;
+  stroke:var(--sector-color,#8dabff);
+  stroke-width:147;
+  opacity:.058;
+  transition:opacity .24s ease,stroke-width .24s ease,filter .24s ease;
+  pointer-events:none;
+}
+.qb-radial-network .qb-radial-sector.is-focused {
+  opacity:.28;
+  filter:drop-shadow(0 0 21px var(--sector-color,#7aa3ff));
+  stroke-width:151;
+}
+.qb-radial-flow {
+  position:absolute;
+  z-index:2;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+.qb-radial-aura {
+  inset:24%;
+  z-index:0;
+  filter:blur(36px);
+  opacity:.49;
+  background:radial-gradient(circle,#466fe343 0%,#694bd422 40%,transparent 75%);
+}
+.qb-radial-core {
+  z-index:3;
+  width:clamp(132px,23%,190px);
+  background:
+    radial-gradient(circle at 27% 10%,#91cbff29,transparent 44%),
+    radial-gradient(circle at 75% 75%,#5d58ec28,transparent 45%),
+    #101626ed;
+  border:1px solid #a9c9ffb0;
+  box-shadow:
+    0 0 0 2px #5378cd43,
+    0 0 0 14px #5378eb0b,
+    0 0 48px #4776ff78,
+    inset 0 2px 0 #d8edff38,
+    inset 0 -12px 23px #0106209c;
+}
+.qb-radial-core .qb-radial-core-orb {
+  background:
+    radial-gradient(circle at 33% 23%,#ffff,#b9edff83 11%,transparent 31%),
+    conic-gradient(from -30deg,#ff647f,#9474ff,#3cd8ff,#4d84ff,#aa7cff,#ff647f);
+}
+/* All six actions are labels embedded on the ring, not floating rounded cards. */
+.qb-radial-node {
+  z-index:5;
+  width:clamp(94px,21.5%,157px);
+  min-height:clamp(66px,13%,88px);
+  padding:7px 5px;
+  border:0;
+  border-radius:50%;
+  background:radial-gradient(ellipse 74% 69% at 50% 50%,#080b1bdc,#090e1ea3 46%,transparent 93%);
+  box-shadow:none;
+  text-shadow:0 1px 7px #010312,0 0 10px #0b1434;
+  gap:4px;
+  transition:filter .2s ease,opacity .2s ease,background .2s ease;
+}
+.qb-radial-node::before {
+  content:"";
+  position:absolute;
+  inset:8% 10%;
+  border-radius:50%;
+  border:1px solid transparent;
+  pointer-events:none;
+  transition:border-color .22s,box-shadow .22s;
+}
+.qb-radial-node::after {
+  content:"";
+  position:absolute;
+  bottom:7%;
+  width:27%;
+  height:2px;
+  border-radius:20px;
+  background:var(--sector-color,#a9cfff);
+  box-shadow:0 0 12px var(--sector-color,#9eafff);
+  opacity:.65;
+  pointer-events:none;
+}
+.qb-radial-node:hover,
+.qb-radial-node:focus-visible {
+  background:radial-gradient(ellipse at center,#1a2649e6 0%,#080c20d0 63%,transparent 98%);
+  border:0;
+  box-shadow:none;
+  filter:brightness(1.22);
+}
+.qb-radial-node:hover::before,
+.qb-radial-node:focus-visible::before,
+.qb-radial-node.is-focused::before {
+  border-color:var(--sector-color,#a9cfff);
+  box-shadow:0 0 16px var(--sector-color,#7ca9ff),inset 0 0 14px #151e44c9;
+}
+.qb-radial-node:focus-visible {
+  outline:2px solid #e1f3ff;
+  outline-offset:2px;
+}
+.qb-radial-node-icon {
+  color:var(--sector-color,#c6d2ff);
+  font-size:clamp(17px,3.2vw,23px);
+  line-height:1;
+}
+.qb-radial-node-label {
+  font-size:clamp(11px,1.45vw,15px);
+  line-height:1.17;
+  color:#fff;
+  text-shadow:0 2px 7px #030619,0 0 18px #060b21;
+}
+.qb-radial-node-caption {
+  font-size:clamp(9px,.8vw,10px);
+  color:#d0dbf5;
+  text-shadow:0 1px 4px #02030a;
+  max-width:15ch;
+}
+.qb-radial-hub[data-transitioning="true"] .qb-radial-annulus {
+  filter:brightness(1.35);
+}
+.qb-radial-hub[data-transitioning="true"] .qb-radial-node {
+  opacity:.75;
+}
+.qb-radial-hub[data-transitioning="true"] .qb-radial-node.is-focused {
+  opacity:1;
+  filter:brightness(1.35);
+}
+.qb-radial-footer {
+  max-width:750px;
+  margin:auto;
+  padding-top:6px;
+  border-top:1px solid #556baf2d;
+}
+@keyframes qb-radial-current {to{transform:rotate(360deg)}}
+@keyframes qb-radial-ring-draw {
+  from{opacity:0;stroke-dashoffset:80;}
+  to{opacity:.56;stroke-dashoffset:0;}
+}
+/* Background mode controls the orbit as well, without needing a second 58 MB video. */
+:root[data-qb-ambient="still"] .qb-radial-annulus-filaments,
+:root[data-qb-ambient="still"] .qb-radial-stage::after {
+  animation-play-state:paused!important;
+}
+@media(max-width:760px){
+  .qb-radial-stage {width:min(100%,620px,73dvh);}
+  .qb-radial-hub {padding:11px 5px;}
+  .qb-radial-node {width:22%;min-height:73px;padding:6px 5px;}
+  .qb-radial-node-label {font-size:12px;}
+  .qb-radial-node-caption {font-size:9px;}
+}
+@media(max-width:500px){
+  .qb-radial-stage {width:min(100%,440px);}
+  .qb-radial-node {width:25.5%;min-height:58px;padding:5px 2px;gap:2px;}
+  .qb-radial-node-icon {font-size:18px;}
+  .qb-radial-node-label {font-size:11px;line-height:1.15;}
+  .qb-radial-node-caption {display:none;}
+  .qb-radial-node::after {height:1px;bottom:4%;}
+  .qb-radial-core {width:35%;padding:9px;}
+}
+@media(max-width:380px){
+  .qb-radial-node {width:27%;min-height:54px;}
+  .qb-radial-node-label {font-size:10px;}
+  .qb-radial-core strong {font-size:10px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .qb-radial-annulus-filaments,
+  .qb-radial-network .qb-radial-link,
+  .qb-radial-stage::after {
+    animation:none!important;
+  }
+  .qb-radial-node,.qb-radial-node::before {transition:none!important;}
+}
