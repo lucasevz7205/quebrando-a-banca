@@ -147,7 +147,14 @@
       });
       ring?.focus?.(valid);
     }
-    const nodeFrom=target=>target?.closest?.(".qb-radial-node");
+    function nodeFrom(target){
+      const node=target?.closest?.(".qb-radial-node");
+      if(node)return node;
+      // The whole luminous arc acts as a larger pointer target.
+      const segment=target?.closest?.("[data-ring-sector]");
+      const id=segment?.dataset?.ringSector;
+      return id===undefined?null:root.querySelector('.qb-radial-node[data-radial-index="'+id+'"]');
+    }
     root.addEventListener("pointerover",event=>highlight(nodeFrom(event.target)));
     root.addEventListener("pointerout",event=>{
       const current=nodeFrom(event.target);
@@ -222,7 +229,8 @@
       }
     });
     root.addEventListener("click",event=>{
-      const control=event.target.closest("[data-radial-module],[data-radial-target],[data-radial-back]");
+      const control=event.target.closest("[data-radial-module],[data-radial-target],[data-radial-back]")
+        ||nodeFrom(event.target);
       if(!control||!root.contains(control))return;
       if(control.hasAttribute("data-radial-back"))transition(control,()=>handlers.onBack?.());
       else if(control.hasAttribute("data-radial-module")){
