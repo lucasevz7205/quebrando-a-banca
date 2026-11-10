@@ -157,6 +157,13 @@
       }
       window.requestAnimationFrame(tick);
     }
+    root.addEventListener("keydown",event=>{
+      if(event.key!=="Escape"||root.dataset.radialScreen==="menu"||moving)return;
+      const back=root.querySelector("[data-radial-back]");
+      if(!back)return;
+      event.preventDefault();
+      transition(back,()=>handlers.onBack?.());
+    });
     root.addEventListener("click",event=>{
       const control=event.target.closest("[data-radial-module],[data-radial-target],[data-radial-back]");
       if(!control||!root.contains(control))return;
