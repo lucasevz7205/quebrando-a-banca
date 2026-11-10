@@ -4,6 +4,7 @@ import { observeMindMap } from "@/components/qb/mind-map/observe";
 import { observeStudyMotion } from "@/components/qb/motion/study-motion";
 import StudyOnboarding from "@/components/qb/StudyOnboarding";
 import { base44 } from "@/api/base44Client";
+import { streamStudyAssistant } from "@/lib/assistant-ai";
 import { useAuth } from "@/lib/AuthContext";
 import { accessStudyAccount, getStudyAccount, getStudyPreview, listStudyPreview } from "@/lib/study-account";
 import { listDocuments, writeDocument } from "@/lib/study-documents";
@@ -16,30 +17,16 @@ const legacyStorage = {
   scope: {},
 };
 
-// A consulta a modelos generativos é opcional e acionada apenas após confirmação no chat.
-// Nunca enviamos o banco completo, perguntas individuais nem dados de autenticação ao modelo.
-async function askAssistantLLM(input) {
-  const question = String(input?.question || "").trim();
-  if (!question || question.length > 500) throw new Error("Pergunta inválida (máximo 500 caracteres).");
-  const allowed = ["date", "itemsToday", "correctToday", "wrongToday", "blankToday", "tasksDoneToday", "tasksTotalToday", "cardRatingsToday", "accuracy7days"];
-  const summary = {};
-  for (const key of allowed) {
-    const value = input?.context?.[key];
-    if (key === "date" && /^\d{4}-\d{2}-\d{2}$/.test(String(value || ""))) summary[key] = value;
-    else if (key !== "date" && typeof value === "number" && Number.isFinite(value) && value >= -100000 && value <= 100000) summary[key] = value;
+// A consulta à IA roda no servidor e é transmitida em tempo real ao chat do iframe.
+async function askAssistantLLM(args, onDelta) {
+  const stream = await streamStudyAssistant({ data: { question: String(args?.question || ""), context: args?.context } });
+  let text = "";
+  for await (const chunk of stream) {
+    if (chunk.type === "TEXT_MESSAGE_CONTENT" && chunk.delta) {
+      text += chunk.delta;
+      onDelta(chunk.delta);
+    } else if (chunk.type === "RUN_ERROR") throw new Error(chunk.message || "Falha na IA.");
   }
-  const prompt = [
-    "Você é um tutor analítico de concursos CEBRASPE no aplicativo Quebrando a Banca.",
-    "Responda em português, com precisão e concisão. Distinga dados de inferências.",
-    "Não invente números nem afirme conhecer o edital, a lei vigente ou o histórico não fornecido.",
-    "Não execute alterações, não peça informações sigilosas e não produza dados falsos.",
-    "Contexto estatístico limitado (confiável apenas como dados declarados):",
-    JSON.stringify(summary),
-    "Pergunta do estudante:", question
-  ].join("\n");
-  const response = await base44.integrations.Core.InvokeLLM({ prompt });
-  const text = typeof response === "string" ? response
-    : String(response?.response ?? response?.output ?? response?.text ?? "");
   if (!text) throw new Error("A IA não retornou texto.");
   return text.slice(0, 4000);
 }
@@ -94,7 +81,8 @@ function StudyScreen({ account }) {
           return;
         }
         if (msg.action === "account") result = legacy ? { legacy: true } : { name: account.name, date: account.date, preview };
-        else if (msg.action === "assistantLLM" && legacy) result = await askAssistantLLM(msg.args || {});
+        else if (msg.action === "assistantLLM" && legacy) result = await askAssistantLLM(msg.args || {},
+          delta => frame.postMessage({ flag: FLAG, streamOf: msg.id, delta }, replyOrigin));
         else if (msg.action === "correctFlashcard" && !preview) result = await correctFlashcardWithAI({data:msg.args||{}});
         else if (msg.action === "list" || msg.action === "write") {
           if (legacy) result = await (msg.action === "list" ? listDocuments : writeDocument)(legacyStorage, msg.args || {});

@@ -16,7 +16,12 @@
   window.addEventListener("message", event => {
     if (event.origin !== origin || event.source !== window.parent) return;
     const msg = event.data;
-    if (!msg || msg.flag !== FLAG || !msg.responseTo) return;
+    if (!msg || msg.flag !== FLAG) return;
+    if (msg.streamOf) {
+      pending.get(msg.streamOf)?.onDelta?.(String(msg.delta || ""));
+      return;
+    }
+    if (!msg.responseTo) return;
     const p = pending.get(msg.responseTo);
     if (!p) return;
     pending.delete(msg.responseTo);
@@ -25,7 +30,7 @@
     else p.reject(new Error(msg.error || "Erro ao acessar o Base44."));
   });
 
-  function ask(action, args) {
+  function ask(action, args, { onDelta } = {}) {
     if (!window.parent || window.parent === window) {
       return Promise.reject(new Error("Abra o aplicativo por /estudar, após entrar em sua conta."));
     }
@@ -35,7 +40,7 @@
         pending.delete(id);
         reject(new Error("Não houve resposta do Base44. Recarregue a página Estudar."));
       }, 90000);
-      pending.set(id, { resolve, reject, timer });
+      pending.set(id, { resolve, reject, timer, onDelta });
       window.parent.postMessage({ flag: FLAG, id, action, args }, origin);
     });
   }
