@@ -131,7 +131,10 @@ test("botão da questão navega pelo ID, passa nonce e abre AXON no conceito exa
  assert.match(html,/data-map-focus-nonce="\$\{esc\(focus\?\.nonce\|\|''\)\}"/);
  assert.match(observer,/const deepLink=!!incomingNonce && incomingNonce!==consumedFocusNonce/);
  assert.match(observer,/lastPath=nodes\.has\(requested\)\?requested:"root"/);
- assert.match(observer,/show3d\(lastPath!=="root"\)/);
+ assert.match(observer,/show3d\(lastPath!=="root",true\)/);
+ assert.match(observer,/if\(fromQuestion\)\{/);
+ assert.match(observer,/const target=openRemission\?next:next\.parentElement\.querySelector/);
+ assert.match(observer,/target\.scrollIntoView\(\{block:"start"/);
  assert.match(observer,/select\(lastPath \|\| "root", lastPath !== "" && lastPath !== "root", openRemission && lastPath!=="root"\)/);
  assert.match(scene,/if\(branches\.reveal\(path\)\)syncVisibility\(\)/);
  assert.match(css,/qb-map-remission-target/);
@@ -144,6 +147,8 @@ test("depois do salto, permite voltar à questão sem descartar a sessão de tre
  assert.match(html,/S\.mapaBack=null;S\.mapaFocus=null;setView\(previous\)/);
  assert.match(html,/if\(v!=='mapa'\) S\.mapaFocus=null/);
  assert.match(html,/qb-map-remission-banner/);
+ assert.match(html,/qb-map-remission-question/);
+ assert.match(html,/Questão que trouxe você até este conceito/);
  assert.match(html,/Nenhum nó foi atribuído artificialmente/);
  assert.match(html,/function entradasCaderno\(lista,indice\)/);
  assert.match(html,/\$\{atalhosQuestao\(q,indice\)\}/);
