@@ -118,7 +118,7 @@ export function observeMindMap(frame) {
           }
         }
       }
-      async function show3d(openRemission = false) {
+      async function show3d(openRemission = false, fromQuestion = false) {
         if (scene) return;
         const request = ++version;
         mode = "3d";
@@ -134,6 +134,14 @@ export function observeMindMap(frame) {
           modes.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.mapMode === "3d")));
           select(lastPath || "root", lastPath !== "" && lastPath !== "root", openRemission && lastPath!=="root");
           updateBranchControls();
+          if(fromQuestion){
+            // Selecting the right node is not enough if the actual 3D map
+            // remains below the fold. Bring the map itself into the viewport.
+            view.requestAnimationFrame(()=>{
+              const target=openRemission?next:next.parentElement.querySelector(".qb-map-remission-banner")||next;
+              target.scrollIntoView({block:"start",behavior:view.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+            });
+          }
         } catch {
           if (!disposed && request === version) showList("O 3D está indisponível neste navegador. A lista está aberta.");
         }
@@ -187,7 +195,7 @@ export function observeMindMap(frame) {
       if(deepLink){
         consumedFocusNonce=incomingNonce;
         lastPath=nodes.has(requested)?requested:"root";
-        show3d(lastPath!=="root");
+        show3d(lastPath!=="root",true);
       } else if (mode === "3d") show3d();
     }
     const observer = new view.MutationObserver(sync);
