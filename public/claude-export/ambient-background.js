@@ -48,6 +48,14 @@
         if(!motion)frame();
         return;
       }
+      // Attach the remote source lazily: users choosing a static background
+      // never request the 58 MB video, only the local JPG poster.
+      if(!video.src){
+        const source=video.dataset.qbVideoSrc;
+        if(!source){unavailable=true;paint();return;}
+        video.src=source;
+        video.load();
+      }
       const attempt=video.play();
       if(attempt&&typeof attempt.catch==="function"){
         attempt.catch(()=>{
