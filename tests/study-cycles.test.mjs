@@ -24,7 +24,7 @@ test("respect weekly availability and round-robin across exactly the selected su
   assert.equal(plan.goalMinutes, 420);
   assert.ok(plan.plannedMinutes <= 420 * 0.8);
   assert.deepEqual([...new Set(plan.tasks.map(t => t.materia))].sort(), [...config.subjects].sort());
-  assert.deepEqual(plan.tasks.slice(0, 3).map(t => t.materia), config.subjects);
+  assert.deepEqual([...plan.tasks.slice(0, 3).map(t => t.materia)], config.subjects);
   assert.ok(plan.tasks.every(t => t.topico && t.cicloEstudo && t.status === "planejada"));
   for (const [i, minutes] of config.dayMinutes.entries()) {
     const date = cycle.shift(start, i);
