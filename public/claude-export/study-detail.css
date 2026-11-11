@@ -194,6 +194,41 @@
   to { opacity: 1; transform: translateY(0); }
 }
 .qb-flash-answer > b { color: var(--certo); font: 650 11px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+.qb-flash-mnem {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: grid;
+  gap: 3px;
+  font-size: 13px;
+  color: #fde68a;
+  margin-top: 4px;
+}
+.qb-flash-mnem > b {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #f59e0b;
+}
+
+.qb-flash-mec {
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: grid;
+  gap: 3px;
+  font-size: 13px;
+  color: #c7d2fe;
+  margin-top: 4px;
+}
+.qb-flash-mec > b {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #818cf8;
+}
 .qb-flashcard .cav { width: 100%; display: grid; gap: 8px; }
 .qb-flashcard textarea { border-radius: 10px; background: var(--surface); border: 1px solid var(--line); font-size: 14.5px; }
 .qb-flashcard textarea:focus { outline: 2px solid var(--pen); outline-offset: 1px; }

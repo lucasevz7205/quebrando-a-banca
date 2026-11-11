@@ -2,7 +2,7 @@
  * Cacheia apenas recursos estáticos de interface (/claude-export/*, ícone, manifesto).
  * NUNCA armazena respostas de API nem documentos privados de contas no Cache Storage.
  */
-const CACHE_NAME = "qb-static-axon-v7";
+const CACHE_NAME = "qb-static-axon-v8";
 const PRECACHE_URLS = [
   "/manifest.webmanifest",
   "/qb-icon.svg",
@@ -15,7 +15,7 @@ const PRECACHE_URLS = [
   "/claude-export/axon-shell.css?v=1",
   "/claude-export/offline-sync.css?v=1",
   "/claude-export/question-curator.css?v=1",
-  "/claude-export/omnistudy-ai.css?v=13",
+  "/claude-export/omnistudy-ai.css?v=14",
   "/claude-export/omnistudy-cornell.css?v=12",
   "/claude-export/mindmap-studio.css?v=14",
   "/claude-export/radial-axon-flow.js?v=1",
@@ -27,7 +27,7 @@ const PRECACHE_URLS = [
   "/claude-export/question-curator.js?v=1",
   "/claude-export/omnistudy-cornell.js?v=15",
   "/claude-export/mindmap-studio.js?v=14",
-  "/claude-export/omnistudy-ai.js?v=25"
+  "/claude-export/omnistudy-ai.js?v=26"
 ];
 
 self.addEventListener("install", event => {

@@ -441,21 +441,36 @@
     }
     if (payload.task === "generate-flashcards" || payload.task === "scan-note") {
       const t = payload.topic || "Tópico do Edital";
+      const count = payload.count || 4;
+      const cards = [];
+      for (let i = 0; i < count; i++) {
+        cards.push({
+          question: i === 0
+            ? `Qual é a regra geral e a principal exceção em ${t}?`
+            : i === 1
+            ? `Como a banca Cebraspe costuma aplicar a pegadinha F3 (Troca de Conceito) em ${t}?`
+            : i === 2
+            ? `Qual a competência exclusiva vs privativa incidente sobre ${t}?`
+            : `Qual é o par de contraste 'X (e não Y)' essencial para não errar ${t}?`,
+          answer: payload.text
+            ? String(payload.text).slice(0, 240)
+            : `Aplicação estrita do dispositivo legal de ${t}, ressalvadas as hipóteses expressas de vedação.`,
+          category: t,
+          mnemonicHint: "Foque no verbo de competência e nas expressões 'salvo', 'vedado' e 'exclusivo'",
+          mecanismo: i % 2 === 0 ? "F3 - Troca de conceito" : "V4 - Exceção real",
+          vacina: "Sublinhe os núcleos verbais e confira se a assertiva não generalizou uma regra que comporta exceção.",
+          legalRef: `Dispositivo matriz de ${t} (CF/88 e legislação correlata)`,
+          discriminatorScore: 92 - i * 2,
+          veredicto: "Flashcard calibrado com alto poder de Active Recall para retenção Cebraspe.",
+          nodeId: payload.targetNodeId || `node-${i + 1}`,
+        });
+      }
       return {
         topic: t,
         cues: [`Regra geral de ${t}`, `Exceção principal de ${t}`, "Armadilha Cebraspe (F3/F4)"],
         notes: payload.text || payload.extractedText || `• Resumo estruturado de ${t}.`,
         summary: `Síntese ativa gerada para ${t}.`,
-        flashcards: [
-          {
-            question: `Qual é a regra central e a principal exceção em ${t}?`,
-            answer: payload.text
-              ? String(payload.text).slice(0, 220)
-              : `Verifique o dispositivo matriz de ${t} e destaque o contraste 'X (e não Y)'.`,
-            category: t,
-            mnemonicHint: "Foque no verbo de competência e nas palavras 'salvo/vedado'",
-          },
-        ],
+        flashcards: cards,
       };
     }
     if (payload.task === "curate-question") {
@@ -1119,128 +1134,434 @@
 
     if (state.activeTab === "flashcards") {
       const deck = state.decks[0] || { title: "Baralho SRS", cards: [] };
-      const card = deck.cards[state.cardIndex] || deck.cards[0];
+      const totalCards = deck.cards.length;
+      if (state.cardIndex >= totalCards && totalCards > 0) state.cardIndex = 0;
+      const card = totalCards > 0 ? deck.cards[state.cardIndex] : null;
+
+      state.fcSourceType = state.fcSourceType || "mindmap";
+
+      // Subsídios disponíveis no ambiente
+      const S = appState();
+      const catalog = getTopicCatalog();
+      const cornellList = Array.isArray(state.cornellNotes) ? state.cornellNotes : [];
+
       body.innerHTML = `
         <div class="omni-grid-2">
-          <div class="omni-card" style="display:flex;flex-direction:column;gap:10px">
-            <span class="omni-label">Gerador de Flashcards SRS & Scanner Multimodal (TASK-03 / TASK-06)</span>
-            <input id="omni-fc-topic" class="omni-input" value="${escHtml(state.subject)}" placeholder="Tema do baralho..." />
-            <textarea id="omni-fc-text" class="omni-textarea" rows="4" placeholder="Opcional: cole artigo de lei, resumo ou envie foto da apostila abaixo..."></textarea>
-            <div>
-              <label class="omni-label">📷 Digitalizar Foto de Caderno / Apostila (Opcional)</label>
-              <input type="file" id="omni-scan-file" accept="image/*" class="omni-input" style="padding:6px" />
+          <!-- Coluna 1: Gerador de Flashcards com Subsídios & Arquitetura GAN -->
+          <div class="omni-card" style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span class="omni-label" style="margin:0">Gerador GAN de Flashcards (Active Recall)</span>
+              <span class="omni-fc-gan-pill">🤖 Gerador × ⚖️ Discriminador</span>
             </div>
-            <button type="button" id="omni-fc-generate" class="omni-btn">⚡ Gerar Cartões SRS & Nota Cornell</button>
+
+            <div class="omni-fc-source-tabs">
+              <button type="button" class="omni-fc-source-btn ${state.fcSourceType === "mindmap" ? "active" : ""}" data-fc-source="mindmap">🗺️ Mapa Mental</button>
+              <button type="button" class="omni-fc-source-btn ${state.fcSourceType === "cornell" ? "active" : ""}" data-fc-source="cornell">📓 Caderno Cornell</button>
+              <button type="button" class="omni-fc-source-btn ${state.fcSourceType === "text" ? "active" : ""}" data-fc-source="text">📄 Texto / Edital</button>
+              <button type="button" class="omni-fc-source-btn ${state.fcSourceType === "camera" ? "active" : ""}" data-fc-source="camera">📷 Foto / Scanner</button>
+            </div>
+
+            <!-- Painel dinâmico conforme a fonte de subsídio -->
+            ${
+              state.fcSourceType === "mindmap"
+                ? `
+              <div>
+                <label class="omni-label">Tópico do Edital / Mapa Mental</label>
+                <select id="omni-fc-mindmap-select" class="omni-input">
+                  ${catalog.flatMap(m => (m.topics || []).map(t => `<option value="${escHtml(t.id)}">${escHtml(m.name)} — ${escHtml(t.title)}</option>`)).join("")}
+                </select>
+                <div style="font-size:11.5px;color:#94a3b8;margin-top:4px">
+                  Ancoragem direta nos nós, ramos e contrastes do mapa mental do concurso.
+                </div>
+              </div>
+            `
+                : state.fcSourceType === "cornell"
+                ? `
+              <div>
+                <label class="omni-label">Folha do Caderno Cornell</label>
+                <select id="omni-fc-cornell-select" class="omni-input">
+                  ${
+                    cornellList.length
+                      ? cornellList.map(n => `<option value="${escHtml(n.id)}">${escHtml(n.title || n.subject || "Folha sem título")}</option>`).join("")
+                      : `<option value="">Nenhuma folha Cornell salva ainda</option>`
+                  }
+                </select>
+                <div style="font-size:11.5px;color:#94a3b8;margin-top:4px">
+                  Gera cartões a partir das perguntas-pista (30%) e notas estruturadas (70%).
+                </div>
+              </div>
+            `
+                : state.fcSourceType === "camera"
+                ? `
+              <div>
+                <label class="omni-label">📷 Foto da Apostila, Caderno ou Lei Grifada</label>
+                <input type="file" id="omni-scan-file" accept="image/*" class="omni-input" style="padding:6px" />
+                <div style="font-size:11.5px;color:#94a3b8;margin-top:4px">
+                  O scanner OCR extrai o texto e o Gerador GAN estrutura os cartões de fixação.
+                </div>
+              </div>
+            `
+                : `
+              <div>
+                <label class="omni-label">Texto Base / Dispositivo Legal / Doutrina</label>
+                <textarea id="omni-fc-text" class="omni-textarea" rows="4" placeholder="Cole o artigo da lei, súmula, trecho da aula ou regra para dissecar em cartões de evocação..."></textarea>
+              </div>
+            `
+            }
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+              <div>
+                <label class="omni-label">Quantidade de Cartões</label>
+                <select id="omni-fc-count" class="omni-input">
+                  <option value="4" selected>4 Cartões (Foco Rápido)</option>
+                  <option value="6">6 Cartões (Padrão)</option>
+                  <option value="8">8 Cartões (Aprofundado)</option>
+                </select>
+              </div>
+              <div>
+                <label class="omni-label">Nível de Rigor Cebraspe</label>
+                <select id="omni-fc-diff" class="omni-input">
+                  <option value="avançado Cebraspe com pegadinhas" selected>Avançado (com Armadilhas F1-F10)</option>
+                  <option value="conceitual e regras gerais">Conceitual (Regra Geral vs Exceção)</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="button" id="omni-fc-generate" class="omni-btn" style="padding:10px;font-weight:700">
+              ⚡ Gerar Flashcards com Arquitetura GAN
+            </button>
+            <div id="omni-fc-status" style="font-size:12px;color:#a5b4fc;display:none;text-align:center"></div>
           </div>
 
-          <div class="omni-card">
-            ${
-              card
-                ? `
-              <div style="display:flex;justify-content:space-between;font-size:11px;color:#94a3b8;margin-bottom:8px">
-                <span>Cartão <strong>${state.cardIndex + 1}</strong> de ${deck.cards.length}</span>
-                <span>${escHtml(card.category || deck.title)}</span>
+          <!-- Coluna 2: Apresentação Visual 3D do Flashcard & Avaliação SRS -->
+          <div class="omni-card" style="display:flex;flex-direction:column;justify-content:space-between">
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#94a3b8;margin-bottom:10px">
+                <div style="display:flex;align-items:center;gap:8px">
+                  <span style="font-weight:700;color:#f1f5f9">${escHtml(deck.title)}</span>
+                  <span>· Cartão <strong>${totalCards > 0 ? state.cardIndex + 1 : 0}</strong> de ${totalCards}</span>
+                </div>
+                <div style="display:flex;gap:6px">
+                  <button type="button" id="omni-fc-shuffle" class="omni-tab-btn" style="padding:3px 8px;font-size:11px" title="Embaralhar baralho">🔀 Embaralhar</button>
+                  <button type="button" id="omni-fc-add-manual" class="omni-tab-btn" style="padding:3px 8px;font-size:11px" title="Criar cartão manual">＋ Manual</button>
+                </div>
               </div>
-              <div id="omni-fc-stage" class="omni-flashcard-stage">
+
+              <!-- Palco 3D do Flashcard -->
+              <div id="omni-fc-stage" class="omni-flashcard-stage" title="Clique ou pressione ESPAÇO para virar">
                 <div class="omni-flashcard-inner ${state.cardFlipped ? "is-flipped" : ""}">
-                  <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:${state.cardFlipped ? "#34d399" : "#818cf8"}">
-                    ${state.cardFlipped ? "✓ Resposta & Fundamentação" : "❓ Pergunta de Evocação Ativa (Clique para virar)"}
-                  </div>
-                  <div style="font-size:15px;font-weight:700;text-align:center;margin:18px 0;line-height:1.5">
-                    ${escHtml(state.cardFlipped ? card.answer : card.question)}
-                  </div>
                   ${
-                    card.mnemonicHint
-                      ? `<div style="font-size:11px;padding:7px 10px;border-radius:8px;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);color:#fde68a">💡 <strong>Gatilho Mnemônico:</strong> ${escHtml(card.mnemonicHint)}</div>`
-                      : `<div></div>`
+                    card
+                      ? `
+                    <!-- FACE FRONTAL (EVOCAÇÃO ATIVA) -->
+                    <div class="omni-fc-face front">
+                      <div style="display:flex;justify-content:space-between;align-items:center">
+                        <span class="omni-fc-badge front-badge">❓ Evocação Ativa</span>
+                        <div style="display:flex;gap:6px;align-items:center">
+                          ${card.discriminatorScore ? `<span class="omni-fc-gan-pill">🎯 Rigor GAN ${card.discriminatorScore}%</span>` : ""}
+                          <span style="font-size:11px;color:#94a3b8">${escHtml(card.category || state.subject)}</span>
+                        </div>
+                      </div>
+
+                      <div class="omni-fc-question-text">
+                        ${escHtml(card.question)}
+                      </div>
+
+                      <div class="omni-fc-turn-hint">
+                        <span>↺ Clique no cartão ou pressione <strong>ESPAÇO</strong> para virar</span>
+                      </div>
+                    </div>
+
+                    <!-- FACE TRASEIRA (RESPOSTA, FUNDAMENTAÇÃO & MECANISMO) -->
+                    <div class="omni-fc-face back">
+                      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                        <span class="omni-fc-badge back-badge">✓ Resposta & Fundamentação</span>
+                        <span style="font-size:11px;color:#94a3b8">${escHtml(card.category || state.subject)}</span>
+                      </div>
+
+                      <div class="omni-fc-answer-text">
+                        ${escHtml(card.answer)}
+                      </div>
+
+                      ${
+                        card.mnemonicHint
+                          ? `
+                        <div class="omni-fc-mnemonic-box">
+                          <strong>💡 Gatilho Mnemônico / Par de Contraste:</strong> ${escHtml(card.mnemonicHint)}
+                        </div>
+                      `
+                          : ""
+                      }
+
+                      ${
+                        card.mecanismo
+                          ? `
+                        <div class="omni-fc-vacina-box">
+                          <strong>⚠️ Mecanismo da Banca:</strong> ${escHtml(card.mecanismo)}
+                          ${card.vacina ? ` · <em>Vacina:</em> ${escHtml(card.vacina)}` : ""}
+                        </div>
+                      `
+                          : ""
+                      }
+
+                      <div class="omni-fc-ref-box">
+                        <span>⚖️ <strong>Base Normativa:</strong> ${escHtml(card.legalRef || card.reference || "Dispositivo legal / regimental correspondente")}</span>
+                      </div>
+                    </div>
+                  `
+                      : `
+                    <div class="omni-fc-face front" style="justify-content:center;align-items:center;text-align:center">
+                      <div style="font-size:32px;margin-bottom:8px">🗂</div>
+                      <div style="font-weight:700;font-size:16px;color:#f8fafc">Nenhum cartão neste baralho</div>
+                      <p style="font-size:12px;color:#94a3b8;max-width:320px;margin-top:6px">Gere novos cartões com a Arquitetura GAN ao lado usando seus Mapas Mentais ou notas Cornell.</p>
+                    </div>
+                  `
                   }
                 </div>
               </div>
-              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px">
-                <button type="button" class="omni-btn omni-btn-ghost" data-srs-rate="again">Errei (1d)</button>
-                <button type="button" class="omni-btn omni-btn-ghost" data-srs-rate="hard">Difícil (3d)</button>
-                <button type="button" class="omni-btn omni-btn-ghost" data-srs-rate="good">Bom (7d)</button>
-                <button type="button" class="omni-btn omni-btn-ghost" data-srs-rate="easy">Fácil (14d)</button>
+            </div>
+
+            <!-- Controles SRS de Repetição Espaçada com Atalhos -->
+            <div>
+              <div class="omni-srs-grid">
+                <button type="button" class="omni-srs-btn again" data-srs-rate="again" title="Atalho: tecla 1">
+                  <span>[1] Errei</span>
+                  <small>Novamente (1d)</small>
+                </button>
+                <button type="button" class="omni-srs-btn hard" data-srs-rate="hard" title="Atalho: tecla 2">
+                  <span>[2] Difícil</span>
+                  <small>Revisar (3d)</small>
+                </button>
+                <button type="button" class="omni-srs-btn good" data-srs-rate="good" title="Atalho: tecla 3">
+                  <span>[3] Bom</span>
+                  <small>Fixado (7d)</small>
+                </button>
+                <button type="button" class="omni-srs-btn easy" data-srs-rate="easy" title="Atalho: tecla 4">
+                  <span>[4] Fácil</span>
+                  <small>Dominado (14d)</small>
+                </button>
               </div>
-            `
-                : `<div>Nenhum cartão disponível.</div>`
-            }
+              <div style="display:flex;justify-content:space-between;font-size:11px;color:#64748b;margin-top:8px">
+                <span>Atalhos: <strong>Espaço</strong> para virar · <strong>1 a 4</strong> para avaliar</span>
+                <div style="display:flex;gap:10px">
+                  <button type="button" id="omni-fc-prev" class="omni-tab-btn" style="padding:2px 8px;font-size:10px">◀ Anterior</button>
+                  <button type="button" id="omni-fc-next" class="omni-tab-btn" style="padding:2px 8px;font-size:10px">Próximo ▶</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       `;
 
+      // Eventos das Abas de Fonte de Subsídio
+      body.querySelectorAll("[data-fc-source]").forEach(b => {
+        b.addEventListener("click", () => {
+          state.fcSourceType = b.getAttribute("data-fc-source");
+          renderStudioBody();
+        });
+      });
+
+      // Flip do Cartão
       const stage = body.querySelector("#omni-fc-stage");
       if (stage) {
         stage.addEventListener("click", () => {
           state.cardFlipped = !state.cardFlipped;
+          const inner = stage.querySelector(".omni-flashcard-inner");
+          if (inner) inner.classList.toggle("is-flipped", state.cardFlipped);
+        });
+      }
+
+      // Navegação Anterior / Próximo
+      const prevBtn = body.querySelector("#omni-fc-prev");
+      if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+          state.cardFlipped = false;
+          state.cardIndex = (state.cardIndex - 1 + Math.max(1, totalCards)) % Math.max(1, totalCards);
           renderStudioBody();
         });
       }
+      const nextBtn = body.querySelector("#omni-fc-next");
+      if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+          state.cardFlipped = false;
+          state.cardIndex = (state.cardIndex + 1) % Math.max(1, totalCards);
+          renderStudioBody();
+        });
+      }
+
+      // Embaralhar
+      const shuffleBtn = body.querySelector("#omni-fc-shuffle");
+      if (shuffleBtn && deck.cards.length > 1) {
+        shuffleBtn.addEventListener("click", () => {
+          for (let i = deck.cards.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [deck.cards[i], deck.cards[j]] = [deck.cards[j], deck.cards[i]];
+          }
+          state.cardIndex = 0;
+          state.cardFlipped = false;
+          saveState();
+          renderStudioBody();
+        });
+      }
+
+      // Criar Cartão Manual
+      const addManualBtn = body.querySelector("#omni-fc-add-manual");
+      if (addManualBtn) {
+        addManualBtn.addEventListener("click", () => {
+          const q = global.prompt && global.prompt("Pergunta de Evocação Ativa:");
+          if (!q || !q.trim()) return;
+          const a = global.prompt && global.prompt("Resposta e Fundamentação:");
+          if (!a || !a.trim()) return;
+          const newCard = {
+            id: "fc-manual-" + Date.now(),
+            question: q.trim(),
+            answer: a.trim(),
+            category: state.subject,
+            mnemonicHint: "",
+            mecanismo: "V1 · Paráfrase fiel",
+            legalRef: "Autoral / Nota própria",
+            difficulty: "good",
+            reviewsCount: 0,
+          };
+          deck.cards.unshift(newCard);
+          state.cardIndex = 0;
+          state.cardFlipped = false;
+          saveState();
+          renderStudioBody();
+        });
+      }
+
+      // Avaliação SRS
       body.querySelectorAll("[data-srs-rate]").forEach(b => {
         b.addEventListener("click", () => {
+          const rate = b.getAttribute("data-srs-rate");
+          if (card) {
+            card.difficulty = rate;
+            card.reviewsCount = (card.reviewsCount || 0) + 1;
+            card.lastReviewed = new Date().toISOString();
+          }
           state.cardFlipped = false;
-          state.cardIndex = (state.cardIndex + 1) % Math.max(1, deck.cards.length);
+          state.cardIndex = (state.cardIndex + 1) % Math.max(1, totalCards);
           saveState();
           renderStudioBody();
         });
       });
 
+      // Teclas de Atalho (Espaço para virar, 1/2/3/4 para avaliar)
+      const handleKeyDown = e => {
+        if (state.activeTab !== "flashcards") return;
+        const target = e.target;
+        if (target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.tagName === "SELECT")) return;
+
+        if (e.code === "Space" || e.key === " ") {
+          e.preventDefault();
+          state.cardFlipped = !state.cardFlipped;
+          const inner = document.querySelector(".omni-flashcard-inner");
+          if (inner) inner.classList.toggle("is-flipped", state.cardFlipped);
+        } else if (e.key === "1") {
+          body.querySelector('[data-srs-rate="again"]')?.click();
+        } else if (e.key === "2") {
+          body.querySelector('[data-srs-rate="hard"]')?.click();
+        } else if (e.key === "3") {
+          body.querySelector('[data-srs-rate="good"]')?.click();
+        } else if (e.key === "4") {
+          body.querySelector('[data-srs-rate="easy"]')?.click();
+        }
+      };
+
+      if (typeof global.removeEventListener === "function") {
+        global.removeEventListener("keydown", global._omniFcKeyHandler);
+      }
+      global._omniFcKeyHandler = handleKeyDown;
+      if (typeof global.addEventListener === "function") {
+        global.addEventListener("keydown", handleKeyDown);
+      }
+
+      // Geração GAN com Subsídios
       const genBtn = body.querySelector("#omni-fc-generate");
       if (genBtn) {
         genBtn.addEventListener("click", async () => {
-          const topic = body.querySelector("#omni-fc-topic").value.trim() || state.subject;
-          const text = body.querySelector("#omni-fc-text").value.trim();
-          const fileInput = body.querySelector("#omni-scan-file");
-          const file = fileInput && fileInput.files && fileInput.files[0];
+          const statusEl = body.querySelector("#omni-fc-status");
+          const count = Number(body.querySelector("#omni-fc-count")?.value || 4);
+          const diff = body.querySelector("#omni-fc-diff")?.value || "avançado Cebraspe";
+
+          let topic = state.subject;
+          let text = "";
+          let mapa = undefined;
+          let cornellNotes = undefined;
+
+          if (state.fcSourceType === "mindmap") {
+            const selTopicId = body.querySelector("#omni-fc-mindmap-select")?.value;
+            const chosen = catalog.flatMap(m => m.topics || []).find(t => t.id === selTopicId);
+            if (chosen) topic = chosen.title;
+            // Carregar mapa do tópico se houver no appState
+            if (S && S.rv && S.rv.has(selTopicId)) {
+              mapa = S.rv.get(selTopicId).mapa;
+            }
+          } else if (state.fcSourceType === "cornell") {
+            const selCornellId = body.querySelector("#omni-fc-cornell-select")?.value;
+            const chosenNote = cornellList.find(n => n.id === selCornellId);
+            if (chosenNote) {
+              topic = chosenNote.title || chosenNote.subject || topic;
+              cornellNotes = `PISTAS (30%):\n${(chosenNote.cues || []).join("\n")}\n\nNOTAS (70%):\n${chosenNote.notes || ""}\n\nSÍNTESE:\n${chosenNote.summary || ""}`;
+            }
+          } else if (state.fcSourceType === "text") {
+            text = body.querySelector("#omni-fc-text")?.value?.trim() || "";
+          }
 
           genBtn.disabled = true;
-          genBtn.textContent = "Processando com IA...";
+          if (statusEl) {
+            statusEl.style.display = "block";
+            statusEl.innerHTML = "🤖 <em>Gerador criando cartões ancorados nos conceitos...</em>";
+          }
 
-          let imageDataUrl = undefined;
-          if (file) {
-            imageDataUrl = await new Promise(resolve => {
-              const reader = new FileReader();
-              reader.onload = () => resolve(String(reader.result || ""));
-              reader.onerror = () => resolve(undefined);
-              reader.readAsDataURL(file);
+          try {
+            const res = await callOmniStudyBackend({
+              task: "generate-flashcards",
+              topic,
+              count,
+              difficulty: diff,
+              text,
+              mapa,
+              cornellNotes,
+              sourceType: state.fcSourceType,
             });
-          }
 
-          const res = await callOmniStudyBackend(
-            imageDataUrl
-              ? { task: "scan-note", topic, extractedText: text, imageDataUrl }
-              : { task: "generate-flashcards", topic, text, count: 5 }
-          );
+            if (statusEl) {
+              statusEl.innerHTML = "⚖️ <em>Discriminador Cebraspe validando mecanismos e pegadinhas...</em>";
+            }
 
-          const cards = (res.flashcards || []).map((c, idx) => ({
-            id: "fc-ai-" + Date.now() + "-" + idx,
-            question: c.question,
-            answer: c.answer,
-            category: c.category || topic,
-            mnemonicHint: c.mnemonicHint || "",
-            difficulty: "good",
-            reviewsCount: 0,
-          }));
+            const newCards = (res.flashcards || []).map((c, idx) => ({
+              id: "fc-gan-" + Date.now() + "-" + idx,
+              question: c.question,
+              answer: c.answer,
+              category: c.category || topic,
+              mnemonicHint: c.mnemonicHint || "",
+              mecanismo: c.mecanismo || "F3 · Troca de Conceito",
+              vacina: c.vacina || "",
+              legalRef: c.legalRef || "Legislação aplicável ao edital",
+              discriminatorScore: c.discriminatorScore || 92,
+              veredicto: c.veredicto || "Validado com alto poder de Active Recall",
+              difficulty: "good",
+              reviewsCount: 0,
+            }));
 
-          if (cards.length) {
-            state.decks[0].cards = cards.concat(state.decks[0].cards);
-            state.cardIndex = 0;
-            state.cardFlipped = false;
+            if (newCards.length) {
+              deck.cards = newCards.concat(deck.cards);
+              state.cardIndex = 0;
+              state.cardFlipped = false;
+              saveState();
+              renderStudioBody();
+            }
+          } catch (err) {
+            console.error("[OmniFlashcards] Falha na geração GAN:", err);
+            if (statusEl) {
+              statusEl.style.display = "block";
+              statusEl.textContent = "Erro ao gerar cartões. Verifique os dados.";
+            }
+          } finally {
+            genBtn.disabled = false;
           }
-          if (res.notes && Array.isArray(res.cues)) {
-            state.cornellNotes.unshift({
-              id: "cornell-scan-" + Date.now(),
-              title: res.topic || topic,
-              subject: topic,
-              date: "Digitalizado Hoje",
-              cues: res.cues,
-              notes: res.notes,
-              summary: res.summary || "",
-              actionItems: [],
-            });
-          }
-          saveState();
-          renderStudioBody();
         });
       }
       return;

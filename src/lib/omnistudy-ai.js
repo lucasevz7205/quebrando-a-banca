@@ -29,9 +29,13 @@ const OmniStudyInput = z.discriminatedUnion("task", [
   z.object({
     task: z.literal("generate-flashcards"),
     topic: z.string().min(2).max(300),
-    text: z.string().max(6000).optional(),
+    text: z.string().max(12000).optional(),
     count: z.number().int().min(1).max(12).optional(),
     difficulty: z.string().max(60).optional(),
+    sourceType: z.enum(["mindmap", "cornell", "text", "auto"]).optional().default("auto"),
+    mapa: z.any().optional(),
+    cornellNotes: z.string().max(12000).optional(),
+    targetNodeId: z.string().max(120).optional(),
   }),
   z.object({
     task: z.literal("summarize-cornell"),
@@ -220,19 +224,36 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
     if (data.task === "generate-flashcards") {
       const count = data.count || 6;
       const difficulty = data.difficulty || "avançado Cebraspe";
-      const prompt = [
-        `Gere exatamente ${count} flashcards de evocação ativa (Active Recall) sobre "${data.topic}".`,
-        `Nível: ${difficulty}.`,
-        data.text ? `Texto-base de referência:\n"""${data.text}"""` : "",
-        "Retorne APENAS um JSON com a chave \"flashcards\" contendo objetos com:",
-        '- "question": pergunta direta focada em 1 conceito ou distinção;',
-        '- "answer": resposta concisa e precisa;',
-        '- "category": subtópico;',
-        '- "mnemonicHint": dica mnemônica ou contraste "X (e não Y)".',
+
+      let subsidioContext = "";
+      if (data.mapa && typeof data.mapa === "object") {
+        subsidioContext += `\nMAPA MENTAL DE SUBSÍDIO (DADOS):\n${JSON.stringify(data.mapa).slice(0, 10000)}\n`;
+      }
+      if (data.cornellNotes) {
+        subsidioContext += `\nBASE CORNELL DE SUBSÍDIO (DADOS):\n${String(data.cornellNotes).slice(0, 8000)}\n`;
+      }
+      if (data.text) {
+        subsidioContext += `\nTEXTO OU APOSTILA DE REFERÊNCIA:\n"""${data.text}"""\n`;
+      }
+
+      // ETAPA 1: Gerador de Flashcards de Alta Retenção Ativa
+      const generatorPrompt = [
+        "ARQUITETURA GAN DE FLASHCARDS — ETAPA 1: GERADOR COGNITIVO DE ACTIVE RECALL.",
+        `Você é o Agente Gerador de Flashcards de Elite para concursos públicos de alto nível (Cebraspe / Câmara dos Deputados).`,
+        `Tema em Foco: "${data.topic}". Nível de Rigor: ${difficulty}.`,
+        data.targetNodeId ? `Foco prioritário no conceito/nó: "${data.targetNodeId}".` : "",
+        subsidioContext || "Gere os cartões com base na doutrina e legislação atualizada do edital.",
+        `Gere exatamente ${count} flashcards que forcem evocação ativa real (Active Recall), e NÃO mero reconhecimento passivo.`,
+        "Critérios de Excelência:",
+        "1. Pergunta (frente): direta, instigante, focando em regra geral vs exceção, distinção 'X vs Y', quórum ou competência.",
+        "2. Resposta (verso): resposta nuclear em poucas linhas, acompanhada da fundamentação legal/regimental exata.",
+        "3. Contraste mnemônico: sempre incluir o contraste 'X (e não Y)' ou gatilho de memorização.",
+        "4. Mecanismo da Banca: associar a pegadinha da banca Cebraspe (F1 a F10 para itens falsos; V1 a V4 para exceções e literais).",
+        "5. Vacina: dica cirúrgica para desarmar a armadilha na hora da prova.",
       ].join("\n");
 
       const raw = await core.InvokeLLM({
-        prompt,
+        prompt: generatorPrompt,
         response_json_schema: {
           type: "object",
           properties: {
@@ -245,8 +266,12 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
                   answer: { type: "string" },
                   category: { type: "string" },
                   mnemonicHint: { type: "string" },
+                  mecanismo: { type: "string" },
+                  vacina: { type: "string" },
+                  legalRef: { type: "string" },
+                  nodeId: { type: "string" },
                 },
-                required: ["question", "answer", "category", "mnemonicHint"],
+                required: ["question", "answer", "category", "mnemonicHint", "legalRef"],
               },
             },
           },
@@ -255,8 +280,84 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
       });
 
       const parsed = safeJsonParse(raw, { flashcards: [] });
+      let candidateCards = Array.isArray(parsed) ? parsed : Array.isArray(parsed.flashcards) ? parsed.flashcards : [];
+
+      // ETAPA 2: Discriminador Adversário Cebraspe (Validação & Calibração)
+      const discriminatorPrompt = [
+        "ARQUITETURA GAN DE FLASHCARDS — ETAPA 2: DISCRIMINADOR ADVERSÁRIO CEBRASPE.",
+        "Você é o Discriminador Adversário Cego. Sua função é avaliar se estes flashcards têm rigor suficiente de prova de concurso (Cebraspe) ou se são superficiais/ambíguos.",
+        `TÓPICO: ${data.topic}`,
+        `CANDIDATOS A FLASHCARDS:\n${JSON.stringify(candidateCards, null, 2)}`,
+        "",
+        "Para cada cartão:",
+        "1. Atribua um scoreRealismo de 0 a 100.",
+        "2. Aponte um veredicto em 1 frase.",
+        "3. Se houver imprecisão na resposta ou fundamentação frágil, forneça a versão refinada.",
+      ].join("\n");
+
+      try {
+        const discRaw = await core.InvokeLLM({
+          prompt: discriminatorPrompt,
+          response_json_schema: {
+            type: "object",
+            properties: {
+              avaliacoes: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    index: { type: "integer" },
+                    scoreRealismo: { type: "integer" },
+                    veredicto: { type: "string" },
+                    mecanismoSugerido: { type: "string" },
+                    vacinaSugerida: { type: "string" },
+                    cartaoRefinado: {
+                      type: "object",
+                      properties: {
+                        question: { type: "string" },
+                        answer: { type: "string" },
+                        category: { type: "string" },
+                        mnemonicHint: { type: "string" },
+                        legalRef: { type: "string" },
+                      },
+                    },
+                  },
+                  required: ["index", "scoreRealismo", "veredicto"],
+                },
+              },
+            },
+            required: ["avaliacoes"],
+          },
+        });
+
+        const discParsed = safeJsonParse(discRaw, { avaliacoes: [] });
+        const evals = Array.isArray(discParsed?.avaliacoes) ? discParsed.avaliacoes : [];
+
+        candidateCards = candidateCards.map((c, i) => {
+          const ev = evals.find(e => e.index === i) || evals[i];
+          if (!ev) return c;
+          const ref = ev.cartaoRefinado || {};
+          return {
+            ...c,
+            question: ref.question || c.question,
+            answer: ref.answer || c.answer,
+            category: ref.category || c.category,
+            mnemonicHint: ref.mnemonicHint || c.mnemonicHint,
+            legalRef: ref.legalRef || c.legalRef || "Dispositivo legal correspondente",
+            mecanismo: ev.mecanismoSugerido || c.mecanismo || "F3",
+            vacina: ev.vacinaSugerida || c.vacina || "Atenção ao contraste entre regra e exceção.",
+            discriminatorScore: ev.scoreRealismo || 88,
+            veredicto: ev.veredicto || "Cartão validado com aderência à banca.",
+          };
+        });
+      } catch (_discErr) {
+        // Se o discriminador falhar, manter os cartões gerados pela Etapa 1
+      }
+
       return {
-        flashcards: Array.isArray(parsed) ? parsed : Array.isArray(parsed.flashcards) ? parsed.flashcards : [],
+        flashcards: candidateCards,
+        topic: data.topic,
+        total: candidateCards.length,
       };
     }
 
