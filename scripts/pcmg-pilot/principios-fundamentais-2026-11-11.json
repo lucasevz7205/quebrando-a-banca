@@ -1,0 +1,2377 @@
+{
+  "concurso": "PCMG",
+  "criadoEm": "2026-11-11",
+  "arquivoFonte": "PCMG - Copia.zip",
+  "fonteConstitucional": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+  "etapa": "piloto",
+  "material": [
+    {
+      "id": "pcmg-cf-art1",
+      "edital": {
+        "id": "pcmg-cf-art1",
+        "caps": [
+          "PCMG-DC-ART1"
+        ],
+        "titulo": "Art. 1º — fundamentos da República e poder popular",
+        "num": "2.2.1",
+        "ordem": 101,
+        "prova": "Objetiva, FGV",
+        "sigla": "CONST",
+        "materia": "Noções de Direito Constitucional",
+        "materiaOrdem": 3,
+        "fonteEdital": "Edital PCMG nº 04/2024, Anexo I, item 2.2",
+        "status": "rascunho-estudo"
+      },
+      "revisao": {
+        "id": "pcmg-cf-art1",
+        "titulo": "Art. 1º — fundamentos da República e poder popular",
+        "edital": "PCMG, Investigador de Polícia I: 2.2 Princípios Fundamentais",
+        "etapa": 1,
+        "atualizadoEm": "2026-11-11",
+        "resumo": [
+          "A República Federativa do Brasil é formada pela união indissolúvel dos Estados, Municípios e Distrito Federal. É Estado Democrático de Direito. Exemplo: O Município tem autonomia, mas não soberania ou direito de separar-se da Federação. Cuidado: Autonomia municipal não autoriza secessão nem torna o ente Estado soberano.",
+          "A soberania é fundamento da República Federativa, não qualidade independente de cada ente federado. Exemplo: O Estado de Minas Gerais exerce competências próprias, mas não se apresenta como Estado soberano nas relações internacionais. Cuidado: Confundir soberania da República com autonomia dos Estados.",
+          "A cidadania integra os fundamentos do art. 1º. Abrange participação e inclusão na vida política e social, não apenas possuir título de eleitor. Exemplo: Pessoas participam de decisões públicas e de espaços de controle social além da votação. Cuidado: Limitar cidadania à inscrição eleitoral reduz indevidamente seu alcance constitucional.",
+          "A dignidade da pessoa humana é fundamento expressamente previsto no art. 1º, III. Orienta a proteção da pessoa e a interpretação das normas. Exemplo: O poder público precisa considerar a dignidade da pessoa ao estabelecer procedimentos de atendimento. Cuidado: Dignidade não é o mesmo dispositivo que prevalência dos direitos humanos, do art. 4º.",
+          "O art. 1º protege os valores sociais do trabalho e da livre iniciativa, além do pluralismo político. Pluralismo é mais amplo que pluripartidarismo. Exemplo: Movimentos de opinião não partidários também expressam diversidade política. Cuidado: Não substituir valores sociais do trabalho por defesa da paz nem pluralismo por mero número de partidos.",
+          "Todo poder emana do povo, que o exerce por representantes eleitos ou diretamente, nos termos da Constituição. A democracia contém elementos representativos e diretos. Exemplo: A participação em plebiscito ou referendo ilustra exercício direto previsto constitucionalmente. Cuidado: Afirmar que apenas representantes eleitos podem exercer poder contraria o parágrafo único."
+        ],
+        "fontes": [
+          {
+            "titulo": "Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG)",
+            "localizacao": "pp. 3–5 e 10–13"
+          },
+          {
+            "titulo": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+            "localizacao": "art. 1º"
+          }
+        ],
+        "mapa": {
+          "centro": "Art. 1º — fundamentos da República e poder popular",
+          "ramos": [
+            {
+              "id": "pcmg-cf-art1-r1",
+              "t": "Federação indissolúvel",
+              "x": {
+                "e": "A República Federativa do Brasil é formada pela união indissolúvel dos Estados, Municípios e Distrito Federal. É Estado Democrático de Direito.",
+                "ex": "O Município tem autonomia, mas não soberania ou direito de separar-se da Federação.",
+                "trap": "Autonomia municipal não autoriza secessão nem torna o ente Estado soberano.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art1-r2",
+              "t": "Soberania",
+              "x": {
+                "e": "A soberania é fundamento da República Federativa, não qualidade independente de cada ente federado.",
+                "ex": "O Estado de Minas Gerais exerce competências próprias, mas não se apresenta como Estado soberano nas relações internacionais.",
+                "trap": "Confundir soberania da República com autonomia dos Estados.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art1-r3",
+              "t": "Cidadania",
+              "x": {
+                "e": "A cidadania integra os fundamentos do art. 1º. Abrange participação e inclusão na vida política e social, não apenas possuir título de eleitor.",
+                "ex": "Pessoas participam de decisões públicas e de espaços de controle social além da votação.",
+                "trap": "Limitar cidadania à inscrição eleitoral reduz indevidamente seu alcance constitucional.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art1-r4",
+              "t": "Dignidade humana",
+              "x": {
+                "e": "A dignidade da pessoa humana é fundamento expressamente previsto no art. 1º, III. Orienta a proteção da pessoa e a interpretação das normas.",
+                "ex": "O poder público precisa considerar a dignidade da pessoa ao estabelecer procedimentos de atendimento.",
+                "trap": "Dignidade não é o mesmo dispositivo que prevalência dos direitos humanos, do art. 4º.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art1-r5",
+              "t": "Trabalho, iniciativa e pluralismo",
+              "x": {
+                "e": "O art. 1º protege os valores sociais do trabalho e da livre iniciativa, além do pluralismo político. Pluralismo é mais amplo que pluripartidarismo.",
+                "ex": "Movimentos de opinião não partidários também expressam diversidade política.",
+                "trap": "Não substituir valores sociais do trabalho por defesa da paz nem pluralismo por mero número de partidos.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art1-r6",
+              "t": "Titularidade popular do poder",
+              "x": {
+                "e": "Todo poder emana do povo, que o exerce por representantes eleitos ou diretamente, nos termos da Constituição. A democracia contém elementos representativos e diretos.",
+                "ex": "A participação em plebiscito ou referendo ilustra exercício direto previsto constitucionalmente.",
+                "trap": "Afirmar que apenas representantes eleitos podem exercer poder contraria o parágrafo único.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+              },
+              "f": []
+            }
+          ],
+          "ligacoes": []
+        },
+        "cartoes": [
+          {
+            "id": "pcmg-cf-art1-fc1-1",
+            "q": "Explique: Federação indissolúvel.",
+            "a": [
+              "A República Federativa do Brasil é formada pela união indissolúvel dos Estados, Municípios e Distrito Federal. É Estado Democrático de Direito."
+            ],
+            "mapaNoId": "pcmg-cf-art1-r1",
+            "tema": "Federação indissolúvel",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+          },
+          {
+            "id": "pcmg-cf-art1-fc1-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Federação indissolúvel\"?",
+            "a": [
+              "Autonomia municipal não autoriza secessão nem torna o ente Estado soberano."
+            ],
+            "mapaNoId": "pcmg-cf-art1-r1",
+            "tema": "Federação indissolúvel",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+          },
+          {
+            "id": "pcmg-cf-art1-fc2-1",
+            "q": "Explique: Soberania.",
+            "a": [
+              "A soberania é fundamento da República Federativa, não qualidade independente de cada ente federado."
+            ],
+            "mapaNoId": "pcmg-cf-art1-r2",
+            "tema": "Soberania",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+          },
+          {
+            "id": "pcmg-cf-art1-fc2-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Soberania\"?",
+            "a": [
+              "Confundir soberania da República com autonomia dos Estados."
+            ],
+            "mapaNoId": "pcmg-cf-art1-r2",
+            "tema": "Soberania",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+          },
+          {
+            "id": "pcmg-cf-art1-fc3-1",
+            "q": "Explique: Cidadania.",
+            "a": [
+              "A cidadania integra os fundamentos do art. 1º. Abrange participação e inclusão na vida política e social, não apenas possuir título de eleitor."
+            ],
+            "mapaNoId": "pcmg-cf-art1-r3",
+            "tema": "Cidadania",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+          },
+          {
+            "id": "pcmg-cf-art1-fc3-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Cidadania\"?",
+            "a": [
+              "Limitar cidadania à inscrição eleitoral reduz indevidamente seu alcance constitucional."
+            ],
+            "mapaNoId": "pcmg-cf-art1-r3",
+            "tema": "Cidadania",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+          },
+          {
+            "id": "pcmg-cf-art1-fc4-1",
+            "q": "Explique: Dignidade humana.",
+            "a": [
+              "A dignidade da pessoa humana é fundamento expressamente previsto no art. 1º, III. Orienta a proteção da pessoa e a interpretação das normas."
+            ],
+            "mapaNoId": "pcmg-cf-art1-r4",
+            "tema": "Dignidade humana",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+          },
+          {
+            "id": "pcmg-cf-art1-fc4-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Dignidade humana\"?",
+            "a": [
+              "Dignidade não é o mesmo dispositivo que prevalência dos direitos humanos, do art. 4º."
+            ],
+            "mapaNoId": "pcmg-cf-art1-r4",
+            "tema": "Dignidade humana",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+          },
+          {
+            "id": "pcmg-cf-art1-fc5-1",
+            "q": "Explique: Trabalho, iniciativa e pluralismo.",
+            "a": [
+              "O art. 1º protege os valores sociais do trabalho e da livre iniciativa, além do pluralismo político. Pluralismo é mais amplo que pluripartidarismo."
+            ],
+            "mapaNoId": "pcmg-cf-art1-r5",
+            "tema": "Trabalho, iniciativa e pluralismo",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+          },
+          {
+            "id": "pcmg-cf-art1-fc5-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Trabalho, iniciativa e pluralismo\"?",
+            "a": [
+              "Não substituir valores sociais do trabalho por defesa da paz nem pluralismo por mero número de partidos."
+            ],
+            "mapaNoId": "pcmg-cf-art1-r5",
+            "tema": "Trabalho, iniciativa e pluralismo",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+          },
+          {
+            "id": "pcmg-cf-art1-fc6-1",
+            "q": "Explique: Titularidade popular do poder.",
+            "a": [
+              "Todo poder emana do povo, que o exerce por representantes eleitos ou diretamente, nos termos da Constituição. A democracia contém elementos representativos e diretos."
+            ],
+            "mapaNoId": "pcmg-cf-art1-r6",
+            "tema": "Titularidade popular do poder",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+          },
+          {
+            "id": "pcmg-cf-art1-fc6-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Titularidade popular do poder\"?",
+            "a": [
+              "Afirmar que apenas representantes eleitos podem exercer poder contraria o parágrafo único."
+            ],
+            "mapaNoId": "pcmg-cf-art1-r6",
+            "tema": "Titularidade popular do poder",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13"
+          }
+        ],
+        "statusEditorial": "rascunho-pedagogico"
+      },
+      "questoes": [
+        {
+          "id": "pcmg-cf-art1-q01",
+          "cap": "PCMG-DC-ART1",
+          "capNome": "Art. 1º — fundamentos da República e poder popular",
+          "topico": "pcmg-cf-art1",
+          "ordem": 1,
+          "tema": "Federação indissolúvel",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "De acordo com o art. 1º, a Federação brasileira é formada pela união indissolúvel:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "da União, dos Territórios e das regiões."
+            },
+            {
+              "letra": "B",
+              "texto": "dos Estados, Municípios e Distrito Federal."
+            },
+            {
+              "letra": "C",
+              "texto": "exclusivamente dos Estados-membros."
+            },
+            {
+              "letra": "D",
+              "texto": "dos Estados e Municípios, excluído o DF."
+            },
+            {
+              "letra": "E",
+              "texto": "das regiões metropolitanas e dos Estados."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "B",
+          "comentario": "O texto inclui Estados, Municípios e Distrito Federal, numa união indissolúvel.",
+          "justificativa": "O texto inclui Estados, Municípios e Distrito Federal, numa união indissolúvel.",
+          "mapaNoId": "pcmg-cf-art1-r1",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 1º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art1-q02",
+          "cap": "PCMG-DC-ART1",
+          "capNome": "Art. 1º — fundamentos da República e poder popular",
+          "topico": "pcmg-cf-art1",
+          "ordem": 2,
+          "tema": "Soberania",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "A autonomia conferida aos Estados-membros brasileiros significa que eles:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "podem firmar tratados internacionais livremente como Estados soberanos."
+            },
+            {
+              "letra": "B",
+              "texto": "possuem soberania parcial independente da Constituição."
+            },
+            {
+              "letra": "C",
+              "texto": "podem optar por secessão mediante lei estadual."
+            },
+            {
+              "letra": "D",
+              "texto": "exercem competências próprias dentro da Constituição, sem soberania externa."
+            },
+            {
+              "letra": "E",
+              "texto": "não podem ter Poder Legislativo próprio."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "D",
+          "comentario": "A autonomia constitucional não se confunde com a soberania da República Federativa do Brasil.",
+          "justificativa": "A autonomia constitucional não se confunde com a soberania da República Federativa do Brasil.",
+          "mapaNoId": "pcmg-cf-art1-r2",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 1º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art1-q03",
+          "cap": "PCMG-DC-ART1",
+          "capNome": "Art. 1º — fundamentos da República e poder popular",
+          "topico": "pcmg-cf-art1",
+          "ordem": 3,
+          "tema": "Cidadania",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Sobre a cidadania na Constituição Federal, assinale a alternativa correta.",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "É objetivo fundamental do art. 3º."
+            },
+            {
+              "letra": "B",
+              "texto": "É princípio exclusivo das relações exteriores."
+            },
+            {
+              "letra": "C",
+              "texto": "É fundamento da República, com sentido amplo de participação política."
+            },
+            {
+              "letra": "D",
+              "texto": "Equivale juridicamente apenas ao título eleitoral."
+            },
+            {
+              "letra": "E",
+              "texto": "Integra o rol de direitos sem vínculo com a estrutura estatal."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "C",
+          "comentario": "A cidadania está no art. 1º, II como fundamento da República.",
+          "justificativa": "A cidadania está no art. 1º, II como fundamento da República.",
+          "mapaNoId": "pcmg-cf-art1-r3",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 1º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art1-q04",
+          "cap": "PCMG-DC-ART1",
+          "capNome": "Art. 1º — fundamentos da República e poder popular",
+          "topico": "pcmg-cf-art1",
+          "ordem": 4,
+          "tema": "Dignidade humana",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Entre as opções, assinale um fundamento previsto literalmente no art. 1º.",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "Prevalência dos direitos humanos."
+            },
+            {
+              "letra": "B",
+              "texto": "Garantia do desenvolvimento nacional."
+            },
+            {
+              "letra": "C",
+              "texto": "Repúdio ao terrorismo."
+            },
+            {
+              "letra": "D",
+              "texto": "Erradicação da marginalização."
+            },
+            {
+              "letra": "E",
+              "texto": "Dignidade da pessoa humana."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "E",
+          "comentario": "A dignidade é fundamento expresso; as demais expressões constam dos arts. 3º ou 4º.",
+          "justificativa": "A dignidade é fundamento expresso; as demais expressões constam dos arts. 3º ou 4º.",
+          "mapaNoId": "pcmg-cf-art1-r4",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 1º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art1-q05",
+          "cap": "PCMG-DC-ART1",
+          "capNome": "Art. 1º — fundamentos da República e poder popular",
+          "topico": "pcmg-cf-art1",
+          "ordem": 5,
+          "tema": "Trabalho, iniciativa e pluralismo",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Qual alternativa contém dois fundamentos expressamente previstos no art. 1º?",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "Valores sociais do trabalho e da livre iniciativa; pluralismo político."
+            },
+            {
+              "letra": "B",
+              "texto": "Redução da pobreza; independência nacional."
+            },
+            {
+              "letra": "C",
+              "texto": "Autodeterminação dos povos; cooperação internacional."
+            },
+            {
+              "letra": "D",
+              "texto": "Solução pacífica dos conflitos; cidadania."
+            },
+            {
+              "letra": "E",
+              "texto": "Desenvolvimento nacional; proteção ambiental."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "A",
+          "comentario": "Ambos são fundamentos do art. 1º, incisos IV e V; objetivos e princípios externos pertencem a outros dispositivos.",
+          "justificativa": "Ambos são fundamentos do art. 1º, incisos IV e V; objetivos e princípios externos pertencem a outros dispositivos.",
+          "mapaNoId": "pcmg-cf-art1-r5",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 1º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art1-q06",
+          "cap": "PCMG-DC-ART1",
+          "capNome": "Art. 1º — fundamentos da República e poder popular",
+          "topico": "pcmg-cf-art1",
+          "ordem": 6,
+          "tema": "Titularidade popular do poder",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Conforme o parágrafo único do art. 1º, o poder emana:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "dos três Poderes e é exercido somente por eles."
+            },
+            {
+              "letra": "B",
+              "texto": "dos partidos políticos, mediante eleições."
+            },
+            {
+              "letra": "C",
+              "texto": "do povo, exercido por representantes eleitos ou diretamente conforme a Constituição."
+            },
+            {
+              "letra": "D",
+              "texto": "do presidente da República, delegado aos cidadãos."
+            },
+            {
+              "letra": "E",
+              "texto": "dos Estados-membros em igualdade de soberania."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "C",
+          "comentario": "O povo é titular originário do poder e o exerce nas formas representativa e direta constitucionalmente previstas.",
+          "justificativa": "O povo é titular originário do poder e o exerce nas formas representativa e direta constitucionalmente previstas.",
+          "mapaNoId": "pcmg-cf-art1-r6",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 1º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art1-q07",
+          "cap": "PCMG-DC-ART1",
+          "capNome": "Art. 1º — fundamentos da República e poder popular",
+          "topico": "pcmg-cf-art1",
+          "ordem": 7,
+          "tema": "Soberania",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Quando o assunto é soberania e autonomia federativa, é correto afirmar que:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "a soberania é atributo de cada município."
+            },
+            {
+              "letra": "B",
+              "texto": "a autonomia permite independência diplomática."
+            },
+            {
+              "letra": "C",
+              "texto": "a soberania pertence à República Federativa e a autonomia aos seus entes."
+            },
+            {
+              "letra": "D",
+              "texto": "a União pode abolir autonomias sem parâmetro constitucional."
+            },
+            {
+              "letra": "E",
+              "texto": "a Federação brasileira autoriza dissolução unilateral."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "C",
+          "comentario": "O Estado brasileiro é soberano; unidades federadas exercem autonomia constitucional.",
+          "justificativa": "O Estado brasileiro é soberano; unidades federadas exercem autonomia constitucional.",
+          "mapaNoId": "pcmg-cf-art1-r2",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 1º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art1-q08",
+          "cap": "PCMG-DC-ART1",
+          "capNome": "Art. 1º — fundamentos da República e poder popular",
+          "topico": "pcmg-cf-art1",
+          "ordem": 8,
+          "tema": "Trabalho, iniciativa e pluralismo",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Pluralismo político, na Constituição, corresponde:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "à proibição de correntes de opinião não partidárias."
+            },
+            {
+              "letra": "B",
+              "texto": "à exigência de filiação partidária para manifestação política."
+            },
+            {
+              "letra": "C",
+              "texto": "à vinculação de todos os cidadãos a um partido."
+            },
+            {
+              "letra": "D",
+              "texto": "à exclusividade de duas agremiações partidárias."
+            },
+            {
+              "letra": "E",
+              "texto": "à proteção da diversidade política, além da existência de vários partidos."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "E",
+          "comentario": "O pluralismo como fundamento do art. 1º é mais abrangente que pluripartidarismo.",
+          "justificativa": "O pluralismo como fundamento do art. 1º é mais abrangente que pluripartidarismo.",
+          "mapaNoId": "pcmg-cf-art1-r5",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 1º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 3–5 e 10–13",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 1º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        }
+      ]
+    },
+    {
+      "id": "pcmg-cf-art2",
+      "edital": {
+        "id": "pcmg-cf-art2",
+        "caps": [
+          "PCMG-DC-ART2"
+        ],
+        "titulo": "Art. 2º — Poderes, funções típicas e freios e contrapesos",
+        "num": "2.2.2",
+        "ordem": 102,
+        "prova": "Objetiva, FGV",
+        "sigla": "CONST",
+        "materia": "Noções de Direito Constitucional",
+        "materiaOrdem": 3,
+        "fonteEdital": "Edital PCMG nº 04/2024, Anexo I, item 2.2",
+        "status": "rascunho-estudo"
+      },
+      "revisao": {
+        "id": "pcmg-cf-art2",
+        "titulo": "Art. 2º — Poderes, funções típicas e freios e contrapesos",
+        "edital": "PCMG, Investigador de Polícia I: 2.2 Princípios Fundamentais",
+        "etapa": 1,
+        "atualizadoEm": "2026-11-11",
+        "resumo": [
+          "O art. 2º apresenta Legislativo, Executivo e Judiciário como Poderes da União, independentes e harmônicos. Exemplo: O Ministério Público tem autonomia constitucional, mas não integra a lista dos três Poderes. Cuidado: Não inventar quarto Poder a partir de uma instituição autônoma.",
+          "Independência exclui subordinação hierárquica geral entre os três Poderes; cada qual tem atribuições constitucionalmente definidas. Exemplo: O Parlamento não pode ordenar ao Judiciário o resultado de um julgamento. Cuidado: Independência não torna nenhum Poder imune a controle.",
+          "A harmonia constitucional convive com freios e contrapesos: controle judicial de constitucionalidade e fiscalização parlamentar são exemplos. Exemplo: O Judiciário pode declarar inconstitucional lei aprovada pelo Legislativo nas condições constitucionais. Cuidado: É falso que separação signifique isolamento absoluto.",
+          "Ao Poder Legislativo cabe tipicamente legislar e fiscalizar. Também administra sua estrutura e desempenha funções atípicas constitucionalmente atribuídas. Exemplo: O Senado pode julgar determinadas autoridades em hipóteses constitucionais. Cuidado: A função de julgamento atípico não o transforma em órgão do Judiciário.",
+          "A função típica do Executivo é administrar. A edição de medidas provisórias nos requisitos constitucionais ilustra função normativa atípica. Exemplo: O Presidente pode editar medida provisória em situações e limites constitucionais. Cuidado: Medida provisória não torna o Presidente titular exclusivo da função legislativa.",
+          "A separação dos Poderes é protegida como cláusula pétrea por emendas tendentes a aboli-la (art. 60, § 4º, III). Não significa impedir todo ajuste institucional. Exemplo: Uma emenda que suprima o Judiciário independente afronta esse limite material. Cuidado: Não confundir vedação de abolição com intangibilidade absoluta de quaisquer competências."
+        ],
+        "fontes": [
+          {
+            "titulo": "Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG)",
+            "localizacao": "pp. 28–35"
+          },
+          {
+            "titulo": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+            "localizacao": "art. 2º"
+          }
+        ],
+        "mapa": {
+          "centro": "Art. 2º — Poderes, funções típicas e freios e contrapesos",
+          "ramos": [
+            {
+              "id": "pcmg-cf-art2-r1",
+              "t": "Tripartição",
+              "x": {
+                "e": "O art. 2º apresenta Legislativo, Executivo e Judiciário como Poderes da União, independentes e harmônicos.",
+                "ex": "O Ministério Público tem autonomia constitucional, mas não integra a lista dos três Poderes.",
+                "trap": "Não inventar quarto Poder a partir de uma instituição autônoma.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art2-r2",
+              "t": "Independência",
+              "x": {
+                "e": "Independência exclui subordinação hierárquica geral entre os três Poderes; cada qual tem atribuições constitucionalmente definidas.",
+                "ex": "O Parlamento não pode ordenar ao Judiciário o resultado de um julgamento.",
+                "trap": "Independência não torna nenhum Poder imune a controle.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art2-r3",
+              "t": "Harmonia e controles",
+              "x": {
+                "e": "A harmonia constitucional convive com freios e contrapesos: controle judicial de constitucionalidade e fiscalização parlamentar são exemplos.",
+                "ex": "O Judiciário pode declarar inconstitucional lei aprovada pelo Legislativo nas condições constitucionais.",
+                "trap": "É falso que separação signifique isolamento absoluto.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art2-r4",
+              "t": "Função típica do Legislativo",
+              "x": {
+                "e": "Ao Poder Legislativo cabe tipicamente legislar e fiscalizar. Também administra sua estrutura e desempenha funções atípicas constitucionalmente atribuídas.",
+                "ex": "O Senado pode julgar determinadas autoridades em hipóteses constitucionais.",
+                "trap": "A função de julgamento atípico não o transforma em órgão do Judiciário.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art2-r5",
+              "t": "Funções do Executivo",
+              "x": {
+                "e": "A função típica do Executivo é administrar. A edição de medidas provisórias nos requisitos constitucionais ilustra função normativa atípica.",
+                "ex": "O Presidente pode editar medida provisória em situações e limites constitucionais.",
+                "trap": "Medida provisória não torna o Presidente titular exclusivo da função legislativa.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art2-r6",
+              "t": "Proteção contra abolição",
+              "x": {
+                "e": "A separação dos Poderes é protegida como cláusula pétrea por emendas tendentes a aboli-la (art. 60, § 4º, III). Não significa impedir todo ajuste institucional.",
+                "ex": "Uma emenda que suprima o Judiciário independente afronta esse limite material.",
+                "trap": "Não confundir vedação de abolição com intangibilidade absoluta de quaisquer competências.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+              },
+              "f": []
+            }
+          ],
+          "ligacoes": []
+        },
+        "cartoes": [
+          {
+            "id": "pcmg-cf-art2-fc1-1",
+            "q": "Explique: Tripartição.",
+            "a": [
+              "O art. 2º apresenta Legislativo, Executivo e Judiciário como Poderes da União, independentes e harmônicos."
+            ],
+            "mapaNoId": "pcmg-cf-art2-r1",
+            "tema": "Tripartição",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+          },
+          {
+            "id": "pcmg-cf-art2-fc1-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Tripartição\"?",
+            "a": [
+              "Não inventar quarto Poder a partir de uma instituição autônoma."
+            ],
+            "mapaNoId": "pcmg-cf-art2-r1",
+            "tema": "Tripartição",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+          },
+          {
+            "id": "pcmg-cf-art2-fc2-1",
+            "q": "Explique: Independência.",
+            "a": [
+              "Independência exclui subordinação hierárquica geral entre os três Poderes; cada qual tem atribuições constitucionalmente definidas."
+            ],
+            "mapaNoId": "pcmg-cf-art2-r2",
+            "tema": "Independência",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+          },
+          {
+            "id": "pcmg-cf-art2-fc2-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Independência\"?",
+            "a": [
+              "Independência não torna nenhum Poder imune a controle."
+            ],
+            "mapaNoId": "pcmg-cf-art2-r2",
+            "tema": "Independência",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+          },
+          {
+            "id": "pcmg-cf-art2-fc3-1",
+            "q": "Explique: Harmonia e controles.",
+            "a": [
+              "A harmonia constitucional convive com freios e contrapesos: controle judicial de constitucionalidade e fiscalização parlamentar são exemplos."
+            ],
+            "mapaNoId": "pcmg-cf-art2-r3",
+            "tema": "Harmonia e controles",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+          },
+          {
+            "id": "pcmg-cf-art2-fc3-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Harmonia e controles\"?",
+            "a": [
+              "É falso que separação signifique isolamento absoluto."
+            ],
+            "mapaNoId": "pcmg-cf-art2-r3",
+            "tema": "Harmonia e controles",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+          },
+          {
+            "id": "pcmg-cf-art2-fc4-1",
+            "q": "Explique: Função típica do Legislativo.",
+            "a": [
+              "Ao Poder Legislativo cabe tipicamente legislar e fiscalizar. Também administra sua estrutura e desempenha funções atípicas constitucionalmente atribuídas."
+            ],
+            "mapaNoId": "pcmg-cf-art2-r4",
+            "tema": "Função típica do Legislativo",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+          },
+          {
+            "id": "pcmg-cf-art2-fc4-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Função típica do Legislativo\"?",
+            "a": [
+              "A função de julgamento atípico não o transforma em órgão do Judiciário."
+            ],
+            "mapaNoId": "pcmg-cf-art2-r4",
+            "tema": "Função típica do Legislativo",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+          },
+          {
+            "id": "pcmg-cf-art2-fc5-1",
+            "q": "Explique: Funções do Executivo.",
+            "a": [
+              "A função típica do Executivo é administrar. A edição de medidas provisórias nos requisitos constitucionais ilustra função normativa atípica."
+            ],
+            "mapaNoId": "pcmg-cf-art2-r5",
+            "tema": "Funções do Executivo",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+          },
+          {
+            "id": "pcmg-cf-art2-fc5-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Funções do Executivo\"?",
+            "a": [
+              "Medida provisória não torna o Presidente titular exclusivo da função legislativa."
+            ],
+            "mapaNoId": "pcmg-cf-art2-r5",
+            "tema": "Funções do Executivo",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+          },
+          {
+            "id": "pcmg-cf-art2-fc6-1",
+            "q": "Explique: Proteção contra abolição.",
+            "a": [
+              "A separação dos Poderes é protegida como cláusula pétrea por emendas tendentes a aboli-la (art. 60, § 4º, III). Não significa impedir todo ajuste institucional."
+            ],
+            "mapaNoId": "pcmg-cf-art2-r6",
+            "tema": "Proteção contra abolição",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+          },
+          {
+            "id": "pcmg-cf-art2-fc6-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Proteção contra abolição\"?",
+            "a": [
+              "Não confundir vedação de abolição com intangibilidade absoluta de quaisquer competências."
+            ],
+            "mapaNoId": "pcmg-cf-art2-r6",
+            "tema": "Proteção contra abolição",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35"
+          }
+        ],
+        "statusEditorial": "rascunho-pedagogico"
+      },
+      "questoes": [
+        {
+          "id": "pcmg-cf-art2-q01",
+          "cap": "PCMG-DC-ART2",
+          "capNome": "Art. 2º — Poderes, funções típicas e freios e contrapesos",
+          "topico": "pcmg-cf-art2",
+          "ordem": 1,
+          "tema": "Tripartição",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Nos termos literais do art. 2º, são Poderes da União:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "Legislativo, Executivo e Ministério Público."
+            },
+            {
+              "letra": "B",
+              "texto": "Legislativo, Executivo e Judiciário."
+            },
+            {
+              "letra": "C",
+              "texto": "Judiciário, Ministério Público e Tribunal de Contas."
+            },
+            {
+              "letra": "D",
+              "texto": "Congresso, Senado e Câmara."
+            },
+            {
+              "letra": "E",
+              "texto": "Executivo, Defensoria Pública e Judiciário."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "B",
+          "comentario": "O art. 2º enumera Legislativo, Executivo e Judiciário.",
+          "justificativa": "O art. 2º enumera Legislativo, Executivo e Judiciário.",
+          "mapaNoId": "pcmg-cf-art2-r1",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 2º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art2-q02",
+          "cap": "PCMG-DC-ART2",
+          "capNome": "Art. 2º — Poderes, funções típicas e freios e contrapesos",
+          "topico": "pcmg-cf-art2",
+          "ordem": 2,
+          "tema": "Independência",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "A independência dos Poderes prevista na Constituição significa:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "ausência de hierarquia institucional geral entre eles."
+            },
+            {
+              "letra": "B",
+              "texto": "impossibilidade de qualquer fiscalização recíproca."
+            },
+            {
+              "letra": "C",
+              "texto": "superioridade permanente do Judiciário."
+            },
+            {
+              "letra": "D",
+              "texto": "subordinação do Legislativo à Presidência."
+            },
+            {
+              "letra": "E",
+              "texto": "necessária concordância dos três em cada decisão."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "A",
+          "comentario": "Independência impede hierarquia geral, mas convive com mecanismos constitucionais de controle recíproco.",
+          "justificativa": "Independência impede hierarquia geral, mas convive com mecanismos constitucionais de controle recíproco.",
+          "mapaNoId": "pcmg-cf-art2-r2",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 2º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art2-q03",
+          "cap": "PCMG-DC-ART2",
+          "capNome": "Art. 2º — Poderes, funções típicas e freios e contrapesos",
+          "topico": "pcmg-cf-art2",
+          "ordem": 3,
+          "tema": "Harmonia e controles",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Uma lei é submetida a controle judicial de constitucionalidade. Esse controle:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "é necessariamente proibido pela separação de Poderes."
+            },
+            {
+              "letra": "B",
+              "texto": "demonstra que o Judiciário exerce hierarquia geral sobre o Legislativo."
+            },
+            {
+              "letra": "C",
+              "texto": "torna o Executivo titular exclusivo da fiscalização."
+            },
+            {
+              "letra": "D",
+              "texto": "é compatível com freios e contrapesos entre Poderes."
+            },
+            {
+              "letra": "E",
+              "texto": "abole a competência do Legislativo para legislar."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "D",
+          "comentario": "O controle recíproco constitucional é manifestação de harmonia, não de subordinação geral.",
+          "justificativa": "O controle recíproco constitucional é manifestação de harmonia, não de subordinação geral.",
+          "mapaNoId": "pcmg-cf-art2-r3",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 2º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art2-q04",
+          "cap": "PCMG-DC-ART2",
+          "capNome": "Art. 2º — Poderes, funções típicas e freios e contrapesos",
+          "topico": "pcmg-cf-art2",
+          "ordem": 4,
+          "tema": "Função típica do Legislativo",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "No exercício de competência constitucional de julgamento de autoridade, o Senado atua:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "como órgão pertencente ao Poder Judiciário."
+            },
+            {
+              "letra": "B",
+              "texto": "sem qualquer competência constitucional."
+            },
+            {
+              "letra": "C",
+              "texto": "em função jurisdicional típica comum a todo parlamento."
+            },
+            {
+              "letra": "D",
+              "texto": "somente por delegação do Presidente."
+            },
+            {
+              "letra": "E",
+              "texto": "em função atípica de julgamento."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "E",
+          "comentario": "O Legislativo possui competências de julgamento específicas e atípicas previstas pela Constituição.",
+          "justificativa": "O Legislativo possui competências de julgamento específicas e atípicas previstas pela Constituição.",
+          "mapaNoId": "pcmg-cf-art2-r4",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 2º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art2-q05",
+          "cap": "PCMG-DC-ART2",
+          "capNome": "Art. 2º — Poderes, funções típicas e freios e contrapesos",
+          "topico": "pcmg-cf-art2",
+          "ordem": 5,
+          "tema": "Funções do Executivo",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "A edição de medida provisória, quando cabível constitucionalmente, caracteriza:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "função típica do Judiciário."
+            },
+            {
+              "letra": "B",
+              "texto": "função normativa atípica do Executivo."
+            },
+            {
+              "letra": "C",
+              "texto": "renúncia do Legislativo a suas competências."
+            },
+            {
+              "letra": "D",
+              "texto": "violação automática da separação de Poderes."
+            },
+            {
+              "letra": "E",
+              "texto": "subordinação permanente do Senado ao Executivo."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "B",
+          "comentario": "É exercício normativo atribuído excepcionalmente ao Executivo pela própria Constituição.",
+          "justificativa": "É exercício normativo atribuído excepcionalmente ao Executivo pela própria Constituição.",
+          "mapaNoId": "pcmg-cf-art2-r5",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 2º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art2-q06",
+          "cap": "PCMG-DC-ART2",
+          "capNome": "Art. 2º — Poderes, funções típicas e freios e contrapesos",
+          "topico": "pcmg-cf-art2",
+          "ordem": 6,
+          "tema": "Proteção contra abolição",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Uma proposta de emenda pretende extinguir a separação de Poderes. À luz do art. 60, § 4º, III, essa proposta:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "pode ser aprovada desde que por unanimidade."
+            },
+            {
+              "letra": "B",
+              "texto": "exige simples lei ordinária complementar."
+            },
+            {
+              "letra": "C",
+              "texto": "é vedada por atingir cláusula pétrea."
+            },
+            {
+              "letra": "D",
+              "texto": "dispensa controle constitucional."
+            },
+            {
+              "letra": "E",
+              "texto": "é válida com autorização prévia dos Estados."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "C",
+          "comentario": "A Constituição impede deliberação sobre proposta de emenda tendente a abolir a separação de Poderes.",
+          "justificativa": "A Constituição impede deliberação sobre proposta de emenda tendente a abolir a separação de Poderes.",
+          "mapaNoId": "pcmg-cf-art2-r6",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 2º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art2-q07",
+          "cap": "PCMG-DC-ART2",
+          "capNome": "Art. 2º — Poderes, funções típicas e freios e contrapesos",
+          "topico": "pcmg-cf-art2",
+          "ordem": 7,
+          "tema": "Harmonia e controles",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "A expressão 'independentes e harmônicos' permite concluir que:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "há isolamento absoluto entre os três Poderes."
+            },
+            {
+              "letra": "B",
+              "texto": "os Poderes devem ter mesmo chefe."
+            },
+            {
+              "letra": "C",
+              "texto": "a harmonia exclui toda divergência entre instituições."
+            },
+            {
+              "letra": "D",
+              "texto": "a fiscalização mútua é incompatível com autonomia."
+            },
+            {
+              "letra": "E",
+              "texto": "os Poderes preservam autonomia e exercem controles constitucionais recíprocos."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "E",
+          "comentario": "Independência e harmonia coexistem no art. 2º.",
+          "justificativa": "Independência e harmonia coexistem no art. 2º.",
+          "mapaNoId": "pcmg-cf-art2-r3",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 2º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art2-q08",
+          "cap": "PCMG-DC-ART2",
+          "capNome": "Art. 2º — Poderes, funções típicas e freios e contrapesos",
+          "topico": "pcmg-cf-art2",
+          "ordem": 8,
+          "tema": "Função típica do Legislativo",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Quando um tribunal realiza concurso público para contratar servidores, exerce função:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "administrativa atípica."
+            },
+            {
+              "letra": "B",
+              "texto": "legislativa típica."
+            },
+            {
+              "letra": "C",
+              "texto": "jurisdicional típica."
+            },
+            {
+              "letra": "D",
+              "texto": "constituinte derivada."
+            },
+            {
+              "letra": "E",
+              "texto": "parlamentar exclusiva."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "A",
+          "comentario": "A gestão administrativa do Judiciário é função atípica; julgar é sua função típica.",
+          "justificativa": "A gestão administrativa do Judiciário é função atípica; julgar é sua função típica.",
+          "mapaNoId": "pcmg-cf-art2-r4",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 2º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 28–35",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 2º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        }
+      ]
+    },
+    {
+      "id": "pcmg-cf-art3",
+      "edital": {
+        "id": "pcmg-cf-art3",
+        "caps": [
+          "PCMG-DC-ART3"
+        ],
+        "titulo": "Art. 3º — objetivos fundamentais da República",
+        "num": "2.2.3",
+        "ordem": 103,
+        "prova": "Objetiva, FGV",
+        "sigla": "CONST",
+        "materia": "Noções de Direito Constitucional",
+        "materiaOrdem": 3,
+        "fonteEdital": "Edital PCMG nº 04/2024, Anexo I, item 2.2",
+        "status": "rascunho-estudo"
+      },
+      "revisao": {
+        "id": "pcmg-cf-art3",
+        "titulo": "Art. 3º — objetivos fundamentais da República",
+        "edital": "PCMG, Investigador de Polícia I: 2.2 Princípios Fundamentais",
+        "etapa": 1,
+        "atualizadoEm": "2026-11-11",
+        "resumo": [
+          "O inciso I do art. 3º estabelece objetivo de construir sociedade livre, justa e solidária. É meta constitucional, não fundamento do art. 1º. Exemplo: Políticas de inclusão social dialogam com liberdade, justiça e solidariedade. Cuidado: Não trocar 'solidária' por expressão que altera literalidade do inciso.",
+          "Garantir o desenvolvimento nacional é objetivo fundamental do art. 3º, II, não fundamento ou princípio específico das relações exteriores. Exemplo: Uma política pública de infraestrutura pode buscar o desenvolvimento nacional. Cuidado: A redação constitucional é 'desenvolvimento nacional', sem restringir o texto ao econômico.",
+          "O inciso III determina erradicar pobreza e marginalização e reduzir desigualdades sociais e regionais. Os verbos são distintos. Exemplo: Uma política combate a marginalização e reduz diferenças sociais e regionais. Cuidado: Inverter 'erradicar' e 'reduzir' distorce o texto constitucional.",
+          "Promover o bem de todos sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação é o objetivo do inciso IV. Exemplo: Uma política que combate discriminação por deficiência é compatível com cláusula aberta do inciso IV. Cuidado: O rol exemplificativo de preconceitos não é fechado nem limitado aos cinco fatores enunciados.",
+          "Os objetivos fundamentais do art. 3º enunciam metas de atuação estatal. São distintos dos fundamentos do art. 1º, que expressam bases da República. Exemplo: Uma questão apresenta cidadania como objetivo; o candidato reconhece cidadania como fundamento. Cuidado: A mera semelhança valorativa não torna intercambiáveis os dispositivos.",
+          "A natureza programática de vários objetivos do art. 3º não retira sua eficácia jurídica: orientam políticas, interpretação e limites de atuação estatal. Exemplo: Legislador deve considerar metas constitucionais de redução de desigualdades ao elaborar políticas. Cuidado: Norma programática não é aconselhamento sem valor jurídico."
+        ],
+        "fontes": [
+          {
+            "titulo": "Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG)",
+            "localizacao": "pp. 36–43"
+          },
+          {
+            "titulo": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+            "localizacao": "art. 3º"
+          }
+        ],
+        "mapa": {
+          "centro": "Art. 3º — objetivos fundamentais da República",
+          "ramos": [
+            {
+              "id": "pcmg-cf-art3-r1",
+              "t": "Construir sociedade livre, justa e solidária",
+              "x": {
+                "e": "O inciso I do art. 3º estabelece objetivo de construir sociedade livre, justa e solidária. É meta constitucional, não fundamento do art. 1º.",
+                "ex": "Políticas de inclusão social dialogam com liberdade, justiça e solidariedade.",
+                "trap": "Não trocar 'solidária' por expressão que altera literalidade do inciso.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art3-r2",
+              "t": "Desenvolvimento nacional",
+              "x": {
+                "e": "Garantir o desenvolvimento nacional é objetivo fundamental do art. 3º, II, não fundamento ou princípio específico das relações exteriores.",
+                "ex": "Uma política pública de infraestrutura pode buscar o desenvolvimento nacional.",
+                "trap": "A redação constitucional é 'desenvolvimento nacional', sem restringir o texto ao econômico.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art3-r3",
+              "t": "Pobreza, marginalização e desigualdades",
+              "x": {
+                "e": "O inciso III determina erradicar pobreza e marginalização e reduzir desigualdades sociais e regionais. Os verbos são distintos.",
+                "ex": "Uma política combate a marginalização e reduz diferenças sociais e regionais.",
+                "trap": "Inverter 'erradicar' e 'reduzir' distorce o texto constitucional.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art3-r4",
+              "t": "Combate a discriminações",
+              "x": {
+                "e": "Promover o bem de todos sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação é o objetivo do inciso IV.",
+                "ex": "Uma política que combate discriminação por deficiência é compatível com cláusula aberta do inciso IV.",
+                "trap": "O rol exemplificativo de preconceitos não é fechado nem limitado aos cinco fatores enunciados.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art3-r5",
+              "t": "Objetivos x fundamentos",
+              "x": {
+                "e": "Os objetivos fundamentais do art. 3º enunciam metas de atuação estatal. São distintos dos fundamentos do art. 1º, que expressam bases da República.",
+                "ex": "Uma questão apresenta cidadania como objetivo; o candidato reconhece cidadania como fundamento.",
+                "trap": "A mera semelhança valorativa não torna intercambiáveis os dispositivos.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art3-r6",
+              "t": "Eficácia normativa dos objetivos",
+              "x": {
+                "e": "A natureza programática de vários objetivos do art. 3º não retira sua eficácia jurídica: orientam políticas, interpretação e limites de atuação estatal.",
+                "ex": "Legislador deve considerar metas constitucionais de redução de desigualdades ao elaborar políticas.",
+                "trap": "Norma programática não é aconselhamento sem valor jurídico.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+              },
+              "f": []
+            }
+          ],
+          "ligacoes": []
+        },
+        "cartoes": [
+          {
+            "id": "pcmg-cf-art3-fc1-1",
+            "q": "Explique: Construir sociedade livre, justa e solidária.",
+            "a": [
+              "O inciso I do art. 3º estabelece objetivo de construir sociedade livre, justa e solidária. É meta constitucional, não fundamento do art. 1º."
+            ],
+            "mapaNoId": "pcmg-cf-art3-r1",
+            "tema": "Construir sociedade livre, justa e solidária",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+          },
+          {
+            "id": "pcmg-cf-art3-fc1-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Construir sociedade livre, justa e solidária\"?",
+            "a": [
+              "Não trocar 'solidária' por expressão que altera literalidade do inciso."
+            ],
+            "mapaNoId": "pcmg-cf-art3-r1",
+            "tema": "Construir sociedade livre, justa e solidária",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+          },
+          {
+            "id": "pcmg-cf-art3-fc2-1",
+            "q": "Explique: Desenvolvimento nacional.",
+            "a": [
+              "Garantir o desenvolvimento nacional é objetivo fundamental do art. 3º, II, não fundamento ou princípio específico das relações exteriores."
+            ],
+            "mapaNoId": "pcmg-cf-art3-r2",
+            "tema": "Desenvolvimento nacional",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+          },
+          {
+            "id": "pcmg-cf-art3-fc2-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Desenvolvimento nacional\"?",
+            "a": [
+              "A redação constitucional é 'desenvolvimento nacional', sem restringir o texto ao econômico."
+            ],
+            "mapaNoId": "pcmg-cf-art3-r2",
+            "tema": "Desenvolvimento nacional",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+          },
+          {
+            "id": "pcmg-cf-art3-fc3-1",
+            "q": "Explique: Pobreza, marginalização e desigualdades.",
+            "a": [
+              "O inciso III determina erradicar pobreza e marginalização e reduzir desigualdades sociais e regionais. Os verbos são distintos."
+            ],
+            "mapaNoId": "pcmg-cf-art3-r3",
+            "tema": "Pobreza, marginalização e desigualdades",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+          },
+          {
+            "id": "pcmg-cf-art3-fc3-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Pobreza, marginalização e desigualdades\"?",
+            "a": [
+              "Inverter 'erradicar' e 'reduzir' distorce o texto constitucional."
+            ],
+            "mapaNoId": "pcmg-cf-art3-r3",
+            "tema": "Pobreza, marginalização e desigualdades",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+          },
+          {
+            "id": "pcmg-cf-art3-fc4-1",
+            "q": "Explique: Combate a discriminações.",
+            "a": [
+              "Promover o bem de todos sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação é o objetivo do inciso IV."
+            ],
+            "mapaNoId": "pcmg-cf-art3-r4",
+            "tema": "Combate a discriminações",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+          },
+          {
+            "id": "pcmg-cf-art3-fc4-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Combate a discriminações\"?",
+            "a": [
+              "O rol exemplificativo de preconceitos não é fechado nem limitado aos cinco fatores enunciados."
+            ],
+            "mapaNoId": "pcmg-cf-art3-r4",
+            "tema": "Combate a discriminações",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+          },
+          {
+            "id": "pcmg-cf-art3-fc5-1",
+            "q": "Explique: Objetivos x fundamentos.",
+            "a": [
+              "Os objetivos fundamentais do art. 3º enunciam metas de atuação estatal. São distintos dos fundamentos do art. 1º, que expressam bases da República."
+            ],
+            "mapaNoId": "pcmg-cf-art3-r5",
+            "tema": "Objetivos x fundamentos",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+          },
+          {
+            "id": "pcmg-cf-art3-fc5-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Objetivos x fundamentos\"?",
+            "a": [
+              "A mera semelhança valorativa não torna intercambiáveis os dispositivos."
+            ],
+            "mapaNoId": "pcmg-cf-art3-r5",
+            "tema": "Objetivos x fundamentos",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+          },
+          {
+            "id": "pcmg-cf-art3-fc6-1",
+            "q": "Explique: Eficácia normativa dos objetivos.",
+            "a": [
+              "A natureza programática de vários objetivos do art. 3º não retira sua eficácia jurídica: orientam políticas, interpretação e limites de atuação estatal."
+            ],
+            "mapaNoId": "pcmg-cf-art3-r6",
+            "tema": "Eficácia normativa dos objetivos",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+          },
+          {
+            "id": "pcmg-cf-art3-fc6-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Eficácia normativa dos objetivos\"?",
+            "a": [
+              "Norma programática não é aconselhamento sem valor jurídico."
+            ],
+            "mapaNoId": "pcmg-cf-art3-r6",
+            "tema": "Eficácia normativa dos objetivos",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43"
+          }
+        ],
+        "statusEditorial": "rascunho-pedagogico"
+      },
+      "questoes": [
+        {
+          "id": "pcmg-cf-art3-q01",
+          "cap": "PCMG-DC-ART3",
+          "capNome": "Art. 3º — objetivos fundamentais da República",
+          "topico": "pcmg-cf-art3",
+          "ordem": 1,
+          "tema": "Construir sociedade livre, justa e solidária",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "O art. 3º, inciso I, enuncia como objetivo:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "assegurar soberania nacional."
+            },
+            {
+              "letra": "B",
+              "texto": "promover harmonia entre os Poderes."
+            },
+            {
+              "letra": "C",
+              "texto": "garantir o pluripartidarismo."
+            },
+            {
+              "letra": "D",
+              "texto": "construir sociedade livre, justa e solidária."
+            },
+            {
+              "letra": "E",
+              "texto": "conceder asilo político."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "D",
+          "comentario": "A tríade livre, justa e solidária integra o objetivo do inciso I.",
+          "justificativa": "A tríade livre, justa e solidária integra o objetivo do inciso I.",
+          "mapaNoId": "pcmg-cf-art3-r1",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 3º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art3-q02",
+          "cap": "PCMG-DC-ART3",
+          "capNome": "Art. 3º — objetivos fundamentais da República",
+          "topico": "pcmg-cf-art3",
+          "ordem": 2,
+          "tema": "Desenvolvimento nacional",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Assinale o objetivo fundamental do art. 3º, II.",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "Prevalência dos direitos humanos."
+            },
+            {
+              "letra": "B",
+              "texto": "Garantir o desenvolvimento nacional."
+            },
+            {
+              "letra": "C",
+              "texto": "Defesa da paz."
+            },
+            {
+              "letra": "D",
+              "texto": "Soberania."
+            },
+            {
+              "letra": "E",
+              "texto": "Cidadania."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "B",
+          "comentario": "A garantia do desenvolvimento nacional figura no art. 3º, II; as demais alternativas pertencem aos arts. 1º ou 4º.",
+          "justificativa": "A garantia do desenvolvimento nacional figura no art. 3º, II; as demais alternativas pertencem aos arts. 1º ou 4º.",
+          "mapaNoId": "pcmg-cf-art3-r2",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 3º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art3-q03",
+          "cap": "PCMG-DC-ART3",
+          "capNome": "Art. 3º — objetivos fundamentais da República",
+          "topico": "pcmg-cf-art3",
+          "ordem": 3,
+          "tema": "Pobreza, marginalização e desigualdades",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Conforme a redação constitucional, é objetivo do art. 3º, III:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "reduzir a pobreza e erradicar todas as desigualdades."
+            },
+            {
+              "letra": "B",
+              "texto": "erradicar desigualdades regionais e tolerar a marginalização."
+            },
+            {
+              "letra": "C",
+              "texto": "erradicar pobreza e marginalização e reduzir desigualdades sociais e regionais."
+            },
+            {
+              "letra": "D",
+              "texto": "erradicar apenas pobreza, excluindo marginalização."
+            },
+            {
+              "letra": "E",
+              "texto": "eliminar diferenças regionais e manter pobreza residual."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "C",
+          "comentario": "O texto distingue erradicar pobreza e marginalização de reduzir desigualdades sociais e regionais.",
+          "justificativa": "O texto distingue erradicar pobreza e marginalização de reduzir desigualdades sociais e regionais.",
+          "mapaNoId": "pcmg-cf-art3-r3",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 3º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art3-q04",
+          "cap": "PCMG-DC-ART3",
+          "capNome": "Art. 3º — objetivos fundamentais da República",
+          "topico": "pcmg-cf-art3",
+          "ordem": 4,
+          "tema": "Combate a discriminações",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "O art. 3º, IV, ao prever 'quaisquer outras formas de discriminação', estabelece:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "rol aberto de discriminações a serem combatidas."
+            },
+            {
+              "letra": "B",
+              "texto": "rol taxativo limitado a cinco fatores."
+            },
+            {
+              "letra": "C",
+              "texto": "proteção exclusivamente contra discriminação racial."
+            },
+            {
+              "letra": "D",
+              "texto": "princípio de política externa sem efeito interno."
+            },
+            {
+              "letra": "E",
+              "texto": "exceção ao dever de promover o bem de todos."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "A",
+          "comentario": "A fórmula abrange outras formas além das enumeradas; o objetivo é promover o bem de todos.",
+          "justificativa": "A fórmula abrange outras formas além das enumeradas; o objetivo é promover o bem de todos.",
+          "mapaNoId": "pcmg-cf-art3-r4",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 3º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art3-q05",
+          "cap": "PCMG-DC-ART3",
+          "capNome": "Art. 3º — objetivos fundamentais da República",
+          "topico": "pcmg-cf-art3",
+          "ordem": 5,
+          "tema": "Objetivos x fundamentos",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Qual expressão representa fundamento do art. 1º, e não objetivo do art. 3º?",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "Garantir desenvolvimento nacional."
+            },
+            {
+              "letra": "B",
+              "texto": "Erradicar marginalização."
+            },
+            {
+              "letra": "C",
+              "texto": "Promover o bem de todos."
+            },
+            {
+              "letra": "D",
+              "texto": "Reduzir desigualdades regionais."
+            },
+            {
+              "letra": "E",
+              "texto": "Pluralismo político."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "E",
+          "comentario": "Pluralismo político é fundamento. As demais expressões são objetivos constitucionais.",
+          "justificativa": "Pluralismo político é fundamento. As demais expressões são objetivos constitucionais.",
+          "mapaNoId": "pcmg-cf-art3-r5",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 3º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art3-q06",
+          "cap": "PCMG-DC-ART3",
+          "capNome": "Art. 3º — objetivos fundamentais da República",
+          "topico": "pcmg-cf-art3",
+          "ordem": 6,
+          "tema": "Eficácia normativa dos objetivos",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Quanto à eficácia dos objetivos previstos no art. 3º, é correto afirmar que:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "são destituídos de qualquer eficácia até lei regulamentadora."
+            },
+            {
+              "letra": "B",
+              "texto": "revogam automaticamente toda legislação ordinária nacional."
+            },
+            {
+              "letra": "C",
+              "texto": "vinculam a atuação estatal e orientam interpretação, ainda que demandem políticas de concretização."
+            },
+            {
+              "letra": "D",
+              "texto": "são apenas recomendações sem valor constitucional."
+            },
+            {
+              "letra": "E",
+              "texto": "são facultativos para toda atividade do legislador."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "C",
+          "comentario": "Normas programáticas produzem efeitos jurídicos mesmo quando a realização de metas requer políticas progressivas.",
+          "justificativa": "Normas programáticas produzem efeitos jurídicos mesmo quando a realização de metas requer políticas progressivas.",
+          "mapaNoId": "pcmg-cf-art3-r6",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 3º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art3-q07",
+          "cap": "PCMG-DC-ART3",
+          "capNome": "Art. 3º — objetivos fundamentais da República",
+          "topico": "pcmg-cf-art3",
+          "ordem": 7,
+          "tema": "Pobreza, marginalização e desigualdades",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Uma questão afirma que é objetivo constitucional 'reduzir a marginalização e erradicar desigualdades regionais'. O problema da afirmação é:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "trocar verbos e objetos do art. 3º, III."
+            },
+            {
+              "letra": "B",
+              "texto": "confundir independência com harmonia."
+            },
+            {
+              "letra": "C",
+              "texto": "incluir a igualdade entre Estados."
+            },
+            {
+              "letra": "D",
+              "texto": "aplicar corretamente a redação literal."
+            },
+            {
+              "letra": "E",
+              "texto": "desconsiderar a dignidade como fundamento."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "A",
+          "comentario": "O texto exige erradicar pobreza e marginalização e reduzir desigualdades sociais e regionais.",
+          "justificativa": "O texto exige erradicar pobreza e marginalização e reduzir desigualdades sociais e regionais.",
+          "mapaNoId": "pcmg-cf-art3-r3",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 3º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art3-q08",
+          "cap": "PCMG-DC-ART3",
+          "capNome": "Art. 3º — objetivos fundamentais da República",
+          "topico": "pcmg-cf-art3",
+          "ordem": 8,
+          "tema": "Combate a discriminações",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "O objetivo constitucional de combater preconceitos se refere:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "somente a origem, raça, sexo, cor e idade."
+            },
+            {
+              "letra": "B",
+              "texto": "exclusivamente a relações internacionais."
+            },
+            {
+              "letra": "C",
+              "texto": "apenas a discriminações reconhecidas por lei ordinária."
+            },
+            {
+              "letra": "D",
+              "texto": "ao bem de todos, sem as formas enumeradas de preconceito e outras discriminações."
+            },
+            {
+              "letra": "E",
+              "texto": "somente aos agentes públicos em concursos."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "D",
+          "comentario": "A expressão final do art. 3º, IV, abre o rol e vincula a promoção do bem de todos.",
+          "justificativa": "A expressão final do art. 3º, IV, abre o rol e vincula a promoção do bem de todos.",
+          "mapaNoId": "pcmg-cf-art3-r4",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 3º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 36–43",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 3º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        }
+      ]
+    },
+    {
+      "id": "pcmg-cf-art4",
+      "edital": {
+        "id": "pcmg-cf-art4",
+        "caps": [
+          "PCMG-DC-ART4"
+        ],
+        "titulo": "Art. 4º — relações internacionais e integração latino-americana",
+        "num": "2.2.4",
+        "ordem": 104,
+        "prova": "Objetiva, FGV",
+        "sigla": "CONST",
+        "materia": "Noções de Direito Constitucional",
+        "materiaOrdem": 3,
+        "fonteEdital": "Edital PCMG nº 04/2024, Anexo I, item 2.2",
+        "status": "rascunho-estudo"
+      },
+      "revisao": {
+        "id": "pcmg-cf-art4",
+        "titulo": "Art. 4º — relações internacionais e integração latino-americana",
+        "edital": "PCMG, Investigador de Polícia I: 2.2 Princípios Fundamentais",
+        "etapa": 1,
+        "atualizadoEm": "2026-11-11",
+        "resumo": [
+          "A República rege suas relações internacionais por independência nacional e autodeterminação dos povos. São princípios externos, distintos da soberania como fundamento do art. 1º. Exemplo: Posicionamentos diplomáticos podem valorizar autodeterminação sem subordinação estrangeira. Cuidado: Soberania é fundamento, mas independência nacional é princípio internacional do art. 4º.",
+          "A não intervenção e a igualdade entre os Estados figuram entre os princípios internacionais; igualdade jurídica não depende do poder econômico dos países. Exemplo: Dois Estados de tamanhos distintos não perdem igualdade jurídica em razão da população. Cuidado: Não confundir igualdade jurídica entre Estados com igualdade de seus recursos.",
+          "A prevalência dos direitos humanos é princípio das relações internacionais no art. 4º, II. Não é a mesma classificação que dignidade da pessoa humana no art. 1º, III. Exemplo: Uma atuação externa de promoção de direitos humanos pode basear-se nesse princípio. Cuidado: Não atribuir a prevalência dos direitos humanos ao rol de fundamentos do art. 1º.",
+          "Defesa da paz, solução pacífica dos conflitos e cooperação entre povos para o progresso da humanidade aparecem no art. 4º. Exemplo: O Brasil privilegia meios pacíficos de solução de controvérsias internacionais. Cuidado: Defesa da paz e solução pacífica são princípios distintos, ambos previstos.",
+          "O art. 4º, VIII, reúne o repúdio ao terrorismo e ao racismo num único inciso. Não se trata de dois objetivos do art. 3º. Exemplo: A política externa brasileira pode recusar práticas terroristas e racistas com base nesse princípio. Cuidado: Substituir racismo por outro termo pode tornar incorreta a citação literal.",
+          "O art. 4º prevê concessão de asilo político (inciso X). O parágrafo único dirige a busca de integração econômica, política, social e cultural dos povos da América Latina. Exemplo: Projetos de integração regional podem ter dimensões culturais e políticas, não apenas comerciais. Cuidado: A integração não é restrita à economia e o asilo político não é fundamento do art. 1º."
+        ],
+        "fontes": [
+          {
+            "titulo": "Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG)",
+            "localizacao": "pp. 44–48"
+          },
+          {
+            "titulo": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+            "localizacao": "art. 4º"
+          }
+        ],
+        "mapa": {
+          "centro": "Art. 4º — relações internacionais e integração latino-americana",
+          "ramos": [
+            {
+              "id": "pcmg-cf-art4-r1",
+              "t": "Independência e autodeterminação",
+              "x": {
+                "e": "A República rege suas relações internacionais por independência nacional e autodeterminação dos povos. São princípios externos, distintos da soberania como fundamento do art. 1º.",
+                "ex": "Posicionamentos diplomáticos podem valorizar autodeterminação sem subordinação estrangeira.",
+                "trap": "Soberania é fundamento, mas independência nacional é princípio internacional do art. 4º.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art4-r2",
+              "t": "Não intervenção e igualdade",
+              "x": {
+                "e": "A não intervenção e a igualdade entre os Estados figuram entre os princípios internacionais; igualdade jurídica não depende do poder econômico dos países.",
+                "ex": "Dois Estados de tamanhos distintos não perdem igualdade jurídica em razão da população.",
+                "trap": "Não confundir igualdade jurídica entre Estados com igualdade de seus recursos.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art4-r3",
+              "t": "Prevalência dos direitos humanos",
+              "x": {
+                "e": "A prevalência dos direitos humanos é princípio das relações internacionais no art. 4º, II. Não é a mesma classificação que dignidade da pessoa humana no art. 1º, III.",
+                "ex": "Uma atuação externa de promoção de direitos humanos pode basear-se nesse princípio.",
+                "trap": "Não atribuir a prevalência dos direitos humanos ao rol de fundamentos do art. 1º.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art4-r4",
+              "t": "Paz e solução pacífica",
+              "x": {
+                "e": "Defesa da paz, solução pacífica dos conflitos e cooperação entre povos para o progresso da humanidade aparecem no art. 4º.",
+                "ex": "O Brasil privilegia meios pacíficos de solução de controvérsias internacionais.",
+                "trap": "Defesa da paz e solução pacífica são princípios distintos, ambos previstos.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art4-r5",
+              "t": "Repúdio ao terrorismo e racismo",
+              "x": {
+                "e": "O art. 4º, VIII, reúne o repúdio ao terrorismo e ao racismo num único inciso. Não se trata de dois objetivos do art. 3º.",
+                "ex": "A política externa brasileira pode recusar práticas terroristas e racistas com base nesse princípio.",
+                "trap": "Substituir racismo por outro termo pode tornar incorreta a citação literal.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-art4-r6",
+              "t": "Asilo e América Latina",
+              "x": {
+                "e": "O art. 4º prevê concessão de asilo político (inciso X). O parágrafo único dirige a busca de integração econômica, política, social e cultural dos povos da América Latina.",
+                "ex": "Projetos de integração regional podem ter dimensões culturais e políticas, não apenas comerciais.",
+                "trap": "A integração não é restrita à economia e o asilo político não é fundamento do art. 1º.",
+                "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+              },
+              "f": []
+            }
+          ],
+          "ligacoes": []
+        },
+        "cartoes": [
+          {
+            "id": "pcmg-cf-art4-fc1-1",
+            "q": "Explique: Independência e autodeterminação.",
+            "a": [
+              "A República rege suas relações internacionais por independência nacional e autodeterminação dos povos. São princípios externos, distintos da soberania como fundamento do art. 1º."
+            ],
+            "mapaNoId": "pcmg-cf-art4-r1",
+            "tema": "Independência e autodeterminação",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+          },
+          {
+            "id": "pcmg-cf-art4-fc1-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Independência e autodeterminação\"?",
+            "a": [
+              "Soberania é fundamento, mas independência nacional é princípio internacional do art. 4º."
+            ],
+            "mapaNoId": "pcmg-cf-art4-r1",
+            "tema": "Independência e autodeterminação",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+          },
+          {
+            "id": "pcmg-cf-art4-fc2-1",
+            "q": "Explique: Não intervenção e igualdade.",
+            "a": [
+              "A não intervenção e a igualdade entre os Estados figuram entre os princípios internacionais; igualdade jurídica não depende do poder econômico dos países."
+            ],
+            "mapaNoId": "pcmg-cf-art4-r2",
+            "tema": "Não intervenção e igualdade",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+          },
+          {
+            "id": "pcmg-cf-art4-fc2-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Não intervenção e igualdade\"?",
+            "a": [
+              "Não confundir igualdade jurídica entre Estados com igualdade de seus recursos."
+            ],
+            "mapaNoId": "pcmg-cf-art4-r2",
+            "tema": "Não intervenção e igualdade",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+          },
+          {
+            "id": "pcmg-cf-art4-fc3-1",
+            "q": "Explique: Prevalência dos direitos humanos.",
+            "a": [
+              "A prevalência dos direitos humanos é princípio das relações internacionais no art. 4º, II. Não é a mesma classificação que dignidade da pessoa humana no art. 1º, III."
+            ],
+            "mapaNoId": "pcmg-cf-art4-r3",
+            "tema": "Prevalência dos direitos humanos",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+          },
+          {
+            "id": "pcmg-cf-art4-fc3-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Prevalência dos direitos humanos\"?",
+            "a": [
+              "Não atribuir a prevalência dos direitos humanos ao rol de fundamentos do art. 1º."
+            ],
+            "mapaNoId": "pcmg-cf-art4-r3",
+            "tema": "Prevalência dos direitos humanos",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+          },
+          {
+            "id": "pcmg-cf-art4-fc4-1",
+            "q": "Explique: Paz e solução pacífica.",
+            "a": [
+              "Defesa da paz, solução pacífica dos conflitos e cooperação entre povos para o progresso da humanidade aparecem no art. 4º."
+            ],
+            "mapaNoId": "pcmg-cf-art4-r4",
+            "tema": "Paz e solução pacífica",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+          },
+          {
+            "id": "pcmg-cf-art4-fc4-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Paz e solução pacífica\"?",
+            "a": [
+              "Defesa da paz e solução pacífica são princípios distintos, ambos previstos."
+            ],
+            "mapaNoId": "pcmg-cf-art4-r4",
+            "tema": "Paz e solução pacífica",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+          },
+          {
+            "id": "pcmg-cf-art4-fc5-1",
+            "q": "Explique: Repúdio ao terrorismo e racismo.",
+            "a": [
+              "O art. 4º, VIII, reúne o repúdio ao terrorismo e ao racismo num único inciso. Não se trata de dois objetivos do art. 3º."
+            ],
+            "mapaNoId": "pcmg-cf-art4-r5",
+            "tema": "Repúdio ao terrorismo e racismo",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+          },
+          {
+            "id": "pcmg-cf-art4-fc5-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Repúdio ao terrorismo e racismo\"?",
+            "a": [
+              "Substituir racismo por outro termo pode tornar incorreta a citação literal."
+            ],
+            "mapaNoId": "pcmg-cf-art4-r5",
+            "tema": "Repúdio ao terrorismo e racismo",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+          },
+          {
+            "id": "pcmg-cf-art4-fc6-1",
+            "q": "Explique: Asilo e América Latina.",
+            "a": [
+              "O art. 4º prevê concessão de asilo político (inciso X). O parágrafo único dirige a busca de integração econômica, política, social e cultural dos povos da América Latina."
+            ],
+            "mapaNoId": "pcmg-cf-art4-r6",
+            "tema": "Asilo e América Latina",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+          },
+          {
+            "id": "pcmg-cf-art4-fc6-2",
+            "q": "Qual armadilha de prova deve ser evitada em \"Asilo e América Latina\"?",
+            "a": [
+              "A integração não é restrita à economia e o asilo político não é fundamento do art. 1º."
+            ],
+            "mapaNoId": "pcmg-cf-art4-r6",
+            "tema": "Asilo e América Latina",
+            "src": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48"
+          }
+        ],
+        "statusEditorial": "rascunho-pedagogico"
+      },
+      "questoes": [
+        {
+          "id": "pcmg-cf-art4-q01",
+          "cap": "PCMG-DC-ART4",
+          "capNome": "Art. 4º — relações internacionais e integração latino-americana",
+          "topico": "pcmg-cf-art4",
+          "ordem": 1,
+          "tema": "Independência e autodeterminação",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Qual alternativa traz princípio das relações internacionais previsto no art. 4º?",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "Dignidade da pessoa humana."
+            },
+            {
+              "letra": "B",
+              "texto": "Garantia do desenvolvimento nacional."
+            },
+            {
+              "letra": "C",
+              "texto": "Cidadania."
+            },
+            {
+              "letra": "D",
+              "texto": "Pluralismo político."
+            },
+            {
+              "letra": "E",
+              "texto": "Autodeterminação dos povos."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "E",
+          "comentario": "Autodeterminação dos povos está no art. 4º, III. As demais são fundamentos ou objetivos.",
+          "justificativa": "Autodeterminação dos povos está no art. 4º, III. As demais são fundamentos ou objetivos.",
+          "mapaNoId": "pcmg-cf-art4-r1",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 4º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art4-q02",
+          "cap": "PCMG-DC-ART4",
+          "capNome": "Art. 4º — relações internacionais e integração latino-americana",
+          "topico": "pcmg-cf-art4",
+          "ordem": 2,
+          "tema": "Não intervenção e igualdade",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "De acordo com o art. 4º, o Brasil rege-se internacionalmente pelos princípios:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "da hierarquia entre Estados e intervenção obrigatória."
+            },
+            {
+              "letra": "B",
+              "texto": "da não intervenção e igualdade entre os Estados."
+            },
+            {
+              "letra": "C",
+              "texto": "da soberania exclusiva do Município e autonomia de outros países."
+            },
+            {
+              "letra": "D",
+              "texto": "da superioridade jurídica dos países mais populosos."
+            },
+            {
+              "letra": "E",
+              "texto": "do dever de intervenção em assuntos internos de terceiros."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "B",
+          "comentario": "Não intervenção e igualdade entre Estados são princípios expressos do art. 4º.",
+          "justificativa": "Não intervenção e igualdade entre Estados são princípios expressos do art. 4º.",
+          "mapaNoId": "pcmg-cf-art4-r2",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 4º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art4-q03",
+          "cap": "PCMG-DC-ART4",
+          "capNome": "Art. 4º — relações internacionais e integração latino-americana",
+          "topico": "pcmg-cf-art4",
+          "ordem": 3,
+          "tema": "Prevalência dos direitos humanos",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "A prevalência dos direitos humanos, na Constituição brasileira, é:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "objetivo social do art. 3º, III."
+            },
+            {
+              "letra": "B",
+              "texto": "competência exclusiva do Judiciário."
+            },
+            {
+              "letra": "C",
+              "texto": "princípio de relações internacionais previsto no art. 4º."
+            },
+            {
+              "letra": "D",
+              "texto": "fundamento enumerado no art. 1º, V."
+            },
+            {
+              "letra": "E",
+              "texto": "atribuição exclusiva de tratados, sem previsão constitucional."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "C",
+          "comentario": "A prevalência dos direitos humanos integra o art. 4º, II.",
+          "justificativa": "A prevalência dos direitos humanos integra o art. 4º, II.",
+          "mapaNoId": "pcmg-cf-art4-r3",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 4º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art4-q04",
+          "cap": "PCMG-DC-ART4",
+          "capNome": "Art. 4º — relações internacionais e integração latino-americana",
+          "topico": "pcmg-cf-art4",
+          "ordem": 4,
+          "tema": "Paz e solução pacífica",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Assinale o conjunto composto exclusivamente por princípios do art. 4º.",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "Soberania, cidadania e pluralismo."
+            },
+            {
+              "letra": "B",
+              "texto": "Redução de desigualdades, livre iniciativa e igualdade."
+            },
+            {
+              "letra": "C",
+              "texto": "Desenvolvimento nacional, dignidade e segurança."
+            },
+            {
+              "letra": "D",
+              "texto": "Defesa da paz, solução pacífica dos conflitos e cooperação entre povos."
+            },
+            {
+              "letra": "E",
+              "texto": "Separação dos Poderes, cidadania e não intervenção."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "D",
+          "comentario": "Os três termos são princípios internacionais expressos; os outros conjuntos misturam dispositivos.",
+          "justificativa": "Os três termos são princípios internacionais expressos; os outros conjuntos misturam dispositivos.",
+          "mapaNoId": "pcmg-cf-art4-r4",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 4º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art4-q05",
+          "cap": "PCMG-DC-ART4",
+          "capNome": "Art. 4º — relações internacionais e integração latino-americana",
+          "topico": "pcmg-cf-art4",
+          "ordem": 5,
+          "tema": "Repúdio ao terrorismo e racismo",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Qual expressão reproduz corretamente o princípio do art. 4º, VIII?",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "Repúdio ao terrorismo e ao racismo."
+            },
+            {
+              "letra": "B",
+              "texto": "Repúdio apenas ao terrorismo internacional."
+            },
+            {
+              "letra": "C",
+              "texto": "Repúdio ao racismo e à pobreza como um único princípio."
+            },
+            {
+              "letra": "D",
+              "texto": "Combate à marginalização e ao terrorismo."
+            },
+            {
+              "letra": "E",
+              "texto": "Repúdio à guerra e à desigualdade regional."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "A",
+          "comentario": "O inciso VIII usa expressamente terrorismo e racismo no mesmo dispositivo.",
+          "justificativa": "O inciso VIII usa expressamente terrorismo e racismo no mesmo dispositivo.",
+          "mapaNoId": "pcmg-cf-art4-r5",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 4º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art4-q06",
+          "cap": "PCMG-DC-ART4",
+          "capNome": "Art. 4º — relações internacionais e integração latino-americana",
+          "topico": "pcmg-cf-art4",
+          "ordem": 6,
+          "tema": "Asilo e América Latina",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Conforme o parágrafo único do art. 4º, a República Federativa do Brasil buscará integração:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "apenas econômica dos Estados do Mercosul."
+            },
+            {
+              "letra": "B",
+              "texto": "exclusivamente militar com países da América do Norte."
+            },
+            {
+              "letra": "C",
+              "texto": "somente política entre entes federados brasileiros."
+            },
+            {
+              "letra": "D",
+              "texto": "econômica, política, social e cultural dos povos da América Latina."
+            },
+            {
+              "letra": "E",
+              "texto": "restrita ao comércio mundial, sem componente cultural."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "D",
+          "comentario": "A norma menciona dimensões econômica, política, social e cultural dos povos da América Latina.",
+          "justificativa": "A norma menciona dimensões econômica, política, social e cultural dos povos da América Latina.",
+          "mapaNoId": "pcmg-cf-art4-r6",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 4º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art4-q07",
+          "cap": "PCMG-DC-ART4",
+          "capNome": "Art. 4º — relações internacionais e integração latino-americana",
+          "topico": "pcmg-cf-art4",
+          "ordem": 7,
+          "tema": "Asilo e América Latina",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "O princípio de concessão de asilo político está expressamente previsto:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "no art. 1º como fundamento."
+            },
+            {
+              "letra": "B",
+              "texto": "no art. 3º como objetivo de inclusão."
+            },
+            {
+              "letra": "C",
+              "texto": "no art. 4º, inciso X."
+            },
+            {
+              "letra": "D",
+              "texto": "no art. 2º como atribuição do Legislativo."
+            },
+            {
+              "letra": "E",
+              "texto": "somente em acordos internacionais, sem previsão constitucional."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "C",
+          "comentario": "Concessão de asilo político integra o art. 4º, X.",
+          "justificativa": "Concessão de asilo político integra o art. 4º, X.",
+          "mapaNoId": "pcmg-cf-art4-r6",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 4º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        },
+        {
+          "id": "pcmg-cf-art4-q08",
+          "cap": "PCMG-DC-ART4",
+          "capNome": "Art. 4º — relações internacionais e integração latino-americana",
+          "topico": "pcmg-cf-art4",
+          "ordem": 8,
+          "tema": "Prevalência dos direitos humanos",
+          "materia": "Noções de Direito Constitucional",
+          "enunciado": "Em uma questão que solicita estritamente os fundamentos do art. 1º, a expressão 'prevalência dos direitos humanos' deve ser classificada como:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "fundamento da cidadania."
+            },
+            {
+              "letra": "B",
+              "texto": "meta de desenvolvimento nacional."
+            },
+            {
+              "letra": "C",
+              "texto": "função atípica do Legislativo."
+            },
+            {
+              "letra": "D",
+              "texto": "objetivo constitucional de erradicação."
+            },
+            {
+              "letra": "E",
+              "texto": "princípio das relações internacionais previsto no art. 4º."
+            }
+          ],
+          "formato": "multipla_escolha",
+          "gabarito": "E",
+          "comentario": "Embora valor constitucional, sua classificação literal está no art. 4º, II.",
+          "justificativa": "Embora valor constitucional, sua classificação literal está no art. 4º, II.",
+          "mapaNoId": "pcmg-cf-art4-r3",
+          "ref": "Constituição Federal de 1988, texto atualizado no Senado Federal, art. 4º; Princípios Fundamentais da Constituição — arts. 1º a 4º (apostila do ZIP PCMG), pp. 44–48",
+          "fonte": "Constituição Federal de 1988, texto atualizado no Senado Federal",
+          "localizacaoFonte": "art. 4º",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão inédita para prática, com gabarito proposto; ainda não homologada como questão oficial."
+        }
+      ]
+    }
+  ]
+}
