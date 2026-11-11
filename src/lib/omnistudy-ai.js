@@ -572,7 +572,9 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
         ? data.notes + "\n" + data.referenceText : data.notes;
       if (data.structuredInput && structuredSource.length > 27000)
         throw new Error("Texto hierarquizado maior que 27.000 caracteres. Divida em partes para não perder tópicos.");
-      const skeleton = parseHierarchicalMindMap(structuredSource, data.title, data.topicId);
+      const skeleton = parseHierarchicalMindMap(structuredSource, data.title, data.topicId, {force: data.structuredInput});
+      if (data.structuredInput && !skeleton)
+        throw new Error("Não identifiquei uma hierarquia de tópicos no texto. Use títulos (#, ##), itens numerados ou listas com subníveis para preservar a estrutura.");
       if (skeleton) {
         if (skeleton.warnings?.length) throw new Error(skeleton.warnings.join(" "));
         const nodes = flatMindMapNodes(skeleton);
