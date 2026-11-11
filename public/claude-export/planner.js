@@ -196,13 +196,13 @@
           </select>` : ""}<button type="button" data-plan-week="-1" aria-label="Semana anterior">‹</button><button type="button" data-plan-week="0">Semana atual</button><button type="button" data-plan-week="1" aria-label="Próxima semana">›</button></div>
         </div>
       </section>
+      ${window.QBStudyCycleUI ? window.QBStudyCycleUI.render(S) : ""}
       <div class="qb-plan-summary">
         <div class="qb-plan-kpi"><b>${completed}<span>/${total}</span></b><small>tarefas concluídas</small></div>
         <div class="qb-plan-kpi"><b>${percent}%</b><small>conclusão semanal</small><div class="qb-plan-progress"><i style="width:${percent}%"></i></div></div>
         <div class="qb-plan-kpi"><b>${hours(plannedMinutes)}</b><small>tempo planejado</small></div>
         <div class="qb-plan-kpi"><b>${hours(usedMinutes)}</b><small>tempo registrado${outstanding ? ` · ${outstanding} em atraso` : ""}</small></div>
       </div>
-      ${window.QBStudyCycleUI ? window.QBStudyCycleUI.render(S) : ""}
       ${window.QBInsights ? window.QBInsights.compact(S, S.planSelectedDay) : ""}
       <section class="qb-week-calendar" aria-label="Calendário de estudos da semana"><div class="qb-calendar-scroll"><div class="qb-week-grid">${days.map(d => dayColumn(S, d, today, due)).join("")}</div></div></section>
       ${backlog.length ? `<details class="qb-plan-overdue"><summary><strong>${backlog.length} atividades pendentes de semanas anteriores</strong><span>Abra para reprogramar ou concluir</span></summary><div class="qb-plan-overdue-list">${backlog.map(t => `<div><div><strong>${esc(t.titulo)}</strong><small>${short(t.data)} · ${esc(KINDS[t.tipo] || "Estudo")}${t.materia ? ` · ${esc(t.materia)}` : ""}</small></div><button type="button" class="btn ghost small" data-plan-action="move" data-plan-id="${esc(t.id)}">Mover para ${short(S.planSelectedDay)}</button></div>`).join("")}</div></details>` : ""}
