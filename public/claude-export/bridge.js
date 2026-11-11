@@ -104,7 +104,7 @@
     },
   };
 
-  window.QBBridge = { ask };
+  window.QBBridge = { ask, refresh };
 
   window.claude = {
     use: async feature => {
