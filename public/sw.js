@@ -26,9 +26,9 @@ const PRECACHE_URLS = [
   "/claude-export/axon-shell.js?v=1",
   "/claude-export/offline-sync.js?v=1",
   "/claude-export/question-curator.js?v=1",
-  "/claude-export/omnistudy-cornell.js?v=15",
+  "/claude-export/omnistudy-cornell.js?v=16",
   "/claude-export/mindmap-studio.js?v=16",
-  "/claude-export/omnistudy-ai.js?v=25"
+  "/claude-export/omnistudy-ai.js?v=26"
 ];
 
 self.addEventListener("install", event => {
