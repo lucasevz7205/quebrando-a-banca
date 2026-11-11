@@ -2638,6 +2638,7 @@ function treinarPg(id){
 /* aba Conteúdo: materiais gerados para complementar o estudo */
 function viewConteudo(){
   if(!S.edLoaded) return `<div class="notice">Carregando…</div>`;
+  window.QBOmniCornell?.syncStoredArtifactsIntoS?.(S);
   const mats=[...S.mat.values()].filter(m=>m.tipo==='material'||m.tipo==='cobertura');
   const fontes=[...S.mat.values()].filter(m=>m.tipo==='fonte'||m.tipo==='metodo');
   const ordem=m=>{const t=S.ed.get((m.topicos||[])[0]);return t?t.ordem:9999};
@@ -2646,7 +2647,7 @@ function viewConteudo(){
     ? a.titulo.localeCompare(b.titulo,'pt-BR',{numeric:true})
     : a.tipo==='material'?-1:1;
   for(const m of mats.sort((a,b)=>ordem(a)-ordem(b)||desempatar(a,b))){
-    const t=S.ed.get((m.topicos||[])[0]); const k=t?t.materia:'Outros';
+    const t=S.ed.get((m.topicos||[])[0]); const k=t?t.materia:(m.materia||'Outros');
     if(!grupos.has(k)) grupos.set(k,[]); grupos.get(k).push(m);
   }
   let html='';
@@ -2654,18 +2655,24 @@ function viewConteudo(){
     html+=`<details class="mat-g" data-grupo="ct:${esc(mat)}" ${S.abertos.has('ct:'+mat)?'open':''}><summary><span class="gn">${esc(mat)}</span><span></span><span class="mono" style="font-size:12.5px;color:var(--muted)">${ms.length} ${ms.length===1?'material':'materiais'}</span></summary>`;
     for(const m of ms){
       const tops=(m.topicos||[]).map(id=>S.ed.get(id)).filter(Boolean);
-      html+=`<article class="ct" data-content-topics="${esc((m.topicos||[]).join('|'))}">
-        <div class="ct-h"><span class="mono" style="font-size:13px;font-weight:600">${tops.map(t=>esc(t.num)).join(', ')}</span><span class="mtype">${esc(MTIPO[m.tipo]||m.tipo)}</span></div>
+      const isCornell=m.origemArtefato==='cornell'||Boolean(m.cornellNoteId);
+      html+=`<article class="ct" id="mat-card-${esc(m.id)}" data-content-topics="${esc((m.topicos||[]).join('|'))}">
+        <div class="ct-h"><span class="mono" style="font-size:13px;font-weight:600">${tops.map(t=>esc(t.num)).join(', ')||esc(m.materia||'')}</span><span class="mtype">${isCornell?'Artefato Cornell · Remissivo':esc(MTIPO[m.tipo]||m.tipo)}</span></div>
         ${m.url?`<a class="ct-t" href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>`:`<div class="ct-t">${esc(m.titulo)}</div>`}
         ${m.descricao?`<p class="pd">${esc(m.descricao)}</p>`:''}
         ${(m.secoes||[]).length?`<ol class="ct-s">${m.secoes.map(s=>`<li>${esc(s)}</li>`).join('')}</ol>`:''}
+        ${(m.conteudo||m.anotacoes)?`<details class="why" style="margin:6px 0"><summary>Ler artefato / material de estudo completo</summary><div style="white-space:pre-wrap;font-size:12.5px;line-height:1.55;margin-top:6px">${esc(m.conteudo||m.anotacoes)}</div></details>`:''}
+        <div class="row" style="gap:10px;margin:6px 0;flex-wrap:wrap">
+          ${m.cornellNoteId?`<button type="button" class="lnk" data-open-cornell-note="${esc(m.cornellNoteId)}">📓 Abrir no Caderno Cornell</button>`:''}
+          <button type="button" class="lnk" data-material-to-map="${esc(m.id)}">🗺️ Usar como Subsídio no Mapa Mental</button>
+        </div>
         ${window.QBLearning?window.QBLearning.contentHTML(S,m):''}
         <span class="ps">${m.chat?`chat ${esc(m.chat)}`:''}${m.criadoEm?` · ${ddmm(m.criadoEm)}`:''}</span>
       </article>`;
     }
     html+=`</details>`;
   }
-  const fh=fontes.length?`<h2 class="section-title">Fontes do projeto</h2><div class="mat-l">${fontes.map(m=>`<div class="mat"><span class="mt">${m.url?`<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>`:esc(m.titulo)}</span><span class="mtype">${(m.topicos||[]).map(id=>esc(lblT(S.ed.get(id))||id)).join(', ')||esc(MTIPO[m.tipo]||'')}</span>${window.QBLearning?window.QBLearning.contentHTML(S,m):''}</div>`).join('')}</div>`:'';
+  const fh=fontes.length?`<h2 class="section-title">Fontes do projeto</h2><div class="mat-l">${fontes.map(m=>`<div class="mat"><span class="mt">${m.url?`<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>`:esc(m.titulo)}</span><span class="mtype">${(m.topicos||[]).map(id=>esc(lblT(S.ed.get(id))||id)).join(', ')||esc(MTIPO[m.tipo]||'')}</span><button type="button" class="lnk" data-material-to-map="${esc(m.id)}">🗺️ Subsídio no Mapa Mental</button>${window.QBLearning?window.QBLearning.contentHTML(S,m):''}</div>`).join('')}</div>`:'';
   return `<div class="wrap" style="gap:14px">
     ${window.QBBulkStudy?.panelHTML(S)||''}
     ${window.QBLearning?window.QBLearning.activityHTML():''}
@@ -2948,6 +2955,9 @@ function wire(){
   const pf=$('#pg-fechar'); if(pf) pf.addEventListener('click',()=>{for(const k of [...S.abertos]) if(k.startsWith('pg:')||k.startsWith('pgt:')) S.abertos.delete(k); S.fPgMat=''; render(true)});
   document.querySelectorAll('[data-treinar]').forEach(b=>b.addEventListener('click',()=>{S.trRadial={matter:null,page:0,setup:false,classic:true};S.cap=b.dataset.treinar;S.capEscolhido=true;S.modo='novos';{const t=topicoDoCap(S.cap);if(t)S.abertos.add('tr:'+t.sigla);}S.round=null;setView('treinar');window.scrollTo({top:0})}));
   document.querySelectorAll('[data-mastery-practice]').forEach(b=>b.addEventListener('click',()=>treinarNoMapa(b.dataset.masteryPractice)));
+  document.querySelectorAll('[data-open-cornell-note]').forEach(b=>b.addEventListener('click',()=>window.QBOmniCornell?.openCornellSheetById(b.dataset.openCornellNote,{S})));
+  document.querySelectorAll('[data-material-to-map]').forEach(b=>b.addEventListener('click',()=>window.QBMindMapStudio?.openFromMaterial(b.dataset.materialToMap,{S})));
+  window.S=S; window.QBApp={S,render,setView,enqueue,toast};
   const conf1=document.querySelector('[data-conf="1"]'); if(conf1&&S.round&&S.round.pend&&S.round.pend.focus){ S.round.pend.focus=false; conf1.focus({preventScroll:true}); }
 }
 function novaRodada(cap,capNome,modo,fila){

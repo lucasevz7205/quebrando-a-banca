@@ -360,6 +360,158 @@
     }
   }
 
+  function loadStudyMaterials(explicitS) {
+    const S = explicitS || appRef?.S || global.QBApp?.S || global.S;
+    if (global.QBOmniCornell?.syncStoredArtifactsIntoS) {
+      global.QBOmniCornell.syncStoredArtifactsIntoS(S);
+    }
+    const list = [];
+    const seen = new Set();
+    if (S?.mat && typeof S.mat.values === "function") {
+      for (const m of S.mat.values()) {
+        if (!m || !m.id || seen.has(m.id)) continue;
+        seen.add(m.id);
+        list.push(m);
+      }
+    }
+    try {
+      const raw = global.localStorage && global.localStorage.getItem("qb_cornell_material_artifacts_v1");
+      if (raw) {
+        const obj = JSON.parse(raw);
+        for (const m of Object.values(obj || {})) {
+          if (m && m.id && !seen.has(m.id)) {
+            seen.add(m.id);
+            list.push(m);
+          }
+        }
+      }
+    } catch (_e) {}
+    return list;
+  }
+
+  function materialToMindMap(material, options = {}) {
+    if (!material || typeof material !== "object") {
+      throw new Error("Selecione um artefato ou material de estudo válido.");
+    }
+    const title = text(
+      material.titulo || material.title || options.topicTitle || "Mapa Mental do Material",
+      240
+    ).replace(/^Caderno Cornell\s*·\s*/i, "");
+    const materia = text(material.materia || options.materia || "", 200);
+    const topicId = text(
+      options.topicId || (Array.isArray(material.topicos) && material.topicos[0]) || material.id || title,
+      120
+    );
+    const prefix = slugId(topicId, "mat").slice(0, 20);
+
+    // Se o artefato veio de uma folha Cornell ou tem pistas/anotações estruturadas, aproveita a conversão Cornell e enriquece com origemMaterial
+    if (Array.isArray(material.pistas) && material.pistas.length && (material.anotacoes || material.conteudo)) {
+      const converted = cornellToMindMap(
+        {
+          id: material.cornellNoteId || material.id,
+          title,
+          subject: materia,
+          topicId,
+          cues: material.pistas,
+          notes: material.anotacoes || material.conteudo || "",
+          summary: material.resumo || material.descricao || "",
+          referenceText: material.referenceText || `Artefato de Material (${material.id})`,
+        },
+        { topicId, topicTitle: title, materia }
+      );
+      converted.autor = `Baseado no Artefato de Material "${material.titulo || title}" · Remissivo`;
+      converted.origemMaterial = {
+        materialId: text(material.id, 120),
+        cornellNoteId: text(material.cornellNoteId || "", 120),
+        titulo: text(material.titulo || title, 240),
+        materia,
+        topicos: Array.isArray(material.topicos) ? material.topicos : [],
+      };
+      return converted;
+    }
+
+    const secoes = Array.isArray(material.secoes)
+      ? material.secoes.map(s => text(s, 220)).filter(Boolean)
+      : [];
+    const rawBody = text(
+      material.conteudo || material.texto || material.anotacoes || material.descricao || "",
+      14000
+    );
+    const summary = text(material.resumo || material.descricao || "", 2500);
+    const lines = rawBody
+      .split(/\r?\n/)
+      .map(l => l.replace(/^[\s#•*\-–—\d.)]+/, "").trim())
+      .filter(Boolean);
+
+    const branchSeeds = secoes.length
+      ? secoes
+      : lines.slice(0, Math.min(6, Math.max(3, lines.length)));
+
+    const ramos = (branchSeeds.length ? branchSeeds : ["Conceito Nuclear", "Regras e Requisitos", "Exceções e Jurisprudência"]).map(
+      (sec, idx) => {
+        const cleanTitle = sec.replace(/^Pista\s*\d+\s*:\s*/i, "").replace(/\?+$/, "").trim() || `Tópico ${idx + 1}`;
+        const chunkLines = lines.slice(idx * 2, idx * 2 + 3);
+        const expText = chunkLines[0] || summary || sec;
+        return {
+          id: `${prefix}-m${idx + 1}`,
+          t: cleanTitle.slice(0, 140),
+          rotulo: material.origemArtefato === "cornell" ? `Artefato ${idx + 1}` : `Seção ${idx + 1}`,
+          n: expText.slice(0, 260),
+          cor: (idx % 8) + 1,
+          x: {
+            e: chunkLines.join(" ") || expText,
+            src: `Material de Estudo · ${material.titulo || title}`,
+          },
+          f: chunkLines.slice(1).map((sub, sIdx) => ({
+            id: `${prefix}-m${idx + 1}-${sIdx + 1}`,
+            t: sub.slice(0, 88),
+            rotulo: `Sub ${idx + 1}.${sIdx + 1}`,
+            n: sub.slice(0, 220),
+            cor: (idx % 8) + 1,
+            x: {
+              e: sub,
+              src: `Material de Estudo · ${material.titulo || title}`,
+            },
+          })),
+        };
+      }
+    );
+
+    while (ramos.length < 3) {
+      const k = ramos.length + 1;
+      ramos.push({
+        id: `${prefix}-m${k}`,
+        t: k === 2 ? "Aplicação e Requisitos" : "Síntese e Pontos de Prova",
+        rotulo: `Seção ${k}`,
+        n: summary || rawBody.slice(0, 220) || title,
+        cor: k,
+        x: {
+          e: summary || rawBody || `Subsídio extraído de ${title}.`,
+          src: `Material de Estudo · ${material.titulo || title}`,
+        },
+        f: [],
+      });
+    }
+
+    return normalizeMap(
+      {
+        centro: materia ? `${title} · ${materia}` : title,
+        autor: `Subsídio: Material de Estudo "${material.titulo || title}" · Personalizável`,
+        ramos,
+        ligacoes: [[ramos[0].id, ramos[ramos.length - 1].id, "Eixo do Material → Síntese"]],
+        origemMaterial: {
+          materialId: text(material.id, 120),
+          cornellNoteId: text(material.cornellNoteId || "", 120),
+          titulo: text(material.titulo || title, 240),
+          materia,
+          topicos: Array.isArray(material.topicos) ? material.topicos : [],
+        },
+      },
+      title,
+      prefix
+    );
+  }
+
   function getNodeAtPath(map, pathStr) {
     if (!map || !Array.isArray(map.ramos) || typeof pathStr !== "string" || !pathStr.length) return null;
     const parts = pathStr.split(".").map(Number);
@@ -892,6 +1044,7 @@
 
     const draft = ensureDraft(S, activeId);
     const cornellNotes = loadSavedCornellNotes();
+    const studyMaterials = loadStudyMaterials(S);
     const { list: flatNodes } = enumerateMapNodes(draft);
     const undoCount = (studioState.undoStack.get(activeId) || []).length;
     const ganBatch = studioState.ganBatches.get(activeId);
@@ -950,6 +1103,26 @@
                      ${all.map(t => `<option value="${esc(t.id)}" ${t.id === activeId ? "selected" : ""}>${t.hasMap ? "🗺️ " : "＋ "}${esc(t.label)}</option>`).join("")}
                    </select>`
                 : ""
+            }
+          </div>
+
+          <div class="qb-mm-cornell-bar">
+            <strong style="font-size:12px;color:#34d399">📑 Subsídio de Materiais & Artefatos Remissivos:</strong>
+            ${
+              studyMaterials.length
+                ? `<select class="qb-mm-select" id="qb-mm-material-select" style="width:auto;min-width:260px" aria-label="Selecionar artefato ou material de estudo">
+                    ${studyMaterials
+                      .map(
+                        m =>
+                          `<option value="${esc(m.id)}">${m.origemArtefato === "cornell" ? "📓 " : "📄 "}${esc(
+                            m.titulo || m.id
+                          )}${m.materia ? ` (${esc(m.materia)})` : ""}</option>`
+                      )
+                      .join("")}
+                  </select>
+                  <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-material-replace">Criar Mapa a partir deste Material</button>
+                  <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-material-merge">＋ Mesclar Seções do Material ao Mapa</button>`
+                : `<span style="font-size:12px;color:#94a3b8">Transforme suas folhas Cornell em Artefatos de Material ou adicione materiais na aba <b>Materiais</b> para usá-los como subsídio aqui.</span>`
             }
           </div>
 
@@ -1286,6 +1459,35 @@
       rerender();
     });
 
+    document.getElementById("qb-mm-import-material-replace")?.addEventListener("click", () => {
+      const matId = document.getElementById("qb-mm-material-select")?.value;
+      const mats = loadStudyMaterials(S);
+      const mat = mats.find(m => m.id === matId) || mats[0];
+      if (!mat) return;
+      const converted = materialToMindMap(mat, {
+        topicId,
+        topicTitle: S.ed?.get(topicId)?.titulo || mat.titulo,
+        materia: mat.materia,
+      });
+      saveMapToEnvironment(S, topicId, converted);
+      studioState.statusMsg = `Mapa mental estruturado usando como subsídio o material "${mat.titulo || mat.id}". Personalize ramos, subtópicos e rótulos!`;
+      rerender();
+    });
+
+    document.getElementById("qb-mm-import-material-merge")?.addEventListener("click", () => {
+      const matId = document.getElementById("qb-mm-material-select")?.value;
+      const mats = loadStudyMaterials(S);
+      const mat = mats.find(m => m.id === matId) || mats[0];
+      if (!mat) return;
+      syncDomInputsToDraft(S, topicId);
+      const currentDraft = ensureDraft(S, topicId);
+      const fromMat = materialToMindMap(mat, { topicId: `${topicId}-m` });
+      currentDraft.ramos = [...(currentDraft.ramos || []), ...(fromMat.ramos || [])];
+      saveMapToEnvironment(S, topicId, currentDraft);
+      studioState.statusMsg = `Seções e pistas do material "${mat.titulo || mat.id}" mescladas ao mapa mental atual.`;
+      rerender();
+    });
+
     // Controles do gerador GAN
     document.getElementById("qb-mm-gan-node")?.addEventListener("change", e => {
       studioState.ganConfig.targetNodeId = e.target.value;
@@ -1373,12 +1575,59 @@
     return { topicId: fallbackTopicId, mapa: mapDraft };
   }
 
+  function openFromMaterial(materialOrId, options = {}) {
+    const S = options.S || appRef?.S || global.QBApp?.S || global.S;
+    const materials = loadStudyMaterials(S);
+    const material =
+      typeof materialOrId === "string"
+        ? S?.mat?.get?.(materialOrId) || materials.find(m => m.id === materialOrId)
+        : materialOrId;
+    if (!material) {
+      throw new Error("Material ou artefato não encontrado.");
+    }
+    const requestedTopicId = text(
+      options.topicId || (Array.isArray(material.topicos) && material.topicos[0]) || "",
+      120
+    );
+    const fallbackTopicId =
+      requestedTopicId ||
+      S?.mapaId ||
+      (S?.ed && [...S.ed.keys()][0]) ||
+      `mat-map-${slugId(material.titulo || material.id || "estudo", "geral")}`;
+    const mapDraft = options.generatedMap
+      ? normalizeMap(options.generatedMap, material.titulo || "Mapa Mental", fallbackTopicId)
+      : materialToMindMap(material, {
+          topicId: fallbackTopicId,
+          topicTitle: S?.ed?.get(fallbackTopicId)?.titulo || material.titulo,
+          materia: material.materia,
+        });
+
+    studioState.editorOpen = true;
+    if (options.openGan) studioState.ganOpen = true;
+    studioState.statusMsg = `Mapa mental estruturado tendo como subsídio o material "${material.titulo || material.id}". Personalize subtópicos e rótulos ou gere questões na GAN!`;
+
+    if (S) {
+      saveMapToEnvironment(S, fallbackTopicId, mapDraft);
+      if (typeof appRef?.setView === "function") {
+        appRef.setView("mapa");
+      } else if (typeof global.QBApp?.setView === "function") {
+        global.QBApp.setView("mapa");
+      } else {
+        S.view = "mapa";
+        appRef?.render?.(true);
+      }
+    }
+    return { topicId: fallbackTopicId, mapa: mapDraft, material };
+  }
+
   global.QBMindMapStudio = {
     COLORS,
     studioState,
     normalizeMap,
     createEmptyMap,
     cornellToMindMap,
+    materialToMindMap,
+    loadStudyMaterials,
     enumerateMapNodes,
     ensureDraft,
     addBranch,
@@ -1394,6 +1643,7 @@
     generateQuestionsWithGan,
     incorporateGanQuestions,
     openFromCornell,
+    openFromMaterial,
     allTopicOptions,
     studioHTML,
     wire,

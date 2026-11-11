@@ -275,3 +275,100 @@ test("Geração de questões a partir do Mapa Mental confronta Gerador × Discri
   assert.match(shellCode, /mindmap-studio\.js\?v=1/);
   assert.match(shellCode, /mindmap-studio\.css\?v=1/);
 });
+
+test("Folha Dividida Cornell, Cadernos por Matéria no Dashboard Esquerdo e Artefatos Remissivos de Material", () => {
+  const { studio, cornell, S, writtenDocs } = createSandbox();
+  S.mat = new Map();
+  S.abertos = new Set();
+
+  const state = {
+    subject: "Processo Legislativo (PL)",
+    cornellNotes: [
+      {
+        id: "cornell-pl-1",
+        title: "Regime de Urgência Constitucional (Art. 64 CF)",
+        subject: "Processo Legislativo (PL)",
+        topicId: "pl-1",
+        date: "11/11/2026",
+        cues: ["Qual o prazo de cada Casa na urgência constitucional?", "Recesso parlamentar suspende o prazo?"],
+        notes: "Cada Casa tem 45 dias para apreciar; sobrestando-se as demais deliberações.\nOs prazos não correm no recesso do Congresso Nacional.",
+        summary: "Urgência constitucional: 45 dias por Casa, suspenso no recesso.",
+        referenceText: "Art. 64, §§ 1º a 4º, CF/88.",
+      },
+    ],
+    selectedCornellId: "cornell-pl-1",
+  };
+
+  // 1. Cadernos divididos por matéria: adicionar, personalizar, selecionar e excluir via dashboard esquerdo
+  const notebooks = cornell.ensureNotebooks(state, S);
+  assert.ok(notebooks.length >= 2);
+
+  const customNb = cornell.addNotebook(state, {
+    name: "Regimento Interno CD",
+    sigla: "RICD",
+    color: "#f472b6",
+  });
+  assert.ok(customNb.id);
+  assert.equal(state.selectedNotebookId, customNb.id);
+
+  // Criar folha dentro do caderno selecionado
+  const newSheet = cornell.newManual(state);
+  assert.equal(newSheet.notebookId, customNb.id);
+  assert.equal(newSheet.subject, "Regimento Interno CD");
+
+  // Personalizar o caderno atualiza o nome e propaga para as folhas vinculadas
+  cornell.updateNotebook(state, customNb.id, {
+    name: "Regimento Interno da Câmara (RICD)",
+    sigla: "RICD",
+    color: "#34d399",
+  });
+  assert.equal(newSheet.subject, "Regimento Interno da Câmara (RICD)");
+
+  // Selecionar caderno filtra as folhas exibidas
+  cornell.selectNotebook(state, customNb.id);
+  assert.equal(cornell.getVisibleNotes(state).length, 1);
+
+  // Excluir folha manual e excluir caderno preservando notas anteriores
+  assert.equal(cornell.deleteNote(state, newSheet.id, S), true);
+  assert.equal(cornell.deleteNotebook(state, customNb.id), true);
+
+  // 2. Renderização da Folha Dividida Real do Método Cornell (Cabeçalho + 30% Pistas | 70% Notas + 100% Rodapé Síntese)
+  const bodyStub = {
+    innerHTML: "",
+    querySelector: () => null,
+    querySelectorAll: () => [],
+  };
+  cornell.render({
+    state,
+    body: bodyStub,
+    saveState: () => {},
+    callAI: async () => ({}),
+    S,
+  });
+  assert.match(bodyStub.innerHTML, /omni-cornell-divided-page/);
+  assert.match(bodyStub.innerHTML, /omni-cornell-page-header/);
+  assert.match(bodyStub.innerHTML, /omni-cornell-page-body/);
+  assert.match(bodyStub.innerHTML, /omni-cornell-col-cues/);
+  assert.match(bodyStub.innerHTML, /omni-cornell-col-notes/);
+  assert.match(bodyStub.innerHTML, /omni-cornell-page-footer/);
+  assert.match(bodyStub.innerHTML, /Cadernos por Matéria/);
+
+  // 3. Transformação remissiva da Folha Cornell em Artefato de Material (S.mat / materiais/<id>)
+  const artifact = cornell.publishNoteAsMaterial(state.cornellNotes[0], S);
+  assert.ok(artifact.id.startsWith("mat-cornell-"));
+  assert.equal(artifact.origemArtefato, "cornell");
+  assert.equal(artifact.cornellNoteId, "cornell-pl-1");
+  assert.deepEqual([...artifact.topicos], ["pl-1"]);
+  assert.ok(S.mat.has(artifact.id));
+  assert.ok(writtenDocs.has("materiais/" + artifact.id));
+
+  // 4. Uso do Artefato/Material como Subsídio direto para criação do Mapa Mental
+  const fromMat = studio.openFromMaterial(artifact.id, { S, topicId: "pl-1" });
+  assert.equal(fromMat.topicId, "pl-1");
+  assert.equal(fromMat.mapa.origemMaterial.materialId, artifact.id);
+  assert.equal(fromMat.mapa.origemMaterial.cornellNoteId, "cornell-pl-1");
+  assert.ok(fromMat.mapa.ramos.length >= 3);
+  assert.match(shellCode, /data-open-cornell-note/);
+  assert.match(shellCode, /data-material-to-map/);
+});
+
