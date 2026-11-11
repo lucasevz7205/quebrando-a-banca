@@ -504,6 +504,8 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/radial-dashboard.js?v=2"></script>
 <link rel="stylesheet" href="/claude-export/axon-shell.css?v=1">
 <script src="/claude-export/axon-shell.js?v=1"></script>
+<link rel="stylesheet" href="/claude-export/question-curator.css?v=1">
+<script src="/claude-export/question-curator.js?v=1"></script>
 <link rel="stylesheet" href="/claude-export/mindmap-studio.css?v=14">
 <script src="/claude-export/mindmap-studio.js?v=14"></script>
 <link rel="stylesheet" href="/claude-export/omnistudy-ai.css?v=13">
@@ -629,7 +631,7 @@ function atalhosQuestao(q,indice){
   const info=(indice?.byQuestion.get(q.id))||recursosQuestao(q.id);
   const mapped=[q.topico,...(info?.matchedIds||[])].some(id=>!!S.rv.get(id)?.mapa)
     ||[...S.rv.values()].some(rev=>rev?.mapa&&rev.questaoIds?.includes(q.id));
-  return `<div class="qb-qsource-actions"><button type="button" class="btn ghost small" data-qcard="${esc(q.id)}">Revisar este item nos Flashcards</button>${mapped?`<button type="button" class="btn ghost small" data-qmap-question="${esc(q.id)}" aria-label="Localizar o conceito da questão no mapa mental">Localizar conceito no mapa ↗</button>`:''}</div>`;
+  return `<div class="qb-qsource-actions"><button type="button" class="btn ghost small" data-qcard="${esc(q.id)}">Revisar este item nos Flashcards</button>${mapped?`<button type="button" class="btn ghost small" data-qmap-question="${esc(q.id)}" aria-label="Localizar o conceito da questão no mapa mental">Localizar conceito no mapa ↗</button>`:''}<button type="button" class="btn ghost small" data-curate-question="${esc(q.id)}" title="Solicitar correção ou reformular com IA">⚙️ Corrigir / Reformular</button><button type="button" class="btn ghost small" data-delete-question="${esc(q.id)}" style="color:var(--bad, #f87171)" title="Excluir questão do banco de dados">🗑 Excluir do banco</button></div>`;
 }
 function questoesEmMapa(qs,indice){
   if(!qs.length)return '';
@@ -1284,7 +1286,7 @@ function viewItem(){
   const tag=(multiCap(rd.cap)||emRep(rd))?`Cap. ${q.cap} · ${q.tema||''}`:(q.tema||'');
   return `${placar(rd)}
   <article class="item" style="margin-top:16px">
-    <div class="item-head"><span class="item-num">${emRep(rd)?'REPESCAGEM · ':''}ITEM ${String(q.ordem||'').padStart(2,'0')}</span><span class="tag">${esc(tag)}</span></div>
+    <div class="item-head"><span class="item-num">${emRep(rd)?'REPESCAGEM · ':''}ITEM ${String(q.ordem||'').padStart(2,'0')}</span><span class="tag">${esc(tag)}</span><div class="qb-curate-inline"><button type="button" class="qb-btn-curate" data-curate-question="${esc(q.id)}" title="Solicitar correção ou reformular com IA">⚙️ Corrigir</button><button type="button" class="qb-btn-delete-q" data-delete-question="${esc(q.id)}" title="Excluir questão do banco de dados">🗑 Excluir</button></div></div>
     ${q.statusEditorial==='aguardando-revisao-humana'?'<p class="qb-rf-pending" role="note"><strong>Questão autoral em revisão editorial.</strong> O gabarito é provisório e não corresponde a um item oficial do CEBRASPE. Use a explicação para estudo e confira a fonte quando necessário.</p>':''}
     ${textoHTML(q)}<div class="statement">${statementHTML(q,!!a)}</div>
     <div class="answers${alternativas.length?' qb-mc-answers':''}">${alternativas.length?alternativas.map(opt=>`<button type="button" class="qb-mc-choice${(a&&a.marcada===opt.letra)||(pend&&pend.marcada===opt.letra)?' picked':''}${a&&q.gabarito===opt.letra?' key':''}" data-ans="${esc(opt.letra)}" aria-label="Alternativa ${esc(opt.letra)}: ${esc(opt.texto)}" ${a?'disabled':''}><strong>${esc(opt.letra)})</strong><span>${esc(opt.texto)}</span></button>`).join(''):bub('C')+bub('E')}
@@ -1386,7 +1388,7 @@ function entradasCaderno(lista,indice){
         <div class="note"><label for="nota-${esc(q.id)}">Por que errei / o que lembrar</label>
           <textarea id="nota-${esc(q.id)}" data-nota="${esc(q.id)}" placeholder="Escreva a regra com as suas palavras e um exemplo próprio.">${esc(r.nota||'')}</textarea>
           <span class="saved" id="saved-${esc(q.id)}"></span></div>
-        <div class="row"><button class="btn ghost small" data-tirar="${esc(q.id)}">Tirar do caderno</button></div>
+        <div class="row" style="gap:8px;flex-wrap:wrap"><button class="btn ghost small" data-tirar="${esc(q.id)}">Tirar do caderno</button><button class="btn ghost small" data-curate-question="${esc(q.id)}">⚙️ Corrigir / Reformular</button><button class="btn ghost small" data-delete-question="${esc(q.id)}" style="color:var(--bad, #f87171)">🗑 Excluir do banco</button></div>
       </article>`;
     }
   }
@@ -2959,7 +2961,9 @@ function wire(){
   document.querySelectorAll('[data-mastery-practice]').forEach(b=>b.addEventListener('click',()=>treinarNoMapa(b.dataset.masteryPractice)));
   document.querySelectorAll('[data-open-cornell-note]').forEach(b=>b.addEventListener('click',()=>window.QBOmniCornell?.openCornellSheetById(b.dataset.openCornellNote,{S})));
   document.querySelectorAll('[data-material-to-map]').forEach(b=>b.addEventListener('click',()=>window.QBMindMapStudio?.openFromMaterial(b.dataset.materialToMap,{S})));
-  window.S=S; window.QBApp={S,render,setView,enqueue,toast,porMateria};
+  document.querySelectorAll('[data-curate-question]').forEach(b=>b.addEventListener('click',()=>window.QBQuestionCurator?.open({qid:b.dataset.curateQuestion,S})));
+  document.querySelectorAll('[data-delete-question]').forEach(b=>b.addEventListener('click',()=>window.QBQuestionCurator?.deleteQuestion(b.dataset.deleteQuestion,{S})));
+  window.S=S; window.QBApp={S,render,setView,enqueue,toast,porMateria,curateQuestion:id=>window.QBQuestionCurator?.open({qid:id,S}),deleteQuestion:id=>window.QBQuestionCurator?.deleteQuestion(id,{S})};
   const conf1=document.querySelector('[data-conf="1"]'); if(conf1&&S.round&&S.round.pend&&S.round.pend.focus){ S.round.pend.focus=false; conf1.focus({preventScroll:true}); }
 }
 function novaRodada(cap,capNome,modo,fila){

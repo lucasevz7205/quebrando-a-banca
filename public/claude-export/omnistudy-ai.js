@@ -458,6 +458,22 @@
         ],
       };
     }
+    if (payload.task === "curate-question") {
+      const q = payload.question || {};
+      const obs = payload.userObservation || "";
+      return {
+        parecer: `[Modo Academia] Questão revisada pelo curador cognitivo. O apontamento "${obs.slice(0, 80) || "inconsistência de formulação"}" foi processado e a assertiva foi alinhada com a jurisprudência pacificada e a literalidade da norma.`,
+        reformulada: {
+          enunciado: q.enunciado || "Assertiva revisada no padrão Cebraspe.",
+          gabarito: q.gabarito || "E",
+          comentario: q.comentario ? `[Reformulada] ${q.comentario}` : "Fundamentação atualizada conforme o dispositivo legal matriz.",
+          ref: q.ref || "CF/88 e legislação correlata",
+          mecanismo: "F3",
+          vacina: "Identifique se a assertiva inverte a regra geral ou estende competência privativa a órgão subordinado.",
+        },
+        acaoRecomendada: "reformular",
+      };
+    }
     return {};
   }
 

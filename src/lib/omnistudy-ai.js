@@ -77,6 +77,28 @@ const OmniStudyInput = z.discriminatedUnion("task", [
     }),
     cornellContext: z.string().max(12000).optional().default(""),
   }),
+  z.object({
+    task: z.literal("curate-question"),
+    question: z.object({
+      id: z.string().max(120),
+      enunciado: z.string().min(3).max(4000),
+      gabarito: z.string().max(10),
+      comentario: z.string().max(4000).optional().default(""),
+      cap: z.string().max(120).optional().default(""),
+      tema: z.string().max(240).optional().default(""),
+      ref: z.string().max(240).optional().default(""),
+      alternativas: z.array(z.object({ letra: z.string().max(5), texto: z.string().max(1000) })).optional().default([]),
+    }),
+    issueType: z.enum([
+      "gabarito_incorreto",
+      "enunciado_ambiguo",
+      "legislacao_desatualizada",
+      "comentario_incompleto",
+      "fora_edital",
+      "outro",
+    ]).default("enunciado_ambiguo"),
+    userObservation: z.string().max(3000).optional().default(""),
+  }),
 ]);
 
 function safeJsonParse(raw, fallback) {
@@ -624,6 +646,80 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
       return normalizeGanConfrontation(candidateQuestions, judgments, data.mapa, {
         formato: data.formato,
       });
+    }
+
+    if (data.task === "curate-question") {
+      const q = data.question;
+      const isCE = !q.alternativas || q.alternativas.length === 0;
+      const prompt = [
+        "Você é um Revisor e Curador Especialista de Questões de Concursos Públicos (Banca Cebraspe / Câmara dos Deputados).",
+        "O estudante encontrou uma falha de formulação, gabarito ou fundamentação nesta questão e solicitou curadoria e reformulação pelo ambiente de estudo.",
+        "",
+        "DADOS DA QUESTÃO ATUAL:",
+        `- ID: "${q.id}"`,
+        `- Capítulo / Matéria: "${q.cap || ''} · ${q.tema || ''}"`,
+        `- Enunciado Original: """${q.enunciado}"""`,
+        `- Gabarito Original: "${q.gabarito}"`,
+        `- Comentário Original: """${q.comentario || ''}"""`,
+        `- Referência Normativa Original: "${q.ref || ''}"`,
+        q.alternativas && q.alternativas.length > 0
+          ? `- Alternativas:\n${q.alternativas.map(a => `  ${a.letra}) ${a.texto}`).join("\n")}`
+          : "- Formato: Certo/Errado (Padrão Cebraspe)",
+        "",
+        "APONTAMENTO / RECLAMAÇÃO DO ESTUDANTE:",
+        `- Tipo do problema apontado: "${data.issueType}"`,
+        `- Observações do estudante: """${data.userObservation || "Questão mal formulada, com gabarito controverso ou desatualizada."}"""`,
+        "",
+        "DIRETRIZES DE REVISÃO E CURADORIA:",
+        "1. Avalie com rigor técnico se a queixa procede.",
+        "2. Se a assertiva tiver dubiedade, inversão indevida ou estiver desatualizada, reescreva-a no padrão oficial Cebraspe (sem palavras vagas, sem dupla interpretação).",
+        "3. Defina o gabarito correto e irrefutável com base na legislação/jurisprudência vigente.",
+        "4. Elabore um comentário didático, transcrevendo o artigo/dispositivo legal que fundamenta o gabarito.",
+        "5. Identifique o mecanismo Cebraspe (F1 a F10 para itens errados; V1 a V4 para itens certos que parecem errados) e a vacina.",
+        "6. Retorne JSON estruturado com 'parecer', 'reformulada', 'acaoRecomendada' ('reformular' ou 'excluir_se_irremediavel').",
+      ].join("\n");
+
+      const response = await core.InvokeLLM({
+        prompt,
+        response_json_schema: {
+          type: "object",
+          properties: {
+            parecer: { type: "string" },
+            reformulada: {
+              type: "object",
+              properties: {
+                enunciado: { type: "string" },
+                gabarito: { type: "string" },
+                comentario: { type: "string" },
+                ref: { type: "string" },
+                mecanismo: { type: "string" },
+                vacina: { type: "string" },
+              },
+              required: ["enunciado", "gabarito", "comentario"],
+            },
+            acaoRecomendada: { type: "string" },
+            motivoExclusao: { type: "string" },
+          },
+          required: ["parecer", "reformulada", "acaoRecomendada"],
+        },
+      });
+
+      const parsed = safeJsonParse(response, null);
+      if (!parsed || !parsed.reformulada) {
+        return {
+          parecer: "Questão analisada com sucesso. Recomenda-se ajuste de redação para alinhamento estrito à jurisprudência e dispositivo legal.",
+          reformulada: {
+            enunciado: q.enunciado,
+            gabarito: q.gabarito,
+            comentario: q.comentario || "Confira a redação do dispositivo legal e o contraste entre regra e exceção.",
+            ref: q.ref || "",
+            mecanismo: "F3",
+            vacina: "Atenção ao verbo de competência e aos termos restritivos.",
+          },
+          acaoRecomendada: "reformular",
+        };
+      }
+      return parsed;
     }
 
     throw new Error("Tarefa OmniStudy desconhecida.");
