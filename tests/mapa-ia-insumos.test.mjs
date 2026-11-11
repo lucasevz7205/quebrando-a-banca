@@ -25,7 +25,9 @@ test('estúdio usa a ponte autenticada, não a rota inexistente, e não sobrescr
   assert.match(studio,/MIN_INSUMO = 300/);
 });
 test('prompt restringe ao insumo, proíbe moldes e tenta de novo com os problemas',()=>{
-  assert.match(server,/use só o que está no insumo/);
+  assert.match(server,/use o insumo para regras, artigos, prazos, exceções e fatos/);
+  assert.match(server,/EXEMPLOS DE APLICAÇÃO/);
+  assert.match(server,/NÃO acrescente leis, artigos, prazos/);
   assert.match(server,/Proibido nome genérico ou de molde/);
   assert.match(server,/SUA VERSÃO ANTERIOR TINHA ESTES PROBLEMAS/);
   assert.match(server,/mindMapNodeSchema\(4\)/);
