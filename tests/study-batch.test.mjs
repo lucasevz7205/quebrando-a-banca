@@ -17,7 +17,7 @@ test("Geração por lote não oferece execução quando o edital da conta está 
   const html = api.panelHTML({
     studyAccount: true, studyAccountName: "PCMG", ed: new Map(), mat: new Map(), rv: new Map(), q: new Map(),
   });
-  assert.match(html, /Nenhum assunto possui texto de referência suficiente/);
+  assert.match(html, /0 assuntos no edital/);
   assert.match(html, /id="qb-bulk-start"[^>]*disabled/);
   assert.match(html, /Ainda não há tópicos do edital sincronizados/);
 });
