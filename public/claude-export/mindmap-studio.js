@@ -110,6 +110,7 @@
       if (!t) return null;
       const id = uniqueId(node.id, `r${pathStr.replace(/\./g, "-")}`);
       const n = text(node.n || "", 600);
+      const rawX = node.x && typeof node.x === "object" ? node.x : {};
       const rotulo = text(
         node.rotulo || deduceConceptLabel(t, n || rawX.e || "", depth === 0 ? "Conceito Central" : "Regra Geral"),
         80
@@ -117,7 +118,6 @@
       const corNum = Number(node.cor);
       const cor = Number.isInteger(corNum) && corNum >= 1 && corNum <= 8 ? corNum : defaultCor;
       const caixa = Boolean(node.caixa);
-      const rawX = node.x && typeof node.x === "object" ? node.x : {};
       const e = text(rawX.e || "", 2400);
       const ex = text(rawX.ex || "", 1200);
       const trap = text(rawX.trap || "", 1200);
