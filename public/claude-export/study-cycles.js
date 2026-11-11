@@ -66,7 +66,7 @@
 
   function generate({ config, start, edital = [], existing = [], today }) {
     const c = normalize(config);
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(start) || weekStart(start) !== start || !Number.isFinite(fromDay(start).getTime()))
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(start) || weekStart(start) !== start || !Number.isFinite(fromDay(start).getTime()) || day(fromDay(start)) !== start)
       throw new Error("A semana precisa começar no domingo.");
     if (today && start < weekStart(today)) throw new Error("Não é possível gerar ciclos retroativos.");
     const topics = availableSubjects(edital);
