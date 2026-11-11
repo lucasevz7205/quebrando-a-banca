@@ -39,7 +39,7 @@
       const timer = setTimeout(() => {
         pending.delete(id);
         reject(new Error("Não houve resposta do Base44. Recarregue a página Estudar."));
-      }, 90000);
+      }, action === "generateStudyTopic" ? 300000 : 90000);
       pending.set(id, { resolve, reject, timer, onDelta });
       window.parent.postMessage({ flag: FLAG, id, action, args }, origin);
     });
