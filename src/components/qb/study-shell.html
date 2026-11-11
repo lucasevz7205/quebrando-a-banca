@@ -465,6 +465,8 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/offline-sync.js?v=1"></script>
 <script src="/claude-export/study-cycles.js?v=1"></script>
 <script src="/claude-export/study-cycles-ui.js?v=1"></script>
+<script src="/claude-export/study-batch-ui.js?v=1"></script>
+<link rel="stylesheet" href="/claude-export/study-batch-ui.css?v=1">
 <script src="/claude-export/planner.js?v=4"></script>
 <script src="/claude-export/insights.js?v=3"></script>
 <script src="/claude-export/assistant.js?v=2"></script>
@@ -2656,6 +2658,7 @@ function viewConteudo(){
   }
   const fh=fontes.length?`<h2 class="section-title">Fontes do projeto</h2><div class="mat-l">${fontes.map(m=>`<div class="mat"><span class="mt">${m.url?`<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>`:esc(m.titulo)}</span><span class="mtype">${(m.topicos||[]).map(id=>esc(lblT(S.ed.get(id))||id)).join(', ')||esc(MTIPO[m.tipo]||'')}</span>${window.QBLearning?window.QBLearning.contentHTML(S,m):''}</div>`).join('')}</div>`:'';
   return `<div class="wrap" style="gap:14px">
+    ${window.QBBulkStudy?.panelHTML(S)||''}
     ${window.QBLearning?window.QBLearning.activityHTML():''}
     ${html||'<div class="notice">Nenhum material gerado ainda.</div>'}
     ${fh}
@@ -2777,6 +2780,7 @@ function treinarNoMapa(path){
   setView('treinar');novaRodada('MIX','Reforço · '+ramo.title,'aprendizagem',fila);
 }
 function wire(){
+  if(window.QBBulkStudy)window.QBBulkStudy.wire(S,render);
   if(window.QBLearning)window.QBLearning.wire(S,{render,hoje,setView,startSource:(ids,title)=>{setView('treinar');novaRodada('MIX',title,'aprendizagem',ids)}});
   if(S.view==='analiseDia' && window.QBInsights) window.QBInsights.wire(S,render,hoje);
   if(S.view==="painel" && window.QBPlanner) window.QBPlanner.wire(S,{render,enqueue,toast,hoje,startRevisao,iniciarMix,setView});
