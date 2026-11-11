@@ -9,6 +9,7 @@ import { useAuth } from "@/lib/AuthContext";
 import { accessStudyAccount, getStudyAccount, getStudyPreview, listStudyPreview } from "@/lib/study-account";
 import { listDocuments, writeDocument } from "@/lib/study-documents";
 import { correctFlashcardWithAI } from "@/lib/flashcard-ai";
+import { invokeOmniStudyAI } from "@/lib/omnistudy-ai";
 
 const FLAG = "__qb44_bridge_v1__";
 const legacyStorage = {
@@ -61,6 +62,12 @@ function StudyScreen({ account }) {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    if (typeof window !== "undefined" && "serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js").catch(() => {});
+    }
+  }, []);
+
+  useEffect(() => {
     async function receive(event) {
       const frameOrigin = preview ? "null" : window.location.origin;
       if (event.origin !== frameOrigin || event.source !== frameRef.current?.contentWindow) return;
@@ -84,6 +91,7 @@ function StudyScreen({ account }) {
         else if (msg.action === "assistantLLM" && legacy) result = await askAssistantLLM(msg.args || {},
           delta => frame.postMessage({ flag: FLAG, streamOf: msg.id, delta }, replyOrigin));
         else if (msg.action === "correctFlashcard" && !preview) result = await correctFlashcardWithAI({data:msg.args||{}});
+        else if (msg.action === "omniStudyAI" && !preview) result = await invokeOmniStudyAI({data:msg.args||{}});
         else if (msg.action === "list" || msg.action === "write") {
           if (legacy) result = await (msg.action === "list" ? listDocuments : writeDocument)(legacyStorage, msg.args || {});
           else if (preview) result = await listStudyPreview({ data: { accountId, args: msg.args || {} } });
@@ -92,7 +100,7 @@ function StudyScreen({ account }) {
         frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: true, value: result }, replyOrigin);
       } catch (err) {
         frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: false, error: err?.message || "Erro de leitura." }, replyOrigin);
-        if (msg.action !== "assistantLLM" && msg.action !== "correctFlashcard") setError(err?.message || "Erro de conexão com os dados.");
+        if (msg.action !== "assistantLLM" && msg.action !== "correctFlashcard" && msg.action !== "omniStudyAI") setError(err?.message || "Erro de conexão com os dados.");
       }
     }
     window.addEventListener("message", receive);
