@@ -12,7 +12,7 @@ test("OmniStudy encontra o cabeçalho AXON atual e monta botão visível",()=>{
   const inserted=[],nodes=new Map();
   const header={
     firstChild:null,
-    insertBefore(child,reference){
+    insertBefore(child){
       assert.ok(child.id);
       inserted.push(child);
       nodes.set(child.id,child);
@@ -43,7 +43,7 @@ test("OmniStudy encontra o cabeçalho AXON atual e monta botão visível",()=>{
     addEventListener(){},
     localStorage:{getItem(){return null;},setItem(){}},
   };
-  vm.runInNewContext(code,{document:doc,window:win,console,Date,Math});
+  vm.runInNewContext(code,{document:doc,window:win,Date,Math});
   assert.equal(inserted.length,2);
   assert.ok(nodes.get("omni-studio-trigger"));
   assert.ok(nodes.get("omni-pomo-pill"));
