@@ -93,7 +93,7 @@ export const bindReservedStudyAccountForAdmin = createServerFn({method:"POST"})
 
 export const setStudyAccountActiveForAdmin = createServerFn({method:"POST"})
   .middleware([requireUser])
-  .validator(z.object({accountId:accountIdSchema,active:z.boolean()}))
+  .validator(z.object({accountId:accountIdSchema,active:z.boolean(),allowEmpty:z.boolean().optional().default(false)}))
   .handler(async ({context,data}) => {
     const entities=service(context);
     const account=await getAccount(entities,data.accountId);
@@ -101,8 +101,8 @@ export const setStudyAccountActiveForAdmin = createServerFn({method:"POST"})
       const candidate=await entities.User.get(account.user_id).catch(()=>null);
       if(!candidate||candidate.role!=="user")throw new Error("Associe um login real de candidato antes de ativar o projeto.");
       const materials=await materialReady(entities,account.id);
-      if(!canActivateStudyAccount(materials)) {
-        throw new Error("Carregue pelo menos um tópico de edital e uma questão válida antes de ativar.");
+      if(!canActivateStudyAccount(materials) && !data.allowEmpty) {
+        throw new Error("Faltam conteúdos neste projeto. Importe edital e questões, ou habilite explicitamente o acesso inicial sem material para que o estudante possa entrar.");
       }
     }
     const changed = await withStudyRequestGate(entities.StudyRequestGate, async () => {
@@ -117,7 +117,7 @@ export const setStudyAccountActiveForAdmin = createServerFn({method:"POST"})
       return true;
     });
     if (!changed) throw new Error("Outro concurso já está ativo para esse login. Desative-o primeiro.");
-    return {id:account.id,active:data.active};
+    return {id:account.id,active:data.active,contentReady:await materialReady(entities,account.id)};
   });
 
 export const importStudyContentForAdmin = createServerFn({method:"POST"})
@@ -130,9 +130,9 @@ export const importStudyContentForAdmin = createServerFn({method:"POST"})
   .handler(async ({context,data}) => {
     const entities=service(context);
     const account=await getAccount(entities,data.accountId);
-    if(account.active) {
-      throw new Error("Para importar novos materiais, desative temporariamente o concurso. O histórico existente será preservado.");
-    }
+    // Importações são estritamente aditivas e não podem substituir IDs existentes.
+    // Permitir novos materiais em um ambiente ativo evita desativar o candidato
+    // enquanto o administrador completa o banco de questões; histórico intocado.
     const documents=validateStudyContentBatch(data.collection,data.documents);
     const storage={
       documents:entities.StudyDocument,
