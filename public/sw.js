@@ -2,7 +2,7 @@
  * Cacheia apenas recursos estáticos de interface (/claude-export/*, ícone, manifesto).
  * NUNCA armazena respostas de API nem documentos privados de contas no Cache Storage.
  */
-const CACHE_NAME = "qb-static-axon-v1";
+const CACHE_NAME = "qb-static-axon-v2";
 const PRECACHE_URLS = [
   "/manifest.webmanifest",
   "/qb-icon.svg",
@@ -60,7 +60,8 @@ self.addEventListener("fetch", event => {
   event.respondWith(
     caches.open(CACHE_NAME).then(async cache => {
       try {
-        const networkResponse = await fetch(request);
+        // Revalidar recursos no servidor após cada publicação; manter fallback offline.
+        const networkResponse = await fetch(request, { cache: "no-cache" });
         if (networkResponse && networkResponse.ok) {
           cache.put(request, networkResponse.clone());
         }
