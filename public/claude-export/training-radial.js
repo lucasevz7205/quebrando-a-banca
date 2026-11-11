@@ -28,8 +28,8 @@ function summary(ids,questions,responses){
     result.total++;
     if(!resp?.tentativas)continue;
     result.respondidas++;
-    const last=str(resp.ultimaMarcada||[...(resp.hist||[])].reverse().find(e=>["C","E","B"].includes(e.m))?.m);
-    if(last==="B")result.brancos++;
+    const last=str(resp.ultimaMarcada||[...(resp.hist||[])].reverse().find(e=>["A","B","C","D","E","-"].includes(e.m))?.m);
+    if(last===(q?.alternativas?.length?"-":"B"))result.brancos++;
     else if(last===q.gabarito&&!everWrong(resp))result.acertos++;
     else result.erros++;
   }
