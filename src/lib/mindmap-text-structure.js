@@ -70,7 +70,7 @@ export function parseHierarchicalMindMap(input, fallbackTitle="Mapa mental", pre
     const bullet=rawLine.match(/^(\s*)(?:[-*+•–—]|\d+[.)]|[a-z][.)])\s+(.+)$/i);
     if(numbering) {
       signals++;
-      const level=Math.max(activeH+10,numbering[1].split(".").length*10);
+      const level=activeH+numbering[1].split(".").length*10;
       const matched=numbering[2].match(/^(.{2,100}?):\s+(.+)$/);
       add(matched?matched[1]:numbering[2],matched?matched[2]:"",level,TYPE_RX.test(numbering[2])?"Regra":"");
       continue;
@@ -78,7 +78,7 @@ export function parseHierarchicalMindMap(input, fallbackTitle="Mapa mental", pre
     if(bullet) {
       signals++;
       const level=activeH+10+bullet[1].replace(/\t/g,"  ").length+1;
-      const value=bullet[2].trim();
+      const value=bullet[2].trim().replace(/^\*\*([^*]+)\*\*(?=:)/, "$1");
       while(stack.length&&stack[stack.length-1].level>=level)stack.pop();
       current=stack.length?stack[stack.length-1].node:null;
       if(field(value))continue;
