@@ -837,7 +837,6 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
     }
     if (data.task === "curate-question") {
       const q = data.question;
-      const isCE = !q.alternativas || q.alternativas.length === 0;
       const prompt = [
         "Você é um Revisor e Curador Especialista de Questões de Concursos Públicos (Banca Cebraspe / Câmara dos Deputados).",
         "O estudante encontrou uma falha de formulação, gabarito ou fundamentação nesta questão e solicitou curadoria e reformulação pelo ambiente de estudo.",
