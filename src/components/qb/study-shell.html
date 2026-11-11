@@ -522,7 +522,7 @@ details.diario .feed{margin-top:10px}
 const S = {
   db:null, dbState:'loading', // loading | ok | missing
   q:new Map(), r:new Map(), rodadas:[], qLoaded:false,
-  view:'portal', radialSection:null, trRadial:null, areaHub:null, cap:null, modo:'novos', shuffle:false,
+  view:'portal', radialSection:null, trRadial:null, areaHub:null, cap:null, modo:'novos', shuffle:true,
   round:null, pendingRender:false,
   ed:new Map(), mat:new Map(), pt:new Map(), di:[], edLoaded:false,
   fEvo:'', evoCap:'', evoGrafico:'tempo', evoOrdem:'menor', evoModo:'n', evoPer:'d', evoDe:'', evoAte:'', evoFaixa:'', evoPagina:0,
@@ -1175,8 +1175,10 @@ function iniciarTreinoAssunto(){
   if(!topic||!mat)return;
   const ids=filaTreinoAssunto(topic,S.modo).slice();
   if(!ids.length){toast('Ainda não há questões para este filtro do assunto.');return;}
+  const aleat=!!S.shuffle;
   if(S.shuffle)for(let i=ids.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[ids[i],ids[j]]=[ids[j],ids[i]];}
   novaRodada('MIX',mat.name+' · '+topic.title,S.modo,ids);
+  if(S.round) S.round.ordemAleatoria=aleat;
 }
 
 function viewSetup(){
@@ -1702,7 +1704,17 @@ function vacinacaoCards(card){
       <div class="stat"><span class="v">${lo.avaliados?fmtPct(lo.localizados/lo.avaliados):'–'}</span><span class="k">itens E acertados com o erro localizado · ${lo.localizados} de ${lo.avaliados}</span></div>
       <div class="stat"><span class="v">${lo.mecN?fmtPct(lo.mecOk/lo.mecN):'–'}</span><span class="k">acerto do mecanismo · ${lo.mecOk} de ${lo.mecN} com mecanismo registrado</span></div>
     </div>
-    <p class="rule">${lo.confusoes.length?'Mais confundidos (registrado → escolhido): '+lo.confusoes.map(c=>`<b>${esc(c.par)}</b> (${c.n})`).join(', ')+'.':'Ainda sem confusões de mecanismo registradas.'} Acerto em item E sem localizar o erro conta como chute e vai para o caderno.</p>`)})();
+    <p class="rule">${lo.confusoes.length?'Mais confundidos (registrado → escolhido): '+lo.confusoes.map(c=>`<b>${esc(c.par)}</b> (${c.n})`).join(', ')+'.':'Ainda sem confusões de mecanismo registradas.'} Acerto em item E sem localizar o erro conta como chute e vai para o caderno.</p>`)})()
+  +(()=>{const rows=V.porPosicao(S.rodadas);
+    const cel=c=>c.n<50?`<span class="ps insuf">dados insuficientes (${c.n})</span>`:`${fmtPct(c.ok/c.n)} (${c.n})`;
+    return card('VACINAÇÃO COGNITIVA','Acerto por posição na rodada',`
+    <div class="tbl-wrap"><table class="narrow qb-vac-pos">
+      <thead><tr><th>Posição</th><th class="num">Ordem aleatória</th><th class="num">Ordem fixa</th></tr></thead>
+      <tbody>
+        ${rows.map(r=>`<tr><td class="mono">${esc(r.rot)}</td><td class="num">${cel(r.aleat)}</td><td class="num">${cel(r.fixa)}</td></tr>`).join('')}
+      </tbody>
+    </table></div>
+    <p class="rule">Acerto por bloco de itens para verificar se a queda na rodada se deve à ordem dos temas ou ao cansaço. Mínimo de 50 respostas por célula.</p>`)})();
 }
 /* ---------- central do projeto: edital, materiais, pontos-chave, diário ---------- */
 const ST={nao:'Não iniciado',estudo:'Em estudo',revisao:'Revisando',dominado:'Dominado'};
@@ -2711,10 +2723,11 @@ function treinarPg(id){
   if(id==='*') ps=ps.filter(p=>{const t=S.ed.get(p.topico);return !S.fPgMat||(t&&t.sigla===S.fPgMat)});
   else ps=ps.filter(p=>p.topico===id);
   const fila=qidsPg(ps); if(!fila.length) return;
+  const aleat=id==='*'||!!S.shuffle;
   if(id==='*'||S.shuffle){ for(let i=fila.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[fila[i],fila[j]]=[fila[j],fila[i]]} }
   const t=S.ed.get(id);
   setView('treinar');
-  novaRodada('PEG',t?`Pegadinhas · ${lblT(t)} ${t.titulo}`:'Pegadinhas intercaladas','pegadinhas',fila);
+  novaRodada('PEG',t?`Pegadinhas · ${lblT(t)} ${t.titulo}`:'Pegadinhas intercaladas','pegadinhas',fila,aleat);
 }
 /* aba Conteúdo: materiais gerados para complementar o estudo */
 function viewConteudo(){
@@ -3071,14 +3084,16 @@ function wire(){
   const conf1=document.querySelector('[data-conf="1"]'); if(conf1&&S.round&&S.round.pend&&S.round.pend.focus){ S.round.pend.focus=false; conf1.focus({preventScroll:true}); }
 }
 function novaRodada(cap,capNome,modo,fila){
-  S.round={id:'r-'+crypto.randomUUID(),cap,capNome,modo,fila,idx:0,atual:null,pend:null,itens:[],certos:0,errados:0,brancos:0,inicio:new Date().toISOString(),fim:null,rep:{fila:[],ini:null,res:[]}};
+  S.round={id:'r-'+crypto.randomUUID(),cap,capNome,modo,fila,idx:0,atual:null,pend:null,itens:[],certos:0,errados:0,brancos:0,inicio:new Date().toISOString(),fim:null,rep:{fila:[],ini:null,res:[]},ordemAleatoria:false};
   render(true); window.scrollTo({top:0});
 }
 function startRound(cap,modo){
   let fila=filaPara(cap,modo);
   if(!fila.length) return;
+  const aleat=!!S.shuffle;
   if(S.shuffle){ for(let i=fila.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[fila[i],fila[j]]=[fila[j],fila[i]]} }
   novaRodada(cap,capNome(cap),modo,fila);
+  if(S.round) S.round.ordemAleatoria=aleat;
 }
 function startRevisao(){
   const {fila}=devidas(); if(!fila.length) return;
@@ -3164,7 +3179,8 @@ function registrar(L,conf,ext={}){
   if(isBlank) rd.brancos++; else if(acertou) rd.certos++; else rd.errados++;
   const learning=!choice?window.QBLearning?.metadata(S,q,L,conf,rd):null;
   if(learning) rd.atual.pilotFeedback=learning.feedback;
-  rd.itens.push(Object.assign({qid:q.id,ordem:q.ordem||0,marcada:L,gabarito:q.gabarito,conf:conf||null},corr?{corr}:{},learning?{learning}:{},certJust?{certJust}:{},erroSel?{erroSel:Object.assign({},erroSel)}:{},chuteLoc?{erroLocalizado:false}:{}));
+  const posInfo=VAC?VAC.posicao(rd):{pos:rd.idx+1,tSess:0,tItem:0};
+  rd.itens.push(Object.assign({qid:q.id,ordem:q.ordem||0,marcada:L,gabarito:q.gabarito,conf:conf||null},posInfo,corr?{corr}:{},learning?{learning}:{},certJust?{certJust}:{},erroSel?{erroSel:Object.assign({},erroSel)}:{},chuteLoc?{erroLocalizado:false}:{}));
   if((isBlank||!acertou||conf===1||chuteLoc)&&!rd.rep.fila.includes(q.id)) rd.rep.fila.push(q.id);
   // estado do item
   const prev=S.r.get(q.id)||{};
@@ -3217,8 +3233,9 @@ function registrarRep(L){
 }
 function rodadaDoc(rd){
   const total=rd.rep.ini===null?rd.fila.length:rd.rep.ini;
-  return {cap:rd.cap,capNome:rd.capNome,modo:rd.modo,inicio:rd.inicio,fim:rd.fim,total,
-    certos:rd.certos,errados:rd.errados,brancos:rd.brancos,itens:rd.itens,repescagem:rd.rep.res};
+  return Object.assign({cap:rd.cap,capNome:rd.capNome,modo:rd.modo,inicio:rd.inicio,fim:rd.fim,total,
+    certos:rd.certos,errados:rd.errados,brancos:rd.brancos,itens:rd.itens,repescagem:rd.rep.res},
+    typeof rd.ordemAleatoria==='boolean'?{ordemAleatoria:rd.ordemAleatoria}:{});
 }
 /* superaprendizagem: erro, branco ou chute exigem origem marcada e justificativa escrita antes de seguir */
 const JUST_MIN=1;   // sem mínimo de caracteres (pedido do Lucas, 29/10/2026); basta escrever algo
