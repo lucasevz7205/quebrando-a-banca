@@ -3,6 +3,8 @@
 export function decodeStudyCatalog(value,collection) {
   if(Array.isArray(value))return value;
   if(value && typeof value==="object"){
+    if(Object.hasOwn(value,collection)&&!Array.isArray(value[collection]))
+      throw new Error("Formato da coleção "+collection+" inválido: esperado uma lista JSON.");
     for(const key of [collection,"records","documents","questoes","questions","itens","items","edital","topicos"]) {
       if(Array.isArray(value[key]))return value[key];
     }
