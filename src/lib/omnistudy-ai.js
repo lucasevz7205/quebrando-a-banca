@@ -166,6 +166,88 @@ function tutorContextText(ctx) {
   }
 }
 
+/* Geração de mapa mental a partir de insumos (reescrita em 11/11/2026).
+ * Segue claude/Modelo_Mapa_Mental.md: rótulo curto (t), etiqueta com o detalhe (n),
+ * explicação em todo nó (x), microtópicos, e nada além do que está no insumo. */
+const MINDMAP_RULES = [
+  "Você monta um mapa mental de estudo para concurso (Cebraspe) a partir do INSUMO abaixo.",
+  "FIDELIDADE: use só o que está no insumo. Não acrescente regras, artigos, prazos, exemplos ou pegadinhas que não estejam nele. Campo sem base no insumo fica vazio (\"\").",
+  "ESTRUTURA:",
+  "- 'centro': o assunto.",
+  "- 'ramos': de 4 a 8 blocos, na ordem em que o insumo apresenta o conteúdo. O nome de cada ramo é um conceito REAL do insumo. Proibido nome genérico ou de molde (\"Conceito e Natureza\", \"Regras Gerais\", \"Aspectos\", \"Introdução\", \"Pista 1\", \"Outros\").",
+  "- Cada ramo se desdobra em filhos ('f') e estes em microtópicos, até 4 níveis. Ramo com mais de 4 ideias vira sub-ramos. Cada folha traz UM conceito.",
+  "- Conceitos que se confundem ficam como irmãos, lado a lado. Listas paralelas (requisitos, espécies, prazos) viram filhos na mesma ordem do insumo, sem omitir itens.",
+  "CAMPOS DE CADA NÓ:",
+  "- 't': rótulo de 2 a 8 palavras, frase nominal ou afirmação curta. Nunca um parágrafo, nunca uma pergunta.",
+  "- 'n': etiqueta de uma linha com o detalhe que prova ou exemplifica o rótulo (número, prazo, quórum, contraste \"X, e não Y\"). É o que o estudante tenta lembrar. Não repita o rótulo.",
+  "- 'rotulo': função do nó, uma destas: Conceito, Regra, Exceção, Requisito, Classificação, Competência, Prazo, Quórum, Efeito, Vedação, Procedimento, Exemplo, Contraste.",
+  "- 'x.e': explicação obrigatória. Em ramos, 2 a 4 frases sobre o bloco; em folhas, 1 ou 2 frases que decodificam os termos do rótulo e da etiqueta. Quem nunca viu o termo precisa entender só com ela.",
+  "- 'x.ex': exemplo, só se o insumo trouxer. 'x.trap': pegadinha, só se o insumo indicar ou se for a troca direta entre dois conceitos irmãos do próprio mapa. 'x.src': dispositivo ou fonte, só se citado no insumo.",
+  "- 'id': identificador curto e único em minúsculas com hífens.",
+  "'ligacoes': até 6 relações {de, para, relacao} entre nós de ramos diferentes, quando um conceito depende de outro. Use os ids.",
+  "Antes de responder, confira: todo nó tem 't' curto e 'x.e'; nenhuma informação veio de fora do insumo; nenhum item de lista do insumo ficou de fora.",
+].join("\n");
+
+function mindMapNodeSchema(depth) {
+  const node = {
+    type: "object",
+    properties: {
+      id: { type: "string" },
+      t: { type: "string" },
+      n: { type: "string" },
+      rotulo: { type: "string" },
+      x: {
+        type: "object",
+        properties: { e: { type: "string" }, ex: { type: "string" }, trap: { type: "string" }, src: { type: "string" } },
+        required: ["e"],
+      },
+    },
+    required: ["id", "t", "n", "rotulo", "x"],
+  };
+  if (depth > 1) node.properties.f = { type: "array", items: mindMapNodeSchema(depth - 1) };
+  return node;
+}
+const MINDMAP_SCHEMA = {
+  type: "object",
+  properties: {
+    centro: { type: "string" },
+    ramos: { type: "array", items: mindMapNodeSchema(4) },
+    ligacoes: {
+      type: "array",
+      items: { type: "object", properties: { de: { type: "string" }, para: { type: "string" }, relacao: { type: "string" } } },
+    },
+  },
+  required: ["centro", "ramos"],
+};
+
+const GENERIC_BRANCH = /^(conceito e natureza|regras? gerais?|aspectos?( gerais)?|introdu[cç][aã]o|considera[cç][oõ]es|outros|geral|pista \d+|ramo \d+|subt[oó]pico [a-z0-9]+|conceito \d+)$/i;
+const FILLER = /^Conceito estruturante de /;
+/* Verificação objetiva de qualidade do mapa gerado; devolve a lista de problemas. */
+export function mindMapProblems(map) {
+  const problemas = [];
+  const ramos = Array.isArray(map?.ramos) ? map.ramos : [];
+  if (ramos.length < 3) problemas.push(`Só ${ramos.length} ramo(s): divida o assunto em 4 a 8 blocos.`);
+  let nos = 0, semX = 0, longos = 0, semN = 0, folhasRaiz = 0;
+  const visit = (n, depth) => {
+    nos++;
+    const t = String(n.t || "");
+    if (t.split(/\s+/).length > 10 || t.length > 80) { longos++; if (longos <= 3) problemas.push(`Rótulo longo demais: "${t.slice(0, 60)}…". Use 2 a 8 palavras e mova o resto para 'n' ou 'x.e'.`); }
+    if (GENERIC_BRANCH.test(t.trim())) problemas.push(`Rótulo genérico: "${t}". Use o conceito real do insumo.`);
+    if (!n.x?.e || FILLER.test(n.x.e) || n.x.e.trim().length < 25) semX++;
+    if (!n.n) semN++;
+    const kids = n.f || [];
+    if (depth === 0 && !kids.length) folhasRaiz++;
+    if (kids.length > 7) problemas.push(`"${t}" tem ${kids.length} filhos: agrupe em sub-ramos.`);
+    kids.forEach(k => visit(k, depth + 1));
+  };
+  ramos.forEach(r => visit(r, 0));
+  if (semX) problemas.push(`${semX} nó(s) sem explicação útil em 'x.e'.`);
+  if (nos && semN / nos > 0.4) problemas.push(`${semN} nó(s) sem etiqueta 'n' (o detalhe a evocar).`);
+  if (folhasRaiz > 1) problemas.push(`${folhasRaiz} ramos sem filhos: desdobre em conceitos.`);
+  if (nos < 8) problemas.push(`Mapa raso (${nos} nós): desdobre os ramos em microtópicos.`);
+  return problemas;
+}
+
 /* Mantém só trechos que existem literalmente na tentativa; o resto vira erro sem trecho. */
 export function normalizeEvocacao(raw, tentativa) {
   const lista = v => (Array.isArray(v) ? v : []).map(x => String(x || "").trim()).filter(Boolean).slice(0, 8);
@@ -476,110 +558,41 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
         topicTitle: data.title,
         materia: data.subject,
       });
-      const prompt = [
-        "Você é um arquiteto especialista em Mapas Mentais conceituais de alta fidelidade e estrutura irradiante (método AXON) para preparação de alto nível em concursos públicos.",
-        "Construa uma árvore de Mapa Mental fiel ao conteúdo dos subsídios informados (folha Cornell / notas / texto-fonte).",
-        "DIRETRIZES FUNDAMENTAIS DO MÉTODO CONCEITUAL IRRADIANTE (AXON):",
-        "1. FIDELIDADE CONCEITUAL: O centro (`centro`) é o assunto principal. Os ramos principais (`ramos`) representam os CONCEITOS NUCLEARES do assunto (ex: 'Conceito e Natureza', 'Requisitos de Validade', 'Espécies e Classificação', 'Regras Gerais', 'Exceções e Vedações Taxativas', 'Prazos e Quóruns', 'Extinção e Recursos'). Extraia os conceitos reais presentes no texto, nunca rótulos genéricos como 'Pista 1' ou 'Subtópico A'.",
-        "2. HIERARQUIA E APROFUNDAMENTO: A partir de cada conceito principal (1º nível), desdobre subtópicos (`f`) de acordo com a necessidade de aprofundamento (2º nível e microtópicos filhos).",
-        "3. RÓTULOS SUPERFICIAIS (`rotulo`): Todo nó (em TODOS os níveis da hierarquia) DEVE ter um `rotulo` conciso (1 a 4 palavras) que explica SUPERFICIALMENTE o conceito à primeira vista (ex: 'Regra Geral', 'Exceção Taxativa', 'Quórum 3/5', 'Prazo 5 Sessões', 'Competência Exclusiva', 'Vedação Material', 'Efeito Ex Tunc', 'Alerta de Prova', 'Condição de Validade'). O rótulo é um marcador que permite bater o olho e entender a função do conceito imediatamente.",
-        "4. EXPLICAÇÃO PROFUNDA (`x`): Em cada nó, detalhe o conceito com rigor técnico:",
-        "   - `e`: Explicação aprofundada, destrinchando o conceito, termos técnicos e contrastes ('X e não Y').",
-        "   - `ex`: Exemplo concreto ou caso prático que ilustra a regra em ação.",
-        "   - `trap`: Pegadinha de prova real da banca (Cebraspe/FGV: inversões, troca de conceitos, palavras absolutas 'sempre/nunca').",
-        "   - `src`: Dispositivo exato da lei, constituição ou doutrina.",
-        "5. LIGAÇÕES CRUZADAS: Inclua `ligacoes` transversais `[idOrigem, idDestino, rotuloDaRelacao]` entre conceitos conectados.",
-        `TÍTULO / CONCEITO CENTRAL: ${data.title} (${data.subject || "Geral"})`,
-        `DADOS DOS SUBSÍDIOS / FOLHA CORNELL:\n${JSON.stringify({
-          cues: data.cues,
-          notes: data.notes,
-          summary: data.summary,
-          referenceText: data.referenceText.slice(0, 8000),
-        })}`,
+      const insumo = [
+        data.cues.length ? `PISTAS / PERGUNTAS:\n- ${data.cues.join("\n- ")}` : "",
+        `ANOTAÇÕES:\n${data.notes}`,
+        data.summary ? `SÍNTESE:\n${data.summary}` : "",
+        data.referenceText ? `TEXTO-FONTE:\n${data.referenceText.slice(0, 9000)}` : "",
+      ].filter(Boolean).join("\n\n");
+      const basePrompt = [
+        MINDMAP_RULES,
+        `ASSUNTO CENTRAL: ${data.title}${data.subject ? ` (${data.subject})` : ""}`,
+        `INSUMO (única fonte permitida):\n"""\n${insumo}\n"""`,
       ].join("\n\n");
-
-      const raw = await core.InvokeLLM({
-        prompt,
-        response_json_schema: {
-          type: "object",
-          properties: {
-            centro: { type: "string" },
-            ramos: {
-              type: "array",
-              items: {
-                type: "object",
-                properties: {
-                  id: { type: "string" },
-                  t: { type: "string" },
-                  rotulo: { type: "string" },
-                  n: { type: "string" },
-                  cor: { type: "integer" },
-                  caixa: { type: "boolean" },
-                  x: {
-                    type: "object",
-                    properties: {
-                      e: { type: "string" },
-                      ex: { type: "string" },
-                      trap: { type: "string" },
-                      src: { type: "string" },
-                    },
-                  },
-                  f: {
-                    type: "array",
-                    items: {
-                      type: "object",
-                      properties: {
-                        id: { type: "string" },
-                        t: { type: "string" },
-                        rotulo: { type: "string" },
-                        n: { type: "string" },
-                        x: {
-                          type: "object",
-                          properties: {
-                            e: { type: "string" },
-                            ex: { type: "string" },
-                            trap: { type: "string" },
-                            src: { type: "string" },
-                          },
-                        },
-                      },
-                      required: ["t", "rotulo"],
-                    },
-                  },
-                },
-                required: ["t", "rotulo", "n"],
-              },
-            },
-            ligacoes: {
-              type: "array",
-              items: {
-                type: "object",
-                properties: {
-                  de: { type: "string" },
-                  para: { type: "string" },
-                  relacao: { type: "string" },
-                },
-              },
-            },
-          },
-          required: ["centro", "ramos"],
-        },
-      });
-
-      const parsed = safeJsonParse(raw, null);
-      const normalized = parsed && Array.isArray(parsed.ramos) && parsed.ramos.length
+      const gerar = async extra => safeJsonParse(await core.InvokeLLM({
+        prompt: extra ? `${basePrompt}\n\n${extra}` : basePrompt,
+        response_json_schema: MINDMAP_SCHEMA,
+      }), null);
+      const normalizar = parsed => parsed && Array.isArray(parsed.ramos) && parsed.ramos.length
         ? normalizeMindMapTree(
-            {
-              ...parsed,
-              autor: `Gerado via Cornell + IA · Personalizável pelo estudante`,
-              origemCornell: fallbackMap.origemCornell,
-            },
+            { ...parsed, autor: "Gerado por IA a partir do seu insumo · Revise e personalize", origemCornell: fallbackMap.origemCornell },
             data.title,
             data.topicId || "cornell"
           )
-        : fallbackMap;
+        : null;
 
-      return { mapa: normalized };
+      let mapa = normalizar(await gerar(""));
+      let problemas = mapa ? mindMapProblems(mapa) : ["A IA não devolveu um mapa válido."];
+      if (problemas.length) {
+        // uma única nova tentativa, dizendo exatamente o que corrigir
+        const segundo = normalizar(await gerar(
+          `SUA VERSÃO ANTERIOR TINHA ESTES PROBLEMAS. Refaça o mapa inteiro corrigindo todos:\n- ${problemas.slice(0, 12).join("\n- ")}`
+        ));
+        const p2 = segundo ? mindMapProblems(segundo) : null;
+        if (segundo && p2.length <= problemas.length) { mapa = segundo; problemas = p2; }
+      }
+      if (!mapa) throw new Error("A IA não conseguiu estruturar o mapa a partir deste insumo.");
+      return { mapa, avisos: problemas.slice(0, 8), geradoPorIA: true };
     }
 
     if (data.task === "mindmap-gan-questions") {
