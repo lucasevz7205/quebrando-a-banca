@@ -52,11 +52,59 @@
     return true;
   }
   function updateNote(note, field, value) {
-    if (!note || !["title", "subject", "cues", "notes", "summary", "referenceText"].includes(field)) return;
+    if (!note || !["title", "subject", "topicId", "cues", "notes", "summary", "referenceText"].includes(field)) return;
     note[field] = field === "cues" ? splitCues(value) :
       asText(value, field === "referenceText" ? 15000 : field === "notes" ? 12000 : field === "summary" ? 2500 : 300);
     // Um parecer anterior não se aplica a uma nota já modificada.
     delete note.cornellReview;
+  }
+
+  function buildMindMapFromNote(note, options = {}) {
+    if (global.QBMindMapStudio && typeof global.QBMindMapStudio.cornellToMindMap === "function") {
+      return global.QBMindMapStudio.cornellToMindMap(note, options);
+    }
+    const title = asText(note?.title || note?.subject || "Mapa Mental Cornell", 240);
+    const cues = Array.isArray(note?.cues) ? note.cues : splitCues(note?.cues || "");
+    const lines = asText(note?.notes, 12000).split(/\r?\n/).map(s => s.replace(/^[\s•*\-–—\d.)]+/, "").trim()).filter(Boolean);
+    const branchTitles = cues.length ? cues : lines.slice(0, 4);
+    const ramos = (branchTitles.length ? branchTitles : ["Conceito Base", "Regra e Aplicação", "Exceções"]).map((cue, idx) => ({
+      id: "cornell-r" + (idx + 1),
+      t: asText(cue, 160).replace(/\?+$/, "") || ("Ramo " + (idx + 1)),
+      rotulo: "Pista " + (idx + 1),
+      n: asText(lines[idx] || note?.summary || cue, 260),
+      cor: (idx % 8) + 1,
+      x: {
+        e: asText(lines[idx] || note?.notes || cue, 1200),
+        src: asText(note?.referenceText || ("Caderno Cornell · " + title), 240),
+      },
+      f: lines.slice(idx + 1, idx + 3).map((sub, sIdx) => ({
+        id: "cornell-r" + (idx + 1) + "-" + (sIdx + 1),
+        t: asText(sub, 90),
+        rotulo: "Sub " + (idx + 1) + "." + (sIdx + 1),
+        n: asText(sub, 200),
+        cor: (idx % 8) + 1,
+        x: { e: asText(sub, 600) },
+      })),
+    }));
+    while (ramos.length < 3) {
+      const k = ramos.length + 1;
+      ramos.push({
+        id: "cornell-r" + k,
+        t: k === 2 ? "Desdobramento e Subtópicos" : "Síntese e Exceções",
+        rotulo: "Ramo " + k,
+        n: asText(note?.summary || note?.notes || title, 240),
+        cor: k,
+        x: { e: asText(note?.summary || note?.notes || title, 800) },
+        f: [],
+      });
+    }
+    return {
+      centro: title,
+      autor: "Baseado na folha Cornell · Personalizável no Ambiente de Estudo",
+      ramos,
+      ligacoes: [[ramos[0].id, ramos[ramos.length - 1].id, "Pista → Síntese"]],
+      origemCornell: { noteId: note?.id || "", title },
+    };
   }
 
   function render({ state, body, saveState, callAI }) {
@@ -93,8 +141,11 @@
       '<div class="omni-cornell-actions">',
       '<button type="button" id="omni-cornell-review" class="omni-btn" ' + (busy ? 'disabled' : '') + '>Conferir e corrigir com IA</button>',
       (current.cornellUndo ? '<button type="button" id="omni-cornell-undo" class="omni-btn omni-btn-ghost">Desfazer última correção aplicada</button>' : ''),
+      '<button type="button" id="omni-cornell-to-map" class="omni-btn omni-btn-ghost" ' + (busy ? 'disabled' : '') + '>🗺️ Transformar em Mapa Mental (Base Direta)</button>',
+      '<button type="button" id="omni-cornell-to-map-ai" class="omni-btn omni-btn-ghost" ' + (busy ? 'disabled' : '') + '>✨ Gerar Mapa Mental com IA e Abrir Construtor</button>',
+      '<button type="button" id="omni-cornell-to-gan" class="omni-btn omni-btn-ghost" ' + (busy ? 'disabled' : '') + '>⚔️ Abrir Mapa + Questões GAN</button>',
       '</div>',
-      '<p class="omni-cornell-hint">Somente a conferência por IA consome créditos. A escrita e a edição manual são locais.</p>',
+      '<p class="omni-cornell-hint">Somente a conferência por IA consome créditos. A escrita, a edição manual e a conversão direta em Mapa Mental são locais.</p>',
       '</section>'
     ].join("") : '<section class="omni-card">Crie uma folha manual ou gere uma a partir das suas anotações.</section>';
     const review = current?.cornellReview;
@@ -264,7 +315,69 @@
       } catch (error) { message = "Não foi possível conferir: " + (error?.message || "IA indisponível."); }
       finally { busy = false; render({state,body,saveState,callAI}); }
     });
+    body.querySelector("#omni-cornell-to-map")?.addEventListener("click", () => {
+      if (!current) return;
+      const mapDraft = buildMindMapFromNote(current, { topicId: current.topicId });
+      current.mindMapDraft = mapDraft;
+      if (global.QBMindMapStudio && typeof global.QBMindMapStudio.openFromCornell === "function") {
+        global.QBMindMapStudio.openFromCornell(current, { generatedMap: mapDraft });
+      }
+      message = "Mapa mental criado a partir desta folha Cornell! Personalize ramos, subtópicos e rótulos no ambiente de estudo.";
+      save(); render({state,body,saveState,callAI});
+    });
+    body.querySelector("#omni-cornell-to-gan")?.addEventListener("click", () => {
+      if (!current) return;
+      const mapDraft = current.mindMapDraft || buildMindMapFromNote(current, { topicId: current.topicId });
+      current.mindMapDraft = mapDraft;
+      if (global.QBMindMapStudio && typeof global.QBMindMapStudio.openFromCornell === "function") {
+        global.QBMindMapStudio.openFromCornell(current, { generatedMap: mapDraft, openGan: true });
+      }
+      message = "Mapa mental aberto no painel de Geração de Questões com Confronto GAN.";
+      save(); render({state,body,saveState,callAI});
+    });
+    body.querySelector("#omni-cornell-to-map-ai")?.addEventListener("click", async () => {
+      if (busy || !current) return;
+      const notes = asText(current.notes, 12000).trim();
+      if (notes.length < 5) {
+        message = "Preencha as anotações da folha Cornell antes de gerar o mapa mental.";
+        render({state,body,saveState,callAI});
+        return;
+      }
+      busy = true;
+      message = "Estruturando Mapa Mental AXON a partir da sua folha Cornell...";
+      render({state,body,saveState,callAI});
+      try {
+        const res = await callAI({
+          task: "cornell-to-mindmap",
+          topicId: current.topicId || "cornell",
+          title: asText(current.title || current.subject || "Mapa Mental", 300),
+          subject: asText(current.subject, 300),
+          cues: (current.cues || []).slice(0, 20),
+          notes,
+          summary: asText(current.summary, 2500),
+          referenceText: asText(current.referenceText, 15000),
+        });
+        const mapDraft = res?.mapa || buildMindMapFromNote(current, { topicId: current.topicId });
+        current.mindMapDraft = mapDraft;
+        if (global.QBMindMapStudio && typeof global.QBMindMapStudio.openFromCornell === "function") {
+          global.QBMindMapStudio.openFromCornell(current, { generatedMap: mapDraft });
+        }
+        message = "Mapa mental estruturado pela IA a partir da sua folha Cornell! Edite subtópicos e rótulos à vontade.";
+        save();
+      } catch (error) {
+        const fallback = buildMindMapFromNote(current, { topicId: current.topicId });
+        current.mindMapDraft = fallback;
+        if (global.QBMindMapStudio && typeof global.QBMindMapStudio.openFromCornell === "function") {
+          global.QBMindMapStudio.openFromCornell(current, { generatedMap: fallback });
+        }
+        message = "Mapa estruturado localmente a partir da folha Cornell (" + (error?.message || "modo local") + ").";
+        save();
+      } finally {
+        busy = false;
+        render({state,body,saveState,callAI});
+      }
+    });
   }
 
-  global.QBOmniCornell = { render, capture, newManual, updateNote, applySuggestion, undoSuggestion, splitCues };
+  global.QBOmniCornell = { render, capture, newManual, updateNote, applySuggestion, undoSuggestion, splitCues, buildMindMapFromNote };
 })(window);

@@ -504,6 +504,8 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/radial-dashboard.js?v=2"></script>
 <link rel="stylesheet" href="/claude-export/axon-shell.css?v=1">
 <script src="/claude-export/axon-shell.js?v=1"></script>
+<link rel="stylesheet" href="/claude-export/mindmap-studio.css?v=1">
+<script src="/claude-export/mindmap-studio.js?v=1"></script>
 <link rel="stylesheet" href="/claude-export/omnistudy-ai.css?v=1">
 <link rel="stylesheet" href="/claude-export/omnistudy-cornell.css?v=1">
 <script src="/claude-export/omnistudy-cornell.js?v=1" defer></script>
@@ -2317,8 +2319,11 @@ function mapaComVinculos(topicId,revision,topic){
 function viewMapa(){
   const indice=indiceQuestoes();
   const ids=[...S.rv.entries()].filter(([k,v])=>v&&v.mapa).map(([k])=>k).sort((a,b)=>((S.ed.get(a)||{}).ordem||0)-((S.ed.get(b)||{}).ordem||0));
-  if(!ids.length) return `<div class="wrap"><div class="notice">Nenhum mapa no formato novo ainda. Os chats de matéria gravam o mapa no documento de revisão do tópico.</div></div>`;
-  if(!S.mapaId||!ids.includes(S.mapaId)) S.mapaId=ids[0];
+  if(!ids.length){
+    if(window.QBMindMapStudio) return `<div class="wrap" style="gap:14px;max-width:1100px">${window.QBMindMapStudio.studioHTML(S)}<div class="notice">Nenhum mapa no formato novo ainda. Clique em <b>＋ Criar Mapa do Zero</b> ou <b>✎ Editar Ramos, Subtópicos e Rótulos</b> acima para criar o seu, ou importe uma folha do <b>Caderno Cornell</b>.</div></div>`;
+    return `<div class="wrap"><div class="notice">Nenhum mapa no formato novo ainda. Os chats de matéria gravam o mapa no documento de revisão do tópico.</div></div>`;
+  }
+  if(!S.mapaId||(!ids.includes(S.mapaId)&&!S.rv.get(S.mapaId)?.mapa)) S.mapaId=ids[0];
   const revMapa=S.rv.get(S.mapaId),mapasRelacionados=(revMapa.mapaRelacionadoIds||[]).filter(id=>id!==S.mapaId&&S.rv.get(id)?.mapa);
   const t=S.ed.get(S.mapaId)||{}, editorial=mapaComVinculos(S.mapaId,revMapa,t);
   const m=editorial?.map||revMapa.mapa, mapCards=editorial?.cards||revMapa.cartoes||[];
@@ -2334,7 +2339,8 @@ function viewMapa(){
     const nota=n.n?(oc&&single?`<details class="qb-map-recall"><summary>Evocar antes de ler a nota</summary><p>${esc(n.n)}</p></details>`:oc?`<button class="m-nota ev" data-revelar="${esc(key)}">evocar</button>`:`<span class="m-nota">${esc(n.n)}</span>`):'';
     const tog=!single&&kids.length?`<button class="m-tog" data-mtog="${esc(k)}" aria-expanded="${aberto}">${aberto?'−':'+'}${aberto?'':' '+kids.length}</button>`:'';
     const xk='mx:'+S.mapaId+':'+k, xa=n.x&&(single||(S.mapaX||new Set()).has(xk));
-    const lab=n.x&&!single?`<button class="m-t m-tx" data-mx="${esc(xk)}" aria-expanded="${!!xa}">${esc(n.t)} <span class="m-i">${xa?'▾':'ⓘ'}</span></button>`:`<span class="m-t">${esc(n.t)}</span>`;
+    const rot=n.rotulo?`<span class="ps" style="margin-right:6px">${esc(n.rotulo)}</span>`:'';
+    const lab=n.x&&!single?`<button class="m-t m-tx" data-mx="${esc(xk)}" aria-expanded="${!!xa}">${rot}${esc(n.t)} <span class="m-i">${xa?'▾':'ⓘ'}</span></button>`:`<span class="m-t">${rot}${esc(n.t)}</span>`;
     const selo=diagnostico?window.QBMapMastery.badge(diagnostico.byPath.get(k)):'';
     const diagnosticoDoNo=diagnostico?window.QBMapMastery.detail(diagnostico,k,{limit:single?Infinity:35}):'';
     /* Questões com associação editorial direta ao nó; só exibimos gabarito após revelar o item. */
@@ -2371,6 +2377,7 @@ function viewMapa(){
       ${S.mapaBack?.kind==='flashcard'?'<button class="btn ghost small" data-voltar-flash="1">Voltar ao flashcard</button>':S.mapaBack?.kind==='question'?'<button class="btn ghost small" data-voltar-questao="1">← Voltar à questão</button>':''}
       ${((S.rv.get(S.mapaId)||{}).cartoes||[]).length?`<button class="lnk" data-ir-cart="${esc(S.mapaId)}">Revisão ativa · ${(S.rv.get(S.mapaId).cartoes||[]).length}</button>`:''}
       ${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
+    ${window.QBMindMapStudio?window.QBMindMapStudio.studioHTML(S):''}
     ${S.mapaFocus?.topicId===S.mapaId?`<div class="qb-map-remission-banner" role="status" aria-live="polite">
       <strong>${S.mapaFocus.path?'Conceito localizado: '+esc(S.mapaFocus.title||'nó selecionado'):'Mapa do capítulo aberto'}</strong>
       <span>${S.mapaFocus.path?(S.mapaFocus.confidence==='editorial'?'Vínculo explícito por ID/caminho do nó.':S.mapaFocus.confidence==='sugerido'?'Correspondência sugerida; confira o conteúdo antes de assumir como origem exata.':'Associação conceitual automática; confira a correspondência com a questão.'):'A questão pertence ao capítulo, mas ainda não há correspondência verificável com um nó específico. Nenhum nó foi atribuído artificialmente.'}</span>
@@ -2783,6 +2790,7 @@ function treinarNoMapa(path){
 }
 function wire(){
   if(window.QBBulkStudy)window.QBBulkStudy.wire(S,render);
+  if(window.QBMindMapStudio)window.QBMindMapStudio.wire(S,{render,setView,enqueue,toast});
   if(window.QBLearning)window.QBLearning.wire(S,{render,hoje,setView,startSource:(ids,title)=>{setView('treinar');novaRodada('MIX',title,'aprendizagem',ids)}});
   if(S.view==='analiseDia' && window.QBInsights) window.QBInsights.wire(S,render,hoje);
   if(S.view==="painel" && window.QBPlanner) window.QBPlanner.wire(S,{render,enqueue,toast,hoje,startRevisao,iniciarMix,setView});
