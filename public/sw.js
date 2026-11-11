@@ -2,7 +2,8 @@
  * Cacheia apenas recursos estáticos de interface (/claude-export/*, ícone, manifesto).
  * NUNCA armazena respostas de API nem documentos privados de contas no Cache Storage.
  */
-const CACHE_NAME = "qb-static-axon-v7";
+const CACHE_NAME = "qb-static-axon-v8";
+const CACHE_PREFIX = "qb-static-axon-";
 const PRECACHE_URLS = [
   "/manifest.webmanifest",
   "/qb-icon.svg",
@@ -26,7 +27,7 @@ const PRECACHE_URLS = [
   "/claude-export/offline-sync.js?v=1",
   "/claude-export/question-curator.js?v=1",
   "/claude-export/omnistudy-cornell.js?v=15",
-  "/claude-export/mindmap-studio.js?v=14",
+  "/claude-export/mindmap-studio.js?v=16",
   "/claude-export/omnistudy-ai.js?v=25"
 ];
 
@@ -41,7 +42,7 @@ self.addEventListener("install", event => {
 self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k))))
+      .then(keys => Promise.all(keys.filter(k => k.startsWith(CACHE_PREFIX) && k !== CACHE_NAME).map(k => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
@@ -52,8 +53,7 @@ function isSafeStaticAsset(url) {
   return (
     url.pathname.startsWith("/claude-export/") ||
     url.pathname === "/manifest.webmanifest" ||
-    url.pathname === "/qb-icon.svg" ||
-    /\.(?:css|js|svg|jpg|png|woff2?)$/i.test(url.pathname)
+    url.pathname === "/qb-icon.svg"
   );
 }
 
