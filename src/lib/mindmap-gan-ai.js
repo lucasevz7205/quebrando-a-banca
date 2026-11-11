@@ -102,7 +102,7 @@ export function normalizeMindMapTree(rawMap, fallbackTitle = "Mapa Mental", pref
     const childrenRaw = Array.isArray(node.f) ? node.f : Array.isArray(node.subtopicos) ? node.subtopicos : [];
     const f = depth < 5
       ? childrenRaw
-          .slice(0, 16)
+          .slice(0, 32)
           .map((child, idx) => cleanNode(child, `${pathStr}.${idx + 1}`, depth + 1, cor))
           .filter(Boolean)
       : [];
@@ -126,7 +126,7 @@ export function normalizeMindMapTree(rawMap, fallbackTitle = "Mapa Mental", pref
 
   const rawRamos = Array.isArray(src.ramos) ? src.ramos : [];
   const ramos = rawRamos
-    .slice(0, 16)
+    .slice(0, 32)
     .map((ramo, idx) => cleanNode(ramo, String(idx + 1), 0, (idx % 8) + 1))
     .filter(Boolean);
 
