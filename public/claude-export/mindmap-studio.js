@@ -1,6 +1,23 @@
 /* Quebrando a Banca · Estúdio de Mapas Mentais (Criação do Zero, Edição de Ramos/Subtópicos/Rótulos, Base Cornell e Confronto GAN) */
 (function (global) {
   "use strict";
+  /* IA do estúdio (11/11/2026): usa a ponte autenticada do app. A rota /api/omnistudy-ai
+   * nunca existiu, então a "reestruturação com IA" caía sempre no modo determinístico. */
+  const MIN_INSUMO = 300;
+  async function gerarMapaComIA(payload) {
+    if (!global.QBBridge || typeof global.QBBridge.ask !== "function") throw new Error("IA indisponível neste ambiente");
+    const texto = [payload.notes, payload.referenceText].map(x => String(x || "")).join(" ").trim();
+    if (texto.length < MIN_INSUMO)
+      throw new Error("insumo curto demais (" + texto.length + " caracteres). Cole o texto da aula ou das suas anotações, com pelo menos " + MIN_INSUMO + " caracteres");
+    const res = await global.QBBridge.ask("omniStudyAI", { task: "cornell-to-mindmap", ...payload });
+    if (!res || !res.mapa) throw new Error("a IA não devolveu um mapa");
+    return res;
+  }
+  function avisoIA(res) {
+    const a = Array.isArray(res.avisos) ? res.avisos : [];
+    return a.length ? " Pontos a revisar: " + a.slice(0, 3).join(" ") : "";
+  }
+
 
   const CORNELL_STORAGE_KEY = "qb_omnistudy_state_v2";
   const COLORS = [
@@ -1497,7 +1514,7 @@
                   </select>
                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-cornell-replace">Substituir Mapa pela Base Cornell</button>
                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-cornell-merge">＋ Mesclar Pistas Cornell</button>
-                  <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:#0284c7;color:#fff" id="qb-mm-ai-rebuild-cornell">✨ Reestruturar com IA (Estrutura Conceitual AXON)</button>`
+                  <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:#0284c7;color:#fff" id="qb-mm-ai-rebuild-cornell">✨ Estruturar com IA</button>`
                 : `<span style="font-size:12px;color:#94a3b8">Nenhuma folha salva ainda. Abra o botão <b>⚡ OmniStudy IA → Caderno Cornell</b> para criar sua base.</span>`
             }
             ${
@@ -1526,7 +1543,7 @@
                   </select>
                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-material-replace">Criar Mapa a partir deste Material</button>
                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-material-merge">＋ Mesclar Seções do Material</button>
-                  <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:#059669;color:#fff" id="qb-mm-ai-rebuild-material">✨ Reestruturar com IA (Estrutura Conceitual AXON)</button>
+                  <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:#059669;color:#fff" id="qb-mm-ai-rebuild-material">✨ Estruturar com IA</button>
                   <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff" id="qb-mm-import-gemini-bar">📥 Ingerir do GeminiNotebook</button>`
                 : `<span style="font-size:12px;color:#94a3b8">Transforme suas folhas Cornell em Artefatos de Material ou adicione materiais na aba <b>Materiais</b> para usá-los como subsídio aqui.</span>
                    <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;margin-left:8px" id="qb-mm-import-gemini-bar">📥 Ingerir do GeminiNotebook</button>`
@@ -1973,34 +1990,25 @@
       const noteId = document.getElementById("qb-mm-cornell-select")?.value;
       const note = loadSavedCornellNotes().find(n => n.id === noteId) || loadSavedCornellNotes()[0];
       if (!note) return;
-      studioState.statusMsg = `Reestruturando mapa com IA no modo Conceitual Irradiante AXON a partir de "${note.title}"...`;
+      studioState.statusMsg = `Estruturando o mapa com IA a partir de "${note.title}"… (pode levar até um minuto)`;
       rerender();
       try {
-        const resp = await fetch("/api/omnistudy-ai", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            task: "cornell-to-mindmap",
-            title: note.title,
-            subject: note.subject,
-            cues: Array.isArray(note.cues) ? note.cues : String(note.cues || "").split(/\r?\n/).filter(Boolean),
-            notes: note.notes,
-            summary: note.summary,
-            referenceText: note.referenceText,
-          }),
+        const res = await gerarMapaComIA({
+          topicId,
+          title: String(note.title || "Mapa mental").slice(0, 300),
+          subject: String(note.subject || "").slice(0, 300),
+          cues: (Array.isArray(note.cues) ? note.cues : String(note.cues || "").split(/\r?\n/)).filter(Boolean).map(c => String(c).slice(0, 400)).slice(0, 24),
+          notes: String(note.notes || "").slice(0, 12000),
+          summary: String(note.summary || "").slice(0, 2500),
+          referenceText: String(note.referenceText || "").slice(0, 15000),
         });
-        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-        const data = await resp.json();
-        const mapDraft = data?.mapa
-          ? normalizeMap(data.mapa, note.title, topicId)
-          : cornellToMindMap(note, { topicId, topicTitle: note.title, S });
+        const mapDraft = normalizeMap(res.mapa, note.title, topicId);
         associateQuestionsToNode(mapDraft, S, topicId, note.subject);
         saveMapToEnvironment(S, topicId, mapDraft);
-        studioState.statusMsg = `Mapa mental reestruturado com sucesso via IA (modo Conceitual AXON) a partir de "${note.title}"!`;
+        studioState.statusMsg = `Mapa estruturado pela IA a partir de "${note.title}". Confira com a fonte antes de estudar.` + avisoIA(res);
       } catch (err) {
-        const fallback = cornellToMindMap(note, { topicId, topicTitle: note.title, S });
-        saveMapToEnvironment(S, topicId, fallback);
-        studioState.statusMsg = `Mapa estruturado fielmente no modo determinístico ("${note.title}"): ${err?.message || "offline"}.`;
+        // Não sobrescreve o mapa atual nem finge que a IA funcionou.
+        studioState.statusMsg = `A IA não gerou o mapa: ${err?.message || "sem conexão"}. O mapa atual foi mantido. Para a conversão simples, sem IA, use "Substituir Mapa pela Base Cornell".`;
       }
       rerender();
     });
@@ -2038,34 +2046,24 @@
       const mats = loadStudyMaterials(S);
       const mat = mats.find(m => m.id === matId) || mats[0];
       if (!mat) return;
-      studioState.statusMsg = `Reestruturando mapa com IA no modo Conceitual Irradiante AXON a partir de "${mat.titulo || mat.id}"...`;
+      studioState.statusMsg = `Estruturando o mapa com IA a partir de "${mat.titulo || mat.id}"… (pode levar até um minuto)`;
       rerender();
       try {
-        const resp = await fetch("/api/omnistudy-ai", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            task: "cornell-to-mindmap",
-            title: mat.titulo || mat.id,
-            subject: mat.materia || "",
-            cues: Array.isArray(mat.pistas) ? mat.pistas : (mat.secoes || []),
-            notes: mat.anotacoes || mat.conteudo || mat.texto || mat.descricao || "",
-            summary: mat.resumo || mat.descricao || "",
-            referenceText: mat.referenceText || "",
-          }),
+        const res = await gerarMapaComIA({
+          topicId,
+          title: String(mat.titulo || mat.id || "Mapa mental").slice(0, 300),
+          subject: String(mat.materia || "").slice(0, 300),
+          cues: (Array.isArray(mat.pistas) ? mat.pistas : (mat.secoes || [])).filter(Boolean).map(c => String(c).slice(0, 400)).slice(0, 24),
+          notes: String(mat.anotacoes || mat.conteudo || mat.texto || mat.descricao || "").slice(0, 12000),
+          summary: String(mat.resumo || "").slice(0, 2500),
+          referenceText: String(mat.referenceText || "").slice(0, 15000),
         });
-        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-        const data = await resp.json();
-        const mapDraft = data?.mapa
-          ? normalizeMap(data.mapa, mat.titulo || mat.id, topicId)
-          : materialToMindMap(mat, { topicId, topicTitle: mat.titulo, materia: mat.materia, S });
+        const mapDraft = normalizeMap(res.mapa, mat.titulo || mat.id, topicId);
         associateQuestionsToNode(mapDraft, S, topicId, mat.materia);
         saveMapToEnvironment(S, topicId, mapDraft);
-        studioState.statusMsg = `Mapa mental estruturado com IA (modo Conceitual AXON) a partir do material "${mat.titulo || mat.id}"!`;
+        studioState.statusMsg = `Mapa estruturado pela IA a partir de "${mat.titulo || mat.id}". Confira com a fonte antes de estudar.` + avisoIA(res);
       } catch (err) {
-        const fallback = materialToMindMap(mat, { topicId, topicTitle: mat.titulo, materia: mat.materia, S });
-        saveMapToEnvironment(S, topicId, fallback);
-        studioState.statusMsg = `Mapa estruturado fielmente no modo determinístico ("${mat.titulo || mat.id}"): ${err?.message || "offline"}.`;
+        studioState.statusMsg = `A IA não gerou o mapa: ${err?.message || "sem conexão"}. O mapa atual foi mantido. Para a conversão simples, sem IA, use "Criar Mapa a partir deste Material".`;
       }
       rerender();
     });
