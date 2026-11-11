@@ -8,8 +8,8 @@ const shell=fs.readFileSync("src/components/qb/study-shell.html","utf8");
 
 test("OmniStudy encontra o cabeçalho AXON atual e monta botão visível",()=>{
   assert.match(shell,/class="row qb-header-utilities"/);
-  assert.ok(shell.includes("omnistudy-ai.js?v=2"));
-  assert.ok(shell.includes("omnistudy-cornell.js?v=1"));
+  assert.ok(shell.includes("omnistudy-ai.js?v=26"));
+  assert.ok(shell.includes("omnistudy-cornell.js?v=16"));
   const inserted=[],nodes=new Map();
   const header={
     firstChild:null,
@@ -51,7 +51,7 @@ test("OmniStudy encontra o cabeçalho AXON atual e monta botão visível",()=>{
   assert.ok(nodes.get("omni-drawer-backdrop"));
   assert.match(nodes.get("omni-studio-trigger").innerHTML,/OmniStudy IA/);
   assert.match(nodes.get("omni-drawer-backdrop").innerHTML,/Quebrando a Banca/);
-  assert.equal(win.QBOmniStudy.version,"2.0.0");
+  assert.equal(win.QBOmniStudy.version,"2.1.0");
   assert.equal(typeof win.QBOmniStudy.openStudio,"function");
 });
 test("o atalho do teclado permanece Alt+O",()=>{
