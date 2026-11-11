@@ -63,6 +63,18 @@ function StudyScreen({ account }) {
   const [error, setError] = useState("");
   const [updateAvailable, setUpdateAvailable] = useState(false);
 
+  async function refreshPublishedApp() {
+    // Ação explícita do aluno: revalidar o SW e então atualizar a MESMA URL.
+    // Não apagar Cache Storage inteiro, localStorage, IndexedDB ou respostas.
+    try {
+      const registration = await navigator.serviceWorker?.getRegistration?.();
+      await registration?.update();
+    } catch {
+      // Mesmo se o SW não responder, permitir a atualização normal da página.
+    }
+    window.location.reload();
+  }
+
   useEffect(() => {
     if (typeof window === "undefined" || !("serviceWorker" in navigator)) return;
     let disposed = false;
@@ -166,7 +178,7 @@ function StudyScreen({ account }) {
           fontFamily: "system-ui, sans-serif", fontSize: 13
         }}>
           Nova versão publicada. Conclua sua questão antes de atualizar.
-          <button type="button" onClick={() => window.location.reload()}
+          <button type="button" onClick={refreshPublishedApp}
             style={{ marginLeft: 12, fontWeight: 700, textDecoration: "underline" }}>Atualizar app</button>
           <button type="button" onClick={() => setUpdateAvailable(false)}
             aria-label="Atualizar depois"
