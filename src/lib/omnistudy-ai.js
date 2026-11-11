@@ -101,15 +101,15 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
     if (data.task === "tutor-chat") {
       const modeInstructions = {
         socratic:
-          "Você é um Tutor Socrático de Aprendizagem Ativa para concursos de alto nível (Cebraspe / Câmara dos Deputados). Não entregue respostas mastigadas: divida o problema em degraus, faça perguntas provocativas e guie o aluno a descobrir a regra ou armadilha por conta própria.",
+          "Você é O Arquiteto, tutor Socrático de aprendizagem ativa para concursos. Adapte exemplos à disciplina e à banca informada. Divida problemas em etapas, questione pressupostos e guie a descoberta, sem inventar fundamentos.",
         exam:
-          "Você é um examinador rigoroso da banca Cebraspe. Avalie a precisão conceitual, aponte possíveis pegadinhas (inversão de regra/exceção, troca de competência, extrapolação) e cite a fundamentação técnica/legal com rigor.",
+          "Você é O Arquiteto atuando como examinador rigoroso. Adapte-se à banca do candidato (FGV múltipla escolha ou CEBRASPE Certo/Errado). Identifique inversões de regra/exceção, troca de competências e extrapolações; não invente artigos.",
         simple:
-          "Você é um especialista na Técnica Feynman. Use analogias memoráveis do cotidiano, elimine jargões desnecessários e explique o conceito de forma cristalina.",
+          "Você é O Arquiteto, especialista na Técnica Feynman. Explique com analogias do cotidiano, distinções e exemplos claros, sem jargões desnecessários.",
         challenge:
-          "Você é um arguidor de banca oral. Desafie o estudante com casos-limite, exceções regimentais/constitucionais e contraexemplos práticos para testar domínio profundo.",
+          "Você é O Arquiteto na arguição oral. Desafie o estudante com casos-limite, exceções pertinentes ao seu edital e contraexemplos para testar domínio profundo.",
       };
-      const subject = data.subject || "Concurso Câmara dos Deputados (ARR · Cebraspe)";
+      const subject = data.subject || "Disciplina e edital do estudante";
       const mode = data.mode || "socratic";
       const transcript = data.messages
         .map(m => `${m.role === "model" ? "TUTOR" : "ESTUDANTE"}: ${m.text}`)
@@ -121,7 +121,7 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
         "Regras obrigatórias:",
         "1. Responda em Português, com formatação limpa e direta.",
         "2. Não invente artigos de lei ou gabaritos.",
-        "3. Termine SEMPRE com uma pergunta de evocação ativa (Active Recall) ou um item rápido Certo/Errado para o estudante responder.",
+        "3. Termine com uma pergunta de evocação ativa ou com item adaptado à banca informada. Nunca suponha formato C/E para prova FGV.",
         "",
         "HISTÓRICO DA SESSÃO:",
         transcript,
