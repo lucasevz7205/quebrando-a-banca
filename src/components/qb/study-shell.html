@@ -511,7 +511,7 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/question-curator.js?v=1"></script>
 <link rel="stylesheet" href="/claude-export/mindmap-studio.css?v=14">
 <script src="/claude-export/mindmap-studio.js?v=16"></script>
-<link rel="stylesheet" href="/claude-export/omnistudy-ai.css?v=13">
+<link rel="stylesheet" href="/claude-export/omnistudy-ai.css?v=14">
 <link rel="stylesheet" href="/claude-export/omnistudy-cornell.css?v=12">
 <script src="/claude-export/omnistudy-cornell.js?v=16" defer></script>
 <script src="/claude-export/tutor-context.js?v=1" defer></script>
@@ -2114,7 +2114,11 @@ function flashState(revealed){
   return '<span class="qb-flash-state">'+(revealed?'Resposta revelada':'Evocação ativa')+'</span>';
 }
 function flashAnswer(c, prefix=''){
-  return `<div class="qb-flash-answer"><b>Resposta de referência</b><ul class="exl">${(c.a||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${c.src?`<span class="ps">${prefix}${esc(c.src)}</span>`:''}</div>`;
+  const ansList = Array.isArray(c.a) ? c.a : [c.a || c.resposta || ''];
+  const mnem = c.mnemonicHint || c.mnemonico ? `<div class="qb-flash-mnem"><b>💡 Gatilho Mnemônico / Par de Contraste</b><span>${esc(c.mnemonicHint || c.mnemonico)}</span></div>` : '';
+  const mec = c.mecanismo ? `<div class="qb-flash-mec"><b>⚠️ Mecanismo Cebraspe & Vacina</b><span>${esc(c.mecanismo)}${c.vacina ? ` · <em>Vacina:</em> ${esc(c.vacina)}` : ''}</span></div>` : '';
+  const ref = c.legalRef || c.src ? `<span class="ps">${prefix}⚖️ ${esc(c.legalRef || c.src)}</span>` : '';
+  return `<div class="qb-flash-answer"><b>Resposta de referência & Fundamentação</b><ul class="exl">${ansList.filter(Boolean).map(a=>`<li>${esc(a)}</li>`).join('')}</ul>${mnem}${mec}${ref}</div>`;
 }
 function viewCmix(){
   const m=S.cmix;
