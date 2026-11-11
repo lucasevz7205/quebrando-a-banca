@@ -125,7 +125,7 @@ test("Estúdio Cognitivo OmniStudy AI 2.0 integra Tutor Socrático, Feynman, Cor
   const omniServer = fs.readFileSync("src/lib/omnistudy-ai.js", "utf8");
 
   assert.match(shell, /omnistudy-ai\.css\?v=1/);
-  assert.match(shell, /omnistudy-ai\.js\?v=3/);
+  assert.match(shell, /omnistudy-ai\.js\?v=2/);
   assert.match(shell, /omnistudy-cornell\.js\?v=1/);
   assert.match(estudiarRoute, /invokeOmniStudyAI/);
   assert.match(omniServer, /middleware\(\[requireUser\]\)/);
@@ -139,7 +139,7 @@ test("Estúdio Cognitivo OmniStudy AI 2.0 integra Tutor Socrático, Feynman, Cor
   vm.runInNewContext(omniJs, sandbox, { filename: "omnistudy-ai.js" });
   const omni = sandbox.QBOmniStudy || sandbox.window.QBOmniStudy;
   assert.ok(omni);
-  assert.equal(omni.version, "2.1.0");
+  assert.equal(omni.version, "2.0.0");
   assert.equal(typeof omni.soundEngine.playAmbient, "function");
 
   const evalFallback = await omni.callOmniStudyBackend({

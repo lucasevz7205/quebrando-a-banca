@@ -469,7 +469,7 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/study-batch-ui.css?v=1">
 <script src="/claude-export/planner.js?v=4"></script>
 <script src="/claude-export/insights.js?v=3"></script>
-<script src="/claude-export/assistant.js?v=3"></script>
+<script src="/claude-export/assistant.js?v=2"></script>
 <script src="/claude-export/strategies.js"></script>
 <script src="/claude-export/learning.js"></script>
 <script src="/claude-export/question-links.js"></script>
@@ -505,10 +505,9 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/axon-shell.css?v=1">
 <script src="/claude-export/axon-shell.js?v=1"></script>
 <link rel="stylesheet" href="/claude-export/omnistudy-ai.css?v=1">
-<link rel="stylesheet" href="/claude-export/architect-launch.css?v=1">
 <link rel="stylesheet" href="/claude-export/omnistudy-cornell.css?v=1">
 <script src="/claude-export/omnistudy-cornell.js?v=1" defer></script>
-<script src="/claude-export/omnistudy-ai.js?v=3" defer></script>
+<script src="/claude-export/omnistudy-ai.js?v=2" defer></script>
 <script>
 (function(){
 const S = {
@@ -3313,7 +3312,7 @@ function init(){
     }
     if(v==='portal')openPortal(entrySection,false,false);
     else setView(v,false);
-    if(!account.preview&&window.QBAssistant)window.QBAssistant.mount(S);
+    if(account.legacy&&window.QBAssistant)window.QBAssistant.mount(S);
     return window.claude.use('db');
   }).then(db=>{
     if(!db){ S.dbState='missing'; render(true); return; }

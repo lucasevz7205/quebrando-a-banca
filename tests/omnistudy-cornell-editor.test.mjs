@@ -109,10 +109,10 @@ test("integração está conectada ao servidor autenticado e usa versão nova pu
  assert.match(server,/TEXTO-FONTE INFORMADO/);
  assert.match(shell,/omnistudy-cornell\.js\?v=1/);
  assert.match(shell,/omnistudy-cornell\.css\?v=1/);
- assert.match(shell,/omnistudy-ai\.js\?v=3/);
- assert.match(sw,/qb-static-axon-v4/);
+ assert.match(shell,/omnistudy-ai\.js\?v=2/);
+ assert.match(sw,/qb-static-axon-v3/);
  assert.match(sw,/omnistudy-cornell\.js\?v=1/);
- assert.match(sw,/omnistudy-ai\.js\?v=3/);
+ assert.match(sw,/omnistudy-ai\.js\?v=2/);
 });
 test("fluxo de interface: digitar, salvar, revisar, aprovar e desfazer sem sobrescrita",async()=>{
  const model=api(),events=new Map();

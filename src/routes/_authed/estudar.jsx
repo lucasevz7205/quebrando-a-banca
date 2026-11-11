@@ -9,7 +9,7 @@ import { useAuth } from "@/lib/AuthContext";
 import { accessStudyAccount, getStudyAccount, getStudyPreview, listStudyPreview } from "@/lib/study-account";
 import { listDocuments, writeDocument } from "@/lib/study-documents";
 import { correctFlashcardWithAI } from "@/lib/flashcard-ai";
-import { invokeOmniStudyAI, getArchitectAIStatus } from "@/lib/omnistudy-ai";
+import { invokeOmniStudyAI } from "@/lib/omnistudy-ai";
 import { generateStudyTopicAssets } from "@/lib/study-batch-ai";
 
 const FLAG = "__qb44_bridge_v1__";
@@ -62,18 +62,6 @@ function StudyScreen({ account }) {
   const [frameVersion, setFrameVersion] = useState(0);
   const [error, setError] = useState("");
   const [updateAvailable, setUpdateAvailable] = useState(false);
-
-  async function refreshPublishedApp() {
-    // Ação explícita do aluno: revalidar o SW e então atualizar a MESMA URL.
-    // Não apagar Cache Storage inteiro, localStorage, IndexedDB ou respostas.
-    try {
-      const registration = await navigator.serviceWorker?.getRegistration?.();
-      await registration?.update();
-    } catch {
-      // Mesmo se o SW não responder, permitir a atualização normal da página.
-    }
-    window.location.reload();
-  }
 
   useEffect(() => {
     if (typeof window === "undefined" || !("serviceWorker" in navigator)) return;
@@ -130,7 +118,6 @@ function StudyScreen({ account }) {
         else if (msg.action === "assistantLLM" && legacy) result = await askAssistantLLM(msg.args || {},
           delta => frame.postMessage({ flag: FLAG, streamOf: msg.id, delta }, replyOrigin));
         else if (msg.action === "correctFlashcard" && !preview) result = await correctFlashcardWithAI({data:msg.args||{}});
-        else if (msg.action === "architectProviderStatus" && !preview) result = await getArchitectAIStatus();
         else if (msg.action === "omniStudyAI" && !preview) result = await invokeOmniStudyAI({data:msg.args||{}});
         else if (msg.action === "generateStudyTopic" && !preview && !legacy) result = await generateStudyTopicAssets({ data: msg.args || {} });
         else if (msg.action === "list" || msg.action === "write") {
@@ -141,7 +128,7 @@ function StudyScreen({ account }) {
         frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: true, value: result }, replyOrigin);
       } catch (err) {
         frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: false, error: err?.message || "Erro de leitura." }, replyOrigin);
-        if (msg.action !== "assistantLLM" && msg.action !== "correctFlashcard" && msg.action !== "omniStudyAI" && msg.action !== "architectProviderStatus") setError(err?.message || "Erro de conexão com os dados.");
+        if (msg.action !== "assistantLLM" && msg.action !== "correctFlashcard" && msg.action !== "omniStudyAI") setError(err?.message || "Erro de conexão com os dados.");
       }
     }
     window.addEventListener("message", receive);
@@ -178,7 +165,7 @@ function StudyScreen({ account }) {
           fontFamily: "system-ui, sans-serif", fontSize: 13
         }}>
           Nova versão publicada. Conclua sua questão antes de atualizar.
-          <button type="button" onClick={refreshPublishedApp}
+          <button type="button" onClick={() => window.location.reload()}
             style={{ marginLeft: 12, fontWeight: 700, textDecoration: "underline" }}>Atualizar app</button>
           <button type="button" onClick={() => setUpdateAvailable(false)}
             aria-label="Atualizar depois"

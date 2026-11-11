@@ -45,85 +45,30 @@
   }
   function fillBubble(bubble,message,source=''){bubble.textContent=String(message).slice(0,4000);if(source){const label=document.createElement('em');label.textContent=source;bubble.appendChild(label)}const parent=bubble.parentElement;if(parent)parent.scrollTop=parent.scrollHeight}
   function addMessage(message,who='bot',source=''){const parent=document.getElementById('qb-chat-messages');if(!parent)return null;const bubble=document.createElement('div');bubble.className='qb-chat-bubble '+who;parent.appendChild(bubble);fillBubble(bubble,message,source);while(parent.children.length>30)parent.removeChild(parent.firstChild);return bubble}
-  function setOpen(on){
-    opened=on;
-    document.getElementById('qb-architect-menu').hidden=true;
-    document.getElementById('qb-chat-panel').hidden=!on;
-    document.getElementById('qb-chat-launch').hidden=on;
-    document.getElementById('qb-chat-launch').setAttribute('aria-expanded','false');
-    if(on)document.getElementById('qb-chat-input')?.focus();
-  }
-  function toggleArchitectMenu(){
-    const menu=document.getElementById('qb-architect-menu');
-    const willOpen=menu.hidden;
-    menu.hidden=!willOpen;
-    document.getElementById('qb-chat-launch').setAttribute('aria-expanded',String(willOpen));
-  }
-  function openArchitectTool(tab){
-    document.getElementById('qb-architect-menu').hidden=true;
-    document.getElementById('qb-chat-launch').setAttribute('aria-expanded','false');
-    if(tab==='local'){setOpen(true);return;}
-    if(window.QBOmniStudy?.openStudio){window.QBOmniStudy.openStudio(tab);return;}
-    addMessage('O Arquiteto ainda está carregando. Atualize a página para abrir as ferramentas.','bot');
-    setOpen(true);
-  }
+  function setOpen(on){opened=on;document.getElementById('qb-chat-panel').hidden=!on;document.getElementById('qb-chat-launch').hidden=on;if(on)document.getElementById('qb-chat-input')?.focus()}
   function submit(question){const q=String(question||'').trim().slice(0,500);if(!q)return;lastQuestion=q;addMessage(q,'user');addMessage(localAnswer(q),'bot','Análise local · sem consumo de créditos');const input=document.getElementById('qb-chat-input');if(input)input.value=''}
   function makeContext(){const s=getDaily(now()),week=window.QBInsights?.trend(state,now(),7)||[],a=week.reduce((n,x)=>n+x.c,0),b=week.reduce((n,x)=>n+x.c+x.e,0);return {date:now(),itemsToday:s?.items||0,correctToday:s?.c||0,wrongToday:s?.e||0,blankToday:s?.b||0,tasksDoneToday:s?.done||0,tasksTotalToday:s?.tasks||0,cardRatingsToday:s?.cardRatings||0,accuracy7days:b?Math.round(100*a/b):null};}
   async function askGenerative(){if(busy)return;if(!lastQuestion){addMessage('Digite sua pergunta antes de solicitar a consulta à IA.');return;}
     if(!window.confirm('Esta consulta à IA do Base44 poderá consumir créditos de integração. Deseja enviar a pergunta e um resumo estatístico do seu desempenho?'))return;
     busy=true;const btn=document.getElementById('qb-chat-ai');btn.disabled=true;btn.textContent='Consultando IA…';
-    const provider=window.QBOmniStudy?.state?.aiProvider==='gemini'?'gemini':'base44';
-    const live=provider==='gemini'?'Google Gemini · consultando…':'IA Base44 · consultando…';
-    let bubble=null;
-    try{
-      if(!window.QBBridge?.ask)throw Error('A conexão autenticada não está disponível.');
-      bubble=addMessage('…','bot',live);
-      const context=JSON.stringify(makeContext());
-      const v=await window.QBBridge.ask('omniStudyAI',{
-        task:'tutor-chat',provider,mode:'simple',subject:'Análise do meu desempenho no Quebrando a Banca',
-        messages:[{role:'user',text:'Pergunta: '+lastQuestion+'\nIndicadores reais registrados no aplicativo: '+context}]
-      });
-      const answer=v?.reply||'Sem resposta da IA.';
-      if(bubble)fillBubble(bubble,answer,live);else addMessage(answer,'bot',live);
-    }
+    const live='IA Base44 · respondendo em tempo real…';let bubble=null,text='';
+    try{if(!window.QBBridge?.ask)throw Error('A conexão autenticada não está disponível.');bubble=addMessage('…','bot',live);
+      const v=await window.QBBridge.ask('assistantLLM',{question:lastQuestion,context:makeContext()},{onDelta:d=>{text+=d;if(bubble)fillBubble(bubble,text,live)}});
+      const final=typeof v==='string'?v:(text||'Sem resposta.');if(bubble)fillBubble(bubble,final,'IA Base44 · pode consumir créditos de integração');else addMessage(final,'bot','IA Base44 · pode consumir créditos de integração')}
     catch(e){const err='Não foi possível consultar a IA. '+(e?.message||'Tente novamente.');if(bubble)fillBubble(bubble,text?text+'\n\n'+err:err);else addMessage(err,'bot')}
     finally{busy=false;btn.disabled=false;btn.textContent='Consultar IA (usa créditos)'}
   }
   function mount(S){state=S;if(document.getElementById('qb-chat-launch'))return;
-    const root=document.createElement('div');root.id='qb-assistant-root';root.innerHTML=`<button id="qb-chat-launch" class="qb-chat-launch qb-architect-launch" type="button" aria-haspopup="menu" aria-controls="qb-architect-menu" aria-expanded="false" title="Abrir O Arquiteto e suas ferramentas"><span class="qb-architect-mark" aria-hidden="true">⌘</span>O Arquiteto</button>
-      <div id="qb-architect-menu" class="qb-architect-menu" role="menu" aria-label="Ferramentas do Arquiteto" hidden>
-        <div class="qb-architect-menu-title"><strong>O Arquiteto</strong><small>Assistente e estúdio de aprendizagem</small></div>
-        <button type="button" role="menuitem" data-architect-tool="tutor"><span>Conversar com O Arquiteto</span><small>Tutor Socrático · IA</small></button>
-        <button type="button" role="menuitem" data-architect-tool="cornell"><span>Caderno Cornell</span><small>Escrever, revisar e conferir</small></button>
-        <button type="button" role="menuitem" data-architect-tool="feynman"><span>Laboratório Feynman</span><small>Explicar e avaliar conceitos</small></button>
-        <button type="button" role="menuitem" data-architect-tool="flashcards"><span>Flashcards e scanner</span><small>Cartões e leitura de anotações</small></button>
-        <button type="button" role="menuitem" data-architect-tool="pomodoro"><span>Pomodoro e áudio</span><small>Foco e sprints</small></button>
-        <button type="button" role="menuitem" data-architect-tool="local"><span>Desempenho e revisões</span><small>Assistente antigo · consultas locais sem créditos</small></button>
-      </div>
-      <section id="qb-chat-panel" class="qb-chat-panel" role="dialog" aria-label="O Arquiteto: análise local do estudante" hidden><div class="qb-chat-header"><div class="qb-chat-heading"><span class="qb-chat-orb" aria-hidden="true"><span></span></span><div class="qb-chat-titles"><strong>O Arquiteto · Desempenho</strong><small>Estatísticas, prioridades e revisões</small><span class="qb-chat-status">Análise local · sem créditos</span></div></div><button type="button" id="qb-chat-close" class="qb-chat-close" aria-label="Fechar">✕</button></div><div id="qb-chat-messages" class="qb-chat-messages" aria-live="polite"></div><div class="qb-chat-chips" aria-label="Perguntas rápidas ao assistente"><button type="button" data-qb-prompt="Como está meu desempenho?"><span class="qb-chat-chip-icon" aria-hidden="true">↗</span><span class="qb-chat-chip-label"><strong>Desempenho</strong><small>Meus resultados</small></span></button><button type="button" data-qb-prompt="Quais são as matérias mais fracas?"><span class="qb-chat-chip-icon" aria-hidden="true">◈</span><span class="qb-chat-chip-label"><strong>Pontos fracos</strong><small>Onde reforçar</small></span></button><button type="button" data-qb-prompt="Quais tarefas ainda faltam?"><span class="qb-chat-chip-icon" aria-hidden="true">✓</span><span class="qb-chat-chip-label"><strong>Tarefas</strong><small>Meu planejamento</small></span></button><button type="button" data-qb-prompt="Como estão minhas revisões?"><span class="qb-chat-chip-icon" aria-hidden="true">↺</span><span class="qb-chat-chip-label"><strong>Revisões</strong><small>O que retomar</small></span></button></div><form id="qb-chat-form" class="qb-chat-form"><input id="qb-chat-input" type="text" placeholder="Pergunte sobre seus estudos..." autocomplete="off" maxlength="500" aria-label="Pergunta ao assistente"/><button type="submit">Enviar</button></form><div class="qb-chat-opt"><span>Modo local sem custo. IA generativa só com confirmação.</span><button id="qb-chat-ai" type="button">Consultar IA (usa créditos)</button></div></section>`;
+    const root=document.createElement('div');root.id='qb-assistant-root';root.innerHTML=`<button id="qb-chat-launch" class="qb-chat-launch" type="button" aria-haspopup="dialog" aria-controls="qb-chat-panel"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.6 0-3.1-.4-4.3-1.2L3 20l1.3-4.2A8.5 8.5 0 1 1 20 11.5Z"/><path d="M8 11h8M8 14h5"/></svg>Assistente</button>
+      <section id="qb-chat-panel" class="qb-chat-panel" role="dialog" aria-label="Assistente Quebrando a Banca" hidden><div class="qb-chat-header"><div class="qb-chat-heading"><span class="qb-chat-orb" aria-hidden="true"><span></span></span><div class="qb-chat-titles"><strong>Assistente de estudo</strong><small>Inteligência aplicada à sua preparação</small><span class="qb-chat-status">Análise local · sem créditos</span></div></div><button type="button" id="qb-chat-close" class="qb-chat-close" aria-label="Fechar">✕</button></div><div id="qb-chat-messages" class="qb-chat-messages" aria-live="polite"></div><div class="qb-chat-chips" aria-label="Perguntas rápidas ao assistente"><button type="button" data-qb-prompt="Como está meu desempenho?"><span class="qb-chat-chip-icon" aria-hidden="true">↗</span><span class="qb-chat-chip-label"><strong>Desempenho</strong><small>Meus resultados</small></span></button><button type="button" data-qb-prompt="Quais são as matérias mais fracas?"><span class="qb-chat-chip-icon" aria-hidden="true">◈</span><span class="qb-chat-chip-label"><strong>Pontos fracos</strong><small>Onde reforçar</small></span></button><button type="button" data-qb-prompt="Quais tarefas ainda faltam?"><span class="qb-chat-chip-icon" aria-hidden="true">✓</span><span class="qb-chat-chip-label"><strong>Tarefas</strong><small>Meu planejamento</small></span></button><button type="button" data-qb-prompt="Como estão minhas revisões?"><span class="qb-chat-chip-icon" aria-hidden="true">↺</span><span class="qb-chat-chip-label"><strong>Revisões</strong><small>O que retomar</small></span></button></div><form id="qb-chat-form" class="qb-chat-form"><input id="qb-chat-input" type="text" placeholder="Pergunte sobre seus estudos..." autocomplete="off" maxlength="500" aria-label="Pergunta ao assistente"/><button type="submit">Enviar</button></form><div class="qb-chat-opt"><span>Modo local sem custo. IA generativa só com confirmação.</span><button id="qb-chat-ai" type="button">Consultar IA (usa créditos)</button></div></section>`;
     document.body.appendChild(root);
-    document.getElementById('qb-chat-launch').addEventListener('click',toggleArchitectMenu);
-    document.querySelectorAll('[data-architect-tool]').forEach(b=>b.addEventListener('click',()=>{
-      openArchitectTool(b.getAttribute('data-architect-tool'));
-    }));
-    document.addEventListener('pointerdown',event=>{
-      const menu=document.getElementById('qb-architect-menu');
-      if(menu&&!menu.hidden&&!document.getElementById('qb-chat-launch').contains(event.target)&&!menu.contains(event.target)){
-        menu.hidden=true;
-        document.getElementById('qb-chat-launch').setAttribute('aria-expanded','false');
-      }
-    });
+    document.getElementById('qb-chat-launch').addEventListener('click',()=>setOpen(true));
     document.getElementById('qb-chat-close').addEventListener('click',()=>setOpen(false));
     document.getElementById('qb-chat-form').addEventListener('submit',e=>{e.preventDefault();submit(document.getElementById('qb-chat-input').value)});
     document.querySelectorAll('[data-qb-prompt]').forEach(b=>b.addEventListener('click',()=>submit(b.dataset.qbPrompt)));
     document.getElementById('qb-chat-ai').addEventListener('click',askGenerative);
-    document.addEventListener('keydown',e=>{
-      if(e.key!=='Escape')return;
-      if(opened)setOpen(false);
-      const menu=document.getElementById('qb-architect-menu');
-      if(menu){menu.hidden=true;document.getElementById('qb-chat-launch').setAttribute('aria-expanded','false');}
-    });
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&opened)setOpen(false)});
     addMessage('Posso resumir seu desempenho diário, apontar matérias fracas, verificar tarefas, revisões e simulados. Minhas respostas locais usam apenas os registros do aplicativo.','bot','Assistente local');
   }
-  window.QBAssistant={mount,openArchitectTool,toggleArchitectMenu};
+  window.QBAssistant={mount};
 })();

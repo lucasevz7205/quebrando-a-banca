@@ -8,7 +8,7 @@ const shell=fs.readFileSync("src/components/qb/study-shell.html","utf8");
 
 test("OmniStudy encontra o cabeçalho AXON atual e monta botão visível",()=>{
   assert.match(shell,/class="row qb-header-utilities"/);
-  assert.ok(shell.includes("omnistudy-ai.js?v=3"));
+  assert.ok(shell.includes("omnistudy-ai.js?v=2"));
   assert.ok(shell.includes("omnistudy-cornell.js?v=1"));
   const inserted=[],nodes=new Map();
   const header={
@@ -49,14 +49,12 @@ test("OmniStudy encontra o cabeçalho AXON atual e monta botão visível",()=>{
   assert.ok(nodes.get("omni-studio-trigger"));
   assert.ok(nodes.get("omni-pomo-pill"));
   assert.ok(nodes.get("omni-drawer-backdrop"));
-  assert.match(nodes.get("omni-studio-trigger").innerHTML,/O Arquiteto/);
-  assert.match(nodes.get("omni-drawer-backdrop").innerHTML,/O Arquiteto/);
-  assert.match(nodes.get("omni-drawer-backdrop").innerHTML,/architect-provider-bar/);
-  assert.equal(win.QBOmniStudy.version,"2.1.0");
-  assert.equal(win.QBOmniStudy.name,"O Arquiteto");
+  assert.match(nodes.get("omni-studio-trigger").innerHTML,/OmniStudy IA/);
+  assert.match(nodes.get("omni-drawer-backdrop").innerHTML,/Quebrando a Banca/);
+  assert.equal(win.QBOmniStudy.version,"2.0.0");
   assert.equal(typeof win.QBOmniStudy.openStudio,"function");
 });
 test("o atalho do teclado permanece Alt+O",()=>{
   assert.ok(code.includes('if (e.altKey && (e.key === "o" || e.key === "O"))'));
-  assert.ok(code.includes("Abrir O Arquiteto (Alt+O)"));
+  assert.ok(code.includes("Abrir Estúdio Cognitivo OmniStudy IA (Alt+O)"));
 });
