@@ -780,6 +780,138 @@
     return normalized;
   }
 
+  function ingestGeminiNotebook(data, explicitS) {
+    if (!data || typeof data !== "object") {
+      throw new Error("Dados de ingestão inválidos.");
+    }
+    const S = explicitS || appRef?.S || global.QBApp?.S || global.S;
+    const title = text(data.title || "Nota GeminiNotebook", 240);
+    const subject = text(data.subject || "Geral", 200);
+    const topicId = text(data.topicId || S?.mapaId || "geral", 120);
+    const content = text(data.content || "", 25000);
+    if (!content.trim()) {
+      throw new Error("Cole o conteúdo do GeminiNotebook / NotebookLM antes de processar.");
+    }
+
+    const asMaterial = data.asMaterial !== false;
+    const asCornell = data.asCornell !== false;
+    const asMindMap = data.asMindMap !== false;
+
+    const blocks = parseStructuredBlocks(content, title);
+    const lines = content.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+
+    let summary = "";
+    const summaryMatch = content.match(/(?:##?\s*(?:Síntese|Resumo|Conclusão|Briefing)[\s\S]*?$)/i);
+    if (summaryMatch) {
+      summary = summaryMatch[0].replace(/^##?\s*[^\n]+\n/i, "").trim().slice(0, 1500);
+    } else {
+      summary = lines.slice(-3).join(" ").slice(0, 1200);
+    }
+
+    let cues = [];
+    if (blocks.length >= 2) {
+      cues = blocks.slice(0, 8).map(b => b.title);
+    } else {
+      cues = lines
+        .filter(l => /^[•*\-–—\d.)]/.test(l) || l.includes(":") || l.endsWith("?"))
+        .slice(0, 6)
+        .map(l => l.replace(/^[\s•*\-–—\d.)]+/, "").split(/[:.?]/)[0].trim())
+        .filter(Boolean);
+    }
+    if (!cues.length) {
+      cues = ["Conceito Nuclear", "Requisitos e Aplicação", "Pontos de Atenção da Banca"];
+    }
+
+    let createdMaterial = null;
+    let createdCornell = null;
+    let createdMap = null;
+
+    if (asMaterial) {
+      const matId = `mat-gemini-${slugId(topicId, "gem")}-${Date.now().toString(36)}`;
+      createdMaterial = {
+        id: matId,
+        tipo: "material",
+        origemArtefato: "gemini-notebook",
+        titulo: title,
+        materia: subject,
+        topicos: topicId ? [topicId] : [],
+        pistas: cues,
+        anotacoes: content,
+        resumo: summary,
+        secoes: cues,
+        conteudo: content,
+        referenceText: `Acervo GeminiNotebook / NotebookLM · ${title}`,
+        criadoEm: new Date().toISOString(),
+      };
+      if (S?.mat && typeof S.mat.set === "function") {
+        S.mat.set(matId, createdMaterial);
+      }
+      if (S?.db && typeof S.db.doc === "function") {
+        const writeOp = () => S.db.doc("materiais/" + matId).set(createdMaterial);
+        if (appRef?.enqueue) appRef.enqueue(writeOp);
+        else writeOp();
+      }
+      try {
+        const raw = global.localStorage?.getItem("qb_cornell_material_artifacts_v1");
+        const mapObj = raw ? JSON.parse(raw) : {};
+        mapObj[matId] = createdMaterial;
+        global.localStorage?.setItem("qb_cornell_material_artifacts_v1", JSON.stringify(mapObj));
+      } catch (_e) {}
+    }
+
+    if (asCornell) {
+      const sheetId = `cornell-gemini-${Date.now().toString(36)}`;
+      createdCornell = {
+        id: sheetId,
+        title,
+        subject,
+        topicId,
+        cues,
+        notes: content,
+        summary,
+        referenceText: `Ingestão do GeminiNotebook / NotebookLM · ${title}`,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+      try {
+        const raw = global.localStorage?.getItem(CORNELL_STORAGE_KEY);
+        const stateObj = raw ? JSON.parse(raw) : { cornellNotes: [] };
+        if (!Array.isArray(stateObj.cornellNotes)) stateObj.cornellNotes = [];
+        stateObj.cornellNotes.unshift(createdCornell);
+        global.localStorage?.setItem(CORNELL_STORAGE_KEY, JSON.stringify(stateObj));
+      } catch (_e) {}
+    }
+
+    if (asMindMap) {
+      const mapSource = createdMaterial || {
+        id: "gemini-temp",
+        titulo: title,
+        materia: subject,
+        topicos: [topicId],
+        pistas: cues,
+        conteudo: content,
+        resumo: summary,
+      };
+      createdMap = materialToMindMap(mapSource, {
+        topicId,
+        topicTitle: title,
+        materia: subject,
+        S,
+      });
+      createdMap.autor = `Ingerido do GeminiNotebook ("${title}") · Estrutura Conceitual AXON`;
+      if (S) {
+        saveMapToEnvironment(S, topicId, createdMap);
+      }
+    }
+
+    return {
+      success: true,
+      material: createdMaterial,
+      cornellNote: createdCornell,
+      mapa: createdMap,
+    };
+  }
+
   function getNodeAtPath(map, pathStr) {
     if (!map || !Array.isArray(map.ramos) || typeof pathStr !== "string" || !pathStr.length) return null;
     const parts = pathStr.split(".").map(Number);
@@ -1323,6 +1455,9 @@
         <strong>${esc(draft.centro || "Mapa Mental")} · ${(draft.ramos || []).length} ramos (${flatNodes.length} nós)</strong>
       </div>
       <div class="qb-mm-studio-actions">
+        <button type="button" class="qb-mm-btn qb-btn-gemini-primary" id="qb-mm-open-gemini-ingest" title="Ingerir notas e resumos do GeminiNotebook / NotebookLM">
+          📥 Ingerir GeminiNotebook
+        </button>
         <button type="button" class="qb-mm-btn ${studioState.editorOpen ? "qb-mm-btn-primary" : ""}" id="qb-mm-toggle-editor">
           ${studioState.editorOpen ? "▾ Fechar Editor do Mapa" : "✎ Editar Ramos, Subtópicos e Rótulos"}
         </button>
@@ -1391,8 +1526,10 @@
                   </select>
                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-material-replace">Criar Mapa a partir deste Material</button>
                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-material-merge">＋ Mesclar Seções do Material</button>
-                  <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:#059669;color:#fff" id="qb-mm-ai-rebuild-material">✨ Reestruturar com IA (Estrutura Conceitual AXON)</button>`
-                : `<span style="font-size:12px;color:#94a3b8">Transforme suas folhas Cornell em Artefatos de Material ou adicione materiais na aba <b>Materiais</b> para usá-los como subsídio aqui.</span>`
+                  <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:#059669;color:#fff" id="qb-mm-ai-rebuild-material">✨ Reestruturar com IA (Estrutura Conceitual AXON)</button>
+                  <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff" id="qb-mm-import-gemini-bar">📥 Ingerir do GeminiNotebook</button>`
+                : `<span style="font-size:12px;color:#94a3b8">Transforme suas folhas Cornell em Artefatos de Material ou adicione materiais na aba <b>Materiais</b> para usá-los como subsídio aqui.</span>
+                   <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;margin-left:8px" id="qb-mm-import-gemini-bar">📥 Ingerir do GeminiNotebook</button>`
             }
           </div>
 
@@ -1542,7 +1679,59 @@
         </section>`
       : "";
 
-    return toolbar + statusBanner + editorPanel + ganPanel;
+    const geminiModalHTML = `<div class="qb-gemini-modal-backdrop" id="qb-gemini-modal-backdrop" aria-hidden="true">
+      <div class="qb-gemini-modal" role="dialog" aria-modal="true" aria-labelledby="qb-gemini-modal-title">
+        <div class="qb-gemini-modal-head">
+          <div>
+            <h3 id="qb-gemini-modal-title">📥 Ingestão GeminiNotebook / NotebookLM</h3>
+            <p>Importe notas, resumos, fontes ou áudio-briefings gerados no seu acervo do GeminiNotebook para transformá-los instantaneamente em subsídios, folhas Cornell e Mapas Mentais AXON.</p>
+          </div>
+          <button type="button" class="qb-gemini-modal-close" id="qb-gemini-modal-close" aria-label="Fechar">✕</button>
+        </div>
+        <div class="qb-gemini-modal-body">
+          <div>
+            <label for="qb-gemini-input-title">Título da Nota / Caderno</label>
+            <input type="text" id="qb-gemini-input-title" placeholder="Ex: Processo Legislativo - Veto e Sanção Presidencial">
+          </div>
+          <div class="qb-mm-grid-2">
+            <div>
+              <label for="qb-gemini-select-topic">Tópico do Edital Vinculado</label>
+              <select id="qb-gemini-select-topic">
+                ${all.map(t => `<option value="${esc(t.id)}" ${t.id === activeId ? "selected" : ""}>${esc(t.label)}</option>`).join("")}
+              </select>
+            </div>
+            <div>
+              <label for="qb-gemini-input-subject">Matéria do Concurso</label>
+              <input type="text" id="qb-gemini-input-subject" value="${esc(S.ed?.get(activeId)?.materia || S.ed?.get(activeId)?.sigla || "Geral")}">
+            </div>
+          </div>
+          <div>
+            <label for="qb-gemini-textarea-content">Conteúdo do GeminiNotebook (Texto, Markdown, Perguntas, Resumo)</label>
+            <textarea id="qb-gemini-textarea-content" placeholder="Cole aqui as anotações, sínteses de fontes, perguntas-chave ou o roteiro de estudo exportado do GeminiNotebook ou NotebookLM..."></textarea>
+          </div>
+          <div class="qb-gemini-checkboxes">
+            <label class="qb-gemini-check-item">
+              <input type="checkbox" id="qb-gemini-check-material" checked>
+              <span><b>Material de Estudo:</b> Salvar na aba Materiais como subsídio remissivo</span>
+            </label>
+            <label class="qb-gemini-check-item">
+              <input type="checkbox" id="qb-gemini-check-cornell" checked>
+              <span><b>Caderno Cornell:</b> Gerar folha estruturada com pistas (30%) e notas (70%)</span>
+            </label>
+            <label class="qb-gemini-check-item">
+              <input type="checkbox" id="qb-gemini-check-mindmap" checked>
+              <span><b>Mapa Mental AXON:</b> Estruturar mapa mental imediatamente com rótulos e conceitos</span>
+            </label>
+          </div>
+        </div>
+        <div class="qb-gemini-modal-footer">
+          <button type="button" class="qb-mm-btn" id="qb-gemini-btn-cancel">Cancelar</button>
+          <button type="button" class="qb-mm-btn qb-btn-gemini-primary" id="qb-gemini-btn-submit">✨ Concluir Ingestão de Subsídio</button>
+        </div>
+      </div>
+    </div>`;
+
+    return toolbar + statusBanner + editorPanel + ganPanel + geminiModalHTML;
   }
 
   function syncDomInputsToDraft(S, topicId) {
@@ -1579,6 +1768,70 @@
     const rerender = () => {
       if (typeof helpers.render === "function") helpers.render(true);
     };
+
+    // Modal de Ingestão GeminiNotebook / NotebookLM
+    const modalBackdrop = document.getElementById("qb-gemini-modal-backdrop");
+    const openGeminiModal = () => {
+      if (modalBackdrop) {
+        modalBackdrop.classList.add("open");
+        modalBackdrop.setAttribute("aria-hidden", "false");
+        const titleInput = document.getElementById("qb-gemini-input-title");
+        if (titleInput) titleInput.focus();
+      }
+    };
+    const closeGeminiModal = () => {
+      if (modalBackdrop) {
+        modalBackdrop.classList.remove("open");
+        modalBackdrop.setAttribute("aria-hidden", "true");
+      }
+    };
+
+    document.getElementById("qb-mm-open-gemini-ingest")?.addEventListener("click", openGeminiModal);
+    document.getElementById("qb-mm-import-gemini-bar")?.addEventListener("click", openGeminiModal);
+    document.getElementById("qb-gemini-modal-close")?.addEventListener("click", closeGeminiModal);
+    document.getElementById("qb-gemini-btn-cancel")?.addEventListener("click", closeGeminiModal);
+    modalBackdrop?.addEventListener("click", e => {
+      if (e.target === modalBackdrop) closeGeminiModal();
+    });
+
+    document.getElementById("qb-gemini-btn-submit")?.addEventListener("click", () => {
+      const title = document.getElementById("qb-gemini-input-title")?.value?.trim();
+      const content = document.getElementById("qb-gemini-textarea-content")?.value?.trim();
+      const selectedTopic = document.getElementById("qb-gemini-select-topic")?.value || topicId;
+      const subject =
+        document.getElementById("qb-gemini-input-subject")?.value?.trim() ||
+        S?.ed?.get(selectedTopic)?.materia ||
+        "Geral";
+      const asMaterial = document.getElementById("qb-gemini-check-material")?.checked !== false;
+      const asCornell = document.getElementById("qb-gemini-check-cornell")?.checked !== false;
+      const asMindMap = document.getElementById("qb-gemini-check-mindmap")?.checked !== false;
+
+      if (!content) {
+        alert("Cole o conteúdo do GeminiNotebook ou NotebookLM antes de concluir.");
+        return;
+      }
+
+      try {
+        ingestGeminiNotebook(
+          {
+            title: title || `Nota Gemini · ${subject}`,
+            subject,
+            topicId: selectedTopic,
+            content,
+            asMaterial,
+            asCornell,
+            asMindMap,
+          },
+          S
+        );
+
+        closeGeminiModal();
+        studioState.statusMsg = `Subsídio do GeminiNotebook "${title || subject}" ingerido com sucesso! O material e o mapa mental já estão disponíveis.`;
+        rerender();
+      } catch (err) {
+        alert("Erro na ingestão: " + err.message);
+      }
+    });
 
     document.getElementById("qb-mm-toggle-editor")?.addEventListener("click", () => {
       studioState.editorOpen = !studioState.editorOpen;
@@ -1987,6 +2240,7 @@
     incorporateGanQuestions,
     openFromCornell,
     openFromMaterial,
+    ingestGeminiNotebook,
     allTopicOptions,
     studioHTML,
     wire,

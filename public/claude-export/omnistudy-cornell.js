@@ -967,7 +967,10 @@
         ? '<small style="color:#7dd3fc">' + escapeHTML(activeNb.sigla || activeNb.name) + "</small>"
         : '<small style="color:#94a3b8">Todas</small>',
       "</div>",
-      '<button type="button" class="omni-btn omni-cornell-create" id="omni-cornell-new" style="margin-bottom:8px">Nova folha manual</button>',
+      '<div style="display:flex;gap:6px;margin-bottom:8px">',
+      '<button type="button" class="omni-btn omni-cornell-create" id="omni-cornell-new" style="flex:1">Nova folha manual</button>',
+      '<button type="button" class="omni-btn" id="omni-cornell-gemini-ingest" style="background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;padding:6px 10px;font-size:11.5px;font-weight:600" title="Ingerir notas e resumos do GeminiNotebook / NotebookLM">📥 Gemini</button>',
+      '</div>',
       '<div class="omni-cornell-list">' +
         visibleNotes
           .map(
@@ -1145,6 +1148,28 @@
       message = "Nova folha dividida criada no caderno atual. Preencha Pistas (30%), Notas (70%) e Síntese (rodapé).";
       save();
       rerender();
+    });
+
+    body.querySelector("#omni-cornell-gemini-ingest")?.addEventListener("click", () => {
+      const modal = global.document?.getElementById("qb-gemini-modal-backdrop");
+      if (modal) {
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        const titleInput = global.document?.getElementById("qb-gemini-input-title");
+        if (titleInput && activeNb) titleInput.value = `Nota Gemini · ${activeNb.name}`;
+      } else {
+        const rawPasted = global.prompt?.("Cole o conteúdo exportado do GeminiNotebook ou NotebookLM:");
+        if (rawPasted && rawPasted.trim()) {
+          const note = newManual(state);
+          note.title = asText(rawPasted.split(/\r?\n/)[0].replace(/^[#*\s]+/, "") || "Nota GeminiNotebook", 200);
+          note.notes = asText(rawPasted, 12000);
+          note.referenceText = "Acervo GeminiNotebook / NotebookLM";
+          publishNoteAsMaterial(note, S);
+          message = "Nota do GeminiNotebook importada como folha Cornell e material remissivo!";
+          save();
+          rerender();
+        }
+      }
     });
 
     body.querySelectorAll("[data-cornell-select]").forEach(el =>

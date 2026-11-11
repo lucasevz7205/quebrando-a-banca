@@ -489,3 +489,59 @@ Desfazimento do Ato: revogação por conveniência e oportunidade; anulação po
   }
 });
 
+test("Ingestão de acervo do GeminiNotebook / NotebookLM gera material remissivo, folha Cornell e mapa mental AXON", () => {
+  const { studio, S } = createSandbox();
+  S.mat = new Map();
+
+  const notaGemini = {
+    title: "Processo Legislativo - Veto Presidencial",
+    subject: "Processo Legislativo Constitucional",
+    topicId: "pl-1",
+    content: `
+# Veto Presidencial Constitucional
+## Prazos e Características
+O Presidente da República dispõe do prazo legal de 15 dias úteis para vetar projeto de lei aprovado.
+- Motivos de veto: inconstitucionalidade (veto jurídico) ou contrariedade ao interesse público (veto político).
+- Vedação expressa: não cabe veto de palavras isoladas ou de trechos que alterem o sentido.
+
+## Apreciação pelo Congresso Nacional
+Sessão conjunta da Câmara e do Senado no prazo de 30 dias contados do recebimento.
+- Quórum qualificado de rejeição: maioria absoluta de Deputados e Senadores em votação nominal.
+- Efeito jurídico da rejeição: o projeto segue para promulgação obrigatória em 48 horas.
+
+## Síntese e Pontos de Prova Cebraspe
+O veto é sempre formal e expresso; silêncio do Presidente no prazo de 15 dias importa sanção tácita.
+    `.trim(),
+    asMaterial: true,
+    asCornell: true,
+    asMindMap: true,
+  };
+
+  const resultado = studio.ingestGeminiNotebook(notaGemini, S);
+  assert.equal(resultado.success, true);
+
+  // 1. Validar Artefato de Material criado
+  assert.ok(resultado.material);
+  assert.equal(resultado.material.origemArtefato, "gemini-notebook");
+  assert.equal(resultado.material.titulo, "Processo Legislativo - Veto Presidencial");
+  assert.ok(S.mat.has(resultado.material.id));
+
+  // 2. Validar Folha Cornell gerada
+  assert.ok(resultado.cornellNote);
+  assert.equal(resultado.cornellNote.title, "Processo Legislativo - Veto Presidencial");
+  assert.ok(resultado.cornellNote.cues.length >= 2);
+
+  // 3. Validar Mapa Mental AXON estruturado
+  assert.ok(resultado.mapa);
+  assert.match(resultado.mapa.centro, /Veto Presidencial/i);
+  assert.ok(resultado.mapa.ramos.length >= 2);
+  assert.match(resultado.mapa.autor, /GeminiNotebook/i);
+
+  // Verifica que os ramos têm rótulos deduzidos do padrão AXON
+  for (const r of resultado.mapa.ramos) {
+    assert.doesNotMatch(r.rotulo || "", /^Pista\s*\d+$/i);
+    assert.ok(r.rotulo, "Ramo deve possuir rótulo");
+    assert.ok(r.x && r.x.e, "Ramo deve possuir explicação técnica x.e");
+  }
+});
+
