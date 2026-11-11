@@ -20,7 +20,7 @@ export function validateStudyAccountDraft(input, ownerId) {
   const userId = String(input?.userId || "").trim();
   const examName = String(input?.examName || "").trim();
   const examDate = input?.examDate ? String(input.examDate).trim() : "";
-  if (!userId || userId.length > 160 || !/^[a-zA-Z0-9_:@.\-]+$/.test(userId)) {
+  if (!userId || userId.length > 160 || !/^[a-zA-Z0-9_:@.-]+$/.test(userId)) {
     throw new Error("Informe um identificador válido de usuário registrado no Base44.");
   }
   if (ownerId && userId === ownerId) {
