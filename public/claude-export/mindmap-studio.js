@@ -797,7 +797,7 @@
     return normalized;
   }
 
-  function ingestGeminiNotebook(data, explicitS) {
+  function ingestGeminiNotebook(data, explicitS, options = {}) {
     if (!data || typeof data !== "object") {
       throw new Error("Dados de ingestão inválidos.");
     }
@@ -805,7 +805,9 @@
     const title = text(data.title || "Nota GeminiNotebook", 240);
     const subject = text(data.subject || "Geral", 200);
     const topicId = text(data.topicId || S?.mapaId || "geral", 120);
-    const content = text(data.content || "", 25000);
+    const sourceContent = String(data.content || "");
+    if (sourceContent.length > 27000) throw new Error("Texto com mais de 27.000 caracteres. Divida em partes para não perder nenhum tópico.");
+    const content = text(sourceContent, 27000);
     if (!content.trim()) {
       throw new Error("Cole o conteúdo do GeminiNotebook / NotebookLM antes de processar.");
     }
@@ -909,14 +911,15 @@
         conteudo: content,
         resumo: summary,
       };
-      createdMap = materialToMindMap(mapSource, {
-        topicId,
-        topicTitle: title,
-        materia: subject,
-        S,
-      });
-      createdMap.autor = `Ingerido do GeminiNotebook ("${title}") · Estrutura Conceitual AXON`;
-      if (S) {
+      createdMap = options.generatedMap
+        ? normalizeMap(options.generatedMap, title, topicId)
+        : materialToMindMap(mapSource, {
+            topicId, topicTitle: title, materia: subject, S,
+          });
+      createdMap.autor = options.generatedMap
+        ? "Estruturado pela IA a partir do texto hierarquizado · Revisar antes de salvar"
+        : "Conversão direta de material · Revisar antes de estudar";
+      if (S && options.commitMap !== false) {
         saveMapToEnvironment(S, topicId, createdMap);
       }
     }
