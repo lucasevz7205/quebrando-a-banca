@@ -7,8 +7,8 @@
   async function gerarMapaComIA(payload) {
     if (!global.QBBridge || typeof global.QBBridge.ask !== "function") throw new Error("IA indisponível neste ambiente");
     const texto = [payload.notes, payload.referenceText].map(x => String(x || "")).join(" ").trim();
-    if (texto.length < MIN_INSUMO)
-      throw new Error("insumo curto demais (" + texto.length + " caracteres). Cole o texto da aula ou das suas anotações, com pelo menos " + MIN_INSUMO + " caracteres");
+    if (texto.length < (payload.structuredInput ? 80 : MIN_INSUMO))
+      throw new Error("Insumo curto demais (" + texto.length + " caracteres). Cole um texto com títulos, subtópicos e informações suficientes.");
     const res = await global.QBBridge.ask("omniStudyAI", { task: "cornell-to-mindmap", ...payload });
     if (!res || !res.mapa) throw new Error("a IA não devolveu um mapa");
     return res;
@@ -1814,7 +1814,7 @@
       if (e.target === modalBackdrop) closeGeminiModal();
     });
 
-    document.getElementById("qb-gemini-btn-submit")?.addEventListener("click", () => {
+    document.getElementById("qb-gemini-btn-submit")?.addEventListener("click", async () => {
       const title = document.getElementById("qb-gemini-input-title")?.value?.trim();
       const content = document.getElementById("qb-gemini-textarea-content")?.value?.trim();
       const selectedTopic = document.getElementById("qb-gemini-select-topic")?.value || topicId;
@@ -1831,25 +1831,60 @@
         return;
       }
 
+      const submit = document.getElementById("qb-gemini-btn-submit");
+      const priorLabel = submit?.textContent;
+      if (submit?.disabled) return;
+      if (submit) {
+        submit.disabled = true;
+        submit.textContent = asMindMap ? "Estruturando texto por IA…" : "Importando material…";
+      }
       try {
-        ingestGeminiNotebook(
-          {
-            title: title || `Nota Gemini · ${subject}`,
-            subject,
+        const itemTitle = title || "Nota de estudo · " + subject;
+        // Com mapa marcado, a IA interpreta o texto ANTES de qualquer gravação.
+        // Sem geração válida, mantemos o mapa anterior e não importamos parcialmente.
+        let response = null;
+        if (asMindMap) {
+          if (content.length > 27000)
+            throw new Error("O texto ultrapassa 27.000 caracteres. Divida-o em partes, sem truncar conteúdo.");
+          response = await gerarMapaComIA({
+            structuredInput: true,
             topicId: selectedTopic,
-            content,
-            asMaterial,
-            asCornell,
-            asMindMap,
-          },
-          S
-        );
-
+            title: itemTitle.slice(0, 300),
+            subject: subject.slice(0, 300),
+            cues: [],
+            notes: content.slice(0, 12000),
+            summary: "",
+            referenceText: content.slice(12000, 27000),
+          });
+        }
+        const imported = ingestGeminiNotebook({
+          title: itemTitle,
+          subject,
+          topicId: selectedTopic,
+          content,
+          asMaterial,
+          asCornell,
+          asMindMap,
+        }, S, { generatedMap: response?.mapa, commitMap: !asMindMap });
+        if (asMindMap && imported.mapa) {
+          // Prévia editável: a revisão preexistente NÃO é substituída até Salvar.
+          studioState.drafts.set(selectedTopic, clone(imported.mapa));
+          S.mapaId = selectedTopic;
+          studioState.editorOpen = true;
+          const cobertura = response?.cobertura;
+          studioState.statusMsg = "Prévia do mapa pronta: "
+            + (cobertura ? cobertura.topicos + " nós e " + cobertura.ramos + " ramos preservados. " : "")
+            + "Revise os campos e clique em SALVAR MAPA MENTAL para substituir o mapa anterior."
+            + avisoIA(response);
+        } else {
+          studioState.statusMsg = "Material importado. O mapa mental atual foi preservado.";
+        }
         closeGeminiModal();
-        studioState.statusMsg = `Subsídio do GeminiNotebook "${title || subject}" ingerido com sucesso! O material e o mapa mental já estão disponíveis.`;
         rerender();
       } catch (err) {
-        alert("Erro na ingestão: " + err.message);
+        alert("Não foi possível estruturar o texto: " + (err?.message || "erro da IA") + ". Nenhum mapa foi substituído.");
+      } finally {
+        if (submit) { submit.disabled = false; submit.textContent = priorLabel; }
       }
     });
 
