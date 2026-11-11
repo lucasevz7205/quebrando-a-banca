@@ -111,6 +111,33 @@ test("se o insumo exceder a capacidade, não finge que cobriu todas as lacunas",
  assert.match(map.warnings[0],/itens não foram adicionados/);
 });
 
+test("Markdown com campos em negrito preenche exatamente a lacuna correspondente",()=>{
+ const source=[
+  "# Técnica de Legislação",
+  "## Delegação",
+  "- **Definição:** transfere o exercício da atribuição.",
+  "- **Exemplo:** delegação para unidade executora.",
+  "- **Pegadinha:** titularidade não é transferida.",
+  "- **Fonte:** Art. 12, Lei 9.784/1999.",
+  "- **Exceção:** atos normativos não são delegáveis."
+ ].join("\n");
+ const map=parseHierarchicalMindMap(source,"Legislação","leg");
+ const root=map.ramos[0];
+ assert.match(root.x.e,/exercício/);
+ assert.match(root.x.ex,/unidade executora/);
+ assert.match(root.x.trap,/titularidade/);
+ assert.match(root.x.src,/Art. 12/);
+ assert.equal(root.f[0].t,"Exceção");
+ assert.equal(root.f[0].rotulo,"Exceção");
+});
+test("um único ramo estruturado é mantido como um ramo, sem inventar três outros",()=>{
+ const src="# Direito\n## Regra Única\n- Princípio: informação suficiente para estudo.";
+ assert.equal(parseHierarchicalMindMap(src,"Direito","cf"),null);
+ const map=parseHierarchicalMindMap(src,"Direito","cf",{force:true});
+ assert.equal(map.ramos.length,1);
+ assert.equal(flatMindMapNodes(map).length,2);
+ assert.match(server,/data\.structuredInput && !skeleton/);
+});
 test("integração servidor e interface realmente invoca IA antes de salvar o mapa e expõe prévia",()=>{
  assert.match(server,/parseHierarchicalMindMap\(structuredSource, data\.title, data\.topicId\)/);
  assert.match(server,/enrichHierarchicalMindMap\(skeleton, edits, structuredSource\)/);
