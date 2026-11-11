@@ -24,7 +24,7 @@ test("PWA está configurado com manifesto standalone, ícone vetorial, meta tags
   assert.match(iconSvg, /<svg[\s\S]*QB<\/text>/);
   assert.match(rootRoute, /apple-mobile-web-app-capable/);
   assert.match(rootRoute, /\/manifest\.webmanifest/);
-  assert.match(estudiarRoute, /serviceWorker\.register\("\/sw\.js"\)/);
+  assert.match(estudiarRoute, /serviceWorker\.register\("\/sw\.js", \{ updateViaCache: "none" \}\)/);
   assert.match(swCode, /isSafeStaticAsset/);
   assert.match(swCode, /url\.pathname\.startsWith\("\/api\/"\)/);
 });
