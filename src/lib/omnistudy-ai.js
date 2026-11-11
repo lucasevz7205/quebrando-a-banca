@@ -65,7 +65,7 @@ const OmniStudyInput = z.discriminatedUnion("task", [
     title: z.string().min(2).max(300),
     subject: z.string().max(300).optional().default(""),
     cues: z.array(z.string().max(400)).max(24).default([]),
-    notes: z.string().min(5).max(12000),
+    notes: z.string().min(5).max(27000),
     summary: z.string().max(2500).default(""),
     referenceText: z.string().max(15000).optional().default(""),
   }),
@@ -570,6 +570,8 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
       // preencher cada campo dos nós encontrados, nunca recriar a hierarquia.
       const structuredSource = data.structuredInput && data.referenceText
         ? data.notes + "\n" + data.referenceText : data.notes;
+      if (data.structuredInput && structuredSource.length > 27000)
+        throw new Error("Texto hierarquizado maior que 27.000 caracteres. Divida em partes para não perder tópicos.");
       const skeleton = parseHierarchicalMindMap(structuredSource, data.title, data.topicId);
       if (skeleton) {
         if (skeleton.warnings?.length) throw new Error(skeleton.warnings.join(" "));
