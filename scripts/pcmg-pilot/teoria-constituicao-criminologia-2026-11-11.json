@@ -1,0 +1,1184 @@
+{
+  "concurso": "PCMG",
+  "criadoEm": "2026-11-11",
+  "arquivoFonte": "PCMG - Copia.zip",
+  "etapa": "piloto-parte-2",
+  "material": [
+    {
+      "id": "pcmg-cf-conceito",
+      "edital": {
+        "id": "pcmg-cf-conceito",
+        "caps": [
+          "PCMG-DC-CONCEITO"
+        ],
+        "titulo": "Conceito, sentidos e eficácia da Constituição",
+        "num": "2.1",
+        "ordem": 100,
+        "prova": "Objetiva · FGV",
+        "sigla": "CONST",
+        "materia": "Noções de Direito Constitucional",
+        "materiaOrdem": 3,
+        "fonteEdital": "Edital PCMG nº 04/2024, Anexo I, Noções de Direito Constitucional, item 2.1",
+        "status": "rascunho-estudo"
+      },
+      "revisao": {
+        "id": "pcmg-cf-conceito",
+        "titulo": "Conceito, sentidos e eficácia da Constituição",
+        "edital": "Edital PCMG nº 04/2024, Anexo I, Noções de Direito Constitucional, item 2.1",
+        "etapa": 1,
+        "atualizadoEm": "2026-11-11",
+        "resumo": [
+          "Ferdinand Lassalle relaciona a Constituição efetiva à soma dos fatores reais de poder de uma sociedade. Texto desconectado desses fatores pode ser mera folha de papel. Exemplo: Uma norma proclamada solenemente não altera por si só grupos de poder que a ignoram sistematicamente. Atenção: Soma dos fatores reais de poder é tese sociológica, não definição de Kelsen.",
+          "Para Carl Schmitt, a Constituição em sentido político corresponde à decisão política fundamental sobre a unidade política e sua forma de existência. Exemplo: A escolha estrutural da forma de Estado e do modelo político expressa decisão política fundamental. Atenção: Não confundir decisão política fundamental com norma fundamental hipotética.",
+          "Hans Kelsen examina a Constituição como norma jurídica superior na estrutura escalonada do ordenamento, no plano do dever-ser; distingue aspecto lógico-jurídico e jurídico-positivo. Exemplo: A validade de uma lei depende de sua compatibilidade com norma superior na hierarquia jurídica. Atenção: Não atribuir à teoria jurídica de Kelsen o conceito sociológico de fatores reais de poder.",
+          "Materialidade constitucional considera conteúdo estruturante do Estado e direitos fundamentais. Formalidade depende da inserção de norma no texto constitucional, qualquer que seja seu assunto. Exemplo: Um dispositivo no texto constitucional pode ser formalmente constitucional mesmo sem tratar da estrutura básica do Estado. Atenção: Em Constituição escrita, não confundir conteúdo materialmente constitucional com localização formal no documento.",
+          "A Constituição rígida exige processo de alteração mais difícil que o das leis ordinárias, sustentando sua supremacia formal e permitindo controle de constitucionalidade. Exemplo: Uma emenda constitucional tem rito mais exigente do que uma lei ordinária federal. Atenção: Rigidez não significa impossibilidade de mudança e não equivale a Constituição necessariamente imutável.",
+          "Na classificação tradicional de José Afonso da Silva, normas de eficácia plena produzem desde logo seus efeitos essenciais; as contidas admitem restrições nos termos constitucionais; as limitadas dependem de integração para plena eficácia. Exemplo: A norma que permite atividade desde a entrada em vigor mas admite restrição legal pode exemplificar eficácia contida. Atenção: Eficácia limitada não significa ausência total de eficácia jurídica."
+        ],
+        "fontes": [
+          {
+            "titulo": "Teoria da Constituição (apostila do ZIP PCMG)",
+            "localizacao": "pp. 2–4, 9 e 28–32"
+          }
+        ],
+        "statusEditorial": "rascunho-pedagogico",
+        "mapa": {
+          "centro": "Conceito, sentidos e eficácia da Constituição",
+          "ramos": [
+            {
+              "id": "pcmg-cf-conceito-r1",
+              "t": "Sentido sociológico: Lassalle",
+              "x": {
+                "e": "Ferdinand Lassalle relaciona a Constituição efetiva à soma dos fatores reais de poder de uma sociedade. Texto desconectado desses fatores pode ser mera folha de papel.",
+                "ex": "Uma norma proclamada solenemente não altera por si só grupos de poder que a ignoram sistematicamente.",
+                "trap": "Soma dos fatores reais de poder é tese sociológica, não definição de Kelsen.",
+                "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-conceito-r2",
+              "t": "Sentido político: Schmitt",
+              "x": {
+                "e": "Para Carl Schmitt, a Constituição em sentido político corresponde à decisão política fundamental sobre a unidade política e sua forma de existência.",
+                "ex": "A escolha estrutural da forma de Estado e do modelo político expressa decisão política fundamental.",
+                "trap": "Não confundir decisão política fundamental com norma fundamental hipotética.",
+                "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-conceito-r3",
+              "t": "Sentido jurídico: Kelsen",
+              "x": {
+                "e": "Hans Kelsen examina a Constituição como norma jurídica superior na estrutura escalonada do ordenamento, no plano do dever-ser; distingue aspecto lógico-jurídico e jurídico-positivo.",
+                "ex": "A validade de uma lei depende de sua compatibilidade com norma superior na hierarquia jurídica.",
+                "trap": "Não atribuir à teoria jurídica de Kelsen o conceito sociológico de fatores reais de poder.",
+                "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-conceito-r4",
+              "t": "Constituição formal e material",
+              "x": {
+                "e": "Materialidade constitucional considera conteúdo estruturante do Estado e direitos fundamentais. Formalidade depende da inserção de norma no texto constitucional, qualquer que seja seu assunto.",
+                "ex": "Um dispositivo no texto constitucional pode ser formalmente constitucional mesmo sem tratar da estrutura básica do Estado.",
+                "trap": "Em Constituição escrita, não confundir conteúdo materialmente constitucional com localização formal no documento.",
+                "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-conceito-r5",
+              "t": "Rigidez e supremacia",
+              "x": {
+                "e": "A Constituição rígida exige processo de alteração mais difícil que o das leis ordinárias, sustentando sua supremacia formal e permitindo controle de constitucionalidade.",
+                "ex": "Uma emenda constitucional tem rito mais exigente do que uma lei ordinária federal.",
+                "trap": "Rigidez não significa impossibilidade de mudança e não equivale a Constituição necessariamente imutável.",
+                "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-cf-conceito-r6",
+              "t": "Eficácia plena, contida e limitada",
+              "x": {
+                "e": "Na classificação tradicional de José Afonso da Silva, normas de eficácia plena produzem desde logo seus efeitos essenciais; as contidas admitem restrições nos termos constitucionais; as limitadas dependem de integração para plena eficácia.",
+                "ex": "A norma que permite atividade desde a entrada em vigor mas admite restrição legal pode exemplificar eficácia contida.",
+                "trap": "Eficácia limitada não significa ausência total de eficácia jurídica.",
+                "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+              },
+              "f": []
+            }
+          ],
+          "ligacoes": []
+        },
+        "cartoes": [
+          {
+            "id": "pcmg-cf-conceito-fc1-1",
+            "q": "Explique: Sentido sociológico: Lassalle.",
+            "a": [
+              "Ferdinand Lassalle relaciona a Constituição efetiva à soma dos fatores reais de poder de uma sociedade. Texto desconectado desses fatores pode ser mera folha de papel."
+            ],
+            "mapaNoId": "pcmg-cf-conceito-r1",
+            "tema": "Sentido sociológico: Lassalle",
+            "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+          },
+          {
+            "id": "pcmg-cf-conceito-fc1-2",
+            "q": "Qual erro de prova evitar em \"Sentido sociológico: Lassalle\"?",
+            "a": [
+              "Soma dos fatores reais de poder é tese sociológica, não definição de Kelsen."
+            ],
+            "mapaNoId": "pcmg-cf-conceito-r1",
+            "tema": "Sentido sociológico: Lassalle",
+            "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+          },
+          {
+            "id": "pcmg-cf-conceito-fc2-1",
+            "q": "Explique: Sentido político: Schmitt.",
+            "a": [
+              "Para Carl Schmitt, a Constituição em sentido político corresponde à decisão política fundamental sobre a unidade política e sua forma de existência."
+            ],
+            "mapaNoId": "pcmg-cf-conceito-r2",
+            "tema": "Sentido político: Schmitt",
+            "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+          },
+          {
+            "id": "pcmg-cf-conceito-fc2-2",
+            "q": "Qual erro de prova evitar em \"Sentido político: Schmitt\"?",
+            "a": [
+              "Não confundir decisão política fundamental com norma fundamental hipotética."
+            ],
+            "mapaNoId": "pcmg-cf-conceito-r2",
+            "tema": "Sentido político: Schmitt",
+            "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+          },
+          {
+            "id": "pcmg-cf-conceito-fc3-1",
+            "q": "Explique: Sentido jurídico: Kelsen.",
+            "a": [
+              "Hans Kelsen examina a Constituição como norma jurídica superior na estrutura escalonada do ordenamento, no plano do dever-ser; distingue aspecto lógico-jurídico e jurídico-positivo."
+            ],
+            "mapaNoId": "pcmg-cf-conceito-r3",
+            "tema": "Sentido jurídico: Kelsen",
+            "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+          },
+          {
+            "id": "pcmg-cf-conceito-fc3-2",
+            "q": "Qual erro de prova evitar em \"Sentido jurídico: Kelsen\"?",
+            "a": [
+              "Não atribuir à teoria jurídica de Kelsen o conceito sociológico de fatores reais de poder."
+            ],
+            "mapaNoId": "pcmg-cf-conceito-r3",
+            "tema": "Sentido jurídico: Kelsen",
+            "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+          },
+          {
+            "id": "pcmg-cf-conceito-fc4-1",
+            "q": "Explique: Constituição formal e material.",
+            "a": [
+              "Materialidade constitucional considera conteúdo estruturante do Estado e direitos fundamentais. Formalidade depende da inserção de norma no texto constitucional, qualquer que seja seu assunto."
+            ],
+            "mapaNoId": "pcmg-cf-conceito-r4",
+            "tema": "Constituição formal e material",
+            "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+          },
+          {
+            "id": "pcmg-cf-conceito-fc4-2",
+            "q": "Qual erro de prova evitar em \"Constituição formal e material\"?",
+            "a": [
+              "Em Constituição escrita, não confundir conteúdo materialmente constitucional com localização formal no documento."
+            ],
+            "mapaNoId": "pcmg-cf-conceito-r4",
+            "tema": "Constituição formal e material",
+            "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+          },
+          {
+            "id": "pcmg-cf-conceito-fc5-1",
+            "q": "Explique: Rigidez e supremacia.",
+            "a": [
+              "A Constituição rígida exige processo de alteração mais difícil que o das leis ordinárias, sustentando sua supremacia formal e permitindo controle de constitucionalidade."
+            ],
+            "mapaNoId": "pcmg-cf-conceito-r5",
+            "tema": "Rigidez e supremacia",
+            "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+          },
+          {
+            "id": "pcmg-cf-conceito-fc5-2",
+            "q": "Qual erro de prova evitar em \"Rigidez e supremacia\"?",
+            "a": [
+              "Rigidez não significa impossibilidade de mudança e não equivale a Constituição necessariamente imutável."
+            ],
+            "mapaNoId": "pcmg-cf-conceito-r5",
+            "tema": "Rigidez e supremacia",
+            "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+          },
+          {
+            "id": "pcmg-cf-conceito-fc6-1",
+            "q": "Explique: Eficácia plena, contida e limitada.",
+            "a": [
+              "Na classificação tradicional de José Afonso da Silva, normas de eficácia plena produzem desde logo seus efeitos essenciais; as contidas admitem restrições nos termos constitucionais; as limitadas dependem de integração para plena eficácia."
+            ],
+            "mapaNoId": "pcmg-cf-conceito-r6",
+            "tema": "Eficácia plena, contida e limitada",
+            "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+          },
+          {
+            "id": "pcmg-cf-conceito-fc6-2",
+            "q": "Qual erro de prova evitar em \"Eficácia plena, contida e limitada\"?",
+            "a": [
+              "Eficácia limitada não significa ausência total de eficácia jurídica."
+            ],
+            "mapaNoId": "pcmg-cf-conceito-r6",
+            "tema": "Eficácia plena, contida e limitada",
+            "src": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32"
+          }
+        ]
+      },
+      "questoes": [
+        {
+          "id": "pcmg-cf-conceito-q01",
+          "cap": "PCMG-DC-CONCEITO",
+          "capNome": "Conceito, sentidos e eficácia da Constituição",
+          "topico": "pcmg-cf-conceito",
+          "materia": "Noções de Direito Constitucional",
+          "tema": "Sentido sociológico: Lassalle",
+          "ordem": 1,
+          "enunciado": "Segundo a concepção sociológica de Ferdinand Lassalle, Constituição é:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "a norma hipotética fundamental de um sistema jurídico."
+            },
+            {
+              "letra": "B",
+              "texto": "a decisão política fundamental do povo."
+            },
+            {
+              "letra": "C",
+              "texto": "a soma dos fatores reais de poder vigentes na sociedade."
+            },
+            {
+              "letra": "D",
+              "texto": "apenas o conjunto formal de emendas constitucionais."
+            },
+            {
+              "letra": "E",
+              "texto": "um procedimento de elaboração de leis ordinárias."
+            }
+          ],
+          "gabarito": "C",
+          "formato": "multipla_escolha",
+          "comentario": "A concepção sociológica destaca os fatores reais de poder que conformam a ordem constitucional.",
+          "justificativa": "A concepção sociológica destaca os fatores reais de poder que conformam a ordem constitucional.",
+          "mapaNoId": "pcmg-cf-conceito-r1",
+          "ref": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32",
+          "fonte": "Teoria da Constituição (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–4, 9 e 28–32",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-cf-conceito-q02",
+          "cap": "PCMG-DC-CONCEITO",
+          "capNome": "Conceito, sentidos e eficácia da Constituição",
+          "topico": "pcmg-cf-conceito",
+          "materia": "Noções de Direito Constitucional",
+          "tema": "Sentido político: Schmitt",
+          "ordem": 2,
+          "enunciado": "Na classificação tradicional, a definição da Constituição como decisão política fundamental é associada a:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "Ferdinand Lassalle."
+            },
+            {
+              "letra": "B",
+              "texto": "Carl Schmitt."
+            },
+            {
+              "letra": "C",
+              "texto": "Hans Kelsen."
+            },
+            {
+              "letra": "D",
+              "texto": "Montesquieu."
+            },
+            {
+              "letra": "E",
+              "texto": "Norberto Bobbio."
+            }
+          ],
+          "gabarito": "B",
+          "formato": "multipla_escolha",
+          "comentario": "Schmitt formula o sentido político; Lassalle a dimensão sociológica e Kelsen o sentido jurídico.",
+          "justificativa": "Schmitt formula o sentido político; Lassalle a dimensão sociológica e Kelsen o sentido jurídico.",
+          "mapaNoId": "pcmg-cf-conceito-r2",
+          "ref": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32",
+          "fonte": "Teoria da Constituição (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–4, 9 e 28–32",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-cf-conceito-q03",
+          "cap": "PCMG-DC-CONCEITO",
+          "capNome": "Conceito, sentidos e eficácia da Constituição",
+          "topico": "pcmg-cf-conceito",
+          "materia": "Noções de Direito Constitucional",
+          "tema": "Sentido jurídico: Kelsen",
+          "ordem": 3,
+          "enunciado": "O sentido jurídico da Constituição, em Kelsen, privilegia:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "a soma de fatores sociais efetivos."
+            },
+            {
+              "letra": "B",
+              "texto": "a decisão política fundamental isolada das normas."
+            },
+            {
+              "letra": "C",
+              "texto": "a formação de hábitos coletivos sem validade formal."
+            },
+            {
+              "letra": "D",
+              "texto": "a estrutura hierárquica de normas e a validade jurídica."
+            },
+            {
+              "letra": "E",
+              "texto": "a superioridade de costumes sobre todas as normas escritas."
+            }
+          ],
+          "gabarito": "D",
+          "formato": "multipla_escolha",
+          "comentario": "Kelsen aborda Constituição na ordem normativa e sua posição superior na validade das normas.",
+          "justificativa": "Kelsen aborda Constituição na ordem normativa e sua posição superior na validade das normas.",
+          "mapaNoId": "pcmg-cf-conceito-r3",
+          "ref": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32",
+          "fonte": "Teoria da Constituição (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–4, 9 e 28–32",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-cf-conceito-q04",
+          "cap": "PCMG-DC-CONCEITO",
+          "capNome": "Conceito, sentidos e eficácia da Constituição",
+          "topico": "pcmg-cf-conceito",
+          "materia": "Noções de Direito Constitucional",
+          "tema": "Constituição formal e material",
+          "ordem": 4,
+          "enunciado": "Uma regra inserida no texto constitucional cujo tema não seja organização do Estado ou direitos essenciais é, em classificação tradicional:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "formalmente constitucional por sua presença no documento."
+            },
+            {
+              "letra": "B",
+              "texto": "necessariamente inexistente como norma jurídica."
+            },
+            {
+              "letra": "C",
+              "texto": "materialmente constitucional por tratar de assunto irrelevante."
+            },
+            {
+              "letra": "D",
+              "texto": "sempre inconstitucional por violação temática."
+            },
+            {
+              "letra": "E",
+              "texto": "mera recomendação sem força jurídica."
+            }
+          ],
+          "gabarito": "A",
+          "formato": "multipla_escolha",
+          "comentario": "A classificação formal considera inserção no texto constitucional, independentemente do conteúdo da norma.",
+          "justificativa": "A classificação formal considera inserção no texto constitucional, independentemente do conteúdo da norma.",
+          "mapaNoId": "pcmg-cf-conceito-r4",
+          "ref": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32",
+          "fonte": "Teoria da Constituição (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–4, 9 e 28–32",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-cf-conceito-q05",
+          "cap": "PCMG-DC-CONCEITO",
+          "capNome": "Conceito, sentidos e eficácia da Constituição",
+          "topico": "pcmg-cf-conceito",
+          "materia": "Noções de Direito Constitucional",
+          "tema": "Rigidez e supremacia",
+          "ordem": 5,
+          "enunciado": "Uma Constituição é classificada como rígida quando:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "não contém qualquer regra sobre emendas."
+            },
+            {
+              "letra": "B",
+              "texto": "somente pode ser modificada por plebiscito anual."
+            },
+            {
+              "letra": "C",
+              "texto": "exige procedimento de alteração mais dificultoso que o das leis ordinárias."
+            },
+            {
+              "letra": "D",
+              "texto": "não admite novas interpretações de tribunais."
+            },
+            {
+              "letra": "E",
+              "texto": "é necessariamente não escrita."
+            }
+          ],
+          "gabarito": "C",
+          "formato": "multipla_escolha",
+          "comentario": "Rigidez descreve maior dificuldade procedimental para alteração da Constituição.",
+          "justificativa": "Rigidez descreve maior dificuldade procedimental para alteração da Constituição.",
+          "mapaNoId": "pcmg-cf-conceito-r5",
+          "ref": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32",
+          "fonte": "Teoria da Constituição (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–4, 9 e 28–32",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-cf-conceito-q06",
+          "cap": "PCMG-DC-CONCEITO",
+          "capNome": "Conceito, sentidos e eficácia da Constituição",
+          "topico": "pcmg-cf-conceito",
+          "materia": "Noções de Direito Constitucional",
+          "tema": "Eficácia plena, contida e limitada",
+          "ordem": 6,
+          "enunciado": "Quanto às normas constitucionais de eficácia limitada, assinale a alternativa correta.",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "Carecem de qualquer eficácia jurídica até regulamentação."
+            },
+            {
+              "letra": "B",
+              "texto": "Não podem orientar interpretação constitucional."
+            },
+            {
+              "letra": "C",
+              "texto": "São sempre revogadas por leis anteriores."
+            },
+            {
+              "letra": "D",
+              "texto": "Dependem de integração para plena realização de seus efeitos, mas possuem eficácia jurídica."
+            },
+            {
+              "letra": "E",
+              "texto": "Equivalem necessariamente às normas de eficácia plena."
+            }
+          ],
+          "gabarito": "D",
+          "formato": "multipla_escolha",
+          "comentario": "Normas limitadas já vinculam e orientam o ordenamento, embora a plena realização dependa de complementação.",
+          "justificativa": "Normas limitadas já vinculam e orientam o ordenamento, embora a plena realização dependa de complementação.",
+          "mapaNoId": "pcmg-cf-conceito-r6",
+          "ref": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32",
+          "fonte": "Teoria da Constituição (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–4, 9 e 28–32",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-cf-conceito-q07",
+          "cap": "PCMG-DC-CONCEITO",
+          "capNome": "Conceito, sentidos e eficácia da Constituição",
+          "topico": "pcmg-cf-conceito",
+          "materia": "Noções de Direito Constitucional",
+          "tema": "Sentido político: Schmitt",
+          "ordem": 7,
+          "enunciado": "Uma prova atribui a Hans Kelsen o conceito de 'decisão política fundamental'. A correção adequada é atribuí-lo a:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "Carl Schmitt."
+            },
+            {
+              "letra": "B",
+              "texto": "Ferdinand Lassalle."
+            },
+            {
+              "letra": "C",
+              "texto": "Hans Jonas."
+            },
+            {
+              "letra": "D",
+              "texto": "José Afonso da Silva."
+            },
+            {
+              "letra": "E",
+              "texto": "Max Weber."
+            }
+          ],
+          "gabarito": "A",
+          "formato": "multipla_escolha",
+          "comentario": "Decisão política fundamental corresponde ao sentido político de Carl Schmitt.",
+          "justificativa": "Decisão política fundamental corresponde ao sentido político de Carl Schmitt.",
+          "mapaNoId": "pcmg-cf-conceito-r2",
+          "ref": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32",
+          "fonte": "Teoria da Constituição (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–4, 9 e 28–32",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-cf-conceito-q08",
+          "cap": "PCMG-DC-CONCEITO",
+          "capNome": "Conceito, sentidos e eficácia da Constituição",
+          "topico": "pcmg-cf-conceito",
+          "materia": "Noções de Direito Constitucional",
+          "tema": "Eficácia plena, contida e limitada",
+          "ordem": 8,
+          "enunciado": "Uma norma constitucional admite aplicação imediata, mas pode ter seu alcance restringido por lei, dentro de limites constitucionais. Trata-se, em regra, de norma de eficácia:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "limitada institutiva."
+            },
+            {
+              "letra": "B",
+              "texto": "exaurida."
+            },
+            {
+              "letra": "C",
+              "texto": "dependente de integração integral para existir."
+            },
+            {
+              "letra": "D",
+              "texto": "exclusivamente programática."
+            },
+            {
+              "letra": "E",
+              "texto": "contida."
+            }
+          ],
+          "gabarito": "E",
+          "formato": "multipla_escolha",
+          "comentario": "Normas de eficácia contida são aplicáveis desde a origem, mas sujeitas à restrição admitida constitucionalmente.",
+          "justificativa": "Normas de eficácia contida são aplicáveis desde a origem, mas sujeitas à restrição admitida constitucionalmente.",
+          "mapaNoId": "pcmg-cf-conceito-r6",
+          "ref": "Teoria da Constituição (apostila do ZIP PCMG), pp. 2–4, 9 e 28–32",
+          "fonte": "Teoria da Constituição (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–4, 9 e 28–32",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        }
+      ]
+    },
+    {
+      "id": "pcmg-crim-intro",
+      "edital": {
+        "id": "pcmg-crim-intro",
+        "caps": [
+          "PCMG-CRIM-INTRO"
+        ],
+        "titulo": "Criminologia: conceito, método, objetos e finalidade",
+        "num": "1",
+        "ordem": 501,
+        "prova": "Objetiva · FGV",
+        "sigla": "CRIM",
+        "materia": "Noções de Criminologia",
+        "materiaOrdem": 12,
+        "fonteEdital": "Edital PCMG nº 04/2024, Anexo I, Noções de Criminologia",
+        "status": "rascunho-estudo"
+      },
+      "revisao": {
+        "id": "pcmg-crim-intro",
+        "titulo": "Criminologia: conceito, método, objetos e finalidade",
+        "edital": "Edital PCMG nº 04/2024, Anexo I, Noções de Criminologia",
+        "etapa": 1,
+        "atualizadoEm": "2026-11-11",
+        "resumo": [
+          "Criminologia é ciência empírica que investiga o fenômeno criminal com observação de dados e da realidade social, e não apenas por dedução de normas jurídicas. Exemplo: Pesquisadores analisam dados de reincidência e entrevistas para estudar causas e contextos criminais. Atenção: Confundir o método empírico com o caráter normativo da dogmática penal.",
+          "A Criminologia mobiliza saberes da Sociologia, Psicologia, Direito, Antropologia e outras áreas para compreender fatores criminais sob diferentes perspectivas. Exemplo: Uma análise relaciona condições sociais, trajetórias pessoais e resposta institucional ao delito. Atenção: Interdisciplinaridade não significa ausência de método científico ou de objeto próprio.",
+          "A abordagem criminológica contemporânea examina crime, pessoa que pratica crime, vítima e mecanismos de controle social. O alcance do objeto é mais amplo que o fato típico. Exemplo: Uma pesquisa investiga impactos sobre vítimas e a resposta das instituições, além da conduta do autor. Atenção: Eliminar a vítima ou o controle social torna incompleta a enumeração mais comum em concursos.",
+          "Família, escola, comunidade, redes sociais e grupos de convivência exercem controle social informal por valores, educação e reprovação social. Exemplo: Uma escola promove diálogo e orientação para prevenir comportamento agressivo. Atenção: Não confundir controle informal com a atuação coercitiva estatal própria do sistema penal.",
+          "Controle social formal é desempenhado por instituições estatais, como polícia, Ministério Público, Judiciário e sistema penitenciário, com procedimentos jurídicos. Exemplo: Uma investigação policial e o julgamento judicial expressam etapas do controle formal. Atenção: Controle formal não se reduz à polícia, abrangendo outras instituições do sistema de justiça.",
+          "Direito Penal é predominantemente normativo e define crimes e sanções; Criminologia investiga empiricamente o fenômeno; Política Criminal reúne escolhas e estratégias para preveni-lo e enfrentá-lo. Exemplo: Dados de reincidência podem sustentar proposta de política criminal, cuja validade jurídica será examinada pelo Direito. Atenção: Não apresentar Política Criminal como mera descrição de crimes, nem Criminologia como lei sancionadora."
+        ],
+        "fontes": [
+          {
+            "titulo": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG)",
+            "localizacao": "pp. 2–3 e 8–10"
+          }
+        ],
+        "statusEditorial": "rascunho-pedagogico",
+        "mapa": {
+          "centro": "Criminologia: conceito, método, objetos e finalidade",
+          "ramos": [
+            {
+              "id": "pcmg-crim-intro-r1",
+              "t": "Ciência empírica",
+              "x": {
+                "e": "Criminologia é ciência empírica que investiga o fenômeno criminal com observação de dados e da realidade social, e não apenas por dedução de normas jurídicas.",
+                "ex": "Pesquisadores analisam dados de reincidência e entrevistas para estudar causas e contextos criminais.",
+                "trap": "Confundir o método empírico com o caráter normativo da dogmática penal.",
+                "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-crim-intro-r2",
+              "t": "Interdisciplinaridade",
+              "x": {
+                "e": "A Criminologia mobiliza saberes da Sociologia, Psicologia, Direito, Antropologia e outras áreas para compreender fatores criminais sob diferentes perspectivas.",
+                "ex": "Uma análise relaciona condições sociais, trajetórias pessoais e resposta institucional ao delito.",
+                "trap": "Interdisciplinaridade não significa ausência de método científico ou de objeto próprio.",
+                "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-crim-intro-r3",
+              "t": "Quatro objetos de estudo",
+              "x": {
+                "e": "A abordagem criminológica contemporânea examina crime, pessoa que pratica crime, vítima e mecanismos de controle social. O alcance do objeto é mais amplo que o fato típico.",
+                "ex": "Uma pesquisa investiga impactos sobre vítimas e a resposta das instituições, além da conduta do autor.",
+                "trap": "Eliminar a vítima ou o controle social torna incompleta a enumeração mais comum em concursos.",
+                "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-crim-intro-r4",
+              "t": "Controle social informal",
+              "x": {
+                "e": "Família, escola, comunidade, redes sociais e grupos de convivência exercem controle social informal por valores, educação e reprovação social.",
+                "ex": "Uma escola promove diálogo e orientação para prevenir comportamento agressivo.",
+                "trap": "Não confundir controle informal com a atuação coercitiva estatal própria do sistema penal.",
+                "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-crim-intro-r5",
+              "t": "Controle social formal",
+              "x": {
+                "e": "Controle social formal é desempenhado por instituições estatais, como polícia, Ministério Público, Judiciário e sistema penitenciário, com procedimentos jurídicos.",
+                "ex": "Uma investigação policial e o julgamento judicial expressam etapas do controle formal.",
+                "trap": "Controle formal não se reduz à polícia, abrangendo outras instituições do sistema de justiça.",
+                "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+              },
+              "f": []
+            },
+            {
+              "id": "pcmg-crim-intro-r6",
+              "t": "Criminologia, Penal e Política Criminal",
+              "x": {
+                "e": "Direito Penal é predominantemente normativo e define crimes e sanções; Criminologia investiga empiricamente o fenômeno; Política Criminal reúne escolhas e estratégias para preveni-lo e enfrentá-lo.",
+                "ex": "Dados de reincidência podem sustentar proposta de política criminal, cuja validade jurídica será examinada pelo Direito.",
+                "trap": "Não apresentar Política Criminal como mera descrição de crimes, nem Criminologia como lei sancionadora.",
+                "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+              },
+              "f": []
+            }
+          ],
+          "ligacoes": []
+        },
+        "cartoes": [
+          {
+            "id": "pcmg-crim-intro-fc1-1",
+            "q": "Explique: Ciência empírica.",
+            "a": [
+              "Criminologia é ciência empírica que investiga o fenômeno criminal com observação de dados e da realidade social, e não apenas por dedução de normas jurídicas."
+            ],
+            "mapaNoId": "pcmg-crim-intro-r1",
+            "tema": "Ciência empírica",
+            "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+          },
+          {
+            "id": "pcmg-crim-intro-fc1-2",
+            "q": "Qual erro de prova evitar em \"Ciência empírica\"?",
+            "a": [
+              "Confundir o método empírico com o caráter normativo da dogmática penal."
+            ],
+            "mapaNoId": "pcmg-crim-intro-r1",
+            "tema": "Ciência empírica",
+            "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+          },
+          {
+            "id": "pcmg-crim-intro-fc2-1",
+            "q": "Explique: Interdisciplinaridade.",
+            "a": [
+              "A Criminologia mobiliza saberes da Sociologia, Psicologia, Direito, Antropologia e outras áreas para compreender fatores criminais sob diferentes perspectivas."
+            ],
+            "mapaNoId": "pcmg-crim-intro-r2",
+            "tema": "Interdisciplinaridade",
+            "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+          },
+          {
+            "id": "pcmg-crim-intro-fc2-2",
+            "q": "Qual erro de prova evitar em \"Interdisciplinaridade\"?",
+            "a": [
+              "Interdisciplinaridade não significa ausência de método científico ou de objeto próprio."
+            ],
+            "mapaNoId": "pcmg-crim-intro-r2",
+            "tema": "Interdisciplinaridade",
+            "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+          },
+          {
+            "id": "pcmg-crim-intro-fc3-1",
+            "q": "Explique: Quatro objetos de estudo.",
+            "a": [
+              "A abordagem criminológica contemporânea examina crime, pessoa que pratica crime, vítima e mecanismos de controle social. O alcance do objeto é mais amplo que o fato típico."
+            ],
+            "mapaNoId": "pcmg-crim-intro-r3",
+            "tema": "Quatro objetos de estudo",
+            "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+          },
+          {
+            "id": "pcmg-crim-intro-fc3-2",
+            "q": "Qual erro de prova evitar em \"Quatro objetos de estudo\"?",
+            "a": [
+              "Eliminar a vítima ou o controle social torna incompleta a enumeração mais comum em concursos."
+            ],
+            "mapaNoId": "pcmg-crim-intro-r3",
+            "tema": "Quatro objetos de estudo",
+            "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+          },
+          {
+            "id": "pcmg-crim-intro-fc4-1",
+            "q": "Explique: Controle social informal.",
+            "a": [
+              "Família, escola, comunidade, redes sociais e grupos de convivência exercem controle social informal por valores, educação e reprovação social."
+            ],
+            "mapaNoId": "pcmg-crim-intro-r4",
+            "tema": "Controle social informal",
+            "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+          },
+          {
+            "id": "pcmg-crim-intro-fc4-2",
+            "q": "Qual erro de prova evitar em \"Controle social informal\"?",
+            "a": [
+              "Não confundir controle informal com a atuação coercitiva estatal própria do sistema penal."
+            ],
+            "mapaNoId": "pcmg-crim-intro-r4",
+            "tema": "Controle social informal",
+            "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+          },
+          {
+            "id": "pcmg-crim-intro-fc5-1",
+            "q": "Explique: Controle social formal.",
+            "a": [
+              "Controle social formal é desempenhado por instituições estatais, como polícia, Ministério Público, Judiciário e sistema penitenciário, com procedimentos jurídicos."
+            ],
+            "mapaNoId": "pcmg-crim-intro-r5",
+            "tema": "Controle social formal",
+            "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+          },
+          {
+            "id": "pcmg-crim-intro-fc5-2",
+            "q": "Qual erro de prova evitar em \"Controle social formal\"?",
+            "a": [
+              "Controle formal não se reduz à polícia, abrangendo outras instituições do sistema de justiça."
+            ],
+            "mapaNoId": "pcmg-crim-intro-r5",
+            "tema": "Controle social formal",
+            "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+          },
+          {
+            "id": "pcmg-crim-intro-fc6-1",
+            "q": "Explique: Criminologia, Penal e Política Criminal.",
+            "a": [
+              "Direito Penal é predominantemente normativo e define crimes e sanções; Criminologia investiga empiricamente o fenômeno; Política Criminal reúne escolhas e estratégias para preveni-lo e enfrentá-lo."
+            ],
+            "mapaNoId": "pcmg-crim-intro-r6",
+            "tema": "Criminologia, Penal e Política Criminal",
+            "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+          },
+          {
+            "id": "pcmg-crim-intro-fc6-2",
+            "q": "Qual erro de prova evitar em \"Criminologia, Penal e Política Criminal\"?",
+            "a": [
+              "Não apresentar Política Criminal como mera descrição de crimes, nem Criminologia como lei sancionadora."
+            ],
+            "mapaNoId": "pcmg-crim-intro-r6",
+            "tema": "Criminologia, Penal e Política Criminal",
+            "src": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10"
+          }
+        ]
+      },
+      "questoes": [
+        {
+          "id": "pcmg-crim-intro-q01",
+          "cap": "PCMG-CRIM-INTRO",
+          "capNome": "Criminologia: conceito, método, objetos e finalidade",
+          "topico": "pcmg-crim-intro",
+          "materia": "Noções de Criminologia",
+          "tema": "Ciência empírica",
+          "ordem": 1,
+          "enunciado": "Uma característica metodológica central da Criminologia é:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "a ausência de observação de fenômenos."
+            },
+            {
+              "letra": "B",
+              "texto": "a exclusividade de método lógico-dedutivo normativo."
+            },
+            {
+              "letra": "C",
+              "texto": "a investigação empírica de fenômenos criminais."
+            },
+            {
+              "letra": "D",
+              "texto": "a equiparação completa com a lei penal."
+            },
+            {
+              "letra": "E",
+              "texto": "a desnecessidade de dados ou hipóteses."
+            }
+          ],
+          "gabarito": "C",
+          "formato": "multipla_escolha",
+          "comentario": "Criminologia estuda o fenômeno criminal observando a realidade; não se restringe à interpretação normativa.",
+          "justificativa": "Criminologia estuda o fenômeno criminal observando a realidade; não se restringe à interpretação normativa.",
+          "mapaNoId": "pcmg-crim-intro-r1",
+          "ref": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10",
+          "fonte": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–3 e 8–10",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-crim-intro-q02",
+          "cap": "PCMG-CRIM-INTRO",
+          "capNome": "Criminologia: conceito, método, objetos e finalidade",
+          "topico": "pcmg-crim-intro",
+          "materia": "Noções de Criminologia",
+          "tema": "Interdisciplinaridade",
+          "ordem": 2,
+          "enunciado": "A natureza interdisciplinar da Criminologia significa que ela:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "depende exclusivamente do Código Penal."
+            },
+            {
+              "letra": "B",
+              "texto": "utiliza perspectivas de diferentes ciências para compreender o fenômeno criminal."
+            },
+            {
+              "letra": "C",
+              "texto": "não admite pesquisas psicológicas."
+            },
+            {
+              "letra": "D",
+              "texto": "se limita à elaboração de penas."
+            },
+            {
+              "letra": "E",
+              "texto": "recusa análise de políticas públicas."
+            }
+          ],
+          "gabarito": "B",
+          "formato": "multipla_escolha",
+          "comentario": "O estudo criminológico integra contribuições empíricas e teóricas de várias áreas de conhecimento.",
+          "justificativa": "O estudo criminológico integra contribuições empíricas e teóricas de várias áreas de conhecimento.",
+          "mapaNoId": "pcmg-crim-intro-r2",
+          "ref": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10",
+          "fonte": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–3 e 8–10",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-crim-intro-q03",
+          "cap": "PCMG-CRIM-INTRO",
+          "capNome": "Criminologia: conceito, método, objetos e finalidade",
+          "topico": "pcmg-crim-intro",
+          "materia": "Noções de Criminologia",
+          "tema": "Quatro objetos de estudo",
+          "ordem": 3,
+          "enunciado": "A enumeração que contempla os quatro objetos clássicos da Criminologia contemporânea é:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "crime, pena, processo e sentença."
+            },
+            {
+              "letra": "B",
+              "texto": "crime, policial, legislador e juiz."
+            },
+            {
+              "letra": "C",
+              "texto": "culpabilidade, dolo, culpa e tipicidade."
+            },
+            {
+              "letra": "D",
+              "texto": "crime, criminoso, vítima e controle social."
+            },
+            {
+              "letra": "E",
+              "texto": "polícia, processo penal, tribunal e prisão."
+            }
+          ],
+          "gabarito": "D",
+          "formato": "multipla_escolha",
+          "comentario": "Os quatro objetos são crime, criminoso, vítima e controle social.",
+          "justificativa": "Os quatro objetos são crime, criminoso, vítima e controle social.",
+          "mapaNoId": "pcmg-crim-intro-r3",
+          "ref": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10",
+          "fonte": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–3 e 8–10",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-crim-intro-q04",
+          "cap": "PCMG-CRIM-INTRO",
+          "capNome": "Criminologia: conceito, método, objetos e finalidade",
+          "topico": "pcmg-crim-intro",
+          "materia": "Noções de Criminologia",
+          "tema": "Controle social informal",
+          "ordem": 4,
+          "enunciado": "É exemplo predominante de controle social informal:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "atividade de orientação de comportamentos na escola."
+            },
+            {
+              "letra": "B",
+              "texto": "aplicação de pena pelo Poder Judiciário."
+            },
+            {
+              "letra": "C",
+              "texto": "investigação conduzida pela polícia judiciária."
+            },
+            {
+              "letra": "D",
+              "texto": "atuação acusatória do Ministério Público."
+            },
+            {
+              "letra": "E",
+              "texto": "execução de sanção penal em presídio."
+            }
+          ],
+          "gabarito": "A",
+          "formato": "multipla_escolha",
+          "comentario": "A escola atua por socialização e educação; sistema penal exerce controle social formal.",
+          "justificativa": "A escola atua por socialização e educação; sistema penal exerce controle social formal.",
+          "mapaNoId": "pcmg-crim-intro-r4",
+          "ref": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10",
+          "fonte": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–3 e 8–10",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-crim-intro-q05",
+          "cap": "PCMG-CRIM-INTRO",
+          "capNome": "Criminologia: conceito, método, objetos e finalidade",
+          "topico": "pcmg-crim-intro",
+          "materia": "Noções de Criminologia",
+          "tema": "Controle social formal",
+          "ordem": 5,
+          "enunciado": "Entre os exemplos, constitui controle social formal:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "pressão moral entre amigos."
+            },
+            {
+              "letra": "B",
+              "texto": "aconselhamento familiar."
+            },
+            {
+              "letra": "C",
+              "texto": "orientação em grupos comunitários."
+            },
+            {
+              "letra": "D",
+              "texto": "reprovação social de vizinhos."
+            },
+            {
+              "letra": "E",
+              "texto": "investigação policial conduzida por órgão estatal."
+            }
+          ],
+          "gabarito": "E",
+          "formato": "multipla_escolha",
+          "comentario": "A polícia integra controle social formal por atuar institucionalmente mediante regras jurídicas.",
+          "justificativa": "A polícia integra controle social formal por atuar institucionalmente mediante regras jurídicas.",
+          "mapaNoId": "pcmg-crim-intro-r5",
+          "ref": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10",
+          "fonte": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–3 e 8–10",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-crim-intro-q06",
+          "cap": "PCMG-CRIM-INTRO",
+          "capNome": "Criminologia: conceito, método, objetos e finalidade",
+          "topico": "pcmg-crim-intro",
+          "materia": "Noções de Criminologia",
+          "tema": "Criminologia, Penal e Política Criminal",
+          "ordem": 6,
+          "enunciado": "Em comparação com o Direito Penal, a Criminologia se distingue por:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "ser exclusivamente teoria das penas legais."
+            },
+            {
+              "letra": "B",
+              "texto": "ser uma ciência empírica e interdisciplinar de compreensão do fenômeno criminal."
+            },
+            {
+              "letra": "C",
+              "texto": "criar tipos penais com força de lei."
+            },
+            {
+              "letra": "D",
+              "texto": "atuar apenas como órgão estatal de repressão."
+            },
+            {
+              "letra": "E",
+              "texto": "substituir toda disciplina normativa dos crimes."
+            }
+          ],
+          "gabarito": "B",
+          "formato": "multipla_escolha",
+          "comentario": "A Criminologia é voltada à investigação empírica; o Direito Penal é dogmático-normativo.",
+          "justificativa": "A Criminologia é voltada à investigação empírica; o Direito Penal é dogmático-normativo.",
+          "mapaNoId": "pcmg-crim-intro-r6",
+          "ref": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10",
+          "fonte": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–3 e 8–10",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-crim-intro-q07",
+          "cap": "PCMG-CRIM-INTRO",
+          "capNome": "Criminologia: conceito, método, objetos e finalidade",
+          "topico": "pcmg-crim-intro",
+          "materia": "Noções de Criminologia",
+          "tema": "Quatro objetos de estudo",
+          "ordem": 7,
+          "enunciado": "A vítima e os mecanismos de controle social, em uma pesquisa criminológica atual:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "não são objetos de estudo da área."
+            },
+            {
+              "letra": "B",
+              "texto": "devem ser estudados exclusivamente pelo Direito Civil."
+            },
+            {
+              "letra": "C",
+              "texto": "substituem inteiramente o estudo do crime."
+            },
+            {
+              "letra": "D",
+              "texto": "somente interessam à aplicação de penas."
+            },
+            {
+              "letra": "E",
+              "texto": "integram os objetos de estudo ao lado do crime e do criminoso."
+            }
+          ],
+          "gabarito": "E",
+          "formato": "multipla_escolha",
+          "comentario": "O objeto da criminologia contemporânea é quadripartite em sua enumeração clássica.",
+          "justificativa": "O objeto da criminologia contemporânea é quadripartite em sua enumeração clássica.",
+          "mapaNoId": "pcmg-crim-intro-r3",
+          "ref": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10",
+          "fonte": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–3 e 8–10",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        },
+        {
+          "id": "pcmg-crim-intro-q08",
+          "cap": "PCMG-CRIM-INTRO",
+          "capNome": "Criminologia: conceito, método, objetos e finalidade",
+          "topico": "pcmg-crim-intro",
+          "materia": "Noções de Criminologia",
+          "tema": "Controle social informal",
+          "ordem": 8,
+          "enunciado": "O contraste entre família/escola e polícia/Judiciário corresponde, respectivamente, a:",
+          "alternativas": [
+            {
+              "letra": "A",
+              "texto": "política criminal e criminologia clínica."
+            },
+            {
+              "letra": "B",
+              "texto": "controle penal judicial e administrativo."
+            },
+            {
+              "letra": "C",
+              "texto": "controle social informal e controle social formal."
+            },
+            {
+              "letra": "D",
+              "texto": "norma de eficácia contida e limitada."
+            },
+            {
+              "letra": "E",
+              "texto": "direito material e processual."
+            }
+          ],
+          "gabarito": "C",
+          "formato": "multipla_escolha",
+          "comentario": "Socialização familiar/escolar é informal; ação estatal de polícia e justiça é formal.",
+          "justificativa": "Socialização familiar/escolar é informal; ação estatal de polícia e justiça é formal.",
+          "mapaNoId": "pcmg-crim-intro-r4",
+          "ref": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG), pp. 2–3 e 8–10",
+          "fonte": "Criminologia — Conceito, Método, Objeto e Finalidade (apostila do ZIP PCMG)",
+          "localizacaoFonte": "pp. 2–3 e 8–10",
+          "origem": "autoral-fgv",
+          "bancaReferencia": "FGV",
+          "statusEditorial": "aguardando-revisao-humana",
+          "avisoEditorial": "Questão de treino inédita, ainda sem homologação de gabarito por revisor humano."
+        }
+      ]
+    }
+  ]
+}
