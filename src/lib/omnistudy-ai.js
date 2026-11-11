@@ -7,6 +7,7 @@ import {
   normalizeMindMapTree,
   normalizeGanConfrontation,
 } from "@/lib/mindmap-gan-ai";
+import { parseHierarchicalMindMap, enrichHierarchicalMindMap, flatMindMapNodes } from "@/lib/mindmap-text-structure";
 
 const OmniStudyInput = z.discriminatedUnion("task", [
   z.object({
@@ -59,6 +60,7 @@ const OmniStudyInput = z.discriminatedUnion("task", [
   }),
   z.object({
     task: z.literal("cornell-to-mindmap"),
+    structuredInput: z.boolean().optional().default(false),
     topicId: z.string().max(120).optional().default("cornell"),
     title: z.string().min(2).max(300),
     subject: z.string().max(300).optional().default(""),
@@ -218,6 +220,16 @@ const MINDMAP_SCHEMA = {
     },
   },
   required: ["centro", "ramos"],
+};
+
+const HIERARCHY_FIELDS_SCHEMA = {
+  type: "object",
+  properties: {
+    campos: {type: "array", items:{type:"object",properties:{
+      id:{type:"string"},rotulo:{type:"string"},n:{type:"string"},
+      e:{type:"string"},ex:{type:"string"},trap:{type:"string"},src:{type:"string"}
+    },required:["id","rotulo","n","e","ex","trap","src"]}}
+  }, required:["campos"]
 };
 
 const GENERIC_BRANCH = /^(conceito e natureza|regras? gerais?|aspectos?( gerais)?|introdu[cç][aã]o|considera[cç][oõ]es|outros|geral|pista \d+|ramo \d+|subt[oó]pico [a-z0-9]+|conceito \d+)$/i;
