@@ -1,0 +1,41 @@
+/* Cornell: criação manual, edição, revisão com fonte e aprovação de correções. */
+.omni-cornell-workspace{display:grid;grid-template-columns:minmax(210px,0.65fr) minmax(0,1.65fr);gap:16px;align-items:start}
+.omni-cornell-workspace aside{display:flex;flex-direction:column;gap:10px;min-width:0}
+.omni-cornell-workspace h3{font-size:13px;font-weight:800;color:#f1f5f9;margin:9px 0 3px}
+.omni-cornell-workspace strong{font-size:13px;color:#f8fafc}
+.omni-cornell-workspace .omni-label{margin-top:4px}
+.omni-cornell-main{min-width:0;display:flex;flex-direction:column;gap:14px}
+.omni-cornell-editor{display:flex;flex-direction:column;gap:10px}
+.omni-cornell-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:6px 2px}
+.omni-cornell-head h3{margin:3px 0 0;font-size:16px}
+.omni-cornell-head small{color:#c4b5fd;font-size:11px}
+.omni-cornell-local{color:#9ccfad;font-size:11px}
+.omni-cornell-edit-grid{display:grid;grid-template-columns:30% minmax(0,1fr);gap:10px;align-items:start}
+.omni-cornell-edit-grid>div{min-width:0;display:flex;flex-direction:column;gap:6px}
+.omni-cornell-edit-grid .omni-textarea{width:100%;min-height:170px}
+.omni-cornell-editor textarea{resize:vertical;max-width:100%;line-height:1.55}
+.omni-cornell-editor .omni-input{width:100%}
+.omni-cornell-hint{font-size:11px;line-height:1.5;color:#a9b8ce;margin:0}
+.omni-cornell-status{padding:11px 14px;border:1px solid #5672a6;border-radius:9px;background:#14253d;color:#e0eeff;font-size:12px;line-height:1.5}
+.omni-cornell-actions{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:3px}
+.omni-cornell-list{display:flex;flex-direction:column;gap:5px;max-height:220px;overflow-y:auto;min-height:50px}
+.omni-cornell-list .omni-tab-btn{width:100%;justify-content:space-between;text-align:left;gap:9px}
+.omni-cornell-list .omni-tab-btn span{overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1}
+.omni-cornell-list .omni-tab-btn small{font-size:10px;opacity:.8}
+.omni-cornell-create{width:100%;justify-content:center}
+.omni-cornell-cues p{font-size:12px;line-height:1.5;color:#bae6fd;padding:6px 0;margin:0;border-bottom:1px solid #ffffff12;overflow-wrap:anywhere}
+.omni-cornell-review{display:flex;flex-direction:column;gap:10px;border-color:#8f89da}
+.omni-cornell-review>p{margin:0;font-size:12px;line-height:1.6;color:#dbeafe}
+.omni-cornell-issues{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:12px;color:#cbd5e1}
+.omni-cornell-issues li{line-height:1.5;overflow-wrap:anywhere}
+.omni-cornell-issues blockquote{padding:6px 9px;margin:5px 0;border-left:2px solid #a5b4fc;color:#dce8ff;font-style:italic}
+.omni-cornell-review details{border:1px solid #ffffff25;border-radius:8px;padding:9px}
+.omni-cornell-review summary{cursor:pointer;color:#e4dcff;font-size:12px;font-weight:700}
+.omni-cornell-proposal{display:flex;flex-direction:column;gap:5px;padding-top:12px}
+.omni-cornell-proposal b{font-size:11px;color:#c4b5fd;margin-top:4px}
+.omni-cornell-proposal pre{font-family:inherit;white-space:pre-wrap;overflow-wrap:anywhere;max-height:240px;overflow-y:auto;background:#0a1325;color:#e2e8f0;border:1px solid #ffffff16;border-radius:8px;padding:10px;margin:0;font-size:12px}
+.omni-cornell-sheet .omni-cornell-head{padding:12px 15px;border-bottom:1px solid #ffffff18}
+.omni-cornell-sheet .omni-cornell-cues>b,.omni-cornell-sheet .omni-cornell-notes>b,.omni-cornell-sheet .omni-cornell-summary>b{display:block;color:#a5b4fc;font-size:11px;margin-bottom:10px}
+.omni-cornell-sheet .omni-cornell-summary{font-size:12px;line-height:1.6;white-space:pre-wrap}
+@media(max-width:960px){.omni-cornell-workspace{grid-template-columns:minmax(0,1fr)}.omni-cornell-workspace aside{max-width:none}}
+@media(max-width:540px){.omni-cornell-edit-grid{grid-template-columns:1fr}.omni-cornell-head{align-items:flex-start}.omni-cornell-actions button{width:100%}.omni-cornell-workspace{gap:10px}}
