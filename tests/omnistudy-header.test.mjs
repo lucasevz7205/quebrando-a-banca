@@ -1,0 +1,59 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import vm from "node:vm";
+
+const code=fs.readFileSync("public/claude-export/omnistudy-ai.js","utf8");
+const shell=fs.readFileSync("src/components/qb/study-shell.html","utf8");
+
+test("OmniStudy encontra o cabeçalho AXON atual e monta botão visível",()=>{
+  assert.match(shell,/class="row qb-header-utilities"/);
+  assert.match(shell,/omnistudy-ai\\.js\\?v=1/);
+  const inserted=[],nodes=new Map();
+  const header={
+    firstChild:null,
+    insertBefore(child,reference){
+      assert.ok(child.id);
+      inserted.push(child);
+      nodes.set(child.id,child);
+      if(!this.firstChild)this.firstChild=child;
+    },
+  };
+  const newNode=tag=>({
+    tagName:tag,
+    id:"",
+    innerHTML:"",
+    className:"",
+    title:"",
+    classList:{contains:()=>false},
+    addEventListener(){},
+  });
+  const body={appendChild(x){if(x.id)nodes.set(x.id,x);}};
+  const doc={
+    body,
+    readyState:"complete",
+    querySelector(sel){
+      if(sel===".qb-header-utilities, .top-actions")return header;
+      return null;
+    },
+    getElementById(id){return nodes.get(id)||null;},
+    createElement:newNode,
+  };
+  const win={
+    addEventListener(){},
+    localStorage:{getItem(){return null;},setItem(){}},
+  };
+  vm.runInNewContext(code,{document:doc,window:win,console,Date,Math});
+  assert.equal(inserted.length,2);
+  assert.ok(nodes.get("omni-studio-trigger"));
+  assert.ok(nodes.get("omni-pomo-pill"));
+  assert.ok(nodes.get("omni-drawer-backdrop"));
+  assert.match(nodes.get("omni-studio-trigger").innerHTML,/OmniStudy IA/);
+  assert.match(nodes.get("omni-drawer-backdrop").innerHTML,/Quebrando a Banca/);
+  assert.equal(win.QBOmniStudy.version,"2.0.0");
+  assert.equal(typeof win.QBOmniStudy.openStudio,"function");
+});
+test("o atalho do teclado permanece Alt+O",()=>{
+  assert.match(code,/e\\.altKey && \\(e\\.key === "o" \\|\\| e\\.key === "O"\\)/);
+  assert.match(code,/Abrir Estúdio Cognitivo OmniStudy IA \\(Alt\\+O\\)/);
+});
