@@ -517,6 +517,9 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmtPct=x=>isFinite(x)?(Math.round(x*100)+'%'):'–';
 const LETRA={C:'Certo',E:'Errado',B:'Em branco'};
+function alternativasDe(q){return Array.isArray(q?.alternativas)&&q.alternativas.length>=4?q.alternativas:[]}
+function brancoDe(q){return alternativasDe(q).length?'-':'B'}
+function rotuloResposta(q,valor){return valor===brancoDe(q)?'Em branco':alternativasDe(q).length?'Alternativa '+valor:(LETRA[valor]||valor||'–')}
 const CONF={1:'Chute',2:'Dúvida',3:'Certeza'};
 
 /* ---------- método: revisão espaçada ---------- */
@@ -1222,31 +1225,31 @@ function viewItem(){
   const rd=S.round, q=S.q.get(rd.fila[rd.idx]);
   if(rd.learningShown?.idx!==rd.idx)rd.learningShown={idx:rd.idx,at:Date.now()};
   if(!q){ rd.idx++; if(rd.idx>=rd.fila.length){ finalizar(); return viewFim(); } return viewItem(); }
-  const a=rd.atual, pend=rd.pend;
+  const a=rd.atual, pend=rd.pend, alternativas=alternativasDe(q),branco=brancoDe(q),gabaritoTxt=rotuloResposta(q,q.gabarito);
   const bub=(L)=>{
     let cls='bubble'; if((a&&a.marcada===L)||(pend&&pend.marcada===L)) cls+=' picked'; if(a&&q.gabarito===L) cls+=' key';
-    return `<button class="${cls}" data-ans="${L}" ${a?'disabled':''} aria-label="${LETRA[L]}">${L}</button>`};
+    return `<button class="${cls}" data-ans="${L}" ${a?'disabled':''} aria-label="${rotuloResposta(q,L)}">${L}</button>`};
   let mid='';
   if(pend){
-    mid=`<div class="conf" role="group" aria-label="Confiança"><span class="conf-q">Você marcou ${LETRA[pend.marcada]}. Antes de ver o gabarito: qual a sua confiança?</span>
-      ${pend.marcada==='E'?`<div class="note"><label for="corr-txt">Como ficaria certo? (opcional) Reescreva a assertiva corrigida antes de ver o gabarito.</label><textarea id="corr-txt" style="min-height:48px" placeholder="Ex.: a competência é privativa, e não exclusiva…">${esc(rd.corr||'')}</textarea></div>`:''}
+    mid=`<div class="conf" role="group" aria-label="Confiança"><span class="conf-q">Você marcou ${rotuloResposta(q,pend.marcada)}. Antes de ver o gabarito: qual a sua confiança?</span>
+      ${!alternativas.length&&pend.marcada==='E'?`<div class="note"><label for="corr-txt">Como ficaria certo? (opcional) Reescreva a assertiva corrigida antes de ver o gabarito.</label><textarea id="corr-txt" style="min-height:48px" placeholder="Ex.: a competência é privativa, e não exclusiva…">${esc(rd.corr||'')}</textarea></div>`:''}
       <div class="conf-opts">${[1,2,3].map(c=>`<button data-conf="${c}"><span class="mono">${c}</span>${CONF[c]}</button>`).join('')}</div>
       <span class="kbd">teclas 1 · 2 · 3 · Esc troca a resposta</span></div>`;
   }
   if(a&&a.rep){
-    const kind=a.marcada==='B'?'dub':(a.acertou?'ok':'bad');
-    const vt=a.marcada==='B'?`Em branco. O gabarito é ${LETRA[q.gabarito]}.`:(a.acertou?`Acertou na repescagem. Gabarito: ${LETRA[q.gabarito]}.`:`Errou de novo. O gabarito é ${LETRA[q.gabarito]}.`);
+    const kind=a.marcada===branco?'dub':(a.acertou?'ok':'bad');
+    const vt=a.marcada===branco?`Em branco. O gabarito é ${gabaritoTxt}.`:(a.acertou?`Acertou na repescagem. Gabarito: ${gabaritoTxt}.`:`Errou de novo. O gabarito é ${gabaritoTxt}.`);
     mid=`<div class="verdict ${kind}"><span class="vt">${vt}</span><p>${esc(q.comentario)}</p>
       <span class="ref">A repescagem fecha a sessão com uma recuperação correta e não muda a agenda: o item volta na revisão espaçada.</span></div>`;
   } else if(a){
     const r=S.r.get(q.id)||{};
-    const kind=a.marcada==='B'?'dub':(a.acertou?(a.conf===1?'dub':'ok'):'bad');
-    const vt=a.marcada==='B'?`Em branco. O gabarito é ${LETRA[q.gabarito]}.`:(a.acertou?`Acertou. Gabarito: ${LETRA[q.gabarito]}.`:`Errou. O gabarito é ${LETRA[q.gabarito]}.`);
+    const kind=a.marcada===branco?'dub':(a.acertou?(a.conf===1?'dub':'ok'):'bad');
+    const vt=a.marcada===branco?`Em branco. O gabarito é ${gabaritoTxt}.`:(a.acertou?`Acertou. Gabarito: ${gabaritoTxt}.`:`Errou. O gabarito é ${gabaritoTxt}.`);
     let calib='';
-    if(a.marcada!=='B'&&!a.acertou&&a.conf===3) calib=`<span class="calib alert">Erro com certeza: confira o trecho que sustentou sua escolha e compare com a regra do comentário.</span>`;
+    if(a.marcada!==branco&&!a.acertou&&a.conf===3) calib=`<span class="calib alert">Erro com certeza: confira o trecho que sustentou sua escolha e compare com a regra do comentário.</span>`;
     else if(a.acertou&&a.conf===1) calib=`<span class="calib">Acerto no chute: o item foi para o caderno e só sai com dois acertos seguros.</span>`;
     else if(a.acertou&&a.conf===3) calib=`<span class="calib">Calibrado: certeza e acerto.</span>`;
-    if(window.QBLearning) calib=window.QBLearning.feedback(S,q,a)||calib;
+    if(window.QBLearning&&!alternativas.length) calib=window.QBLearning.feedback(S,q,a)||calib;
     const foiCaderno=(kind!=='ok')?' Este item está no caderno de erros.':'';
     const prox=r.proxRevisao?` Próxima revisão em ${ddmm(r.proxRevisao)}.`:'';
     const precisaOrigem=exigeJust(a);
@@ -1257,7 +1260,7 @@ function viewItem(){
       <span class="ref">${q.ref?('Ver '+esc(q.ref)+'.'):''}${esc(foiCaderno+prox)}</span>
       ${atalhosQuestao(q)}
       ${precisaOrigem?chipsOrigem(q.id,r.origem):''}
-      ${precisaOrigem?`<div class="just"><label for="just-txt">${a.marcada!=='B'&&!a.acertou&&a.conf===3?'Erro com certeza: o que te deu certeza? Escreva o que te levou a marcar e qual é a regra certa, com as suas palavras.':`Justifique para seguir: por que você ${a.marcada==='B'?'deixou em branco':(a.acertou?'chutou':'errou')} e qual é a regra certa, com as suas palavras. Se puder, dê um exemplo seu.`}</label>
+      ${precisaOrigem?`<div class="just"><label for="just-txt">${a.marcada!==branco&&!a.acertou&&a.conf===3?'Erro com certeza: o que te deu certeza? Escreva o que te levou a marcar e qual é a regra certa, com as suas palavras.':`Justifique para seguir: por que você ${a.marcada===branco?'deixou em branco':(a.acertou?'chutou':'errou')} e qual é a regra certa, com as suas palavras. Se puder, dê um exemplo seu.`}</label>
         <textarea id="just-txt" data-just="${esc(q.id)}" placeholder="Ex.: confundi competência exclusiva com privativa; a exclusiva não pode ser delegada porque…">${esc(rd.just||'')}</textarea>
         <span class="saved" id="just-cnt">${justMsg(nj,r.origem)}</span></div>`:''}</div>`;
   }
@@ -1269,9 +1272,9 @@ function viewItem(){
     <div class="item-head"><span class="item-num">${emRep(rd)?'REPESCAGEM · ':''}ITEM ${String(q.ordem||'').padStart(2,'0')}</span><span class="tag">${esc(tag)}</span></div>
     ${q.statusEditorial==='aguardando-revisao-humana'?'<p class="qb-rf-pending" role="note"><strong>Questão autoral em revisão editorial.</strong> O gabarito é provisório e não corresponde a um item oficial do CEBRASPE. Use a explicação para estudo e confira a fonte quando necessário.</p>':''}
     ${textoHTML(q)}<div class="statement">${statementHTML(q,!!a)}</div>
-    <div class="answers">${bub('C')}${bub('E')}
-      <button class="blank${a&&a.marcada==='B'?' picked':''}" data-ans="B" ${a?'disabled':''}>Deixar em branco</button>
-      ${a||pend?'':'<span class="kbd">teclas C · E · B</span>'}</div>
+    <div class="answers${alternativas.length?' qb-mc-answers':''}">${alternativas.length?alternativas.map(opt=>`<button type="button" class="qb-mc-choice${(a&&a.marcada===opt.letra)||(pend&&pend.marcada===opt.letra)?' picked':''}${a&&q.gabarito===opt.letra?' key':''}" data-ans="${esc(opt.letra)}" aria-label="Alternativa ${esc(opt.letra)}: ${esc(opt.texto)}" ${a?'disabled':''}><strong>${esc(opt.letra)})</strong><span>${esc(opt.texto)}</span></button>`).join(''):bub('C')+bub('E')}
+      <button class="blank${a&&a.marcada===branco?' picked':''}" data-ans="${branco}" ${a?'disabled':''}>Deixar em branco</button>
+      ${a||pend?'':`<span class="kbd">${alternativas.length?'teclas A · B · C · D · E · 0 para branco':'teclas C · E · B'}</span>`}</div>
     ${mid}
   </article>
   <div class="next-row" style="margin-top:14px">
