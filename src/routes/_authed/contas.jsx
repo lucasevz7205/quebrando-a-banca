@@ -15,15 +15,17 @@ export const Route = createFileRoute("/_authed/contas")({
   component:StudyAccountsPage
 });
 
-function decodeCatalog(value) {
+function decodeCatalog(value,collection) {
   if(Array.isArray(value)) return value;
   if(value && typeof value==="object") {
-    if(Array.isArray(value.records))return value.records;
-    if(Array.isArray(value.documents))return value.documents;
-    return Object.entries(value).map(([id,doc])=>
-      doc&&typeof doc==="object"&&!Array.isArray(doc)?{...doc,id:doc.id||id}:null).filter(Boolean);
+    for(const key of [collection,"records","documents","questoes","questions","itens","items","edital","topicos"]) {
+      if(Array.isArray(value[key])) return value[key];
+    }
+    const entries=Object.entries(value);
+    if(entries.length&&entries.every(([,doc])=>doc&&typeof doc==="object"&&!Array.isArray(doc)))
+      return entries.map(([id,doc])=>({...doc,id:doc.id||id}));
   }
-  throw new Error("Arquivo inválido. Esperado um vetor JSON de documentos com id.");
+  throw new Error("JSON não reconhecido. Use uma lista de documentos ou { \""+collection+"\": [...] }. PDFs devem ser convertidos e conferidos antes de importar.");
 }
 
 function StudyAccountsPage() {
@@ -64,7 +66,7 @@ function StudyAccountsPage() {
       if(!target||!chosen)throw new Error("Selecione um projeto de estudo.");
       if(!file)throw new Error("Selecione um arquivo JSON com o conteúdo desta coleção.");
       if(file.size>20*1024*1024)throw new Error("Arquivo acima de 20 MB. Divida a importação em arquivos menores.");
-      const text=await file.text(),parsed=JSON.parse(text),documents=decodeCatalog(parsed);
+      const text=await file.text(),parsed=JSON.parse(text),documents=decodeCatalog(parsed,collection);
       if(!documents.length)throw new Error("Nenhum registro encontrado no arquivo.");
       let inserted=0,skipped=0;
       for(let i=0;i<documents.length;i+=25){
@@ -150,7 +152,7 @@ function StudyAccountsPage() {
           <input required type="file" accept=".json,application/json" onChange={e=>setFile(e.target.files?.[0]||null)}/></label>
         <button className="qb-primary" type="submit" disabled={busy||!chosen||!file}>Importar coleção</button>
       </form>
-      <p style={{fontSize:12}}>Importe primeiro <strong>edital</strong> e <strong>questoes</strong>. Para mapas e flashcards, importe <strong>revisao</strong>. Pegadinhas ficam em <strong>pegadinhas</strong>. O motor atual aceita apenas questões de Certo/Errado, não múltipla escolha.</p>
+      <p style={{fontSize:12}}>Aceita lista JSON ou objeto com <code>questoes</code> / <code>edital</code>. Arquivos PDF não são convertidos automaticamente. Para mapas e flashcards importe <strong>revisao</strong>. O treino clássico deste projeto utiliza itens Certo/Errado; questões de múltipla escolha exigem formato e correção próprios, portanto não serão convertidas silenciosamente.</p>
     </section>
     {status&&<p role="status" style={{padding:12,border:"1px solid #b5d3bb",borderRadius:9}}>{status}</p>}
     {error&&<p role="alert" style={{padding:12,border:"1px solid #e2b1b1",borderRadius:9,color:"#a52222"}}>{error}</p>}
