@@ -61,8 +61,8 @@ function StudyAccountsPage() {
   const importFile=event=>{
     event.preventDefault();
     run(async()=>{
-      if(!target||!chosen||chosen.active)throw new Error("Selecione um concurso desativado.");
-      if(!file)throw new Error("Selecione um arquivo .json com o conteúdo desta coleção.");
+      if(!target||!chosen)throw new Error("Selecione um projeto de estudo.");
+      if(!file)throw new Error("Selecione um arquivo JSON com o conteúdo desta coleção.");
       if(file.size>20*1024*1024)throw new Error("Arquivo acima de 20 MB. Divida a importação em arquivos menores.");
       const text=await file.text(),parsed=JSON.parse(text),documents=decodeCatalog(parsed);
       if(!documents.length)throw new Error("Nenhum registro encontrado no arquivo.");
@@ -93,17 +93,19 @@ function StudyAccountsPage() {
             <strong>{a.examName}</strong> <span className="qb-pill">{a.pending?"Pendente":a.active?"Ativo":"Desativado"}</span>
             <p style={{fontSize:13,overflowWrap:"anywhere"}}>Login (ID): {a.userId}<br/>
             {a.examDate?"Prova: "+a.examDate+" · ":""}
-            Edital: {a.ready.edital?"cadastrado":"pendente"} · Questões: {a.ready.questoes?"cadastradas":"pendentes"}</p>
+            Edital: {a.ready.edital?"cadastrado":"pendente"} · Questões: {a.ready.questoes?"cadastradas":"pendentes"}<br/>
+            {!a.ready.edital||!a.ready.questoes?"O acesso pode ser habilitado, mas o treino ficará vazio até a importação.":""}</p>
           </div>
           <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
             {a.pending&&<a href="#importar-materiais" onClick={()=>setTarget(a.id)}>Providenciar materiais</a>}
             {!a.active&&!/^[a-f0-9]{24}$/i.test(a.userId)&&<button type="button" className="qb-primary" onClick={()=>{setReservedTarget(a.id);setRegisteredUserId("");}}>Vincular login</button>}
             {a.active&&<Link to="/estudar" search={{conta:a.id}} className="qb-primary">Ver ambiente</Link>}
-            <button className="qb-primary" type="button" disabled={busy||!a.active&&(!a.ready.edital||!a.ready.questoes||!/^[a-f0-9]{24}$/i.test(a.userId))}
+            <button className="qb-primary" type="button" disabled={busy||!a.active&&!/^[a-f0-9]{24}$/i.test(a.userId)}
               onClick={()=>run(async()=>{
-                await change({data:{accountId:a.id,active:!a.active}});
-                setStatus(a.active?"Ambiente desativado; dados preservados.":"Ambiente ativado para o login vinculado.");
-              })}>{a.active?"Desativar":"Ativar"}</button>
+                const needsContent=!a.ready.edital||!a.ready.questoes;
+                await change({data:{accountId:a.id,active:!a.active,allowEmpty:needsContent}});
+                setStatus(a.active?"Ambiente desativado; dados preservados.":needsContent?"Acesso habilitado para o login vinculado. Importe edital e questões nesta conta para liberar o Treinar.":"Ambiente ativado para o login vinculado.");
+              })}>{a.active?"Desativar":!a.ready.edital||!a.ready.questoes?"Habilitar acesso (sem questões)":"Ativar"}</button>
           </div>
         </article>)}
       </div>}
@@ -133,12 +135,12 @@ function StudyAccountsPage() {
     </section>
     <section className="qb-card" id="importar-materiais">
       <h2>Importar materiais do concurso</h2>
-      <p>Importe um JSON por coleção. Os IDs existentes não são sobrescritos, e respostas, rodadas e Caderno de Erros não podem ser importados por esta tela.</p>
+      <p>Selecione o projeto vinculado ao candidato. Agora é possível acrescentar material mesmo com o acesso ativo, sem interromper a sessão. Os IDs existentes não são sobrescritos e o histórico do aluno permanece separado.</p>
       <form onSubmit={importFile} style={{display:"grid",gap:12}}>
         <label>Ambiente de destino
           <select required value={target} onChange={e=>setTarget(e.target.value)}>
-            <option value="">Selecione o concurso desativado</option>
-            {accounts.filter(a=>!a.active).map(a=><option key={a.id} value={a.id}>{a.examName} · {a.userId}</option>)}
+            <option value="">Selecione o projeto do candidato</option>
+            {accounts.filter(a=>!a.pending).map(a=><option key={a.id} value={a.id}>{a.examName} · {a.userId}{a.active?" · Ativo":""}</option>)}
           </select></label>
         <label>Tipo de material
           <select value={collection} onChange={e=>setCollection(e.target.value)}>
