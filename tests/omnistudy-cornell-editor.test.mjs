@@ -114,3 +114,47 @@ test("integração está conectada ao servidor autenticado e usa versão nova pu
  assert.match(sw,/omnistudy-cornell\.js\?v=1/);
  assert.match(sw,/omnistudy-ai\.js\?v=2/);
 });
+test("fluxo de interface: digitar, salvar, revisar, aprovar e desfazer sem sobrescrita",async()=>{
+ const model=api(),events=new Map();
+ let html="";
+ const body={
+   get innerHTML(){return html;},
+   set innerHTML(value){html=value;events.clear();for(const match of value.matchAll(/id="([^"]+)"/g)){
+     const id=match[1];events.set("#"+id,{
+       value:"",listeners:new Map(),
+       addEventListener(name,fn){this.listeners.set(name,fn)},
+       trigger(name){return this.listeners.get(name)?.()}
+     });
+   } if(value.includes("omni-cornell-local"))events.set(".omni-cornell-local",{textContent:""});},
+   querySelector(sel){return events.get(sel)||null;},
+   querySelectorAll(){return []}
+ };
+ const state={subject:"Constitucional",cornellNotes:[],selectedCornellId:null,coverCornellNotes:false};
+ let saved=0,calls=0;
+ const opts={state,body,saveState:()=>{saved++;},callAI:async req=>{
+   calls++;assert.equal(req.task,"review-cornell");
+   assert.match(req.notes,/anotação digitada/);
+   return {...proposal,referenceMode:"revisao_preliminar",notice:"Sem fonte: não verificado"};
+ }};
+ model.render(opts);
+ assert.equal(calls,0);
+ events.get("#omni-cornell-new").trigger("click");
+ assert.equal(state.cornellNotes.length,1);
+ assert.equal(state.cornellNotes[0].origin,"manual");
+ events.get("#omni-cornell-notes-edit").value="Minha anotação digitada no editor sobre poderes.";
+ events.get("#omni-cornell-notes-edit").trigger("input");
+ assert.match(state.cornellNotes[0].notes,/anotação digitada/);
+ assert.equal(calls,0);
+ assert.ok(saved>=2);
+ await events.get("#omni-cornell-review").trigger("click");
+ assert.equal(calls,1);
+ assert.match(state.cornellNotes[0].notes,/anotação digitada/);
+ assert.ok(state.cornellNotes[0].cornellReview);
+ assert.match(html,/Revisão sugerida, aguardando aprovação/);
+ events.get("#omni-cornell-apply").trigger("click");
+ assert.equal(state.cornellNotes[0].notes,"O poder emana do povo.");
+ assert.ok(state.cornellNotes[0].cornellUndo);
+ events.get("#omni-cornell-undo").trigger("click");
+ assert.match(state.cornellNotes[0].notes,/anotação digitada/);
+});
+
