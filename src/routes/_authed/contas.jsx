@@ -8,25 +8,13 @@ import {
   setStudyAccountActiveForAdmin, importStudyContentForAdmin, bindReservedStudyAccountForAdmin
 } from "@/lib/study-admin";
 import {STUDY_CONTENT_COLLECTIONS} from "@/lib/study-provisioning";
+import {decodeStudyCatalog,auditStudyCatalog} from "@/lib/study-import";
 
 export const Route = createFileRoute("/_authed/contas")({
   loader:()=>listStudyAccountsForAdmin(),
   head:()=>({meta:[{title:"Contas e concursos · Quebrando a Banca"}]}),
   component:StudyAccountsPage
 });
-
-function decodeCatalog(value,collection) {
-  if(Array.isArray(value)) return value;
-  if(value && typeof value==="object") {
-    for(const key of [collection,"records","documents","questoes","questions","itens","items","edital","topicos"]) {
-      if(Array.isArray(value[key])) return value[key];
-    }
-    const entries=Object.entries(value);
-    if(entries.length&&entries.every(([,doc])=>doc&&typeof doc==="object"&&!Array.isArray(doc)))
-      return entries.map(([id,doc])=>({...doc,id:doc.id||id}));
-  }
-  throw new Error("JSON não reconhecido. Use uma lista de documentos ou { \""+collection+"\": [...] }. PDFs devem ser convertidos e conferidos antes de importar.");
-}
 
 function StudyAccountsPage() {
   const accounts=Route.useLoaderData()||[];
@@ -66,7 +54,7 @@ function StudyAccountsPage() {
       if(!target||!chosen)throw new Error("Selecione um projeto de estudo.");
       if(!file)throw new Error("Selecione um arquivo JSON com o conteúdo desta coleção.");
       if(file.size>20*1024*1024)throw new Error("Arquivo acima de 20 MB. Divida a importação em arquivos menores.");
-      const text=await file.text(),parsed=JSON.parse(text),documents=decodeCatalog(parsed,collection);
+      const text=await file.text(),parsed=JSON.parse(text),documents=auditStudyCatalog(decodeStudyCatalog(parsed,collection),collection);
       if(!documents.length)throw new Error("Nenhum registro encontrado no arquivo.");
       let inserted=0,skipped=0;
       for(let i=0;i<documents.length;i+=25){
