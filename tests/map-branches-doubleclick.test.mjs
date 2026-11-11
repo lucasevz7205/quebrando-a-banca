@@ -76,8 +76,10 @@ test("um clique seleciona, dois cliques/taps abrem; mudanças de nó não viram 
  assert.equal(activate("0",{detail:1,timeStamp:390}),true);
  assert.deepEqual(actions.at(-1),["0",true,true]);
  assert.equal(activate("0",{detail:1,timeStamp:1000}),false);
- assert.equal(activate("0",{detail:1,timeStamp:1500}),false);
- assert.equal(activate("0",{detail:2,timeStamp:1900}),true);
+ // 11/11/2026: tocar de novo no conceito já selecionado abre, mesmo devagar (celular)
+ assert.equal(activate("0",{detail:1,timeStamp:1500}),true);
+ assert.equal(activate("0",{detail:1,timeStamp:4000}),false);
+ assert.equal(activate("0",{detail:2,timeStamp:4100}),true);
 });
 test("seleção por teclado não aciona explicação nem cria duplo clique falso",()=>{
  const values=[];

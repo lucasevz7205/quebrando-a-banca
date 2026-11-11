@@ -32,23 +32,35 @@ export function nearestProjectedHit(nodes, pointer, radius=26){
   }
   return best?.path??null;
 }
-/* Labels closer to the focus take priority; overlapping less-important labels
- * disappear while the spheres remain clickable via raycasting and hit tolerance.
+/* Labels closer to the focus take priority. When the full label collides, try
+ * the short form (initials, entry.shortWidth) before hiding it, so the student
+ * still sees which concept each sphere is (11/11/2026).
  */
+export function initials(title,max=4){
+  const words=String(title||"").split(/\s+/).filter(w=>w.length>2||/^[A-ZÀ-Ú0-9]/.test(w));
+  const s=(words.length?words:[String(title||"?")]).slice(0,max).map(w=>w[0].toUpperCase()).join("");
+  return s||"?";
+}
 export function resolveLabelPositions(candidates,{width,height,padding=5}={}){
   const placed=[];
   const results=new Map();
   const ordered=[...candidates].sort((a,b)=>a.priority-b.priority || a.index-b.index);
+  const fits=(x,y,w,h)=>{
+    const left=x-w/2,right=x+w/2,top=y+10,bottom=top+h;
+    if(left<2||right>width-2||top<2||bottom>height-2)return null;
+    if(placed.some(b=>left<b.right+padding&&right+padding>b.left&&top<b.bottom+padding&&bottom+padding>b.top))return null;
+    return {left,right,top,bottom};
+  };
   for(const entry of ordered){
-    const w=Math.max(50,Math.min(entry.width||150,Math.max(50,width-12)));
-    const h=entry.height||32;
     const x=entry.x, y=entry.y;
     if(!Number.isFinite(x)||!Number.isFinite(y)||x<2||x>width-2||y<2||y>height-2)continue;
-    const left=x-w/2,right=x+w/2,top=y+10,bottom=top+h;
-    if(left<2||right>width-2||top<2||bottom>height-2)continue;
-    if(placed.some(b=>left<b.right+padding&&right+padding>b.left&&top<b.bottom+padding&&bottom+padding>b.top))continue;
-    placed.push({left,right,top,bottom});
-    results.set(entry.path,{x,y});
+    const h=entry.height||32;
+    const w=Math.max(50,Math.min(entry.width||150,Math.max(50,width-12)));
+    let box=fits(x,y,w,h), short=false;
+    if(!box && entry.shortWidth){ box=fits(x,y,Math.max(28,entry.shortWidth),h); short=!!box; }
+    if(!box)continue;
+    placed.push(box);
+    results.set(entry.path,short?{x,y,short:true}:{x,y});
   }
   return results;
 }

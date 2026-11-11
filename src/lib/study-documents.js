@@ -1,7 +1,7 @@
 const COLLECTIONS = new Set([
   "questoes", "respostas", "rodadas", "simulados", "cartoes_aval", "revisao",
   "edital", "materiais", "pontos", "textos", "pegadinhas", "analise", "config", "diario", "planejamento",
-  "aprendizagem", "aprendizagem_conteudos",
+  "aprendizagem", "aprendizagem_conteudos", "evocacoes",
 ]);
 const PAGE_SIZE = 500;
 const CHUNK = 7000;

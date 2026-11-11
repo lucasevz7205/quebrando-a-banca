@@ -1,3 +1,16 @@
+/* Profundidade semântica: fixa por status de domínio, nunca aleatória. */
+export const STATUS_DEPTH = Object.freeze({
+  deficiente: 1.6,
+  "bom-sem-retencao": 1.1,
+  "em-desenvolvimento": .8,
+  "amostra-insuficiente": .3,
+  "sem-evidencia": 0,
+  forte: -.8,
+});
+export function statusDepth(status) {
+  return STATUS_DEPTH[status] ?? 0;
+}
+
 // Partition each branch into angular slots according to its descendant leaves.
 export function placeMap(graph) {
   const tree = new Map([["root", []]]);
@@ -11,22 +24,19 @@ export function placeMap(graph) {
     weights.set(node.path, n);
     return n;
   }
-  function visit(node, depth, a, b, branchAngle, siblingIndex = 0, siblings = 1) {
+  function visit(node, depth, a, b, branchAngle) {
     const angle = (a + b) / 2;
     // Wide, stable radial bands. Each level occupies its own navigable ring.
     const radius = 4.7 + (depth - 1) * 3.35 + Math.pow(Math.max(0, depth - 1), 1.15) * .23;
-    // Dense sibling groups also fan out in depth, so nodes do not share
-    // nearly identical mouse hit areas when the angular sector is narrow.
-    const siblingSpread = Math.min(11, Math.max(2.4, siblings * .95));
-    const siblingZ = siblings > 1 ? (siblingIndex / (siblings - 1) - .5) * siblingSpread : 0;
-    const branchZ = Math.sin(branchAngle * 1.35 + depth * .45) * Math.min(2.4, radius * .24);
+    // 2,5D (11/11/2026): o plano XY guarda a estrutura do mapa; a profundidade
+    // só codifica o diagnóstico (o que precisa de reforço fica mais perto do estudante).
     positions.push({ ...node, depth, x: Math.cos(angle) * radius, y: Math.sin(angle) * radius,
-      z: branchZ + siblingZ });
+      z: statusDepth(node.status) });
     let start = a;
     const children = tree.get(node.path), total = children.reduce((sum, child) => sum + weights.get(child.path), 0);
-    for (const [index,child] of children.entries()) {
+    for (const child of children) {
       const end = start + (b - a) * weights.get(child.path) / total;
-      visit(child, depth + 1, start, end, branchAngle, index, children.length);
+      visit(child, depth + 1, start, end, branchAngle);
       start = end;
     }
   }
