@@ -2,7 +2,7 @@ import {test} from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import vm from "node:vm";
-import {decodeStudyCatalog,auditStudyCatalog,normalizeStudyQuestion} from "../src/lib/study-import.js";
+import {auditStudyCatalog,normalizeStudyQuestion} from "../src/lib/study-import.js";
 import {validateStudyContentBatch} from "../src/lib/study-provisioning.js";
 
 const template={
