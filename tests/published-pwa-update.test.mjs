@@ -15,7 +15,7 @@ test("o ícone instalado usa sempre a rota estável do mesmo domínio",()=>{
  assert.match(agents,/https:\/\/quebrando-a-banca-a2c91a3c\.base44\.app/);
 });
 test("cache PWA revalida os recursos e não intercepta documentos pessoais/API",()=>{
- assert.match(sw,/const CACHE_NAME = "qb-static-axon-v3"/);
+ assert.match(sw,/const CACHE_NAME = "qb-static-axon-v4"/);
  assert.match(sw,/fetch\(request, \{ cache: "no-cache" \}\)/);
  assert.match(sw,/url\.pathname\.startsWith\("\/api\/"\)/);
  assert.match(sw,/url\.pathname\.startsWith\("\/_server"\)/);
