@@ -6,6 +6,44 @@ import { enumerateNodes, WRONG, RIGHT } from "./editorial-engine.js";
 
 const asText = (v, max = 12000) => String(v == null ? "" : v).trim().slice(0, max);
 
+export function deduceConceptLabel(title = "", body = "", fallback = "Conceito") {
+  const combined = `${title} ${body}`.toLowerCase();
+  if (/exce[çc]|salvo|ressalv|exceto|sem preju[íi]zo|ressalva/i.test(combined)) return "Exceção Taxativa";
+  if (/veda[çc]|proibi|imposs[íi]vel|n[ãa]o cabe|inadmiss[íi]vel|defeso|vedado/i.test(combined)) return "Vedação Expressa";
+  if (/qu[óo]rum|maioria\s+absoluta|maioria\s+simples|dois\s+turnos|3\/5|vota[çc]/i.test(combined)) {
+    if (/absoluta/i.test(combined)) return "Maioria Absoluta";
+    if (/3\/5/i.test(combined)) return "Quórum 3/5";
+    return "Quórum e Rito";
+  }
+  if (/prazo|dias|sess[õo]es|temp|prorroga|improrro/i.test(combined)) {
+    const m = combined.match(/\b(\d+)\s*(dias|sess[õo]es|horas|meses)\b/i);
+    return m ? `Prazo: ${m[1]} ${m[2]}` : "Prazo Legal";
+  }
+  if (/compet[êe]ncia|atribui|privativ|exclusiv|iniciativa|quem/i.test(combined)) {
+    if (/privativ/i.test(combined)) return "Competência Privativa";
+    if (/exclusiv/i.test(combined)) return "Competência Exclusiva";
+    return "Competência";
+  }
+  if (/requisito|condi[çc]|element|pressupost|validade/i.test(combined)) return "Requisito Vinculado";
+  if (/anula[çc]|revoga[çc]|extin[çc]|invalida|cass/i.test(combined)) {
+    if (/anula/i.test(combined)) return "Anulação (Ilegalidade)";
+    if (/revoga/i.test(combined)) return "Revogação (Mérito)";
+    return "Extinção / Invalidação";
+  }
+  if (/recurso|plen[áa]rio|controle|judicial|mandado/i.test(combined)) return "Recurso e Controle";
+  if (/efeito|consequ[êe]n|ex tunc|ex nunc|efic[áa]cia|retroat/i.test(combined)) {
+    if (/ex tunc|retroat/i.test(combined)) return "Efeito Ex Tunc";
+    if (/ex nunc/i.test(combined)) return "Efeito Ex Nunc";
+    return "Eficácia e Efeitos";
+  }
+  if (/princ[íi]pio|matriz|fundament|norma/i.test(combined)) return "Princípio Matriz";
+  if (/regra|geral|ordin[áa]r/i.test(combined)) return "Regra Geral";
+  if (/s[íi]ntese|resumo|conclus|executiv/i.test(combined)) return "Síntese";
+  if (/exemplo|caso|hip[óo]tese|pr[áa]tic/i.test(combined)) return "Caso Prático";
+  if (/pegadinha|armadilha|alerta|cuidado|aten[çc]|banca/i.test(combined)) return "Alerta de Prova";
+  return fallback;
+}
+
 export function slugifyNodeId(value, fallback = "no") {
   const clean = asText(value, 120)
     .normalize("NFD")
@@ -47,8 +85,11 @@ export function normalizeMindMapTree(rawMap, fallbackTitle = "Mapa Mental", pref
     const corNum = Number(node.cor);
     const cor = Number.isInteger(corNum) && corNum >= 1 && corNum <= 8 ? corNum : branchColor;
     const caixa = Boolean(node.caixa);
-
     const rawX = node.x && typeof node.x === "object" ? node.x : {};
+    const rotulo = asText(
+      node.rotulo || node.tag || node.badge || deduceConceptLabel(t, n || rawX.e || "", ""),
+      120
+    );
     const e = asText(rawX.e || node.explicacao || "", 2400);
     const ex = asText(rawX.ex || node.exemplo || "", 1200);
     const trap = asText(rawX.trap || node.pegadinha || "", 1200);
@@ -67,6 +108,7 @@ export function normalizeMindMapTree(rawMap, fallbackTitle = "Mapa Mental", pref
       : [];
 
     const out = { id, t, cor };
+    if (rotulo) out.rotulo = rotulo;
     if (caixa) out.caixa = true;
     if (n) out.n = n;
     if (hasX) {
@@ -150,13 +192,18 @@ export function cornellToMindMapStructure(note, options = {}) {
       .filter(Boolean);
 
     const mainExplanation = subLines[0] || block || cue;
-    const children = subLines.slice(1, 7).map((sub, subIdx) => {
+    const branchLabel = deduceConceptLabel(cue, mainExplanation, `Conceito ${idx + 1}`);
+    const children = subLines.slice(1, 8).map((sub, subIdx) => {
       const colonParts = sub.split(/:\s+/);
       const subTitle = colonParts.length > 1 ? colonParts[0].slice(0, 90) : sub.slice(0, 80);
       const subDesc = colonParts.length > 1 ? colonParts.slice(1).join(": ") : sub;
+      const subLabel = colonParts.length > 1 && colonParts[0].length <= 25
+        ? colonParts[0].replace(/^[•*\-–—\d.)\s]+/, "").trim()
+        : deduceConceptLabel(subTitle, subDesc, "Subtópico");
       return {
         id: `${prefix}-r${idx + 1}-${subIdx + 1}`,
         t: subTitle,
+        rotulo: subLabel,
         n: subDesc.slice(0, 220),
         cor: (idx % 8) + 1,
         x: {
@@ -169,6 +216,7 @@ export function cornellToMindMapStructure(note, options = {}) {
     ramos.push({
       id: `${prefix}-r${idx + 1}`,
       t: cue.replace(/\?+$/, "").trim() || `Conceito ${idx + 1}`,
+      rotulo: branchLabel,
       n: mainExplanation.slice(0, 260),
       cor: (idx % 8) + 1,
       x: {
@@ -189,16 +237,19 @@ export function cornellToMindMapStructure(note, options = {}) {
     ramos.push({
       id: `${prefix}-sintese`,
       t: "Síntese e Pontos-Chave (Cornell)",
+      rotulo: "Síntese",
       n: summary.slice(0, 280),
       cor: ((ramos.length) % 8) + 1,
       caixa: true,
       x: {
         e: summary,
+        trap: `Atenção: sínteses de rodapé não substituem a verificação dos requisitos e exceções específicas de cada instituto.`,
         src: referenceText ? referenceText.slice(0, 240) : `Síntese Cornell · ${title}`,
       },
       f: synthesisParts.slice(0, 5).map((part, i) => ({
         id: `${prefix}-sintese-${i + 1}`,
         t: part.slice(0, 84),
+        rotulo: deduceConceptLabel(part, part, "Conclusão"),
         n: part,
         cor: ((ramos.length) % 8) + 1,
         x: {

@@ -582,6 +582,23 @@
     return state?.selectedCornellId || null;
   }
 
+  function deduceLabelLocal(title, body, fallback = "Conceito Chave") {
+    const combined = `${title || ""} ${body || ""}`.toLowerCase();
+    if (/(exce[çc][ãa]o|ressalva|salvo|exceto|n[ãa]o se aplica|afasta)/i.test(combined)) return "Exceção Taxativa";
+    if (/(qu[óo]rum|maioria|dois ter[çc]os|tr[êe]s quintos)/i.test(combined)) return "Quórum Qualificado";
+    if (/(prazo|tempestiv|dias|meses|anos|decad[êe]ncia|prescri)/i.test(combined)) return "Prazo Legal";
+    if (/(veda[çc][ãa]o|proibi|defeso|vedado|impedido|il[íi]cito)/i.test(combined)) return "Vedação Expressa";
+    if (/(compet[êe]ncia privativa|privativamente|exclusiv)/i.test(combined)) return "Competência Privativa";
+    if (/(compet[êe]ncia comum|concorrente)/i.test(combined)) return "Competência Concorrente";
+    if (/(requisito|condi[çc][ãa]o|pressuposto|elemento)/i.test(combined)) return "Requisito Legal";
+    if (/(anula[çc][ãa]o|nulidade|revoga[çc][ãa]o|convalida)/i.test(combined)) return "Desfazimento do Ato";
+    if (/(recurso|agravo|apela[çc][ãa]o|embargos)/i.test(combined)) return "Garantia / Recurso";
+    if (/(efeito|efic[áa]cia|retroat)/i.test(combined)) return "Efeito Jurídico";
+    if (/(pegadinha|armadilha|cebraspe|falso|invers[ãa]o)/i.test(combined)) return "Alerta de Banca";
+    if (/(regra geral|em regra|padr[ãa]o)/i.test(combined)) return "Regra Geral";
+    return fallback;
+  }
+
   function buildMindMapFromNote(note, options = {}) {
     if (global.QBMindMapStudio && typeof global.QBMindMapStudio.cornellToMindMap === "function") {
       return global.QBMindMapStudio.cornellToMindMap(note, options);
@@ -594,32 +611,43 @@
       .filter(Boolean);
     const branchTitles = cues.length ? cues : lines.slice(0, 4);
     const ramos = (branchTitles.length ? branchTitles : ["Conceito Base", "Regra e Aplicação", "Exceções"]).map(
-      (cue, idx) => ({
-        id: "cornell-r" + (idx + 1),
-        t: asText(cue, 160).replace(/\?+$/, "") || "Ramo " + (idx + 1),
-        rotulo: "Pista " + (idx + 1),
-        n: asText(lines[idx] || note?.summary || cue, 260),
-        cor: (idx % 8) + 1,
-        x: {
-          e: asText(lines[idx] || note?.notes || cue, 1200),
-          src: asText(note?.referenceText || "Caderno Cornell · " + title, 240),
-        },
-        f: lines.slice(idx + 1, idx + 3).map((sub, sIdx) => ({
-          id: "cornell-r" + (idx + 1) + "-" + (sIdx + 1),
-          t: asText(sub, 90),
-          rotulo: "Sub " + (idx + 1) + "." + (sIdx + 1),
-          n: asText(sub, 200),
+      (cue, idx) => {
+        const cleanTitle = asText(cue, 160).replace(/^Pista\s*\d+\s*:\s*/i, "").replace(/\?+$/, "").trim() || "Conceito " + (idx + 1);
+        const bodyText = asText(lines[idx] || note?.summary || cue, 1200);
+        const rotulo = deduceLabelLocal(cleanTitle, bodyText, idx === 0 ? "Conceito Central" : "Regra Geral");
+        const subList = lines.slice(idx + 1, idx + 4);
+        return {
+          id: "cornell-r" + (idx + 1),
+          t: cleanTitle,
+          rotulo,
+          n: asText(bodyText, 260),
           cor: (idx % 8) + 1,
-          x: { e: asText(sub, 600) },
-        })),
-      })
+          x: {
+            e: bodyText,
+            trap: `Ponto de atenção ou pegadinha sobre "${cleanTitle}".`,
+            src: asText(note?.referenceText || "Caderno Cornell · " + title, 240),
+          },
+          f: subList.map((sub, sIdx) => {
+            const subTitle = asText(sub, 90).replace(/^[\s•*\-–—\d.)]+/, "").trim();
+            return {
+              id: "cornell-r" + (idx + 1) + "-" + (sIdx + 1),
+              t: subTitle,
+              rotulo: deduceLabelLocal(subTitle, subTitle, "Requisito"),
+              n: asText(sub, 200),
+              cor: (idx % 8) + 1,
+              x: { e: asText(sub, 600) },
+            };
+          }),
+        };
+      }
     );
     while (ramos.length < 3) {
       const k = ramos.length + 1;
+      const fallbackTitle = k === 2 ? "Desdobramento e Requisitos" : "Síntese e Exceções";
       ramos.push({
         id: "cornell-r" + k,
-        t: k === 2 ? "Desdobramento e Subtópicos" : "Síntese e Exceções",
-        rotulo: "Ramo " + k,
+        t: fallbackTitle,
+        rotulo: deduceLabelLocal(fallbackTitle, fallbackTitle, "Conceito Chave"),
         n: asText(note?.summary || note?.notes || title, 240),
         cor: k,
         x: { e: asText(note?.summary || note?.notes || title, 800) },
@@ -628,9 +656,9 @@
     }
     return {
       centro: title,
-      autor: "Baseado na folha Cornell · Personalizável no Ambiente de Estudo",
+      autor: "Baseado na folha Cornell · Estilo SimpleMind",
       ramos,
-      ligacoes: [[ramos[0].id, ramos[ramos.length - 1].id, "Pista → Síntese"]],
+      ligacoes: [[ramos[0].id, ramos[ramos.length - 1].id, "Conceito Central → Síntese"]],
       origemCornell: { noteId: note?.id || "", title },
     };
   }

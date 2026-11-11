@@ -372,3 +372,120 @@ test("Folha Dividida Cornell, Cadernos por Matéria no Dashboard Esquerdo e Arte
   assert.match(shellCode, /data-material-to-map/);
 });
 
+test("Geração e estruturação de Mapa Mental fiel aos subsídios no padrão SimpleMind com rótulos e aprofundamento", () => {
+  const { studio, S } = createSandbox();
+
+  // Adiciona questão no banco S.q para testar associação remissiva
+  S.q.set("q-pl-lc-01", {
+    id: "q-pl-lc-01",
+    topicoId: "pl-1",
+    materia: "Processo Legislativo Constitucional",
+    enunciado: "As leis complementares serão aprovadas por maioria absoluta (art. 69 da CF).",
+    gabarito: "C",
+  });
+  S.q.set("q-pl-mp-02", {
+    id: "q-pl-mp-02",
+    topicoId: "pl-1",
+    materia: "Processo Legislativo Constitucional",
+    enunciado: "É expressamente vedada a edição de medida provisória sobre matéria relativa a direito eleitoral.",
+    gabarito: "C",
+  });
+
+  const subsídioAula = {
+    id: "mat-pl-especies",
+    titulo: "Espécies Normativas e Procedimentos Especiais",
+    materia: "Processo Legislativo Constitucional",
+    topicos: ["pl-1"],
+    conteudo: `
+# Espécies Normativas Constitucionais
+## Leis Complementares
+Quórum qualificado de maioria absoluta para aprovação (Art. 69 da CF).
+- Requisito de aprovação: maioria absoluta dos membros da Câmara e do Senado.
+- Matéria reservada: taxativamente prevista na Constituição.
+- Diferença para Lei Ordinária: lei ordinária exige maioria simples.
+
+## Medidas Provisórias
+Requisitos de relevância e urgência conferidos privativamente ao Presidente da República (Art. 62 da CF).
+- Vedações materiais expressas: direito penal, eleitoral e matérias de lei complementar.
+- Prazo legal de vigência: 60 dias prorrogáveis uma única vez por igual período.
+- Efeito jurídico: força de lei imediata com eficácia resolutiva se rejeitada.
+
+## Emendas Constitucionais
+Limitações circunstanciais, temporais e materiais (cláusulas pétreas no Art. 60 da CF).
+- Quórum qualificado: três quintos em dois turnos em cada casa.
+- Vedação expressa: não pode abolir voto direto, secreto, universal e periódico.
+- Exceção taxativa: vedada deliberação na vigência de intervenção federal ou estado de sítio.
+    `.trim(),
+    resumo: "Síntese dos quóruns, vedações e requisitos das espécies normativas dos arts. 59 a 69 da CF.",
+  };
+
+  const mapaGerado = studio.materialToMindMap(subsídioAula, {
+    topicId: "pl-1",
+    topicTitle: subsídioAula.titulo,
+    materia: subsídioAula.materia,
+    S,
+  });
+
+  assert.match(mapaGerado.centro, /Espécies Normativas/i);
+  assert.ok(mapaGerado.ramos.length >= 3);
+
+  // 1. Verifica ausência total de rótulos artificiais genéricos
+  const { list: todosNos } = studio.enumerateMapNodes(mapaGerado);
+  for (const no of todosNos) {
+    assert.doesNotMatch(no.rotulo || "", /^Pista\s*\d+$/i);
+    assert.doesNotMatch(no.rotulo || "", /^Sub\s*\d+\.\d+$/i);
+    assert.doesNotMatch(no.rotulo || "", /^Seção\s*\d+$/i);
+    assert.doesNotMatch(no.rotulo || "", /^Artefato\s*\d+$/i);
+    // Todo nó deve ter um rótulo explicativo de primeira vista
+    assert.ok(no.rotulo && no.rotulo.length >= 3, `Nó "${no.title}" deve ter rótulo superficial`);
+  }
+
+  // 2. Fidelidade aos ramos estruturantes e conceitos
+  const ramoLC = mapaGerado.ramos.find(r => /Leis Complementares/i.test(r.t));
+  assert.ok(ramoLC, "Deve ter ramo sobre Leis Complementares");
+  assert.match(ramoLC.rotulo, /Quórum Qualificado|Regra Geral|Conceito Chave/i);
+  assert.ok(ramoLC.f && ramoLC.f.length >= 2, "Ramo deve ramificar em subtópicos");
+
+  const subQuorumLC = ramoLC.f.find(s => /maioria absoluta/i.test(s.t) || /requisito/i.test(s.t));
+  assert.ok(subQuorumLC, "Subtópico de maioria absoluta/requisito deve existir");
+  assert.match(subQuorumLC.rotulo, /Requisito Legal|Quórum Qualificado|Regra Geral/i);
+
+  // 3. Ramo com vedações expressas e prazos
+  const ramoMP = mapaGerado.ramos.find(r => /Medidas Provisórias/i.test(r.t));
+  assert.ok(ramoMP, "Deve ter ramo sobre Medidas Provisórias");
+  const subVedacao = ramoMP.f.find(s => /vedações/i.test(s.t) || /vedação/i.test(s.rotulo));
+  assert.ok(subVedacao, "Subtópico de vedações materiais deve existir");
+  assert.match(subVedacao.rotulo, /Vedação Expressa|Requisito Legal/i);
+
+  // 4. Associação de questões de S.q vinculadas ao nó conceitual
+  const nosComQuestoes = todosNos.filter(n => n.node?.x?.questaoIds && n.node.x.questaoIds.length > 0);
+  assert.ok(nosComQuestoes.length > 0, "Pelo menos um conceito deve associar questões do banco S.q");
+
+  // 5. Teste do gerador backend cornellToMindMapStructure
+  const folhaCornell = {
+    id: "folha-01",
+    title: "Atos Administrativos",
+    subject: "Direito Administrativo",
+    cues: ["Requisitos do Ato (COMFIFORMOOB)", "Atributos (PATI)", "Desfazimento do Ato"],
+    notes: `
+Requisitos de Validade: competência, finalidade, forma, motivo e objeto. A competência privativa não admite delegação de caráter normativo.
+Atributos do Ato Administrativo: presunção de legitimidade, autoexecutoriedade, tipicidade e imperatividade. A autoexecutoriedade é exceção taxativa em atos punitivos que exijam contraditório prévio.
+Desfazimento do Ato: revogação por conveniência e oportunidade; anulação por vício de legalidade insanável com efeito ex tunc.
+    `.trim(),
+    summary: "Síntese dos elementos essenciais e desfazimento na jurisprudência.",
+    referenceText: "Lei 9.784/1999 e doutrina Di Pietro.",
+  };
+
+  const estrutura = cornellToMindMapStructure(folhaCornell, "da-2");
+  assert.match(estrutura.centro, /Atos Administrativos/);
+  assert.ok(estrutura.ramos.length >= 3);
+
+  // Valida rótulos superficiais e ausência de 'Pista 1' na estrutura
+  for (const r of estrutura.ramos) {
+    assert.doesNotMatch(r.rotulo || "", /^Pista\s*\d+$/i);
+    assert.ok(r.rotulo, `Ramo ${r.t} deve conter rótulo deduzido`);
+    assert.ok(r.x && r.x.e, `Ramo ${r.t} deve conter explicação profunda x.e`);
+    assert.ok(r.x && r.x.trap, `Ramo ${r.t} deve conter pegadinha da banca x.trap`);
+  }
+});
+

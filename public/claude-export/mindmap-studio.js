@@ -61,7 +61,7 @@
         const path = pathPrefix ? `${pathPrefix}.${idx}` : String(idx);
         const id = text(n.id, 120) || `no-${path.replace(/\./g, "-")}`;
         ids.add(id);
-        list.push({ node: n, id, path, depth, title: text(n.t, 200) || id });
+        list.push({ node: n, id, path, depth, title: text(n.t, 200) || id, rotulo: n.rotulo || "" });
         if (Array.isArray(n.f) && n.f.length && depth < 6) {
           walk(n.f, path, depth + 1);
         }
@@ -93,7 +93,10 @@
       if (!t) return null;
       const id = uniqueId(node.id, `r${pathStr.replace(/\./g, "-")}`);
       const n = text(node.n || "", 600);
-      const rotulo = text(node.rotulo || "", 80);
+      const rotulo = text(
+        node.rotulo || deduceConceptLabel(t, n || rawX.e || "", depth === 0 ? "Conceito Central" : "Regra Geral"),
+        80
+      );
       const corNum = Number(node.cor);
       const cor = Number.isInteger(corNum) && corNum >= 1 && corNum <= 8 ? corNum : defaultCor;
       const caixa = Boolean(node.caixa);
@@ -213,6 +216,152 @@
     );
   }
 
+  function deduceConceptLabel(title, body, fallback = "Conceito") {
+    const combined = `${title || ""} ${body || ""}`.toLowerCase();
+    if (/(exce[çc][ãa]o|ressalva|salvo|exceto|n[ãa]o se aplica|afasta-se|derroga)/i.test(combined)) {
+      return "Exceção Taxativa";
+    }
+    if (/(qu[óo]rum|maioria absoluta|maioria simples|maioria qualificada|dois ter[çc]os|tr[êe]s quintos)/i.test(combined)) {
+      return "Quórum Qualificado";
+    }
+    if (/(prazo|tempestiv|dias|horas|meses|anos|decad[êe]ncia|prescri[çc][ãa]o|vig[êe]ncia)/i.test(combined)) {
+      return "Prazo Legal";
+    }
+    if (/(veda[çc][ãa]o|proibi|defeso|vedado|impedido|il[íi]cito|incompat[íi]vel)/i.test(combined)) {
+      return "Vedação Expressa";
+    }
+    if (/(compet[êe]ncia privativa|privativamente|exclusiv|indeleg[áa]vel)/i.test(combined)) {
+      return "Competência Privativa";
+    }
+    if (/(compet[êe]ncia comum|compet[êe]ncia concorrente|concorrentemente)/i.test(combined)) {
+      return "Competência Concorrente";
+    }
+    if (/(requisito|condi[çc][ãa]o|pressuposto|elemento|cumulativ)/i.test(combined)) {
+      return "Requisito Legal";
+    }
+    if (/(anula[çc][ãa]o|nulidade|revoga[çc][ãa]o|convalida[çc][ãa]o)/i.test(combined)) {
+      return "Desfazimento do Ato";
+    }
+    if (/(recurso|agravo|apela[çc][ãa]o|embargos|mandado de seguran[çc]a)/i.test(combined)) {
+      return "Garantia / Recurso";
+    }
+    if (/(efeito ex tunc|efeito ex nunc|efic[áa]cia|retroat)/i.test(combined)) {
+      return "Efeito Jurídico";
+    }
+    if (/(pegadinha|armadilha|cebraspe|falso|invers[ãa]o|cuidado|atente)/i.test(combined)) {
+      return "Alerta de Banca";
+    }
+    if (/(princ[íi]pio|fundamento|vetor|diretriz)/i.test(combined)) {
+      return "Princípio Vetor";
+    }
+    if (/(san[çc][ãa]o|penalidade|multa|crime|improbidade)/i.test(combined)) {
+      return "Sanção Legal";
+    }
+    if (/(regra geral|em regra|ordinariamente|padr[ãa]o)/i.test(combined)) {
+      return "Regra Geral";
+    }
+    if (fallback) return fallback;
+    return "Conceito Chave";
+  }
+
+  function parseStructuredBlocks(rawText, fallbackTitle = "Conceito") {
+    if (!rawText || typeof rawText !== "string") return [];
+    const rawLines = rawText.split(/\r?\n/);
+    const blocks = [];
+    let cur = null;
+
+    for (const rawLine of rawLines) {
+      const line = rawLine.trim();
+      if (!line) continue;
+
+      const hMatch = line.match(/^(#{1,4})\s+(.+)$/);
+      if (hMatch) {
+        if (cur) blocks.push(cur);
+        cur = {
+          title: hMatch[2].replace(/[*_#]/g, "").trim(),
+          level: hMatch[1].length,
+          lines: [],
+          subItems: [],
+        };
+        continue;
+      }
+
+      const leadMatch = line.match(/^(\*\*([^*]+)\*\*|([A-ZÁÉÍÓÚÀÂÊÔÃÕÇ\d\s\-.,]{3,40})):\s*(.*)$/);
+      if (!cur && leadMatch) {
+        cur = {
+          title: (leadMatch[2] || leadMatch[3]).trim(),
+          lines: leadMatch[4] ? [leadMatch[4].trim()] : [],
+          subItems: [],
+        };
+        continue;
+      }
+
+      const bulletMatch = line.match(/^([•*\-–—]|\d+[.)]|[a-z][.)])\s+(.+)$/i);
+      if (bulletMatch) {
+        if (!cur) {
+          cur = {
+            title: bulletMatch[2].split(/[:.]/)[0].slice(0, 70).trim() || fallbackTitle,
+            lines: [bulletMatch[2]],
+            subItems: [],
+          };
+        } else {
+          cur.subItems.push(bulletMatch[2].trim());
+        }
+        continue;
+      }
+
+      if (!cur) {
+        cur = {
+          title: line.split(/[:.]/)[0].slice(0, 70).trim() || fallbackTitle,
+          lines: [line],
+          subItems: [],
+        };
+      } else {
+        cur.lines.push(line);
+      }
+    }
+
+    if (cur) blocks.push(cur);
+    if (blocks.length > 1 && blocks[0].level === 1 && (!blocks[0].lines.length && !blocks[0].subItems.length)) {
+      blocks.shift();
+    }
+    return blocks;
+  }
+
+  function associateQuestionsToNode(node, S, topicId, materia) {
+    if (!node || !S) return;
+    const questions = [];
+    const keywords = [node.t, node.rotulo].filter(Boolean).map(w => w.toLowerCase());
+    if (node.x?.e) {
+      const topWords = node.x.e.split(/\W+/).filter(w => w.length >= 4).slice(0, 8);
+      keywords.push(...topWords.map(w => w.toLowerCase()));
+    }
+
+    if (S.q && typeof S.q.values === "function") {
+      for (const q of S.q.values()) {
+        if (!q || !q.id) continue;
+        const matchesTopic =
+          (topicId && (q.topicoId === topicId || q.topico === topicId)) ||
+          (materia && (q.materia === materia || (q.capNome && q.capNome.includes(materia)))) ||
+          !topicId;
+        const textQ = `${q.enunciado || ""} ${q.texto || ""} ${q.justificativa || ""}`.toLowerCase();
+        const matchesWord = keywords.some(k => k.length >= 4 && textQ.includes(k));
+        if (matchesTopic && matchesWord) {
+          questions.push(q.id);
+        }
+        if (questions.length >= 4) break;
+      }
+    }
+    if (questions.length && node.t) {
+      if (!node.x) node.x = {};
+      node.x.questaoIds = Array.from(new Set([...(node.x.questaoIds || []), ...questions]));
+    }
+    const children = Array.isArray(node.ramos) ? node.ramos : Array.isArray(node.f) ? node.f : [];
+    for (const child of children) {
+      associateQuestionsToNode(child, S, topicId, materia);
+    }
+  }
+
   function cornellToMindMap(note, options = {}) {
     if (!note || typeof note !== "object") {
       throw new Error("Selecione ou preencha uma folha Cornell válida.");
@@ -234,50 +383,99 @@
       .split(/\n\s*\n+/)
       .map(b => b.trim())
       .filter(Boolean);
-    const lines = rawNotes
-      .split(/\r?\n/)
-      .map(l => l.replace(/^[\s•*\-–—\d.)]+/, "").trim())
-      .filter(Boolean);
+    const structuredBlocks = parseStructuredBlocks(rawNotes, title);
 
-    const blocks = paragraphs.length >= cues.length && cues.length > 0 ? paragraphs : lines;
-    const branchTitles = cues.length
-      ? cues
-      : lines.slice(0, Math.min(6, Math.max(3, lines.length))).map((l, i) => l.slice(0, 72) || `Ramo ${i + 1}`);
+    let branchConcepts = [];
+    if (cues.length) {
+      branchConcepts = cues.map((cue, idx) => {
+        const cleanTitle = cue.replace(/^Pista\s*\d+\s*:\s*/i, "").replace(/\?+$/, "").trim();
+        const matchedBlock =
+          structuredBlocks.find(b => b.title.toLowerCase().includes(cleanTitle.toLowerCase())) ||
+          structuredBlocks[idx] ||
+          null;
+        const blockText = matchedBlock
+          ? [matchedBlock.title, ...matchedBlock.lines, ...matchedBlock.subItems].join(" ")
+          : paragraphs[idx] || summary || cue;
+        return {
+          title: cleanTitle || `Conceito ${idx + 1}`,
+          blockText,
+          subItems: matchedBlock?.subItems || [],
+          lines: matchedBlock?.lines || (paragraphs[idx] ? paragraphs[idx].split(/\r?\n/) : []),
+        };
+      });
+    } else if (structuredBlocks.length) {
+      branchConcepts = structuredBlocks.slice(0, 6).map(b => ({
+        title: b.title,
+        blockText: [b.title, ...b.lines, ...b.subItems].join(" "),
+        subItems: b.subItems,
+        lines: b.lines,
+      }));
+    } else {
+      branchConcepts = paragraphs.slice(0, 5).map((p, idx) => ({
+        title: p.split(/[:.]/)[0].slice(0, 70).trim() || `Conceito Nuclear ${idx + 1}`,
+        blockText: p,
+        subItems: [],
+        lines: p.split(/\r?\n/),
+      }));
+    }
 
-    const ramos = branchTitles.map((cue, idx) => {
-      const block = blocks[idx] || lines[idx] || summary || cue;
-      const subLines = block
-        .split(/\r?\n|;\s+/)
-        .map(s => s.replace(/^[\s•*\-–—\d.)]+/, "").trim())
-        .filter(Boolean);
-      const mainExp = subLines[0] || block || cue;
-      const children = subLines.slice(1, 8).map((sub, subIdx) => {
+    const ramos = branchConcepts.map((concept, idx) => {
+      const cleanBranchTitle = concept.title;
+      const rotuloRamo = deduceConceptLabel(cleanBranchTitle, concept.blockText, idx === 0 ? "Conceito Central" : "Regra Geral");
+      const mainExp = (concept.lines[0] || concept.blockText || cleanBranchTitle).replace(/^[\s•*\-–—\d.)]+/, "").trim();
+
+      // Subtópicos para aprofundamento (estilo SimpleMind)
+      const rawSub = concept.subItems.length
+        ? concept.subItems
+        : concept.lines.slice(1).map(l => l.replace(/^[\s•*\-–—\d.)]+/, "").trim()).filter(Boolean);
+
+      const children = rawSub.slice(0, 6).map((sub, subIdx) => {
         const parts = sub.split(/:\s+/);
-        const subTitle = parts.length > 1 ? parts[0].slice(0, 90) : sub.slice(0, 80);
+        const subTitle = (parts.length > 1 ? parts[0] : sub.split(/[;,.]/)[0]).slice(0, 90).trim() || `Desdobramento ${subIdx + 1}`;
         const subBody = parts.length > 1 ? parts.slice(1).join(": ") : sub;
+        const rotuloSub = deduceConceptLabel(subTitle, subBody, "Requisito");
+
+        // Possível sub-subtópico para aprofundamento (nível 3 SimpleMind)
+        const deepParts = subBody.split(/;\s+/).filter(Boolean);
+        const deepChildren = deepParts.length > 1
+          ? deepParts.slice(1, 3).map((dp, dpIdx) => ({
+              id: `${prefix}-r${idx + 1}-${subIdx + 1}-${dpIdx + 1}`,
+              t: dp.slice(0, 80).trim(),
+              rotulo: deduceConceptLabel(dp, dp, "Detalhe"),
+              n: dp.slice(0, 200),
+              cor: (idx % 8) + 1,
+              x: {
+                e: dp,
+                src: referenceText ? referenceText.slice(0, 240) : `Caderno Cornell · ${title}`,
+              },
+            }))
+          : [];
+
         return {
           id: `${prefix}-r${idx + 1}-${subIdx + 1}`,
           t: subTitle,
-          rotulo: `Sub ${idx + 1}.${subIdx + 1}`,
+          rotulo: rotuloSub,
           n: subBody.slice(0, 240),
           cor: (idx % 8) + 1,
           x: {
             e: subBody,
+            trap: `A banca tenta confundir o requisito "${subTitle}" invertendo sua obrigatoriedade.`,
             src: referenceText ? referenceText.slice(0, 240) : `Caderno Cornell · ${title}`,
           },
+          f: deepChildren,
         };
       });
 
       return {
         id: `${prefix}-r${idx + 1}`,
-        t: cue.replace(/\?+$/, "").trim() || `Ramo ${idx + 1}`,
-        rotulo: `Pista ${idx + 1}`,
+        t: cleanBranchTitle,
+        rotulo: rotuloRamo,
         n: mainExp.slice(0, 260),
         cor: (idx % 8) + 1,
         x: {
-          e: mainExp,
-          ...(summary ? { ex: `Síntese: ${summary.slice(0, 260)}` } : {}),
-          trap: `Ponto de atenção derivado da pista "${cue.slice(0, 80)}".`,
+          e: concept.blockText || mainExp,
+          ...(summary ? { ex: `Aplicação prática e síntese: ${summary.slice(0, 260)}` } : {}),
+          trap: `Pegadinha clássica sobre "${cleanBranchTitle}": atente para termos taxativos ou exclusões indevidas.`,
           src: referenceText ? referenceText.slice(0, 240) : `Caderno Cornell · ${title}`,
         },
         f: children,
@@ -291,21 +489,21 @@
         .filter(Boolean);
       ramos.push({
         id: `${prefix}-sintese`,
-        t: "Síntese Executiva (Cornell)",
+        t: "Síntese e Consolidação Executiva",
         rotulo: "Síntese",
         caixa: true,
         n: summary.slice(0, 280),
-        cor: ((ramos.length) % 8) + 1,
+        cor: (ramos.length % 8) + 1,
         x: {
           e: summary,
           src: referenceText ? referenceText.slice(0, 240) : `Síntese Cornell · ${title}`,
         },
-        f: sentences.slice(0, 5).map((s, i) => ({
+        f: sentences.slice(0, 4).map((s, i) => ({
           id: `${prefix}-sintese-${i + 1}`,
           t: s.slice(0, 84),
-          rotulo: `Conclusão ${i + 1}`,
+          rotulo: deduceConceptLabel(s, s, "Ponto Chave"),
           n: s,
-          cor: ((ramos.length) % 8) + 1,
+          cor: (ramos.length % 8) + 1,
           x: { e: s },
         })),
       });
@@ -313,26 +511,27 @@
 
     while (ramos.length < 3) {
       const k = ramos.length + 1;
+      const t = k === 1 ? "Conceito Estruturante" : k === 2 ? "Requisitos e Aplicação" : "Exceções e Jurisprudência";
       ramos.push({
         id: `${prefix}-r${k}`,
-        t: k === 1 ? "Conceito Base" : k === 2 ? "Desdobramento Prático" : "Exceções e Limites",
-        rotulo: `Ramo ${k}`,
+        t,
+        rotulo: deduceConceptLabel(t, t, "Conceito Chave"),
         n: summary || rawNotes.slice(0, 220) || `Conceito ${k} de ${title}`,
         cor: ((k - 1) % 8) + 1,
         x: {
-          e: rawNotes || summary || `Anotação sobre ${title}.`,
+          e: rawNotes || summary || `Anotação analítica sobre ${title}.`,
           src: `Caderno Cornell · ${title}`,
         },
         f: [],
       });
     }
 
-    const ligacoes = ramos.length >= 2 ? [[ramos[0].id, ramos[ramos.length - 1].id, "Pista Inicial → Síntese"]] : [];
+    const ligacoes = ramos.length >= 2 ? [[ramos[0].id, ramos[ramos.length - 1].id, "Conceito Central → Síntese"]] : [];
 
-    return normalizeMap(
+    const normalized = normalizeMap(
       {
         centro: subject ? `${title} · ${subject}` : title,
-        autor: `Gerado a partir do Caderno Cornell ("${title}") · Personalizável`,
+        autor: `Baseado no Caderno Cornell ("${title}") · Estilo SimpleMind`,
         ramos,
         ligacoes,
         origemCornell: {
@@ -347,6 +546,13 @@
       title,
       prefix
     );
+
+    const activeS = options.S || appRef?.S || global.QBApp?.S || global.S;
+    if (activeS) {
+      associateQuestionsToNode(normalized, activeS, options.topicId || note.topicId, subject);
+    }
+
+    return normalized;
   }
 
   function loadSavedCornellNotes() {
@@ -404,7 +610,7 @@
     );
     const prefix = slugId(topicId, "mat").slice(0, 20);
 
-    // Se o artefato veio de uma folha Cornell ou tem pistas/anotações estruturadas, aproveita a conversão Cornell e enriquece com origemMaterial
+    // Se o artefato veio de uma folha Cornell ou tem pistas/anotações estruturadas, aproveita a conversão Cornell
     if (Array.isArray(material.pistas) && material.pistas.length && (material.anotacoes || material.conteudo)) {
       const converted = cornellToMindMap(
         {
@@ -417,7 +623,7 @@
           summary: material.resumo || material.descricao || "",
           referenceText: material.referenceText || `Artefato de Material (${material.id})`,
         },
-        { topicId, topicTitle: title, materia }
+        { topicId, topicTitle: title, materia, S: options.S }
       );
       converted.autor = `Baseado no Artefato de Material "${material.titulo || title}" · Remissivo`;
       converted.origemMaterial = {
@@ -430,59 +636,114 @@
       return converted;
     }
 
-    const secoes = Array.isArray(material.secoes)
-      ? material.secoes.map(s => text(s, 220)).filter(Boolean)
-      : [];
     const rawBody = text(
       material.conteudo || material.texto || material.anotacoes || material.descricao || "",
       14000
     );
     const summary = text(material.resumo || material.descricao || "", 2500);
-    const lines = rawBody
-      .split(/\r?\n/)
-      .map(l => l.replace(/^[\s#•*\-–—\d.)]+/, "").trim())
-      .filter(Boolean);
+    const structuredBlocks = parseStructuredBlocks(rawBody, title);
 
-    const branchSeeds = secoes.length
-      ? secoes
-      : lines.slice(0, Math.min(6, Math.max(3, lines.length)));
+    const secoes = Array.isArray(material.secoes) && material.secoes.length
+      ? material.secoes.map(s => text(s, 220)).filter(Boolean)
+      : [];
 
-    const ramos = (branchSeeds.length ? branchSeeds : ["Conceito Nuclear", "Regras e Requisitos", "Exceções e Jurisprudência"]).map(
-      (sec, idx) => {
-        const cleanTitle = sec.replace(/^Pista\s*\d+\s*:\s*/i, "").replace(/\?+$/, "").trim() || `Tópico ${idx + 1}`;
-        const chunkLines = lines.slice(idx * 2, idx * 2 + 3);
-        const expText = chunkLines[0] || summary || sec;
+    let branchSources = [];
+    if (secoes.length) {
+      branchSources = secoes.map((sec, idx) => {
+        const cleanTitle = sec.replace(/^Pista\s*\d+\s*:\s*/i, "").replace(/\?+$/, "").trim();
+        const matched = structuredBlocks.find(b => b.title.toLowerCase().includes(cleanTitle.toLowerCase())) || structuredBlocks[idx];
         return {
-          id: `${prefix}-m${idx + 1}`,
-          t: cleanTitle.slice(0, 140),
-          rotulo: material.origemArtefato === "cornell" ? `Artefato ${idx + 1}` : `Seção ${idx + 1}`,
-          n: expText.slice(0, 260),
+          title: cleanTitle || `Eixo ${idx + 1}`,
+          lines: matched?.lines || [sec],
+          subItems: matched?.subItems || [],
+          body: matched ? [matched.title, ...matched.lines, ...matched.subItems].join(" ") : sec,
+        };
+      });
+    } else if (structuredBlocks.length) {
+      branchSources = structuredBlocks.slice(0, 6).map(b => ({
+        title: b.title,
+        lines: b.lines,
+        subItems: b.subItems,
+        body: [b.title, ...b.lines, ...b.subItems].join(" "),
+      }));
+    } else {
+      const paragraphs = rawBody.split(/\n\s*\n+/).filter(Boolean);
+      branchSources = (paragraphs.length ? paragraphs.slice(0, 5) : ["Conceito Nuclear", "Requisitos Legais", "Exceções e Jurisprudência"]).map((p, idx) => ({
+        title: p.split(/[:.]/)[0].slice(0, 70).trim() || `Eixo Temático ${idx + 1}`,
+        lines: p.split(/\r?\n/),
+        subItems: [],
+        body: p,
+      }));
+    }
+
+    const ramos = branchSources.map((source, idx) => {
+      const cleanTitle = source.title;
+      const rotuloRamo = deduceConceptLabel(cleanTitle, source.body, idx === 0 ? "Conceito Central" : "Regra Geral");
+      const mainExp = (source.lines[0] || source.body || summary || cleanTitle).replace(/^[\s•*\-–—\d.)]+/, "").trim();
+
+      const rawSub = source.subItems.length
+        ? source.subItems
+        : source.lines.slice(1).map(l => l.replace(/^[\s•*\-–—\d.)]+/, "").trim()).filter(Boolean);
+
+      const children = rawSub.slice(0, 6).map((sub, sIdx) => {
+        const parts = sub.split(/:\s+/);
+        const subTitle = (parts.length > 1 ? parts[0] : sub.split(/[;,.]/)[0]).slice(0, 90).trim() || `Subtópico ${sIdx + 1}`;
+        const subBody = parts.length > 1 ? parts.slice(1).join(": ") : sub;
+        const rotuloSub = deduceConceptLabel(subTitle, subBody, "Requisito Legal");
+
+        const deepParts = subBody.split(/;\s+/).filter(Boolean);
+        const deepChildren = deepParts.length > 1
+          ? deepParts.slice(1, 3).map((dp, dpIdx) => ({
+              id: `${prefix}-m${idx + 1}-${sIdx + 1}-${dpIdx + 1}`,
+              t: dp.slice(0, 80).trim(),
+              rotulo: deduceConceptLabel(dp, dp, "Ponto Específico"),
+              n: dp.slice(0, 200),
+              cor: (idx % 8) + 1,
+              x: {
+                e: dp,
+                src: `Material de Estudo · ${material.titulo || title}`,
+              },
+            }))
+          : [];
+
+        return {
+          id: `${prefix}-m${idx + 1}-${sIdx + 1}`,
+          t: subTitle,
+          rotulo: rotuloSub,
+          n: subBody.slice(0, 240),
           cor: (idx % 8) + 1,
           x: {
-            e: chunkLines.join(" ") || expText,
+            e: subBody,
+            trap: `Armadilha de banca sobre "${subTitle}": inversão de competência ou prazo.`,
             src: `Material de Estudo · ${material.titulo || title}`,
           },
-          f: chunkLines.slice(1).map((sub, sIdx) => ({
-            id: `${prefix}-m${idx + 1}-${sIdx + 1}`,
-            t: sub.slice(0, 88),
-            rotulo: `Sub ${idx + 1}.${sIdx + 1}`,
-            n: sub.slice(0, 220),
-            cor: (idx % 8) + 1,
-            x: {
-              e: sub,
-              src: `Material de Estudo · ${material.titulo || title}`,
-            },
-          })),
+          f: deepChildren,
         };
-      }
-    );
+      });
+
+      return {
+        id: `${prefix}-m${idx + 1}`,
+        t: cleanTitle.slice(0, 140),
+        rotulo: rotuloRamo,
+        n: mainExp.slice(0, 260),
+        cor: (idx % 8) + 1,
+        x: {
+          e: source.body || mainExp,
+          ...(summary ? { ex: `Síntese prática: ${summary.slice(0, 240)}` } : {}),
+          trap: `Pegadinha clássica em "${cleanTitle}": generalização indevida ou troca de conceito.`,
+          src: `Material de Estudo · ${material.titulo || title}`,
+        },
+        f: children,
+      };
+    });
 
     while (ramos.length < 3) {
       const k = ramos.length + 1;
+      const t = k === 2 ? "Requisitos e Aplicação Prática" : "Síntese e Jurisprudência da Banca";
       ramos.push({
         id: `${prefix}-m${k}`,
-        t: k === 2 ? "Aplicação e Requisitos" : "Síntese e Pontos de Prova",
-        rotulo: `Seção ${k}`,
+        t,
+        rotulo: deduceConceptLabel(t, t, "Conceito Chave"),
         n: summary || rawBody.slice(0, 220) || title,
         cor: k,
         x: {
@@ -493,10 +754,10 @@
       });
     }
 
-    return normalizeMap(
+    const normalized = normalizeMap(
       {
         centro: materia ? `${title} · ${materia}` : title,
-        autor: `Subsídio: Material de Estudo "${material.titulo || title}" · Personalizável`,
+        autor: `Subsídio: Material de Estudo "${material.titulo || title}" · Estilo SimpleMind`,
         ramos,
         ligacoes: [[ramos[0].id, ramos[ramos.length - 1].id, "Eixo do Material → Síntese"]],
         origemMaterial: {
@@ -510,6 +771,13 @@
       title,
       prefix
     );
+
+    const activeS = options.S || appRef?.S || global.QBApp?.S || global.S;
+    if (activeS) {
+      associateQuestionsToNode(normalized, activeS, topicId, materia);
+    }
+
+    return normalized;
   }
 
   function getNodeAtPath(map, pathStr) {
@@ -1093,7 +1361,8 @@
                     ${cornellNotes.map(n => `<option value="${esc(n.id)}">${esc(n.title || "Folha Cornell")} (${esc(n.subject || "Geral")})</option>`).join("")}
                   </select>
                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-cornell-replace">Substituir Mapa pela Base Cornell</button>
-                  <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-cornell-merge">＋ Mesclar Pistas Cornell como Novos Ramos</button>`
+                  <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-cornell-merge">＋ Mesclar Pistas Cornell</button>
+                  <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:#0284c7;color:#fff" id="qb-mm-ai-rebuild-cornell">✨ Reestruturar com IA (SimpleMind)</button>`
                 : `<span style="font-size:12px;color:#94a3b8">Nenhuma folha salva ainda. Abra o botão <b>⚡ OmniStudy IA → Caderno Cornell</b> para criar sua base.</span>`
             }
             ${
@@ -1121,7 +1390,8 @@
                       .join("")}
                   </select>
                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-material-replace">Criar Mapa a partir deste Material</button>
-                  <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-material-merge">＋ Mesclar Seções do Material ao Mapa</button>`
+                  <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-material-merge">＋ Mesclar Seções do Material</button>
+                  <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:#059669;color:#fff" id="qb-mm-ai-rebuild-material">✨ Reestruturar com IA (SimpleMind)</button>`
                 : `<span style="font-size:12px;color:#94a3b8">Transforme suas folhas Cornell em Artefatos de Material ou adicione materiais na aba <b>Materiais</b> para usá-los como subsídio aqui.</span>`
             }
           </div>
@@ -1446,6 +1716,42 @@
       rerender();
     });
 
+    document.getElementById("qb-mm-ai-rebuild-cornell")?.addEventListener("click", async () => {
+      const noteId = document.getElementById("qb-mm-cornell-select")?.value;
+      const note = loadSavedCornellNotes().find(n => n.id === noteId) || loadSavedCornellNotes()[0];
+      if (!note) return;
+      studioState.statusMsg = `Reestruturando mapa com IA no estilo SimpleMind a partir de "${note.title}"...`;
+      rerender();
+      try {
+        const resp = await fetch("/api/omnistudy-ai", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            task: "cornell-to-mindmap",
+            title: note.title,
+            subject: note.subject,
+            cues: Array.isArray(note.cues) ? note.cues : String(note.cues || "").split(/\r?\n/).filter(Boolean),
+            notes: note.notes,
+            summary: note.summary,
+            referenceText: note.referenceText,
+          }),
+        });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const data = await resp.json();
+        const mapDraft = data?.mapa
+          ? normalizeMap(data.mapa, note.title, topicId)
+          : cornellToMindMap(note, { topicId, topicTitle: note.title, S });
+        associateQuestionsToNode(mapDraft, S, topicId, note.subject);
+        saveMapToEnvironment(S, topicId, mapDraft);
+        studioState.statusMsg = `Mapa mental reestruturado com sucesso via IA (estilo SimpleMind) a partir de "${note.title}"!`;
+      } catch (err) {
+        const fallback = cornellToMindMap(note, { topicId, topicTitle: note.title, S });
+        saveMapToEnvironment(S, topicId, fallback);
+        studioState.statusMsg = `Mapa estruturado fielmente no modo determinístico ("${note.title}"): ${err?.message || "offline"}.`;
+      }
+      rerender();
+    });
+
     document.getElementById("qb-mm-import-cornell-merge")?.addEventListener("click", () => {
       const noteId = document.getElementById("qb-mm-cornell-select")?.value;
       const note = loadSavedCornellNotes().find(n => n.id === noteId) || loadSavedCornellNotes()[0];
@@ -1471,6 +1777,43 @@
       });
       saveMapToEnvironment(S, topicId, converted);
       studioState.statusMsg = `Mapa mental estruturado usando como subsídio o material "${mat.titulo || mat.id}". Personalize ramos, subtópicos e rótulos!`;
+      rerender();
+    });
+
+    document.getElementById("qb-mm-ai-rebuild-material")?.addEventListener("click", async () => {
+      const matId = document.getElementById("qb-mm-material-select")?.value;
+      const mats = loadStudyMaterials(S);
+      const mat = mats.find(m => m.id === matId) || mats[0];
+      if (!mat) return;
+      studioState.statusMsg = `Reestruturando mapa com IA no estilo SimpleMind a partir de "${mat.titulo || mat.id}"...`;
+      rerender();
+      try {
+        const resp = await fetch("/api/omnistudy-ai", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            task: "cornell-to-mindmap",
+            title: mat.titulo || mat.id,
+            subject: mat.materia || "",
+            cues: Array.isArray(mat.pistas) ? mat.pistas : (mat.secoes || []),
+            notes: mat.anotacoes || mat.conteudo || mat.texto || mat.descricao || "",
+            summary: mat.resumo || mat.descricao || "",
+            referenceText: mat.referenceText || "",
+          }),
+        });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const data = await resp.json();
+        const mapDraft = data?.mapa
+          ? normalizeMap(data.mapa, mat.titulo || mat.id, topicId)
+          : materialToMindMap(mat, { topicId, topicTitle: mat.titulo, materia: mat.materia, S });
+        associateQuestionsToNode(mapDraft, S, topicId, mat.materia);
+        saveMapToEnvironment(S, topicId, mapDraft);
+        studioState.statusMsg = `Mapa mental estruturado com IA (estilo SimpleMind) a partir do material "${mat.titulo || mat.id}"!`;
+      } catch (err) {
+        const fallback = materialToMindMap(mat, { topicId, topicTitle: mat.titulo, materia: mat.materia, S });
+        saveMapToEnvironment(S, topicId, fallback);
+        studioState.statusMsg = `Mapa estruturado fielmente no modo determinístico ("${mat.titulo || mat.id}"): ${err?.message || "offline"}.`;
+      }
       rerender();
     });
 
