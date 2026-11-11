@@ -1288,7 +1288,7 @@ function viewFim(){
   const excesso=rd.itens.filter(i=>i.marcada!=='B'&&i.marcada!==i.gabarito&&i.conf===3).length;
   const mix=multiCap(rd.cap);
   const lista=foram.length?`<div class="tbl-wrap"><table><thead><tr><th>Item</th>${mix?'<th>Cap.</th>':''}<th>Tema</th><th>Você marcou</th><th>Gabarito</th><th>Confiança</th></tr></thead><tbody>
-    ${foram.map(i=>{const q=S.q.get(i.qid)||{};return `<tr><td class="mono">${String(q.ordem||'').padStart(2,'0')}</td>${mix?`<td class="mono">${esc(q.cap||'')}</td>`:''}<td>${esc(q.tema||'')}</td><td class="${i.marcada==='B'?'':(i.marcada===i.gabarito?'pos':'neg')}">${LETRA[i.marcada]}</td><td>${LETRA[i.gabarito]}</td><td>${i.conf?CONF[i.conf]:'–'}</td></tr>`}).join('')}
+    ${foram.map(i=>{const q=S.q.get(i.qid)||{};return `<tr><td class="mono">${String(q.ordem||'').padStart(2,'0')}</td>${mix?`<td class="mono">${esc(q.cap||'')}</td>`:''}<td>${esc(q.tema||'')}</td><td class="${i.marcada===brancoDe(q)?'':(i.marcada===i.gabarito?'pos':'neg')}">${esc(rotuloResposta(q,i.marcada))}</td><td>${esc(rotuloResposta(q,i.gabarito))}</td><td>${i.conf?CONF[i.conf]:'–'}</td></tr>`}).join('')}
     </tbody></table></div>`:`<div class="notice"><strong>Nenhum erro nem chute nesta rodada.</strong></div>`;
   return `<div class="wrap" style="gap:16px;margin-top:8px">
     <h2 class="section-title">Resultado da rodada · ${esc(rd.cap==='PEG'?rd.capNome:mix?'Revisão intercalada':'Capítulo '+rd.cap)}</h2>
@@ -1353,13 +1353,13 @@ function entradasCaderno(lista,indice){
       const dub=r.motivo==='branco'||r.motivo==='chute';
       const seq=r.acertosSeguidos||0;
       const prox=proxDe(r);
-      const ult=r.motivo==='chute'?'<span class="pill b">Acertou no chute</span>':`<span class="pill ${r.ultimaMarcada==='B'?'b':(r.ultimaMarcada===q.gabarito?'c':'e')}">Última: ${LETRA[r.ultimaMarcada]||'–'}</span>`;
+      const ult=r.motivo==='chute'?'<span class="pill b">Acertou no chute</span>':`<span class="pill ${r.ultimaMarcada===brancoDe(q)?'b':(r.ultimaMarcada===q.gabarito?'c':'e')}">Última: ${esc(rotuloResposta(q,r.ultimaMarcada))}</span>`;
       html+=`<article class="entry${dub?' dub':''}">
         <div class="item-head"><span class="item-num">ITEM ${String(q.ordem||'').padStart(2,'0')}</span><span class="tag">${esc(q.tema||'')}</span></div>
         <div class="statement">${statementHTML(q,true)}</div>
         <div class="pills">
           ${ult}
-          <span class="pill c">Gabarito: ${LETRA[q.gabarito]}</span>
+          <span class="pill c">Gabarito: ${esc(rotuloResposta(q,q.gabarito))}</span>
           ${r.conf?`<span class="pill">Confiança: ${CONF[r.conf]}</span>`:''}
           <span class="pill">${r.erros||0} ${r.erros===1?'erro':'erros'} · ${r.brancos||0} em branco</span>
           <span class="pill">${seq}/2 acertos para sair</span>
@@ -2946,7 +2946,9 @@ function startRevisao(){
 function marcar(L){
   const rd=S.round; if(!rd||rd.atual||rd.fim) return;
   if(emRep(rd)){ registrarRep(L); return; }
-  if(L==='B'){ registrar('B',null); return; }
+  const q=S.q.get(rd.fila[rd.idx]),blank=brancoDe(q);
+  if(L===blank){registrar(blank,null);return;}
+  if(alternativasDe(q).length&&!alternativasDe(q).some(opt=>opt.letra===L))return;
   rd.pend={marcada:L,focus:true};
   render(true);
 }
@@ -2957,15 +2959,15 @@ function confirmar(c){
 function registrar(L,conf){
   const rd=S.round; if(!rd||rd.atual||rd.fim) return;
   const q=S.q.get(rd.fila[rd.idx]); if(!q) return;
-  const acertou=L===q.gabarito;
-  const corr=(L==='E'&&rd.corr||'').trim(); rd.corr='';
+  const acertou=L===q.gabarito,blank=brancoDe(q),isBlank=L===blank,choice=alternativasDe(q).length>0;
+  const corr=(!choice&&L==='E'&&rd.corr||'').trim(); rd.corr='';
   rd.pend=null; rd.just='';
   rd.atual={marcada:L,acertou,conf,corr};
-  if(L==='B') rd.brancos++; else if(acertou) rd.certos++; else rd.errados++;
-  const learning=window.QBLearning?.metadata(S,q,L,conf,rd);
+  if(isBlank) rd.brancos++; else if(acertou) rd.certos++; else rd.errados++;
+  const learning=!choice?window.QBLearning?.metadata(S,q,L,conf,rd):null;
   if(learning) rd.atual.pilotFeedback=learning.feedback;
   rd.itens.push(Object.assign({qid:q.id,ordem:q.ordem||0,marcada:L,gabarito:q.gabarito,conf:conf||null},corr?{corr}:{},learning?{learning}:{}));
-  if((L==='B'||!acertou||conf===1)&&!rd.rep.fila.includes(q.id)) rd.rep.fila.push(q.id);
+  if((isBlank||!acertou||conf===1)&&!rd.rep.fila.includes(q.id)) rd.rep.fila.push(q.id);
   // estado do item
   const prev=S.r.get(q.id)||{};
   const now=new Date().toISOString(), d=hoje();
@@ -2988,14 +2990,14 @@ function registrar(L,conf){
     r.nivel=conf===3?Math.min(Math.max(nPrev+1,2),INT.length-1):Math.max(nPrev,1);
     if(r.noCaderno) r.nivel=Math.min(r.nivel,1);
   } else {
-    if(L==='B') r.brancos=(prev.brancos||0)+1; else r.erros=(prev.erros||0)+1;
+    if(isBlank) r.brancos=(prev.brancos||0)+1; else r.erros=(prev.erros||0)+1;
     r.acertosSeguidos=0;
     if(!prev.noCaderno){ r.entrouEm=now; }
-    r.noCaderno=true; r.motivo=(L==='B'&&!(prev.noCaderno&&prev.motivo==='erro'))?'branco':'erro';
+    r.noCaderno=true; r.motivo=(isBlank&&!(prev.noCaderno&&prev.motivo==='erro'))?'branco':'erro';
     r.nivel=0;
   }
   r.proxRevisao=agendar(d,r.nivel);
-  r.calib=L==='B'||!conf?null:(!acertou&&conf===3?'excesso':(acertou&&conf===1?'sub':'ok'));
+  r.calib=isBlank||!conf?null:(!acertou&&conf===3?'excesso':(acertou&&conf===1?'sub':'ok'));
   if(typeof r.nota!=='string') r.nota='';
   if(corr) r.correcoes=(Array.isArray(prev.correcoes)?prev.correcoes:[]).concat([{em:now,texto:corr}]).slice(-5);
   S.r.set(q.id,r);
@@ -3078,7 +3080,10 @@ document.addEventListener('keydown',e=>{
   const t=e.target; if(t&&(t.tagName==='TEXTAREA'||t.tagName==='INPUT'||t.tagName==='SELECT')) return;
   if(e.metaKey||e.ctrlKey||e.altKey) return;
   const rd=S.round, k=e.key.toLowerCase();
-  if(!rd.atual && (k==='c'||k==='e'||k==='b')){ e.preventDefault(); marcar(k.toUpperCase()); }
+  const selected=S.q.get(rd.fila[rd.idx]),multiple=alternativasDe(selected).length>0;
+  if(!rd.atual && ((multiple&&('abcde0'.includes(k)&&k.length===1))||(!multiple&&(k==='c'||k==='e'||k==='b')))){
+    e.preventDefault();marcar(multiple&&k==='0'?'-':k.toUpperCase());
+  }
   else if(rd.pend && !rd.atual && (k==='1'||k==='2'||k==='3')){ e.preventDefault(); confirmar(Number(k)); }
   else if(rd.pend && !rd.atual && e.key==='Escape'){ e.preventDefault(); rd.pend=null; render(true); }
   else if(rd.atual && (e.key==='Enter'||e.key==='ArrowRight')){ if(t&&t.dataset&&(t.dataset.origem||t.dataset.conf)&&e.key==='Enter') return; e.preventDefault(); next(); }
