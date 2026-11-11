@@ -1,3 +1,5 @@
+import { normalizeStudyQuestion } from "./study-import.js";
+
 /* Provisionamento de concursos: funções puras testáveis e validação do material.
  * Nunca importa histórico de respostas de uma pessoa para outra.
  */
@@ -54,10 +56,10 @@ export function validateStudyContentBatch(collection, documents) {
       throw new Error("Identificador ausente, repetido ou inválido no lote.");
     }
     ids.add(id);
-    const next = {...row,id};
+    const next = collection==="questoes"?normalizeStudyQuestion({...row,id}):{...row,id};
     if (collection === "questoes" && (!String(next.enunciado || "").trim() ||
-      !["C", "E"].includes(next.gabarito))) {
-      throw new Error("Questão " + id + ": o motor atual exige enunciado e gabarito C/E.");
+      (!next.alternativas && !["C", "E"].includes(next.gabarito)))) {
+      throw new Error("Questão " + id + ": informe enunciado e gabarito C/E, ou quatro/cinco alternativas com gabarito A–E.");
     }
     if (collection === "edital" && (!String(next.titulo || "").trim() ||
       !Array.isArray(next.caps))) {
