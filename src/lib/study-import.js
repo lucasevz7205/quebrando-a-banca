@@ -14,10 +14,26 @@ export function decodeStudyCatalog(value,collection) {
   }
   throw new Error("JSON não reconhecido. Use lista de documentos ou um objeto com a coleção como chave. PDFs precisam de conversão e conferência antes de importar.");
 }
+function stableId(original){
+  const material=JSON.stringify([original.enunciado||original.questao||original.pergunta||original.texto||"",
+    original.alternativas||original.opcoes||original.options||null,original.ano||"",original.prova||""]);
+  let h=2166136261;
+  for(let i=0;i<material.length;i++)h=Math.imul(h^material.charCodeAt(i),16777619);
+  return "questao-importada-"+(h>>>0).toString(16).padStart(8,"0");
+}
+function normalizeBase(original){
+  const enunciado=String(original.enunciado||original.questao||original.pergunta||original.texto||"").trim();
+  const id=String(original.id||original.stable_id||stableId(original)).trim();
+  const materia=String(original.materia||original.disciplina||"Banco importado").trim();
+  const assunto=String(original.assunto||original.tema||original.capNome||materia).trim();
+  const cap=String(original.cap||original.capitulo||"IMPORT-"+materia.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^A-Z0-9]+/g,"-").slice(0,36)).trim();
+  return {...original,id,enunciado,materia,cap,capNome:original.capNome||assunto,
+    tema:original.tema||assunto,gabarito:String(original.gabarito||original.resposta||original.correta||"").trim().toUpperCase()};
+}
 export function normalizeStudyQuestion(row) {
-  const original=row||{};
+  const original=normalizeBase(row||{});
   const raw=original.alternativas??original.opcoes??original.options;
-  if(raw==null)return {...original};
+  if(raw==null)return original;
   let items;
   if(Array.isArray(raw)){
     items=raw.map((entry,index)=>{
@@ -29,7 +45,7 @@ export function normalizeStudyQuestion(row) {
     items=Object.entries(raw).map(([letra,texto])=>({letra:String(letra).toUpperCase(),texto:String(typeof texto==="string"?texto:(texto?.texto||texto?.text||"")).trim()}));
   }else throw new Error("Alternativas devem ser lista ou objeto A–E.");
   items.sort((a,b)=>a.letra.localeCompare(b.letra));
-  const key=String(original.gabarito||original.resposta||original.correta||"").trim().toUpperCase();
+  const key=original.gabarito;
   if(items.length<4||items.length>5||new Set(items.map(x=>x.letra)).size!==items.length||
     items.some(x=>!["A","B","C","D","E"].includes(x.letra)||!x.texto)||!items.some(x=>x.letra===key))
     throw new Error("Questão "+String(original.id||"?")+": alternativas incompletas ou gabarito A–E incompatível.");
@@ -45,7 +61,7 @@ export function auditStudyCatalog(documents,collection){
   });
   for(const [i,row] of normalized.entries()){
     const id=String(row.id||"").trim();
-    if(!id)throw new Error("Documento "+(i+1)+" sem identificador id. Não será criado automaticamente um identificador que possa colidir.");
+    if(!id)throw new Error("Documento "+(i+1)+" sem identificador.");
     if(seen.has(id))throw new Error("Identificador repetido no JSON: "+id);
     seen.add(id);
     if(collection==="questoes"){
