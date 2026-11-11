@@ -140,6 +140,19 @@ When creating or enhancing **maps, revision summaries, flashcards or original C/
 
 Questions built with a supplied topic/node pair use strict **cebraspe-3.0** import rules: literal evidence in provided source, decisive substring in question, C/E F1–F10 or V1–V4, blind review without disagreement, and human declarations for original-source verification, key, univocity and node remission. The older **cebraspe-2.0** records, including the 160 RF-2.1–2.8 drafts, are preserved without automatic upgrades, publication or student-history mutations. Automated audit verifies *structure only*, never factual correctness, source authenticity, plagiarism or real CEBRASPE calibration. Treat URLs and bibliographies as leads until checked in their original documents. Never spend IA credits without an explicit click/authorization.
 
+## Regra permanente de publicação — endereço fixo do aplicativo
+
+O endereço canônico de produção é **https://quebrando-a-banca-a2c91a3c.base44.app**. O ícone instalado usa `https://quebrando-a-banca-a2c91a3c.base44.app/estudar`, conforme `public/manifest.webmanifest` (`start_url: "/estudar"`, `scope: "/"`). Nunca criar endereço de preview, staging, variante por versão, query de build nem outro aplicativo para entregar uma atualização do Quebrando a Banca.
+
+**Para TODA alteração de código concluída neste aplicativo, é obrigatório:**
+1. Executar testes e build; verificar também o que foi alterado e preservar contas, respostas e histórico.
+2. Salvar checkpoint Base44 da nova versão.
+3. **Executar deploy/publicação explícita do checkpoint neste MESMO appId de produção**; escrever arquivos e gerar checkpoint sozinho NÃO publica o site.
+4. Confirmar sucesso e versão pelo status do app, e confirmar que o domínio publicado permanece igual ao endereço canônico.
+5. Comunicar claramente se alguma etapa falhar. Não afirmar “publicado” caso apenas a edição ou o checkpoint estejam concluídos.
+
+O Service Worker em `public/sw.js` usa cache offline somente para recursos estáticos, rede primeiro e revalidação online; nunca cachear API, respostas, histórico ou dados privados. O app verifica atualizações do Service Worker quando volta ao primeiro plano e permite atualizar a interface **por escolha do estudante**, para não perder uma questão em andamento. **Não alterar o `start_url` ou o domínio do atalho para lançar versões novas.** A atualização de arquivos do projeto não deve exigir reinstalação do PWA.
+
 ## Working Notes
 
 - `npm run dev` runs the TanStack dev server (Vite); server code runs in `workerd`, exactly as in production.
