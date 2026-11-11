@@ -119,6 +119,72 @@ export function parseHierarchicalMindMap(input, fallbackTitle="Mapa mental", pre
   return {centro:center||fallbackTitle,ramos:roots,ligacoes:[],structureDetected:true,structuredNodes:seen,warnings:errors,sourceLength:source.length};
 }
 
+/* Exemplo de aplicação é uma situação ilustrativa, não referência normativa.
+ * Nunca inventar dados quantitativos/legais não existentes no texto-fonte. */
+export const APPLICATION_EXAMPLE_LABEL = "Exemplo hipotético (IA): ";
+
+function numericClaims(text) {
+  return (String(text||"").match(/\b\d+(?:[.,\/]\d+)*\s*(?:dias?|meses?|anos?|horas?|semanas?|%|artigos?|incisos?|salários?)\b|\b(?:art\.?|lei|decreto|súmula)\s*n?[ºo.]?\s*\d+(?:[.\/]\d+)*/gi) || []);
+}
+
+export function normalizeApplicationExample(proposal,source="",prior="") {
+  // Um exemplo efetivamente extraído da fonte nunca é substituído por hipótese.
+  const existing=clean(prior,1200);
+  if(existing)return existing;
+  const text=collapse(proposal).replace(/^(?:exemplo\s+(?:de\s+aplica[çc][ãa]o|hipot[ée]tico|ilustrativo)\s*(?:\(IA\))?\s*:?\s*)+/i,"").trim();
+  if(!text||text.length<22||/^(?:nenhum|n[ãa]o\s+(?:h[áa]|se\s+aplica)|sem\s+exemplo|n\/a)/i.test(text))return "";
+  const src=String(source||"").replace(/\s+/g," ");
+  if(numericClaims(text).some(claim=>!src.toLowerCase().includes(claim.toLowerCase())))
+    return "";
+  if(src.includes(text))return text;
+  return APPLICATION_EXAMPLE_LABEL+text;
+}
+
+export function applicationExampleCandidates(tree) {
+  const missing=[];
+  function walk(nodes){
+    for(const n of nodes||[]){
+      if(n.f?.length)walk(n.f);
+      else if(!n.x?.ex && (String(n.x?.e||"").length>=24 || String(n.n||"").length>=24))
+        missing.push({id:n.id,t:n.t,n:n.n||"",e:n.x?.e||"",rotulo:n.rotulo||""});
+    }
+  }
+  walk(tree?.ramos);
+  return missing;
+}
+
+export function applicationExampleCoverage(tree){
+  let examples=0,illustrative=0,sourceBased=0,leaves=0,missing=0;
+  function walk(nodes){
+    for(const n of nodes||[]){
+      if(n.x?.ex){
+        examples++;
+        if(String(n.x.ex).startsWith(APPLICATION_EXAMPLE_LABEL))illustrative++;
+        else sourceBased++;
+      }
+      if(n.f?.length)walk(n.f);
+      else {
+        leaves++;
+        if(!n.x?.ex)missing++;
+      }
+    }
+  }
+  walk(tree?.ramos);
+  return {examples,illustrative,sourceBased,leaves,missing};
+}
+
+export function labelGeneratedApplicationExamples(map,source=""){
+  const tree=structuredClone(map);
+  function walk(nodes){
+    for(const n of nodes||[]){
+      if(n.x?.ex)n.x.ex=normalizeApplicationExample(n.x.ex,source);
+      if(n.f?.length)walk(n.f);
+    }
+  }
+  walk(tree?.ramos);
+  return tree;
+}
+
 /* A IA preenche campos somente em nós já reconhecidos; nunca muda ramos, ordem ou ID. */
 export function enrichHierarchicalMindMap(skeleton,fields,source="") {
   const tree=structuredClone(skeleton);
@@ -134,7 +200,7 @@ export function enrichHierarchicalMindMap(skeleton,fields,source="") {
         const nextSrc=collapse(e.src).slice(0,600),nextRotulo=clean(e.rotulo,100);
         if(nextN)n.n=nextN;
         if(nextE)n.x.e=nextE;
-        if(nextEx)n.x.ex=nextEx;
+        if(nextEx)n.x.ex=normalizeApplicationExample(nextEx,sourceText,n.x.ex);
         if(nextTrap)n.x.trap=nextTrap;
         if(nextSrc&&sourceText.includes(nextSrc))n.x.src=nextSrc;
         if(nextRotulo)n.rotulo=nextRotulo;
