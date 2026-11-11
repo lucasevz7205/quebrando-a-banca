@@ -35,8 +35,8 @@ test("preserva todos os ramos, filhos e níveis de Markdown hierarquizado de out
  assert.deepEqual(map.ramos[0].f.map(n=>n.t),["Competência","Forma"]);
  assert.equal(map.ramos[0].f[0].f[0].t,"Delegação");
  const list=flatMindMapNodes(map);
- assert.equal(list.length,9);
- assert.equal(new Set(list.map(x=>x.id)).size,9);
+ assert.equal(list.length,10);
+ assert.equal(new Set(list.map(x=>x.id)).size,10);
  assert.equal(list[0].depth,0);
  assert.equal(list[2].depth,2);
  assert.match(map.ramos[0].x.ex,/nomeação/);
@@ -84,13 +84,13 @@ test("campos são preenchidos por ID sem que a IA altere títulos, ordem ou remi
  ],input);
  assert.equal(JSON.stringify(original),old);
  assert.equal(result.applied,1);
- assert.equal(result.total,9);
+ assert.equal(result.total,10);
  assert.deepEqual(result.mapa.ramos.map(x=>x.t),original.ramos.map(x=>x.t));
  assert.equal(result.mapa.ramos[0].f[0].t,"Competência");
  assert.equal(result.mapa.ramos[0].f[0].n,"Regra da competência");
  assert.equal(result.mapa.ramos[0].f[0].rotulo,"Competência");
  assert.equal(result.mapa.ramos[0].f[0].x.src,undefined);
- assert.equal(flatMindMapNodes(result.mapa).length,9);
+ assert.equal(flatMindMapNodes(result.mapa).length,10);
 });
 
 test("suporta até 32 ramos sem descarte silencioso pela normalização de servidor",()=>{
