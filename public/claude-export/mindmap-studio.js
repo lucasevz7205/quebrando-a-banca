@@ -918,7 +918,7 @@
           });
       createdMap.autor = options.generatedMap
         ? "Estruturado pela IA a partir do texto hierarquizado · Revisar antes de salvar"
-        : "Conversão direta de material · Revisar antes de estudar";
+        : "Ingerido do GeminiNotebook / outra fonte · Conversão direta; revisar antes de estudar";
       if (S && options.commitMap !== false) {
         saveMapToEnvironment(S, topicId, createdMap);
       }
@@ -1703,8 +1703,8 @@
       <div class="qb-gemini-modal" role="dialog" aria-modal="true" aria-labelledby="qb-gemini-modal-title">
         <div class="qb-gemini-modal-head">
           <div>
-            <h3 id="qb-gemini-modal-title">📥 Ingestão GeminiNotebook / NotebookLM</h3>
-            <p>Importe notas, resumos, fontes ou áudio-briefings gerados no seu acervo do GeminiNotebook para transformá-los instantaneamente em subsídios, folhas Cornell e Mapas Mentais AXON.</p>
+            <h3 id="qb-gemini-modal-title">Importar texto de IA ou material hierarquizado</h3>
+            <p>Cole textos de Gemini, ChatGPT, Claude, NotebookLM ou suas próprias anotações em Markdown. A IA identificará títulos, subníveis, definições, exemplos e referências, preencherá os campos do mapa e abrirá uma prévia para sua aprovação.</p>
           </div>
           <button type="button" class="qb-gemini-modal-close" id="qb-gemini-modal-close" aria-label="Fechar">✕</button>
         </div>
@@ -1726,8 +1726,8 @@
             </div>
           </div>
           <div>
-            <label for="qb-gemini-textarea-content">Conteúdo do GeminiNotebook (Texto, Markdown, Perguntas, Resumo)</label>
-            <textarea id="qb-gemini-textarea-content" placeholder="Cole aqui as anotações, sínteses de fontes, perguntas-chave ou o roteiro de estudo exportado do GeminiNotebook ou NotebookLM..."></textarea>
+            <label for="qb-gemini-textarea-content">Texto hierarquizado (títulos, subtítulos, listas, explicações, exemplos e fontes)</label>
+            <textarea id="qb-gemini-textarea-content" placeholder="# Assunto\n## Ramo principal\n- Subtópico: definição ou regra\n  - Requisito: condição específica\n- Exemplo: caso presente no texto\n- Pegadinha: contraste fornecido\n- Fonte: artigo ou referência literal\n\nAceita textos do Gemini, Claude, ChatGPT e outras fontes."></textarea>
           </div>
           <div class="qb-gemini-checkboxes">
             <label class="qb-gemini-check-item">
@@ -1740,7 +1740,7 @@
             </label>
             <label class="qb-gemini-check-item">
               <input type="checkbox" id="qb-gemini-check-mindmap" checked>
-              <span><b>Mapa Mental AXON:</b> Estruturar mapa mental imediatamente com rótulos e conceitos</span>
+              <span><b>Mapa Mental AXON:</b> Interpretar hierarquia com IA e preencher campos em uma prévia. Só substituir o mapa quando você clicar em Salvar Mapa Mental.</span>
             </label>
           </div>
         </div>
