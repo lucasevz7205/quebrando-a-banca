@@ -51,12 +51,13 @@ export function validateStudyContentBatch(collection, documents) {
     if (!row || typeof row !== "object" || Array.isArray(row)) {
       throw new Error("Registro de material inválido.");
     }
-    const id = String(row.id || "").trim();
+    const normalized=collection==="questoes"?normalizeStudyQuestion(row):row;
+    const id = String(normalized.id || "").trim();
     if (!id || id.length > 180 || /[/\\]/.test(id) || ids.has(id)) {
       throw new Error("Identificador ausente, repetido ou inválido no lote.");
     }
     ids.add(id);
-    const next = collection==="questoes"?normalizeStudyQuestion({...row,id}):{...row,id};
+    const next = {...normalized,id};
     if (collection === "questoes" && (!String(next.enunciado || "").trim() ||
       (!next.alternativas && !["C", "E"].includes(next.gabarito)))) {
       throw new Error("Questão " + id + ": informe enunciado e gabarito C/E, ou quatro/cinco alternativas com gabarito A–E.");
