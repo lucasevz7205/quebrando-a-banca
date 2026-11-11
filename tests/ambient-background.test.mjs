@@ -12,10 +12,8 @@ const observer=fs.readFileSync("src/components/qb/motion/study-motion.js","utf8"
 function fakePage({saved=null,reduced=false,saveData=false}={}){
   const listeners={};
   const mediaListeners={};
-  const attrs={};
   const stored={};
   if(saved)stored["qb-ambient-background-mode"]=saved;
-  const poster=document=>undefined;
   const video={
     listeners:{},muted:false,defaultMuted:false,playsInline:false,
     preload:"",readyState:0,duration:4,currentTime:0,src:"",
