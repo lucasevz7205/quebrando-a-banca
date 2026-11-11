@@ -148,6 +148,9 @@
     activeTab: "tutor",
     subject: "Processo Legislativo & Regimento Interno (CD - ARR)",
     tutorMode: "socratic",
+    activeSubjectSigla: "pl",
+    activeTopicId: "pl-01",
+    chatsByTopic: {},
     messages: [
       {
         id: "welcome-1",
@@ -300,6 +303,9 @@
         timestamp: "Agora",
       },
     ];
+    base.activeSubjectSigla = "";
+    base.activeTopicId = "";
+    base.chatsByTopic = {};
     base.feynman = { topic: "", targetAudience: defaultState.feynman.targetAudience, explanation: "", evaluation: null };
     base.cornellNotes = [];
     base.cornellNotebooks = [];
@@ -524,6 +530,224 @@
       .replace(/"/g, "&quot;");
   }
 
+  function formatOmniMarkdown(rawText) {
+    if (!rawText) return "";
+    let s = String(rawText);
+
+    // 1. Proteger blocos de código ```code```
+    const codeBlocks = [];
+    s = s.replace(/```([a-zA-Z0-9_-]*)\n?([\s\S]*?)```/g, (_m, lang, code) => {
+      const idx = codeBlocks.length;
+      codeBlocks.push(`<pre class="omni-code-block" data-lang="${escHtml(lang || "")}"><code>${escHtml(code.trim())}</code></pre>`);
+      return `\u0000BLOCK${idx}\u0000`;
+    });
+
+    // 2. Proteger inline code `code`
+    const inlineCodes = [];
+    s = s.replace(/`([^`\n]+)`/g, (_m, code) => {
+      const idx = inlineCodes.length;
+      inlineCodes.push(`<code class="omni-inline-code">${escHtml(code)}</code>`);
+      return `\u0000INLINE${idx}\u0000`;
+    });
+
+    // 3. Escapar HTML do corpo
+    s = escHtml(s);
+
+    // 4. Headers markdown: #, ##, ###
+    s = s.replace(/^###\s+(.+)$/gm, '<h4 class="omni-chat-h3">$1</h4>');
+    s = s.replace(/^##\s+(.+)$/gm, '<h3 class="omni-chat-h2">$1</h3>');
+    s = s.replace(/^#\s+(.+)$/gm, '<h2 class="omni-chat-h1">$1</h2>');
+
+    // 5. Negrito e itálico:
+    // ***texto*** -> <strong><em>texto</em></strong>
+    s = s.replace(/\*\*\*([^\*\n]+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+    // **texto** -> <strong>texto</strong>
+    s = s.replace(/\*\*([^\*\n]+?)\*\*/g, '<strong>$1</strong>');
+    // *texto* -> <em>texto</em>
+    s = s.replace(/\*([^\*\n]+?)\*/g, '<em>$1</em>');
+    // ___texto___ -> <strong><em>texto</em></strong>
+    s = s.replace(/___([^_\n]+?)___/g, '<strong><em>$1</em></strong>');
+    // __texto__ -> <strong>texto</strong>
+    s = s.replace(/__([^_\n]+?)__/g, '<strong>$1</strong>');
+    // _texto_ -> <em>texto</em>
+    s = s.replace(/\b_([^_\n]+?)_\b/g, '<em>$1</em>');
+
+    // 6. Listas numeradas e não-ordenadas
+    const lines = s.split("\n");
+    const outLines = [];
+    let inUl = false;
+    let inOl = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const ulMatch = line.match(/^(\s*)([-*•])\s+(.+)$/);
+      const olMatch = line.match(/^(\s*)(\d+)\.\s+(.+)$/);
+
+      if (ulMatch) {
+        if (inOl) { outLines.push("</ol>"); inOl = false; }
+        if (!inUl) { outLines.push('<ul class="omni-chat-list">'); inUl = true; }
+        outLines.push(`<li>${ulMatch[3]}</li>`);
+      } else if (olMatch) {
+        if (inUl) { outLines.push("</ul>"); inUl = false; }
+        if (!inOl) { outLines.push('<ol class="omni-chat-list">'); inOl = true; }
+        outLines.push(`<li>${olMatch[3]}</li>`);
+      } else {
+        if (inUl) { outLines.push("</ul>"); inUl = false; }
+        if (inOl) { outLines.push("</ol>"); inOl = false; }
+        outLines.push(line);
+      }
+    }
+    if (inUl) outLines.push("</ul>");
+    if (inOl) outLines.push("</ol>");
+
+    s = outLines.join("\n");
+
+    // 7. Parágrafos e quebras de linha
+    const blocks = s.split(/\n{2,}/);
+    s = blocks
+      .map(b => {
+        const trimmed = b.trim();
+        if (!trimmed) return "";
+        if (/^<(h[1-4]|ul|ol|pre|blockquote)/i.test(trimmed)) {
+          return trimmed;
+        }
+        return `<p class="omni-chat-p">${trimmed.replace(/\n/g, "<br>")}</p>`;
+      })
+      .filter(Boolean)
+      .join("");
+
+    // 8. Restaurar placeholders
+    s = s.replace(/\u0000INLINE(\d+)\u0000/g, (_m, idx) => inlineCodes[Number(idx)] || "");
+    s = s.replace(/\u0000BLOCK(\d+)\u0000/g, (_m, idx) => codeBlocks[Number(idx)] || "");
+
+    // 9. Sanitizar asteriscos órfãos residuais
+    s = s.replace(/\*{2,}/g, "").replace(/(^|\s)\*(\s|$)/g, "$1•$2");
+
+    return s;
+  }
+
+  function getTopicCatalog() {
+    const S = appState();
+    const mapBySigla = new Map();
+
+    if (S && S.ed && typeof S.ed.values === "function") {
+      for (const t of S.ed.values()) {
+        if (!t) continue;
+        const sig = String(t.sigla || "geral").toLowerCase();
+        const matName = t.materia || t.sigla?.toUpperCase() || "Matéria";
+        if (!mapBySigla.has(sig)) {
+          mapBySigla.set(sig, { id: sig, name: matName, topics: [] });
+        }
+        mapBySigla.get(sig).topics.push({
+          id: String(t.id || (sig + "-" + (t.num || "0"))),
+          title: String(t.titulo || t.nome || t.id),
+          label: `${t.sigla ? t.sigla.toUpperCase() + (t.num ? " " + t.num + " · " : " · ") : ""}${t.titulo || t.nome || t.id}`,
+        });
+      }
+    } else if (S && S.edital && Array.isArray(S.edital.materias)) {
+      for (const m of S.edital.materias) {
+        const sig = String(m.sigla || m.id || m.nome || "geral").toLowerCase();
+        const entry = { id: sig, name: m.nome || m.sigla || "Matéria", topics: [] };
+        for (const t of m.topicos || []) {
+          entry.topics.push({
+            id: String(t.id || t.titulo || t.nome),
+            title: String(t.titulo || t.nome || t.id),
+            label: String(t.titulo || t.nome || t.id),
+          });
+        }
+        mapBySigla.set(sig, entry);
+      }
+    }
+
+    if (mapBySigla.size === 0) {
+      return [
+        {
+          id: "pl",
+          name: "Processo Legislativo & Regimento Interno",
+          topics: [
+            { id: "pl-01", title: "Espécies Normativas & Quóruns (CF/88 art. 59-69)", label: "PL 1 · Espécies Normativas & Quóruns" },
+            { id: "pl-02", title: "Competências Legislativas (CF/88 art. 21-24)", label: "PL 2 · Competências Legislativas" },
+            { id: "pl-03", title: "Regimento Interno da CD (RICD)", label: "PL 3 · Regimento Interno da CD" },
+          ],
+        },
+        {
+          id: "da",
+          name: "Direito Administrativo",
+          topics: [
+            { id: "da-01", title: "Regime Jurídico & Princípios Administrativos", label: "DA 1 · Princípios Administrativos" },
+            { id: "da-02", title: "Poderes Administrativos & Poder de Polícia", label: "DA 2 · Poderes Administrativos" },
+            { id: "da-03", title: "Atos Administrativos & Delegação/Avocação", label: "DA 3 · Atos Administrativos" },
+          ],
+        },
+        {
+          id: "lp",
+          name: "Língua Portuguesa",
+          topics: [
+            { id: "lp-01", title: "Compreensão, Interpretação & Tipologia Textual", label: "LP 1 · Compreensão e Interpretação" },
+            { id: "lp-02", title: "Coesão, Coerência & Reescrita Cebraspe", label: "LP 2 · Coesão e Reescrita Cebraspe" },
+            { id: "lp-03", title: "Morfossintaxe, Regência & Pontuação", label: "LP 3 · Regência e Pontuação" },
+          ],
+        },
+      ];
+    }
+
+    return [...mapBySigla.values()];
+  }
+
+  function getActiveChatData() {
+    const catalog = getTopicCatalog();
+    if (!catalog.length) {
+      return {
+        catalog: [],
+        currentSubject: { id: "geral", name: state.subject || "Matéria Geral", topics: [] },
+        currentTopic: { id: "geral", title: "Tópico Geral", label: "Geral" },
+        chat: { messages: state.messages || [], subject: state.subject, topicTitle: "Geral" },
+      };
+    }
+
+    let curSubject = catalog.find(m => m.id === state.activeSubjectSigla);
+    if (!curSubject) {
+      curSubject = catalog[0];
+      state.activeSubjectSigla = curSubject.id;
+    }
+
+    let curTopic = (curSubject.topics || []).find(t => t.id === state.activeTopicId);
+    if (!curTopic) {
+      curTopic = (curSubject.topics && curSubject.topics[0]) || { id: curSubject.id + "-01", title: curSubject.name, label: curSubject.name };
+      state.activeTopicId = curTopic.id;
+    }
+
+    if (!state.chatsByTopic || typeof state.chatsByTopic !== "object") {
+      state.chatsByTopic = {};
+    }
+
+    const key = curTopic.id;
+    if (!state.chatsByTopic[key]) {
+      const hasLegacy = Array.isArray(state.messages) && state.messages.length > 0 && Object.keys(state.chatsByTopic).length === 0;
+      state.chatsByTopic[key] = {
+        topicId: curTopic.id,
+        topicTitle: curTopic.title,
+        subject: curSubject.name,
+        messages: hasLegacy
+          ? state.messages
+          : [
+              {
+                id: "welcome-" + curTopic.id,
+                role: "model",
+                text: `Olá! Sou o seu **Tutor Socrático OmniStudy IA**.\n\nEstamos focados em **${curSubject.name}** — *${curTopic.title}*.\n\nQual dúvida conceitual, pegadinha Cebraspe ou dispositivo deste assunto vamos dissecar agora?`,
+                timestamp: "Agora",
+              },
+            ],
+      };
+    }
+
+    const chat = state.chatsByTopic[key];
+    chat.subject = curSubject.name;
+    chat.topicTitle = curTopic.title;
+    state.subject = `${curSubject.name} — ${curTopic.title}`;
+    return { currentSubject: curSubject, currentTopic: curTopic, chat, catalog };
+  }
+
   function openStudio(tab) {
     syncContestContext(appState());
     if (tab) state.activeTab = tab;
@@ -573,64 +797,128 @@
     if (!body) return;
 
     if (state.activeTab === "tutor") {
+      const { currentSubject, currentTopic, chat, catalog } = getActiveChatData();
+      const messages = chat.messages || [];
+
       body.innerHTML = `
         <div class="omni-card" style="margin-bottom:14px">
-          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-            <div style="flex:1;min-width:220px">
-              <label class="omni-label">Tópico / Disciplina em Foco</label>
-              <input id="omni-tutor-subject" class="omni-input" value="${escHtml(state.subject)}" />
-            </div>
-            <div>
-              <label class="omni-label">Modo Cognitivo</label>
-              <div style="display:flex;gap:6px;flex-wrap:wrap">
-                ${[
-                  ["socratic", "Socrático"],
-                  ["simple", "Feynman"],
-                  ["exam", "Banca Cebraspe"],
-                  ["challenge", "Arguição Oral"],
-                ]
+          <div class="omni-tutor-catalog-bar">
+            <div style="flex:1;min-width:200px">
+              <label class="omni-label">Matéria do Concurso</label>
+              <select id="omni-tutor-subject-select" class="omni-input">
+                ${catalog
                   .map(
-                    ([id, label]) =>
-                      `<button type="button" class="omni-tab-btn ${state.tutorMode === id ? "active" : ""}" data-tutor-mode="${id}">${label}</button>`
+                    m =>
+                      `<option value="${escHtml(m.id)}" ${m.id === currentSubject.id ? "selected" : ""}>${escHtml(m.name)}</option>`
                   )
                   .join("")}
-              </div>
+              </select>
+            </div>
+            <div style="flex:1.4;min-width:240px">
+              <label class="omni-label">Assunto / Tópico do Edital (Histórico Catalogado)</label>
+              <select id="omni-tutor-topic-select" class="omni-input">
+                ${(currentSubject.topics || [])
+                  .map(
+                    t =>
+                      `<option value="${escHtml(t.id)}" ${t.id === currentTopic.id ? "selected" : ""}>${escHtml(t.label || t.title)}</option>`
+                  )
+                  .join("")}
+              </select>
+            </div>
+            <div style="display:flex;align-items:flex-end">
+              <button type="button" id="omni-tutor-clear-chat" class="omni-btn omni-btn-ghost" title="Limpar conversa deste assunto">🗑 Limpar Histórico</button>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(148,163,184,0.14);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px">
+            <div style="display:flex;align-items:center;gap:6px">
+              <span class="omni-label" style="margin:0">Modo Cognitivo:</span>
+              <span style="font-size:11px;color:rgba(148,163,184,0.8)">(Muda a persona pedagógica da IA; histórico catalogado pelo assunto)</span>
+            </div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap">
+              ${[
+                ["socratic", "Socrático"],
+                ["simple", "Feynman"],
+                ["exam", "Banca Cebraspe"],
+                ["challenge", "Arguição Oral"],
+              ]
+                .map(
+                  ([id, label]) =>
+                    `<button type="button" class="omni-tab-btn ${state.tutorMode === id ? "active" : ""}" data-tutor-mode="${id}">${label}</button>`
+                )
+                .join("")}
             </div>
           </div>
         </div>
 
         <div class="omni-card">
           <div id="omni-chat-box" class="omni-chat-box">
-            ${state.messages
+            ${messages
               .map(
                 m => `
-              <div class="omni-msg ${m.role === "model" ? "model" : "user"}">${escHtml(m.text)}</div>
+              <div class="omni-msg ${m.role === "model" ? "model" : "user"}">${formatOmniMarkdown(m.text)}</div>
             `
               )
               .join("")}
           </div>
 
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin:10px 0">
-            <button type="button" class="omni-btn omni-btn-ghost" data-quick-prompt="Me faça 3 perguntas provocativas estilo Cebraspe sobre ${escHtml(state.subject)} para testar minha retenção ativa.">🎯 Testar Retenção</button>
-            <button type="button" class="omni-btn omni-btn-ghost" data-quick-prompt="Quais são as principais pegadinhas (F1 a F10) que o Cebraspe aplica em ${escHtml(state.subject)}?">⚠️ Armadilhas da Banca</button>
-            <button type="button" class="omni-btn omni-btn-ghost" data-quick-prompt="Crie uma analogia estilo Feynman inesquecível para o conceito mais difícil de ${escHtml(state.subject)}.">💡 Analogia Feynman</button>
+            <button type="button" class="omni-btn omni-btn-ghost" data-quick-prompt="Me faça 3 perguntas provocativas estilo Cebraspe sobre ${escHtml(currentTopic.title)} para testar minha retenção ativa.">🎯 Testar Retenção</button>
+            <button type="button" class="omni-btn omni-btn-ghost" data-quick-prompt="Quais são as principais pegadinhas (F1 a F10) que a banca aplica em ${escHtml(currentTopic.title)}?">⚠️ Armadilhas da Banca</button>
+            <button type="button" class="omni-btn omni-btn-ghost" data-quick-prompt="Crie uma analogia estilo Feynman inesquecível para o conceito mais difícil de ${escHtml(currentTopic.title)}.">💡 Analogia Feynman</button>
             <button type="button" id="omni-voice-btn" class="omni-btn omni-btn-ghost" title="Responder por voz (Arguição Oral)">🎙 Arguição por Voz</button>
           </div>
 
           <form id="omni-tutor-form" style="display:flex;gap:8px">
-            <input id="omni-tutor-input" class="omni-input" placeholder="Responda ao tutor ou tire sua dúvida..." />
+            <input id="omni-tutor-input" class="omni-input" placeholder="Responda ao tutor ou tire sua dúvida sobre ${escHtml(currentTopic.title)}..." />
             <button type="submit" class="omni-btn">Enviar</button>
           </form>
         </div>
       `;
 
-      const subjInput = body.querySelector("#omni-tutor-subject");
-      if (subjInput) {
-        subjInput.addEventListener("change", () => {
-          state.subject = subjInput.value.trim() || state.subject;
+      const subjectSel = body.querySelector("#omni-tutor-subject-select");
+      if (subjectSel) {
+        subjectSel.addEventListener("change", () => {
+          state.activeSubjectSigla = subjectSel.value;
+          const chosenMat = catalog.find(m => m.id === subjectSel.value);
+          if (chosenMat && chosenMat.topics && chosenMat.topics[0]) {
+            state.activeTopicId = chosenMat.topics[0].id;
+          }
           saveState();
+          renderStudioBody();
         });
       }
+
+      const topicSel = body.querySelector("#omni-tutor-topic-select");
+      if (topicSel) {
+        topicSel.addEventListener("change", () => {
+          state.activeTopicId = topicSel.value;
+          saveState();
+          renderStudioBody();
+        });
+      }
+
+      const clearBtn = body.querySelector("#omni-tutor-clear-chat");
+      if (clearBtn) {
+        clearBtn.addEventListener("click", () => {
+          if (global.confirm && !global.confirm(`Limpar o histórico de mensagens de "${currentTopic.title}"?`)) {
+            return;
+          }
+          if (state.chatsByTopic && state.chatsByTopic[currentTopic.id]) {
+            state.chatsByTopic[currentTopic.id].messages = [
+              {
+                id: "welcome-" + currentTopic.id,
+                role: "model",
+                text: `Histórico reiniciado para **${currentSubject.name}** — *${currentTopic.title}*.\n\nQual ponto deste assunto vamos estudar agora?`,
+                timestamp: "Agora",
+              },
+            ];
+            saveState();
+            renderStudioBody();
+          }
+        });
+      }
+
       body.querySelectorAll("[data-tutor-mode]").forEach(b => {
         b.addEventListener("click", () => {
           state.tutorMode = b.getAttribute("data-tutor-mode");
@@ -642,7 +930,8 @@
       const sendMsg = async text => {
         const clean = String(text || "").trim();
         if (!clean) return;
-        state.messages.push({ id: "u-" + Date.now(), role: "user", text: clean, timestamp: "Agora" });
+        chat.messages = chat.messages || [];
+        chat.messages.push({ id: "u-" + Date.now(), role: "user", text: clean, timestamp: "Agora" });
         saveState();
         renderStudioBody();
         const chatBox = document.getElementById("omni-chat-box");
@@ -650,11 +939,12 @@
 
         const res = await callOmniStudyBackend({
           task: "tutor-chat",
-          subject: state.subject,
+          subject: currentSubject.name,
+          topic: currentTopic.title,
           mode: state.tutorMode,
-          messages: state.messages.slice(-10).map(m => ({ role: m.role, text: m.text })),
+          messages: chat.messages.slice(-10).map(m => ({ role: m.role, text: m.text })),
         });
-        state.messages.push({
+        chat.messages.push({
           id: "m-" + Date.now(),
           role: "model",
           text: res.reply || "Como você explicaria esse ponto com suas próprias palavras?",
@@ -1172,11 +1462,14 @@
   }
 
   global.QBOmniStudy = {
-    version: "2.0.0",
+    version: "2.1.0",
     soundEngine,
     state,
     openStudio,
     closeStudio,
+    formatOmniMarkdown,
+    getTopicCatalog,
+    getActiveChatData,
     togglePomodoro,
     callOmniStudyBackend,
     syncContestContext,

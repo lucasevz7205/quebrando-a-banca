@@ -469,7 +469,7 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/study-batch-ui.css?v=1">
 <script src="/claude-export/planner.js?v=6"></script>
 <script src="/claude-export/insights.js?v=3"></script>
-<script src="/claude-export/assistant.js?v=2"></script>
+<script src="/claude-export/assistant.js?v=3"></script>
 <script src="/claude-export/strategies.js"></script>
 <script src="/claude-export/learning.js"></script>
 <script src="/claude-export/question-links.js"></script>
@@ -506,10 +506,10 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/axon-shell.js?v=1"></script>
 <link rel="stylesheet" href="/claude-export/mindmap-studio.css?v=14">
 <script src="/claude-export/mindmap-studio.js?v=14"></script>
-<link rel="stylesheet" href="/claude-export/omnistudy-ai.css?v=12">
+<link rel="stylesheet" href="/claude-export/omnistudy-ai.css?v=13">
 <link rel="stylesheet" href="/claude-export/omnistudy-cornell.css?v=12">
 <script src="/claude-export/omnistudy-cornell.js?v=15" defer></script>
-<script src="/claude-export/omnistudy-ai.js?v=24" defer></script>
+<script src="/claude-export/omnistudy-ai.js?v=25" defer></script>
 <script>
 (function(){
 const S = {
@@ -3334,7 +3334,7 @@ function init(){
     window.QBOmniStudy?.syncContestContext?.(S);
     if(v==='portal')openPortal(entrySection,false,false);
     else setView(v,false);
-    if(account.legacy&&window.QBAssistant)window.QBAssistant.mount(S);
+    if(window.QBAssistant)window.QBAssistant.mount(S);
     return window.claude.use('db');
   }).then(db=>{
     if(!db){ S.dbState='missing'; render(true); return; }

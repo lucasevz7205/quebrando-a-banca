@@ -158,3 +158,80 @@ test("fluxo de interface: digitar, salvar, revisar, aprovar e desfazer sem sobre
  assert.match(state.cornellNotes[0].notes,/anotação digitada/);
 });
 
+test("Assistente abre OmniStudy, Markdown elimina asteriscos e histórico fica catalogado por matéria e assunto", () => {
+  const assistantCode = fs.readFileSync("public/claude-export/assistant.js", "utf8");
+  const omniCode = fs.readFileSync("public/claude-export/omnistudy-ai.js", "utf8");
+
+  // 1. Atalho Assistente abre o OmniStudy
+  assert.match(assistantCode, /⚡ Omni/);
+  assert.match(assistantCode, /window\.QBOmniStudy\.openStudio\('tutor'\)/);
+
+  // 2. Formatação de Markdown no Omni sem falha de asteriscos
+  const sandbox = {
+    window: {},
+    document: {
+      addEventListener: () => {},
+      readyState: "complete",
+    },
+    localStorage: {
+      getItem: () => null,
+      setItem: () => {},
+    },
+    Math,
+    Date,
+    String,
+    Array,
+    Object,
+  };
+  vm.runInNewContext(omniCode, sandbox);
+  const omni = sandbox.window.QBOmniStudy;
+  assert.ok(omni, "QBOmniStudy deve ser exportado");
+  assert.equal(typeof omni.formatOmniMarkdown, "function");
+
+  const rawSample =
+    "### Regra Constitucional\n" +
+    "Olá! O conceito central é **Delegação de Competência**, que transfere apenas o *exercício* e nunca a ***titularidade***.\n\n" +
+    "* Exige ato motivado\n" +
+    "* Não cabe para atos normativos\n" +
+    "1. Primeiro passo da análise\n" +
+    "2. Segundo passo com `código inline`\n\n" +
+    "Cuidado com a pegadinha F3 da banca Cebraspe!";
+
+  const formatted = omni.formatOmniMarkdown(rawSample);
+  assert.ok(formatted.includes('<h4 class="omni-chat-h3">Regra Constitucional</h4>'));
+  assert.ok(formatted.includes('<strong>Delegação de Competência</strong>'));
+  assert.ok(formatted.includes('<em>exercício</em>'));
+  assert.ok(formatted.includes('<strong><em>titularidade</em></strong>'));
+  assert.ok(formatted.includes('<ul class="omni-chat-list">'));
+  assert.ok(formatted.includes('<li>Exige ato motivado</li>'));
+  assert.ok(formatted.includes('<ol class="omni-chat-list">'));
+  assert.ok(formatted.includes('<code class="omni-inline-code">código inline</code>'));
+  assert.ok(!formatted.includes("**Delegação"), "Não deve haver asteriscos duplos órfãos");
+  assert.ok(!formatted.includes("***titularidade"), "Não deve haver asteriscos triplos órfãos");
+
+  // 3. Catalogação do Histórico por Matéria e Assunto (sem separar pelo modo cognitivo)
+  const catalog = omni.getTopicCatalog();
+  assert.ok(Array.isArray(catalog) && catalog.length >= 2, "Catálogo deve conter matérias");
+  const firstMat = catalog[0];
+  assert.ok(firstMat.topics.length >= 2, "Matéria deve conter tópicos/assuntos");
+
+  omni.state.activeSubjectSigla = firstMat.id;
+  omni.state.activeTopicId = firstMat.topics[0].id;
+  const chat1 = omni.getActiveChatData();
+  assert.equal(chat1.currentTopic.id, firstMat.topics[0].id);
+
+  // Adiciona mensagem ao assunto 1
+  chat1.chat.messages.push({ id: "msg-1", role: "user", text: "Dúvida sobre o primeiro tópico" });
+
+  // Alterna o Modo Cognitivo: NÃO pode resetar nem criar conversa nova
+  omni.state.tutorMode = "exam";
+  const chat1SameMode = omni.getActiveChatData();
+  assert.equal(chat1SameMode.chat.messages.some(m => m.text === "Dúvida sobre o primeiro tópico"), true);
+
+  // Troca de assunto: deve isolar o histórico
+  omni.state.activeTopicId = firstMat.topics[1].id;
+  const chat2 = omni.getActiveChatData();
+  assert.equal(chat2.currentTopic.id, firstMat.topics[1].id);
+  assert.equal(chat2.chat.messages.some(m => m.text === "Dúvida sobre o primeiro tópico"), false);
+});
+
