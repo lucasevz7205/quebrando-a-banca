@@ -50,7 +50,8 @@ test("OmniStudy encontra o cabeçalho AXON atual e monta botão visível",()=>{
   assert.ok(nodes.get("omni-pomo-pill"));
   assert.ok(nodes.get("omni-drawer-backdrop"));
   assert.match(nodes.get("omni-studio-trigger").innerHTML,/O Arquiteto/);
-  assert.match(nodes.get("omni-drawer-backdrop").innerHTML,/Quebrando a Banca/);
+  assert.match(nodes.get("omni-drawer-backdrop").innerHTML,/O Arquiteto/);
+  assert.match(nodes.get("omni-drawer-backdrop").innerHTML,/architect-provider-bar/);
   assert.equal(win.QBOmniStudy.version,"2.1.0");
   assert.equal(win.QBOmniStudy.name,"O Arquiteto");
   assert.equal(typeof win.QBOmniStudy.openStudio,"function");
