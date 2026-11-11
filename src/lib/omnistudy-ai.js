@@ -83,6 +83,19 @@ const OmniStudyInput = z.discriminatedUnion("task", [
     cornellContext: z.string().max(12000).optional().default(""),
   }),
   z.object({
+    /* Evocar antes de ler (mapa): o estudante escreve de memória e o Omni corrige,
+       apontando o trecho exato da tentativa que está errado (11/11/2026). */
+    task: z.literal("evocar-corrigir"),
+    topico: z.string().max(300).optional().default(""),
+    rotulo: z.string().min(1).max(300),
+    etiqueta: z.string().max(400).optional().default(""),
+    explicacao: z.string().max(3000).optional().default(""),
+    exemplo: z.string().max(1500).optional().default(""),
+    pegadinha: z.string().max(1500).optional().default(""),
+    fonte: z.string().max(400).optional().default(""),
+    tentativa: z.string().min(3).max(2000),
+  }),
+  z.object({
     task: z.literal("curate-question"),
     question: z.object({
       id: z.string().max(120),
@@ -151,6 +164,28 @@ function tutorContextText(ctx) {
   } catch {
     return "";
   }
+}
+
+/* Mantém só trechos que existem literalmente na tentativa; o resto vira erro sem trecho. */
+export function normalizeEvocacao(raw, tentativa) {
+  const lista = v => (Array.isArray(v) ? v : []).map(x => String(x || "").trim()).filter(Boolean).slice(0, 8);
+  const texto = String(tentativa || "");
+  const veredito = ["lembrei", "parcial", "nao"].includes(raw?.veredito) ? raw.veredito : "parcial";
+  const erros = (Array.isArray(raw?.erros) ? raw.erros : []).slice(0, 6).map(e => {
+    const trecho = String(e?.trecho || "").trim().slice(0, 160);
+    return {
+      trecho: trecho && texto.includes(trecho) ? trecho : "",
+      problema: String(e?.problema || "").trim().slice(0, 400),
+      correcao: String(e?.correcao || "").trim().slice(0, 400),
+    };
+  }).filter(e => e.problema || e.correcao);
+  return {
+    veredito: erros.length && veredito === "lembrei" ? "parcial" : veredito,
+    acertou: lista(raw?.acertou),
+    faltou: lista(raw?.faltou),
+    erros,
+    pergunta: String(raw?.pergunta || "").trim().slice(0, 300),
+  };
 }
 
 export const invokeOmniStudyAI = createServerFn({ method: "POST" })
@@ -686,6 +721,44 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
       });
     }
 
+    if (data.task === "evocar-corrigir") {
+      const referencia = [
+        `Conceito: "${data.rotulo}"${data.etiqueta ? ` — ${data.etiqueta}` : ""}`,
+        data.explicacao && `Explicação de referência: ${data.explicacao}`,
+        data.exemplo && `Exemplo: ${data.exemplo}`,
+        data.pegadinha && `Pegadinha da banca: ${data.pegadinha}`,
+        data.fonte && `Fonte: ${data.fonte}`,
+      ].filter(Boolean).join("\n");
+      const prompt = [
+        "Você corrige uma evocação de um estudante de concurso (Cebraspe, Câmara dos Deputados).",
+        `Tópico: "${data.topico || data.rotulo}".`,
+        "A REFERÊNCIA abaixo é a única fonte da verdade. Não acrescente conteúdo que não esteja nela.",
+        referencia,
+        `TENTATIVA DO ESTUDANTE (de memória):\n"""${data.tentativa}"""`,
+        "Compare ideia por ideia, aceitando sinônimos e paráfrases fiéis.",
+        "Em 'erros', o campo 'trecho' deve ser cópia LITERAL de um pedaço da tentativa (até 120 caracteres) que contradiz a referência; diga o problema e a versão correta.",
+        "Em 'faltou', liste o que é essencial na referência e não apareceu (frases curtas). Em 'acertou', o que bate com a referência.",
+        "'veredito': 'lembrei' só se as ideias essenciais estão presentes e nada contradiz; 'nao' se quase nada bate; senão 'parcial'.",
+        "'pergunta': uma pergunta de recuperação curta, com resposta definida, sobre o ponto mais fraco.",
+        "Responda só em JSON.",
+      ].join("\n");
+      const raw = await core.InvokeLLM({
+        prompt,
+        response_json_schema: {
+          type: "object",
+          properties: {
+            veredito: { type: "string", enum: ["lembrei", "parcial", "nao"] },
+            acertou: { type: "array", items: { type: "string" } },
+            faltou: { type: "array", items: { type: "string" } },
+            erros: { type: "array", items: { type: "object", properties: {
+              trecho: { type: "string" }, problema: { type: "string" }, correcao: { type: "string" } } } },
+            pergunta: { type: "string" },
+          },
+          required: ["veredito", "acertou", "faltou", "erros", "pergunta"],
+        },
+      });
+      return normalizeEvocacao(safeJsonParse(raw, {}), data.tentativa);
+    }
     if (data.task === "curate-question") {
       const q = data.question;
       const isCE = !q.alternativas || q.alternativas.length === 0;

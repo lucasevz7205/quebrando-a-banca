@@ -1,12 +1,16 @@
 import {
-  BufferAttribute, BufferGeometry, Color, Float32BufferAttribute, InstancedMesh, LineBasicMaterial, LineDashedMaterial, LineSegments, Matrix4, AdditiveBlending,
-  MOUSE, MeshBasicMaterial, PerspectiveCamera, Plane, Points, PointsMaterial, Raycaster, Scene, SphereGeometry, Vector2, Vector3, WebGLRenderer,
+  BufferGeometry, Color, Float32BufferAttribute, InstancedMesh, LineBasicMaterial, LineDashedMaterial, LineSegments, Matrix4,
+  MOUSE, TOUCH, MeshBasicMaterial, PerspectiveCamera, Plane, Raycaster, Scene, SphereGeometry, Vector2, Vector3, WebGLRenderer,
 } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { placeMap } from "./layout";
 import { createBranchVisibility } from "./branch-visibility";
-import { createNodeActivation } from "./node-activation";
-import { directionalPanOffset, nearestProjectedHit, resolveLabelPositions, wheelZoomFactor } from "./mouse-navigation";
+import { createNodeActivation, DOUBLE_CLICK_MS } from "./node-activation";
+import { directionalPanOffset, initials, nearestProjectedHit, resolveLabelPositions, wheelZoomFactor } from "./mouse-navigation";
+
+/* Câmera em 2,5D (11/11/2026): o mapa é lido de frente; inclinação máxima de 35°
+ * em qualquer direção, nunca de cabeça para baixo. */
+export const CAMERA_TILT_LIMIT = 35 * Math.PI / 180;
 
 export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = null) {
   const doc = panel.ownerDocument, view = doc.defaultView;
@@ -27,7 +31,13 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
   controls.zoomToCursor = true;
   controls.rotateSpeed = .52;
   controls.zoomSpeed = .74;
-  controls.mouseButtons = {LEFT:MOUSE.ROTATE,MIDDLE:MOUSE.DOLLY,RIGHT:MOUSE.PAN};
+  // Como num mapa: arrastar desloca; girar é a ação secundária.
+  controls.mouseButtons = {LEFT:MOUSE.PAN,MIDDLE:MOUSE.DOLLY,RIGHT:MOUSE.ROTATE};
+  controls.touches = {ONE:TOUCH.PAN,TWO:TOUCH.DOLLY_ROTATE};
+  controls.minPolarAngle = Math.PI / 2 - CAMERA_TILT_LIMIT;
+  controls.maxPolarAngle = Math.PI / 2 + CAMERA_TILT_LIMIT;
+  controls.minAzimuthAngle = -CAMERA_TILT_LIMIT;
+  controls.maxAzimuthAngle = CAMERA_TILT_LIMIT;
 
   const coords = placeMap(graph);
   const branches = createBranchVisibility(graph, {expandedPaths});
@@ -41,17 +51,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
   spheres.frustumCulled = false; // visible instance slots are compacted on each branch toggle
   const computed = view.getComputedStyle(panel);
   const colorFor = node => computed.getPropertyValue("--qb-node-" + (node.status || "sem-evidencia")).trim() || "#9da8c4";
-  const dust = new Float32Array(390 * 3);
-  // Stationary particle field inspired by AXON; the renderer runs only on interaction.
-  let seed = 431;
-  for(let i=0;i<dust.length;i++){
-    seed=(Math.imul(1664525,seed)+1013904223)>>>0;
-    dust[i]=(seed/4294967296-.5)*reach*4;
-  }
-  const dustGeometry=new BufferGeometry().setAttribute("position",new BufferAttribute(dust,3));
-  const dustMaterial=new PointsMaterial({size:.045,color:"#a9a6ff",transparent:true,opacity:.42,
-    blending:AdditiveBlending,depthWrite:false});
-  scene.add(new Points(dustGeometry,dustMaterial));
+  // Sem partículas decorativas: menos carga visual durante a evocação (11/11/2026).
   coords.forEach((node,i) => {
     const scale = node.depth === 0 ? .54 : node.depth === 1 ? .37 : .22;
     spheres.setMatrixAt(i, new Matrix4().makeScale(scale,scale,scale).setPosition(world[i]));
@@ -103,7 +103,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     tag.textContent = node.title;
     const sample=node.respondidas ? " · Questões: " + Math.round(node.percentual*100) + "%, " + node.respondidas + "/" + node.questoes + " respondidas" : " · Questões: sem respostas válidas";
     const cards=node.flashcardsAvaliados ? " · Flashcards: " + node.flashcardsLembrados + "/" + node.flashcardsAvaliados + " lembrados" : node.flashcards ? " · Flashcards: nenhum avaliado" : "";
-    tag.title=node.title + (node.statusLabel ? " · " + node.statusLabel + sample + cards : "") + " · Um clique seleciona; dois cliques abrem o conceito";
+    tag.title=node.title + (node.statusLabel ? " · " + node.statusLabel + sample + cards : "") + " · Toque para selecionar; toque de novo para evocar o conceito";
     tag.style.setProperty("--qb-node-dot",colorFor(node));
     tag.className = node.depth ? "qb-map3-tag" : "qb-map3-tag qb-map3-origin";
     tag.setAttribute("aria-pressed", "false");
@@ -141,7 +141,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
       pendingFocus=view.setTimeout(()=>{
         pendingFocus=0;
         onSelect(path,true,false);
-      },370);
+      },DOUBLE_CLICK_MS+20);
     }
   });
   function syncVisibility(){
@@ -210,6 +210,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
       candidates.push({path:node.path,index:i,priority,
         x:(point.x+1)*width/2,y:(1-point.y)*height/2,
         width:Math.min(270,Math.max(75,node.title.length*6.4+22+(toggle?34:0))),
+        shortWidth:initials(node.title).length*9+22+(toggle?34:0),
         height:30});
     }
     const displayed=resolveLabelPositions(candidates,{width,height,padding:8});
@@ -219,6 +220,10 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
       if(!place)continue;
       wrapper.style.left=place.x+"px";
       wrapper.style.top=place.y+"px";
+      const label=place.short?initials(node.title):node.title;
+      if(tag.textContent!==label)tag.textContent=label;
+      tag.setAttribute("aria-label",node.title);
+      wrapper.dataset.short=place.short?"true":"false";
       tag.setAttribute("aria-pressed",String(selected===node.path));
       if(toggle){
         const open=branches.isExpanded(node.path);
@@ -237,7 +242,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     cancelZoom();
     distance=fitDistance();
     controls.target.set(0,0,0);
-    camera.position.set(distance*.09,distance*.08,distance);
+    camera.position.set(0,0,distance); // de frente: o plano do mapa fica legível
     controls.update();
     render();
   }
@@ -309,6 +314,11 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     cancelPendingFocus();
     cancelZoom();
     if (action === "reset") { reset(); return; }
+    if (action === "front") { // vista de frente, mantendo o foco atual
+      const d=camera.position.distanceTo(controls.target);
+      camera.position.copy(controls.target).add(new Vector3(0,0,d));
+      controls.update(); render(); return;
+    }
     const pan=directionalPanOffset(action,camera.position.distanceTo(controls.target),camera.fov,camera.aspect);
     if (pan) {
       camera.updateMatrixWorld();
@@ -439,8 +449,6 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
       canvas.removeEventListener("contextmenu",onContextMenu);
       stage.removeEventListener("wheel",onWheel,true);
       canvas.removeEventListener("webglcontextlost",onLost);
-      dustGeometry.dispose();
-      dustMaterial.dispose();
       hierarchy.geometry.dispose();
       hierarchy.material.dispose();
       cross.geometry.dispose();

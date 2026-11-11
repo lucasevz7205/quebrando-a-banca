@@ -1,13 +1,19 @@
-/* A normal click selects; a second activation on the same node opens AXON.
- * Keyboard/screen-reader activation is selection-only; the explicit Expandir
- * conceito button remains accessible as an unambiguous alternative.
+/* Seleção e abertura de conceitos (11/11/2026).
+ * 1º toque/clique: seleciona. Tocar de novo no conceito JÁ selecionado abre a
+ * explicação (ou a evocação), sem depender de tempo: funciona no celular com
+ * toques lentos. O duplo clique rápido do mouse continua valendo.
+ * Ativação por teclado (detail 0) só seleciona; o botão "Evocar/Expandir
+ * conceito" continua como alternativa acessível.
  */
-export function createNodeActivation(onSelect,{doubleClickMs=350}={}){
-  let previousPath=null, previousAt=-Infinity;
+export const DOUBLE_CLICK_MS = 350;
+export function createNodeActivation(onSelect,{doubleClickMs=DOUBLE_CLICK_MS}={}){
+  let previousPath=null, previousAt=-Infinity, selectedPath=null;
   return function activate(path,event){
     const clicks=Number(event?.detail)||0;
     const now=Number.isFinite(event?.timeStamp)?event.timeStamp:0;
-    const double=clicks>=2 || (clicks>0 && previousPath===path && now>previousAt && now-previousAt<doubleClickMs);
+    const quick=previousPath===path && now>previousAt && now-previousAt<doubleClickMs;
+    const again=clicks>0 && selectedPath===path;
+    const double=clicks>=2 || (clicks>0 && quick) || again;
     if(clicks>0) {
       previousPath=double?null:path;
       previousAt=now;
@@ -15,7 +21,9 @@ export function createNodeActivation(onSelect,{doubleClickMs=350}={}){
       previousPath=null;
       previousAt=-Infinity;
     }
-    onSelect(path,true,double); // single click now brings the selected branch into view
+    // depois de abrir, o próximo toque volta a só selecionar; teclado não arma o 'tocar de novo'
+    selectedPath=double||clicks===0?null:path;
+    onSelect(path,true,double);
     return double;
   };
 }

@@ -36,6 +36,9 @@ export function observeMindMap(frame) {
       const branchButtons = [...next.querySelectorAll("[data-map-branch]")];
       const modes = [...next.querySelectorAll("[data-map-mode]")];
       let scene = null, version = 0, disposed = false;
+      /* Percurso de evocação: ramo por ramo, na ordem do mapa (11/11/2026) */
+      const tourPaths = graph.nodes.map(n => n.path);
+      let tourIndex = -1;
       const reveal = createAxonReveal(next.querySelector("[data-map-stage]"), view);
       const nodes = new Map(graph.nodes.map(n => [n.path,n]));
       const quickButtons=[];
@@ -90,7 +93,8 @@ export function observeMindMap(frame) {
           if (path === lastPath) button.setAttribute("aria-current", "location");
           pathBar.append(button);
         }
-        next.dispatchEvent(new view.CustomEvent("qb-map-render-node", { detail: { topic: graph.topic, path: lastPath } }));
+        const tour = tourIndex >= 0 && tourPaths[tourIndex] === lastPath ? { i: tourIndex + 1, n: tourPaths.length } : null;
+        next.dispatchEvent(new view.CustomEvent("qb-map-render-node", { detail: { topic: graph.topic, path: lastPath, tour } }));
         detail.querySelector(":scope > .qb-mastery-detail, .m-no > .qb-mastery-detail")?.setAttribute("open", "");
         if(mode === "3d") {
           if(expand) reveal.show(origin,graph.topic+":"+lastPath);
@@ -169,8 +173,24 @@ export function observeMindMap(frame) {
         if (button.dataset.mapPathTarget) select(button.dataset.mapPathTarget,true,true);
         if (button.dataset.mir && byId.get(button.dataset.mir)) select(byId.get(button.dataset.mir));
         if (button.hasAttribute("data-map-open")) select(lastPath, true, true);
+        if (button.hasAttribute("data-map-tour") && tourPaths.length) {
+          tourIndex = 0;
+          select(tourPaths[0], true, true);
+        }
       }
       function change() { select(chooser.value,true,false); }
+      function tourNext() {
+        if (tourIndex < 0) return;
+        tourIndex++;
+        if (tourIndex >= tourPaths.length) {
+          tourIndex = -1;
+          reveal.hide();
+          select("root", true, false);
+          if (status) status.textContent = "Percurso concluído.";
+          return;
+        }
+        select(tourPaths[tourIndex], true, true);
+      }
       function keydown(event) {
         if(event.key === "Escape" && reveal.active) {
           reveal.hide();
@@ -180,6 +200,7 @@ export function observeMindMap(frame) {
       }
       next.addEventListener("click", act);
       next.addEventListener("keydown", keydown);
+      next.addEventListener("qb-map-tour-next", tourNext);
       chooser.addEventListener("change", change);
       release = () => {
         disposed = true;
@@ -189,6 +210,7 @@ export function observeMindMap(frame) {
         scene?.dispose();
         next.removeEventListener("click", act);
         next.removeEventListener("keydown", keydown);
+        next.removeEventListener("qb-map-tour-next", tourNext);
         chooser.removeEventListener("change", change);
       };
       next.hidden = false;

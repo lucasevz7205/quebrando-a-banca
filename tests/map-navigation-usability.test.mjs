@@ -91,7 +91,7 @@ test("layout redistribui todos os 29 mapas da Câmara com anéis maiores e separ
   }
  }
 });
-test("câmera usa apenas nós visíveis, zoom centralizado no cursor e mouse direito para mover",()=>{
+test("câmera usa apenas nós visíveis, zoom no cursor; arrastar desloca, botão direito gira (2,5D)",()=>{
  const scene=fs.readFileSync("src/components/qb/mind-map/scene.js","utf8");
  const shell=fs.readFileSync("src/components/qb/study-shell.html","utf8");
  assert.match(scene,/function fitDistance\(\)/);
@@ -100,19 +100,21 @@ test("câmera usa apenas nós visíveis, zoom centralizado no cursor e mouse dir
  assert.match(scene,/stage\.addEventListener\("wheel",onWheel,\{capture:true,passive:false\}\)/);
  assert.match(scene,/wheelRay\.ray\.intersectPlane\(wheelPlane,wheelBefore\)/);
  assert.match(scene,/camera\.position\.add\(translation\)/);
- assert.match(scene,/MOUSE\.ROTATE,MIDDLE:MOUSE\.DOLLY,RIGHT:MOUSE\.PAN/);
+ assert.match(scene,/LEFT:MOUSE\.PAN,MIDDLE:MOUSE\.DOLLY,RIGHT:MOUSE\.ROTATE/);
+ assert.match(scene,/touches = \{ONE:TOUCH\.PAN,TWO:TOUCH\.DOLLY_ROTATE\}/);
+ assert.match(scene,/maxPolarAngle = Math\.PI \/ 2 \+ CAMERA_TILT_LIMIT/);
  assert.match(scene,/screenSpacePanning = true/);
  assert.match(scene,/nearestProjectedHit/);
  assert.match(scene,/resolveLabelPositions/);
  assert.match(scene,/onPointerMove/);
  assert.match(scene,/onContextMenu/);
- assert.match(scene,/370\);/);
+ assert.match(scene,/DOUBLE_CLICK_MS\+20\);/);
  assert.match(scene,/if\(stamp-lastHover<38\)return/);
  assert.match(shell,/data-map-quick-branches/);
  const observer=fs.readFileSync("src/components/qb/mind-map/observe.js","utf8");
  assert.match(observer,/button\.dataset\.mapJump=node\.path/);
  assert.match(observer,/select\(button\.dataset\.mapJump,true,false\)/);
  assert.match(shell,/map-navigation\.css/);
- assert.match(shell,/Roda do mouse: zoom no cursor/);
+ assert.match(shell,/Arrastar: mover · Roda ou pinça: zoom/);
  assert.match(scene,/const tip=new Color\(colorFor\(target\)\)/,"cores do diagnóstico intactas");
 });
