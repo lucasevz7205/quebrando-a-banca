@@ -1852,9 +1852,9 @@
             title: itemTitle.slice(0, 300),
             subject: subject.slice(0, 300),
             cues: [],
-            notes: content.slice(0, 12000),
+            notes: content,
             summary: "",
-            referenceText: content.slice(12000, 27000),
+            referenceText: "",
           });
         }
         const imported = ingestGeminiNotebook({
