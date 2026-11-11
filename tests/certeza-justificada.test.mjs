@@ -43,7 +43,7 @@ test("rebaixar registra com confiança 2 e Esc volta para a escolha", () => {
 test("gravação: certJust na rodada e j no hist, sem remover campos antigos", () => {
   const reg = fn("registrar");
   assert.match(reg, /certJust\?\{certJust\}:\{\}/);
-  assert.match(reg, /hist\.push\(Object\.assign\(\{m:L,ok:acertou,em:now,c:conf\|\|null\},certJust\?\{j:certJust\}:\{\}\)\)/);
+  assert.match(reg, /hist\.push\(Object\.assign\(\{m:L,ok:acertou,em:now,c:conf\|\|null\},certJust\?\{j:certJust\}:\{\}/);
   assert.match(reg, /qid:q\.id,ordem:q\.ordem\|\|0,marcada:L,gabarito:q\.gabarito,conf:conf\|\|null/);
 });
 

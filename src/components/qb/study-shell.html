@@ -695,6 +695,24 @@ function statementHTML(q,travas){
   return `<p>${f(t)}</p>`;
 }
 function rotuloCap(cap){return cap==='MIX'?'Revisão intercalada':cap==='PEG'?'Pegadinhas':'Cap. '+cap}
+/* vacinação 2: ao marcar E, a assertiva vira palavras tocáveis (toque no início e no fim do trecho errado) */
+function locStatementHTML(q,sel){
+  const V=window.QBVacinacao, p=V.assertivaDe(q.enunciado), ws=V.palavras(p.assertiva), s=sel||{};
+  const temIni=Number.isInteger(s.ini)&&!s.naoSei, aberto=temIni&&s.toques%2===1;
+  const words=ws.map((w,i)=>{const on=temIni&&i>=s.ini&&i<=s.fim;return `<button type="button" class="qb-vac-w${on?' sel':''}${aberto&&i===s.ini?' anc':''}" data-wsel="${i}">${esc(w)}</button>`}).join(' ');
+  const lb=p.rotulo?(p.rotulo.startsWith('Considere')?p.rotulo.replace('Considere a ','').replace(/^p/,'P'):p.rotulo):'';
+  return `${p.rotulo?`<span class="lbl">${esc(lb)}</span><p>${esc(p.contexto)}</p><span class="lbl">Assertiva</span>`:''}<p class="qb-vac-words">${words}</p>`;
+}
+function locPanelHTML(sel){
+  const s=sel||{}, ws=window.QBVacinacao.palavras(window.QBVacinacao.assertivaDe(S.q.get(S.round.fila[S.round.idx])?.enunciado).assertiva);
+  const trecho=!s.naoSei&&Number.isInteger(s.ini)?ws.slice(s.ini,s.fim+1).join(' '):'';
+  const fs=Object.keys(MEC).filter(k=>/^F/.test(k)).sort((a,b)=>Number(a.slice(1))-Number(b.slice(1)));
+  return `<div class="qb-vac-loc"><span class="conf-q">Onde está o erro? Toque na primeira e na última palavra do trecho.</span>
+    <span class="ps">${s.naoSei?'Você indicou que não sabe onde está o erro.':trecho?`Trecho: <span class="qb-vac-trecho">${esc(trecho)}</span>${s.toques%2===1?' · toque na última palavra':''}`:'Nenhum trecho escolhido.'}</span>
+    <div class="chips"><button type="button" class="qb-vac-chip${s.naoSei?' on':''}" data-naosei="1">Não sei onde está o erro</button></div>
+    <span class="ps">Qual o mecanismo? (opcional)</span>
+    <div class="chips">${fs.map(k=>`<button type="button" class="qb-vac-chip${s.mec===k?' on':''}" data-emec="${k}" title="${esc(MEC[k].n)}">${k} · ${esc(MEC[k].n)}</button>`).join('')}</div></div>`;
+}
 const multiCap=cap=>cap==='MIX'||cap==='PEG';
 
 /* ---------- navegação ---------- */
@@ -1259,6 +1277,7 @@ function viewItem(){
       <span class="kbd">Enter confirma (mínimo ${window.QBVacinacao.CERT_MIN} caracteres) · tecla 2 fora do campo rebaixa · Esc volta à confiança</span></div>`;
   } else if(pend){
     mid=`<div class="conf" role="group" aria-label="Confiança"><span class="conf-q">Você marcou ${rotuloResposta(q,pend.marcada)}. Antes de ver o gabarito: qual a sua confiança?</span>
+      ${!alternativas.length&&pend.marcada==='E'&&window.QBVacinacao?locPanelHTML(pend.sel):''}
       ${!alternativas.length&&pend.marcada==='E'?`<div class="note"><label for="corr-txt">Como ficaria certo? (opcional) Reescreva a assertiva corrigida antes de ver o gabarito.</label><textarea id="corr-txt" style="min-height:48px" placeholder="Ex.: a competência é privativa, e não exclusiva…">${esc(rd.corr||'')}</textarea></div>`:''}
       <div class="conf-opts">${[1,2,3].map(c=>`<button data-conf="${c}"><span class="mono">${c}</span>${CONF[c]}</button>`).join('')}</div>
       <span class="kbd">teclas 1 · 2 · 3 · Esc troca a resposta</span></div>`;
@@ -1270,7 +1289,7 @@ function viewItem(){
       <span class="ref">A repescagem fecha a sessão com uma recuperação correta e não muda a agenda: o item volta na revisão espaçada.</span></div>`;
   } else if(a){
     const r=S.r.get(q.id)||{};
-    const kind=a.marcada===branco?'dub':(a.acertou?(a.conf===1?'dub':'ok'):'bad');
+    const kind=a.marcada===branco?'dub':(a.acertou?(a.conf===1||a.chuteLoc?'dub':'ok'):'bad');
     const vt=a.marcada===branco?`Em branco. O gabarito é ${gabaritoTxt}.`:(a.acertou?`Acertou. Gabarito: ${gabaritoTxt}.`:`Errou. O gabarito é ${gabaritoTxt}.`);
     let calib='';
     if(a.marcada!==branco&&!a.acertou&&a.conf===3) calib=`<span class="calib alert">Erro com certeza: confira o trecho que sustentou sua escolha e compare com a regra do comentário.</span>`;
@@ -1283,7 +1302,7 @@ function viewItem(){
     const nj=(rd.just||'').trim().length;
     /* vacinação 1: hipercorreção — a razão da certeza volta quando o item foi errado com certeza */
     const reflexo=a.certJust&&a.marcada!==branco&&!a.acertou&&a.conf===3?`<span class="calib alert qb-vac-reflexo">Sua razão para ter certeza: “${esc(a.certJust)}”. O que nela estava errado?</span>`:'';
-    mid=`<div class="verdict ${kind}"><span class="vt">${vt}</span>${calib}${reflexo}${a.corr?`<span class="calib">Sua correção: <span style="font-weight:400;font-family:var(--read)">${esc(a.corr)}</span>${q.gabarito==='E'?' · Confira com o comentário se ela bate com a versão certa.':' · O item era Certo: a sua versão alterava o que já estava correto.'}</span>`:''}<p>${esc(q.comentario)}</p>
+    mid=`<div class="verdict ${kind}"><span class="vt">${vt}</span>${calib}${reflexo}${locVerdictHTML(q,a)}${a.corr?`<span class="calib">Sua correção: <span style="font-weight:400;font-family:var(--read)">${esc(a.corr)}</span>${q.gabarito==='E'?' · Confira com o comentário se ela bate com a versão certa.':' · O item era Certo: a sua versão alterava o que já estava correto.'}</span>`:''}<p>${esc(q.comentario)}</p>
       ${temTravas(q)?`<span class="ref">Palavras de alcance destacadas no enunciado: confira se a assertiva generaliza ou restringe demais.</span>`:''}
       ${(()=>{const x=mecDe(q);return x&&MEC[x.m]?`<span class="calib">Mecanismo da banca: ${esc(x.m)} · ${esc(MEC[x.m].n)}.${x.v&&String(q.comentario||'').includes(x.v)?'':x.v?` Vacina: ${esc(x.v)}`:` ${esc(MEC[x.m].v)}`}</span>`:''})()}
       <span class="ref">${q.ref?('Ver '+esc(q.ref)+'.'):''}${esc(foiCaderno+prox)}</span>
@@ -1300,7 +1319,7 @@ function viewItem(){
   <article class="item" style="margin-top:16px">
     <div class="item-head"><span class="item-num">${emRep(rd)?'REPESCAGEM · ':''}ITEM ${String(q.ordem||'').padStart(2,'0')}</span><span class="tag">${esc(tag)}</span><div class="qb-curate-inline"><button type="button" class="qb-btn-curate" data-curate-question="${esc(q.id)}" title="Solicitar correção ou reformular com IA">⚙️ Corrigir</button><button type="button" class="qb-btn-delete-q" data-delete-question="${esc(q.id)}" title="Excluir questão do banco de dados">🗑 Excluir</button></div></div>
     ${q.statusEditorial==='aguardando-revisao-humana'?'<p class="qb-rf-pending" role="note"><strong>Questão autoral em revisão editorial.</strong> O gabarito é provisório e não corresponde a um item oficial do CEBRASPE. Use a explicação para estudo e confira a fonte quando necessário.</p>':''}
-    ${textoHTML(q)}<div class="statement">${statementHTML(q,!!a||!!(pend&&pend.cert))}</div>
+    ${textoHTML(q)}<div class="statement">${pend&&!pend.cert&&!alternativas.length&&pend.marcada==='E'&&window.QBVacinacao?locStatementHTML(q,pend.sel):statementHTML(q,!!a||!!(pend&&pend.cert))}</div>
     <div class="answers${alternativas.length?' qb-mc-answers':''}">${alternativas.length?alternativas.map(opt=>`<button type="button" class="qb-mc-choice${(a&&a.marcada===opt.letra)||(pend&&pend.marcada===opt.letra)?' picked':''}${a&&q.gabarito===opt.letra?' key':''}" data-ans="${esc(opt.letra)}" aria-label="Alternativa ${esc(opt.letra)}: ${esc(opt.texto)}" ${a?'disabled':''}><strong>${esc(opt.letra)})</strong><span>${esc(opt.texto)}</span></button>`).join(''):bub('C')+bub('E')}
       <button class="blank${a&&a.marcada===branco?' picked':''}" data-ans="${branco}" ${a?'disabled':''}>Deixar em branco</button>
       ${a||pend?'':`<span class="kbd">${alternativas.length?'teclas A · B · C · D · E · 0 para branco':'teclas C · E · B'}</span>`}</div>
@@ -1308,8 +1327,19 @@ function viewItem(){
   </article>
   <div class="next-row" style="margin-top:14px">
     <button class="btn ghost small" id="quit">Encerrar rodada</button>
-    ${a?`<button class="btn" id="next" ${a.rep||!exigeJust(a)||justOk(rd,q.id)?'':'disabled'}>${vaiRep?`Ir para a repescagem (${rd.rep.fila.length})`:(last?'Ver resultado':'Próximo item')} <span class="kbd" style="color:inherit;opacity:.75">Enter</span></button>`:''}
+    ${a?`<button class="btn" id="next" ${a.rep||((!exigeJust(a)||justOk(rd,q.id))&&!locPendente(a,q))?'':'disabled'}>${vaiRep?`Ir para a repescagem (${rd.rep.fila.length})`:(last?'Ver resultado':'Próximo item')} <span class="kbd" style="color:inherit;opacity:.75">Enter</span></button>`:''}
   </div>`;
+}
+function locVerdictHTML(q,a){
+  const s=a&&a.erroSel; if(!s||a.rep) return '';
+  const reg=mecDe(q), mecTxt=k=>k&&MEC[k]?`${esc(k)} · ${esc(MEC[k].n)}`:'';
+  const escolhido=`${s.trecho?`Trecho que você marcou: <span class="qb-vac-trecho">${esc(s.trecho)}</span>`:s.naoSei?'Você não sabia onde estava o erro.':'Você não marcou trecho.'}${s.mec?` · mecanismo escolhido: ${mecTxt(s.mec)}`:''}`;
+  if(q.gabarito==='C') return `<span class="calib qb-vac-locv">Este item é Certo: o trecho que você marcou não contém erro.${reg&&/^V/.test(reg.m)&&MEC[reg.m]?` Mecanismo registrado: ${mecTxt(reg.m)}.`:''}</span>`;
+  const cmp=reg&&/^F/.test(reg.m)&&MEC[reg.m]?` Mecanismo registrado: ${mecTxt(reg.m)}${s.mec?(s.mec===reg.m?' · igual ao seu.':' · diferente do seu.'):'.'}`:'';
+  const pergunta=s.naoSei?'<span class="ps">Acerto sem localizar o erro conta como chute: o item foi para o caderno.</span>'
+    :s.localizou===null?`<div class="qb-vac-ask"><span class="conf-q">Você tinha localizado o erro? Compare com o comentário.</span><button class="btn small" data-loc="1">Sim</button><button class="btn ghost small" data-loc="0">Não</button></div>`
+    :`<span class="ps">${s.localizou?'Você localizou o erro.':'Você não tinha localizado o erro: o acerto conta como chute e o item foi para o caderno.'}</span>`;
+  return `<span class="calib qb-vac-locv">${escolhido}.${cmp}</span>${pergunta}`;
 }
 function viewFim(){
   const rd=S.round, liq=rd.certos-rd.errados, resp=rd.certos+rd.errados+rd.brancos;
@@ -1661,7 +1691,14 @@ function vacinacaoCards(card){
       <div class="stat"><span class="v">${pct(ct.antes)}</span><span class="k">14 dias antes · ${ct.antes.ok} de ${ct.antes.n}</span></div>
       <div class="stat"><span class="v">${pct(ct.depois)}</span><span class="k">14 dias depois · ${ct.depois.ok} de ${ct.depois.n}</span></div>
     </div>
-    <p class="rule">Acerto quando você marcou certeza em itens com palavra de alcance (apenas, sempre, privativo…). ${cfg&&cfg.ativadaEm?`Ativada em ${ddmm(diaDe(cfg.ativadaEm))}.`:'Data de ativação ainda não gravada.'} ${ct.insuf?'<b>Dados insuficientes</b> (menos de 30 respostas em algum período).':''}</p>`);
+    <p class="rule">Acerto quando você marcou certeza em itens com palavra de alcance (apenas, sempre, privativo…). ${cfg&&cfg.ativadaEm?`Ativada em ${ddmm(diaDe(cfg.ativadaEm))}.`:'Data de ativação ainda não gravada.'} ${ct.insuf?'<b>Dados insuficientes</b> (menos de 30 respostas em algum período).':''}</p>`)
+  +(()=>{const lo=V.localizacao(S.rodadas,qid=>{const x=mecDe(S.q.get(qid));return x&&x.m});
+    return card('VACINAÇÃO COGNITIVA','Localização do erro',`
+    <div class="summary two">
+      <div class="stat"><span class="v">${lo.avaliados?fmtPct(lo.localizados/lo.avaliados):'–'}</span><span class="k">itens E acertados com o erro localizado · ${lo.localizados} de ${lo.avaliados}</span></div>
+      <div class="stat"><span class="v">${lo.mecN?fmtPct(lo.mecOk/lo.mecN):'–'}</span><span class="k">acerto do mecanismo · ${lo.mecOk} de ${lo.mecN} com mecanismo registrado</span></div>
+    </div>
+    <p class="rule">${lo.confusoes.length?'Mais confundidos (registrado → escolhido): '+lo.confusoes.map(c=>`<b>${esc(c.par)}</b> (${c.n})`).join(', ')+'.':'Ainda sem confusões de mecanismo registradas.'} Acerto em item E sem localizar o erro conta como chute e vai para o caderno.</p>`)})();
 }
 /* ---------- central do projeto: edital, materiais, pontos-chave, diário ---------- */
 const ST={nao:'Não iniciado',estudo:'Em estudo',revisao:'Revisando',dominado:'Dominado'};
@@ -2847,6 +2884,10 @@ function wire(){
   }}
   document.querySelectorAll('[data-cert-ok]').forEach(b=>b.addEventListener('click',confirmarCerteza));
   document.querySelectorAll('[data-cert-down]').forEach(b=>b.addEventListener('click',rebaixarCerteza));
+  document.querySelectorAll('[data-wsel]').forEach(b=>b.addEventListener('click',()=>locTocar(Number(b.dataset.wsel))));
+  document.querySelectorAll('[data-naosei]').forEach(b=>b.addEventListener('click',locNaoSei));
+  document.querySelectorAll('[data-emec]').forEach(b=>b.addEventListener('click',()=>locMec(b.dataset.emec)));
+  document.querySelectorAll('[data-loc]').forEach(b=>b.addEventListener('click',()=>autoavaliarLoc(b.dataset.loc==='1')));
   document.querySelectorAll('[data-origem]').forEach(b=>b.addEventListener('click',()=>salvarOrigem(b.dataset.origem,b.dataset.val)));
   const jt=$('#just-txt'); if(jt){ jt.addEventListener('input',()=>{const rd=S.round; if(!rd) return; rd.just=jt.value; const id=jt.dataset.just, ok=justOk(rd,id); const c=$('#just-cnt'); if(c) c.textContent=justMsg(rd.just.trim().length,(S.r.get(id)||{}).origem); const b=$('#next'); if(b) b.disabled=!ok;}); if(S.r.get(jt.dataset.just)?.origem) jt.focus({preventScroll:true}); }
   document.querySelectorAll('[data-heat]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.heat;S.abertos.add(b.dataset.sig);if(S.fSt)S.fSt='';render(true);requestAnimationFrame(()=>{const el=document.getElementById('tp-'+id);if(!el)return;el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.add('flash');setTimeout(()=>el.classList.remove('flash'),1800)})}));
@@ -3048,31 +3089,64 @@ function voltarConfianca(){
   const rd=S.round; if(!rd||!rd.pend) return;
   rd.pend.cert=false; rd.pend.focus=true; render(true);
 }
+/* vacinação 2: toques na assertiva, "não sei" e mecanismo (antes da confiança) */
+function locTocar(i){const rd=S.round;if(!rd||!rd.pend||rd.atual)return;const mec=rd.pend.sel&&rd.pend.sel.mec;rd.pend.sel=Object.assign(window.QBVacinacao.tocar(rd.pend.sel,i),{mec:mec||null});render(true);}
+function locNaoSei(){const rd=S.round;if(!rd||!rd.pend||rd.atual)return;const s=rd.pend.sel||{};rd.pend.sel={ini:null,fim:null,toques:0,naoSei:!s.naoSei,mec:s.mec||null};render(true);}
+function locMec(k){const rd=S.round;if(!rd||!rd.pend||rd.atual)return;const s=Object.assign({},rd.pend.sel||{});s.mec=s.mec===k?null:k;rd.pend.sel=s;render(true);}
+/* autoavaliação depois do gabarito E: "Não" reclassifica o acerto como chute (só campos de agenda e caderno) */
+function autoavaliarLoc(sim){
+  const rd=S.round,a=rd&&rd.atual; if(!a||!a.erroSel||a.erroSel.localizou!==null||a.erroSel.naoSei) return;
+  const q=S.q.get(rd.fila[rd.idx]); if(!q||q.gabarito!=='E'||!a.acertou) return;
+  const V=window.QBVacinacao, now=new Date().toISOString();
+  a.erroSel=Object.assign({},a.erroSel,{localizou:!!sim});
+  const it=rd.itens[a.itemIdx];
+  if(it){ it.erroSel=Object.assign({},it.erroSel||{},{localizou:!!sim}); if(!sim) it.erroLocalizado=false; }
+  const cur=S.r.get(q.id)||{};
+  const patch={hist:V.histExtra(cur.hist,{loc:!!sim})};
+  if(!sim){
+    Object.assign(patch,V.reclassificarChute(a.prevSnap,now,hoje(),agendar));
+    a.chuteLoc=true;
+    if(!rd.rep.fila.includes(q.id)) rd.rep.fila.push(q.id);
+  }
+  S.r.set(q.id,Object.assign({},cur,patch));
+  const rdoc=rodadaDoc(rd);
+  enqueue(()=>S.db.doc('respostas/'+q.id).update(patch));
+  enqueue(()=>S.db.doc('rodadas/'+rd.id).set(rdoc));
+  render(true);
+}
+function locPendente(a,q){return !!a&&!a.rep&&!!a.erroSel&&!a.erroSel.naoSei&&a.erroSel.localizou===null&&!!q&&q.gabarito==='E'&&a.acertou}
 function registrar(L,conf,ext={}){
   const rd=S.round; if(!rd||rd.atual||rd.fim) return;
   const q=S.q.get(rd.fila[rd.idx]); if(!q) return;
   const acertou=L===q.gabarito,blank=brancoDe(q),isBlank=L===blank,choice=alternativasDe(q).length>0;
   const corr=(!choice&&L==='E'&&rd.corr||'').trim(); rd.corr='';
+  /* vacinação 2: trecho e mecanismo escolhidos ao marcar E (só C/E) */
+  const VAC=window.QBVacinacao;
+  const erroSel=!choice&&L==='E'&&VAC?VAC.erroSel(rd.pend&&rd.pend.sel,VAC.palavras(VAC.assertivaDe(q.enunciado).assertiva)):null;
   rd.pend=null; rd.just='';
   rd.atual={marcada:L,acertou,conf,corr};
   const certJust=!choice&&conf===3&&ext.certJust?String(ext.certJust):'';
   if(certJust) rd.atual.certJust=certJust;
+  /* acerto em item E sem saber onde está o erro conta como chute (mesmo tratamento de conf===1) */
+  if(erroSel&&q.gabarito!=='E') erroSel.localizou=null;
+  const chuteLoc=!!erroSel&&VAC.contaComoChute({gabarito:q.gabarito,marcada:L,erroSel});
+  if(erroSel){ rd.atual.erroSel=erroSel; rd.atual.prevSnap=Object.assign({},S.r.get(q.id)||{}); rd.atual.itemIdx=rd.itens.length; if(chuteLoc) rd.atual.chuteLoc=true; }
   if(isBlank) rd.brancos++; else if(acertou) rd.certos++; else rd.errados++;
   const learning=!choice?window.QBLearning?.metadata(S,q,L,conf,rd):null;
   if(learning) rd.atual.pilotFeedback=learning.feedback;
-  rd.itens.push(Object.assign({qid:q.id,ordem:q.ordem||0,marcada:L,gabarito:q.gabarito,conf:conf||null},corr?{corr}:{},learning?{learning}:{},certJust?{certJust}:{}));
-  if((isBlank||!acertou||conf===1)&&!rd.rep.fila.includes(q.id)) rd.rep.fila.push(q.id);
+  rd.itens.push(Object.assign({qid:q.id,ordem:q.ordem||0,marcada:L,gabarito:q.gabarito,conf:conf||null},corr?{corr}:{},learning?{learning}:{},certJust?{certJust}:{},erroSel?{erroSel:Object.assign({},erroSel)}:{},chuteLoc?{erroLocalizado:false}:{}));
+  if((isBlank||!acertou||conf===1||chuteLoc)&&!rd.rep.fila.includes(q.id)) rd.rep.fila.push(q.id);
   // estado do item
   const prev=S.r.get(q.id)||{};
   const now=new Date().toISOString(), d=hoje();
   const r=Object.assign({},prev,{qid:q.id,cap:q.cap,ordem:q.ordem||0,ultimaMarcada:L,atualizadoEm:now,
     tentativas:(prev.tentativas||0)+1,conf:conf||null});
   const hist=Array.isArray(prev.hist)?prev.hist.slice(-7):[];
-  hist.push(Object.assign({m:L,ok:acertou,em:now,c:conf||null},certJust?{j:certJust}:{})); r.hist=hist;
+  hist.push(Object.assign({m:L,ok:acertou,em:now,c:conf||null},certJust?{j:certJust}:{},erroSel?{loc:erroSel.localizou,mec:erroSel.mec}:{})); r.hist=hist;
   r.primeiraEm=prev.primeiraEm||(Array.isArray(prev.hist)&&prev.hist[0]&&prev.hist[0].em)||now;
-  if(acertou&&conf!==1&&!prev.retidoEm&&difDias(diaDe(r.primeiraEm),d)>=RETENCAO) r.retidoEm=now;
+  if(acertou&&conf!==1&&!chuteLoc&&!prev.retidoEm&&difDias(diaDe(r.primeiraEm),d)>=RETENCAO) r.retidoEm=now;
   const nPrev=prev.tentativas?nivelDe(prev):0;
-  if(acertou&&conf===1){
+  if(acertou&&(conf===1||chuteLoc)){
     // acerto no chute não conta como domínio
     r.acertos=(prev.acertos||0)+1;
     if(!prev.noCaderno){ r.noCaderno=true; r.entrouEm=now; r.motivo='chute'; r.acertosSeguidos=0; }
@@ -3091,7 +3165,7 @@ function registrar(L,conf,ext={}){
     r.nivel=0;
   }
   r.proxRevisao=agendar(d,r.nivel);
-  r.calib=isBlank||!conf?null:(!acertou&&conf===3?'excesso':(acertou&&conf===1?'sub':'ok'));
+  r.calib=isBlank||!conf?null:(!acertou&&conf===3?'excesso':(acertou&&(conf===1||chuteLoc)?'sub':'ok'));
   if(typeof r.nota!=='string') r.nota='';
   if(corr) r.correcoes=(Array.isArray(prev.correcoes)?prev.correcoes:[]).concat([{em:now,texto:corr}]).slice(-5);
   S.r.set(q.id,r);
@@ -3124,6 +3198,7 @@ function justMsg(n,origem){const f=[];if(!origem)f.push('marque de onde veio o e
 function next(){
   const rd=S.round; if(!rd||!rd.atual) return;
   const qid=rd.fila[rd.idx];
+  if(locPendente(rd.atual,S.q.get(qid))){ toast('Antes de seguir, diga se você tinha localizado o erro (Sim ou Não).'); return; }
   if(exigeJust(rd.atual)){
     if(!justOk(rd,qid)){ toast('Antes de seguir, marque de onde veio o erro e escreva a justificativa com as suas palavras.'); const ta=$('#just-txt'); if(ta) ta.focus(); return; }
     const prev=S.r.get(qid)||{}, now=new Date().toISOString(), texto=rd.just.trim();
