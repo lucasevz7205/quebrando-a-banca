@@ -124,7 +124,7 @@ export function parseHierarchicalMindMap(input, fallbackTitle="Mapa mental", pre
 export const APPLICATION_EXAMPLE_LABEL = "Exemplo hipotético (IA): ";
 
 function numericClaims(text) {
-  return (String(text||"").match(/\b\d+(?:[.,\/]\d+)*\s*(?:dias?|meses?|anos?|horas?|semanas?|%|artigos?|incisos?|salários?)\b|\b(?:art\.?|lei|decreto|súmula)\s*n?[ºo.]?\s*\d+(?:[.\/]\d+)*/gi) || []);
+  return (String(text||"").match(/\b\d+(?:[.,\x2f]\d+)*\s*(?:dias?|meses?|anos?|horas?|semanas?|%|artigos?|incisos?|salários?)\b|\b(?:art\.?|lei|decreto|súmula)\s*n?[ºo.]?\s*\d+(?:[.\x2f]\d+)*/gi) || []);
 }
 
 export function normalizeApplicationExample(proposal,source="",prior="") {
