@@ -136,8 +136,8 @@ test("acessibilidade e economia de dados respeitadas",()=>{
   assert.match(css, /@media \(prefers-reduced-motion:reduce\)/);
 });
 
-test("vídeo pausa ao ocultar a aba e falha mantém foto de fundo",()=>{
-  const page=fakePage();
+test("vídeo animado pausa ao ocultar a aba e falha mantém foto de fundo",()=>{
+  const page=fakePage({saved:"motion"});
   page.doc.hidden=true;
   page.listeners.visibilitychange();
   assert.ok(page.video.pauseCalls>0);
