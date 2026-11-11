@@ -1,6 +1,7 @@
 /* Cornell manual + IA: Folha Dividida Real do Método Cornell, Cadernos por Matéria e Artefatos Remissivos de Estudo. */
 (function (global) {
   "use strict";
+  const MIN_ATTEMPT = 120;  /* tentativa de memória exigida antes da geração por IA (11/11/2026) */
   let busy = false;
   let message = "";
   let editingNotebookId = null;
@@ -666,7 +667,7 @@
   function render({ state, body, saveState, callAI, S: explicitS }) {
     if (!Array.isArray(state.cornellNotes)) state.cornellNotes = [];
     if (!state.cornellGenerator || typeof state.cornellGenerator !== "object") {
-      state.cornellGenerator = { topic: state.subject || "", raw: "" };
+      state.cornellGenerator = { topic: state.subject || "", raw: "", attempt: "" };
     }
     const S = resolveAppState(explicitS);
     ensureNotebooks(state, S);
@@ -1001,7 +1002,12 @@
       '<input class="omni-input" id="omni-cornell-topic" maxlength="300" value="' +
         escapeHTML(state.cornellGenerator.topic || "") +
         '">',
-      '<label class="omni-label" for="omni-cornell-raw" style="margin-top:6px">Texto-base para gerar com IA</label>',
+      '<label class="omni-label" for="omni-cornell-attempt" style="margin-top:6px">1. Sua tentativa, de memória (antes de olhar a fonte)</label>',
+      '<textarea class="omni-textarea" id="omni-cornell-attempt" rows="4" maxlength="6000" placeholder="Escreva sem consultar: perguntas-chave, regras, exceções e exemplos que você lembra. A IA só complementa depois disso.">' +
+        escapeHTML(state.cornellGenerator.attempt || "") +
+        "</textarea>",
+      '<p class="omni-cornell-hint">Mínimo de ' + MIN_ATTEMPT + ' caracteres. Recuperar antes de ver a resposta é o que fixa (método, seção 2.8).</p>',
+      '<label class="omni-label" for="omni-cornell-raw" style="margin-top:6px">2. Texto-base para conferir com IA</label>',
       '<textarea class="omni-textarea" id="omni-cornell-raw" rows="4" maxlength="8000" placeholder="Cole aqui suas anotações ou um trecho de fonte...">' +
         escapeHTML(state.cornellGenerator.raw || "") +
         "</textarea>",
@@ -1138,6 +1144,11 @@
       state.cornellGenerator.topic = asText(genTopic.value, 300);
       save();
     });
+    const genAttempt = body.querySelector("#omni-cornell-attempt");
+    genAttempt?.addEventListener("input", () => {
+      state.cornellGenerator.attempt = asText(genAttempt.value, 6000);
+      save();
+    });
     genRaw?.addEventListener("input", () => {
       state.cornellGenerator.raw = asText(genRaw.value, 8000);
       save();
@@ -1233,8 +1244,14 @@
       if (busy) return;
       const topic = asText(state.cornellGenerator.topic || state.subject, 300).trim();
       const rawNotes = asText(state.cornellGenerator.raw, 8000).trim();
+      const attempt = asText(state.cornellGenerator.attempt, 6000).trim();
       if (topic.length < 2 || rawNotes.length < 5) {
         message = "Informe o assunto e um texto-base para gerar a folha.";
+        rerender();
+        return;
+      }
+      if (attempt.length < MIN_ATTEMPT) {
+        message = "Antes da IA, escreva de memória o que você lembra do assunto (mínimo de " + MIN_ATTEMPT + " caracteres).";
         rerender();
         return;
       }
@@ -1242,7 +1259,7 @@
       message = "Gerando a folha com IA, sem alterar suas notas anteriores.";
       rerender();
       try {
-        const result = await callAI({ task: "summarize-cornell", topic, rawNotes });
+        const result = await callAI({ task: "summarize-cornell", topic, rawNotes, attempt });
         const cues = Array.isArray(result?.cues) ? result.cues.map(String).filter(Boolean).slice(0, 20) : [];
         if (typeof result?.notes !== "string" || result.notes.trim().length < 5 || !cues.length)
           throw new Error("A IA devolveu uma folha incompleta; nenhum conteúdo foi substituído.");
@@ -1254,12 +1271,22 @@
           cues,
           notes: asText(result.notes, 12000),
           summary: asText(result.summary, 2500),
-          actionItems: Array.isArray(result.actionItems) ? result.actionItems.slice(0, 12) : [],
+          actionItems: [
+            ...(Array.isArray(result.errors) ? result.errors.map(e => "Corrigir: " + String(e)) : []),
+            ...(Array.isArray(result.gaps) ? result.gaps.map(g => "Lacuna: " + String(g)) : []),
+            ...(Array.isArray(result.actionItems) ? result.actionItems.map(String) : []),
+          ].slice(0, 16),
           origin: "ia",
           referenceText: "",
+          attempt,
+          attemptGaps: Array.isArray(result.gaps) ? result.gaps.map(String).slice(0, 12) : [],
+          attemptErrors: Array.isArray(result.errors) ? result.errors.map(String).slice(0, 12) : [],
         });
         publishNoteAsMaterial(note, S);
-        message = "Folha criada pela IA e vinculada como artefato remissivo. Edite livremente.";
+        message = "Folha criada a partir da sua tentativa. " +
+          (note.attemptErrors.length ? note.attemptErrors.length + " ponto(s) errado(s) e " : "") +
+          note.attemptGaps.length + " lacuna(s) listados nas ações de revisão. Transforme cada lacuna em pergunta.";
+        state.cornellGenerator.attempt = "";
         saveState();
       } catch (error) {
         message = "Falha na geração: " + (error?.message || "IA indisponível.");
