@@ -298,9 +298,14 @@
       try {
         return await global.QBBridge.ask("omniStudyAI", payload);
       } catch (err) {
+        // Cornell exige resposta da IA real: não simular conferência factual offline.
+        if (payload.task === "review-cornell" || payload.task === "summarize-cornell")
+          throw new Error("IA Cornell indisponível: " + (err?.message || "verifique a conexão."));
         console.warn("[OmniStudy] Fallback local ativado:", err && err.message);
       }
     }
+    if (payload.task === "review-cornell" || payload.task === "summarize-cornell")
+      throw new Error("IA Cornell exige conexão com o Base44; suas anotações manuais continuam salvas.");
     // Offline / Modo Academia deterministic cognitive fallback
     if (payload.task === "tutor-chat") {
       const last = (payload.messages || [])[payload.messages.length - 1]?.text || "";
