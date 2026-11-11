@@ -12,8 +12,8 @@
     const toggle=document.getElementById("qb-background-toggle");
     if(!layer||!video||!toggle)return;
     const reduce=window.matchMedia("(prefers-reduced-motion: reduce)");
-    const saveData=!!navigator.connection?.saveData;
-    let mode=reduce.matches||saveData?"still":"motion";
+    /* estático por padrão (11/11/2026): menos carga visual no estudo; o estudante liga a animação se quiser */
+    let mode="still";
     let unavailable=false;
     try {
       const stored=localStorage.getItem(KEY);

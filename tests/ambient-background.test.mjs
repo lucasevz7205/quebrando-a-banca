@@ -85,8 +85,8 @@ test("fundo global cobre viewport, respeita z-index e não intercepta cliques",(
   assert.match(observer,/doc\.getElementById\("qb-ambient-background"\)/);
 });
 
-test("modo em movimento é inicial e alterna para um quadro pausado",()=>{
-  const page=fakePage();
+test("animação escolhida pelo estudante alterna para um quadro pausado",()=>{
+  const page=fakePage({saved:"motion"});
   assert.equal(page.toggle.textContent,"Fundo: animado");
   assert.equal(page.toggle.attributes["aria-pressed"],"true");
   assert.equal(page.doc.documentElement.dataset.qbAmbient,"motion");
@@ -103,6 +103,13 @@ test("modo em movimento é inicial e alterna para um quadro pausado",()=>{
   page.toggle.handlers.click();
   assert.equal(page.video.playCalls,2);
   assert.equal(page.stored["qb-ambient-background-mode"],"motion");
+});
+
+test("sem preferência salva, o fundo começa estático e não baixa vídeo",()=>{
+  const page=fakePage();
+  assert.equal(page.video.playCalls,0);
+  assert.equal(page.video.loadCalls,0);
+  assert.equal(page.doc.documentElement.dataset.qbAmbient,"still");
 });
 
 test("preferência estática impede download de vídeo e reaproveita a imagem",()=>{

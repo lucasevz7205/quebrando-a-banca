@@ -19,6 +19,9 @@ const OmniStudyInput = z.discriminatedUnion("task", [
         text: z.string().min(1).max(3000),
       })
     ).min(1).max(24),
+    topic: z.string().max(300).optional(),
+    /* resumo dos dados do estudante montado pela página (public/claude-export/tutor-context.js) */
+    studentContext: z.any().optional(),
   }),
   z.object({
     task: z.literal("feynman-evaluate"),
@@ -120,6 +123,34 @@ function safeJsonParse(raw, fallback) {
   }
 }
 
+/* Função pedagógica do Tutor Omni (11/11/2026), alinhada a claude/Metodo_de_Estudo.md e Regras_de_Perguntas.md */
+const TUTOR_RULES = [
+  "Regras obrigatórias:",
+  "1. Responda em português, curto e direto.",
+  "2. Comece pelos pontos fracos registrados: itens com erro com certeza, depois origem 'interferencia', depois caderno de erros. Se o estudante pedir outro assunto, atenda.",
+  "3. Uma pergunta por vez. Antes de revelar gabarito ou resposta, peça a confiança: 1 chute, 2 dúvida, 3 certeza. Só depois corrija.",
+  "4. Na correção, aponte o trecho exato que torna o item certo ou errado e a referência. Item Errado: escreva a versão correta por extenso.",
+  "5. Erro com certeza: explique com mais cuidado e peça que o estudante escreva a regra com as próprias palavras. Acerto no chute não é domínio.",
+  "6. Classifique a origem provável do erro (recuperação, interferência, leitura, compreensão) e dê o remédio correspondente. Em interferência, contraste as duas regras lado a lado, com a alternativa concorrente explícita.",
+  "7. Não entregue resumo pronto nem recomende reler ou grifar: transforme o conteúdo em pergunta, lacuna ou item Certo/Errado.",
+  "8. Perguntas com resposta definida e conferível; se a resposta for lista, diga quantos itens; citações entre aspas; contexto antes da assertiva.",
+  "9. Itens que você criar são inéditos: nunca os apresente como de prova real. Itens do contexto marcados com banca e ano são reais.",
+  "10. Não invente artigos de lei, gabaritos, incidência ou resultados do estudante. Se não tiver certeza, diga.",
+  "11. Nunca declare um assunto dominado: domínio exige acerto em revisão feita 7 dias ou mais depois do primeiro contato, e isso é medido pelo app.",
+  "12. Respeite a fase do estudo indicada nos dados (dias até a prova).",
+  "13. Termine SEMPRE com uma pergunta de evocação ou um item rápido Certo/Errado.",
+].join("\n");
+
+function tutorContextText(ctx) {
+  if (!ctx || typeof ctx !== "object") return "";
+  try {
+    const txt = JSON.stringify(ctx);
+    return txt.length > 6000 ? txt.slice(0, 6000) + "…" : txt;
+  } catch {
+    return "";
+  }
+}
+
 export const invokeOmniStudyAI = createServerFn({ method: "POST" })
   .middleware([requireUser])
   .validator(OmniStudyInput)
@@ -146,13 +177,12 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
         .map(m => `${m.role === "model" ? "TUTOR" : "ESTUDANTE"}: ${m.text}`)
         .join("\n\n");
 
+      const ctx = tutorContextText(data.studentContext);
       const prompt = [
         modeInstructions[mode] || modeInstructions.socratic,
-        `Disciplina / Tópico em foco: "${subject}".`,
-        "Regras obrigatórias:",
-        "1. Responda em Português, com formatação limpa e direta.",
-        "2. Não invente artigos de lei ou gabaritos.",
-        "3. Termine SEMPRE com uma pergunta de evocação ativa (Active Recall) ou um item rápido Certo/Errado para o estudante responder.",
+        `Disciplina / Tópico em foco: "${subject}"${data.topic ? ` · ${data.topic}` : ""}.`,
+        TUTOR_RULES,
+        ctx ? `DADOS DO ESTUDANTE (registrados no app; use-os, não invente outros):\n${ctx}` : "DADOS DO ESTUDANTE: indisponíveis nesta sessão. Não suponha acertos, erros ou domínio.",
         "",
         "HISTÓRICO DA SESSÃO:",
         transcript,
