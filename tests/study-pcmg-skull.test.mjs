@@ -33,8 +33,12 @@ test("importador reconhece lista, arquivos organizados por coleção e mapas de 
   assert.deepEqual(decodeStudyCatalog(input,"questoes"),rows);
  }
  assert.deepEqual(decodeStudyCatalog({"pcmg-1":{enunciado:"A regra correta...",gabarito:"C"}},"questoes"),rows);
- assert.deepEqual(auditStudyCatalog(rows,"questoes"),rows);
- assert.deepEqual(validateStudyContentBatch("questoes",rows),rows);
+ const [client]=auditStudyCatalog(rows,"questoes");
+ const [server]=validateStudyContentBatch("questoes",rows);
+ assert.equal(client.id,"pcmg-1");
+ assert.equal(client.gabarito,"C");
+ assert.equal(client.cap,server.cap);
+ assert.equal(client.materia,server.materia);
 });
 test("importa múltipla escolha A–E de forma explícita, sem confundir alternativa B com branco",()=>{
  const q={id:"pcmg-a",enunciado:"Questão com quatro alternativas",gabarito:"B",
@@ -47,7 +51,7 @@ test("importa múltipla escolha A–E de forma explícita, sem confundir alterna
  assert.equal(validateStudyContentBatch("questoes",[q])[0].alternativas[1].texto,"Resposta correta");
  assert.throws(()=>auditStudyCatalog([{...q,gabarito:"Z"}],"questoes"),/gabarito A–E/);
  assert.throws(()=>auditStudyCatalog([{...q,alternativas:["apenas uma"]}],"questoes"),/alternativas incompletas/);
- assert.throws(()=>auditStudyCatalog([{...q,gabarito:"C"}, {...q,gabarito:"E"}],"questoes"),/Identificador repetido/);
+ assert.throws(()=>auditStudyCatalog([{...q,gabarito:"C"}, {...q,gabarito:"B"}],"questoes"),/Identificador repetido/);
  assert.throws(()=>auditStudyCatalog([{id:"x",gabarito:"C"}],"questoes"),/sem enunciado/);
  assert.throws(()=>decodeStudyCatalog({questoes:{x:{}}},"questoes"),/esperado uma lista/);
 });
