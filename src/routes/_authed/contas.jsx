@@ -84,10 +84,11 @@ function StudyAccountsPage() {
             <p style={{fontSize:13,overflowWrap:"anywhere"}}>Login (ID): {a.userId}<br/>
             {a.examDate?"Prova: "+a.examDate+" · ":""}
             Edital: {a.ready.edital?"cadastrado":"pendente"} · Questões: {a.ready.questoes?"cadastradas":"pendentes"}<br/>
+            {accounts.some(b=>b.id!==a.id&&b.userId===a.userId&&/skull/i.test(b.examName))?"Login associado ao perfil Skull. ":""}
             {!a.ready.edital||!a.ready.questoes?"O acesso pode ser habilitado, mas o treino ficará vazio até a importação.":""}</p>
           </div>
           <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
-            {a.pending&&<a href="#importar-materiais" onClick={()=>setTarget(a.id)}>Providenciar materiais</a>}
+            {!a.ready.edital||!a.ready.questoes?<a href="#importar-materiais" onClick={()=>{setTarget(a.id);setCollection(a.ready.edital?"questoes":"edital");}}>Importar para este projeto</a>:null}
             {!a.active&&!/^[a-f0-9]{24}$/i.test(a.userId)&&<button type="button" className="qb-primary" onClick={()=>{setReservedTarget(a.id);setRegisteredUserId("");}}>Vincular login</button>}
             {a.active&&<Link to="/estudar" search={{conta:a.id}} className="qb-primary">Ver ambiente</Link>}
             <button className="qb-primary" type="button" disabled={busy||!a.active&&!/^[a-f0-9]{24}$/i.test(a.userId)}
