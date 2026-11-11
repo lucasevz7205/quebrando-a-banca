@@ -73,3 +73,10 @@ export function validateStudyContentBatch(collection, documents) {
 export function canActivateStudyAccount({edital,questoes}) {
   return Boolean(edital && questoes);
 }
+
+// O admin pode habilitar o login antes da carga do material, sem inventar
+// questões ou mascarar a ausência do banco. O padrão continua exigindo
+// edital e questões; a exceção depende de escolha explícita allowEmpty.
+export function canEnableStudyAccount(materials, allowEmpty = false) {
+  return Boolean(allowEmpty) || canActivateStudyAccount(materials);
+}
