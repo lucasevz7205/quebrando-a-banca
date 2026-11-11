@@ -8,7 +8,7 @@ const shell=fs.readFileSync("src/components/qb/study-shell.html","utf8");
 
 test("OmniStudy encontra o cabeçalho AXON atual e monta botão visível",()=>{
   assert.match(shell,/class="row qb-header-utilities"/);
-  assert.match(shell,/omnistudy-ai\\.js\\?v=1/);
+  assert.ok(shell.includes("omnistudy-ai.js?v=1"));
   const inserted=[],nodes=new Map();
   const header={
     firstChild:null,
@@ -54,6 +54,6 @@ test("OmniStudy encontra o cabeçalho AXON atual e monta botão visível",()=>{
   assert.equal(typeof win.QBOmniStudy.openStudio,"function");
 });
 test("o atalho do teclado permanece Alt+O",()=>{
-  assert.match(code,/e\\.altKey && \\(e\\.key === "o" \\|\\| e\\.key === "O"\\)/);
-  assert.match(code,/Abrir Estúdio Cognitivo OmniStudy IA \\(Alt\\+O\\)/);
+  assert.ok(code.includes('if (e.altKey && (e.key === "o" || e.key === "O"))'));
+  assert.ok(code.includes("Abrir Estúdio Cognitivo OmniStudy IA (Alt+O)"));
 });
