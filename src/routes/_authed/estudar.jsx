@@ -10,6 +10,7 @@ import { accessStudyAccount, getStudyAccount, getStudyPreview, listStudyPreview 
 import { listDocuments, writeDocument } from "@/lib/study-documents";
 import { correctFlashcardWithAI } from "@/lib/flashcard-ai";
 import { invokeOmniStudyAI } from "@/lib/omnistudy-ai";
+import { generateStudyTopicAssets } from "@/lib/study-batch-ai";
 
 const FLAG = "__qb44_bridge_v1__";
 const legacyStorage = {
@@ -79,7 +80,7 @@ function StudyScreen({ account }) {
       try {
         if (!user?.id || (!legacy && !accountId)) throw new Error("Ambiente de estudo indisponível.");
         let result;
-        if (preview && msg.action === "write") {
+        if (preview && ["write", "generateStudyTopic"].includes(msg.action)) {
           frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: false, error: "Visualização somente leitura." }, replyOrigin);
           return;
         }
@@ -92,6 +93,7 @@ function StudyScreen({ account }) {
           delta => frame.postMessage({ flag: FLAG, streamOf: msg.id, delta }, replyOrigin));
         else if (msg.action === "correctFlashcard" && !preview) result = await correctFlashcardWithAI({data:msg.args||{}});
         else if (msg.action === "omniStudyAI" && !preview) result = await invokeOmniStudyAI({data:msg.args||{}});
+        else if (msg.action === "generateStudyTopic" && !preview && !legacy) result = await generateStudyTopicAssets({ data: msg.args || {} });
         else if (msg.action === "list" || msg.action === "write") {
           if (legacy) result = await (msg.action === "list" ? listDocuments : writeDocument)(legacyStorage, msg.args || {});
           else if (preview) result = await listStudyPreview({ data: { accountId, args: msg.args || {} } });
