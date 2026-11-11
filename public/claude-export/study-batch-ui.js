@@ -86,6 +86,10 @@
       state.done = true;
       state.topic = "";
       rerender();
+      if (window.QBBridge?.refresh) {
+        try { await Promise.all([window.QBBridge.refresh("revisao"), window.QBBridge.refresh("questoes")]); }
+        catch { state.errors.push("Recarregue a página para visualizar os materiais gerados."); }
+      }
       if (current?.db) {
         // Sync snapshots after server-side writes; existing subscriptions will redraw the content.
         try { await current.db.doc("config/batch-study-last").set({ finalizadoEm: new Date().toISOString(), assuntos: state.success, erros: state.errors.length }); }
