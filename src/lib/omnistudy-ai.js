@@ -40,6 +40,8 @@ const OmniStudyInput = z.discriminatedUnion("task", [
     task: z.literal("summarize-cornell"),
     topic: z.string().min(2).max(300),
     rawNotes: z.string().min(5).max(8000),
+    /* tentativa de memória do estudante, feita antes de ver a fonte (obrigatória desde 11/11/2026) */
+    attempt: z.string().min(120).max(6000),
   }),
   z.object({
     task: z.literal("review-cornell"),
@@ -292,14 +294,18 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
 
     if (data.task === "summarize-cornell") {
       const prompt = [
-        `Transforme as anotações brutas abaixo no formato do Método Cornell de estudo ativo sobre "${data.topic}".`,
-        `Notas brutas:\n"""${data.rawNotes}"""`,
+        `O estudante tentou primeiro, de memória, escrever o que sabe sobre "${data.topic}". Compare a tentativa com o texto-base e monte uma folha Cornell que PRESERVE o que ele acertou, com as palavras dele quando possível.`,
+        `Tentativa do estudante (de memória):\n"""${data.attempt}"""`,
+        `Texto-base (fonte para conferir):\n"""${data.rawNotes}"""`,
+        "Use só o texto-base como fonte; não acrescente conteúdo externo. Nas pistas, escreva perguntas com resposta definida (lista com tamanho dito, lacunas, números).",
         "Retorne APENAS um JSON com:",
         '- "topic": título estruturado da nota;',
         '- "cues": array com 4 a 7 perguntas de gatilho / palavras-chave para a coluna esquerda (30%);',
         '- "notes": texto estruturado em tópicos hierárquicos para a coluna direita (70%);',
         '- "summary": síntese executiva de 2 a 3 frases no rodapé;',
         '- "actionItems": array com 2 a 4 ações práticas de revisão ativa.',
+        '- "gaps": array com o que está no texto-base e faltou na tentativa (frases curtas);',
+        '- "errors": array com o que a tentativa afirmou e o texto-base contradiz, cada um com a versão correta.',
       ].join("\n");
 
       const raw = await core.InvokeLLM({
@@ -312,8 +318,10 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
             notes: { type: "string" },
             summary: { type: "string" },
             actionItems: { type: "array", items: { type: "string" } },
+            gaps: { type: "array", items: { type: "string" } },
+            errors: { type: "array", items: { type: "string" } },
           },
-          required: ["topic", "cues", "notes", "summary", "actionItems"],
+          required: ["topic", "cues", "notes", "summary", "actionItems", "gaps", "errors"],
         },
       });
 
