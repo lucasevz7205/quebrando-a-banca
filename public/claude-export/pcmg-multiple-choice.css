@@ -1,0 +1,21 @@
+/* Questões de múltipla escolha nos ambientes de concursos externos.
+   Mantém o formato C/E original intocado. */
+.qb-mc-answers{display:grid;grid-template-columns:1fr;gap:9px}
+.qb-mc-answers .qb-mc-choice{
+  display:flex;align-items:flex-start;gap:11px;text-align:left;
+  width:100%;padding:12px 14px;border:1px solid var(--line);
+  border-radius:10px;background:var(--surface);color:var(--ink);
+  font:500 13px/1.5 var(--display,system-ui);
+  transition:border-color .14s ease,background .14s ease
+}
+.qb-mc-answers .qb-mc-choice strong{flex:0 0 24px;font-weight:800;color:var(--pen)}
+.qb-mc-answers .qb-mc-choice span{flex:1;white-space:normal;overflow-wrap:anywhere}
+.qb-mc-answers .qb-mc-choice:hover:not(:disabled),
+.qb-mc-answers .qb-mc-choice:focus-visible{border-color:var(--pen);background:var(--pen-soft)}
+.qb-mc-answers .qb-mc-choice.picked{border-color:var(--pen);box-shadow:0 0 0 2px var(--pen-soft)}
+.qb-mc-answers .qb-mc-choice.key{border-color:var(--certo);box-shadow:0 0 0 2px var(--certo-soft)}
+.qb-mc-answers .qb-mc-choice:disabled{cursor:default}
+.qb-mc-answers .blank{justify-self:start;margin-top:3px}
+.qb-mc-answers .kbd{font-size:11px}
+@media(max-width:600px){.qb-mc-answers .qb-mc-choice{padding:11px 10px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){.qb-mc-answers .qb-mc-choice{transition:none}}
