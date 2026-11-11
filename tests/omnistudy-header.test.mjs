@@ -8,7 +8,8 @@ const shell=fs.readFileSync("src/components/qb/study-shell.html","utf8");
 
 test("OmniStudy encontra o cabeçalho AXON atual e monta botão visível",()=>{
   assert.match(shell,/class="row qb-header-utilities"/);
-  assert.ok(shell.includes("omnistudy-ai.js?v=1"));
+  assert.ok(shell.includes("omnistudy-ai.js?v=2"));
+  assert.ok(shell.includes("omnistudy-cornell.js?v=1"));
   const inserted=[],nodes=new Map();
   const header={
     firstChild:null,
