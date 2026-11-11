@@ -364,6 +364,18 @@
   /* ========================================================================
      3. AI BRIDGE CALLER (Uses Base44 QBBridge + Smart Local Fallback)
      ======================================================================== */
+  /* dados do estudante para o tutor (só leitura; nada é gravado) */
+  function tutorStudentContext(subject, topic) {
+    try {
+      const C = global.QBTutorContext, S = global.S;
+      if (!C || !S || !S.r) return undefined;
+      return C.build(S, { recorte: C.recorteDe(topic) || C.recorteDe(subject), prova: global.QB_PROVA || undefined });
+    } catch (e) {
+      console.warn("[OmniStudy] contexto do estudante indisponível:", e && e.message);
+      return undefined;
+    }
+  }
+
   async function callOmniStudyBackend(payload) {
     if (global.QBBridge && typeof global.QBBridge.ask === "function") {
       try {
@@ -379,16 +391,13 @@
       throw new Error("IA Cornell exige conexão com o Base44; suas anotações manuais continuam salvas.");
     // Offline / Modo Academia deterministic cognitive fallback
     if (payload.task === "tutor-chat") {
-      const last = (payload.messages || [])[payload.messages.length - 1]?.text || "";
+      /* Sem IA conectada, não simular tutor: dizer isso e oferecer o treino da página. */
       return {
         reply:
-          `🧠 **[Modo Academia · Raciocínio Socrático Ativo sobre ${payload.subject || "o tópico"}]**\n\n` +
-          `Analisando seu ponto: *"${last.slice(0, 140)}"*\n\n` +
-          `Para blindar esse ponto contra as pegadinhas F3 (Troca de Conceito) e F4 (Extrapolação) do Cebraspe, divida a análise em 3 degraus:\n` +
-          `1. **Qual é a regra geral expressa na fonte?**\n` +
-          `2. **Existe exceção taxativa (salvo / exceto / vedado)?**\n` +
-          `3. **Quem detém a competência exclusiva?**\n\n` +
-          `👉 **Desafio de Evocação Ativa:** Sem consultar o material, como você formularia a exceção principal dessa regra em uma única frase?`,
+          "**Tutor indisponível agora** (sem conexão com a IA do Base44). Nada foi perdido.\n\n" +
+          "Enquanto isso, faça a revisão espaçada de hoje e o caderno de erros no Treinar. " +
+          "Quando o tutor voltar, ele começará pelos itens que você errou com certeza.",
+        offline: true,
       };
     }
     if (payload.task === "feynman-evaluate") {
@@ -959,6 +968,7 @@
           topic: currentTopic.title,
           mode: state.tutorMode,
           messages: chat.messages.slice(-10).map(m => ({ role: m.role, text: m.text })),
+          studentContext: tutorStudentContext(currentSubject.name, currentTopic.title),
         });
         chat.messages.push({
           id: "m-" + Date.now(),

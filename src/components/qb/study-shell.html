@@ -511,7 +511,8 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/omnistudy-ai.css?v=13">
 <link rel="stylesheet" href="/claude-export/omnistudy-cornell.css?v=12">
 <script src="/claude-export/omnistudy-cornell.js?v=15" defer></script>
-<script src="/claude-export/omnistudy-ai.js?v=25" defer></script>
+<script src="/claude-export/tutor-context.js?v=1" defer></script>
+<script src="/claude-export/omnistudy-ai.js?v=26" defer></script>
 <script>
 (function(){
 const S = {
@@ -541,6 +542,7 @@ const CONF={1:'Chute',2:'Dúvida',3:'Certeza'};
 
 /* ---------- método: revisão espaçada ---------- */
 let PROVA='2027-01-17';      // data da prova
+window.QB_PROVA=PROVA;
 let LIMITE='2027-01-10';     // última semana: revisões diárias, nada agendado depois disso
 const INT=[1,3,7,15,30];       // intervalos em dias por nível (proposta do Metodo_de_Estudo.md)
 const ORIGENS={
@@ -3328,7 +3330,7 @@ function init(){
       S.studyAccountName=account.name;
       PROVAS.P1='Trilha de estudo';
       PROVAS.P2='Conhecimentos específicos';
-      PROVA=account.date||null;
+      PROVA=account.date||null; window.QB_PROVA=PROVA;
       LIMITE=PROVA?addDias(PROVA,-7):null;
       $('.qb-header-kicker').textContent=account.name;
       $('.qb-utility-lab').remove();
