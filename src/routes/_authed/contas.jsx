@@ -99,7 +99,7 @@ function StudyAccountsPage() {
             {a.pending&&<a href="#importar-materiais" onClick={()=>setTarget(a.id)}>Providenciar materiais</a>}
             {!a.active&&!/^[a-f0-9]{24}$/i.test(a.userId)&&<button type="button" className="qb-primary" onClick={()=>{setReservedTarget(a.id);setRegisteredUserId("");}}>Vincular login</button>}
             {a.active&&<Link to="/estudar" search={{conta:a.id}} className="qb-primary">Ver ambiente</Link>}
-            <button className="qb-primary" type="button" disabled={busy||!a.active&&(!a.ready.edital||!a.ready.questoes)}
+            <button className="qb-primary" type="button" disabled={busy||!a.active&&(!a.ready.edital||!a.ready.questoes||!/^[a-f0-9]{24}$/i.test(a.userId))}
               onClick={()=>run(async()=>{
                 await change({data:{accountId:a.id,active:!a.active}});
                 setStatus(a.active?"Ambiente desativado; dados preservados.":"Ambiente ativado para o login vinculado.");
