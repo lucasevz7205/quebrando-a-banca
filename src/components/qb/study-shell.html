@@ -421,7 +421,7 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/top-nav.css">
 <link rel="stylesheet" href="/claude-export/traps.css">
 <link rel="stylesheet" href="/claude-export/study-motion.css">
-<link rel="stylesheet" href="/claude-export/study-detail.css?v=2">
+<link rel="stylesheet" href="/claude-export/study-detail.css?v=3">
 
 <div class="wrap">
   <header class="top qb-app-header">
@@ -2095,7 +2095,21 @@ function filaMix(){
   }
   return out;
 }
-function iniciarMix(){const f=filaMix(); if(!f.length){toast('Nenhum cartão para hoje.');return} S.cmix={fila:f,idx:0,tot:f.length,feitos:0}; for(const k of f){S.cartAbertos.delete(k);S.cartRated.delete(k)} setView('cartoes'); window.scrollTo({top:0});}
+function iniciarMix(){const f=filaMix(); if(!f.length){toast('Nenhum cartão para hoje.');return} S.cmix={fila:f,idx:0,tot:f.length,feitos:0,modo:'mix'}; for(const k of f){S.cartAbertos.delete(k);S.cartRated.delete(k)} setView('cartoes'); window.scrollTo({top:0});}
+function iniciarFocoTopico(id){
+  id=id||S.cartId;
+  const rv=S.rv.get(id);
+  if(!rv||!(rv.cartoes||[]).length){toast('Nenhum cartão conceitual cadastrado para este tópico.');return;}
+  const cav=S.cav||new Map();
+  const todos=(rv.cartoes||[]).map((c,i)=>id+'@'+i);
+  const vencidos=todos.filter(k=>cartVence(k));
+  const novos=todos.filter(k=>cartNovo(cav.get(k)));
+  const fila=vencidos.length||novos.length?[...vencidos,...novos]:[...todos];
+  for(let i=fila.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[fila[i],fila[j]]=[fila[j],fila[i]];}
+  S.cmix={fila,idx:0,tot:fila.length,feitos:0,modo:'topico',topicoId:id};
+  for(const k of fila){S.cartAbertos.delete(k);S.cartRated.delete(k);}
+  setView('cartoes'); window.scrollTo({top:0});
+}
 function flashState(revealed){
   return '<span class="qb-flash-state">'+(revealed?'Resposta revelada':'Evocação ativa')+'</span>';
 }
@@ -2104,22 +2118,38 @@ function flashAnswer(c, prefix=''){
 }
 function viewCmix(){
   const m=S.cmix;
-  if(m.idx>=m.fila.length) return `<div class="wrap" style="gap:14px"><div class="due calm"><div class="due-body"><h2 class="section-title">Sessão intercalada concluída</h2><div class="due-n"><span class="mono">${m.feitos}</span> avaliações</div><div class="due-meta">Cada cartão já tem a próxima data. Os marcados como Novamente voltaram no fim da sessão e voltam amanhã.</div></div><button class="btn" data-cmix-sair="1">Fechar</button></div></div>`;
+  const isTopico=m.modo==='topico';
+  const topicoDoc=isTopico?(S.ed.get(m.topicoId)||indiceQuestoes().virtualTopics.get(m.topicoId)||{}):null;
+  const deckTitle=isTopico?`Baralho · ${esc(topicoDoc?.titulo||m.topicoId)}`:'Sessão intercalada · todos os tópicos';
+  if(m.idx>=m.fila.length) return `<div class="wrap" style="gap:14px"><div class="due calm"><div class="due-body"><h2 class="section-title">${isTopico?'Estudo do baralho concluído':'Sessão intercalada concluída'}</h2><div class="due-n"><span class="mono">${m.feitos}</span> avaliações</div><div class="due-meta">Cada cartão já teve seu intervalo atualizado na repetição espaçada. Os marcados como Novamente foram repassados nesta sessão e voltam amanhã.</div></div><div class="row" style="gap:10px"><button class="btn" data-cmix-sair="1">Concluir e voltar ao baralho</button>${isTopico?`<button class="btn ghost" data-cart-foco="${esc(m.topicoId)}">Repetir baralho</button>`:''}</div></div></div>`;
   const k=m.fila[m.idx], [id,i]=k.split('@'),qid=window.QBQuestionLinks?.questionId(k),
     c=cartaoDe(k)||{},info=qid?recursosQuestao(qid):null,
     t=S.ed.get(info?.topicId||id)||indiceQuestoes().virtualTopics.get(info?.topicId)||{},ab=S.cartAbertos.has(k);
   const rated=S.cartRated.has(k);
+  const a=(S.cav||new Map()).get(k);
+  const statusBadge=cartNovo(a)?'<span class="tchip pos">Novo</span>':cartVence(k)?'<span class="tchip" style="color:var(--errado);border-color:var(--errado)">Vence hoje</span>':'<span class="tchip">Revisão</span>';
   return `<div class="wrap" style="gap:14px">
-    <div class="scorebar qb-deck-progress"><div><span class="progress">Cartão ${m.idx+1} de ${m.fila.length} · tópicos misturados</span><progress aria-label="Cartões percorridos na sessão" max="${m.fila.length}" value="${m.idx}"></progress></div><button class="btn ghost small" data-cmix-sair="1">Encerrar</button></div>
+    <div class="scorebar qb-deck-progress">
+      <div style="flex:1">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+          <span class="progress" style="font-weight:700">${deckTitle}</span>
+          <span class="mono" style="font-size:13px;color:var(--muted)">Cartão ${m.idx+1} de ${m.fila.length}</span>
+        </div>
+        <progress aria-label="Cartões percorridos na sessão" max="${m.fila.length}" value="${m.idx}"></progress>
+      </div>
+      <button class="btn ghost small" data-cmix-sair="1">Encerrar</button>
+    </div>
     <div class="card-r ck qb-flashcard qb-flashcard-focus" data-revealed="${ab}" id="qbflash-${esc(k)}" style="--mc:var(--pen)">
-      ${flashState(ab)}
-      <span class="tag">${ab?`${esc(lblT(t)||id)} · ${esc(c.tema||'')}`:'Assunto oculto até virar'}</span>
-      <p class="cq" style="font-size:17px">${esc(c.q||'')}</p>
+      <div style="display:flex;justify-content:space-between;align-items:center;width:100%;gap:8px">
+        ${flashState(ab)}
+        <div style="display:flex;gap:6px;align-items:center">${statusBadge}<span class="tag">${ab||isTopico?`${esc(lblT(t)||id)}${c.tema?` · ${esc(c.tema)}`:''}`:'Assunto oculto até virar'}</span></div>
+      </div>
+      <p class="cq" style="font-size:18px;margin:8px 0">${esc(c.q||'')}</p>
       ${ab?flashAnswer(c):''}
       ${cartAval(k,ab)}
-      ${rated?`<button class="btn" data-cmix-next="1">Próximo cartão</button>`:''}
+      ${rated?`<div class="row" style="margin-top:10px;justify-content:flex-end"><button class="btn" data-cmix-next="1">Próximo cartão <span class="kbd">Espaço</span></button></div>`:''}
     </div>
-    <p class="rule">Os cartões vêm misturados de todos os tópicos, como arremessos aleatórios: antes de responder, identifique de que assunto é a pergunta.</p>
+    <p class="rule">${isTopico?'Estudo focado no assunto: responda mentalmente ou digite, vire com Espaço/Enter e avalie seu domínio com as teclas 1 a 4.':'Os cartões vêm misturados de todos os tópicos, como arremessos aleatórios: antes de responder, identifique de que assunto é a pergunta.'}</p>
   </div>`;
 }
 S.cartResp=new Map(); S.cartRated=new Set();
@@ -2218,9 +2248,9 @@ function cartAval(k,ab){
   const a=(S.cav||new Map()).get(k), ult=a&&a.hist&&a.hist.length?a.hist[a.hist.length-1]:null;
   const last=ult?`<span class="ps">Última: ${avLbl(ult.v)} em ${ddmm(diaDe(ult.em))}${a.hist.length>1?` · ${a.hist.length} tentativas`:''}${a.prox?` · próxima em ${ddmm(a.prox)}`:''}</span>`:'';
   const resp=S.cartResp.get(k)||'';
-  if(!ab) return `<div class="cav" style="width:100%"><div class="note" style="width:100%"><label for="cr-${esc(k)}">Sua resposta, de memória (nas lacunas, escreva o que vai em cada uma, na ordem):</label><textarea id="cr-${esc(k)}" data-cresp="${esc(k)}" style="min-height:52px" placeholder="Escreva antes de ver a resposta…">${esc(resp)}</textarea></div><button class="btn small" data-cver="${esc(k)}">Ver resposta</button>${last}</div>`;
-  const sua=resp.trim()?`<p class="cq" style="font-size:14.5px"><b>Sua resposta:</b> ${esc(resp)}</p>`:'<span class="ps">Você não escreveu resposta.</span>';
-  if(!S.cartRated.has(k)) return `<div class="cav">${sua}${explicaBox(k)}${iaBox(k,resp)}<span class="ps">Compare com a resposta acima e marque:</span><div class="srs-g">${Object.entries(AVAL).map(([v,t])=>`<button class="srs srs-${v}" data-cav="${esc(k)}" data-v="${v}"><b>${t}</b><span>${v==='n'?'hoje e amanhã':srsFmt(srsCalc(a,v).intervalo)}</span></button>`).join('')}</div>${last}</div>`;
+  if(!ab) return `<div class="cav" style="width:100%"><div class="note" style="width:100%"><label for="cr-${esc(k)}">Sua resposta, de memória (opcional — digite ou formule mentalmente):</label><textarea id="cr-${esc(k)}" data-cresp="${esc(k)}" style="min-height:52px" placeholder="Evocação ativa: formule a resposta antes de virar… (ou pressione Espaço/Enter)">${esc(resp)}</textarea></div><div style="display:flex;gap:12px;align-items:center;margin-top:4px"><button class="btn small" data-cver="${esc(k)}">Ver resposta <span class="kbd" style="color:inherit;opacity:.85">Espaço</span></button><span class="ps" style="margin:0">Atalho: tecla Espaço / Enter</span></div>${last}</div>`;
+  const sua=resp.trim()?`<p class="cq" style="font-size:14.5px"><b>Sua resposta:</b> ${esc(resp)}</p>`:'<span class="ps">Evocação mental (sem texto digitado).</span>';
+  if(!S.cartRated.has(k)) return `<div class="cav">${sua}${explicaBox(k)}${iaBox(k,resp)}<span class="ps" style="font-weight:600">Compare com a resposta de referência e avalie:</span><div class="srs-g">${Object.entries(AVAL).map(([v,t],idx)=>`<button class="srs srs-${v}" data-cav="${esc(k)}" data-v="${v}"><span class="kbd" style="font-size:11px;margin-bottom:2px;border:1px solid currentColor;border-radius:4px;padding:0 5px">${idx+1}</span><b>${t}</b><span>${v==='n'?'hoje e amanhã':srsFmt(srsCalc(a,v).intervalo)}</span></button>`).join('')}</div>${last}</div>`;
   return `<div class="cav">${sua}${ult?`<span class="pill ${avCls(ult.v)}">Você marcou: ${avLbl(ult.v)}${a.prox?` · volta em ${ddmm(a.prox)}`:''}</span>`:''}${explicaBox(k)}<button class="lnk" data-cart="${esc(k)}">Esconder resposta</button></div>`;
 }
 function salvarAval(k,v){
@@ -2268,15 +2298,31 @@ function viewCartoes(){
       return `<article class="card-r ck qb-flashcard" data-revealed="${ab}" id="qbflash-${esc(k)}">${flashState(ab)}<p class="cq">${esc(c.q)}</p>${ab?flashAnswer(c):''}${cartAval(k,ab)}</article>`}).join('')}</section>`}).join('');
   /* fim dos ramos de cartões */
   const tot=(rv.cartoes||[]).length;
+  const nFirmes=cs0.firmes, nVencidos=cs0.hoje, nNovos=cs0.novos, nIntervalo=Math.max(0,tot-nFirmes-nVencidos-nNovos);
   return `<div class="wrap" style="gap:14px;max-width:1100px">
     <div class="filters"><select id="cart-top" aria-label="Tópico">${ids.map(id=>{const o=cartStats(id),h=o.hoje+o.novos,ti=nomeTopicoIndice(id,indice);return `<option value="${esc(id)}" ${id===S.cartId?'selected':''}>${esc(lblT(ti)||ti.id)} · ${esc(ti.titulo||'')}${o.hoje?` · ${o.hoje} vencidos`:''}${(indice.byTopic.get(id)||[]).length?` · ${(indice.byTopic.get(id)||[]).length} questões`:''}</option>`}).join('')}</select>
+      <button class="btn small" data-cart-foco="${esc(S.cartId)}">▶ Estudar este baralho (modo foco)</button>
+      <button class="btn small ghost" data-cart-hoje="1">🔀 Sessão intercalada · todos os tópicos</button>
       <label class="check"><input type="checkbox" id="cart-pend" ${S.cartPend?'checked':''}> Só os de hoje (vencidos + até ${vagas} novos)</label>
-      <button class="btn small" data-cart-hoje="1">Sessão intercalada · todos os tópicos</button>
       <button class="btn ghost small" id="cart-reset">Esconder respostas</button>
       <button class="btn ghost small" data-cf="1">Abrir tudo</button><button class="btn ghost small" data-cf="0">Fechar tudo</button>
       ${rv.mapa?`<button class="lnk" data-ir-mapa="${esc(S.cartId)}">Mapa mental</button>`:''}
       ${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
     <div class="m-centro qb-topic-hub"><span>BARALHO · REVISÃO ATIVA</span><strong>${esc((rv.mapa&&rv.mapa.centro)||t.titulo||'')}</strong><small>${tot} cartões conceituais · ${ligadas.length} questões vinculadas</small></div>
+    <div class="qb-flash-retention-wrap" style="width:100%;max-width:700px;align-self:center;display:flex;flex-direction:column;gap:5px;margin:2px auto">
+      <div class="qb-flash-retention-bar" style="display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--line,#e2e8f0);gap:2px">
+        ${nFirmes?`<div style="flex:${nFirmes};background:var(--certo,#2f9e44)" title="${nFirmes} firmes (7+ dias)"></div>`:''}
+        ${nIntervalo?`<div style="flex:${nIntervalo};background:var(--pen,#3b5bdb)" title="${nIntervalo} agendados"></div>`:''}
+        ${nVencidos?`<div style="flex:${nVencidos};background:var(--errado,#c92a2a)" title="${nVencidos} vencidos para hoje"></div>`:''}
+        ${nNovos?`<div style="flex:${nNovos};background:var(--duvida,#f59f00)" title="${nNovos} novos"></div>`:''}
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted,#666)">
+        <span><b class="pos">${nFirmes}</b> firmes (7+ d)</span>
+        <span><b style="color:var(--pen)">${nIntervalo}</b> agendados</span>
+        <span><b class="neg">${nVencidos}</b> para hoje</span>
+        <span><b style="color:var(--duvida)">${nNovos}</b> novos</span>
+      </div>
+    </div>
     <p class="rule" style="align-self:center">${tot} cartões · <b>${Math.min(cs0.hoje,Math.max(0,CART_REV_DIA-cartRevHoje()))} para hoje</b> (${cs0.hoje} vencidos; teto de ${CART_REV_DIA} revisões por dia) · ${cs0.novos} novos · <span class="pos">${cs0.firmes} firmes</span> (intervalo de ${FIRME}+ dias) · última marcação: <span class="neg">${cnt.n} novamente</span>, <span style="color:var(--duvida)">${cnt.d} difícil</span>, <span class="pos">${cnt.b} bom</span>, <span style="color:var(--pen)">${cnt.f} fácil</span>. Responda de memória, vire e marque: cada botão mostra quando o cartão volta.</p>
     <div class="m-grid">${ramos||`<div class="notice">Nenhum cartão conceitual disponível neste tópico${vagas?'':` (limite de ${NOVOS_DIA} novos no dia atingido)`}. As questões originais comentadas permanecem acessíveis abaixo.</div>`}</div>
     ${qResumo}
@@ -3034,6 +3080,7 @@ function wire(){
     const t=S.ed.get(id);S.fMat=t?.sigla||'';setView('edital');
   }));
   document.querySelectorAll('[data-cart-hoje]').forEach(b=>b.addEventListener('click',iniciarMix));
+  document.querySelectorAll('[data-cart-foco]').forEach(b=>b.addEventListener('click',()=>iniciarFocoTopico(b.dataset.cartFoco)));
   document.querySelectorAll('[data-cmix-next]').forEach(b=>b.addEventListener('click',()=>{const m=S.cmix;if(!m)return;const k=m.fila[m.idx];m.idx++;S.cartRated.delete(k);S.cartAbertos.delete(k);S.cartResp.delete(k);render(true);window.scrollTo({top:0})}));
   document.querySelectorAll('[data-cmix-sair]').forEach(b=>b.addEventListener('click',()=>{S.cmix=null;render(true)}));
   document.querySelectorAll('[data-cav]').forEach(b=>b.addEventListener('click',()=>salvarAval(b.dataset.cav,b.dataset.v)));
@@ -3292,9 +3339,48 @@ function salvarNota(id,val){
   enqueue(()=>S.db.doc('respostas/'+id).update({nota:val})).then(()=>{const s=document.getElementById('saved-'+id); if(s) s.textContent='Anotação salva';});
 }
 document.addEventListener('keydown',e=>{
-  if(S.view!=='treinar'||!S.round||S.round.fim) return;
-  const t=e.target; if(t&&(t.tagName==='TEXTAREA'||t.tagName==='INPUT'||t.tagName==='SELECT')) return;
   if(e.metaKey||e.ctrlKey||e.altKey) return;
+  const t=e.target;
+  const inInput=t&&(t.tagName==='TEXTAREA'||t.tagName==='INPUT'||t.tagName==='SELECT');
+
+  /* atalhos ágeis de flashcard (espaço para virar, 1 a 4 para avaliar, espaço/enter para próximo) */
+  if(S.view==='cartoes'){
+    if(inInput && e.key==='Enter' && (e.ctrlKey||e.metaKey)){
+      e.preventDefault();
+      const ta=t.closest('.cav');
+      const btn=ta&&ta.querySelector('[data-cver]');
+      if(btn) btn.click();
+      return;
+    }
+    if(inInput) return;
+    if(S.cmix){
+      const m=S.cmix;
+      if(m&&m.idx<m.fila.length){
+        const k=m.fila[m.idx];
+        const ab=S.cartAbertos.has(k);
+        const rated=S.cartRated.has(k);
+        if(!ab && (e.key===' '||e.key==='Enter')){
+          e.preventDefault();
+          S.cartAbertos.add(k); render(true);
+        } else if(ab && !rated && ['1','2','3','4'].includes(e.key)){
+          e.preventDefault();
+          const mapa={ '1':'n', '2':'d', '3':'b', '4':'f' };
+          salvarAval(k, mapa[e.key]);
+        } else if(rated && (e.key===' '||e.key==='Enter'||e.key==='ArrowRight')){
+          e.preventDefault();
+          m.idx++; S.cartRated.delete(k); S.cartAbertos.delete(k); S.cartResp.delete(k);
+          render(true); window.scrollTo({top:0});
+        } else if(e.key==='Escape'){
+          e.preventDefault();
+          S.cmix=null; render(true);
+        }
+      }
+    }
+    return;
+  }
+
+  if(S.view!=='treinar'||!S.round||S.round.fim) return;
+  if(inInput) return;
   const rd=S.round, k=e.key.toLowerCase();
   const selected=S.q.get(rd.fila[rd.idx]),multiple=alternativasDe(selected).length>0;
   if(!rd.atual && ((multiple&&('abcde0'.includes(k)&&k.length===1))||(!multiple&&(k==='c'||k==='e'||k==='b')))){
