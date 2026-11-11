@@ -4,7 +4,7 @@ import { requireUser } from "@/lib/auth-middleware";
 import { withStudyRequestGate } from "@/lib/study-onboarding";
 import { writeDocument } from "@/lib/study-documents";
 import {
-  assertStudyAdministrator, canActivateStudyAccount,
+  assertStudyAdministrator, canEnableStudyAccount,
   validateStudyAccountDraft, validateStudyContentBatch
 } from "@/lib/study-provisioning";
 
@@ -101,7 +101,7 @@ export const setStudyAccountActiveForAdmin = createServerFn({method:"POST"})
       const candidate=await entities.User.get(account.user_id).catch(()=>null);
       if(!candidate||candidate.role!=="user")throw new Error("Associe um login real de candidato antes de ativar o projeto.");
       const materials=await materialReady(entities,account.id);
-      if(!canActivateStudyAccount(materials) && !data.allowEmpty) {
+      if(!canEnableStudyAccount(materials,data.allowEmpty)) {
         throw new Error("Faltam conteúdos neste projeto. Importe edital e questões, ou habilite explicitamente o acesso inicial sem material para que o estudante possa entrar.");
       }
     }
