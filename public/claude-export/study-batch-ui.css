@@ -1,0 +1,13 @@
+.qb-bulk{border:1px solid var(--border, #5555);background:var(--card,#19191f);border-radius:14px;padding:16px;display:grid;gap:12px}
+.qb-bulk-header strong{font-size:16px}
+.qb-bulk-header p,.qb-bulk-note{font-size:13px;line-height:1.6;color:var(--muted,#a4a4ac);margin:5px 0}
+.qb-bulk-stats{display:flex;gap:8px;flex-wrap:wrap}
+.qb-bulk-stats span{font-size:12px;border:1px solid var(--border,#5555);padding:5px 10px;border-radius:999px}
+.qb-bulk-format{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px}
+.qb-bulk-format select{min-height:38px;max-width:100%;padding:5px 8px;background:var(--bg,#141417);color:inherit;border:1px solid var(--border,#5555);border-radius:8px}
+.qb-bulk-actions{display:flex;gap:8px;flex-wrap:wrap}
+.qb-bulk-actions button:disabled{opacity:.5;cursor:not-allowed}
+.qb-bulk-status{font-size:13px;word-break:break-word;line-height:1.5;margin:0}
+.qb-bulk-missing{max-height:230px;overflow:auto;padding:8px 12px;font-size:12px}
+.qb-bulk-missing p{padding:3px 0;margin:0;border-bottom:1px solid var(--border,#5555)}
+.qb-bulk summary{font-size:12px;cursor:pointer}
