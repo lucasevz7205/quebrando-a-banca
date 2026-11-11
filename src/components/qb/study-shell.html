@@ -618,7 +618,7 @@ function atalhosQuestao(q,indice){
 }
 function questoesEmMapa(qs,indice){
   if(!qs.length)return '';
-  return `<details class="qb-qsource-list"><summary>Questões relacionadas ao capítulo · ${qs.length}</summary><p class="rule">Para cada questão, use “Localizar conceito no mapa”. A remissão busca o nó associado por ID ou conteúdo; quando só houver correspondência por capítulo, isso será informado sem inventar um subramo.</p>${qs.map(q=>`<details class="qb-qsource-item"><summary>${esc(q.enunciado)}</summary><div><p><b>Gabarito: ${esc(LETRA[q.gabarito]||q.gabarito)}</b></p><p>${esc(q.comentario||'Comentário indisponível; confira a fonte.')}</p><small>${esc(q.ref||'Fonte não cadastrada')}</small>${atalhosQuestao(q,indice)}</div></details>`).join('')}</details>`;
+  return `<details class="qb-qsource-list"><summary>Questões relacionadas ao capítulo · ${qs.length}</summary><p class="rule">Para cada questão, use “Localizar conceito no mapa”. A remissão busca o nó associado por ID ou conteúdo; quando só houver correspondência por capítulo, isso será informado sem inventar um subramo.</p>${qs.map(q=>`<details class="qb-qsource-item"><summary>${esc(q.enunciado)}</summary><div><p><b>Gabarito: ${esc(rotuloResposta(q,q.gabarito))}</b></p><p>${esc(q.comentario||'Comentário indisponível; confira a fonte.')}</p><small>${esc(q.ref||'Fonte não cadastrada')}</small>${atalhosQuestao(q,indice)}</div></details>`).join('')}</details>`;
 }
 function nomeTopicoIndice(id,idx){return S.ed.get(id)||idx.virtualTopics.get(id)||{id,titulo:id}}
 function capNome(cap){for(const q of S.q.values()) if(q.cap===cap) return q.capNome||''; return ''}
@@ -1382,7 +1382,7 @@ function estatisticas(){
   let eSendoC=0,cSendoE=0,brancos=0;
   const conf={1:[0,0],2:[0,0],3:[0,0]};
   for(const r of S.r.values()){
-    const q=S.q.get(r.qid); if(!q||foraQ(q)) continue;
+    const q=S.q.get(r.qid); if(!q||foraQ(q)||alternativasDe(q).length) continue;
     for(const h of (r.hist||[])){
       if(h.m==='B'){brancos++;continue}
       if(!h.ok){ if(h.m==='E') eSendoC++; else cSendoE++; }
@@ -1427,8 +1427,9 @@ function sessoesHistoricas(){
     const contagem={c:0,e:0,b:0,n:0};
     const nomes=new Set();
     for(const item of rodada.itens||[]){
-      if(!['C','E','B'].includes(item.marcada)||!['C','E'].includes(item.gabarito)) continue;
       const questao=S.q.get(item.qid);
+      const multiple=alternativasDe(questao).length>0;
+      if(multiple?!['A','B','C','D','E','-'].includes(item.marcada):(!['C','E','B'].includes(item.marcada)||!['C','E'].includes(item.gabarito)))continue;
       const cap=questao?.cap||(!multiCap(rodada.cap)?rodada.cap:'')||'';
       const topico=topicoDoCap(cap);
       const materia=topico?.sigla||(questao?materiaDaQuestao(questao):'')||'_';
@@ -1436,7 +1437,7 @@ function sessoesHistoricas(){
       materias.set(materia,nomeMateria(materia));
       if(cap&&!assuntos.has(cap)) assuntos.set(cap,{materia,nome});
       if(!dentro||(S.fEvo&&S.fEvo!==materia)) continue;
-      const resultado=item.marcada==='B'?'b':item.marcada===item.gabarito?'c':'e';
+      const resultado=item.marcada===brancoDe(questao)?'b':item.marcada===item.gabarito?'c':'e';
       if(cap&&S.evoGrafico==='assuntos'){
         const a=comparacao.get(cap)||{c:0,n:0};
         a.n++;
