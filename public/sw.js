@@ -2,8 +2,7 @@
  * Cacheia apenas recursos estáticos de interface (/claude-export/*, ícone, manifesto).
  * NUNCA armazena respostas de API nem documentos privados de contas no Cache Storage.
  */
-const CACHE_NAME = "qb-static-axon-v5";
-const CACHE_PREFIX = "qb-static-axon-";
+const CACHE_NAME = "qb-static-axon-v3";
 const PRECACHE_URLS = [
   "/manifest.webmanifest",
   "/qb-icon.svg",
@@ -16,7 +15,6 @@ const PRECACHE_URLS = [
   "/claude-export/axon-shell.css?v=1",
   "/claude-export/offline-sync.css?v=1",
   "/claude-export/omnistudy-ai.css?v=1",
-  "/claude-export/architect-launch.css?v=1",
   "/claude-export/omnistudy-cornell.css?v=1",
   "/claude-export/radial-axon-flow.js?v=1",
   "/claude-export/training-radial.js?v=2",
@@ -25,20 +23,13 @@ const PRECACHE_URLS = [
   "/claude-export/axon-shell.js?v=1",
   "/claude-export/offline-sync.js?v=1",
   "/claude-export/omnistudy-cornell.js?v=1",
-  "/claude-export/omnistudy-ai.js?v=3",
-  "/claude-export/assistant.js?v=3"
+  "/claude-export/omnistudy-ai.js?v=2"
 ];
 
 self.addEventListener("install", event => {
-  // Uma falha/timeout em UM recurso não deve cancelar a instalação toda.
-  // São somente arquivos públicos: nenhuma anotação ou resposta é apagada.
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => Promise.allSettled(PRECACHE_URLS.map(async path => {
-        const response = await fetch(path, { cache: "reload" });
-        if (!response.ok || response.type === "opaque") throw new Error("Recurso não disponível: " + path);
-        await cache.put(path, response);
-      })))
+      .then(cache => cache.addAll(PRECACHE_URLS).catch(() => {}))
       .then(() => self.skipWaiting())
   );
 });
@@ -46,7 +37,7 @@ self.addEventListener("install", event => {
 self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(k => k.startsWith(CACHE_PREFIX) && k !== CACHE_NAME).map(k => caches.delete(k))))
+      .then(keys => Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
@@ -54,12 +45,11 @@ self.addEventListener("activate", event => {
 function isSafeStaticAsset(url) {
   if (url.origin !== self.location.origin) return false;
   if (url.pathname.startsWith("/api/") || url.pathname.startsWith("/_server")) return false;
-  // Não capturar /assets/* nem chunks compilados, pois misturar versões
-  // pode provocar erro de carregamento ao atualizar o app instalado.
   return (
     url.pathname.startsWith("/claude-export/") ||
     url.pathname === "/manifest.webmanifest" ||
-    url.pathname === "/qb-icon.svg"
+    url.pathname === "/qb-icon.svg" ||
+    /\.(?:css|js|svg|jpg|png|woff2?)$/i.test(url.pathname)
   );
 }
 
