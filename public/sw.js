@@ -14,18 +14,18 @@ const PRECACHE_URLS = [
   "/claude-export/area-radial.css?v=1",
   "/claude-export/axon-shell.css?v=1",
   "/claude-export/offline-sync.css?v=1",
-  "/claude-export/omnistudy-ai.css?v=1",
-  "/claude-export/omnistudy-cornell.css?v=1",
-  "/claude-export/mindmap-studio.css?v=1",
+  "/claude-export/omnistudy-ai.css?v=12",
+  "/claude-export/omnistudy-cornell.css?v=12",
+  "/claude-export/mindmap-studio.css?v=12",
   "/claude-export/radial-axon-flow.js?v=1",
   "/claude-export/training-radial.js?v=2",
   "/claude-export/area-radial.js?v=1",
   "/claude-export/radial-dashboard.js?v=2",
   "/claude-export/axon-shell.js?v=1",
   "/claude-export/offline-sync.js?v=1",
-  "/claude-export/omnistudy-cornell.js?v=1",
-  "/claude-export/mindmap-studio.js?v=1",
-  "/claude-export/omnistudy-ai.js?v=2"
+  "/claude-export/omnistudy-cornell.js?v=12",
+  "/claude-export/mindmap-studio.js?v=12",
+  "/claude-export/omnistudy-ai.js?v=22"
 ];
 
 self.addEventListener("install", event => {

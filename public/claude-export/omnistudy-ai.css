@@ -65,16 +65,17 @@
   50% { transform: scale(1.35); opacity: 0.55; }
 }
 
-/* Studio Backdrop & Drawer */
+/* Studio Backdrop & Centered Modal Window */
 .omni-drawer-backdrop {
   position: fixed;
   inset: 0;
   z-index: 9980;
-  background: rgba(4, 7, 15, 0.72);
-  backdrop-filter: blur(10px);
+  background: rgba(4, 7, 15, 0.76);
+  backdrop-filter: blur(12px);
   display: none;
-  align-items: stretch;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
   opacity: 0;
   transition: opacity 0.24s ease;
 }
@@ -85,16 +86,30 @@
 }
 
 .omni-drawer {
-  width: min(980px, 96vw);
-  height: 100dvh;
-  background: linear-gradient(165deg, rgba(11, 15, 27, 0.97), rgba(7, 10, 19, 0.99));
-  border-left: 1px solid rgba(139, 92, 246, 0.32);
-  box-shadow: -24px 0 64px rgba(0, 0, 0, 0.75);
+  width: min(1240px, 95vw);
+  max-width: 1240px;
+  height: min(90dvh, 920px);
+  margin: auto;
+  background: linear-gradient(165deg, rgba(11, 15, 27, 0.98), rgba(7, 10, 19, 0.99));
+  border: 1px solid rgba(139, 92, 246, 0.38);
+  border-radius: 20px;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.82), 0 0 0 1px rgba(255, 255, 255, 0.06);
   display: flex;
   flex-direction: column;
   color: #f1f5f9;
   font-family: var(--sans, system-ui, -apple-system, sans-serif);
   overflow: hidden;
+}
+
+@media (max-width: 720px) {
+  .omni-drawer-backdrop {
+    padding: 0;
+  }
+  .omni-drawer {
+    width: 100vw;
+    height: 100dvh;
+    border-radius: 0;
+  }
 }
 
 .omni-drawer-header {

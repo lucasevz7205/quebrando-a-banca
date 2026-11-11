@@ -70,3 +70,16 @@ test("the administrator keeps the existing planner", () => {
   assert.match(html, /Sua semana de estudos/);
   assert.doesNotMatch(html, /data-plan-trail|data-ir-mapa|data-ir-cart|Trilhas de estudo ·/);
 });
+
+test("consolidated trail schedule editor lists posterior and anterior objectives to place in current day or week", () => {
+  const { planner, S } = fixture(true);
+  S.planSelectedDay = task.data; // 2026-11-09
+  const html = planner.render(S, callbacks);
+  assert.match(html, /Editar Cronograma da Trilha · Antecipar ou Reagendar Objetivos/);
+  assert.match(html, /data-plan-reprog-scope="posteriores"/);
+  assert.match(html, /data-plan-reprog-scope="anteriores"/);
+  assert.match(html, /data-plan-target-day="fiscal-pl-t21"/);
+  assert.match(html, /data-plan-action="move-today"/);
+  assert.match(html, /data-plan-action="shift-prev-day"/);
+  assert.match(html, /data-plan-action="shift-next-day"/);
+});
