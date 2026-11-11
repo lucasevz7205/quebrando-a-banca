@@ -48,7 +48,7 @@ function sourcesFor(topic, materials, existingRevision, questions) {
   return out.slice(0, 4);
 }
 function validQuestions(result, format) {
-  if (!Array.isArray(result) || result.length < 6 || result.length > 20) throw new Error("Lote de questões incompleto. Nada foi publicado.");
+  if (!Array.isArray(result) || result.length !== 20) throw new Error("Lote de questões incompleto. Nada foi publicado.");
   const seen = new Set();
   return result.map((q, i) => {
     const enunciado = text(q.enunciado);
@@ -112,7 +112,7 @@ const schema = {
       id: { type: "string" }, t: { type: "string" }, n: { type: "string" },
       x: { type: "object", properties: { e: { type: "string" }, ex: { type: "string" }, trap: { type: "string" } } },
       f: { type: "array", items: { type: "object", properties: { id: { type: "string" }, t: { type: "string" }, n: { type: "string" } } } },
-    } } }, required: ["centro","ramos"] },
+    } } } }, required: ["centro","ramos"] },
     cartoes: { type: "array", items: { type: "object", properties: { tema: { type: "string" }, q: { type: "string" }, a: { type: "string" } }, required: ["tema","q","a"] } },
     questoes: { type: "array", items: { type: "object", properties: { tema: { type: "string" }, enunciado: { type: "string" }, gabarito: { type: "string" }, comentario: { type: "string" }, mapaNoId: { type: "string" }, alternativas: { type: "array", items: { type: "object", properties: { letra: { type: "string" }, texto: { type: "string" } }, required: ["letra","texto"] } } }, required: ["tema","enunciado","gabarito","comentario"] } },
   },
