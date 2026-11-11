@@ -36,7 +36,7 @@ export function flatMindMapNodes(tree) {
   return result;
 }
 
-export function parseHierarchicalMindMap(input, fallbackTitle="Mapa mental", prefix="map") {
+export function parseHierarchicalMindMap(input, fallbackTitle="Mapa mental", prefix="map", options={}) {
   const source=clean(input,27000).replace(/\u00a0/g," ");
   if(!source)return null;
   const raw=source.split("\n").filter(l=>!/^\s*\x60{3}/.test(l));
@@ -114,7 +114,7 @@ export function parseHierarchicalMindMap(input, fallbackTitle="Mapa mental", pre
     } else if(line.length<135)add(line,"",0);
     else add(fallbackTitle,line,0);
   }
-  if(signals<2||titles<2)return null;
+  if((options.force ? signals<1||titles<1 : signals<2||titles<2))return null;
   if(lost)errors.push("O texto excedeu a capacidade do mapa: "+lost+" itens não foram adicionados. Divida a entrada em partes menores.");
   return {centro:center||fallbackTitle,ramos:roots,ligacoes:[],structureDetected:true,structuredNodes:seen,warnings:errors,sourceLength:source.length};
 }
