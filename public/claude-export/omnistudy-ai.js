@@ -148,11 +148,12 @@
     activeTab: "tutor",
     subject: "Processo Legislativo & Regimento Interno (CD - ARR)",
     tutorMode: "socratic",
+    aiProvider: "base44",
     messages: [
       {
         id: "welcome-1",
         role: "model",
-        text: "Olá! Sou o seu **Tutor Socrático OmniStudy IA** integrado ao Quebrando a Banca.\n\nMeu papel é guiar seu raciocínio, desarmar pegadinhas Cebraspe (F1–F10) e consolidar sua retenção ativa.\n\nQual tópico do edital ou questão vamos dissecar agora?",
+        text: "Sou O Arquiteto, seu assistente de aprendizagem no Quebrando a Banca.\n\nPosso orientar seus estudos, revisar conceitos e utilizar os métodos Socrático, Feynman e Cornell.\n\nQual assunto vamos trabalhar?",
         timestamp: "Agora",
       },
     ],
@@ -294,16 +295,21 @@
      3. AI BRIDGE CALLER (Uses Base44 QBBridge + Smart Local Fallback)
      ======================================================================== */
   async function callOmniStudyBackend(payload) {
+    payload = {...payload, provider:state.aiProvider==="gemini"?"gemini":"base44"};
+    if (payload.provider==="gemini" && !providerStatus.geminiConfigured)
+      throw new Error("Gemini ainda não conectado. Configure GEMINI_API_KEY nos Secrets do Base44.");
     if (global.QBBridge && typeof global.QBBridge.ask === "function") {
       try {
         return await global.QBBridge.ask("omniStudyAI", payload);
       } catch (err) {
-        // Cornell exige resposta da IA real: não simular conferência factual offline.
+        // Não simular revisão factual nem trocar de provedor silenciosamente.
+        if (payload.provider==="gemini")throw new Error("Gemini indisponível: "+(err?.message||"consulte as configurações."));
         if (payload.task === "review-cornell" || payload.task === "summarize-cornell")
           throw new Error("IA Cornell indisponível: " + (err?.message || "verifique a conexão."));
         console.warn("[OmniStudy] Fallback local ativado:", err && err.message);
       }
     }
+    if (payload.provider==="gemini")throw new Error("Gemini requer conexão ativa.");
     if (payload.task === "review-cornell" || payload.task === "summarize-cornell")
       throw new Error("IA Cornell exige conexão com o Base44; suas anotações manuais continuam salvas.");
     // Offline / Modo Academia deterministic cognitive fallback
@@ -467,6 +473,7 @@
     if (backdrop) {
       backdrop.classList.add("open");
       renderStudioTabs();
+      renderProviderSelector();
       renderStudioBody();
     }
   }
@@ -474,6 +481,39 @@
   function closeStudio() {
     const backdrop = document.getElementById("omni-drawer-backdrop");
     if (backdrop) backdrop.classList.remove("open");
+  }
+
+  let providerStatus={geminiConfigured:false,checked:false};
+  function renderProviderSelector() {
+    const bar=document.getElementById("architect-provider-bar");
+    if(!bar)return;
+    const configured=providerStatus.geminiConfigured;
+    bar.innerHTML=`
+      <span class="architect-provider-label">IA do Arquiteto</span>
+      <button type="button" data-architect-provider="base44" aria-pressed="${state.aiProvider!=="gemini"}" class="architect-provider-option${state.aiProvider!=="gemini"?' active':''}">Base44</button>
+      <button type="button" data-architect-provider="gemini" aria-pressed="${state.aiProvider==="gemini"}"
+        class="architect-provider-option${state.aiProvider==="gemini"?' active':''}" ${configured?'':'disabled'}
+        title="${configured?'Gemini conectado':'Requer GEMINI_API_KEY configurada no Base44'}">Google Gemini${configured?'':' · não conectado'}</button>
+      <span class="architect-provider-help">${configured?'Gemini disponível por API; custos e cotas podem ser cobrados pelo Google.':'O Gemini exige chave de API própria em Secrets do Base44.'}</span>`;
+    bar.querySelectorAll("[data-architect-provider]").forEach(btn=>btn.addEventListener("click",()=>{
+      const next=btn.getAttribute("data-architect-provider");
+      if(next==="gemini"&&!providerStatus.geminiConfigured)return;
+      state.aiProvider=next;
+      saveState();
+      renderProviderSelector();
+    }));
+  }
+  async function loadProviderStatus(){
+    try{
+      const status=await global.QBBridge?.ask?.("architectProviderStatus");
+      providerStatus={geminiConfigured:Boolean(status?.geminiConfigured),checked:true};
+      if(state.aiProvider==="gemini"&&!providerStatus.geminiConfigured)state.aiProvider="base44";
+      renderProviderSelector();
+    }catch{
+      providerStatus={geminiConfigured:false,checked:true};
+      if(state.aiProvider==="gemini")state.aiProvider="base44";
+      renderProviderSelector();
+    }
   }
 
   function renderStudioTabs() {
@@ -1049,8 +1089,8 @@
       studioBtn.type = "button";
       studioBtn.id = "omni-studio-trigger";
       studioBtn.className = "omni-studio-trigger";
-      studioBtn.title = "Abrir Estúdio Cognitivo OmniStudy IA (Alt+O)";
-      studioBtn.innerHTML = `<span>⚡ OmniStudy IA</span>`;
+      studioBtn.title = "Abrir O Arquiteto (Alt+O)";
+      studioBtn.innerHTML = `<span>O Arquiteto</span>`;
       studioBtn.addEventListener("click", () => openStudio());
 
       topActions.insertBefore(studioBtn, topActions.firstChild);
@@ -1061,18 +1101,19 @@
     backdrop.id = "omni-drawer-backdrop";
     backdrop.className = "omni-drawer-backdrop";
     backdrop.innerHTML = `
-      <aside class="omni-drawer" role="dialog" aria-label="Estúdio Cognitivo OmniStudy IA">
+      <aside class="omni-drawer" role="dialog" aria-label="O Arquiteto: ferramentas de aprendizagem">
         <header class="omni-drawer-header">
           <div class="omni-drawer-title">
-            <span class="omni-badge">OmniStudy AI 2.0</span>
+            <span class="omni-badge">O Arquiteto</span>
             <div>
-              <div style="font-size:15px;font-weight:800;color:#fff">Estúdio de Aprendizagem Ativa · Quebrando a Banca</div>
+              <div style="font-size:15px;font-weight:800;color:#fff">O Arquiteto · Estúdio de Aprendizagem Ativa</div>
               <div style="font-size:11px;color:#94a3b8">Tutor Socrático • Técnica Feynman • Caderno Cornell • SRS 3D • Web Audio Procedural</div>
             </div>
           </div>
           <button type="button" id="omni-drawer-close" class="omni-btn omni-btn-ghost" style="padding:6px 12px">✕ Fechar (Esc)</button>
         </header>
         <nav id="omni-tabs-bar" class="omni-tabs"></nav>
+        <div id="architect-provider-bar" class="architect-provider-bar" aria-label="Escolha do provedor de IA"></div>
         <div id="omni-drawer-body" class="omni-body"></div>
       </aside>
     `;
@@ -1084,6 +1125,7 @@
 
     const closeBtn = document.getElementById("omni-drawer-close");
     if (closeBtn) closeBtn.addEventListener("click", closeStudio);
+    void loadProviderStatus();
 
     global.addEventListener("keydown", e => {
       if (e.altKey && (e.key === "o" || e.key === "O")) {
@@ -1106,7 +1148,8 @@
   }
 
   global.QBOmniStudy = {
-    version: "2.0.0",
+    version: "2.1.0",
+    name:"O Arquiteto",
     soundEngine,
     state,
     openStudio,
