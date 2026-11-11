@@ -51,39 +51,102 @@
     return explicitS || global.QBApp?.S || global.S || null;
   }
 
+  // Cadernos-padrão do concurso ARR (Câmara). Só valem para a conta legada sem edital carregado.
+  const LEGACY_ARR_NOTEBOOK_IDS = new Set(DEFAULT_SUBJECT_NOTEBOOKS.map(nb => nb.id));
+  const GENERIC_NOTEBOOK = { id: "nb-geral", name: "Caderno Geral", sigla: "GER", color: "#818cf8", custom: false };
+
+  /* Matérias do concurso do próprio usuário, as mesmas exibidas na interface dele
+   * (edital da conta; na falta, questões e planejamento da conta). */
+  function extractContestSubjects(S) {
+    const out = new Map();
+    const add = (name, sigla) => {
+      const clean = asText(name, 140).trim();
+      if (!clean) return;
+      const key = slugify(clean);
+      if (out.has(key)) return;
+      const sig = asText(sigla || clean.replace(/[^A-Za-zÀ-ÿ]/g, "").slice(0, 3), 12).trim().toUpperCase() || "MAT";
+      out.set(key, { name: clean, sigla: sig });
+    };
+    if (S?.ed && typeof S.ed.values === "function") {
+      const topics = [...S.ed.values()].filter(t => t && !t.foraEdital && t.materia);
+      topics.sort((a, b) => (+a.materiaOrdem || 99) - (+b.materiaOrdem || 99) || (+a.ordem || 0) - (+b.ordem || 0));
+      for (const t of topics) add(t.materia, t.sigla);
+    }
+    if (!out.size && S?.q && typeof S.q.values === "function") {
+      for (const q of S.q.values()) if (q?.materia) add(q.materia);
+    }
+    if (!out.size && Array.isArray(S?.pl)) {
+      for (const t of S.pl) if (t?.materia && t.arquivada !== true) add(t.materia);
+    }
+    return [...out.values()];
+  }
+
   function ensureNotebooks(state, explicitS) {
     if (!state || typeof state !== "object") return [];
     if (!Array.isArray(state.cornellNotes)) state.cornellNotes = [];
-    if (!Array.isArray(state.cornellNotebooks) || !state.cornellNotebooks.length) {
-      state.cornellNotebooks = DEFAULT_SUBJECT_NOTEBOOKS.map(nb => ({ ...nb }));
-    }
+    if (!Array.isArray(state.cornellNotebooks)) state.cornellNotebooks = [];
 
     const S = resolveAppState(explicitS);
-    const byNameKey = new Map(
-      state.cornellNotebooks.map(nb => [slugify(nb.name), nb])
-    );
+    const candidate = !!S?.studyAccount;
+    const subjects = extractContestSubjects(S);
 
-    // Sincroniza matérias reais do edital (S.ed) caso ainda não tenham caderno
-    if (S?.ed && typeof S.ed.values === "function") {
-      for (const t of S.ed.values()) {
-        if (!t || t.foraEdital || !t.materia) continue;
-        const mKey = slugify(t.materia);
-        const matchExisting = state.cornellNotebooks.find(
-          nb =>
-            slugify(nb.name) === mKey ||
-            (t.sigla && String(nb.sigla || "").toLowerCase() === String(t.sigla).toLowerCase())
-        );
-        if (!matchExisting && !byNameKey.has(mKey)) {
-          const nb = {
-            id: "nb-" + slugify(t.sigla || t.materia),
-            name: asText(t.materia, 140),
-            sigla: asText((t.sigla || t.materia.slice(0, 3)).toUpperCase(), 12),
-            color: NOTEBOOK_PALETTE[state.cornellNotebooks.length % NOTEBOOK_PALETTE.length],
-            custom: false,
-          };
-          state.cornellNotebooks.push(nb);
-          byNameKey.set(mKey, nb);
+    // Conta de candidato nunca herda a folha-exemplo do concurso ARR.
+    if (candidate) state.cornellNotes = state.cornellNotes.filter(n => n && n.id !== "cornell-seed-1");
+
+    if (subjects.length) {
+      // 1. Um caderno para cada matéria do concurso do usuário (exceto os que ele excluiu)
+      const hidden = new Set(Array.isArray(state.hiddenContestNotebooks) ? state.hiddenContestNotebooks : []);
+      const contestNbs = [];
+      subjects.forEach((sub, idx) => {
+        const id = "nb-" + slugify(sub.sigla || sub.name);
+        if (hidden.has(id) || contestNbs.some(nb => nb.id === id)) return;
+        let nb =
+          state.cornellNotebooks.find(item => item.id === id) ||
+          state.cornellNotebooks.find(item => !item.custom && slugify(item.name) === slugify(sub.name));
+        if (!nb) {
+          nb = { id, name: sub.name, sigla: sub.sigla, color: NOTEBOOK_PALETTE[idx % NOTEBOOK_PALETTE.length], custom: false };
+        } else if (!nb.custom && !nb.renamed) {
+          nb.name = sub.name;
+          nb.sigla = sub.sigla || nb.sigla;
         }
+        nb.fromContest = true;
+        contestNbs.push(nb);
+      });
+      // 2. Cadernos criados pelo próprio usuário são preservados
+      const customNbs = state.cornellNotebooks.filter(
+        nb => nb.custom && !contestNbs.some(item => item.id === nb.id)
+      );
+      if (!contestNbs.length && !customNbs.length) contestNbs.push({ ...GENERIC_NOTEBOOK });
+      const contestIds = new Set(contestNbs.map(nb => nb.id));
+      // 3. Cadernos-padrão de outro concurso (ex.: ARR) saem; as folhas migram para a matéria equivalente
+      const removed = state.cornellNotebooks.filter(nb => !nb.custom && !contestIds.has(nb.id));
+      for (const old of removed) {
+        const target =
+          contestNbs.find(nb => old.sigla && String(nb.sigla || "").toLowerCase() === String(old.sigla).toLowerCase()) ||
+          contestNbs.find(nb => slugify(nb.name) === slugify(old.name)) ||
+          contestNbs[0] ||
+          customNbs[0];
+        for (const note of state.cornellNotes) {
+          if (note && note.notebookId === old.id) {
+            note.notebookId = target.id;
+            note.subject = target.name;
+          }
+        }
+      }
+      state.cornellNotebooks = [...contestNbs, ...customNbs];
+      for (const note of state.cornellNotes) {
+        const nb = note && contestNbs.find(item => item.id === note.notebookId);
+        if (nb) note.subject = nb.name;
+      }
+    } else {
+      if (candidate) {
+        // Edital ainda carregando: nada do concurso ARR aparece para o candidato.
+        state.cornellNotebooks = state.cornellNotebooks.filter(nb => nb.custom || !LEGACY_ARR_NOTEBOOK_IDS.has(nb.id));
+      }
+      if (!state.cornellNotebooks.length) {
+        state.cornellNotebooks = candidate
+          ? [{ ...GENERIC_NOTEBOOK }]
+          : DEFAULT_SUBJECT_NOTEBOOKS.map(nb => ({ ...nb }));
       }
     }
 
@@ -155,6 +218,7 @@
     const oldName = nb.name;
     if (patch.name !== undefined && asText(patch.name, 140).trim()) {
       nb.name = asText(patch.name, 140).trim();
+      if (nb.name !== oldName) nb.renamed = true;
     }
     if (patch.sigla !== undefined && asText(patch.sigla, 12).trim()) {
       nb.sigla = asText(patch.sigla, 12).trim().toUpperCase();
@@ -177,7 +241,13 @@
     if (state.cornellNotebooks.length <= 1) return false;
     const idx = state.cornellNotebooks.findIndex(nb => nb.id === notebookId);
     if (idx === -1) return false;
-    state.cornellNotebooks.splice(idx, 1);
+    const [deletedNb] = state.cornellNotebooks.splice(idx, 1);
+    if (deletedNb?.fromContest) {
+      // Lembra a exclusão para o caderno da matéria não reaparecer sozinho.
+      const hidden = new Set(Array.isArray(state.hiddenContestNotebooks) ? state.hiddenContestNotebooks : []);
+      hidden.add(deletedNb.id);
+      state.hiddenContestNotebooks = [...hidden];
+    }
     const fallbackNb = state.cornellNotebooks[0];
     if (options.deleteNotes) {
       state.cornellNotes = (state.cornellNotes || []).filter(n => n.notebookId !== notebookId);
@@ -680,7 +750,7 @@
           '<div><label class="omni-label" for="omni-cornell-title-edit">Título da Folha Cornell</label>',
           '<input class="omni-input" id="omni-cornell-title-edit" maxlength="300" value="' +
             escapeHTML(current.title) +
-            '" placeholder="Ex: Processo Legislativo · Espécies Normativas e Quóruns"></div>',
+            '" placeholder="Ex: Matéria · Assunto da aula ou leitura"></div>',
           '<div><label class="omni-label" for="omni-cornell-subject-edit">Caderno / Matéria</label>',
           '<input class="omni-input" id="omni-cornell-subject-edit" list="omni-cornell-notebooks-datalist" maxlength="300" value="' +
             escapeHTML(current.subject) +
@@ -1268,6 +1338,7 @@
     splitCues,
     buildMindMapFromNote,
     ensureNotebooks,
+    extractContestSubjects,
     addNotebook,
     updateNotebook,
     deleteNotebook,

@@ -157,6 +157,95 @@
     </form>`;
   }
 
+  /* ---------- Autonomia da rotina: ajustes rápidos que o próprio estudante decide ----------
+   * Funções puras: devolvem só as atividades alteradas (cópias), sem gravar nada.
+   * Nunca mexem em atividades concluídas, arquivadas ou em execução, nem na revisão automática.
+   */
+  const movable = t => !done(t) && !archived(t) && t.status !== "executando";
+  const PULL_COUNTS = [1, 2, 3, 5, 8];
+  function remainingWeekDays(S, today) {
+    const days = currentWeek(S);
+    const from = today > days[0] ? today : days[0];
+    return days.filter(d => d >= from);
+  }
+  function routinePullNext(S, today, count = 3, mode = "day") {
+    initialize(S);
+    const n = Math.max(1, Math.min(20, Number(count) || 3));
+    const days = currentWeek(S);
+    const now = new Date().toISOString();
+    if (mode === "week") {
+      const targets = remainingWeekDays(S, today);
+      if (!targets.length) return [];
+      const next = active(S.pl).filter(t => movable(t) && t.data > days[6]).sort(byOrder).slice(0, n);
+      return next.map((t, i) => ({ ...t, data: targets[i % targets.length], atualizadoEm: now }));
+    }
+    const target = S.planSelectedDay;
+    const next = active(S.pl).filter(t => movable(t) && t.data > target).sort(byOrder).slice(0, n);
+    return next.map(t => ({ ...t, data: target, atualizadoEm: now }));
+  }
+  function routinePullOverdue(S, today) {
+    initialize(S);
+    const now = new Date().toISOString();
+    return active(S.pl).filter(t => movable(t) && t.data < today).sort(byOrder)
+      .map(t => ({ ...t, data: today, atualizadoEm: now }));
+  }
+  function routinePushDay(S, day = S.planSelectedDay) {
+    initialize(S);
+    const now = new Date().toISOString();
+    return getDay(S, day).filter(movable).map(t => ({ ...t, data: shift(t.data, 1), atualizadoEm: now }));
+  }
+  function routineRebalanceWeek(S, today) {
+    initialize(S);
+    const days = currentWeek(S);
+    const targets = remainingWeekDays(S, today);
+    if (!targets.length) return [];
+    const weekTasks = active(S.pl).filter(t => days.includes(t.data));
+    const toPlace = weekTasks.filter(movable).sort(byOrder);
+    const load = new Map(targets.map(d => [d, 0]));
+    for (const t of weekTasks) if (!movable(t) && load.has(t.data)) load.set(t.data, load.get(t.data) + (Number(t.minutos) || 60));
+    const now = new Date().toISOString();
+    const changed = [];
+    for (const t of toPlace) {
+      const min = Math.min(...load.values());
+      const best = load.get(t.data) === min ? t.data : targets.find(d => load.get(d) === min);
+      load.set(best, load.get(best) + (Number(t.minutos) || 60));
+      if (best !== t.data) changed.push({ ...t, data: best, atualizadoEm: now });
+    }
+    return changed;
+  }
+
+  function routineAutonomyPanel(S, today, days) {
+    if (!active(S.pl).length) return "";
+    const count = PULL_COUNTS.includes(Number(S.planPullCount)) ? Number(S.planPullCount) : 3;
+    const sel = S.planSelectedDay;
+    const after = active(S.pl).filter(t => movable(t) && t.data > sel).length;
+    const afterWeek = active(S.pl).filter(t => movable(t) && t.data > days[6]).length;
+    const overdue = active(S.pl).filter(t => movable(t) && t.data < today).length;
+    const dayPending = getDay(S, sel).filter(movable).length;
+    const weekPending = active(S.pl).filter(t => movable(t) && days.includes(t.data)).length;
+    const btn = (act, label, enabled, title, primary = false) =>
+      `<button type="button" class="btn ${primary ? "" : "ghost"} small" data-plan-action="${act}" ${enabled ? "" : "disabled"} title="${esc(title)}">${label}</button>`;
+    return `<section class="qb-plan-autonomy" id="qb-plan-autonomy" aria-label="Autonomia da rotina" style="display:flex;flex-direction:column;gap:10px;padding:14px 16px;border:1px solid var(--line);border-radius:14px">
+      <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;justify-content:space-between">
+        <div><span class="qb-plan-eyebrow">AUTONOMIA DA ROTINA</span>
+          <h3 style="margin:2px 0">Adapte a semana ao seu dia real</h3>
+          <p style="margin:0;color:var(--muted);font-size:13px">Você decide: adiante objetivos da trilha, traga os atrasados, alivie um dia cheio ou redistribua a semana. Nada é concluído ou apagado e a revisão automática não muda.</p>
+        </div>
+        <label style="display:flex;align-items:center;gap:6px;font-size:13px">Quantidade
+          <select data-plan-pull-count aria-label="Quantos objetivos puxar" style="padding:5px 8px;border-radius:8px">${PULL_COUNTS.map(n => `<option value="${n}" ${n === count ? "selected" : ""}>${n}</option>`).join("")}</select>
+        </label>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        ${btn("pull-next-trail-tasks", `⇄ Puxar próximos ${count} para ${short(sel)}`, after > 0, `Traz os próximos ${count} objetivos posteriores (${after} disponíveis) para o dia selecionado`, true)}
+        ${btn("pull-next-week", `⇉ Distribuir próximos ${count} nesta semana`, afterWeek > 0, `Espalha os próximos ${count} objetivos de semanas futuras (${afterWeek} disponíveis) pelos dias restantes desta semana`)}
+        ${btn("pull-overdue-today", `↺ Trazer atrasados para hoje (${overdue})`, overdue > 0, "Move para hoje os objetivos anteriores que ficaram pendentes")}
+        ${btn("push-day-pending", `🌤 Desafogar ${short(sel)} (+1 dia, ${dayPending})`, dayPending > 0, "Adia para o dia seguinte o que ainda não foi feito no dia selecionado")}
+        ${btn("rebalance-week", `🔄 Redistribuir pendentes da semana (${weekPending})`, weekPending > 0, "Equilibra o tempo planejado entre os dias restantes da semana")}
+        ${S.planUndo?.length ? btn("undo-routine", `↶ Desfazer último ajuste (${S.planUndo.length})`, true, "Devolve as atividades às datas anteriores ao último ajuste rápido") : ""}
+      </div>
+    </section>`;
+  }
+
   function plannedTrails(S) {
     const firstDay = new Map();
     if (S.studyAccount) {
@@ -311,6 +400,7 @@
         <div class="qb-plan-kpi"><b>${hours(usedMinutes)}</b><small>tempo registrado${outstanding ? ` · ${outstanding} em atraso` : ""}</small></div>
       </div>
       ${window.QBInsights ? window.QBInsights.compact(S, S.planSelectedDay) : ""}
+      ${routineAutonomyPanel(S, today, days)}
       <section class="qb-week-calendar" aria-label="Calendário de estudos da semana"><div class="qb-calendar-scroll"><div class="qb-week-grid">${days.map(d => dayColumn(S, d, today, due)).join("")}</div></div></section>
       ${backlog.length ? `<details class="qb-plan-overdue"><summary><strong>${backlog.length} atividades pendentes de semanas anteriores</strong><span>Abra para reprogramar ou concluir</span></summary><div class="qb-plan-overdue-list">${backlog.map(t => `<div><div><strong>${esc(t.titulo)}</strong><small>${short(t.data)} · ${esc(KINDS[t.tipo] || "Estudo")}${t.materia ? ` · ${esc(t.materia)}` : ""}</small></div><button type="button" class="btn ghost small" data-plan-action="move" data-plan-id="${esc(t.id)}">Mover para ${short(S.planSelectedDay)}</button></div>`).join("")}</div></details>` : ""}
       ${consolidatedScheduleEditor(S, today, days)}
@@ -406,6 +496,11 @@
       callbacks.toast?.(`Objetivo movido para ${short(targetDate)}.`);
     }));
 
+    document.querySelector("[data-plan-pull-count]")?.addEventListener("change", event => {
+      S.planPullCount = Number(event.target.value) || 3;
+      rerender();
+    });
+
     document.querySelectorAll("[data-plan-set-date]").forEach(b => b.addEventListener("click", () => {
       const input = document.getElementById("qb-p-date");
       if (input) input.value = b.dataset.planSetDate;
@@ -437,6 +532,28 @@
         S.planPickedIds.clear();
         S.planReprogramOpen = true;
         return rerender();
+      }
+      const ROUTINE = {
+        "pull-next-trail-tasks": () => routinePullNext(S, today, S.planPullCount || 3, "day"),
+        "pull-next-week": () => routinePullNext(S, today, S.planPullCount || 3, "week"),
+        "pull-overdue-today": () => routinePullOverdue(S, today),
+        "push-day-pending": () => routinePushDay(S, S.planSelectedDay),
+        "rebalance-week": () => routineRebalanceWeek(S, today),
+      };
+      if (ROUTINE[act]) {
+        const changed = ROUTINE[act]();
+        if (!changed.length) { callbacks.toast?.("Nada para ajustar com esse comando."); return; }
+        S.planUndo = changed.map(t => getTask(t.id)).filter(Boolean).map(t => ({ ...t }));
+        if (act === "pull-overdue-today") { S.planSelectedDay = today; S.planWeekStart = weekStart(today); }
+        persistMany(changed);
+        callbacks.toast?.(`${changed.length} atividade(s) reorganizada(s). Use “Desfazer último ajuste” se mudar de ideia.`);
+        return;
+      }
+      if (act === "undo-routine") {
+        const previous = (S.planUndo || []).map(t => ({ ...t, atualizadoEm: now }));
+        S.planUndo = null;
+        if (previous.length) { persistMany(previous); callbacks.toast?.("Último ajuste desfeito."); }
+        return;
       }
       if (act === "move-batch-selected" || act === "move-batch-today") {
         const destDate = act === "move-batch-today" ? today : S.planSelectedDay;
@@ -531,5 +648,8 @@
       });
     }, 1000);
   }
-  window.QBPlanner = { render, wire };
+  window.QBPlanner = {
+    render, wire,
+    routine: { pullNext: routinePullNext, pullOverdue: routinePullOverdue, pushDay: routinePushDay, rebalanceWeek: routineRebalanceWeek },
+  };
 })();

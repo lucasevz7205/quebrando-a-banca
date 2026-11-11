@@ -463,11 +463,11 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/bridge.js?v=4"></script>
 <link rel="stylesheet" href="/claude-export/offline-sync.css?v=1">
 <script src="/claude-export/offline-sync.js?v=1"></script>
-<script src="/claude-export/study-cycles.js?v=1"></script>
-<script src="/claude-export/study-cycles-ui.js?v=1"></script>
+<script src="/claude-export/study-cycles.js?v=2"></script>
+<script src="/claude-export/study-cycles-ui.js?v=2"></script>
 <script src="/claude-export/study-batch-ui.js?v=1"></script>
 <link rel="stylesheet" href="/claude-export/study-batch-ui.css?v=1">
-<script src="/claude-export/planner.js?v=5"></script>
+<script src="/claude-export/planner.js?v=6"></script>
 <script src="/claude-export/insights.js?v=3"></script>
 <script src="/claude-export/assistant.js?v=2"></script>
 <script src="/claude-export/strategies.js"></script>
@@ -508,8 +508,8 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/mindmap-studio.js?v=12"></script>
 <link rel="stylesheet" href="/claude-export/omnistudy-ai.css?v=12">
 <link rel="stylesheet" href="/claude-export/omnistudy-cornell.css?v=12">
-<script src="/claude-export/omnistudy-cornell.js?v=12" defer></script>
-<script src="/claude-export/omnistudy-ai.js?v=22" defer></script>
+<script src="/claude-export/omnistudy-cornell.js?v=13" defer></script>
+<script src="/claude-export/omnistudy-ai.js?v=23" defer></script>
 <script>
 (function(){
 const S = {
@@ -525,6 +525,8 @@ const S = {
   pl:[], plLoaded:false, cfgLoaded:false, // planejamento semanal e ciclos privados por concurso
   an:new Map(), mecQ:new Map(), pgModo:'mec', fMecMat:'', mecFoco:'todos', mecOpen:new Set()
 };
+/* expõe o estado já na criação: o OmniStudy/Cornell pode ser aberto do portal radial, antes de qualquer wire() */
+window.S=S; window.QBApp={S,render:(...a)=>render(...a),setView:(...a)=>setView(...a),enqueue:(...a)=>enqueue(...a),toast:(...a)=>toast(...a),porMateria:()=>porMateria()};
 const VIEWS=['portal','cartoes','mapa','simulado','painel','edital','revisao','pegadinhas','conteudo','treinar','caderno','analiseDia','historico','metodo','aprendizagem'];
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -2957,7 +2959,7 @@ function wire(){
   document.querySelectorAll('[data-mastery-practice]').forEach(b=>b.addEventListener('click',()=>treinarNoMapa(b.dataset.masteryPractice)));
   document.querySelectorAll('[data-open-cornell-note]').forEach(b=>b.addEventListener('click',()=>window.QBOmniCornell?.openCornellSheetById(b.dataset.openCornellNote,{S})));
   document.querySelectorAll('[data-material-to-map]').forEach(b=>b.addEventListener('click',()=>window.QBMindMapStudio?.openFromMaterial(b.dataset.materialToMap,{S})));
-  window.S=S; window.QBApp={S,render,setView,enqueue,toast};
+  window.S=S; window.QBApp={S,render,setView,enqueue,toast,porMateria};
   const conf1=document.querySelector('[data-conf="1"]'); if(conf1&&S.round&&S.round.pend&&S.round.pend.focus){ S.round.pend.focus=false; conf1.focus({preventScroll:true}); }
 }
 function novaRodada(cap,capNome,modo,fila){
@@ -3328,6 +3330,8 @@ function init(){
       $('.qb-utility-lab').remove();
       $('#tab-simulado').remove();
     }
+    /* OmniStudy e Cornell passam a usar o espaço e as matérias do concurso desta conta */
+    window.QBOmniStudy?.syncContestContext?.(S);
     if(v==='portal')openPortal(entrySection,false,false);
     else setView(v,false);
     if(account.legacy&&window.QBAssistant)window.QBAssistant.mount(S);

@@ -44,7 +44,8 @@
         <button class="btn" type="submit" ${!S.cfgLoaded || !names.length ? "disabled" : ""}>Salvar rotina de estudo</button>
       </form>` : ""}
       ${cfg ? `<div class="qb-cycle-go"><p><b>Progressão semanal:</b> a primeira semana começa em 80% das horas disponíveis; as seguintes usam 80%, 90% ou 100%, conforme a conclusão dos ciclos anteriores. Revisões automáticas permanecem independentes. ${previous.sessions ? `Na semana anterior: ${previous.percent}% concluídos.` : ""}</p>
-        <button type="button" class="btn" data-cycle-action="generate" ${!activeSubjects.length || !S.plLoaded || !S.edLoaded ? "disabled" : ""}>Gerar ciclos da semana selecionada</button></div>` : ""}
+        <button type="button" class="btn" data-cycle-action="generate" ${!activeSubjects.length || !S.plLoaded || !S.edLoaded ? "disabled" : ""}>Gerar ciclos da semana selecionada</button>
+        ${progress.sessions ? `<button type="button" class="btn ghost" data-cycle-action="regenerate" ${!activeSubjects.length || !S.plLoaded || !S.edLoaded ? "disabled" : ""} title="Arquiva os blocos ainda não feitos desta semana e redistribui conforme a rotina atual, a partir de hoje">Refazer blocos pendentes com a rotina atual</button>` : ""}</div>` : ""}
       ${progress.sessions ? `<div class="qb-cycle-progress"><h4>Progressão por disciplina nesta semana</h4>
         ${Object.entries(progress.bySubject).sort(([a],[b])=>a.localeCompare(b,"pt-BR")).map(([name,stats]) => {
           const pct = stats.planned ? Math.round(stats.completed / stats.planned * 100) : 0;
@@ -92,6 +93,27 @@
         callbacks.toast(plan.tasks.length + " blocos distribuídos em " + plan.subjects + " matérias. Carga: " + Math.round(plan.intensity * 100) + "% da disponibilidade.");
         rerender();
       } catch (err) { callbacks.toast(err?.message || "Não foi possível gerar o ciclo."); }
+    });
+    document.querySelector('[data-cycle-action="regenerate"]')?.addEventListener("click", () => {
+      if (!S.db || !S.plLoaded || !S.edLoaded) return callbacks.toast("Aguarde a agenda e o edital carregarem.");
+      const cfg = getConfig(S);
+      if (!cfg) return callbacks.toast("Salve sua rotina antes de refazer os ciclos.");
+      if (!confirm("Refazer os blocos ainda não feitos desta semana com a rotina atual? Blocos concluídos e o tempo registrado são mantidos; os pendentes ficam arquivados.")) return;
+      try {
+        const today = callbacks.hoje();
+        const start = S.planWeekStart, end = engine().shift(start, 7);
+        const plan = engine().generate({
+          config: cfg, start, edital: [...S.ed.values()], existing: S.pl, today, replacePending: true
+        });
+        const now = new Date().toISOString();
+        const stale = S.pl.filter(t => t.cicloEstudo === true && !t.arquivada && t.data >= start && t.data < end &&
+          t.status !== "concluida" && t.status !== "executando").map(t => ({ ...t, arquivada: true, atualizadoEm: now }));
+        const staleIds = new Set(stale.map(t => t.id));
+        S.pl = [...S.pl.filter(t => !staleIds.has(t.id)), ...stale, ...plan.tasks];
+        for (const task of [...stale, ...plan.tasks]) callbacks.enqueue(() => S.db.doc("planejamento/" + task.id).set(task));
+        callbacks.toast(stale.length + " blocos pendentes arquivados; " + plan.tasks.length + " novos blocos distribuídos.");
+        rerender();
+      } catch (err) { callbacks.toast(err?.message || "Não foi possível refazer o ciclo."); }
     });
   }
   window.QBStudyCycleUI = { render, wire };

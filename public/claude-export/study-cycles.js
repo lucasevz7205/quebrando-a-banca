@@ -64,7 +64,7 @@
     return out;
   }
 
-  function generate({ config, start, edital = [], existing = [], today }) {
+  function generate({ config, start, edital = [], existing = [], today, replacePending = false }) {
     const c = normalize(config);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(start) || weekStart(start) !== start || !Number.isFinite(fromDay(start).getTime()) || day(fromDay(start)) !== start)
       throw new Error("A semana precisa começar no domingo.");
@@ -72,12 +72,17 @@
     const topics = availableSubjects(edital);
     const missing = c.subjects.filter(s => !topics.has(s));
     if (missing.length) throw new Error("Disciplina ausente do edital desta conta: " + missing.join(", "));
-    if (existing.some(t => isCycle(t) && t.data >= start && t.data < shift(start, 7)))
+    const end = shift(start, 7);
+    const inWeek = t => isCycle(t) && t.data >= start && t.data < end;
+    // Refazer: os blocos pendentes da semana são substituídos (o chamador os arquiva);
+    // blocos concluídos ou em execução permanecem e ocupam o tempo do dia.
+    if (replacePending) existing = existing.filter(t => !(inWeek(t) && !finished(t) && t.status !== "executando"));
+    else if (existing.some(inWeek))
       throw new Error("Esta semana já possui ciclos gerados. Edite ou conclua os blocos existentes.");
 
-    const oldCycles = existing.filter(t => isCycle(t) && t.data < start).sort((a, b) =>
+    const oldCycles = existing.filter(t => isCycle(t) && (t.data < start || (replacePending && inWeek(t)))).sort((a, b) =>
       a.data.localeCompare(b.data) || Number(a.cicloOrdem || 0) - Number(b.cicloOrdem || 0));
-    const weeks = unique(oldCycles.map(t => t.cicloSemana).filter(Boolean)).sort();
+    const weeks = unique(oldCycles.map(t => t.cicloSemana).filter(w => w && w < start)).sort();
     const prevWeek = weeks[weeks.length - 1];
     const prev = prevWeek ? weekProgress(existing, prevWeek) : null;
     // Aumenta gradualmente a ocupação da agenda, sem exceder as horas declaradas.
@@ -91,9 +96,11 @@
     let cursor = oldCycles.length % c.subjects.length;
     let order = oldCycles.length;
     const createdAt = new Date().toISOString();
+    const runTag = replacePending ? "r" + Date.now().toString(36) + "-" : "";
     const result = [];
     for (let i = 0; i < 7; i++) {
       const date = shift(start, i);
+      if (replacePending && today && date < today) continue; // não replaneja dias que já passaram
       const busy = existing.filter(t => !t.arquivada && t.data === date).reduce((n, t) => n + taskMinutes(t), 0);
       let remaining = Math.max(0, Math.round(c.dayMinutes[i] * intensity) - busy);
       let count = 0;
@@ -107,7 +114,7 @@
         nextTopic.set(subject, index + 1);
         cursor++; order++; count++;
         result.push({
-          id: "ciclo-" + start + "-" + String(order).padStart(4, "0"),
+          id: "ciclo-" + start + "-" + runTag + String(order).padStart(4, "0"),
           data: date, titulo: "Ciclo: " + String(topic.titulo || subject).slice(0, 140),
           materia: subject, tipo: "estudo", minutos: allocated, horario: "",
           topico: String(topic.id), capitulo: topic.caps?.[0] || "",

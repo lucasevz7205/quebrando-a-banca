@@ -23,9 +23,9 @@ const PRECACHE_URLS = [
   "/claude-export/radial-dashboard.js?v=2",
   "/claude-export/axon-shell.js?v=1",
   "/claude-export/offline-sync.js?v=1",
-  "/claude-export/omnistudy-cornell.js?v=12",
+  "/claude-export/omnistudy-cornell.js?v=13",
   "/claude-export/mindmap-studio.js?v=12",
-  "/claude-export/omnistudy-ai.js?v=22"
+  "/claude-export/omnistudy-ai.js?v=23"
 ];
 
 self.addEventListener("install", event => {

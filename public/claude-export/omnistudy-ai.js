@@ -250,9 +250,9 @@
     },
   };
 
-  function loadState() {
+  function loadState(key) {
     try {
-      const raw = global.localStorage && global.localStorage.getItem(STORAGE_KEY);
+      const raw = global.localStorage && global.localStorage.getItem(key || storageKey);
       if (!raw) return JSON.parse(JSON.stringify(defaultState));
       const parsed = JSON.parse(raw);
       return Object.assign({}, defaultState, parsed, {
@@ -264,19 +264,84 @@
     }
   }
 
-  const state = loadState();
+  let storageKey = STORAGE_KEY;
+  const state = loadState(STORAGE_KEY);
 
   function saveState() {
     try {
       if (global.localStorage) {
-        global.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        global.localStorage.setItem(storageKey, JSON.stringify(state));
       }
     } catch (_e) {}
   }
 
+  const slugKey = value =>
+    String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 80) || "conta";
+
+  /* Estado inicial de um candidato: sem folhas, cartões ou exemplos do concurso ARR. */
+  function candidateDefaultState(S) {
+    const base = JSON.parse(JSON.stringify(defaultState));
+    const name = String(S?.studyAccountName || "Seu concurso");
+    base.subject = name;
+    base.messages = [
+      {
+        id: "welcome-1",
+        role: "model",
+        text:
+          "Olá! Sou o seu **Tutor Socrático OmniStudy IA** do Quebrando a Banca.\n\nVou guiar seu raciocínio sobre as matérias de **" +
+          name +
+          "**, desarmar pegadinhas da banca e consolidar sua retenção ativa.\n\nQual tópico do seu edital vamos estudar agora?",
+        timestamp: "Agora",
+      },
+    ];
+    base.feynman = { topic: "", targetAudience: defaultState.feynman.targetAudience, explanation: "", evaluation: null };
+    base.cornellNotes = [];
+    base.cornellNotebooks = [];
+    base.selectedCornellId = null;
+    base.selectedNotebookId = "all";
+    base.decks = [{ id: "deck-seed-1", title: "Meus flashcards · " + name, cards: [] }];
+    base.cardIndex = 0;
+    return base;
+  }
+
+  /* Cada concurso tem o seu próprio OmniStudy/Cornell neste navegador.
+   * A conta legada (ARR) continua na chave original, sem perda de dados. */
+  function syncContestContext(S) {
+    if (!S || !S.studyAccount) return storageKey;
+    const nextKey = STORAGE_KEY + "__" + slugKey(S.studyAccountName || S.accountId);
+    if (nextKey === storageKey) return storageKey;
+    let next;
+    try {
+      const raw = global.localStorage && global.localStorage.getItem(nextKey);
+      next = raw ? loadState(nextKey) : candidateDefaultState(S);
+    } catch (_e) {
+      next = candidateDefaultState(S);
+    }
+    const keepPomodoro = state.pomodoro;
+    for (const k of Object.keys(state)) delete state[k];
+    Object.assign(state, next, { pomodoro: Object.assign({}, next.pomodoro, { isActive: keepPomodoro?.isActive || false }) });
+    storageKey = nextKey;
+    saveState();
+    if (typeof document !== "undefined" && document.getElementById("omni-drawer-backdrop")?.classList.contains("open")) {
+      renderStudioTabs();
+      renderStudioBody();
+    }
+    return storageKey;
+  }
+
+  function appState() {
+    return global.QBApp?.S || global.S || null;
+  }
+
   function detectActiveSubject() {
     try {
-      const S = global.S;
+      const S = appState();
       if (S && S.edital && Array.isArray(S.edital.materias)) {
         for (const m of S.edital.materias) {
           for (const t of m.topicos || []) {
@@ -460,6 +525,7 @@
   }
 
   function openStudio(tab) {
+    syncContestContext(appState());
     if (tab) state.activeTab = tab;
     const detected = detectActiveSubject();
     if (detected) state.subject = detected;
@@ -738,7 +804,7 @@
 
     if (state.activeTab === "cornell") {
       if (global.QBOmniCornell?.render) {
-        global.QBOmniCornell.render({ state, body, saveState, callAI: callOmniStudyBackend });
+        global.QBOmniCornell.render({ state, body, saveState, callAI: callOmniStudyBackend, S: appState() });
       } else {
         body.innerHTML = '<p role="alert">Editor Cornell indisponível. Recarregue a página para atualizar os recursos.</p>';
       }
@@ -1113,5 +1179,9 @@
     closeStudio,
     togglePomodoro,
     callOmniStudyBackend,
+    syncContestContext,
+    get storageKey() {
+      return storageKey;
+    },
   };
 })(typeof window !== "undefined" ? window : globalThis);
