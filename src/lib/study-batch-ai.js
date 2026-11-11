@@ -173,6 +173,21 @@ export const generateStudyTopicAssets = createServerFn({ method: "POST" })
       topico: topic.id, cap, capNome: topic.titulo, ordem: (+topic.ordem || 0) * 100 + index + 1,
       origem: "Autoral original · geração assistida por IA", ref, statusEditorial: "aguardando-revisao-humana",
     })).filter(q => !existing.has(q.id));
+    // Newly imported syllabus topics may not yet have a question chapter; attach one first.
+    if (!(topic.caps || []).length) {
+      await writeDocument(storage, { path: "edital/" + topic.id, operation: "update", value: { caps: [cap] } });
+    }
+    // A direct map-node link exists only when the generated node id really exists.
+    const mapNodeIds = new Set();
+    const mapNodes = new Map();
+    const visit = node => { if (!node) return; if (node.id) { mapNodeIds.add(node.id); mapNodes.set(node.id, node); } for (const child of node.f || []) visit(child); };
+    for (const ramo of nextRevision.mapa?.ramos || []) visit(ramo);
+    for (const question of numbered) {
+      if (!mapNodeIds.has(question.mapaNoId)) { question.mapaNoId = ""; continue; }
+      const node = mapNodes.get(question.mapaNoId);
+      node.x = node.x || {};
+      node.x.questaoIds = [...new Set([...(node.x.questaoIds || []), question.id])];
+    }
     await writeDocument(storage, { path: "revisao/" + topic.id, operation: "set", value: nextRevision });
     // Distinct stable IDs make failed/retried batches resumable without duplicating questions.
     for (let i = 0; i < numbered.length; i += 4) {
