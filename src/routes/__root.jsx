@@ -11,13 +11,19 @@ export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Base44 App" },
-      { name: "description", content: "A full-stack Base44 app built with TanStack Start." },
+      { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
+      { title: "Quebrando a Banca · AXON" },
+      { name: "description", content: "Ambiente de estudo ativo, mapas mentais 3D AXON e treino Cebraspe com Modo Academia offline-first." },
+      { name: "theme-color", content: "#0E0E10" },
+      { name: "apple-mobile-web-app-capable", content: "yes" },
+      { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
+      { name: "apple-mobile-web-app-title", content: "Quebrando a Banca" },
     ],
     // No icon link: the platform adds the app's logo when serving.
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "manifest", href: "/manifest.webmanifest" },
+      { rel: "apple-touch-icon", href: "/qb-icon.svg" },
     ],
   }),
   errorComponent: DefaultCatchBoundary,
