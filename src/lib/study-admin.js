@@ -80,7 +80,12 @@ export const bindReservedStudyAccountForAdmin = createServerFn({method:"POST"})
       if(oldUser&&oldUser.id!==candidate.id)throw new Error("Este projeto já pertence a outro usuário cadastrado.");
       const existing=await entities.StudyAccount.filter({user_id:candidate.id},"created_date",1000,0);
       if(existing.some(row=>row.id!==account.id&&row.active))throw new Error("O candidato já possui um projeto de estudo ativo.");
-      if(existing.some(row=>row.id!==account.id&&row.exam_name===account.exam_name))throw new Error("O login já possui um projeto com este nome.");
+      if(existing.some(row=>row.id!==account.id&&row.exam_name===account.exam_name&&!row.access_pending))throw new Error("O login já possui um projeto com este nome.");
+      // Se o candidato pediu o mesmo concurso no onboarding, encerra o pedido
+      // redundante sem copiar respostas nem vincular seu conteúdo ao projeto reservado.
+      for(const pending of existing.filter(row=>row.id!==account.id&&row.access_pending&&row.exam_name===account.exam_name)) {
+        await entities.StudyAccount.update(pending.id,{access_pending:false});
+      }
       await entities.StudyAccount.update(account.id,{user_id:candidate.id,access_pending:false});
       return {id:account.id,userId:candidate.id};
     });
@@ -93,6 +98,8 @@ export const setStudyAccountActiveForAdmin = createServerFn({method:"POST"})
     const entities=service(context);
     const account=await getAccount(entities,data.accountId);
     if(data.active) {
+      const candidate=await entities.User.get(account.user_id).catch(()=>null);
+      if(!candidate||candidate.role!=="user")throw new Error("Associe um login real de candidato antes de ativar o projeto.");
       const materials=await materialReady(entities,account.id);
       if(!canActivateStudyAccount(materials)) {
         throw new Error("Carregue pelo menos um tópico de edital e uma questão válida antes de ativar.");
