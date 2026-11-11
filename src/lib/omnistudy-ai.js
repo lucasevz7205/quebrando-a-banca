@@ -382,9 +382,9 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
         materia: data.subject,
       });
       const prompt = [
-        "Você é um arquiteto especialista em Mapas Mentais conceituais de alta fidelidade (referência: modelo SimpleMind) para preparação de alto nível em concursos públicos.",
+        "Você é um arquiteto especialista em Mapas Mentais conceituais de alta fidelidade e estrutura irradiante (método AXON) para preparação de alto nível em concursos públicos.",
         "Construa uma árvore de Mapa Mental fiel ao conteúdo dos subsídios informados (folha Cornell / notas / texto-fonte).",
-        "DIRETRIZES FUNDAMENTAIS DO MÉTODO SIMPLEMIND:",
+        "DIRETRIZES FUNDAMENTAIS DO MÉTODO CONCEITUAL IRRADIANTE (AXON):",
         "1. FIDELIDADE CONCEITUAL: O centro (`centro`) é o assunto principal. Os ramos principais (`ramos`) representam os CONCEITOS NUCLEARES do assunto (ex: 'Conceito e Natureza', 'Requisitos de Validade', 'Espécies e Classificação', 'Regras Gerais', 'Exceções e Vedações Taxativas', 'Prazos e Quóruns', 'Extinção e Recursos'). Extraia os conceitos reais presentes no texto, nunca rótulos genéricos como 'Pista 1' ou 'Subtópico A'.",
         "2. HIERARQUIA E APROFUNDAMENTO: A partir de cada conceito principal (1º nível), desdobre subtópicos (`f`) de acordo com a necessidade de aprofundamento (2º nível e microtópicos filhos).",
         "3. RÓTULOS SUPERFICIAIS (`rotulo`): Todo nó (em TODOS os níveis da hierarquia) DEVE ter um `rotulo` conciso (1 a 4 palavras) que explica SUPERFICIALMENTE o conceito à primeira vista (ex: 'Regra Geral', 'Exceção Taxativa', 'Quórum 3/5', 'Prazo 5 Sessões', 'Competência Exclusiva', 'Vedação Material', 'Efeito Ex Tunc', 'Alerta de Prova', 'Condição de Validade'). O rótulo é um marcador que permite bater o olho e entender a função do conceito imediatamente.",

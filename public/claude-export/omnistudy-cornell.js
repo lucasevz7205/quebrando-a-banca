@@ -656,7 +656,7 @@
     }
     return {
       centro: title,
-      autor: "Baseado na folha Cornell · Estilo SimpleMind",
+      autor: "Baseado na folha Cornell · Estrutura Conceitual AXON",
       ramos,
       ligacoes: [[ramos[0].id, ramos[ramos.length - 1].id, "Conceito Central → Síntese"]],
       origemCornell: { noteId: note?.id || "", title },

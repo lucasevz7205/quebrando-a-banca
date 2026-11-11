@@ -372,7 +372,7 @@ test("Folha Dividida Cornell, Cadernos por Matéria no Dashboard Esquerdo e Arte
   assert.match(shellCode, /data-material-to-map/);
 });
 
-test("Geração e estruturação de Mapa Mental fiel aos subsídios no padrão SimpleMind com rótulos e aprofundamento", () => {
+test("Geração e estruturação de Mapa Mental fiel aos subsídios no padrão Conceitual Irradiante com rótulos e aprofundamento", () => {
   const { studio, S } = createSandbox();
 
   // Adiciona questão no banco S.q para testar associação remissiva

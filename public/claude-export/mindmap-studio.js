@@ -424,7 +424,7 @@
       const rotuloRamo = deduceConceptLabel(cleanBranchTitle, concept.blockText, idx === 0 ? "Conceito Central" : "Regra Geral");
       const mainExp = (concept.lines[0] || concept.blockText || cleanBranchTitle).replace(/^[\s•*\-–—\d.)]+/, "").trim();
 
-      // Subtópicos para aprofundamento (estilo SimpleMind)
+      // Subtópicos para aprofundamento (modo Conceitual Irradiante)
       const rawSub = concept.subItems.length
         ? concept.subItems
         : concept.lines.slice(1).map(l => l.replace(/^[\s•*\-–—\d.)]+/, "").trim()).filter(Boolean);
@@ -435,7 +435,7 @@
         const subBody = parts.length > 1 ? parts.slice(1).join(": ") : sub;
         const rotuloSub = deduceConceptLabel(subTitle, subBody, "Requisito");
 
-        // Possível sub-subtópico para aprofundamento (nível 3 SimpleMind)
+        // Possível sub-subtópico para aprofundamento (nível 3)
         const deepParts = subBody.split(/;\s+/).filter(Boolean);
         const deepChildren = deepParts.length > 1
           ? deepParts.slice(1, 3).map((dp, dpIdx) => ({
@@ -531,7 +531,7 @@
     const normalized = normalizeMap(
       {
         centro: subject ? `${title} · ${subject}` : title,
-        autor: `Baseado no Caderno Cornell ("${title}") · Estilo SimpleMind`,
+        autor: `Baseado no Caderno Cornell ("${title}") · Estrutura Conceitual AXON`,
         ramos,
         ligacoes,
         origemCornell: {
@@ -757,7 +757,7 @@
     const normalized = normalizeMap(
       {
         centro: materia ? `${title} · ${materia}` : title,
-        autor: `Subsídio: Material de Estudo "${material.titulo || title}" · Estilo SimpleMind`,
+        autor: `Subsídio: Material de Estudo "${material.titulo || title}" · Estrutura Conceitual AXON`,
         ramos,
         ligacoes: [[ramos[0].id, ramos[ramos.length - 1].id, "Eixo do Material → Síntese"]],
         origemMaterial: {
@@ -1362,7 +1362,7 @@
                   </select>
                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-cornell-replace">Substituir Mapa pela Base Cornell</button>
                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-cornell-merge">＋ Mesclar Pistas Cornell</button>
-                  <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:#0284c7;color:#fff" id="qb-mm-ai-rebuild-cornell">✨ Reestruturar com IA (SimpleMind)</button>`
+                  <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:#0284c7;color:#fff" id="qb-mm-ai-rebuild-cornell">✨ Reestruturar com IA (Estrutura Conceitual AXON)</button>`
                 : `<span style="font-size:12px;color:#94a3b8">Nenhuma folha salva ainda. Abra o botão <b>⚡ OmniStudy IA → Caderno Cornell</b> para criar sua base.</span>`
             }
             ${
@@ -1391,7 +1391,7 @@
                   </select>
                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-material-replace">Criar Mapa a partir deste Material</button>
                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-material-merge">＋ Mesclar Seções do Material</button>
-                  <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:#059669;color:#fff" id="qb-mm-ai-rebuild-material">✨ Reestruturar com IA (SimpleMind)</button>`
+                  <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:#059669;color:#fff" id="qb-mm-ai-rebuild-material">✨ Reestruturar com IA (Estrutura Conceitual AXON)</button>`
                 : `<span style="font-size:12px;color:#94a3b8">Transforme suas folhas Cornell em Artefatos de Material ou adicione materiais na aba <b>Materiais</b> para usá-los como subsídio aqui.</span>`
             }
           </div>
@@ -1720,7 +1720,7 @@
       const noteId = document.getElementById("qb-mm-cornell-select")?.value;
       const note = loadSavedCornellNotes().find(n => n.id === noteId) || loadSavedCornellNotes()[0];
       if (!note) return;
-      studioState.statusMsg = `Reestruturando mapa com IA no estilo SimpleMind a partir de "${note.title}"...`;
+      studioState.statusMsg = `Reestruturando mapa com IA no modo Conceitual Irradiante AXON a partir de "${note.title}"...`;
       rerender();
       try {
         const resp = await fetch("/api/omnistudy-ai", {
@@ -1743,7 +1743,7 @@
           : cornellToMindMap(note, { topicId, topicTitle: note.title, S });
         associateQuestionsToNode(mapDraft, S, topicId, note.subject);
         saveMapToEnvironment(S, topicId, mapDraft);
-        studioState.statusMsg = `Mapa mental reestruturado com sucesso via IA (estilo SimpleMind) a partir de "${note.title}"!`;
+        studioState.statusMsg = `Mapa mental reestruturado com sucesso via IA (modo Conceitual AXON) a partir de "${note.title}"!`;
       } catch (err) {
         const fallback = cornellToMindMap(note, { topicId, topicTitle: note.title, S });
         saveMapToEnvironment(S, topicId, fallback);
@@ -1785,7 +1785,7 @@
       const mats = loadStudyMaterials(S);
       const mat = mats.find(m => m.id === matId) || mats[0];
       if (!mat) return;
-      studioState.statusMsg = `Reestruturando mapa com IA no estilo SimpleMind a partir de "${mat.titulo || mat.id}"...`;
+      studioState.statusMsg = `Reestruturando mapa com IA no modo Conceitual Irradiante AXON a partir de "${mat.titulo || mat.id}"...`;
       rerender();
       try {
         const resp = await fetch("/api/omnistudy-ai", {
@@ -1808,7 +1808,7 @@
           : materialToMindMap(mat, { topicId, topicTitle: mat.titulo, materia: mat.materia, S });
         associateQuestionsToNode(mapDraft, S, topicId, mat.materia);
         saveMapToEnvironment(S, topicId, mapDraft);
-        studioState.statusMsg = `Mapa mental estruturado com IA (estilo SimpleMind) a partir do material "${mat.titulo || mat.id}"!`;
+        studioState.statusMsg = `Mapa mental estruturado com IA (modo Conceitual AXON) a partir do material "${mat.titulo || mat.id}"!`;
       } catch (err) {
         const fallback = materialToMindMap(mat, { topicId, topicTitle: mat.titulo, materia: mat.materia, S });
         saveMapToEnvironment(S, topicId, fallback);
