@@ -1128,7 +1128,8 @@
     if (typeof document === "undefined" || !document.body) return;
     if (document.getElementById("omni-drawer-backdrop")) return;
 
-    const topActions = document.querySelector(".top-actions");
+    // Cabeçalho AXON atual usa .qb-header-utilities; .top-actions fica como fallback legado.
+    const topActions = document.querySelector(".qb-header-utilities, .top-actions");
     if (topActions) {
       const pomoPill = document.createElement("button");
       pomoPill.type = "button";
@@ -1165,7 +1166,7 @@
           <div class="omni-drawer-title">
             <span class="omni-badge">OmniStudy AI 2.0</span>
             <div>
-              <div style="font-size:15px;font-weight:800;color:#fff">Estúdio de Aprendizagem Ativa · Câmara ARR</div>
+              <div style="font-size:15px;font-weight:800;color:#fff">Estúdio de Aprendizagem Ativa · Quebrando a Banca</div>
               <div style="font-size:11px;color:#94a3b8">Tutor Socrático • Técnica Feynman • Caderno Cornell • SRS 3D • Web Audio Procedural</div>
             </div>
           </div>
