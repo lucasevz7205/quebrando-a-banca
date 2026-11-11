@@ -1285,7 +1285,7 @@ function viewItem(){
 function viewFim(){
   const rd=S.round, liq=rd.certos-rd.errados, resp=rd.certos+rd.errados+rd.brancos;
   const foram=rd.itens.filter(i=>i.marcada!==i.gabarito||i.conf===1);
-  const excesso=rd.itens.filter(i=>i.marcada!=='B'&&i.marcada!==i.gabarito&&i.conf===3).length;
+  const excesso=rd.itens.filter(i=>i.marcada!==brancoDe(S.q.get(i.qid))&&i.marcada!==i.gabarito&&i.conf===3).length;
   const mix=multiCap(rd.cap);
   const lista=foram.length?`<div class="tbl-wrap"><table><thead><tr><th>Item</th>${mix?'<th>Cap.</th>':''}<th>Tema</th><th>Você marcou</th><th>Gabarito</th><th>Confiança</th></tr></thead><tbody>
     ${foram.map(i=>{const q=S.q.get(i.qid)||{};return `<tr><td class="mono">${String(q.ordem||'').padStart(2,'0')}</td>${mix?`<td class="mono">${esc(q.cap||'')}</td>`:''}<td>${esc(q.tema||'')}</td><td class="${i.marcada===brancoDe(q)?'':(i.marcada===i.gabarito?'pos':'neg')}">${esc(rotuloResposta(q,i.marcada))}</td><td>${esc(rotuloResposta(q,i.gabarito))}</td><td>${i.conf?CONF[i.conf]:'–'}</td></tr>`}).join('')}
@@ -3025,7 +3025,7 @@ function rodadaDoc(rd){
 }
 /* superaprendizagem: erro, branco ou chute exigem origem marcada e justificativa escrita antes de seguir */
 const JUST_MIN=1;   // sem mínimo de caracteres (pedido do Lucas, 29/10/2026); basta escrever algo
-function exigeJust(a){return !!a&&!a.rep&&(a.marcada==='B'||!a.acertou||a.conf===1)}
+function exigeJust(a,q=null){const item=q||S.q.get(S.round?.fila?.[S.round?.idx]);return !!a&&!a.rep&&(a.marcada===brancoDe(item)||!a.acertou||a.conf===1)}
 function justOk(rd,qid){const r=S.r.get(qid)||{};return !!r.origem&&(rd.just||'').trim().length>=JUST_MIN}
 function justMsg(n,origem){const f=[];if(!origem)f.push('marque de onde veio o erro');if(n<JUST_MIN)f.push('escreva a justificativa');return f.length?'Falta: '+f.join(' e ')+'.':'Pronto. A justificativa vai para o caderno de erros.'}
 function next(){
