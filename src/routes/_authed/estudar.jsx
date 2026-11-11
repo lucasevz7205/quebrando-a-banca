@@ -61,11 +61,37 @@ function StudyScreen({ account }) {
   const [ready, setReady] = useState(false);
   const [frameVersion, setFrameVersion] = useState(0);
   const [error, setError] = useState("");
+  const [updateAvailable, setUpdateAvailable] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && "serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").catch(() => {});
-    }
+    if (typeof window === "undefined" || !("serviceWorker" in navigator)) return;
+    let disposed = false;
+    let registration = null;
+    // Nunca interromper uma resposta em andamento: oferecer atualização manual.
+    // O atalho PWA permanece sempre em /estudar, sem URL de versão.
+    const existingController = Boolean(navigator.serviceWorker.controller);
+    const onControllerChange = () => {
+      if (!disposed && existingController) setUpdateAvailable(true);
+    };
+    const checkForUpdate = () => {
+      if (document.visibilityState === "visible") registration?.update().catch(() => {});
+    };
+    navigator.serviceWorker.addEventListener("controllerchange", onControllerChange);
+    navigator.serviceWorker.register("/sw.js", { updateViaCache: "none" })
+      .then(reg => {
+        if (disposed) return;
+        registration = reg;
+        checkForUpdate();
+      })
+      .catch(() => {});
+    document.addEventListener("visibilitychange", checkForUpdate);
+    window.addEventListener("focus", checkForUpdate);
+    return () => {
+      disposed = true;
+      navigator.serviceWorker.removeEventListener("controllerchange", onControllerChange);
+      document.removeEventListener("visibilitychange", checkForUpdate);
+      window.removeEventListener("focus", checkForUpdate);
+    };
   }, []);
 
   useEffect(() => {
@@ -129,6 +155,22 @@ function StudyScreen({ account }) {
           <span><strong>{account.name}</strong> · Visualização administrativa · Somente leitura</span>
           <Link to="/contas" className="font-medium underline">Voltar a Contas</Link>
         </header>
+      )}
+      {updateAvailable && (
+        <div role="status" style={{
+          position: "fixed", zIndex: 110, bottom: 16, right: 16,
+          maxWidth: "calc(100vw - 32px)", border: "1px solid #7ba7d4",
+          borderRadius: 10, padding: 12, background: "#15243b",
+          color: "#f4f8ff", boxShadow: "0 5px 24px #0006",
+          fontFamily: "system-ui, sans-serif", fontSize: 13
+        }}>
+          Nova versão publicada. Conclua sua questão antes de atualizar.
+          <button type="button" onClick={() => window.location.reload()}
+            style={{ marginLeft: 12, fontWeight: 700, textDecoration: "underline" }}>Atualizar app</button>
+          <button type="button" onClick={() => setUpdateAvailable(false)}
+            aria-label="Atualizar depois"
+            style={{ marginLeft: 10, textDecoration: "underline" }}>Depois</button>
+        </div>
       )}
       {error && (
         <div role="alert" style={{
