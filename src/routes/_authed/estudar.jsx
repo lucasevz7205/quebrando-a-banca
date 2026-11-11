@@ -9,7 +9,7 @@ import { useAuth } from "@/lib/AuthContext";
 import { accessStudyAccount, getStudyAccount, getStudyPreview, listStudyPreview } from "@/lib/study-account";
 import { listDocuments, writeDocument } from "@/lib/study-documents";
 import { correctFlashcardWithAI } from "@/lib/flashcard-ai";
-import { invokeOmniStudyAI } from "@/lib/omnistudy-ai";
+import { invokeOmniStudyAI, getArchitectAIStatus } from "@/lib/omnistudy-ai";
 import { generateStudyTopicAssets } from "@/lib/study-batch-ai";
 
 const FLAG = "__qb44_bridge_v1__";
@@ -118,6 +118,7 @@ function StudyScreen({ account }) {
         else if (msg.action === "assistantLLM" && legacy) result = await askAssistantLLM(msg.args || {},
           delta => frame.postMessage({ flag: FLAG, streamOf: msg.id, delta }, replyOrigin));
         else if (msg.action === "correctFlashcard" && !preview) result = await correctFlashcardWithAI({data:msg.args||{}});
+        else if (msg.action === "architectProviderStatus" && !preview) result = await getArchitectAIStatus();
         else if (msg.action === "omniStudyAI" && !preview) result = await invokeOmniStudyAI({data:msg.args||{}});
         else if (msg.action === "generateStudyTopic" && !preview && !legacy) result = await generateStudyTopicAssets({ data: msg.args || {} });
         else if (msg.action === "list" || msg.action === "write") {
@@ -128,7 +129,7 @@ function StudyScreen({ account }) {
         frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: true, value: result }, replyOrigin);
       } catch (err) {
         frame.postMessage({ flag: FLAG, responseTo: msg.id, ok: false, error: err?.message || "Erro de leitura." }, replyOrigin);
-        if (msg.action !== "assistantLLM" && msg.action !== "correctFlashcard" && msg.action !== "omniStudyAI") setError(err?.message || "Erro de conexão com os dados.");
+        if (msg.action !== "assistantLLM" && msg.action !== "correctFlashcard" && msg.action !== "omniStudyAI" && msg.action !== "architectProviderStatus") setError(err?.message || "Erro de conexão com os dados.");
       }
     }
     window.addEventListener("message", receive);
