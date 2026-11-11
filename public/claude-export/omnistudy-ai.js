@@ -146,7 +146,7 @@
      ======================================================================== */
   const defaultState = {
     activeTab: "tutor",
-    subject: "Processo Legislativo & Regimento Interno (CD - ARR)",
+    subject: "Assunto do seu edital",
     tutorMode: "socratic",
     aiProvider: "base44",
     messages: [
@@ -266,6 +266,10 @@
   }
 
   const state = loadState();
+  // Migração apenas da saudação de demonstração: conserva conversas e folhas salvas.
+  const intro=state.messages?.find(m=>m.id==="welcome-1");
+  if(intro && /Tutor Socrático OmniStudy IA/.test(intro.text||""))
+    intro.text=defaultState.messages[0].text;
 
   function saveState() {
     try {
@@ -560,7 +564,7 @@
                 ${[
                   ["socratic", "Socrático"],
                   ["simple", "Feynman"],
-                  ["exam", "Banca Cebraspe"],
+                  ["exam", "Modo Examinador"],
                   ["challenge", "Arguição Oral"],
                 ]
                   .map(
@@ -585,8 +589,8 @@
           </div>
 
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin:10px 0">
-            <button type="button" class="omni-btn omni-btn-ghost" data-quick-prompt="Me faça 3 perguntas provocativas estilo Cebraspe sobre ${escHtml(state.subject)} para testar minha retenção ativa.">🎯 Testar Retenção</button>
-            <button type="button" class="omni-btn omni-btn-ghost" data-quick-prompt="Quais são as principais pegadinhas (F1 a F10) que o Cebraspe aplica em ${escHtml(state.subject)}?">⚠️ Armadilhas da Banca</button>
+            <button type="button" class="omni-btn omni-btn-ghost" data-quick-prompt="Me faça 3 perguntas desafiadoras de concurso sobre ${escHtml(state.subject)} para testar minha retenção ativa.">🎯 Testar Retenção</button>
+            <button type="button" class="omni-btn omni-btn-ghost" data-quick-prompt="Quais são as principais armadilhas e exceções que a minha banca pode explorar em ${escHtml(state.subject)}?">⚠️ Armadilhas da Banca</button>
             <button type="button" class="omni-btn omni-btn-ghost" data-quick-prompt="Crie uma analogia estilo Feynman inesquecível para o conceito mais difícil de ${escHtml(state.subject)}.">💡 Analogia Feynman</button>
             <button type="button" id="omni-voice-btn" class="omni-btn omni-btn-ghost" title="Responder por voz (Arguição Oral)">🎙 Arguição por Voz</button>
           </div>
