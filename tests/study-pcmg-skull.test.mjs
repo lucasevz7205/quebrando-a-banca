@@ -42,7 +42,7 @@ test("gabaritos e formatos incompatíveis são rejeitados, nunca convertidos sil
  assert.throws(()=>validateStudyContentBatch("questoes",[q]),/C\/E/);
  assert.throws(()=>auditStudyCatalog([{...q,gabarito:"C"}, {...q,gabarito:"E"}],"questoes"),/Identificador repetido/);
  assert.throws(()=>auditStudyCatalog([{id:"x",gabarito:"C"}],"questoes"),/sem enunciado/);
- assert.throws(()=>decodeStudyCatalog({questoes:{x:{}}},"questoes"),/não reconhecido/);
+ assert.throws(()=>decodeStudyCatalog({questoes:{x:{}}},"questoes"),/esperado uma lista/);
 });
 test("vínculo usa o ID real de login e não confunde apelido com conta autenticada",()=>{
  assert.match(server,/const candidate=await entities\.User\.get\(data\.userId\)/);
