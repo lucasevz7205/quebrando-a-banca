@@ -110,7 +110,7 @@ test("integração está conectada ao servidor autenticado e usa versão nova pu
  assert.match(shell,/omnistudy-cornell\.js\?v=1/);
  assert.match(shell,/omnistudy-cornell\.css\?v=1/);
  assert.match(shell,/omnistudy-ai\.js\?v=2/);
- assert.match(sw,/qb-static-axon-v3/);
+ assert.match(sw,/qb-static-axon-v6/);
  assert.match(sw,/omnistudy-cornell\.js\?v=1/);
  assert.match(sw,/omnistudy-ai\.js\?v=2/);
 });
