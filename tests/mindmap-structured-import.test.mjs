@@ -131,15 +131,15 @@ test("Markdown com campos em negrito preenche exatamente a lacuna correspondente
  assert.equal(root.f[0].rotulo,"Exceção");
 });
 test("um único ramo estruturado é mantido como um ramo, sem inventar três outros",()=>{
- const src="# Direito\n## Regra Única\n- Princípio: informação suficiente para estudo.";
+ const src="# Direito\n## Regra Única\nInformação suficiente para estudo do ramo único.";
  assert.equal(parseHierarchicalMindMap(src,"Direito","cf"),null);
  const map=parseHierarchicalMindMap(src,"Direito","cf",{force:true});
  assert.equal(map.ramos.length,1);
- assert.equal(flatMindMapNodes(map).length,2);
+ assert.equal(flatMindMapNodes(map).length,1);
  assert.match(server,/data\.structuredInput && !skeleton/);
 });
 test("integração servidor e interface realmente invoca IA antes de salvar o mapa e expõe prévia",()=>{
- assert.match(server,/parseHierarchicalMindMap\(structuredSource, data\.title, data\.topicId\)/);
+ assert.match(server,/parseHierarchicalMindMap\(structuredSource, data\.title, data\.topicId, \{force: data\.structuredInput\}\)/);
  assert.match(server,/enrichHierarchicalMindMap\(skeleton, edits, structuredSource\)/);
  assert.match(server,/IDs imutáveis/);
  assert.match(server,/estruturaPreservada: true/);
