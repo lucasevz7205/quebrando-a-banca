@@ -2,7 +2,7 @@
  * Cacheia apenas recursos estáticos de interface (/claude-export/*, ícone, manifesto).
  * NUNCA armazena respostas de API nem documentos privados de contas no Cache Storage.
  */
-const CACHE_NAME = "qb-static-axon-v8";
+const CACHE_NAME = "qb-static-axon-v9";
 const CACHE_PREFIX = "qb-static-axon-";
 const PRECACHE_URLS = [
   "/manifest.webmanifest",
