@@ -153,6 +153,15 @@ O endereço canônico de produção é **https://quebrando-a-banca-a2c91a3c.base
 
 O Service Worker em `public/sw.js` usa cache offline somente para recursos estáticos, rede primeiro e revalidação online; nunca cachear API, respostas, histórico ou dados privados. O app verifica atualizações do Service Worker quando volta ao primeiro plano e permite atualizar a interface **por escolha do estudante**, para não perder uma questão em andamento. **Não alterar o `start_url` ou o domínio do atalho para lançar versões novas.** A atualização de arquivos do projeto não deve exigir reinstalação do PWA.
 
+## Subagentes e economia de tokens (Claude Code)
+
+Leia `docs/SUBAGENTES.md`. Resumo:
+- o agente principal planeja, especifica, integra e valida;
+- `code-scout` (Haiku) localiza código; `bug-investigator` (Sonnet) acha a causa raiz; `implementer` e `test-writer` (Sonnet) mudam código e testes; `architect-reviewer` (Opus) só para mudança de alto risco;
+- não delegue o que cabe numa operação; delegue só com arquivos, requisitos e comando de teste;
+- valide com `npm run check` (`scripts/check.sh`), sem IA para ler resultado de teste;
+- nunca dois agentes editando o mesmo arquivo ao mesmo tempo: em sequência ou em worktrees separadas.
+
 ## Working Notes
 
 - `npm run dev` runs the TanStack dev server (Vite); server code runs in `workerd`, exactly as in production.
