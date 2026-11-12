@@ -24,10 +24,12 @@ function initialize(){
     const explicit=html.getAttribute("data-theme");
     const theme=explicit==="light"?"light":explicit==="dark"?"dark":preferDark.matches?"dark":"light";
     const item=media[theme];
-    if(video.dataset.qbVideoSrc===item.video)return;
-    video.dataset.qbVideoSrc=item.video;
+    // Mesmo quando o MP4 já está configurado, atualizar o pôster estático.
+    const sameSource=video.dataset.qbVideoSrc===item.video;
     video.poster=item.poster;
     layer.style.backgroundImage="url("+JSON.stringify(item.poster)+")";
+    if(sameSource)return;
+    video.dataset.qbVideoSrc=item.video;
     const hadSource=video.hasAttribute("src");
     if(hadSource){
       video.pause();
