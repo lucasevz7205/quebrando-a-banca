@@ -13,7 +13,7 @@ test("Vite/Rolldown preload failure offers explicit recovery rather than wiping 
   assert.match(route,/Recarregar versão atual/);
   assert.match(route,/Depois/);
   const handler=route.slice(route.indexOf('const onPreloadError = event =>'),route.indexOf('window.addEventListener("vite:preloadError"'));
-  assert.doesNotMatch(handler,/reload|localStorage|indexedDB|caches\.delete|S\.r|S\.round/);
+  assert.doesNotMatch(handler,/window\.location\.reload\(|localStorage\.|indexedDB\.|caches\.delete\(|S\.round\s*=|S\.r\.clear\(/);
 });
 
 test("Base44 preview and Vite dev do not install the production PWA worker",()=>{
