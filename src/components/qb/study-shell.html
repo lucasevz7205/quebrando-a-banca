@@ -526,7 +526,7 @@ const S = {
   round:null, pendingRender:false,
   ed:new Map(), mat:new Map(), pt:new Map(), di:[], edLoaded:false,
   fEvo:'', evoCap:'', evoGrafico:'tempo', evoOrdem:'menor', evoModo:'n', evoPer:'d', evoDe:'', evoAte:'', evoFaixa:'', evoPagina:0,
-  fMat:'', fSt:'', abertos:new Set(), ptsAbertos:new Set(), evocar:true, revelados:new Set(), // Evocar antes de ler ligado por padrão (11/11/2026)
+  fMat:'', fSt:'', abertos:new Set(), ptsAbertos:new Set(), evocar:(()=>{try{return localStorage.getItem('qb-evocar')!=='0'}catch(e){return true}})(), revelados:new Set(), // Evocar antes de ler: ligado por padrão; o estudante pode desligar para navegar (12/11/2026)
   rv:new Map(), cfg:new Map(), cartAbertos:new Set(), mapaFocus:null, mapaFocusCounter:0,
   pg:new Map(), fPgMat:'', fPgTipo:'',
   pl:[], plLoaded:false, cfgLoaded:false, // planejamento semanal e ciclos privados por concurso
@@ -2408,7 +2408,8 @@ function mapa3D(m,t,lig,diagnostico){
         <button type="button" data-map-camera="out" aria-label="Afastar">−</button>
         <button type="button" data-map-camera="front" aria-label="Voltar à vista de frente">Vista de frente</button>
         <button type="button" data-map-camera="reset">Centralizar</button>
-        <button type="button" data-map-tour aria-label="Percorrer o mapa evocando cada conceito">Percorrer o mapa</button>
+        <button type="button" data-map-tour aria-label="Percorrer o mapa conceito por conceito">Percorrer o mapa</button>
+        <button type="button" data-map-evocar aria-pressed="${S.evocar}" title="Ligado: escreva de memória antes de ver a explicação. Desligado: navegação livre, a explicação abre direto.">Evocar: ${S.evocar?'ligado':'desligado'}</button>
       </div></div>
       <div class="qb-map3-branch-bar" role="group" aria-label="Abrir e fechar ramificações do mapa 3D">
         <button type="button" data-map-branch="open">Abrir ramo</button>
@@ -2983,7 +2984,7 @@ function wire(){
   const md=$('#mais-diario'); if(md) md.addEventListener('click',()=>{S.mostrarDiario=!S.mostrarDiario;render(true)});
   const fm=$('#f-mat'); if(fm) fm.addEventListener('change',()=>{S.fMat=fm.value;render(true)});
   const fs=$('#f-st'); if(fs) fs.addEventListener('change',()=>{S.fSt=fs.value;render(true)});
-  const ev=$('#evocar'); if(ev) ev.addEventListener('change',()=>{S.evocar=ev.checked;S.revelados.clear();render(true)});
+  const ev=$('#evocar'); if(ev) ev.addEventListener('change',()=>{S.evocar=ev.checked;try{localStorage.setItem('qb-evocar',S.evocar?'1':'0')}catch(e){}S.revelados.clear();render(true)});
   document.querySelectorAll('details[data-grupo]').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)S.abertos.add(d.dataset.grupo);else S.abertos.delete(d.dataset.grupo)}));
   document.querySelectorAll('[data-status]').forEach(s=>s.addEventListener('change',()=>salvarStatus(s.dataset.status,s.value)));
   document.querySelectorAll('[data-ir-mapa]').forEach(b=>b.addEventListener('click',()=>{S.mapaId=b.dataset.irMapa;S.mapaAb=null;S.mapaFocus=null;S.mapaBack=null;S.revelados.clear();setView('mapa');window.scrollTo({top:0})}));
@@ -2992,11 +2993,21 @@ function wire(){
   document.querySelectorAll('[data-map-card-index]').forEach(b=>b.addEventListener('click',()=>abrirCartaoDoMapa(Number(b.dataset.mapCardIndex))));
   const map3=$('[data-map3]'), mapDetail=map3?.querySelector('[data-map-detail]');
   if(mapDetail){
+    map3.querySelector('[data-map-evocar]')?.addEventListener('click',ev=>{
+      S.evocar=!S.evocar;
+      try{localStorage.setItem('qb-evocar',S.evocar?'1':'0')}catch(e){}
+      ev.currentTarget.setAttribute('aria-pressed',String(S.evocar));
+      ev.currentTarget.textContent='Evocar: '+(S.evocar?'ligado':'desligado');
+      S.revelados.clear();
+      S.mapaRedesenhar?.();
+      toast(S.evocar?'Evocar ligado: escreva de memória antes de ver a explicação.':'Navegação livre: a explicação abre direto.');
+    });
     map3.addEventListener('qb-map-render-node',event=>{
       if(S.view!=='mapa'||event.detail?.topic!==S.mapaId)return;
       const path=event.detail.path, tour=event.detail.tour||null;
       /* Evocar antes de ler no 3D: o conceito pede a resposta de memória antes da explicação (11/11/2026) */
       const desenhar=()=>{
+        S.mapaRedesenhar=desenhar;
         const detail=drawMapDetail?.(path)||'';
         const n=path!=='root'&&noDoMapa3(path);
         if(!S.evocar||!n||!window.QBMapEvocar){mapDetail.innerHTML=detail;return;}
