@@ -1,0 +1,215 @@
+/* QB Administrator | Astrolábio unificado 2026-11-12
+ * Principal, Hoje, Edital, Treinar (matérias e assuntos), Estudo,
+ * Simulado e Desempenho. A camada não altera remissões, dados nem eventos.
+ */
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro {
+  --astro-navy:#0C2744;
+  --astro-stone:#71879A;
+  --astro-bronze:#BDA27D;
+  overflow:visible!important;border:0!important;border-radius:0!important;
+  padding:clamp(8px,1.4vw,17px)!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-stage {
+  isolation:isolate!important;
+  width:min(100%,750px,74dvh)!important;
+  aspect-ratio:1!important;
+  overflow:visible!important;
+  position:relative!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-annulus,
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-annulus > div{
+  display:none!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-astro-disc {
+  position:absolute;inset:0;z-index:0;
+  pointer-events:none;aspect-ratio:1;border-radius:50%;
+  background:url("/claude-export/admin-astrolabe-universal.svg") center/100% 100% no-repeat;
+  filter:drop-shadow(0 8px 22px rgba(0,8,22,.52));
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-stage::before{
+  inset:7%!important;
+  background:radial-gradient(circle,rgba(18,59,96,.23),transparent 72%)!important;
+  filter:blur(18px)!important;z-index:0!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-stage::after{
+  display:none!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-network{
+  z-index:1!important;pointer-events:none;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-network .qb-radial-orbit{
+  opacity:.2!important;stroke:#86A0AE!important;
+  stroke-width:1.1!important;stroke-dasharray:2 12!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-network .qb-radial-link{
+  stroke:#A9A08E!important;stroke-width:1.4!important;opacity:.22!important;
+  filter:none!important;animation:none!important;
+  stroke-dasharray:3 15!important;stroke-dashoffset:0!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-network .qb-radial-sector{
+  stroke:#AD9E8B!important;opacity:.008!important;stroke-width:125!important;
+  pointer-events:stroke!important;cursor:pointer;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-network .qb-radial-sector.is-focused{
+  opacity:.10!important;filter:drop-shadow(0 0 9px #C5AB7E4F)!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-aura{
+  z-index:0!important;inset:30%!important;
+  background:radial-gradient(circle,rgba(51,104,141,.24),transparent 75%)!important;
+  opacity:.5!important;filter:blur(25px)!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-flow,
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-particles{
+  opacity:0!important;pointer-events:none!important;
+}
+/* Ponteiros analógicos duplos, nunca sobre o texto dos módulos. */
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-astro-needles{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  transform:rotate(0deg);
+  transform-origin:50% 50%;
+  transition:transform .62s cubic-bezier(.21,.8,.22,1)!important;
+  filter:drop-shadow(0 2px 7px #020b16AA);
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-astro-needles svg{
+  display:block;width:100%;height:100%;overflow:visible;
+}
+/* Alojamentos seguem a quantidade de opções: 3, 4, 5 ou 6. */
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-astro-seat{
+  position:absolute;z-index:2;
+  width:clamp(86px,21%,160px);aspect-ratio:1;
+  transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle at 43% 32%,rgba(30,62,90,.86),rgba(7,25,44,.91) 72%,#101F30 100%);
+  border:2px solid rgba(173,155,132,.78);
+  box-shadow:0 0 0 6px rgba(10,25,43,.65),0 0 0 8px rgba(117,141,157,.24),
+    inset 0 1px 2px rgba(229,199,148,.25),inset 0 -9px 14px rgba(2,9,21,.63);
+  pointer-events:none;transition:border-color .25s,box-shadow .32s,filter .25s;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-astro-seat::after{
+  content:"";position:absolute;inset:9%;
+  border:1px dashed rgba(159,158,152,.30);border-radius:50%;
+  pointer-events:none;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-astro-seat-active{
+  border-color:#E8C894;
+  box-shadow:0 0 0 5px rgba(42,76,95,.55),0 0 0 8px rgba(197,161,106,.43),
+    0 0 18px rgba(239,194,113,.56),0 0 39px rgba(74,142,179,.36),
+    inset 0 0 16px rgba(226,188,123,.16);
+}
+/* As opções são botões originais. Apenas o brilho e a geometria mudam. */
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node{
+  z-index:5!important;
+  --sector-color:#C9AF85!important;
+  width:clamp(92px,20.5%,152px)!important;
+  min-height:clamp(62px,13%,93px)!important;
+  padding:6px 5px!important;gap:3px!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  border:1px solid transparent!important;border-radius:50%!important;
+  background:transparent!important;box-shadow:none!important;
+  color:#F6E6CC!important;
+  transform:translate(-50%,-50%) scale(1)!important;
+  filter:none!important;
+  transition:transform .27s cubic-bezier(.18,.9,.25,1.22),filter .26s ease!important;
+  touch-action:manipulation;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node::before{
+  content:"";position:absolute;inset:2%;z-index:-1;pointer-events:none;
+  border:1px solid transparent!important;border-radius:50%!important;
+  background:none!important;opacity:0!important;
+  transition:opacity .28s ease,box-shadow .28s ease!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node::after{
+  content:"";position:absolute;bottom:5%;width:20%;height:1px;
+  border-radius:3px;background:#C2A782!important;box-shadow:0 0 6px rgba(205,168,111,.32);
+  opacity:.58!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node:is(:hover,:focus-visible,.is-focused,.qb-admin-pressed,.qb-astro-selected):not(:disabled){
+  transform:translate(-50%,-50%) scale(1.15)!important;
+  background:radial-gradient(circle at 50% 52%,rgba(175,135,73,.13),transparent 75%)!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+  filter:brightness(1.20) drop-shadow(0 0 8px rgba(245,206,139,.53))!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node:is(:hover,:focus-visible,.is-focused,.qb-admin-pressed,.qb-astro-selected):not(:disabled)::before{
+  opacity:1!important;border-color:rgba(238,204,146,.64)!important;
+  box-shadow:0 0 17px rgba(231,174,92,.43),inset 0 0 14px rgba(238,192,115,.20)!important;
+  animation:qb-astro-aura 1.8s ease-in-out infinite alternate!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node:disabled{
+  opacity:.35!important;cursor:not-allowed;filter:grayscale(.5)!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node-icon{
+  color:#E3C59A!important;font-size:clamp(19px,2.7vw,25px)!important;
+  line-height:1!important;text-shadow:0 0 9px #C8A67588!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node-label{
+  font:700 clamp(10px,1.3vw,14px)/1.16 system-ui,sans-serif!important;
+  color:#F9EBD6!important;text-shadow:0 2px 6px #010710!important;
+  max-width:100%!important;
+  overflow-wrap:anywhere!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node-caption{
+  color:#D0D5D3!important;font-size:clamp(8px,.85vw,9.5px)!important;
+  line-height:1.22!important;max-width:15ch!important;
+  text-shadow:0 2px 4px #010812!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-core{
+  z-index:4!important;
+  border:1.7px solid #B19B7B!important;
+  background:linear-gradient(145deg,rgba(23,56,84,.94),rgba(6,25,46,.95))!important;
+  box-shadow:0 0 0 2px rgba(34,64,83,.76),0 0 24px rgba(37,86,122,.38),
+    inset 0 1px 0 rgba(213,186,141,.23),inset 0 -14px 22px rgba(2,10,22,.62)!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-core-orb{
+  background:url("/claude-export/admin-astro-compass.svg") center/contain no-repeat!important;
+  border:0!important;box-shadow:none!important;
+  width:34px!important;height:34px!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-core-orb::after{
+  display:none!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro[data-radial-screen="menu"] .qb-radial-core{
+  width:clamp(128px,22%,182px)!important;
+  background:radial-gradient(circle,rgba(23,62,95,.94),rgba(5,21,42,.98))!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro[data-radial-screen="menu"] .qb-radial-core strong{
+  font-size:clamp(11px,1.7vw,15px)!important;
+  letter-spacing:.025em!important;color:#E6CDA6!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-top-status{
+  background:rgba(11,31,53,.78)!important;border-color:rgba(171,156,133,.48)!important;
+}
+@keyframes qb-astro-aura {
+  0% {box-shadow:0 0 8px rgba(211,159,94,.24),inset 0 0 10px rgba(210,163,95,.13)}
+  100% {box-shadow:0 0 24px rgba(239,197,122,.56),0 0 34px rgba(61,128,166,.25),inset 0 0 14px rgba(241,199,130,.22)}
+}
+@media(max-width:760px){
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-stage{width:min(100%,610px,72dvh)!important;}
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-astro-seat{width:clamp(73px,22%,140px);}
+}
+@media(max-width:500px){
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-stage{width:min(100%,435px)!important;}
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node{
+   width:clamp(64px,23.5%,107px)!important;min-height:56px!important;padding:4px 2px!important;gap:2px!important;
+ }
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-astro-seat{width:clamp(65px,25%,114px);border-width:1.3px;}
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node-caption{display:none!important;}
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node-label{font-size:10px!important;}
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node-icon{font-size:17px!important;}
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node:is(:hover,:focus-visible,.is-focused,.qb-astro-selected):not(:disabled){
+   transform:translate(-50%,-50%) scale(1.08)!important;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-astro-needles,
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node,
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-astro-seat{
+   transition:none!important;animation:none!important;
+ }
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node:is(:hover,:focus-visible,.is-focused,.qb-astro-selected){
+   transform:translate(-50%,-50%)!important;
+ }
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node::before{animation:none!important;}
+}
