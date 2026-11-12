@@ -63,7 +63,7 @@ function StudyScreen({ account }) {
   const frameMarkup = adminExperience && typeof account?.markup === "string"
     ? account.markup
         .replace(/data-qb-video-src="[^"]*"/, 'data-qb-video-src="https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/cf918d059_gemini_generated_video_4AED7DD6.mp4"')
-        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=1"></script></body></html>')
+        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=2"></script></body></html>')
     : account?.markup;
   const frameRef = useRef(null);
   const [ready, setReady] = useState(false);
