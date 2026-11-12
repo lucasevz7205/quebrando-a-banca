@@ -239,10 +239,12 @@ function StudyScreen({ account }) {
         <iframe key={`${accountId || user?.id}:${frameVersion}`} ref={frameRef}
           title="Quebrando a Banca: Hoje, Edital, Treinar, Estudo, Simulado e Desempenho"
           srcDoc={account.markup}
+          scrolling="yes"
           sandbox={preview ? "allow-scripts allow-popups allow-popups-to-escape-sandbox" : undefined}
           style={{
             display: "block", width: "100%", height: preview ? "calc(100dvh - 3.5rem)" : "100dvh",
-            border: 0, borderRadius: 0, background: "#0E0E10"
+            border: 0, borderRadius: 0, background: "#0E0E10",
+            overflowY: "auto", WebkitOverflowScrolling: "touch", touchAction: "auto"
           }}
         />
       ) : (
