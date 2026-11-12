@@ -19,7 +19,7 @@
 :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav::-webkit-scrollbar{display:none!important;}
 :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav::before{
   content:""!important;position:absolute!important;inset:0!important;z-index:0!important;
-  background:url("/claude-export/admin-frieze-navigation.svg") center/100% 100% no-repeat!important;
+  background:url("/claude-export/admin-frieze-navigation-v2.svg") center/100% 100% no-repeat!important;
   opacity:.94!important;animation:none!important;transform:none!important;filter:none!important;
   pointer-events:none!important;
 }
