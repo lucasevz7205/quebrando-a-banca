@@ -62,9 +62,36 @@ function StudyScreen({ account }) {
   const [frameVersion, setFrameVersion] = useState(0);
   const [error, setError] = useState("");
   const [updateAvailable, setUpdateAvailable] = useState(false);
+  const [moduleLoadError, setModuleLoadError] = useState(false);
+
+  // Vite/Rolldown may reject an outdated dynamic import after a publication.
+  // Never force-refresh a student who may have an unanswered question open.
+  useEffect(() => {
+    const onPreloadError = event => {
+      event.preventDefault();
+      setModuleLoadError(true);
+    };
+    window.addEventListener("vite:preloadError", onPreloadError);
+    return () => window.removeEventListener("vite:preloadError", onPreloadError);
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined" || !("serviceWorker" in navigator)) return;
+
+    // The Base44 preview/dev server continuously changes module versions.
+    // A production PWA service worker must not control that environment.
+    // Unregister ONLY our sw.js; never clear app data or other registrations.
+    if (import.meta.env.DEV || window.location.hostname.startsWith("preview-sandbox--")) {
+      navigator.serviceWorker.getRegistrations()
+        .then(registrations => Promise.all(registrations.filter(reg =>
+          [reg.active, reg.waiting, reg.installing].some(worker => {
+            try { return new URL(worker?.scriptURL).pathname === "/sw.js"; }
+            catch { return false; }
+          })
+        ).map(reg => reg.unregister())))
+        .catch(() => {});
+      return;
+    }
     let disposed = false;
     let registration = null;
     // Nunca interromper uma resposta em andamento: oferecer atualização manual.
@@ -155,6 +182,26 @@ function StudyScreen({ account }) {
           <span><strong>{account.name}</strong> · Visualização administrativa · Somente leitura</span>
           <Link to="/contas" className="font-medium underline">Voltar a Contas</Link>
         </header>
+      )}
+      {moduleLoadError && (
+        <div role="alert" style={{
+          position: "fixed", zIndex: 120, bottom: 16, left: 16,
+          maxWidth: "calc(100vw - 32px)", border: "1px solid #b97054",
+          borderRadius: 10, padding: 12, background: "#fff",
+          color: "#8f2b24", boxShadow: "0 5px 24px #0006",
+          fontFamily: "system-ui, sans-serif", fontSize: 13
+        }}>
+          Um módulo do aplicativo não carregou. Suas respostas já salvas foram preservadas.
+          Atualize somente quando terminar a questão em andamento.
+          <button type="button" onClick={() => window.location.reload()}
+            style={{ marginLeft: 10, fontWeight: 700, textDecoration: "underline" }}>
+            Recarregar versão atual
+          </button>
+          <button type="button" onClick={() => setModuleLoadError(false)}
+            style={{ marginLeft: 10, textDecoration: "underline" }}>
+            Depois
+          </button>
+        </div>
       )}
       {updateAvailable && (
         <div role="status" style={{
