@@ -48,9 +48,9 @@
 }
 :root.qb-admin-experience .qb-app-header .qb-admin-sword-actual {
   position:absolute!important;z-index:1!important;
-  display:block!important;left:0!important;bottom:-8px!important;
-  width:clamp(142px,19vw,244px)!important;height:auto!important;
-  max-height:145px;object-fit:contain;
+  display:block!important;left:-10px!important;bottom:-14px!important;
+  width:clamp(210px,27vw,360px)!important;height:auto!important;
+  max-height:205px;object-fit:contain;
   object-position:bottom left;pointer-events:none;
   mix-blend-mode:normal!important;
   -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 88%,transparent 100%);
@@ -67,7 +67,7 @@
   position:relative!important;z-index:3!important;
   display:block!important;flex:0 0 auto!important;min-width:0!important;
   width:100%!important;max-width:none!important;
-  margin:0!important;padding:0 0 0 clamp(90px,13.5vw,183px)!important;
+  margin:0!important;padding:0 0 0 clamp(145px,19vw,255px)!important;
   border:0!important;border-radius:0!important;
   background:transparent!important;box-shadow:none!important;
   -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
@@ -156,11 +156,11 @@
   width:min(56%,480px)!important;max-height:72px!important;
 }
 :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-sword-actual {
-  width:clamp(68px,8vw,100px)!important;max-height:72px;
+  width:clamp(100px,12vw,135px)!important;max-height:100px;
   bottom:0!important;
 }
 :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-header-utilities {
-  padding-left:clamp(65px,9vw,110px)!important;
+  padding-left:clamp(100px,12vw,145px)!important;
 }
 :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-header-utilities :is(
  .qb-utility-action,.qb-utility-countdown,#omni-pomo-pill,#omni-studio-trigger) {
@@ -174,8 +174,8 @@
 }
 @media(max-width:850px){
  :root.qb-admin-experience .qb-app-header .qb-admin-title-actual {width:98%!important;max-height:135px!important;}
- :root.qb-admin-experience .qb-app-header .qb-admin-sword-actual {width:clamp(100px,18vw,160px)!important;}
- :root.qb-admin-experience .qb-app-header .qb-header-utilities {padding-left:clamp(90px,17vw,155px)!important;}
+ :root.qb-admin-experience .qb-app-header .qb-admin-sword-actual {width:clamp(165px,24vw,265px)!important;}
+ :root.qb-admin-experience .qb-app-header .qb-header-utilities {padding-left:clamp(140px,24vw,230px)!important;}
  :root.qb-admin-experience .qb-app-header .qb-admin-controls {gap:5px 10px;justify-content:center;}
  :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-title-actual {width:min(66%,480px)!important;}
 }
@@ -184,18 +184,18 @@
  :root.qb-admin-experience .qb-app-header .qb-header-row {padding:0 0 5px!important;}
  :root.qb-admin-experience .qb-app-header .qb-header-brand {padding:0!important;}
  :root.qb-admin-experience .qb-app-header .qb-admin-title-actual {width:100%!important;max-height:90px!important;}
- :root.qb-admin-experience .qb-app-header .qb-admin-sword-actual {width:83px!important;max-height:88px;bottom:0!important;}
- :root.qb-admin-experience .qb-app-header .qb-header-utilities {padding-left:82px!important;}
+ :root.qb-admin-experience .qb-app-header .qb-admin-sword-actual {width:130px!important;max-height:125px;bottom:-9px!important;}
+ :root.qb-admin-experience .qb-app-header .qb-header-utilities {padding-left:115px!important;}
  :root.qb-admin-experience .qb-app-header .qb-admin-tools {padding:0!important;border:0!important;}
  :root.qb-admin-experience .qb-app-header .qb-admin-controls {gap:5px!important;}
  :root.qb-admin-experience .qb-app-header .qb-header-utilities :is(
  .qb-utility-action,.qb-utility-countdown,#omni-pomo-pill,#omni-studio-trigger) {min-height:30px!important;padding:6px 8px!important;font-size:10px!important;}
  :root.qb-admin-experience .qb-app-header .qb-utility-countdown::after {font-size:10px;}
  :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-header-utilities {
-  padding-left:52px!important;
+  padding-left:85px!important;
  }
  :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-title-actual {width:70%!important;max-height:58px!important;}
- :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-sword-actual {width:50px!important;}
+ :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-sword-actual {width:85px!important;}
 }
 @media(prefers-reduced-motion:reduce){
  :root.qb-admin-experience .qb-app-header .qb-header-utilities * {transition:none!important;animation:none!important;}
