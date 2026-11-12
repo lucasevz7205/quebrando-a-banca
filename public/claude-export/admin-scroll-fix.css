@@ -1,0 +1,72 @@
+/* Safari/iPadOS scroll repair · admin-only.
+   Native vertical scrolling belongs to the iframe document, never the
+   ornamental compass or horizontally overflowing navigation frieze.
+   Does not touch study content or interactive overlays with their own scroll.
+*/
+:root.qb-admin-experience {
+  height:auto!important;
+  min-height:100%;
+  overflow-y:auto!important;
+  overflow-x:clip!important;
+  overscroll-behavior-y:auto!important;
+  -webkit-overflow-scrolling:touch;
+  touch-action:auto!important;
+}
+:root.qb-admin-experience body {
+  height:auto!important;
+  min-height:100dvh!important;
+  max-width:100%;
+  overflow-y:visible!important;
+  overflow-x:clip!important;
+  overscroll-behavior-y:auto!important;
+  touch-action:auto!important;
+  -webkit-overflow-scrolling:touch;
+}
+:root.qb-admin-experience #main,
+:root.qb-admin-experience .wrap {
+  height:auto!important;
+  max-width:100%!important;
+  overflow-y:visible!important;
+  touch-action:auto!important;
+}
+/* The compass is decoration. Only its original buttons receive tap input.
+   Preserve pan-y and pinch-zoom on the stage, even when starting a gesture
+   over its background, circular markings, needles or glow. */
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro {
+  max-width:100%!important;
+  touch-action:pan-y pinch-zoom!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-stage {
+  touch-action:pan-y pinch-zoom!important;
+  overscroll-behavior-y:auto!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro :is(
+ .qb-astro-disc,.qb-astro-seat,.qb-astro-needles,
+ .qb-radial-annulus,.qb-radial-flow,.qb-radial-aura,.qb-radial-particles
+) {
+  pointer-events:none!important;
+  touch-action:pan-y pinch-zoom!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node {
+  touch-action:manipulation!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-network {
+  touch-action:pan-y pinch-zoom!important;
+}
+/* Keep the frieze horizontally scrollable on narrow screens without trapping
+   a vertical swipe that begins on or near the navigation bar. */
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav {
+  touch-action:pan-x pan-y pinch-zoom!important;
+  overscroll-behavior-y:auto!important;
+  -webkit-overflow-scrolling:touch!important;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button {
+  touch-action:manipulation!important;
+}
+/* Safari fallback where overflow:clip isn't supported. */
+@supports not (overflow:clip) {
+  :root.qb-admin-experience,
+  :root.qb-admin-experience body {
+    overflow-x:hidden!important;
+  }
+}
