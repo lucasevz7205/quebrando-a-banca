@@ -2312,8 +2312,7 @@ function viewCartoes(){
       <label class="check"><input type="checkbox" id="cart-pend" ${S.cartPend?'checked':''}> Só os de hoje (vencidos + até ${vagas} novos)</label>
       <button class="btn ghost small" id="cart-reset">Esconder respostas</button>
       <button class="btn ghost small" data-cf="1">Abrir tudo</button><button class="btn ghost small" data-cf="0">Fechar tudo</button>
-      ${rv.mapa?`<button class="lnk" data-ir-mapa="${esc(S.cartId)}">Mapa mental</button>`:''}
-      ${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
+      ${rv.mapa?`<button class="lnk" data-ir-mapa="${esc(S.cartId)}">Mapa mental</button>`:''}${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.rv.get(id)||S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
     <div class="m-centro qb-topic-hub"><span>BARALHO · REVISÃO ATIVA</span><strong>${esc((rv.mapa&&rv.mapa.centro)||t.titulo||'')}</strong><small>${tot} cartões conceituais · ${ligadas.length} questões vinculadas</small></div>
     <div class="qb-flash-retention-wrap" style="width:100%;max-width:700px;align-self:center;display:flex;flex-direction:column;gap:5px;margin:2px auto">
       <div class="qb-flash-retention-bar" style="display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--line,#e2e8f0);gap:2px">
@@ -2453,8 +2452,7 @@ function mapa3D(m,t,lig,diagnostico){
     </div>
   </section>`;
 }
-/* Vínculos por conta e tópico; Coesão usa associações revisadas e os demais
-   mapas só recebem correspondências conservadoras. Nunca grava no banco. */
+/* Vínculos por conta e tópico; Coesão usa associações revisadas e os demais mapas só recebem correspondências conservadoras. */
 function mapaComVinculos(topicId,revision,topic){
   const map=revision?.mapa,cards=revision?.cartoes||[];
   if(!map)return null;
@@ -2463,15 +2461,15 @@ function mapaComVinculos(topicId,revision,topic){
   return generic||special||{map,cards};
 }
 function viewMapa(){
-  const indice=indiceQuestoes();
-  const ids=[...S.rv.entries()].filter(([k,v])=>v&&v.mapa).map(([k])=>k).sort((a,b)=>((S.ed.get(a)||{}).ordem||0)-((S.ed.get(b)||{}).ordem||0));
+  const indice=indiceQuestoes(),edDeMapa=id=>S.ed.get(id)||S.ed.get(S.rv.get(id)?.topico)||{};
+  const ids=[...S.rv.entries()].filter(([k,v])=>v&&v.mapa).map(([k])=>k).sort((a,b)=>(edDeMapa(a).ordem||0)-(edDeMapa(b).ordem||0)||a.localeCompare(b,'pt-BR',{numeric:true}));
   if(!ids.length){
     if(window.QBMindMapStudio) return `<div class="wrap" style="gap:14px;max-width:1100px">${window.QBMindMapStudio.studioHTML(S)}<div class="notice">Nenhum mapa no formato novo ainda. Clique em <b>＋ Criar Mapa do Zero</b> ou <b>✎ Editar Ramos, Subtópicos e Rótulos</b> acima para criar o seu, ou importe uma folha do <b>Caderno Cornell</b>.</div></div>`;
     return `<div class="wrap"><div class="notice">Nenhum mapa no formato novo ainda. Os chats de matéria gravam o mapa no documento de revisão do tópico.</div></div>`;
   }
   if(!S.mapaId||(!ids.includes(S.mapaId)&&!S.rv.get(S.mapaId)?.mapa)) S.mapaId=ids[0];
   const revMapa=S.rv.get(S.mapaId),mapasRelacionados=(revMapa.mapaRelacionadoIds||[]).filter(id=>id!==S.mapaId&&S.rv.get(id)?.mapa);
-  const t=S.ed.get(S.mapaId)||{}, editorial=mapaComVinculos(S.mapaId,revMapa,t);
+  const t=edDeMapa(S.mapaId), editorial=mapaComVinculos(S.mapaId,revMapa,t);
   const m=editorial?.map||revMapa.mapa, mapCards=editorial?.cards||revMapa.cartoes||[];
   const ab=S.mapaAb||new Set(['*']), tudo=ab.has('*');
   const nomes={}; const walk=(n)=>{if(n.id)nomes[n.id]=n.t;(n.f||[]).forEach(walk)}; (m.ramos||[]).forEach(walk);
@@ -2517,12 +2515,11 @@ function viewMapa(){
   };
   const ramos=(m.ramos||[]).map((r,i)=>{const cor=`var(--qb-map-${((r.cor||i+1)-1)%8+1})`;return `<section class="m-ramo" style="--mc:${cor}"><span class="qb-map-branch" aria-hidden="true">RAMO ${String(i+1).padStart(2,'0')}</span><ul class="m-raiz">${no(r,cor,String(i))}</ul></section>`}).join('');
   return `<div class="wrap" style="gap:14px;max-width:1100px">
-    <div class="filters"><select id="mapa-top" aria-label="Tópico">${ids.map(id=>`<option value="${esc(id)}" ${id===S.mapaId?'selected':''}>${esc(lblT(S.ed.get(id))||id)} · ${esc((S.ed.get(id)||{}).titulo||'')}</option>`).join('')}</select>
+    <div class="filters"><select id="mapa-top" aria-label="Tópico">${ids.map(id=>{const td=edDeMapa(id),tit=S.ed.get(id)?td.titulo:(S.rv.get(id)?.titulo||td.titulo||'');return `<option value="${esc(id)}" ${id===S.mapaId?'selected':''}>${esc(lblT(td)||id)} · ${esc(tit)}</option>`;}).join('')}</select>
       <label class="check"><input type="checkbox" id="evocar" ${S.evocar?'checked':''}> Evocar antes de ler</label>
       <button class="btn ghost small" data-mtodos="1">Abrir tudo</button><button class="btn ghost small" data-mtodos="0">Fechar tudo</button>
       ${S.mapaBack?.kind==='flashcard'?'<button class="btn ghost small" data-voltar-flash="1">Voltar ao flashcard</button>':S.mapaBack?.kind==='question'?'<button class="btn ghost small" data-voltar-questao="1">← Voltar à questão</button>':''}
-      ${((S.rv.get(S.mapaId)||{}).cartoes||[]).length?`<button class="lnk" data-ir-cart="${esc(S.mapaId)}">Revisão ativa · ${(S.rv.get(S.mapaId).cartoes||[]).length}</button>`:''}
-      ${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
+      ${((S.rv.get(S.mapaId)||{}).cartoes||[]).length?`<button class="lnk" data-ir-cart="${esc(S.mapaId)}">Revisão ativa · ${(S.rv.get(S.mapaId).cartoes||[]).length}</button>`:''}${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.rv.get(id)||S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
     ${window.QBMindMapStudio?window.QBMindMapStudio.studioHTML(S):''}
     ${S.mapaFocus?.topicId===S.mapaId?`<div class="qb-map-remission-banner" role="status" aria-live="polite">
       <strong>${S.mapaFocus.path?'Conceito localizado: '+esc(S.mapaFocus.title||'nó selecionado'):'Mapa do capítulo aberto'}</strong>
@@ -2535,8 +2532,7 @@ function viewMapa(){
     ${editorial?.unmatchedQuestions?.length!==undefined?`<p class="qb-map-link-audit">Vínculos do mapa: <strong>${editorial.linked}/${editorial.linked+editorial.unmatchedQuestions.length}</strong> questões e <strong>${editorial.cardLinks.length}/${editorial.cards.length}</strong> flashcards associados a conceitos. Os demais permanecem sem atribuição de subramo até que haja correspondência verificável. O nó central usa o resultado geral do edital.</p>`:''}
     ${mapa3D(m, t, lig, diagnostico)}
     <div class="m-grid qb-map-network" data-map-list>${ramos}</div>
-    ${questoesEmMapa(indice.byTopic.get(S.mapaId)||[],indice)}
-    ${m.autor?`<p class="rule">${esc(m.autor)}</p>`:''}
+    ${questoesEmMapa(indice.byTopic.get(S.mapaId)||indice.byTopic.get(revMapa?.topico)||[],indice)}${m.autor?`<p class="rule">${esc(m.autor)}</p>`:''}
   </div>`;
 }
 /* aba Pegadinhas: cada armadilha da banca, por matéria e tópico, ligada a um item C/E que a testa */
@@ -2925,8 +2921,7 @@ function abrirCartaoDoMapa(index){
   setTimeout(()=>document.getElementById('qbflash-'+key)?.scrollIntoView({block:'center'}),60);
 }
 function abrirEditalDoMapa(){
-  const t=S.ed.get(S.mapaId);
-  if(!t)return;
+  const t=S.ed.get(S.mapaId)||S.ed.get(S.rv.get(S.mapaId)?.topico); if(!t)return;
   S.abertos.add(t.sigla);S.fSt='';S.fMat=t.sigla;
   setView('edital');
   requestAnimationFrame(()=>document.getElementById('tp-'+t.id)?.scrollIntoView({block:'center'}));
