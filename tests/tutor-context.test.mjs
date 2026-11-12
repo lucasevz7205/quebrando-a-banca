@@ -45,3 +45,13 @@ test('não altera o estado',()=>{
   const s=S(); const antes=JSON.stringify([...s.r]); C.build(s,{today:'2026-11-11'});
   assert.equal(JSON.stringify([...s.r]),antes);
 });
+test('referência do tópico traz mapa, itens, pontos e cartões, com limite de tamanho',()=>{
+  const S={ed:new Map([['pl-3-1',{titulo:'Regimento Comum'}]]),
+    rv:new Map([['pl-3-1',{mapa:{centro:'RCCN',ramos:[{t:'CPMI',n:'1/3 de cada Casa',x:{e:'Criação automática com requerimento.',trap:'1/3 do Congresso',src:'RCCN art. 21'},f:[{t:'Prazo',x:{e:'Prazo certo.'}}]}]},
+      itens:[{k:'Sessão conjunta',regra:'Convocada pelo Presidente do Senado.'}],cartoes:[{q:'Quórum da CPMI?',a:['1/3 de cada Casa']}]}]]),
+    pt:new Map([['pl-3-1',{itens:[{k:'Veto',d:'Apreciado em sessão conjunta.',src:'CF art. 66'}]}]])};
+  const r=C.referencia(S,'pl-3-1');
+  for(const t of ['Regimento Comum','CPMI [1/3 de cada Casa]','Pegadinha: 1/3 do Congresso','Fonte: RCCN art. 21','  - Prazo','Sessão conjunta','PONTOS-CHAVE','Quórum da CPMI?']) assert.ok(r.includes(t),t);
+  assert.ok(C.referencia(S,'pl-3-1',200).length<=200);
+  assert.equal(C.referencia(S,'xx-9'),'');
+});
