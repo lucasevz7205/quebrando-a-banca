@@ -206,7 +206,9 @@
   justify-content:flex-end!important;gap:5px 8px!important;
 }
 :root.qb-admin-experience .qb-app-header .qb-header-utilities > * {order:65;}
-:root.qb-admin-experience .qb-app-header .qb-header-utilities > #omni-pomo-pill {order:10;}
+/* O cronômetro 25:00 é redundante no topo administrativo.
+   Ocultar apenas o atalho visual; o Pomodoro interno permanece operacional. */
+:root.qb-admin-experience .qb-app-header .qb-header-utilities #omni-pomo-pill {display:none!important;}
 :root.qb-admin-experience .qb-app-header .qb-header-utilities > #omni-studio-trigger {order:15;}
 :root.qb-admin-experience .qb-app-header .qb-header-utilities > #countdown {order:20;}
 :root.qb-admin-experience .qb-app-header .qb-header-utilities > #qb-sync-status {order:25;}
