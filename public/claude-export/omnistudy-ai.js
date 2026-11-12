@@ -365,6 +365,15 @@
      3. AI BRIDGE CALLER (Uses Base44 QBBridge + Smart Local Fallback)
      ======================================================================== */
   /* dados do estudante para o tutor (só leitura; nada é gravado) */
+  function tutorReferencia(topicId) {
+    try {
+      const C = global.QBTutorContext, S = global.S;
+      return (C && C.referencia && S && C.referencia(S, topicId)) || undefined;
+    } catch (e) {
+      return undefined;
+    }
+  }
+
   function tutorStudentContext(subject, topic) {
     try {
       const C = global.QBTutorContext, S = global.S;
@@ -984,6 +993,7 @@
           mode: state.tutorMode,
           messages: chat.messages.slice(-10).map(m => ({ role: m.role, text: m.text })),
           studentContext: tutorStudentContext(currentSubject.name, currentTopic.title),
+          referencia: tutorReferencia(currentTopic.id),
         });
         chat.messages.push({
           id: "m-" + Date.now(),

@@ -116,5 +116,46 @@
     return "";
   }
 
-  global.QBTutorContext = { build, recorteDe };
+  /* Referência do tópico (12/11/2026): o conteúdo das aulas que já está no app
+   * (mapa mental, cartões, itens e pontos-chave), para o Tutor responder ancorado nele. */
+  function referencia(S, topicId, limite) {
+    limite = limite || 9000;
+    if (!S || !topicId) return "";
+    const partes = [];
+    const rv = S.rv && S.rv.get && S.rv.get(topicId);
+    const pt = S.pt && S.pt.get && S.pt.get(topicId);
+    const ed = S.ed && S.ed.get && S.ed.get(topicId);
+    if (ed) partes.push("TÓPICO DO EDITAL: " + corta(ed.titulo || topicId, 300));
+    if (rv && rv.mapa && Array.isArray(rv.mapa.ramos)) {
+      const linhas = [];
+      const visit = (n, nivel) => {
+        if (!n || nivel > 5) return;
+        const x = n.x || {};
+        let l = "  ".repeat(nivel) + "- " + corta(n.t, 120) + (n.n ? " [" + corta(n.n, 160) + "]" : "");
+        if (x.e) l += ": " + corta(x.e, 400);
+        if (x.trap) l += " | Pegadinha: " + corta(x.trap, 200);
+        if (x.src) l += " | Fonte: " + corta(x.src, 120);
+        linhas.push(l);
+        (n.f || []).forEach(f => visit(f, nivel + 1));
+      };
+      rv.mapa.ramos.forEach(r => visit(r, 0));
+      partes.push("MAPA MENTAL (" + corta(rv.mapa.centro || "", 120) + "):\n" + linhas.join("\n"));
+    }
+    if (rv && Array.isArray(rv.itens) && rv.itens.length) {
+      partes.push("ITENS DO MAPA:\n" + rv.itens.map(i => "- " + corta(i.k, 120) + ": " + corta(i.regra, 300) +
+        (i.trap ? " | Pegadinha: " + corta(i.trap, 200) : "") + (i.src ? " | Fonte: " + corta(i.src, 120) : "")).join("\n"));
+    }
+    if (pt && Array.isArray(pt.itens) && pt.itens.length) {
+      partes.push("PONTOS-CHAVE:\n" + pt.itens.map(i => "- " + corta(i.k, 120) + ": " + corta(i.d, 300) +
+        (i.trap ? " | Pegadinha: " + corta(i.trap, 200) : "") + (i.src ? " | Fonte: " + corta(i.src, 120) : "")).join("\n"));
+    }
+    if (rv && Array.isArray(rv.cartoes) && rv.cartoes.length) {
+      partes.push("CARTÕES DE REVISÃO:\n" + rv.cartoes.map(c => "- " + corta(c.q, 220) + " → " + corta((c.a || []).join("; "), 260)).join("\n"));
+    }
+    if (partes.length <= 1) return "";
+    const txt = partes.join("\n\n");
+    return txt.length > limite ? txt.slice(0, limite - 1) + "…" : txt;
+  }
+
+  global.QBTutorContext = { build, recorteDe, referencia };
 })(typeof window !== "undefined" ? window : globalThis);

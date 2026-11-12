@@ -23,6 +23,8 @@ const OmniStudyInput = z.discriminatedUnion("task", [
     topic: z.string().max(300).optional(),
     /* resumo dos dados do estudante montado pela página (public/claude-export/tutor-context.js) */
     studentContext: z.any().optional(),
+    /* conteúdo das aulas do tópico já salvo no app (mapa, itens, pontos, cartões) */
+    referencia: z.string().max(10000).optional(),
   }),
   z.object({
     task: z.literal("feynman-evaluate"),
@@ -328,6 +330,9 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
         `Disciplina / Tópico em foco: "${subject}"${data.topic ? ` · ${data.topic}` : ""}.`,
         TUTOR_RULES,
         ctx ? `DADOS DO ESTUDANTE (registrados no app; use-os, não invente outros):\n${ctx}` : "DADOS DO ESTUDANTE: indisponíveis nesta sessão. Não suponha acertos, erros ou domínio.",
+        data.referencia
+          ? `REFERÊNCIA DO TÓPICO (material das aulas do estudante, salvo no app). Explique, corrija e crie perguntas A PARTIR DELA, citando o trecho ou a fonte indicada. Se a dúvida sair do que está aqui, diga claramente "isso não está no seu material; respondo de memória, confira na lei ou na aula" antes de responder.\n"""\n${data.referencia}\n"""`
+          : "REFERÊNCIA DO TÓPICO: o app não tem mapa nem pontos-chave deste tópico. Ao explicar regra, número, prazo ou artigo, avise que é de memória e que deve ser conferido na aula ou na lei.",
         "",
         "HISTÓRICO DA SESSÃO:",
         transcript,
