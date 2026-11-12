@@ -62,8 +62,9 @@ function StudyScreen({ account }) {
   const adminExperience = user?.role === "admin" && !preview && (legacy || account?.userId === user?.id);
   const frameMarkup = adminExperience && typeof account?.markup === "string"
     ? account.markup
-        .replace(/data-qb-video-src="[^"]*"/, 'data-qb-video-src="https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/cf918d059_gemini_generated_video_4AED7DD6.mp4"')
-        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=2"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=4"><script defer src="/claude-export/admin-art.js?v=4"></script></body></html>')
+        .replace(/data-qb-video-src="[^"]*"/, 'data-qb-video-src="https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/e307497be_gemini_generated_video_362B7BA6.mp4"')
+        .replace('poster="/claude-export/ambient-poster.jpg"', 'poster="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/98e13314a_gemini_generated_video_362B7BA6_at3.jpg"')
+        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=3"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=5"><script defer src="/claude-export/admin-art.js?v=4"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=1"></body></html>')
     : account?.markup;
   const frameRef = useRef(null);
   const [ready, setReady] = useState(false);
