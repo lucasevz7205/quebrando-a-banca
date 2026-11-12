@@ -1,0 +1,56 @@
+/* Revisão da opção 3 do friso.
+   Sobrescreve apenas o necessário sobre public/claude-export/admin-frieze.css.
+   Direção: aproximar da referência do astrolábio (azul-aço com bronze gravado).
+   Ajustes: azul imperial e marinho da paleta do comando, borda de bronze,
+   gravação interna discreta, foco por teclado visível, ouro e carmesim restritos
+   à seleção ativa, contador com 11px. Redução de movimento mantida. */
+
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav {
+  background:
+    linear-gradient(180deg, rgba(23, 54, 83, .92), rgba(10, 30, 52, .94) 52%, rgba(23, 54, 83, .90)) !important;
+  border: 1px solid rgba(165, 138, 103, .92) !important;
+  box-shadow:
+    0 0 0 1px rgba(10, 30, 52, .9),
+    0 8px 22px rgba(0, 0, 0, .34),
+    inset 0 1px 0 rgba(208, 179, 134, .30),
+    inset 0 -2px 0 rgba(165, 138, 103, .32),
+    inset 0 0 0 3px rgba(10, 30, 52, .55) !important;
+}
+
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button:focus-visible {
+  outline: 2px solid #D0B386 !important;
+  outline-offset: -4px !important;
+  background: rgba(23, 54, 83, .55) !important;
+}
+
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button {
+  border-left: 1px solid rgba(165, 138, 103, .38) !important;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .55), 0 0 1px rgba(208, 179, 134, .25) !important;
+}
+
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button::after {
+  background: linear-gradient(90deg, transparent, #A92E3A, #D0B386, #A92E3A, transparent) !important;
+  box-shadow: 0 0 8px rgba(169, 46, 58, .45) !important;
+}
+
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button[aria-current="page"]::before {
+  border: 1px solid rgba(208, 179, 134, .55) !important;
+  box-shadow: 0 0 13px rgba(169, 46, 58, .20), inset 0 0 12px rgba(208, 179, 134, .08) !important;
+}
+
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .count {
+  font-size: 11px !important;
+  background: #173653 !important;
+  border-color: rgba(165, 138, 103, .6) !important;
+}
+
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .count.hot {
+  background: #A92E3A !important;
+  border-color: #C4707A !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button::after {
+    transition: none !important;
+  }
+}
