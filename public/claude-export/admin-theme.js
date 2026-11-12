@@ -29,6 +29,7 @@ function initialize(){
     // Mesmo quando o MP4 já está configurado, atualizar o pôster estático.
     const sameSource=video.dataset.qbVideoSrc===item.video;
     video.poster=item.poster;
+    html.style.setProperty("--qb-scene-image","url("+JSON.stringify(item.poster)+")");
     layer.style.backgroundImage="url("+JSON.stringify(item.poster)+")";
     if(sameSource)return;
     video.dataset.qbVideoSrc=item.video;
@@ -47,7 +48,6 @@ function initialize(){
       }else{
         // Ainda no modo estático/foco: usa o JPG correspondente e evita baixar vídeo.
         video.removeAttribute("src");
-        video.load();
       }
     }
   }
