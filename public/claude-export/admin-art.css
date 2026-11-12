@@ -1,70 +1,114 @@
-/* ADMIN ONLY. Exact approved image artwork, not a CSS re-illustration.
-   Keep every real utility and navigation control in live DOM. */
+/* QB · Cabeçalho administrativo em uma única superfície.
+   Somente recursos decorativos são imagens: relógio, Omni, tema e
+   demais controles continuam sendo os elementos interativos originais. */
 :root.qb-admin-experience .qb-app-header .qb-header-row {
-  display:flex!important;flex-direction:column;align-items:stretch;justify-content:flex-start;
-  gap:10px!important;width:100%;min-height:0!important;
-  background:transparent!important;border:0!important;border-radius:0!important;
-  box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;
-  padding:0!important;overflow:visible!important;
+  display:flex!important;
+  flex-direction:row!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:9px 13px!important;
+  width:100%;min-height:0!important;
+  margin:0!important;
+  padding:clamp(9px,1.45vw,16px)!important;
+  border-radius:22px!important;
+  border:1px solid rgba(239,193,103,.78)!important;
+  background:rgba(10,17,29,.15)!important;
+  box-shadow:0 0 23px rgba(220,146,56,.15),inset 0 1px 0 rgba(255,216,155,.17)!important;
+  -webkit-backdrop-filter:blur(4px)!important;
+  backdrop-filter:blur(4px)!important;
+  isolation:isolate;
+  overflow:visible!important;
 }
 :root.qb-admin-experience .qb-app-header .qb-header-row::before,
 :root.qb-admin-experience .qb-app-header .qb-header-row::after {display:none!important;}
 :root.qb-admin-experience .qb-app-header .qb-header-brand {
-  display:block!important;flex:none!important;width:100%;max-width:100%;
-  min-width:0;margin:0!important;padding:0!important;
+  display:flex!important;
+  flex:1 1 56%!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:0!important;
+  width:auto!important;min-width:330px!important;max-width:none!important;
+  border:0!important;border-radius:0!important;box-shadow:none!important;
+  background:transparent!important;
+  overflow:visible!important;
+  margin:0!important;padding:0!important;
 }
-:root.qb-admin-experience .qb-app-header .qb-admin-laurel {display:none!important;}
-:root.qb-admin-experience .qb-app-header .qb-admin-visual-brand {
-  display:block;width:100%;max-width:100%;height:auto;
-  border:0;object-fit:contain;object-position:center;
-  filter:drop-shadow(0 5px 18px rgba(7,8,15,.27));
+:root.qb-admin-experience .qb-app-header .qb-header-brand-mark,
+:root.qb-admin-experience .qb-app-header .qb-admin-laurel,
+:root.qb-admin-experience .qb-app-header .qb-admin-visual-brand,
+:root.qb-admin-experience .qb-app-header .qb-admin-visual-sword {
+  display:none!important;
 }
-:root.qb-admin-experience .qb-app-header .qb-admin-visual-sword {display:none;}
-/* Hide duplicate on screen; maintain the h1 in the accessibility tree. */
+:root.qb-admin-experience .qb-app-header .qb-admin-brand-sword-art,
+:root.qb-admin-experience .qb-app-header .qb-admin-brand-title-art {
+  display:block!important;flex:0 1 auto!important;
+  max-width:100%;min-width:0;height:auto;
+  mix-blend-mode:screen; /* o preto da arte deixa o vídeo passar */
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.24));
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 3%,#000 97%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0%,#000 3%,#000 97%,transparent 100%);
+}
+:root.qb-admin-experience .qb-app-header .qb-admin-brand-sword-art {width:31%!important;}
+:root.qb-admin-experience .qb-app-header .qb-admin-brand-title-art {width:69%!important;}
 :root.qb-admin-experience .qb-app-header .qb-study-brand-copy {
-  position:absolute!important;width:1px!important;height:1px!important;
-  padding:0!important;margin:-1px!important;overflow:hidden!important;
+  position:absolute!important;
+  width:1px!important;height:1px!important;padding:0!important;
+  margin:-1px!important;overflow:hidden!important;
   clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important;
 }
+/* Todos os controles originais entram na mesma caixa, sem segunda faixa. */
 :root.qb-admin-experience .qb-app-header .qb-header-utilities {
-  display:flex;flex:1 1 auto;width:100%;min-width:0;
-  justify-content:center!important;gap:7px 9px!important;flex-wrap:wrap!important;
-  padding:10px clamp(10px,1.6vw,18px);margin:0;
-  background:linear-gradient(120deg,rgba(11,17,29,.83),rgba(19,23,34,.74));
-  border:1px solid rgba(228,179,91,.57);
-  border-radius:17px;box-shadow:inset 0 1px 0 rgba(255,230,186,.15);
-  -webkit-backdrop-filter:blur(13px);backdrop-filter:blur(13px);
+  display:flex!important;
+  flex:1 1 40%!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;align-content:center!important;
+  justify-content:center!important;
+  width:auto!important;min-width:260px!important;max-width:none!important;
+  gap:7px 8px!important;
+  margin:0!important;padding:4px 0!important;
+  background:transparent!important;border:0!important;border-radius:0!important;
+  box-shadow:none!important;-webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+}
+:root.qb-admin-experience .qb-app-header :is(.qb-header-utilities .qb-utility-action,.qb-header-utilities .qb-utility-countdown) {
+  min-height:35px!important;
+  padding:7px 10px!important;
+  font-size:clamp(10px,.94vw,12px)!important;
+  border-color:rgba(232,187,107,.64)!important;
+  background:rgba(8,15,27,.62)!important;
+  color:#fff0d3!important;
+  text-shadow:0 0 5px rgba(11,12,16,.65);
+}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities .qb-utility-action:is(:hover,:focus-visible) {
+  background:rgba(137,91,32,.42)!important;
+  box-shadow:0 0 17px rgba(242,180,75,.32)!important;
 }
 :root.qb-admin-experience .qb-app-header nav.tabs.qb-primary-nav {
-  margin-top:0;
+  margin-top:10px!important;
 }
-/* Small screens use the approved source sword cutout and accessible live name. */
-@media(max-width:700px){
-  :root.qb-admin-experience .qb-app-header .qb-header-brand {
-    display:flex!important;align-items:center;gap:0!important;min-height:91px;
-    background:linear-gradient(130deg,rgba(8,15,26,.89),rgba(18,26,39,.8));
-    border:1px solid rgba(232,184,95,.75);border-radius:18px;overflow:hidden;
-    box-shadow:0 0 14px rgba(226,168,71,.19);
+@media(max-width:960px){
+  :root.qb-admin-experience .qb-app-header .qb-header-row{
+    flex-direction:column!important;
+    flex-wrap:nowrap!important;
+    gap:2px!important;
   }
-  :root.qb-admin-experience .qb-app-header .qb-admin-visual-brand {display:none;}
-  :root.qb-admin-experience .qb-app-header .qb-admin-visual-sword {
-    display:block;flex:0 0 auto;width:min(32vw,160px);height:auto;
+  :root.qb-admin-experience .qb-app-header .qb-header-brand{
+    flex:0 0 auto!important;min-width:0!important;width:100%!important;
+    max-width:790px!important;
   }
-  :root.qb-admin-experience .qb-app-header .qb-study-brand-copy {
-    position:static!important;width:auto!important;height:auto!important;
-    padding:8px 10px 8px 0!important;margin:0!important;overflow:visible!important;
-    clip-path:none!important;white-space:normal!important;
+  :root.qb-admin-experience .qb-app-header .qb-header-utilities{
+    flex:0 0 auto!important;width:100%!important;
+    min-width:0!important;padding:5px 4px 2px!important;
   }
-  :root.qb-admin-experience .qb-app-header .qb-header-brand h1 {
-    font-family:Georgia,"Times New Roman",serif!important;
-    color:#f4e2be!important;font-weight:600!important;
-    font-size:clamp(18px,4.4vw,27px)!important;letter-spacing:.015em!important;
-    line-height:1.1!important;
-  }
-  :root.qb-admin-experience .qb-app-header .qb-header-utilities {padding:8px 7px;gap:6px!important;}
-  :root.qb-admin-experience .qb-app-header .qb-utility-action,
-  :root.qb-admin-experience .qb-app-header .qb-utility-countdown {min-height:36px;font-size:10px;padding:7px 9px;}
 }
-@media(prefers-reduced-motion:reduce) {
-  :root.qb-admin-experience .qb-app-header * {scroll-behavior:auto;}
+@media(max-width:540px){
+  :root.qb-admin-experience .qb-app-header .qb-header-row{padding:8px 6px!important;border-radius:17px!important;}
+  :root.qb-admin-experience .qb-app-header .qb-header-utilities{gap:5px!important;}
+  :root.qb-admin-experience .qb-app-header :is(.qb-header-utilities .qb-utility-action,.qb-header-utilities .qb-utility-countdown){
+    min-height:33px!important;padding:6px 8px!important;font-size:10px!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  :root.qb-admin-experience .qb-app-header .qb-header-row * {animation:none!important;}
 }
