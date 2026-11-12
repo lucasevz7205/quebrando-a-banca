@@ -1,21 +1,22 @@
-/* Approved art mounted only in administrator's iframe. */
+/* QB · assets originais, integrados a controles reais. Apenas administração. */
 (function(){
   "use strict";
   function mount(){
     if(!document.documentElement.classList.contains("qb-admin-experience"))return;
     const brand=document.querySelector(".qb-app-header .qb-header-brand");
-    if(!brand||brand.querySelector(".qb-admin-visual-brand"))return;
-    const originalArt="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/7dfe76522_qb_admin_brand_art.webp";
-    const swordArt="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/f2ac0024c_qb_admin_sword_art.webp";
-    const art=document.createElement("img");
-    art.className="qb-admin-visual-brand";art.src=originalArt;art.alt="";
-    art.loading="eager";art.decoding="async";
-    const mobile=document.createElement("img");
-    mobile.className="qb-admin-visual-sword";mobile.src=swordArt;mobile.alt="";
-    mobile.loading="eager";mobile.decoding="async";
-    brand.prepend(mobile);brand.prepend(art);
-    // Keep title in DOM for screen readers; remove the synthetic ornament.
-    brand.querySelectorAll(".qb-admin-laurel").forEach(el=>el.remove());
+    if(!brand||brand.querySelector(".qb-admin-brand-title-art"))return;
+    // São recortes da arte aprovada, não recriações com SVG.
+    const sword=document.createElement("img");
+    sword.className="qb-admin-brand-sword-art";
+    sword.src="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/f2ac0024c_qb_admin_sword_art.webp";
+    sword.alt="";sword.loading="eager";sword.decoding="async";
+    const title=document.createElement("img");
+    title.className="qb-admin-brand-title-art";
+    title.src="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/3b93317ff_qb_admin_title_cropped.webp";
+    title.alt="";title.loading="eager";title.decoding="async";
+    brand.querySelectorAll(".qb-admin-laurel,.qb-admin-visual-brand,.qb-admin-visual-sword").forEach(el=>el.remove());
+    brand.prepend(title);brand.prepend(sword);
+    // h1 e controles continuam no DOM, com funções intactas.
   }
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mount,{once:true});
   else mount();
