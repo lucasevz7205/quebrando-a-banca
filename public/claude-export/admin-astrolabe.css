@@ -3,9 +3,9 @@
    A barra horizontal de navegação não é modificada nesta etapa.
 */
 :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"]{
-  --astro-bronze:#c49a58;
-  --astro-gold:#f4d493;
-  --astro-dark:#121c26;
+  --astro-bronze:#887A68;
+  --astro-gold:#C6AC86;
+  --astro-dark:#0B233D;
   overflow:visible!important;
   background:transparent!important;
   box-shadow:none!important;
@@ -18,16 +18,16 @@
 }
 :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-annulus{
   display:block!important;
-  background:url("/claude-export/admin-astrolabe.svg") center/100% 100% no-repeat!important;
+  background:url("/claude-export/admin-astrolabe-v2.svg") center/100% 100% no-repeat!important;
   opacity:1!important;
   border-radius:50%!important;
   z-index:0!important;
-  filter:drop-shadow(0 5px 18px rgba(0,0,0,.42))!important;
+  filter:drop-shadow(0 5px 17px rgba(0,9,25,.5))!important;
 }
 :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-annulus > div{display:none!important;}
 :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-stage::before{
   inset:5%;
-  background:radial-gradient(circle,rgba(237,192,115,.11),transparent 73%)!important;
+  background:radial-gradient(circle,rgba(13,57,96,.42),rgba(8,26,52,.19) 58%,transparent 76%)!important;
   filter:blur(14px)!important;
 }
 :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-stage::after{display:none!important;}
@@ -36,26 +36,26 @@
   opacity:0!important;pointer-events:none!important;
 }
 :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-network .qb-radial-orbit{
-  stroke:#d0a05d!important;stroke-width:1!important;
+  stroke:#8193A2!important;stroke-width:.9!important;
   stroke-dasharray:2 12!important;opacity:.26!important;
 }
 :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-network .qb-radial-link{
-  stroke:#dab16d!important;opacity:.18!important;filter:none!important;
+  stroke:#768EA6!important;opacity:.16!important;filter:none!important;
   animation:none!important;stroke-dasharray:2 14!important;stroke-dashoffset:0!important;
 }
 :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-network .qb-radial-sector{
-  stroke:#efbc70!important;opacity:.005!important;transition:opacity .2s ease!important;
+  stroke:#9CA9B0!important;opacity:.005!important;transition:opacity .2s ease!important;
 }
 :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-network .qb-radial-sector.is-focused{
   opacity:.13!important;filter:drop-shadow(0 0 8px rgba(255,213,134,.40))!important;
 }
 :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-aura{
   inset:29%!important;
-  background:radial-gradient(circle,rgba(217,158,66,.15),transparent 75%)!important;
+  background:radial-gradient(circle,rgba(31,85,126,.22),rgba(8,30,53,.15) 45%,transparent 75%)!important;
   filter:blur(35px)!important;opacity:.45!important;
 }
 :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node{
-  --sector-color:#eac381!important;
+  --sector-color:#BEA789!important;
   z-index:5!important;
   width:clamp(93px,20%,156px)!important;
   min-height:clamp(60px,12.5%,90px)!important;
@@ -63,7 +63,7 @@
   padding:7px 6px!important;
   border:0!important;
   border-radius:50%!important;
-  background:radial-gradient(circle at 50% 30%,rgba(28,39,46,.43),rgba(13,19,27,.1) 78%,transparent 100%)!important;
+  background:radial-gradient(circle at 50% 30%,rgba(20,47,75,.64),rgba(9,28,50,.33) 75%,transparent 100%)!important;
   box-shadow:none!important;
   color:#f6e8cb!important;
   text-shadow:0 1px 2px #000!important;
@@ -78,7 +78,7 @@
 }
 :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node::after{
   bottom:3%!important;
-  background:#dfb274!important;
+  background:#AD9B7F!important;
   width:24%!important;height:2px!important;
   box-shadow:0 0 7px #e2b56c88!important;opacity:.65!important;
 }
@@ -113,9 +113,9 @@
   width:clamp(125px,21%,178px)!important;
   aspect-ratio:1!important;
   z-index:4!important;
-  border:3px solid #EAC17D!important;
-  box-shadow:0 0 0 2px #51391f,0 0 22px rgba(236,179,90,.38),inset 0 0 15px rgba(0,0,0,.75)!important;
-  background:radial-gradient(circle,rgba(26,24,25,.08),rgba(10,17,25,.70)),url("https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/ad2d13733_qb_admin_logo_rustico_aprovado.webp") center/82% 82% no-repeat,#111a24!important;
+  border:1.7px solid #B19B79!important;
+  box-shadow:0 0 0 1px #40576A,0 0 17px rgba(32,91,128,.38),inset 0 0 16px rgba(0,12,29,.75)!important;
+  background:radial-gradient(circle,rgba(15,41,68,.14),rgba(6,22,42,.73)),url("https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/ad2d13733_qb_admin_logo_rustico_aprovado.webp") center/79% 79% no-repeat,#0A2039!important;
   animation:none!important;
 }
 :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-core > *{
