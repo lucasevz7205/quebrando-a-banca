@@ -516,6 +516,7 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/omnistudy-cornell.js?v=16" defer></script>
 <script src="/claude-export/tutor-context.js?v=2" defer></script>
 <script src="/claude-export/map-evocar.js?v=1" defer></script>
+<script src="/claude-export/card-curator.js?v=1" defer></script>
 <script src="/claude-export/omnistudy-ai.js?v=27" defer></script>
 <script>
 (function(){
@@ -2246,6 +2247,7 @@ function explicaBox(k){
   else bts.push('<span class="ps">Sem mapa mental cadastrado para este cartão.</span>');
   let out='<div class="chips" style="gap:12px">'+bts.join('')+'</div>';
   if(c.ex&&S.exAb.has(k))out+='<div class="m-det" style="margin:0"><p>'+esc(c.ex)+'</p></div>';
+  out+=window.QBCardCurator?.box(S,k)||''; // reformular cartão (12/11/2026)
   return out;
 }
 function cartAval(k,ab){
@@ -3103,6 +3105,10 @@ function wire(){
   document.querySelectorAll('[data-cresp]').forEach(t=>{t.addEventListener('input',()=>S.cartResp.set(t.dataset.cresp,t.value));t.addEventListener('blur',()=>{if(S.pendingRender)setTimeout(()=>render(),0)})});
   document.querySelectorAll('[data-exab]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.exab;if(S.exAb.has(k))S.exAb.delete(k);else S.exAb.add(k);render(true)}));
   document.querySelectorAll('[data-irmapa]').forEach(b=>b.addEventListener('click',()=>irMapa(b.dataset.irmapa)));
+  window.QBCardCurator?.wire(document,{S,rerender:()=>render(true),toast,
+    ask:payload=>window.QBBridge.ask('omniStudyAI',payload),
+    referencia:id=>window.QBTutorContext?.referencia(S,id),
+    salvarRevisao:(id,doc)=>{S.rv.set(id,Object.assign({},doc,{id}));if(S.db)enqueue(()=>S.db.doc('revisao/'+id).set(doc));}});
   document.querySelectorAll('[data-voltar-questao]').forEach(b=>b.addEventListener('click',()=>{
     const back=S.mapaBack;if(!back||back.kind!=='question')return;
     const previous=back.view||'treinar',qid=back.qid;
