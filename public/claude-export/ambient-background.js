@@ -12,9 +12,13 @@
     const toggle=document.getElementById("qb-background-toggle");
     if(!layer||!video||!toggle)return;
     const reduce=window.matchMedia("(prefers-reduced-motion: reduce)");
-    /* estático por padrão (11/11/2026): menos carga visual no estudo; o estudante liga a animação se quiser */
-    let mode="still";
+    /* fluido por padrão nas telas de escolha (12/11/2026): o modo foco já aquieta o fundo
+     * durante treino, revisão, mapa e flashcards, então a animação fica para a navegação.
+     * Com economia de dados ligada, o padrão continua estático (o MP4 tem 58 MB). */
+    let mode="motion";
+    try{if(navigator.connection&&navigator.connection.saveData)mode="still";}catch(_){ }
     let unavailable=false;
+    let focused=document.documentElement.dataset.qbFoco==="1";
     try {
       const stored=localStorage.getItem(KEY);
       if(stored==="still"||stored==="motion")mode=stored;
@@ -33,16 +37,18 @@
       }catch(_){/* leave the CSS fallback until the frame is available */}
     }
     function paint(){
-      const motion=mode==="motion"&&!reduce.matches&&!unavailable;
+      const motion=mode==="motion"&&!reduce.matches&&!unavailable&&!focused;
       document.documentElement.dataset.qbAmbient=motion?"motion":"still";
-      toggle.textContent=unavailable?"Fundo: indisponível":motion?"Fundo: animado":"Fundo: estático";
+      toggle.textContent=unavailable?"Fundo: indisponível":focused?"Fundo: foco":motion?"Fundo: animado":"Fundo: estático";
       toggle.setAttribute("aria-pressed",String(motion));
-      toggle.setAttribute("aria-label",motion?"Pausar vídeo de fundo":"Ativar vídeo de fundo");
-      toggle.title=unavailable?"Vídeo indisponível. Fundo estático mantido.":reduce.matches
+      toggle.setAttribute("aria-label",focused?"Fundo em modo foco durante a atividade":motion?"Pausar vídeo de fundo":"Ativar vídeo de fundo");
+      toggle.title=unavailable?"Vídeo indisponível. Fundo estático mantido.":focused
+        ?"Modo foco: o fundo fica quieto durante a atividade e volta ao sair."
+        :reduce.matches
         ?"Movimento desativado nas preferências de acessibilidade do dispositivo."
         :motion?"Pausar a animação de fundo e manter o quadro atual."
         :"Reproduzir o vídeo no fundo de toda a interface.";
-      toggle.disabled=reduce.matches||unavailable;
+      toggle.disabled=reduce.matches||unavailable||focused;
       if(!motion||document.hidden){
         video.pause();
         if(!motion)frame();
@@ -76,7 +82,7 @@
       paint();
     }
     function onToggle(){
-      if(unavailable||reduce.matches)return;
+      if(unavailable||reduce.matches||focused)return;
       mode=mode==="motion"?"still":"motion";
       try{localStorage.setItem(KEY,mode)}catch(_){}
       paint();
@@ -90,6 +96,20 @@
     document.addEventListener("visibilitychange",onVisibility);
     window.addEventListener("pagehide",()=>video.pause(),{once:true});
     reduce.addEventListener?.("change",onMotionPreference);
+    /* Modo foco (12/11/2026): a página avisa quando uma atividade começa (treino,
+     * revisão, mapa, flashcards). O vídeo pausa e o chip trava em "Fundo: foco";
+     * ao sair, o modo salvo do estudante volta sozinho. */
+    window.QBAmbient={
+      setFocus(on){
+        on=!!on;
+        if(on===focused)return;
+        focused=on;
+        if(on)document.documentElement.dataset.qbFoco="1";
+        else delete document.documentElement.dataset.qbFoco;
+        paint();
+      },
+      get focused(){return focused;},
+    };
     paint();
   }
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mount,{once:true});

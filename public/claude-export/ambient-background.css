@@ -47,6 +47,22 @@ body {
   background:
     linear-gradient(180deg,rgba(3,5,12,.42),rgba(7,8,15,.55) 42%,rgba(5,6,11,.7)),
     radial-gradient(ellipse at 48% 10%,rgba(41,60,132,.21),transparent 62%);
+  transition:background .45s ease;
+}
+/* Modo foco: durante treino, revisão, mapa e flashcards o véu fecha e o fundo
+   fica quase chapado, para a atividade ocupar a atenção. */
+:root[data-qb-foco="1"] #qb-ambient-background .qb-ambient-veil {
+  background:
+    linear-gradient(180deg,rgba(5,7,14,.90),rgba(6,8,16,.92) 42%,rgba(4,6,12,.94)),
+    radial-gradient(ellipse at 48% 10%,rgba(41,60,132,.10),transparent 62%);
+}
+:root[data-theme="light"][data-qb-foco="1"] #qb-ambient-background .qb-ambient-veil {
+  background:rgba(244,243,238,.97);
+}
+@media (prefers-color-scheme:light) {
+  :root:not([data-theme])[data-qb-foco="1"] #qb-ambient-background .qb-ambient-veil {
+    background:rgba(244,243,238,.97);
+  }
 }
 body > .wrap {
   position:relative;
