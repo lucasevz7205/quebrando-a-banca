@@ -37,10 +37,10 @@
 :root.qb-admin-experience .qb-app-header .qb-admin-brand-title-art,
 :root.qb-admin-experience .qb-app-header .qb-admin-visual-brand,
 :root.qb-admin-experience .qb-app-header .qb-admin-visual-sword {display:none!important;}
-:root.qb-admin-experience .qb-app-header .qb-admin-title-actual {
+:root.qb-admin-experience .qb-app-header .qb-admin-logo-actual {
   display:block!important;flex:0 1 auto!important;object-fit:contain!important;
-  width:min(91%,1090px)!important;max-width:100%!important;height:auto!important;
-  max-height:clamp(90px,14.8vw,172px)!important;
+  width:clamp(135px,18vw,210px)!important;max-width:95%!important;height:auto!important;
+  max-height:clamp(145px,19vw,230px)!important;
   mix-blend-mode:normal!important;
   -webkit-mask-image:none!important;mask-image:none!important;
   filter:drop-shadow(0 2px 3px rgba(0,0,0,.6))!important;
@@ -152,8 +152,8 @@
   display:flex!important;min-height:0!important;padding:0 8px 3px!important;
   gap:0!important;
 }
-:root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-title-actual {
-  width:min(56%,480px)!important;max-height:72px!important;
+:root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-logo-actual {
+  width:clamp(82px,9vw,115px)!important;max-height:115px!important;
 }
 :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-sword-actual {
   width:clamp(100px,12vw,135px)!important;max-height:100px;
@@ -173,17 +173,17 @@
   gap:4px;
 }
 @media(max-width:850px){
- :root.qb-admin-experience .qb-app-header .qb-admin-title-actual {width:98%!important;max-height:135px!important;}
+ :root.qb-admin-experience .qb-app-header .qb-admin-logo-actual {width:clamp(130px,20vw,185px)!important;max-height:190px!important;}
  :root.qb-admin-experience .qb-app-header .qb-admin-sword-actual {width:clamp(165px,24vw,265px)!important;}
  :root.qb-admin-experience .qb-app-header .qb-header-utilities {padding-left:clamp(140px,24vw,230px)!important;}
  :root.qb-admin-experience .qb-app-header .qb-admin-controls {gap:5px 10px;justify-content:center;}
- :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-title-actual {width:min(66%,480px)!important;}
+ :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-logo-actual {width:clamp(88px,12vw,120px)!important;max-height:120px!important;}
 }
 @media(max-width:560px){
  :root.qb-admin-experience .qb-app-header .qb-header-kicker {font-size:8px!important;letter-spacing:.01em;}
  :root.qb-admin-experience .qb-app-header .qb-header-row {padding:0 0 5px!important;}
  :root.qb-admin-experience .qb-app-header .qb-header-brand {padding:0!important;}
- :root.qb-admin-experience .qb-app-header .qb-admin-title-actual {width:100%!important;max-height:90px!important;}
+ :root.qb-admin-experience .qb-app-header .qb-admin-logo-actual {width:clamp(112px,27vw,136px)!important;max-height:140px!important;}
  :root.qb-admin-experience .qb-app-header .qb-admin-sword-actual {width:130px!important;max-height:125px;bottom:-9px!important;}
  :root.qb-admin-experience .qb-app-header .qb-header-utilities {padding-left:115px!important;}
  :root.qb-admin-experience .qb-app-header .qb-admin-tools {padding:0!important;border:0!important;}
@@ -194,7 +194,7 @@
  :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-header-utilities {
   padding-left:85px!important;
  }
- :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-title-actual {width:70%!important;max-height:58px!important;}
+ :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-logo-actual {width:78px!important;max-height:85px!important;}
  :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-sword-actual {width:85px!important;}
 }
 @media(prefers-reduced-motion:reduce){
