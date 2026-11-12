@@ -508,8 +508,8 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/rf-study-drafts.css?v=1">
 <link rel="stylesheet" href="/claude-export/pcmg-multiple-choice.css?v=1">
 <link rel="stylesheet" href="/claude-export/glass-iris.css?v=1">
-<link rel="stylesheet" href="/claude-export/ambient-background.css?v=1">
-<script src="/claude-export/ambient-background.js?v=1" defer></script>
+<link rel="stylesheet" href="/claude-export/ambient-background.css?v=2">
+<script src="/claude-export/ambient-background.js?v=2" defer></script>
 <link rel="stylesheet" href="/claude-export/radial-dashboard.css?v=1">
 <link rel="stylesheet" href="/claude-export/radial-annulus.css?v=1">
 <link rel="stylesheet" href="/claude-export/training-radial.css?v=1">
@@ -812,11 +812,19 @@ $('#qb-radial-return-action')?.addEventListener('click',()=>openPortal(null));
 
 /* ---------- render ---------- */
 let radialCleanup=null;
+function ambienteFoco(on){
+  const h=document.documentElement;
+  if(on)h.dataset.qbFoco='1'; else delete h.dataset.qbFoco;
+  window.QBAmbient?.setFocus?.(on);
+}
 function render(force){
   const ae=document.activeElement;
   if(!force && ae && ae.dataset && (ae.dataset.nota||ae.dataset.cresp||ae.dataset.learnDraft||ae.id?.startsWith('learn-'))){ S.pendingRender=true; updateCounts(); return; }
   S.pendingRender=false;
   updateCounts();
+  /* Modo foco do fundo: atividade (rodada, revisão, mapa, flashcards, OmniStudy)
+     aquieta o vídeo; telas de escolha ficam com o fundo fluido. */
+  ambienteFoco((S.view==='treinar'&&!!S.round)||['mapa','cartoes','revisao','aprendizagem'].includes(S.view));
   const main=$('#main');
   if(S.view==='portal'){
     const screen=S.radialSection||'menu';
