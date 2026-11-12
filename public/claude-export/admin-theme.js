@@ -4,8 +4,10 @@
 (function(){
 "use strict";
 const media={
-  light:{video:"https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/e307497be_gemini_generated_video_362B7BA6.mp4",poster:"https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/98e13314a_gemini_generated_video_362B7BA6_at3.jpg"},
-  dark:{video:"https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/cf918d059_gemini_generated_video_4AED7DD6.mp4",poster:"https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/5c37ea4ce_gemini_generated_video_4AED7DD6_at3.jpg"}
+  // Associação invertida a pedido do usuário: cena 4AED7DD6 no claro,
+  // cena 362B7BA6 no escuro, sempre com o respectivo quadro estático.
+  light:{video:"https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/cf918d059_gemini_generated_video_4AED7DD6.mp4",poster:"https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/5c37ea4ce_gemini_generated_video_4AED7DD6_at3.jpg"},
+  dark:{video:"https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/e307497be_gemini_generated_video_362B7BA6.mp4",poster:"https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/98e13314a_gemini_generated_video_362B7BA6_at3.jpg"}
 };
 function initialize(){
   const html=document.documentElement;
@@ -31,11 +33,21 @@ function initialize(){
     if(sameSource)return;
     video.dataset.qbVideoSrc=item.video;
     const hadSource=video.hasAttribute("src");
+    // Não exibir quadro do tema anterior durante a troca nem sobrepor
+    // a textura antiga durante a decodificação do novo MP4.
+    layer.removeAttribute("data-ready");
     if(hadSource){
       video.pause();
-      video.src=item.video;video.load();
-      if(html.dataset.qbAmbient==="motion"&&html.dataset.qbFoco!=="1"&&!document.hidden){
-        const p=video.play();if(p&&typeof p.catch==="function")p.catch(()=>{});
+      const running=html.dataset.qbAmbient==="motion"&&html.dataset.qbFoco!=="1"&&!document.hidden;
+      if(running){
+        video.src=item.video;
+        video.load();
+        const p=video.play();
+        if(p&&typeof p.catch==="function")p.catch(()=>{});
+      }else{
+        // Ainda no modo estático/foco: usa o JPG correspondente e evita baixar vídeo.
+        video.removeAttribute("src");
+        video.load();
       }
     }
   }
