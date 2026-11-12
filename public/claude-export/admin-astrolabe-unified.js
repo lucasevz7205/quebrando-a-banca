@@ -132,18 +132,28 @@
     queued=false;
     const main=document.getElementById("main");
     if(!main)return;
-    main.querySelectorAll(".qb-radial-hub").forEach(mount);
+    main.querySelectorAll(".qb-radial-hub:not([data-qb-astro-ready='1'])").forEach(mount);
   }
   function schedule(){
     if(queued)return;
     queued=true;
-    queueMicrotask(scan);
+    // Group DOM work into the next paint instead of running a microtask
+    // for every set of injected controls while the user is scrolling.
+    window.requestAnimationFrame(scan);
+  }
+  function containsNewRadial(node){
+    return node?.nodeType===1&&
+      (node.matches?.(".qb-radial-hub")||Boolean(node.querySelector?.(".qb-radial-hub")));
   }
   function initialize(){
     if(!document.documentElement.classList.contains("qb-admin-experience"))return;
     const main=document.getElementById("main");
     if(!main)return;
-    const observer=new MutationObserver(schedule);
+    const observer=new MutationObserver(records=>{
+      // The app frequently updates scores and other content. Ignore these
+      // unrelated mutations so dragging the page stays smooth on iPadOS.
+      if(records.some(record=>[...record.addedNodes].some(containsNewRadial)))schedule();
+    });
     observer.observe(main,{subtree:true,childList:true});
     schedule();
   }
