@@ -4,8 +4,9 @@
  */
 (function () {
   "use strict";
-  const TITLE="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/518e6cb96_qb_admin_title_alpha.png";
-  const SWORD="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/83c9768ab_qb_admin_sword_alpha.png";
+  // Artes aprovadas em 12/11: logo Q minimalista e espada rústica na pedra.
+  const LOGO="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/ad2d13733_qb_admin_logo_rustico_aprovado.webp";
+  const SWORD="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/7aadc3ae8_qb_admin_espada_pedra_aprovada.webp";
   function art(cls,src) {
     const el=document.createElement("img");
     el.className=cls;el.src=src;el.alt="";el.draggable=false;
@@ -19,9 +20,10 @@
     const row=header?.querySelector(".qb-header-row");
     const utilities=header?.querySelector(".qb-header-utilities");
     if(!header||!brand||!row||!utilities)return;
-    if(!brand.querySelector(".qb-admin-title-actual")) {
-      brand.querySelectorAll(".qb-admin-laurel,.qb-admin-brand-sword-art,.qb-admin-brand-title-art,.qb-admin-visual-brand,.qb-admin-visual-sword").forEach(el=>el.remove());
-      brand.prepend(art("qb-admin-title-actual",TITLE));
+    if(!brand.querySelector(".qb-admin-logo-actual")) {
+      brand.querySelectorAll(".qb-admin-laurel,.qb-admin-brand-sword-art,.qb-admin-brand-title-art,.qb-admin-title-actual,.qb-admin-visual-brand,.qb-admin-visual-sword").forEach(el=>el.remove());
+      brand.prepend(art("qb-admin-logo-actual",LOGO));
+      row.querySelector(".qb-admin-sword-actual")?.remove();
       row.append(art("qb-admin-sword-actual",SWORD));
     }
     let more=utilities.querySelector(".qb-admin-tools-more");
