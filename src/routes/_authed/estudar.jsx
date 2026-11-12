@@ -57,6 +57,14 @@ function StudyScreen({ account }) {
   const legacy = user?.role === "admin" && account?.legacy;
   const preview = user?.role === "admin" && account?.preview === true;
   const accountId = preview || (user?.id && user.id === account?.userId) ? account.id : null;
+  // Tema cinematográfico exclusivo da sessão pessoal do administrador.
+  // Previews de contas de estudantes nunca recebem essa camada.
+  const adminExperience = user?.role === "admin" && !preview && (legacy || account?.userId === user?.id);
+  const frameMarkup = adminExperience && typeof account?.markup === "string"
+    ? account.markup
+        .replace(/data-qb-video-src="[^"]*"/, 'data-qb-video-src="https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/cf918d059_gemini_generated_video_4AED7DD6.mp4"')
+        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=1"></script></body></html>')
+    : account?.markup;
   const frameRef = useRef(null);
   const [ready, setReady] = useState(false);
   const [frameVersion, setFrameVersion] = useState(0);
@@ -238,7 +246,7 @@ function StudyScreen({ account }) {
         // The authenticated loader provides the shell for the current account.
         <iframe key={`${accountId || user?.id}:${frameVersion}`} ref={frameRef}
           title="Quebrando a Banca: Hoje, Edital, Treinar, Estudo, Simulado e Desempenho"
-          srcDoc={account.markup}
+          srcDoc={frameMarkup}
           scrolling="yes"
           sandbox={preview ? "allow-scripts allow-popups allow-popups-to-escape-sandbox" : undefined}
           style={{
