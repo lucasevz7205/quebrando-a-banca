@@ -1,0 +1,56 @@
+/* Identidade cinematográfica administrativa: todos os fundos derivam dos vídeos aprovados.
+   Não tocar no fundo global nem nos outros perfis. */
+:root.qb-admin-experience {
+  --qb-scene-image:url("https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/98e13314a_gemini_generated_video_362B7BA6_at3.jpg");
+}
+:root.qb-admin-experience #qb-ambient-background {
+  background-color:#090d15!important;
+  background-image:var(--qb-scene-image)!important;
+  background-size:cover!important;
+  background-position:center 48%!important;
+  background-repeat:no-repeat!important;
+}
+:root.qb-admin-experience #qb-ambient-background video {
+  object-fit:cover!important;
+  object-position:center 48%!important;
+  filter:saturate(1.04) contrast(1.07)!important;
+  transform:scale(1.009)!important;
+}
+:root.qb-admin-experience #qb-ambient-background .qb-ambient-veil {
+  background:linear-gradient(180deg,rgba(6,9,17,.13),rgba(6,10,20,.28) 52%,rgba(4,7,12,.52))!important;
+}
+:root.qb-admin-experience[data-theme="light"] #qb-ambient-background .qb-ambient-veil {
+  background:linear-gradient(180deg,rgba(25,20,17,.07),rgba(12,15,22,.17) 45%,rgba(8,11,17,.35))!important;
+}
+:root.qb-admin-experience[data-qb-foco="1"] #qb-ambient-background .qb-ambient-veil {
+  background:rgba(5,8,15,.92)!important;
+}
+:root.qb-admin-experience[data-theme="light"][data-qb-foco="1"] #qb-ambient-background .qb-ambient-veil {
+  background:rgba(244,243,238,.96)!important;
+}
+/* O antigo poster elétrico reaparecia dentro do menu radial em ambas as cenas. */
+:root.qb-admin-experience .qb-radial-annulus-texture {
+  background:
+    radial-gradient(circle,transparent 39%,rgba(12,12,23,.37) 69%,rgba(18,12,12,.2) 96%),
+    var(--qb-scene-image) center/cover no-repeat!important;
+  opacity:.35!important;
+  filter:contrast(1.12) saturate(.78) brightness(1.10)!important;
+}
+:root.qb-admin-experience .qb-radial-annulus-light {
+  background:conic-gradient(from -40deg,#9b5428 0deg,#e2ae59 55deg,#f0d28b 98deg,
+    #c69c63 142deg,#5d667b 196deg,#bd9b73 248deg,#bd6d44 315deg,#9b5428 360deg)!important;
+  opacity:.69!important;
+}
+:root.qb-admin-experience .qb-radial-stage::before {
+  background:radial-gradient(circle,transparent 28%,rgba(194,143,65,.16) 47%,transparent 69%)!important;
+}
+/* A própria aura mantém a navegação viva; não usar textura do vídeo antigo. */
+:root.qb-admin-experience .qb-radial-hub {
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+}
+@media(prefers-reduced-motion:reduce) {
+  :root.qb-admin-experience #qb-ambient-background video {transform:none!important;}
+}
