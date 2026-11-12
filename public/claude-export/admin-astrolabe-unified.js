@@ -4,7 +4,6 @@
 */
 (function () {
   "use strict";
-  if (!document.documentElement.classList.contains("qb-admin-experience")) return;
   const needleMarkup = [
     '<div class="qb-astro-needles" aria-hidden="true"><svg viewBox="0 0 1000 1000">',
     '<defs><linearGradient id="qb-needle-main" x1="0" y1="0" x2="1" y2="1">',
@@ -141,6 +140,7 @@
     queueMicrotask(scan);
   }
   function initialize(){
+    if(!document.documentElement.classList.contains("qb-admin-experience"))return;
     const main=document.getElementById("main");
     if(!main)return;
     const observer=new MutationObserver(schedule);
