@@ -133,19 +133,8 @@
       return await global.QBBridge.ask("omniStudyAI", payload);
     }
 
-    // Fallback local determinístico
-    return {
-      parecer: "Análise local: a assertiva foi ajustada para eliminar termos vagos e alinhar o núcleo com a jurisprudência pacificada.",
-      reformulada: {
-        enunciado: q.enunciado,
-        gabarito: q.gabarito,
-        comentario: q.comentario || "Confira a literalidade do dispositivo legal.",
-        ref: q.ref || "CF/88",
-        mecanismo: "F3",
-        vacina: "Atenção ao verbo de competência.",
-      },
-      acaoRecomendada: "reformular",
-    };
+    // Sem IA conectada não há curadoria: nada de parecer simulado (12/11/2026).
+    throw new Error("Curadoria por IA indisponível agora. A questão não foi alterada.");
   }
 
   /* Salva a questão reformulada no banco de dados e memória */
@@ -154,7 +143,18 @@
     if (!qid || !S || !S.q || !S.q.has(qid)) return false;
 
     const current = S.q.get(qid);
-    const merged = Object.assign({}, current, updatedFields, {
+    /* Item reformulado deixa de ser o item original da prova: a origem passa a dizer isso
+       e o texto e o gabarito originais ficam guardados (12/11/2026). */
+    const mudou = (updatedFields.enunciado != null && updatedFields.enunciado !== current.enunciado) ||
+      (updatedFields.gabarito != null && updatedFields.gabarito !== current.gabarito);
+    const origemAtual = String(current.origem || "");
+    const preserva = mudou && !current.originalCuradoria
+      ? { originalCuradoria: { enunciado: current.enunciado || "", gabarito: current.gabarito || "", origem: origemAtual } }
+      : {};
+    const origem = mudou && !/^reformulad[ao] por IA/i.test(origemAtual)
+      ? { origem: "reformulado por IA" + (origemAtual ? " · original: " + origemAtual : "") }
+      : {};
+    const merged = Object.assign({}, current, updatedFields, preserva, origem, {
       statusEditorial: "reformulada-curadoria",
       atualizadoEm: new Date().toISOString(),
     });

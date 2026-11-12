@@ -214,7 +214,7 @@ test("Solicitação de revisão editorial registra chamado no banco e marca ques
 test("Ambiente de estudo contém botões de curadoria e exclusão e scripts vinculados", () => {
   // 1. Elementos na interface
   assert.match(shellHtml, /question-curator\.css\?v=1/);
-  assert.match(shellHtml, /question-curator\.js\?v=1/);
+  assert.match(shellHtml, /question-curator\.js\?v=2/);
   assert.match(shellHtml, /data-curate-question=/);
   assert.match(shellHtml, /data-delete-question=/);
   assert.match(shellHtml, /window\.QBQuestionCurator\?\.open/);
@@ -222,7 +222,7 @@ test("Ambiente de estudo contém botões de curadoria e exclusão e scripts vinc
 
   // 2. Precache atualizado no Service Worker
   assert.match(swCode, /question-curator\.css\?v=1/);
-  assert.match(swCode, /question-curator\.js\?v=1/);
+  assert.match(swCode, /question-curator\.js\?v=2/);
   assert.match(swCode, /qb-static-axon-v[7-9]/);
 
   // 3. Schema do servidor suporta task curate-question
