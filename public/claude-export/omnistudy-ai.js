@@ -155,7 +155,7 @@
       {
         id: "welcome-1",
         role: "model",
-        text: "Olá! Sou o seu **Tutor Socrático OmniStudy IA** integrado ao Quebrando a Banca.\n\nMeu papel é guiar seu raciocínio, desarmar pegadinhas Cebraspe (F1–F10) e consolidar sua retenção ativa.\n\nQual tópico do edital ou questão vamos dissecar agora?",
+        text: "Olá! Sou o seu **Tutor Socrático O Arquiteto** integrado ao Quebrando a Banca.\n\nMeu papel é guiar seu raciocínio, desarmar pegadinhas Cebraspe (F1–F10) e consolidar sua retenção ativa.\n\nQual tópico do edital ou questão vamos dissecar agora?",
         timestamp: "Agora",
       },
     ],
@@ -297,7 +297,7 @@
         id: "welcome-1",
         role: "model",
         text:
-          "Olá! Sou o seu **Tutor Socrático OmniStudy IA** do Quebrando a Banca.\n\nVou guiar seu raciocínio sobre as matérias de **" +
+          "Olá! Sou o seu **Tutor Socrático O Arquiteto** do Quebrando a Banca.\n\nVou guiar seu raciocínio sobre as matérias de **" +
           name +
           "**, desarmar pegadinhas da banca e consolidar sua retenção ativa.\n\nQual tópico do seu edital vamos estudar agora?",
         timestamp: "Agora",
@@ -783,7 +783,7 @@
               {
                 id: "welcome-" + curTopic.id,
                 role: "model",
-                text: `Olá! Sou o seu **Tutor Socrático OmniStudy IA**.\n\nEstamos focados em **${curSubject.name}** — *${curTopic.title}*.\n\nQual dúvida conceitual, pegadinha Cebraspe ou dispositivo deste assunto vamos dissecar agora?`,
+                text: `Olá! Sou o seu **Tutor Socrático O Arquiteto**.\n\nEstamos focados em **${curSubject.name}** — *${curTopic.title}*.\n\nQual dúvida conceitual, pegadinha Cebraspe ou dispositivo deste assunto vamos dissecar agora?`,
                 timestamp: "Agora",
               },
             ],
@@ -1762,8 +1762,8 @@
       studioBtn.type = "button";
       studioBtn.id = "omni-studio-trigger";
       studioBtn.className = "omni-studio-trigger";
-      studioBtn.title = "Abrir Estúdio Cognitivo OmniStudy IA (Alt+O)";
-      studioBtn.innerHTML = `<span>⚡ OmniStudy IA</span>`;
+      studioBtn.title = "Abrir O Arquiteto (Alt+O)";
+      studioBtn.innerHTML = `<span>⚡ O Arquiteto</span>`;
       studioBtn.addEventListener("click", () => openStudio());
 
       topActions.insertBefore(studioBtn, topActions.firstChild);
@@ -1774,10 +1774,10 @@
     backdrop.id = "omni-drawer-backdrop";
     backdrop.className = "omni-drawer-backdrop";
     backdrop.innerHTML = `
-      <aside class="omni-drawer" role="dialog" aria-label="Estúdio Cognitivo OmniStudy IA">
+      <aside class="omni-drawer" role="dialog" aria-label="O Arquiteto">
         <header class="omni-drawer-header">
           <div class="omni-drawer-title">
-            <span class="omni-badge">OmniStudy AI 2.0</span>
+            <span class="omni-badge">O Arquiteto</span>
             <div>
               <div style="font-size:15px;font-weight:800;color:#fff">Estúdio de Aprendizagem Ativa · Quebrando a Banca</div>
               <div style="font-size:11px;color:#94a3b8">Tutor Socrático • Técnica Feynman • Caderno Cornell • SRS 3D • Web Audio Procedural</div>
