@@ -4,10 +4,10 @@
 (function(){
 "use strict";
 const media={
-  // Associação invertida a pedido do usuário: cena 4AED7DD6 no claro,
-  // cena 362B7BA6 no escuro, sempre com o respectivo quadro estático.
-  light:{video:"https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/cf918d059_gemini_generated_video_4AED7DD6.mp4",poster:"https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/5c37ea4ce_gemini_generated_video_4AED7DD6_at3.jpg"},
-  dark:{video:"https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/e307497be_gemini_generated_video_362B7BA6.mp4",poster:"https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/98e13314a_gemini_generated_video_362B7BA6_at3.jpg"}
+  // Novos vídeos aprovados: cena diurna CFD6C054 (claro) e noturna FA7F3298 (escuro).
+  // O pôster de cada tema é um quadro do mesmo vídeo, inclusive no modo estático.
+  light:{video:"https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/975f1c2b3_gemini_generated_video_CFD6C054.mp4",poster:"https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/44c20f8ca_gemini_generated_video_CFD6C054_frame.jpg"},
+  dark:{video:"https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/1af59e0ae_gemini_generated_video_FA7F3298.mp4",poster:"https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/dc13890b5_gemini_generated_video_FA7F3298_frame.jpg"}
 };
 function initialize(){
   const html=document.documentElement;
