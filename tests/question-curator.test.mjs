@@ -223,6 +223,7 @@ test("Ambiente de estudo contém botões de curadoria e exclusão e scripts vinc
   // 2. Precache atualizado no Service Worker
   assert.match(swCode, /question-curator\.css\?v=1/);
   assert.match(swCode, /question-curator\.js\?v=2/);
+  assert.match(swCode, /qb-static-axon-v[7-9]/);
   assert.match(swCode, /qb-static-axon-v(?:[7-9]|10)/);
 
   // 3. Schema do servidor suporta task curate-question

@@ -161,6 +161,19 @@ function safeJsonParse(raw, fallback) {
 }
 
 /* Função pedagógica do Tutor Omni (11/11/2026), alinhada a claude/Metodo_de_Estudo.md e Regras_de_Perguntas.md */
+/* Regras de fidelidade e de formulação para tudo que a IA cria para o treino (12/11/2026),
+ * conforme claude/Regras_de_Perguntas.md. */
+const ITEM_RULES = [
+  "REGRAS DE FIDELIDADE E FORMULAÇÃO (obrigatórias):",
+  "- Use como fonte só os DADOS fornecidos (mapa, Cornell, texto). Não acrescente regra, número, prazo, artigo ou jurisprudência que não esteja neles.",
+  "- Só cite dispositivo legal que apareça nos dados; nunca transcreva texto de lei de memória. Sem base nos dados, deixe o campo de referência vazio.",
+  "- Cada pergunta ou item testa UMA regra, tem uma única leitura razoável e resposta definida e conferível. Se a resposta for lista, diga quantos itens.",
+  "- Citações entre aspas; quando houver contexto, ele vem antes da assertiva (\"Situação hipotética: ... Assertiva: ...\").",
+  "- Item ERRADO: o comentário aponta o trecho exato que o torna errado e traz a versão correta por extenso (\"Versão correta: “...”\").",
+  "- Item CERTO: o comentário aponta o trecho dos dados que o confirma.",
+  "- Nunca apresente o que você criou como questão de prova real.",
+].join("\n");
+
 const TUTOR_RULES = [
   "Regras obrigatórias:",
   "1. Responda em português, curto e direto.",
@@ -432,11 +445,13 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
         `Você é o Agente Gerador de Flashcards de Elite para concursos públicos de alto nível (Cebraspe / Câmara dos Deputados).`,
         `Tema em Foco: "${data.topic}". Nível de Rigor: ${difficulty}.`,
         data.targetNodeId ? `Foco prioritário no conceito/nó: "${data.targetNodeId}".` : "",
-        subsidioContext || "Gere os cartões com base na doutrina e legislação atualizada do edital.",
+        subsidioContext
+          ? ITEM_RULES
+          : "ATENÇÃO: não há material de apoio. Gere só cartões sobre regras de que você tenha certeza, deixe 'legalRef' vazio quando não tiver certeza do dispositivo e comece cada 'mnemonicHint' com \"[sem fonte: conferir]\".",
         `Gere exatamente ${count} flashcards que forcem evocação ativa real (Active Recall), e NÃO mero reconhecimento passivo.`,
         "Critérios de Excelência:",
         "1. Pergunta (frente): direta, instigante, focando em regra geral vs exceção, distinção 'X vs Y', quórum ou competência.",
-        "2. Resposta (verso): resposta nuclear em poucas linhas, acompanhada da fundamentação legal/regimental exata.",
+        "2. Resposta (verso): só a resposta curta e conferível; a fundamentação vai em 'legalRef', apenas se constar no material.",
         "3. Contraste mnemônico: sempre incluir o contraste 'X (e não Y)' ou gatilho de memorização.",
         "4. Mecanismo da Banca: associar a pegadinha da banca Cebraspe (F1 a F10 para itens falsos; V1 a V4 para exceções e literais).",
         "5. Vacina: dica cirúrgica para desarmar a armadilha na hora da prova.",
@@ -857,6 +872,7 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
         isMC
           ? `Gere exatamente ${count} questões inéditas de MÚLTIPLA ESCOLHA com 5 alternativas (A, B, C, D, E), apenas 1 correta e 4 distratores plausíveis.`
           : `Gere exatamente ${count} itens inéditos no padrão CERTO/ERRADO (C/E · CEBRASPE). Nos itens ERRADOS ('E'), aplique um mecanismo F1–F10 (ex: F3 troca de conceito, F5 inversão regra/exceção, F4 alteração de prazo/quórum). Nos itens CERTOS ('C'), use V1–V4 (ex: V1 paráfrase fiel, V4 exceção real).`,
+        ITEM_RULES,
         "Cada questão será submetida logo em seguida a um AGENTE DISCRIMINADOR ADVERSÁRIO CEGO (que tentará encontrar ambiguidades, extrapolações ou pistas artificiais). Portanto, seja cirúrgico e unívoco.",
         `TÓPICO: ${data.topicTitle} (${data.topicId})`,
         `MAPA MENTAL DO USUÁRIO (DADOS):\n${mapJson}`,
@@ -1091,8 +1107,9 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
         "DIRETRIZES DE REVISÃO E CURADORIA:",
         "1. Avalie com rigor técnico se a queixa procede.",
         "2. Se a assertiva tiver dubiedade, inversão indevida ou estiver desatualizada, reescreva-a no padrão oficial Cebraspe (sem palavras vagas, sem dupla interpretação).",
-        "3. Defina o gabarito correto e irrefutável com base na legislação/jurisprudência vigente.",
-        "4. Elabore um comentário didático, transcrevendo o artigo/dispositivo legal que fundamenta o gabarito.",
+        "3. Defina o gabarito só se os dados da questão (enunciado, comentário e referência originais) permitirem certeza. Se depender de norma que você não consegue confirmar por eles, diga isso no parecer, recomende 'excluir_se_irremediavel' ou revisão humana e NÃO troque o gabarito.",
+        "4. Comentário didático que aponte o trecho exato que torna o item certo ou errado. Cite o dispositivo da referência original; nunca transcreva texto de lei de memória. Em item Errado, inclua a versão correta por extenso (\"Versão correta: “...”\").",
+        "4a. A reformulação deve testar UMA regra, sem dupla leitura, com citações entre aspas e contexto antes da assertiva.",
         "5. Identifique o mecanismo Cebraspe (F1 a F10 para itens errados; V1 a V4 para itens certos que parecem errados) e a vacina.",
         "6. Retorne JSON estruturado com 'parecer', 'reformulada', 'acaoRecomendada' ('reformular' ou 'excluir_se_irremediavel').",
       ].join("\n");
