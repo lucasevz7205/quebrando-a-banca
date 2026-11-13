@@ -55,3 +55,31 @@
 :root.qb-admin-experience .qb-flashcard-focus .cq{font-size:clamp(20px,3vw,28px)!important}
 @media (max-width:600px){:root.qb-admin-experience .qb-flashcard .srs{min-height:56px}}
 @media (prefers-reduced-motion:reduce){:root.qb-admin-experience .qb-flashcard{transition:none}}
+
+/* Mapa 3D: paleta noturna e rótulos dos nós no marinho/bronze/dourado.
+   As cores de domínio dos nós (forte, deficiente, em desenvolvimento…) continuam as mesmas, porque significam o estado do estudo. */
+:root.qb-admin-experience .qb-map3,
+:root.qb-admin-experience .qb-map3-stage,
+:root.qb-admin-experience .qb-map3-concept{
+  --qb-night-deep:#0A1E34;--qb-night-raised:#173653;--qb-night-active:#1E4466;
+  --qb-night-edge:#A58A67;--qb-night-ink:#F1E8D5;--qb-night-muted:#C9BEA8;--qb-night-accent:#D0B386;
+}
+:root.qb-admin-experience{
+  --qb-map-1:#D0B386;--qb-map-2:#A58A67;--qb-map-3:#6F9BC4;--qb-map-4:#C26A72;
+  --qb-map-5:#8FB3A6;--qb-map-6:#B79F78;--qb-map-7:#7C93B8;--qb-map-8:#D9A36A;
+}
+:root.qb-admin-experience .qb-map3-stage{
+  background:radial-gradient(ellipse at 50% 48%,rgba(30,68,102,.9),transparent 68%),
+    radial-gradient(circle,rgba(208,179,134,.16) 0 1px,transparent 1.6px) 0 0/20px 20px,#0A1E34;
+}
+:root.qb-admin-experience .qb-map3-tag{
+  border:1px solid rgba(165,138,103,.7);background:rgba(10,30,52,.92);color:#F1E8D5;
+}
+:root.qb-admin-experience .qb-map3-tag[aria-pressed="true"]{border-color:#A92E3A;color:#F1E8D5;box-shadow:0 0 0 1px #A92E3A}
+:root.qb-admin-experience .qb-map3-path button{border:1px solid rgba(165,138,103,.6);background:rgba(23,54,83,.9);color:#E9DEC9}
+:root.qb-admin-experience .qb-map3-path button[aria-current]{color:#F1E8D5;border-color:#D0B386}
+:root.qb-admin-experience .qb-map3-choices button,
+:root.qb-admin-experience .qb-map3-bar button{border:1px solid rgba(165,138,103,.6);background:rgba(23,54,83,.9);color:#E9DEC9}
+:root.qb-admin-experience .qb-map3-choices button[aria-pressed="true"],
+:root.qb-admin-experience .qb-map3-bar button:hover{border-color:#D0B386;background:rgba(208,179,134,.16)}
+:root.qb-admin-experience .qb-map3 button:focus-visible{outline:2px solid #D0B386;outline-offset:2px}
