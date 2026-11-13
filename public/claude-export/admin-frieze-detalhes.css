@@ -1,0 +1,4 @@
+/* Detalhes adicionais do friso (PDF): louros, inscrições, anéis laterais e textura metálica. Sem mudanças em dados ou rotas. */
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav::before{
+  background:url("/claude-export/admin-frieze-navigation-v3.svg") center/100% 100% no-repeat!important;
+}
