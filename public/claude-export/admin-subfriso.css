@@ -43,3 +43,6 @@
   :root.qb-admin-experience .qb-tab-shell > .subnav.qb-header-tabs button{padding:8px 12px!important;font-size:13px}
 }
 @media(prefers-reduced-motion:reduce){:root.qb-admin-experience .qb-tab-shell > .subnav.qb-header-tabs button{transition:none!important}}
+
+/* Topo sempre compacto no admin: o botão que alternava para o topo amplo some. */
+:root.qb-admin-experience #qb-cockpit-toggle{display:none!important}
