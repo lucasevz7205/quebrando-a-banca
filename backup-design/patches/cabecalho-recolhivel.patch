@@ -1,0 +1,72 @@
+diff --git a/public/claude-export/admin-cabecalho-recolhivel.css b/public/claude-export/admin-cabecalho-recolhivel.css
+new file mode 100644
+index 0000000..0d4a9ab
+--- /dev/null
++++ b/public/claude-export/admin-cabecalho-recolhivel.css
+@@ -0,0 +1,17 @@
++/* PROTÓTIPO — faixa superior do admin recolhível (OmniStudy, prova, sincronizado, fundo, topo, ferramentas).
++   Recolhida, mostra só o botão. Não move elementos, dados nem rotas. */
++:root.qb-admin-experience header.top.qb-app-header.qb-cabecalho-recolhido .qb-header-utilities > *:not(.qb-cabecalho-toggle){
++  display:none!important;
++}
++:root.qb-admin-experience .qb-cabecalho-toggle{
++  display:inline-flex!important;align-items:center;gap:6px;
++  padding:6px 12px;border-radius:999px;cursor:pointer;
++  border:1px solid rgba(165,138,103,.7);background:rgba(10,30,52,.82);
++  color:#E9DEC9;font:600 12px/1 system-ui,sans-serif;
++}
++:root.qb-admin-experience .qb-cabecalho-toggle:focus-visible{outline:2px solid #D0B386;outline-offset:2px;}
++:root.qb-admin-experience .qb-cabecalho-toggle::after{content:"▴";font-size:11px;transition:transform .25s ease;}
++:root.qb-admin-experience header.top.qb-app-header.qb-cabecalho-recolhido .qb-cabecalho-toggle::after{transform:rotate(180deg);}
++@media(prefers-reduced-motion:reduce){
++  :root.qb-admin-experience .qb-cabecalho-toggle::after{transition:none!important;}
++}
+diff --git a/public/claude-export/admin-cabecalho-recolhivel.js b/public/claude-export/admin-cabecalho-recolhivel.js
+new file mode 100644
+index 0000000..967377e
+--- /dev/null
++++ b/public/claude-export/admin-cabecalho-recolhivel.js
+@@ -0,0 +1,30 @@
++/* PROTÓTIPO — botão para recolher e expandir a faixa superior do admin.
++   Só acrescenta um botão ao final de .qb-header-utilities e alterna uma classe. */
++(function () {
++  "use strict";
++  function mount(header) {
++    const utilities = header.querySelector(".qb-header-utilities");
++    if (!utilities || utilities.querySelector(".qb-cabecalho-toggle")) return;
++    const btn = document.createElement("button");
++    btn.type = "button";
++    btn.className = "qb-cabecalho-toggle";
++    btn.setAttribute("aria-expanded", "true");
++    btn.textContent = "Recolher";
++    btn.addEventListener("click", function () {
++      const collapsed = header.classList.toggle("qb-cabecalho-recolhido");
++      btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
++      btn.firstChild.textContent = collapsed ? "Expandir" : "Recolher";
++    });
++    utilities.append(btn);
++  }
++  function scan() {
++    document.querySelectorAll("header.top.qb-app-header").forEach(mount);
++  }
++  function init() {
++    if (!document.documentElement.classList.contains("qb-admin-experience")) return;
++    new MutationObserver(scan).observe(document.body, { subtree: true, childList: true });
++    scan();
++  }
++  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
++  else init();
++})();
+diff --git a/src/routes/_authed/estudar.jsx b/src/routes/_authed/estudar.jsx
+index c1a4953..787e430 100644
+--- a/src/routes/_authed/estudar.jsx
++++ b/src/routes/_authed/estudar.jsx
+@@ -64,7 +64,7 @@ function StudyScreen({ account }) {
+     ? account.markup
+         .replace(/data-qb-video-src="[^"]*"/, 'data-qb-video-src="https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/e307497be_gemini_generated_video_362B7BA6.mp4"')
+         .replace('poster="/claude-export/ambient-poster.jpg"', 'poster="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/98e13314a_gemini_generated_video_362B7BA6_at3.jpg"')
+-        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=3"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=7"><script defer src="/claude-export/admin-art.js?v=5"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze.css?v=2"><link rel="stylesheet" href="/claude-export/admin-astrolabe-unified.css?v=1"><script defer src="/claude-export/admin-astrolabe-unified.js?v=1"></script></body></html>')
++        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=3"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=7"><link rel="stylesheet" href="/claude-export/admin-cabecalho-recolhivel.css?v=1"><script defer src="/claude-export/admin-art.js?v=5"></script><script defer src="/claude-export/admin-cabecalho-recolhivel.js?v=1"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze.css?v=2"><link rel="stylesheet" href="/claude-export/admin-astrolabe-unified.css?v=1"><script defer src="/claude-export/admin-astrolabe-unified.js?v=1"></script></body></html>')
+     : account?.markup;
+   const frameRef = useRef(null);
+   const [ready, setReady] = useState(false);

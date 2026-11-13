@@ -1,0 +1,410 @@
+diff --git a/public/claude-export/admin-mapa-cartoes.css b/public/claude-export/admin-mapa-cartoes.css
+new file mode 100644
+index 0000000..e9bfc78
+--- /dev/null
++++ b/public/claude-export/admin-mapa-cartoes.css
+@@ -0,0 +1,57 @@
++/* Mapa mental e flashcards no visual do admin (azul-marinho, bronze e dourado). Só aparência: nenhuma função muda. */
++:root.qb-admin-experience .qb-map3-stage{
++  --axon-blue:#D0B386;--axon-lilac:#A58A67;
++  border:1px solid rgba(165,138,103,.55);border-radius:18px;
++  background:radial-gradient(circle at 50% 50%,rgba(23,54,83,.96),rgba(10,30,52,.98) 72%);
++  box-shadow:inset 0 1px 0 rgba(208,179,134,.18);
++}
++:root.qb-admin-experience .qb-map3-concept-backdrop{
++  background:radial-gradient(ellipse at 52% 40%,rgba(23,54,83,.78) 0%,rgba(8,22,40,.9) 66%,rgba(6,16,30,.94) 100%);
++}
++:root.qb-admin-experience .qb-map3-concept-card{
++  border:1.5px solid #A58A67;background:linear-gradient(180deg,#14304D,#0A1E34);
++  box-shadow:0 18px 40px rgba(0,0,0,.45),inset 0 1px 0 rgba(208,179,134,.2);
++}
++:root.qb-admin-experience .qb-map3-concept-head{border-bottom:1px solid rgba(165,138,103,.4);background:rgba(23,54,83,.45)}
++:root.qb-admin-experience .qb-map3-concept-kicker{color:#D0B386;text-shadow:none}
++:root.qb-admin-experience .qb-map3-concept-head p{color:#C9BEA8}
++:root.qb-admin-experience .qb-map3-concept .qb-map3-detail h3{color:#F1E8D5;font-family:Georgia,"Times New Roman",serif}
++:root.qb-admin-experience .qb-map3-concept .qb-map3-detail{color:#E9DEC9}
++:root.qb-admin-experience .qb-map3-concept .qb-map3-detail .m-det p{color:#E9DEC9}
++:root.qb-admin-experience .qb-map3-concept .qb-map3-detail :is(summary,.lnk,.m-t){color:#D0B386}
++:root.qb-admin-experience .qb-map3-concept .qb-map3-detail .m-nota{background:rgba(23,54,83,.7);border:1px solid rgba(165,138,103,.5)}
++:root.qb-admin-experience .qb-map3-concept-close{
++  min-width:44px;min-height:44px;border:1px solid rgba(165,138,103,.6);background:rgba(10,30,52,.8);color:#E9DEC9;
++}
++:root.qb-admin-experience .qb-map3-concept-foot{border-top:1px solid rgba(165,138,103,.4);background:rgba(10,30,52,.7);color:#C9BEA8}
++:root.qb-admin-experience .qb-map3-stage :is(button,a,[tabindex]):focus-visible{outline:2px solid #D0B386;outline-offset:2px}
++
++/* Flashcards */
++:root.qb-admin-experience .qb-flashcard{
++  border:1.5px solid #A58A67;border-left:4px solid #A58A67;border-radius:20px;
++  background:linear-gradient(160deg,rgba(23,54,83,.95),rgba(10,30,52,.96));
++  box-shadow:inset 0 1px 0 rgba(208,179,134,.2),0 12px 30px rgba(0,0,0,.35);
++  color:#E9DEC9;
++}
++:root.qb-admin-experience .qb-flashcard:hover{box-shadow:inset 0 1px 0 rgba(208,179,134,.25),0 16px 34px rgba(0,0,0,.4)}
++:root.qb-admin-experience .qb-flashcard .cq{font-family:Georgia,"Times New Roman",serif;color:#F1E8D5}
++:root.qb-admin-experience .qb-flashcard .qb-flash-state{
++  background:transparent;color:#B79F78;border:0;letter-spacing:.14em;font-weight:700;text-transform:uppercase;font-size:11px;
++}
++:root.qb-admin-experience .qb-flashcard[data-revealed="true"]{border-left-color:#D0B386}
++:root.qb-admin-experience .qb-flashcard[data-revealed="true"] .qb-flash-state{background:transparent;color:#D0B386}
++:root.qb-admin-experience .qb-flashcard textarea{
++  background:rgba(10,30,52,.9);border:1.5px solid #A58A67;color:#F1E8D5;
++}
++:root.qb-admin-experience .qb-flashcard textarea:focus{outline:2px solid #D0B386;outline-offset:1px}
++:root.qb-admin-experience .qb-flashcard .srs{
++  min-height:52px;border-radius:14px;border:1.5px solid #A58A67;background:rgba(23,54,83,.9);color:#F1E8D5;font-weight:700;
++}
++:root.qb-admin-experience .qb-flashcard .srs-n{border-color:#A92E3A;background:rgba(169,46,58,.2)}
++:root.qb-admin-experience .qb-flashcard .srs-d{border-color:#A58A67}
++:root.qb-admin-experience .qb-flashcard .srs-b,
++:root.qb-admin-experience .qb-flashcard .srs-f{border-color:#D0B386;background:rgba(208,179,134,.16)}
++:root.qb-admin-experience .qb-flashcard .srs:focus-visible{outline:2px solid #D0B386;outline-offset:2px}
++:root.qb-admin-experience .qb-flashcard-focus .cq{font-size:clamp(20px,3vw,28px)!important}
++@media (max-width:600px){:root.qb-admin-experience .qb-flashcard .srs{min-height:56px}}
++@media (prefers-reduced-motion:reduce){:root.qb-admin-experience .qb-flashcard{transition:none}}
+diff --git a/public/claude-export/assistant.js b/public/claude-export/assistant.js
+index a78281f..38d9a5c 100644
+--- a/public/claude-export/assistant.js
++++ b/public/claude-export/assistant.js
+@@ -59,7 +59,7 @@
+     finally{busy=false;btn.disabled=false;btn.textContent='Consultar IA (usa créditos)'}
+   }
+   function mount(S){state=S;if(document.getElementById('qb-chat-launch'))return;
+-    const root=document.createElement('div');root.id='qb-assistant-root';root.innerHTML=`<button id="qb-chat-launch" class="qb-chat-launch" type="button" aria-haspopup="dialog" aria-controls="omni-drawer" title="Abrir OmniStudy IA (Tutor, Cornell e Laboratório)"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>⚡ Omni</button>
++    const root=document.createElement('div');root.id='qb-assistant-root';root.innerHTML=`<button id="qb-chat-launch" class="qb-chat-launch" type="button" aria-haspopup="dialog" aria-controls="omni-drawer" title="Abrir O Arquiteto (Tutor, Cornell e Laboratório)"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>⚡ O Arquiteto</button>
+       <section id="qb-chat-panel" class="qb-chat-panel" role="dialog" aria-label="Assistente Quebrando a Banca" hidden><div class="qb-chat-header"><div class="qb-chat-heading"><span class="qb-chat-orb" aria-hidden="true"><span></span></span><div class="qb-chat-titles"><strong>Assistente de estudo</strong><small>Inteligência aplicada à sua preparação</small><span class="qb-chat-status">Análise local · sem créditos</span></div></div><button type="button" id="qb-chat-close" class="qb-chat-close" aria-label="Fechar">✕</button></div><div id="qb-chat-messages" class="qb-chat-messages" aria-live="polite"></div><div class="qb-chat-chips" aria-label="Perguntas rápidas ao assistente"><button type="button" data-qb-prompt="Como está meu desempenho?"><span class="qb-chat-chip-icon" aria-hidden="true">↗</span><span class="qb-chat-chip-label"><strong>Desempenho</strong><small>Meus resultados</small></span></button><button type="button" data-qb-prompt="Quais são as matérias mais fracas?"><span class="qb-chat-chip-icon" aria-hidden="true">◈</span><span class="qb-chat-chip-label"><strong>Pontos fracos</strong><small>Onde reforçar</small></span></button><button type="button" data-qb-prompt="Quais tarefas ainda faltam?"><span class="qb-chat-chip-icon" aria-hidden="true">✓</span><span class="qb-chat-chip-label"><strong>Tarefas</strong><small>Meu planejamento</small></span></button><button type="button" data-qb-prompt="Como estão minhas revisões?"><span class="qb-chat-chip-icon" aria-hidden="true">↺</span><span class="qb-chat-chip-label"><strong>Revisões</strong><small>O que retomar</small></span></button></div><form id="qb-chat-form" class="qb-chat-form"><input id="qb-chat-input" type="text" placeholder="Pergunte sobre seus estudos..." autocomplete="off" maxlength="500" aria-label="Pergunta ao assistente"/><button type="submit">Enviar</button></form><div class="qb-chat-opt"><span>Modo local sem custo. IA generativa só com confirmação.</span><button id="qb-chat-ai" type="button">Consultar IA (usa créditos)</button></div></section>`;
+     document.body.appendChild(root);
+     document.getElementById('qb-chat-launch').addEventListener('click',()=>{
+diff --git a/public/claude-export/card-curator.js b/public/claude-export/card-curator.js
+index bdb653c..0d4557f 100644
+--- a/public/claude-export/card-curator.js
++++ b/public/claude-export/card-curator.js
+@@ -47,7 +47,7 @@
+         Object.entries(PROBLEMAS).map(([v, l]) => '<option value="' + v + '"' + (s.issue === v ? " selected" : "") + ">" + l + "</option>").join("") + "</select>";
+       h += '<label class="ps">Observação (opcional)</label><textarea data-cc-obs rows="2" placeholder="Ex.: a pergunta não diz se é prazo em dias ou sessões">' + esc(s.obs) + "</textarea>";
+       if (s.erro) h += '<p class="ps" style="color:var(--errado)">' + esc(s.erro) + "</p>";
+-      h += '<div class="row"><button class="btn small" data-cc-pedir ' + (s.fase === "run" ? "disabled" : "") + ">" + (s.fase === "run" ? "Omni reformulando…" : "Pedir reformulação ao Omni") + "</button>" +
++      h += '<div class="row"><button class="btn small" data-cc-pedir ' + (s.fase === "run" ? "disabled" : "") + ">" + (s.fase === "run" ? "O Arquiteto reformulando…" : "Pedir reformulação ao Arquiteto") + "</button>" +
+         '<button class="btn ghost small" data-cc-manual>Editar eu mesmo</button><button class="btn ghost small" data-cc-fechar>Cancelar</button></div>';
+     } else {
+       const r = s.res;
+@@ -98,7 +98,7 @@
+             userObservation: s.obs,
+             referencia: hooks.referencia ? hooks.referencia(t.topico) : undefined,
+           });
+-          if (!res || !Array.isArray(res.cartoes) || !res.cartoes.length) throw new Error("o Omni não devolveu um cartão");
++          if (!res || !Array.isArray(res.cartoes) || !res.cartoes.length) throw new Error("O Arquiteto não devolveu um cartão");
+           s.res = res; s.fase = "ok";
+         } catch (err) {
+           s.fase = "erro";
+@@ -114,7 +114,7 @@
+         cartoes[t.i] = Object.assign({}, atual, novos[0], {
+           original: atual.original || { tema: atual.tema || "", q: atual.q || "", a: atual.a || [], src: atual.src || "" },
+           reformuladoEm: new Date().toISOString(),
+-          reformuladoPor: s.res.parecer ? "Omni + estudante" : "estudante",
++          reformuladoPor: s.res.parecer ? "O Arquiteto + estudante" : "estudante",
+         });
+         novos.slice(1).forEach(c => cartoes.push(Object.assign({}, c, { derivadoDe: t.topico + "@" + t.i, criadoEm: new Date().toISOString() })));
+         const doc = Object.assign({}, t.rv, { cartoes, atualizadoEm: new Date().toISOString() });
+diff --git a/public/claude-export/map-evocar.js b/public/claude-export/map-evocar.js
+index a63758c..e9e9d9a 100644
+--- a/public/claude-export/map-evocar.js
++++ b/public/claude-export/map-evocar.js
+@@ -30,7 +30,7 @@
+   }
+ 
+   function iaHTML(st) {
+-    if (st.fase === "corrigindo") return '<p class="qb-evo-status" role="status">Omni corrigindo a sua evocação…</p>';
++    if (st.fase === "corrigindo") return '<p class="qb-evo-status" role="status">O Arquiteto corrigindo a sua evocação…</p>';
+     if (st.erroIA) return '<p class="qb-evo-status qb-evo-falha" role="status">' + esc(st.erroIA) + "</p>";
+     const r = st.ia;
+     if (!r) return "";
+@@ -41,7 +41,7 @@
+           "<li>" + (e.trecho ? "“" + esc(e.trecho) + "”: " : "") + esc(e.problema) +
+           (e.correcao ? '<br><span class="qb-evo-certo">Correto: ' + esc(e.correcao) + "</span>" : "") + "</li>").join("") + "</ul>"
+       : "";
+-    return '<div class="qb-evo-ia"><p><span class="pill ' + v[0] + '">Omni: ' + v[1] + "</span></p>" +
++    return '<div class="qb-evo-ia"><p><span class="pill ' + v[0] + '">O Arquiteto: ' + v[1] + "</span></p>" +
+       '<p class="qb-evo-sua"><b>Sua evocação:</b> ' + marcarErros(st.resp, r.erros) + "</p>" +
+       erros + li("Faltou", r.faltou) + li("Acertou", r.acertou) +
+       (r.pergunta ? '<p class="qb-evo-pergunta"><b>Recupere:</b> ' + esc(r.pergunta) + "</p>" : "") +
+@@ -58,7 +58,7 @@
+         '<label class="qb-evo-label" for="qb-evo-resp">O que este conceito significa? Escreva de memória a regra, um exemplo e a pegadinha, se lembrar.</label>' +
+         '<textarea id="qb-evo-resp" class="qb-evo-resp" data-evo-resp maxlength="2000" rows="4" placeholder="Sem olhar: escreva o que você lembra…">' + esc(st.resp) + "</textarea>" +
+         '<div class="qb-evo-acoes">' +
+-        (ctx.iaDisponivel ? '<button type="button" class="btn small" data-evo-ia ' + (st.fase === "corrigindo" ? "disabled" : "") + ">Corrigir com Omni</button>" : "") +
++        (ctx.iaDisponivel ? '<button type="button" class="btn small" data-evo-ia ' + (st.fase === "corrigindo" ? "disabled" : "") + ">Corrigir com O Arquiteto</button>" : "") +
+         '<button type="button" class="btn ghost small" data-evo-ver>Comparar com a explicação</button>' +
+         '<button type="button" class="btn ghost small" data-evo-nao>Não lembro</button></div>' +
+         iaHTML(st) + "</section>";
+@@ -91,7 +91,7 @@
+         st.fase = "revelado";
+       } catch (err) {
+         st.fase = "escrever";
+-        st.erroIA = "Omni indisponível agora (" + (err?.message || "sem conexão") + "). Compare você mesmo com a explicação.";
++        st.erroIA = "O Arquiteto indisponível agora (" + (err?.message || "sem conexão") + "). Compare você mesmo com a explicação.";
+       }
+       hooks.rerender();
+     });
+diff --git a/public/claude-export/mindmap-studio.js b/public/claude-export/mindmap-studio.js
+index 6de5c53..eb50de3 100644
+--- a/public/claude-export/mindmap-studio.js
++++ b/public/claude-export/mindmap-studio.js
+@@ -1518,7 +1518,7 @@
+                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-cornell-replace">Substituir Mapa pela Base Cornell</button>
+                   <button type="button" class="qb-mm-btn qb-mm-btn-small" id="qb-mm-import-cornell-merge">＋ Mesclar Pistas Cornell</button>
+                   <button type="button" class="qb-mm-btn qb-mm-btn-small" style="background:#0284c7;color:#fff" id="qb-mm-ai-rebuild-cornell">✨ Estruturar com IA</button>`
+-                : `<span style="font-size:12px;color:#94a3b8">Nenhuma folha salva ainda. Abra o botão <b>⚡ OmniStudy IA → Caderno Cornell</b> para criar sua base.</span>`
++                : `<span style="font-size:12px;color:#94a3b8">Nenhuma folha salva ainda. Abra o botão <b>⚡ O Arquiteto → Caderno Cornell</b> para criar sua base.</span>`
+             }
+             ${
+               all.length
+diff --git a/public/claude-export/omnistudy-ai.js b/public/claude-export/omnistudy-ai.js
+index d85dedd..cff774b 100644
+--- a/public/claude-export/omnistudy-ai.js
++++ b/public/claude-export/omnistudy-ai.js
+@@ -155,7 +155,7 @@
+       {
+         id: "welcome-1",
+         role: "model",
+-        text: "Olá! Sou o seu **Tutor Socrático OmniStudy IA** integrado ao Quebrando a Banca.\n\nMeu papel é guiar seu raciocínio, desarmar pegadinhas Cebraspe (F1–F10) e consolidar sua retenção ativa.\n\nQual tópico do edital ou questão vamos dissecar agora?",
++        text: "Olá! Sou o seu **Tutor Socrático O Arquiteto** integrado ao Quebrando a Banca.\n\nMeu papel é guiar seu raciocínio, desarmar pegadinhas Cebraspe (F1–F10) e consolidar sua retenção ativa.\n\nQual tópico do edital ou questão vamos dissecar agora?",
+         timestamp: "Agora",
+       },
+     ],
+@@ -297,7 +297,7 @@
+         id: "welcome-1",
+         role: "model",
+         text:
+-          "Olá! Sou o seu **Tutor Socrático OmniStudy IA** do Quebrando a Banca.\n\nVou guiar seu raciocínio sobre as matérias de **" +
++          "Olá! Sou o seu **Tutor Socrático O Arquiteto** do Quebrando a Banca.\n\nVou guiar seu raciocínio sobre as matérias de **" +
+           name +
+           "**, desarmar pegadinhas da banca e consolidar sua retenção ativa.\n\nQual tópico do seu edital vamos estudar agora?",
+         timestamp: "Agora",
+@@ -783,7 +783,7 @@
+               {
+                 id: "welcome-" + curTopic.id,
+                 role: "model",
+-                text: `Olá! Sou o seu **Tutor Socrático OmniStudy IA**.\n\nEstamos focados em **${curSubject.name}** — *${curTopic.title}*.\n\nQual dúvida conceitual, pegadinha Cebraspe ou dispositivo deste assunto vamos dissecar agora?`,
++                text: `Olá! Sou o seu **Tutor Socrático O Arquiteto**.\n\nEstamos focados em **${curSubject.name}** — *${curTopic.title}*.\n\nQual dúvida conceitual, pegadinha Cebraspe ou dispositivo deste assunto vamos dissecar agora?`,
+                 timestamp: "Agora",
+               },
+             ],
+@@ -1762,8 +1762,8 @@
+       studioBtn.type = "button";
+       studioBtn.id = "omni-studio-trigger";
+       studioBtn.className = "omni-studio-trigger";
+-      studioBtn.title = "Abrir Estúdio Cognitivo OmniStudy IA (Alt+O)";
+-      studioBtn.innerHTML = `<span>⚡ OmniStudy IA</span>`;
++      studioBtn.title = "Abrir O Arquiteto (Alt+O)";
++      studioBtn.innerHTML = `<span>⚡ O Arquiteto</span>`;
+       studioBtn.addEventListener("click", () => openStudio());
+ 
+       topActions.insertBefore(studioBtn, topActions.firstChild);
+@@ -1774,10 +1774,10 @@
+     backdrop.id = "omni-drawer-backdrop";
+     backdrop.className = "omni-drawer-backdrop";
+     backdrop.innerHTML = `
+-      <aside class="omni-drawer" role="dialog" aria-label="Estúdio Cognitivo OmniStudy IA">
++      <aside class="omni-drawer" role="dialog" aria-label="O Arquiteto">
+         <header class="omni-drawer-header">
+           <div class="omni-drawer-title">
+-            <span class="omni-badge">OmniStudy AI 2.0</span>
++            <span class="omni-badge">O Arquiteto</span>
+             <div>
+               <div style="font-size:15px;font-weight:800;color:#fff">Estúdio de Aprendizagem Ativa · Quebrando a Banca</div>
+               <div style="font-size:11px;color:#94a3b8">Tutor Socrático • Técnica Feynman • Caderno Cornell • SRS 3D • Web Audio Procedural</div>
+diff --git a/public/claude-export/question-curator.js b/public/claude-export/question-curator.js
+index a76a4ed..51de437 100644
+--- a/public/claude-export/question-curator.js
++++ b/public/claude-export/question-curator.js
+@@ -298,7 +298,7 @@
+           <div class="qb-curate-actions-bar">
+             <div class="qb-curate-btn-group">
+               <button type="button" class="qb-btn-ai-rephrase" id="qb-btn-ai-trigger" ${isAiLoading ? "disabled" : ""}>
+-                ${isAiLoading ? "⏳ Analisando e Reformulando..." : "🤖 Reformular com IA (Omni)"}
++                ${isAiLoading ? "⏳ Analisando e Reformulando..." : "🤖 Reformular com IA (O Arquiteto)"}
+               </button>
+               <button type="button" class="qb-btn-flag-review" id="qb-btn-flag-review">🚩 Solicitar Revisão Editorial</button>
+             </div>
+diff --git a/public/sw.js b/public/sw.js
+index ba0dc5f..a9972a8 100644
+--- a/public/sw.js
++++ b/public/sw.js
+@@ -25,10 +25,10 @@ const PRECACHE_URLS = [
+   "/claude-export/radial-dashboard.js?v=2",
+   "/claude-export/axon-shell.js?v=1",
+   "/claude-export/offline-sync.js?v=1",
+-  "/claude-export/question-curator.js?v=1",
++  "/claude-export/question-curator.js?v=2",
+   "/claude-export/omnistudy-cornell.js?v=16",
+-  "/claude-export/mindmap-studio.js?v=16",
+-  "/claude-export/omnistudy-ai.js?v=26"
++  "/claude-export/mindmap-studio.js?v=17",
++  "/claude-export/omnistudy-ai.js?v=28"
+ ];
+ 
+ self.addEventListener("install", event => {
+diff --git a/src/components/qb/study-shell.html b/src/components/qb/study-shell.html
+index e2666a5..cb9702f 100644
+--- a/src/components/qb/study-shell.html
++++ b/src/components/qb/study-shell.html
+@@ -486,7 +486,7 @@ details.diario .feed{margin-top:10px}
+ <link rel="stylesheet" href="/claude-export/study-batch-ui.css?v=1">
+ <script src="/claude-export/planner.js?v=6"></script>
+ <script src="/claude-export/insights.js?v=3"></script>
+-<script src="/claude-export/assistant.js?v=3"></script>
++<script src="/claude-export/assistant.js?v=4"></script>
+ <script src="/claude-export/strategies.js"></script>
+ <script src="/claude-export/learning.js"></script>
+ <script src="/claude-export/vacinacao.js?v=1"></script>
+@@ -525,16 +525,16 @@ details.diario .feed{margin-top:10px}
+ <link rel="stylesheet" href="/claude-export/axon-shell.css?v=1">
+ <script src="/claude-export/axon-shell.js?v=1"></script>
+ <link rel="stylesheet" href="/claude-export/question-curator.css?v=1">
+-<script src="/claude-export/question-curator.js?v=1"></script>
++<script src="/claude-export/question-curator.js?v=2"></script>
+ <link rel="stylesheet" href="/claude-export/mindmap-studio.css?v=14">
+-<script src="/claude-export/mindmap-studio.js?v=16"></script>
++<script src="/claude-export/mindmap-studio.js?v=17"></script>
+ <link rel="stylesheet" href="/claude-export/omnistudy-ai.css?v=14">
+ <link rel="stylesheet" href="/claude-export/omnistudy-cornell.css?v=12">
+ <script src="/claude-export/omnistudy-cornell.js?v=16" defer></script>
+ <script src="/claude-export/tutor-context.js?v=2" defer></script>
+-<script src="/claude-export/map-evocar.js?v=1" defer></script>
+-<script src="/claude-export/card-curator.js?v=1" defer></script>
+-<script src="/claude-export/omnistudy-ai.js?v=27" defer></script>
++<script src="/claude-export/map-evocar.js?v=2" defer></script>
++<script src="/claude-export/card-curator.js?v=2" defer></script>
++<script src="/claude-export/omnistudy-ai.js?v=28" defer></script>
+ <script>
+ (function(){
+ const S = {
+diff --git a/src/routes/_authed/estudar.jsx b/src/routes/_authed/estudar.jsx
+index c1a4953..ca4ca43 100644
+--- a/src/routes/_authed/estudar.jsx
++++ b/src/routes/_authed/estudar.jsx
+@@ -64,7 +64,7 @@ function StudyScreen({ account }) {
+     ? account.markup
+         .replace(/data-qb-video-src="[^"]*"/, 'data-qb-video-src="https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/e307497be_gemini_generated_video_362B7BA6.mp4"')
+         .replace('poster="/claude-export/ambient-poster.jpg"', 'poster="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/98e13314a_gemini_generated_video_362B7BA6_at3.jpg"')
+-        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=3"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=7"><script defer src="/claude-export/admin-art.js?v=5"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze.css?v=2"><link rel="stylesheet" href="/claude-export/admin-astrolabe-unified.css?v=1"><script defer src="/claude-export/admin-astrolabe-unified.js?v=1"></script></body></html>')
++        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=3"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=7"><link rel="stylesheet" href="/claude-export/admin-mapa-cartoes.css?v=1"><script defer src="/claude-export/admin-art.js?v=5"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze.css?v=2"><link rel="stylesheet" href="/claude-export/admin-astrolabe-unified.css?v=1"><script defer src="/claude-export/admin-astrolabe-unified.js?v=1"></script></body></html>')
+     : account?.markup;
+   const frameRef = useRef(null);
+   const [ready, setReady] = useState(false);
+diff --git a/tests/axon-shell-and-pwa.test.mjs b/tests/axon-shell-and-pwa.test.mjs
+index c028aaf..bafc58b 100644
+--- a/tests/axon-shell-and-pwa.test.mjs
++++ b/tests/axon-shell-and-pwa.test.mjs
+@@ -125,7 +125,7 @@ test("Estúdio Cognitivo OmniStudy AI 2.0 integra Tutor Socrático, Feynman, Cor
+   const omniServer = fs.readFileSync("src/lib/omnistudy-ai.js", "utf8");
+ 
+   assert.match(shell, /omnistudy-ai\.css\?v=1[34]/);
+-  assert.match(shell, /omnistudy-ai\.js\?v=27/);
++  assert.match(shell, /omnistudy-ai\.js\?v=28/);
+   assert.match(shell, /omnistudy-cornell\.js\?v=16/);
+   assert.match(estudiarRoute, /invokeOmniStudyAI/);
+   assert.match(omniServer, /middleware\(\[requireUser\]\)/);
+diff --git a/tests/cartao-reformular.test.mjs b/tests/cartao-reformular.test.mjs
+index f96b2ad..4d272e0 100644
+--- a/tests/cartao-reformular.test.mjs
++++ b/tests/cartao-reformular.test.mjs
+@@ -46,6 +46,6 @@ test('servidor: tarefa curate-card com as regras de perguntas e ancorada no mate
+   assert.match(src,/Um conceito por cartão/);
+   assert.match(src,/Não altere o conteúdo da resposta; só a formulação/);
+   const shell=fs.readFileSync('src/components/qb/study-shell.html','utf8');
+-  assert.match(shell,/card-curator\.js\?v=1/);
++  assert.match(shell,/card-curator\.js\?v=2/);
+   assert.match(shell,/QBCardCurator\?\.box\(S,k\)/);
+ });
+diff --git a/tests/mapa-evocar-2p5d.test.mjs b/tests/mapa-evocar-2p5d.test.mjs
+index db8e2a2..983a5bb 100644
+--- a/tests/mapa-evocar-2p5d.test.mjs
++++ b/tests/mapa-evocar-2p5d.test.mjs
+@@ -66,7 +66,7 @@ test('percurso de evocação e controles 2,5D ligados no mapa',()=>{
+   assert.match(shell,/data-map-tour/);
+   assert.match(shell,/data-map-camera="front"/);
+   assert.match(shell,/evocar:\(\(\)=>/);
+-  assert.match(shell,/map-evocar\.js\?v=1/);
++  assert.match(shell,/map-evocar\.js\?v=2/);
+ });
+ test('evocar pode ser desligado no mapa para navegação livre, e a escolha fica salva',()=>{
+   const shell=fs.readFileSync('src/components/qb/study-shell.html','utf8');
+diff --git a/tests/mindmap-structured-import.test.mjs b/tests/mindmap-structured-import.test.mjs
+index 3ef57de..e362c3f 100644
+--- a/tests/mindmap-structured-import.test.mjs
++++ b/tests/mindmap-structured-import.test.mjs
+@@ -149,8 +149,8 @@ test("integração servidor e interface realmente invoca IA antes de salvar o ma
+  assert.match(studioCode,/studioState\.drafts\.set\(selectedTopic, clone\(imported\.mapa\)\)/);
+  assert.match(studioCode,/SALVAR MAPA MENTAL/);
+  assert.match(studioCode,/Nenhum mapa foi substituído/);
+- assert.match(shell,/mindmap-studio\.js\?v=16/);
+- assert.match(sw,/mindmap-studio\.js\?v=16/);
++ assert.match(shell,/mindmap-studio\.js\?v=17/);
++ assert.match(sw,/mindmap-studio\.js\?v=17/);
+ });
+ 
+ test("salvamento é adiado e preserva revisão antiga até aprovação explícita",()=>{
+diff --git a/tests/omnistudy-cornell-editor.test.mjs b/tests/omnistudy-cornell-editor.test.mjs
+index 28d6a2a..fc9ef1d 100644
+--- a/tests/omnistudy-cornell-editor.test.mjs
++++ b/tests/omnistudy-cornell-editor.test.mjs
+@@ -163,7 +163,7 @@ test("Assistente abre OmniStudy, Markdown elimina asteriscos e histórico fica c
+   const omniCode = fs.readFileSync("public/claude-export/omnistudy-ai.js", "utf8");
+ 
+   // 1. Atalho Assistente abre o OmniStudy
+-  assert.match(assistantCode, /⚡ Omni/);
++  assert.match(assistantCode, /⚡ O Arquiteto/);
+   assert.match(assistantCode, /window\.QBOmniStudy\.openStudio\('tutor'\)/);
+ 
+   // 2. Formatação de Markdown no Omni sem falha de asteriscos
+diff --git a/tests/omnistudy-header.test.mjs b/tests/omnistudy-header.test.mjs
+index c147067..2dcbdb0 100644
+--- a/tests/omnistudy-header.test.mjs
++++ b/tests/omnistudy-header.test.mjs
+@@ -8,7 +8,7 @@ const shell=fs.readFileSync("src/components/qb/study-shell.html","utf8");
+ 
+ test("OmniStudy encontra o cabeçalho AXON atual e monta botão visível",()=>{
+   assert.match(shell,/class="row qb-header-utilities"/);
+-  assert.ok(shell.includes("omnistudy-ai.js?v=27"));
++  assert.ok(shell.includes("omnistudy-ai.js?v=28"));
+   assert.ok(shell.includes("omnistudy-cornell.js?v=16"));
+   const inserted=[],nodes=new Map();
+   const header={
+@@ -49,12 +49,12 @@ test("OmniStudy encontra o cabeçalho AXON atual e monta botão visível",()=>{
+   assert.ok(nodes.get("omni-studio-trigger"));
+   assert.ok(nodes.get("omni-pomo-pill"));
+   assert.ok(nodes.get("omni-drawer-backdrop"));
+-  assert.match(nodes.get("omni-studio-trigger").innerHTML,/OmniStudy IA/);
++  assert.match(nodes.get("omni-studio-trigger").innerHTML,/O Arquiteto/);
+   assert.match(nodes.get("omni-drawer-backdrop").innerHTML,/Quebrando a Banca/);
+   assert.equal(win.QBOmniStudy.version,"2.1.0");
+   assert.equal(typeof win.QBOmniStudy.openStudio,"function");
+ });
+ test("o atalho do teclado permanece Alt+O",()=>{
+   assert.ok(code.includes('if (e.altKey && (e.key === "o" || e.key === "O"))'));
+-  assert.ok(code.includes("Abrir Estúdio Cognitivo OmniStudy IA (Alt+O)"));
++  assert.ok(code.includes("Abrir O Arquiteto (Alt+O)"));
+ });
+diff --git a/tests/question-curator.test.mjs b/tests/question-curator.test.mjs
+index fda38ca..83a7f29 100644
+--- a/tests/question-curator.test.mjs
++++ b/tests/question-curator.test.mjs
+@@ -214,7 +214,7 @@ test("Solicitação de revisão editorial registra chamado no banco e marca ques
+ test("Ambiente de estudo contém botões de curadoria e exclusão e scripts vinculados", () => {
+   // 1. Elementos na interface
+   assert.match(shellHtml, /question-curator\.css\?v=1/);
+-  assert.match(shellHtml, /question-curator\.js\?v=1/);
++  assert.match(shellHtml, /question-curator\.js\?v=2/);
+   assert.match(shellHtml, /data-curate-question=/);
+   assert.match(shellHtml, /data-delete-question=/);
+   assert.match(shellHtml, /window\.QBQuestionCurator\?\.open/);
+@@ -222,7 +222,7 @@ test("Ambiente de estudo contém botões de curadoria e exclusão e scripts vinc
+ 
+   // 2. Precache atualizado no Service Worker
+   assert.match(swCode, /question-curator\.css\?v=1/);
+-  assert.match(swCode, /question-curator\.js\?v=1/);
++  assert.match(swCode, /question-curator\.js\?v=2/);
+   assert.match(swCode, /qb-static-axon-v[7-9]/);
+ 
+   // 3. Schema do servidor suporta task curate-question

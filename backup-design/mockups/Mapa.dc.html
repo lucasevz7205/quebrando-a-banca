@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Mapa mental · celular</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;background:#0A1E34}
+button{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer}
+button:focus-visible{outline:2px solid #D0B386;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</helmet>
+<div style="width:390px;height:844px;box-sizing:border-box;overflow:hidden;position:relative;display:flex;flex-direction:column;background:linear-gradient(180deg,#0E2A45 0%,#0A1E34 40%,#081628 100%);color:#E9DEC9;font-family:system-ui,-apple-system,'Segoe UI',sans-serif">
+  <div style="padding:16px 16px 8px">
+    <div style="font-size:11px;letter-spacing:.14em;color:#B79F78;font-weight:700">MAPA MENTAL · CP-9</div>
+    <div style="font-family:Georgia,serif;font-size:19px;color:#F1E8D5;margin-top:4px">Teoria do Estado e formação dos Estados nacionais</div>
+  </div>
+  <div style="position:relative;margin:4px 10px 0;height:420px;border-radius:18px;border:1px solid rgba(165,138,103,.5);background:radial-gradient(circle at 50% 50%,rgba(23,54,83,.95),rgba(10,30,52,.96) 70%);overflow:hidden">
+    <svg viewBox="0 0 370 420" width="370" height="420" role="group" aria-label="Mapa mental">
+      <g fill="none" stroke="rgba(165,138,103,.18)">
+        <circle cx="185" cy="210" r="70"/><circle cx="185" cy="210" r="130"/><circle cx="185" cy="210" r="190"/>
+      </g>
+      <sc-for each="{{ links }}" as="l">
+        <line x1="{{ l.x1 }}" y1="{{ l.y1 }}" x2="{{ l.x2 }}" y2="{{ l.y2 }}" stroke="{{ l.stroke }}" stroke-width="{{ l.w }}"/>
+      </sc-for>
+      <circle cx="185" cy="210" r="40" fill="#173653" stroke="#D0B386" stroke-width="1.6"/>
+      <circle cx="185" cy="210" r="34" fill="none" stroke="rgba(208,179,134,.4)" stroke-dasharray="2 4"/>
+      <text x="185" y="206" text-anchor="middle" fill="#D0B386" font-size="10" font-weight="700" letter-spacing="1.2">TEORIA DO</text>
+      <text x="185" y="219" text-anchor="middle" fill="#D0B386" font-size="10" font-weight="700" letter-spacing="1.2">ESTADO</text>
+      <sc-for each="{{ nodes }}" as="n">
+        <g onClick="{{ n.pick }}" style="cursor:pointer" role="button" aria-label="{{ n.aria }}">
+          <circle cx="{{ n.x }}" cy="{{ n.y }}" r="{{ n.r }}" fill="{{ n.fill }}" stroke="{{ n.stroke }}" stroke-width="{{ n.sw }}"/>
+          <text x="{{ n.x }}" y="{{ n.ty }}" text-anchor="middle" fill="{{ n.tc }}" font-size="{{ n.fs }}" font-weight="600">{{ n.l1 }}</text>
+          <text x="{{ n.x }}" y="{{ n.ty2 }}" text-anchor="middle" fill="{{ n.tc }}" font-size="{{ n.fs }}" font-weight="600">{{ n.l2 }}</text>
+        </g>
+      </sc-for>
+    </svg>
+  </div>
+  <div style="margin:12px 14px 0;padding:14px 16px;border-radius:16px;border:1.5px solid #A58A67;background:rgba(17,40,63,.92);flex:1;overflow:hidden">
+    <div style="font-size:11px;letter-spacing:.14em;color:#B79F78;font-weight:700">{{ sel.kind }}</div>
+    <div style="font-family:Georgia,serif;font-size:17px;color:#F1E8D5;margin-top:4px">{{ sel.title }}</div>
+    <p style="margin:8px 0 0;font-size:13.5px;line-height:1.5;color:#E9DEC9">{{ sel.text }}</p>
+    <sc-if value="{{ sel.hasTrap }}" hint-placeholder-val="{{ true }}">
+      <div style="margin-top:10px;padding:8px 10px;border-radius:10px;border-left:3px solid #A92E3A;background:rgba(169,46,58,.14);font-size:12.5px;color:#E9DEC9"><b style="color:#D0B386">Pegadinha · </b>{{ sel.trap }}</div>
+    </sc-if>
+  </div>
+  <div style="display:flex;gap:8px;padding:10px 14px 16px">
+    <button style="flex:1;min-height:44px;border-radius:12px;border:1px solid rgba(165,138,103,.6);background:rgba(23,54,83,.9);color:#E9DEC9;font-size:13px">Ocultar folhas</button>
+    <button style="flex:1;min-height:44px;border-radius:12px;border:1.5px solid #D0B386;background:rgba(208,179,134,.14);color:#D0B386;font-size:13px;font-weight:700">Recordar de memória</button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(...args) {
+    super(...args);
+    this.state = { sel: 'weber' };
+  }
+  renderVals() {
+    const s = this.state;
+    const CX = 185, CY = 210;
+    const B = [
+      { id: 'weber', a: -90, d: 90, l1: 'Definição', l2: 'de Weber' },
+      { id: 'bobbio', a: 0, d: 92, l1: 'Conceito', l2: 'histórico' },
+      { id: 'bodin', a: 90, d: 90, l1: 'Soberania', l2: '(Bodin)' },
+      { id: 'formacao', a: 180, d: 92, l1: 'Formação', l2: 'dos Estados' }
+    ];
+    const L = [
+      { id: 'terr', p: 'weber', a: -140, d: 62, l: 'Território' },
+      { id: 'mono', p: 'weber', a: -90, d: 62, l: 'Monopólio' },
+      { id: 'legi', p: 'weber', a: -40, d: 62, l: 'Legitimidade' }
+    ];
+    const pos = (o, base) => ({ x: base.x + Math.cos(o.a * Math.PI / 180) * o.d, y: base.y + Math.sin(o.a * Math.PI / 180) * o.d });
+    const bp = {};
+    B.forEach((b) => { bp[b.id] = pos(b, { x: CX, y: CY }); });
+    const TXT = {
+      weber: { kind: 'RAMO', title: 'Definição de Weber', text: 'Weber define o Estado moderno pelo MEIO que só ele usa legitimamente, a força física, e não pelos fins. Três peças sustentam a definição: território, monopólio e legitimidade.', trap: '“Weber define o Estado pelos fins que persegue.” Errado.' },
+      terr: { kind: 'FOLHA', title: 'Território', text: 'O monopólio vale dentro de um espaço delimitado; fora dele, outro Estado é soberano.' },
+      mono: { kind: 'FOLHA', title: 'Monopólio', text: 'Só o Estado decide quem pode usar a força; violência não autorizada vira crime.' },
+      legi: { kind: 'FOLHA', title: 'Legitimidade', text: 'A força precisa ser reconhecida como válida pelos governados para que o monopólio funcione; sem legitimidade, é só força.' },
+      bobbio: { kind: 'RAMO', title: 'Conceito histórico (Bobbio)', text: 'Para Bobbio, “Estado” designa uma forma de ordenamento político nascida na Europa a partir do século XIII.' },
+      bodin: { kind: 'RAMO', title: 'Soberania (Bodin)', text: 'Ligação do mapa: Bodin sistematiza a soberania.' },
+      formacao: { kind: 'RAMO', title: 'Formação dos Estados', text: 'Ligação do mapa: três causas para a mesma centralização.' }
+    };
+    const nodes = [];
+    const links = [];
+    const mk = (id, x, y, r, l1, l2, leaf) => {
+      const on = s.sel === id;
+      nodes.push({
+        x, y, r, l1, l2, fs: leaf ? 9.5 : 10.5, ty: l2 ? y - 1 : y + 3.5, ty2: y + 11,
+        fill: on ? '#173653' : (leaf ? '#0F2A45' : '#14304D'),
+        stroke: on ? '#A92E3A' : (leaf ? '#A58A67' : '#D0B386'), sw: on ? 2.4 : 1.4,
+        tc: on ? '#F1E8D5' : '#D8CBB0', aria: l1 + ' ' + l2,
+        pick: () => this.setState({ sel: id })
+      });
+    };
+    B.forEach((b) => {
+      const p = bp[b.id];
+      links.push({ x1: CX, y1: CY, x2: p.x, y2: p.y, stroke: s.sel === b.id ? '#A92E3A' : 'rgba(208,179,134,.55)', w: s.sel === b.id ? 2.2 : 1.3 });
+      mk(b.id, p.x, p.y, 30, b.l1, b.l2, false);
+    });
+    L.forEach((f) => {
+      const p0 = bp[f.p];
+      const p = pos(f, p0);
+      links.push({ x1: p0.x, y1: p0.y, x2: p.x, y2: p.y, stroke: s.sel === f.id ? '#A92E3A' : 'rgba(165,138,103,.5)', w: 1 });
+      const two = f.l === 'Legitimidade';
+      mk(f.id, p.x, p.y, 28, two ? 'Legitimi-' : f.l, two ? 'dade' : '', true);
+    });
+    const t = TXT[s.sel];
+    return { nodes, links, sel: { kind: t.kind, title: t.title, text: t.text, hasTrap: !!t.trap, trap: t.trap || '' } };
+  }
+}
+</script>
+</body>
+</html>

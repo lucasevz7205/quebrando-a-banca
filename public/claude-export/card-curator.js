@@ -47,7 +47,7 @@
         Object.entries(PROBLEMAS).map(([v, l]) => '<option value="' + v + '"' + (s.issue === v ? " selected" : "") + ">" + l + "</option>").join("") + "</select>";
       h += '<label class="ps">Observação (opcional)</label><textarea data-cc-obs rows="2" placeholder="Ex.: a pergunta não diz se é prazo em dias ou sessões">' + esc(s.obs) + "</textarea>";
       if (s.erro) h += '<p class="ps" style="color:var(--errado)">' + esc(s.erro) + "</p>";
-      h += '<div class="row"><button class="btn small" data-cc-pedir ' + (s.fase === "run" ? "disabled" : "") + ">" + (s.fase === "run" ? "Omni reformulando…" : "Pedir reformulação ao Omni") + "</button>" +
+      h += '<div class="row"><button class="btn small" data-cc-pedir ' + (s.fase === "run" ? "disabled" : "") + ">" + (s.fase === "run" ? "O Arquiteto reformulando…" : "Pedir reformulação ao Arquiteto") + "</button>" +
         '<button class="btn ghost small" data-cc-manual>Editar eu mesmo</button><button class="btn ghost small" data-cc-fechar>Cancelar</button></div>';
     } else {
       const r = s.res;
@@ -98,7 +98,7 @@
             userObservation: s.obs,
             referencia: hooks.referencia ? hooks.referencia(t.topico) : undefined,
           });
-          if (!res || !Array.isArray(res.cartoes) || !res.cartoes.length) throw new Error("o Omni não devolveu um cartão");
+          if (!res || !Array.isArray(res.cartoes) || !res.cartoes.length) throw new Error("O Arquiteto não devolveu um cartão");
           s.res = res; s.fase = "ok";
         } catch (err) {
           s.fase = "erro";
@@ -114,7 +114,7 @@
         cartoes[t.i] = Object.assign({}, atual, novos[0], {
           original: atual.original || { tema: atual.tema || "", q: atual.q || "", a: atual.a || [], src: atual.src || "" },
           reformuladoEm: new Date().toISOString(),
-          reformuladoPor: s.res.parecer ? "Omni + estudante" : "estudante",
+          reformuladoPor: s.res.parecer ? "O Arquiteto + estudante" : "estudante",
         });
         novos.slice(1).forEach(c => cartoes.push(Object.assign({}, c, { derivadoDe: t.topico + "@" + t.i, criadoEm: new Date().toISOString() })));
         const doc = Object.assign({}, t.rv, { cartoes, atualizadoEm: new Date().toISOString() });

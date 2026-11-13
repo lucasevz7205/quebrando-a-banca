@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Questão Cebraspe · celular</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;background:#0A1E34}
+button{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer}
+button:focus-visible{outline:2px solid #D0B386;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</helmet>
+<div style="width:390px;height:844px;box-sizing:border-box;overflow:hidden;position:relative;display:flex;flex-direction:column;background:linear-gradient(180deg,#0E2A45 0%,#0A1E34 38%,#081628 100%);color:#E9DEC9;font-family:system-ui,-apple-system,'Segoe UI',sans-serif">
+
+  <!-- Barra superior -->
+  <div style="display:flex;align-items:center;gap:10px;padding:14px 14px 10px 10px;border-bottom:1px solid rgba(165,138,103,.35)">
+    <button aria-label="Voltar" style="width:44px;height:44px;border-radius:999px;border:1px solid rgba(165,138,103,.55);background:rgba(10,30,52,.7);color:#E9DEC9;display:flex;align-items:center;justify-content:center;padding:0">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <button onClick="{{ toggleChip }}" aria-expanded="{{ chipOpen }}" aria-label="Matéria: Direito Constitucional. Tocar para ver o nome completo" style="flex:1;min-height:44px;display:flex;align-items:center;gap:10px;padding:0 14px 0 10px;border-radius:14px;border:1px solid rgba(165,138,103,.55);background:rgba(23,54,83,.75);color:#E9DEC9;text-align:left">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D0B386" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-5 9 5z M6 9v9 M10 9v9 M14 9v9 M18 9v9 M3 20h18"/></svg>
+      <span style="font-weight:700;letter-spacing:.06em;font-size:14px;color:#D0B386">DC</span>
+      <span style="font-size:13px;color:#C9BEA8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">1.1 Constitucionalismo</span>
+    </button>
+  </div>
+
+  <sc-if value="{{ chipOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="margin:10px 14px 0;padding:12px 14px;border-radius:12px;border:1px solid rgba(208,179,134,.55);background:rgba(10,30,52,.92);font-size:13px;line-height:1.45;color:#E9DEC9">
+      <div style="font-weight:700;color:#D0B386">Direito Constitucional e Regimento Interno</div>
+      <div style="color:#C9BEA8">1.1 Constitucionalismo e sentidos de Constituição</div>
+    </div>
+  </sc-if>
+
+  <!-- Enunciado -->
+  <div style="margin:16px 14px 0;padding:18px 18px 16px;border-radius:16px;border:1px solid rgba(165,138,103,.5);background:rgba(17,40,63,.88);box-shadow:inset 0 1px 0 rgba(208,179,134,.18)">
+    <div style="font-size:11px;letter-spacing:.14em;color:#B79F78;font-weight:700">ITEM · CERTO OU ERRADO</div>
+    <p style="margin:10px 0 0;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.55;color:#F1E8D5">O constitucionalismo antigo teve início com a Magna Carta de 1215, não havendo antes desse período indícios de experiências democráticas que contrastassem com os poderes teocráticos ou monárquicos dominantes.</p>
+    <div style="margin-top:12px;font-size:12px;color:#B7AA93">TJ-AC – 2019 · adaptada</div>
+  </div>
+
+  <!-- Etapa 1: marcar -->
+  <sc-if value="{{ isMark }}" hint-placeholder-val="{{ true }}">
+    <div style="margin:16px 14px 0;display:flex;gap:12px">
+      <button onClick="{{ markC }}" style="flex:1;min-height:68px;border-radius:16px;border:1.5px solid #A58A67;background:rgba(23,54,83,.9);color:#F1E8D5;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:10px">
+        <span aria-hidden="true" style="width:30px;height:30px;border-radius:999px;border:1.5px solid #D0B386;display:flex;align-items:center;justify-content:center;font-size:14px;color:#D0B386">C</span>Certo
+      </button>
+      <button onClick="{{ markE }}" style="flex:1;min-height:68px;border-radius:16px;border:1.5px solid #A58A67;background:rgba(23,54,83,.9);color:#F1E8D5;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:10px">
+        <span aria-hidden="true" style="width:30px;height:30px;border-radius:999px;border:1.5px solid #D0B386;display:flex;align-items:center;justify-content:center;font-size:14px;color:#D0B386">E</span>Errado
+      </button>
+    </div>
+  </sc-if>
+
+  <!-- Etapa 2: confiança -->
+  <sc-if value="{{ isConf }}" hint-placeholder-val="{{ false }}">
+    <div role="group" aria-label="Confiança" style="margin:16px 14px 0;padding:16px;border-radius:16px;border:1.5px solid #A58A67;background:rgba(10,30,52,.92)">
+      <div style="font-size:15px;line-height:1.45;color:#F1E8D5">Você marcou <b style="color:#D0B386">{{ marcadaLabel }}</b>. Antes de ver o gabarito: qual a sua confiança?</div>
+      <div style="display:flex;gap:8px;margin-top:14px">
+        <sc-for list="{{ confs }}" as="c" hint-placeholder-count="3">
+          <button onClick="{{ c.pick }}" style="flex:1;min-height:60px;border-radius:12px;border:1.5px solid rgba(165,138,103,.8);background:rgba(23,54,83,.9);color:#F1E8D5;font-size:14px;font-weight:600;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
+            <span style="font-size:18px;color:#D0B386;font-weight:700">{{ c.n }}</span>{{ c.label }}
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Etapa 3: gabarito -->
+  <sc-if value="{{ isVerdict }}" hint-placeholder-val="{{ false }}">
+    <div style="{{ verdictStyle }}">
+      <div style="display:flex;align-items:center;gap:10px">
+        <sc-if value="{{ acertou }}" hint-placeholder-val="{{ true }}">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D0B386" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Acerto"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 9.5"/></svg>
+        </sc-if>
+        <sc-if value="{{ errou }}" hint-placeholder-val="{{ false }}">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F4C3C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Erro"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6 M15 9l-6 6"/></svg>
+        </sc-if>
+        <div style="font-size:17px;font-weight:700;color:#F8EFD9">{{ verdictTitle }}</div>
+      </div>
+      <div style="margin-top:6px;font-size:13px;color:#D8CDB6">Gabarito: <b>Errado</b> · você marcou {{ marcadaLabel }} com {{ confLabel }}</div>
+      <sc-if value="{{ hasCalib }}" hint-placeholder-val="{{ true }}">
+        <div style="margin-top:8px;font-size:13px;line-height:1.45;color:#E9DEC9">{{ calibText }}</div>
+      </sc-if>
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(165,138,103,.4);font-size:14px;line-height:1.55;color:#F1E8D5">A Carta Magna é um marco importante na história do constitucionalismo, mas não se pode afirmar que ela represente o início do constitucionalismo antigo. Além disso, no constitucionalismo antigo já havia experiências democráticas.</div>
+      <div style="display:flex;gap:10px;margin-top:14px">
+        <button onClick="{{ reset }}" style="min-height:48px;padding:0 16px;border-radius:12px;border:1px solid rgba(165,138,103,.7);background:transparent;color:#E9DEC9;font-size:14px;font-weight:600">Refazer</button>
+        <button style="flex:1;min-height:48px;border-radius:12px;border:1.5px solid #D0B386;background:#173653;color:#F8EFD9;font-size:15px;font-weight:700">Próximo item</button>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(...args) {
+    super(...args);
+    this.state = { step: 'mark', marked: null, conf: null, chipOpen: false };
+  }
+  renderVals() {
+    const s = this.state;
+    const CONF = { 1: 'chute', 2: 'dúvida', 3: 'certeza' };
+    const marcadaLabel = s.marked === 'C' ? 'Certo' : 'Errado';
+    const acertou = s.marked === 'E';
+    let calib = '';
+    if (s.step === 'verdict') {
+      if (acertou && s.conf === 3) calib = 'Calibrado: certeza e acerto.';
+      else if (acertou && s.conf === 1) calib = 'Acerto no chute: o item foi para o caderno e só sai com dois acertos seguros.';
+    }
+    const good = 'margin:16px 14px 0;padding:16px;border-radius:16px;border:1.5px solid #D0B386;background:rgba(208,179,134,.12)';
+    const bad = 'margin:16px 14px 0;padding:16px;border-radius:16px;border:1.5px solid #A92E3A;background:rgba(169,46,58,.2)';
+    return {
+      isMark: s.step === 'mark',
+      isConf: s.step === 'conf',
+      isVerdict: s.step === 'verdict',
+      chipOpen: s.chipOpen,
+      toggleChip: () => this.setState({ chipOpen: !s.chipOpen }),
+      markC: () => this.setState({ step: 'conf', marked: 'C' }),
+      markE: () => this.setState({ step: 'conf', marked: 'E' }),
+      marcadaLabel,
+      confs: [1, 2, 3].map((n) => ({ n, label: CONF[n][0].toUpperCase() + CONF[n].slice(1), pick: () => this.setState({ step: 'verdict', conf: n }) })),
+      acertou,
+      errou: !acertou,
+      verdictTitle: acertou ? 'Você acertou' : 'Você errou',
+      verdictStyle: acertou ? good : bad,
+      confLabel: s.conf ? CONF[s.conf] : '',
+      hasCalib: calib !== '',
+      calibText: calib,
+      reset: () => this.setState({ step: 'mark', marked: null, conf: null })
+    };
+  }
+}
+</script>
+</body>
+</html>

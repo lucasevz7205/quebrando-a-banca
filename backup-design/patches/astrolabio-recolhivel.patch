@@ -1,0 +1,102 @@
+diff --git a/public/claude-export/admin-astrolabe-recolhivel.css b/public/claude-export/admin-astrolabe-recolhivel.css
+new file mode 100644
+index 0000000..569d996
+--- /dev/null
++++ b/public/claude-export/admin-astrolabe-recolhivel.css
+@@ -0,0 +1,38 @@
++/* PROTÓTIPO — astrolábio compacto e recolhível (admin). Não altera dados nem rotas.
++   1) Remove os textos do centro do menu principal (o miolo mantém só o ornamento).
++   2) Centro menor.
++   3) Botão para recolher/expandir o astrolábio, com transição suave.
++   4) Em celular, o astrolábio ocupa menos altura. */
++:root.qb-admin-experience .qb-radial-hub.qb-admin-astro[data-radial-screen="menu"] .qb-radial-core-eyebrow,
++:root.qb-admin-experience .qb-radial-hub.qb-admin-astro[data-radial-screen="menu"] .qb-radial-core-sub,
++:root.qb-admin-experience .qb-radial-hub.qb-admin-astro[data-radial-screen="menu"] .qb-radial-core strong{
++  display:none!important;
++}
++:root.qb-admin-experience .qb-radial-hub.qb-admin-astro[data-radial-screen="menu"] .qb-radial-core{
++  width:clamp(64px,19%,92px)!important;
++}
++.qb-astro-toggle{
++  display:flex;align-items:center;gap:8px;margin:4px auto 6px;
++  padding:7px 14px;border-radius:999px;cursor:pointer;
++  border:1px solid rgba(165,138,103,.7);background:rgba(10,30,52,.82);
++  color:#E9DEC9;font:600 12px/1 system-ui,sans-serif;
++}
++.qb-astro-toggle:focus-visible{outline:2px solid #D0B386;outline-offset:2px;}
++.qb-astro-toggle::after{content:"▾";font-size:11px;transition:transform .3s ease;}
++.qb-radial-hub.qb-astro-recolhido .qb-astro-toggle::after{transform:rotate(-90deg);}
++:root.qb-admin-experience .qb-radial-hub.qb-admin-astro [data-radial-stage]{
++  transition:max-height .42s ease,opacity .3s ease;
++  max-height:1400px;overflow:visible;
++}
++.qb-radial-hub.qb-astro-recolhido [data-radial-stage]{
++  max-height:0!important;opacity:0;overflow:hidden;pointer-events:none;
++}
++@media(max-width:760px){
++  :root.qb-admin-experience .qb-radial-hub.qb-admin-astro[data-radial-screen="menu"] [data-radial-stage]{
++    width:min(100%,380px)!important;
++  }
++}
++@media(prefers-reduced-motion:reduce){
++  :root.qb-admin-experience .qb-radial-hub.qb-admin-astro [data-radial-stage],
++  .qb-astro-toggle::after{transition:none!important;}
++}
+diff --git a/public/claude-export/admin-astrolabe-recolhivel.js b/public/claude-export/admin-astrolabe-recolhivel.js
+new file mode 100644
+index 0000000..07e8572
+--- /dev/null
++++ b/public/claude-export/admin-astrolabe-recolhivel.js
+@@ -0,0 +1,39 @@
++/* PROTÓTIPO — botão para recolher e expandir o astrolábio (admin).
++   Só alterna uma classe e o atributo aria-expanded. Não altera dados, rotas nem eventos. */
++(function () {
++  "use strict";
++  let seq = 0;
++  function mount(hub) {
++    if (hub.dataset.qbRecolhivelReady === "1") return;
++    const stage = hub.querySelector("[data-radial-stage]");
++    if (!stage) return;
++    hub.dataset.qbRecolhivelReady = "1";
++    if (!stage.id) stage.id = "qb-astro-stage-" + (++seq);
++    const btn = document.createElement("button");
++    btn.type = "button";
++    btn.className = "qb-astro-toggle";
++    btn.setAttribute("aria-controls", stage.id);
++    btn.setAttribute("aria-expanded", "true");
++    btn.textContent = "Recolher";
++    btn.addEventListener("click", function () {
++      const collapsed = hub.classList.toggle("qb-astro-recolhido");
++      btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
++      btn.firstChild.textContent = collapsed ? "Expandir" : "Recolher";
++    });
++    hub.insertBefore(btn, hub.firstChild);
++  }
++  function scan() {
++    const main = document.getElementById("main");
++    if (!main) return;
++    main.querySelectorAll(".qb-radial-hub.qb-admin-astro").forEach(mount);
++  }
++  function init() {
++    if (!document.documentElement.classList.contains("qb-admin-experience")) return;
++    const main = document.getElementById("main");
++    if (!main) return;
++    new MutationObserver(scan).observe(main, { subtree: true, childList: true });
++    scan();
++  }
++  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
++  else init();
++})();
+diff --git a/src/routes/_authed/estudar.jsx b/src/routes/_authed/estudar.jsx
+index c1a4953..2954f03 100644
+--- a/src/routes/_authed/estudar.jsx
++++ b/src/routes/_authed/estudar.jsx
+@@ -64,7 +64,7 @@ function StudyScreen({ account }) {
+     ? account.markup
+         .replace(/data-qb-video-src="[^"]*"/, 'data-qb-video-src="https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/e307497be_gemini_generated_video_362B7BA6.mp4"')
+         .replace('poster="/claude-export/ambient-poster.jpg"', 'poster="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/98e13314a_gemini_generated_video_362B7BA6_at3.jpg"')
+-        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=3"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=7"><script defer src="/claude-export/admin-art.js?v=5"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze.css?v=2"><link rel="stylesheet" href="/claude-export/admin-astrolabe-unified.css?v=1"><script defer src="/claude-export/admin-astrolabe-unified.js?v=1"></script></body></html>')
++        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=3"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=7"><script defer src="/claude-export/admin-art.js?v=5"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze.css?v=2"><link rel="stylesheet" href="/claude-export/admin-astrolabe-unified.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-recolhivel.css?v=1"><script defer src="/claude-export/admin-astrolabe-unified.js?v=1"></script><script defer src="/claude-export/admin-astrolabe-recolhivel.js?v=1"></script></body></html>')
+     : account?.markup;
+   const frameRef = useRef(null);
+   const [ready, setReady] = useState(false);

@@ -1,0 +1,75 @@
+diff --git a/public/claude-export/admin-frieze-revisao.css b/public/claude-export/admin-frieze-revisao.css
+new file mode 100644
+index 0000000..c20f58f
+--- /dev/null
++++ b/public/claude-export/admin-frieze-revisao.css
+@@ -0,0 +1,56 @@
++/* PROTÓTIPO — revisão da opção 3 do friso (não publicado, não aplicado ao repositório).
++   Sobrescreve apenas o necessário sobre public/claude-export/admin-frieze.css.
++   Direção: aproximar da referência do astrolábio (azul-aço com bronze gravado).
++   Ajustes: azul imperial e marinho da paleta do comando, borda de bronze,
++   gravação interna discreta, foco por teclado visível, ouro e carmesim restritos
++   à seleção ativa, contador com 11px. Redução de movimento mantida. */
++
++:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav {
++  background:
++    linear-gradient(180deg, rgba(23, 54, 83, .92), rgba(10, 30, 52, .94) 52%, rgba(23, 54, 83, .90)) !important;
++  border: 1px solid rgba(165, 138, 103, .92) !important;
++  box-shadow:
++    0 0 0 1px rgba(10, 30, 52, .9),
++    0 8px 22px rgba(0, 0, 0, .34),
++    inset 0 1px 0 rgba(208, 179, 134, .30),
++    inset 0 -2px 0 rgba(165, 138, 103, .32),
++    inset 0 0 0 3px rgba(10, 30, 52, .55) !important;
++}
++
++:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button:focus-visible {
++  outline: 2px solid #D0B386 !important;
++  outline-offset: -4px !important;
++  background: rgba(23, 54, 83, .55) !important;
++}
++
++:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button {
++  border-left: 1px solid rgba(165, 138, 103, .38) !important;
++  text-shadow: 0 1px 0 rgba(0, 0, 0, .55), 0 0 1px rgba(208, 179, 134, .25) !important;
++}
++
++:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button::after {
++  background: linear-gradient(90deg, transparent, #A92E3A, #D0B386, #A92E3A, transparent) !important;
++  box-shadow: 0 0 8px rgba(169, 46, 58, .45) !important;
++}
++
++:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button[aria-current="page"]::before {
++  border: 1px solid rgba(208, 179, 134, .55) !important;
++  box-shadow: 0 0 13px rgba(169, 46, 58, .20), inset 0 0 12px rgba(208, 179, 134, .08) !important;
++}
++
++:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .count {
++  font-size: 11px !important;
++  background: #173653 !important;
++  border-color: rgba(165, 138, 103, .6) !important;
++}
++
++:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .count.hot {
++  background: #A92E3A !important;
++  border-color: #C4707A !important;
++}
++
++@media (prefers-reduced-motion: reduce) {
++  :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button::after {
++    transition: none !important;
++  }
++}
+diff --git a/src/routes/_authed/estudar.jsx b/src/routes/_authed/estudar.jsx
+index c1a4953..ef5c91b 100644
+--- a/src/routes/_authed/estudar.jsx
++++ b/src/routes/_authed/estudar.jsx
+@@ -64,7 +64,7 @@ function StudyScreen({ account }) {
+     ? account.markup
+         .replace(/data-qb-video-src="[^"]*"/, 'data-qb-video-src="https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/e307497be_gemini_generated_video_362B7BA6.mp4"')
+         .replace('poster="/claude-export/ambient-poster.jpg"', 'poster="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/98e13314a_gemini_generated_video_362B7BA6_at3.jpg"')
+-        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=3"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=7"><script defer src="/claude-export/admin-art.js?v=5"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze.css?v=2"><link rel="stylesheet" href="/claude-export/admin-astrolabe-unified.css?v=1"><script defer src="/claude-export/admin-astrolabe-unified.js?v=1"></script></body></html>')
++        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=3"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=7"><script defer src="/claude-export/admin-art.js?v=5"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze.css?v=2"><link rel="stylesheet" href="/claude-export/admin-frieze-revisao.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-unified.css?v=1"><script defer src="/claude-export/admin-astrolabe-unified.js?v=1"></script></body></html>')
+     : account?.markup;
+   const frameRef = useRef(null);
+   const [ready, setReady] = useState(false);

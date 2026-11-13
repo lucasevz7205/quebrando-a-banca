@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Flashcard · celular</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;background:#0A1E34}
+button{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer}
+button:focus-visible{outline:2px solid #D0B386;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</helmet>
+<div style="width:390px;height:844px;box-sizing:border-box;overflow:hidden;position:relative;display:flex;flex-direction:column;background:linear-gradient(180deg,#0E2A45 0%,#0A1E34 40%,#081628 100%);color:#E9DEC9;font-family:system-ui,-apple-system,'Segoe UI',sans-serif">
+  <div style="display:flex;align-items:center;gap:10px;padding:14px 14px 10px;border-bottom:1px solid rgba(165,138,103,.35)">
+    <span style="font-weight:700;letter-spacing:.06em;font-size:14px;color:#D0B386">CP</span>
+    <span style="font-size:13px;color:#C9BEA8;flex:1">Estado e soberania</span>
+    <span style="font-size:12px;color:#B79F78;font-weight:700">1 / 4</span>
+  </div>
+  <div style="margin:10px 14px 0;height:4px;border-radius:4px;background:rgba(165,138,103,.25)"><div style="width:25%;height:100%;border-radius:4px;background:linear-gradient(90deg,#A58A67,#D0B386)"></div></div>
+
+  <div style="margin:22px 14px 0;padding:24px 20px;min-height:230px;border-radius:20px;border:1.5px solid #A58A67;background:linear-gradient(160deg,rgba(23,54,83,.95),rgba(10,30,52,.95));box-shadow:inset 0 1px 0 rgba(208,179,134,.2),0 12px 30px rgba(0,0,0,.35);position:relative">
+    <div style="position:absolute;top:10px;right:14px;width:22px;height:22px;border-top:1.5px solid #D0B386;border-right:1.5px solid #D0B386;border-radius:0 8px 0 0"></div>
+    <div style="font-size:11px;letter-spacing:.14em;color:#B79F78;font-weight:700">{{ face }}</div>
+    <p style="margin:12px 0 0;font-family:Georgia,serif;font-size:19px;line-height:1.5;color:#F1E8D5">Weber define o Estado moderno pelo meio ou pelos fins? Qual é esse meio?</p>
+    <sc-if value="{{ shown }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-top:16px;padding-top:14px;border-top:1px dashed rgba(208,179,134,.5);font-size:15.5px;line-height:1.5;color:#E9DEC9">
+        <div>Pelo meio.</div>
+        <div style="margin-top:4px">Monopólio do uso legítimo da força física num território.</div>
+      </div>
+    </sc-if>
+  </div>
+  <div style="margin:8px 18px 0;font-size:12px;color:#B7AA93">Apostila Etapa 13 (LF) 11.1.1</div>
+
+  <sc-if value="{{ notShown }}" hint-placeholder-val="{{ true }}">
+    <div style="margin:22px 14px 0">
+      <div style="font-size:12.5px;color:#C9BEA8;text-align:center;margin-bottom:10px">Responda de cabeça antes de virar o cartão.</div>
+      <button onClick="{{ reveal }}" style="width:100%;min-height:60px;border-radius:16px;border:1.5px solid #D0B386;background:rgba(208,179,134,.14);color:#D0B386;font-size:17px;font-weight:700">Mostrar resposta</button>
+    </div>
+  </sc-if>
+  <sc-if value="{{ shown }}" hint-placeholder-val="{{ false }}">
+    <div role="group" aria-label="Como foi" style="margin:22px 14px 0">
+      <div style="font-size:12.5px;color:#C9BEA8;text-align:center;margin-bottom:10px">Como foi a sua resposta?</div>
+      <div style="display:flex;gap:10px">
+        <button onClick="{{ next }}" style="flex:1;min-height:64px;border-radius:14px;border:1.5px solid #A92E3A;background:rgba(169,46,58,.2);color:#F1E8D5;font-size:15px;font-weight:700">Errei</button>
+        <button onClick="{{ next }}" style="flex:1;min-height:64px;border-radius:14px;border:1.5px solid #A58A67;background:rgba(23,54,83,.9);color:#F1E8D5;font-size:15px;font-weight:700">Quase</button>
+        <button onClick="{{ next }}" style="flex:1;min-height:64px;border-radius:14px;border:1.5px solid #D0B386;background:rgba(208,179,134,.16);color:#F1E8D5;font-size:15px;font-weight:700">Acertei</button>
+      </div>
+    </div>
+  </sc-if>
+  <div style="margin:auto 14px 16px;display:flex;gap:8px">
+    <button style="flex:1;min-height:44px;border-radius:12px;border:1px solid rgba(165,138,103,.6);background:rgba(23,54,83,.9);color:#E9DEC9;font-size:13px">Ver questões ligadas</button>
+    <button style="flex:1;min-height:44px;border-radius:12px;border:1px solid rgba(165,138,103,.6);background:rgba(23,54,83,.9);color:#E9DEC9;font-size:13px">Abrir no mapa</button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(...args) {
+    super(...args);
+    this.state = { shown: false };
+  }
+  renderVals() {
+    const s = this.state;
+    return {
+      shown: s.shown,
+      notShown: !s.shown,
+      face: s.shown ? 'RESPOSTA' : 'PERGUNTA',
+      reveal: () => this.setState({ shown: true }),
+      next: () => this.setState({ shown: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

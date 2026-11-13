@@ -46,6 +46,6 @@ test('servidor: tarefa curate-card com as regras de perguntas e ancorada no mate
   assert.match(src,/Um conceito por cartão/);
   assert.match(src,/Não altere o conteúdo da resposta; só a formulação/);
   const shell=fs.readFileSync('src/components/qb/study-shell.html','utf8');
-  assert.match(shell,/card-curator\.js\?v=1/);
+  assert.match(shell,/card-curator\.js\?v=2/);
   assert.match(shell,/QBCardCurator\?\.box\(S,k\)/);
 });

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Astrolábio de matérias</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;background:#0A1E34}
+button{font-family:Georgia,'Times New Roman',serif;cursor:pointer}
+button:focus-visible{outline:2px solid #D0B386;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</helmet>
+<div style="{{ rootStyle }}">
+
+  <div style="{{ stageStyle }}">
+    <!-- disco -->
+    <div style="{{ discStyle }}"></div>
+    <!-- graduação -->
+    <div style="{{ ticksStyle }}"></div>
+    <div style="{{ ring1Style }}"></div>
+    <div style="{{ ring2Style }}"></div>
+    <!-- pontos cardeais -->
+    <span style="{{ letterN }}">N</span>
+    <span style="{{ letterL }}">L</span>
+    <span style="{{ letterS }}">S</span>
+    <span style="{{ letterO }}">O</span>
+    <!-- ponteiro -->
+    <div style="{{ needleStyle }}">
+      <svg viewBox="0 0 100 100" width="100%" height="100%" aria-hidden="true">
+        <path d="M50 50 L47.6 33 L50 24 L52.4 33Z" fill="#D0B386" stroke="#A58A67" stroke-width=".4"/>
+        <path d="M50 50 L48.8 60 L50 66 L51.2 60Z" fill="#6F8497" stroke="#A58A67" stroke-width=".3"/>
+        <circle cx="50" cy="23.2" r="1.15" fill="#A92E3A"/>
+      </svg>
+    </div>
+    <div style="{{ hubStyle }}"></div>
+
+    <!-- compartimentos -->
+    <sc-for list="{{ nodes }}" as="n" hint-placeholder-count="10">
+      <button onClick="{{ n.pick }}" onMouseEnter="{{ n.pick }}" onFocus="{{ n.pick }}" aria-pressed="{{ n.selected }}" aria-label="{{ n.aria }}" style="{{ n.style }}">
+        <sc-if value="{{ n.isCP }}" hint-placeholder-val="{{ false }}"><svg width="{{ iconPx }}" height="{{ iconPx }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5v4 M10 4.5h4 M9.5 12.5c-1.6-1-2.2-2.3-2.2-3.6A4.7 4.7 0 0 1 12 6.5a4.7 4.7 0 0 1 4.7 2.4c0 1.3-.6 2.6-2.2 3.6 M9 21l.9-8.5h4.2L15 21 M7 21h10"/></svg></sc-if>
+        <sc-if value="{{ n.isDA }}" hint-placeholder-val="{{ false }}"><svg width="{{ iconPx }}" height="{{ iconPx }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v4H9z M12 7v3 M5 10h14 M5 10v3 M19 10v3 M3 13h4v4H3z M17 13h4v4h-4z M10 13h4v4h-4z M12 10v3"/></svg></sc-if>
+        <sc-if value="{{ n.isDC }}" hint-placeholder-val="{{ false }}"><svg width="{{ iconPx }}" height="{{ iconPx }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-5 9 5z M6 9v9 M10 9v9 M14 9v9 M18 9v9 M3 20h18"/></svg></sc-if>
+        <sc-if value="{{ n.isJUR }}" hint-placeholder-val="{{ false }}"><svg width="{{ iconPx }}" height="{{ iconPx }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16 M7 20h10 M5 8h14 M5 8l-3 6h6z M19 8l-3 6h6z M2 14a3 2 0 0 0 6 0 M16 14a3 2 0 0 0 6 0"/></svg></sc-if>
+        <sc-if value="{{ n.isLG }}" hint-placeholder-val="{{ false }}"><svg width="{{ iconPx }}" height="{{ iconPx }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H11l-4 4v-4H4z M8 9h8 M8 12.5h5"/></svg></sc-if>
+        <sc-if value="{{ n.isLI }}" hint-placeholder-val="{{ false }}"><svg width="{{ iconPx }}" height="{{ iconPx }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18 M12 3c3 3 3 15 0 18 M12 3c-3 3-3 15 0 18"/></svg></sc-if>
+        <sc-if value="{{ n.isLP }}" hint-placeholder-val="{{ false }}"><svg width="{{ iconPx }}" height="{{ iconPx }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4C11 4 6 9 6 16l-2 4 M6 16c6 0 11-4 14-12 M9.5 14.5l6-6"/></svg></sc-if>
+        <sc-if value="{{ n.isPL }}" hint-placeholder-val="{{ false }}"><svg width="{{ iconPx }}" height="{{ iconPx }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18a9 9 0 0 1 18 0 M7 18a5 5 0 0 1 10 0 M2 21h20 M12 9v3"/></svg></sc-if>
+        <sc-if value="{{ n.isRF }}" hint-placeholder-val="{{ false }}"><svg width="{{ iconPx }}" height="{{ iconPx }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0 M12 18v3 M9 21h6"/></svg></sc-if>
+        <sc-if value="{{ n.isTI }}" hint-placeholder-val="{{ false }}"><svg width="{{ iconPx }}" height="{{ iconPx }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6 M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg></sc-if>
+        <span style="{{ n.textStyle }}">{{ n.text }}</span>
+        <sc-if value="{{ n.selected }}" hint-placeholder-val="{{ false }}">
+          <span aria-hidden="true" style="display:block;width:44%;height:2px;margin-top:2px;background:linear-gradient(90deg,transparent,#A92E3A,#D0B386,#A92E3A,transparent)"></span>
+        </sc-if>
+      </button>
+    </sc-for>
+  </div>
+
+  <!-- seleção atual -->
+  <div style="{{ stripStyle }}">
+    <div style="min-width:0">
+      <div style="font-family:Georgia,'Times New Roman',serif;font-size:{{ stripNamePx }}px;line-height:1.25;color:#F8EFD9">{{ selFull }}</div>
+      <div style="margin-top:6px;display:flex;align-items:center;gap:8px">
+        <span style="padding:3px 10px;border-radius:999px;border:1px solid #D0B386;color:#D0B386;font:700 12px/1.4 system-ui,sans-serif;letter-spacing:.08em">{{ selId }}</span>
+        <span style="font:500 12px/1.4 system-ui,sans-serif;color:#C9BEA8">{{ selMode }}</span>
+      </div>
+    </div>
+    <button style="flex:0 0 auto;min-height:48px;padding:0 18px;border-radius:12px;border:1.5px solid #D0B386;background:#173653;color:#F8EFD9;font:700 15px/1 system-ui,sans-serif">Abrir treino</button>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"size":{"editor":"int","default":640,"min":300,"max":900,"unit":"px"},"$preview":{"width":720,"height":900}}'>
+class Component extends DCLogic {
+  constructor(...args) {
+    super(...args);
+    this.state = { sel: 0, angle: 0 };
+  }
+  // Cabe em até maxLines linhas? (largura média de glifo = 0,6 do corpo, serifa em negrito leve)
+  fit(text, innerW, px, maxLines) {
+    const cw = px * 0.6;
+    const words = text.split(' ');
+    let lines = 1, cur = 0;
+    for (const w of words) {
+      const ww = w.length * cw;
+      if (ww > innerW) return false;
+      const need = cur === 0 ? ww : cur + cw + ww;
+      if (need <= innerW) cur = need; else { lines++; cur = ww; }
+    }
+    return lines <= maxLines;
+  }
+  renderVals() {
+    const S = Number(this.props.size) || 640;
+    const big = S >= 500;
+    const MAT = [
+      { id: 'LP', short: 'Português', full: 'Língua Portuguesa' },
+      { id: 'LI', short: 'Inglês', full: 'Língua Inglesa' },
+      { id: 'DA', short: 'Administrativo', full: 'Direito Administrativo e Administração Pública' },
+      { id: 'DC', short: 'Constitucional', full: 'Direito Constitucional e Regimento Interno' },
+      { id: 'TI', short: 'TI e Dados', full: 'Tecnologia da Informação e Dados' },
+      { id: 'LG', short: 'Linguística', full: 'Linguística' },
+      { id: 'RF', short: 'Fala e IA', full: 'Reconhecimento de Fala, Transcrição e IA' },
+      { id: 'PL', short: 'Processo Legislativo', full: 'Processo Legislativo e Regimentos' },
+      { id: 'CP', short: 'Ciência Política', full: 'Ciência Política' },
+      { id: 'JUR', short: 'Jurisprudência', full: 'Jurisprudência (STF)' }
+    ];
+    const R = 0.32 * S, w0 = 0.185 * S, h0 = 0.15 * S;
+    const pad = big ? 8 : 5;
+    const labelPx = big ? 12.5 : 10.5;
+    const iconPx = big ? 28 : 20;
+    const expW = big ? Math.min(S * 0.36, 230) : S * 0.52;
+    const sel = this.state.sel;
+    const nodes = MAT.map((m, i) => {
+      const a = i * 36, rad = a * Math.PI / 180;
+      let cx = S / 2 + R * Math.sin(rad), cy = S / 2 - R * Math.cos(rad);
+      const selected = i === sel;
+      let text, textStyle, w;
+      if (selected) {
+        w = expW;
+        cx = Math.max(expW / 2 + 4, Math.min(S - expW / 2 - 4, cx));
+        text = m.full;
+        textStyle = 'font-size:' + (labelPx + 1) + 'px;line-height:1.2;font-weight:700;color:#FBF1DA';
+      } else {
+        w = w0;
+        const ok = this.fit(m.short, w0 - pad * 2, labelPx, 2);
+        text = ok ? m.short : m.id;
+        textStyle = ok
+          ? 'font-size:' + labelPx + 'px;line-height:1.15;color:#E9DEC9'
+          : 'font-size:' + (labelPx + 3) + 'px;line-height:1.1;font-weight:700;letter-spacing:.08em;color:#D0B386';
+      }
+      const base = 'position:absolute;left:' + cx.toFixed(1) + 'px;top:' + cy.toFixed(1) + 'px;width:' + w.toFixed(1) + 'px;min-height:' + h0.toFixed(1) + 'px;box-sizing:border-box;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:' + pad + 'px;border-radius:' + (big ? 16 : 12) + 'px;text-align:center;transition:width .28s ease,background .25s ease,border-color .25s ease,box-shadow .3s ease;';
+      const style = base + (selected
+        ? 'border:1.5px solid #D0B386;background:#173653;color:#FBF1DA;z-index:5;box-shadow:0 0 0 1px rgba(10,30,52,.9),0 0 26px rgba(208,179,134,.45),inset 0 0 16px rgba(208,179,134,.12)'
+        : 'border:1.5px solid rgba(165,138,103,.7);background:rgba(10,30,52,.86);color:#E9DEC9;z-index:1');
+      const o = {
+        text, textStyle, style, selected,
+        aria: m.full,
+        pick: () => {
+          if (this.state.sel === i) return;
+          const cur = this.state.angle;
+          const delta = ((a - (cur % 360) + 540) % 360) - 180;
+          this.setState({ sel: i, angle: cur + delta });
+        }
+      };
+      MAT.forEach((x) => { o['is' + x.id] = x.id === m.id; });
+      return o;
+    });
+    const m = MAT[sel];
+    const ok = this.fit(m.short, w0 - pad * 2, labelPx, 2);
+    const padX = big ? 40 : 20;
+    const L = (css) => 'position:absolute;font-family:Georgia,serif;font-weight:700;color:#D0B386;font-size:' + (big ? 15 : 11) + 'px;line-height:1;' + css;
+    return {
+      iconPx,
+      nodes,
+      rootStyle: 'width:' + (S + padX * 2) + 'px;box-sizing:border-box;padding:' + padX + 'px ' + padX + 'px ' + (padX - 4) + 'px;background:linear-gradient(180deg,#0E2A45 0%,#0A1E34 45%,#081628 100%);color:#E9DEC9;display:flex;flex-direction:column;gap:' + (big ? 28 : 18) + 'px',
+      stageStyle: 'position:relative;width:' + S + 'px;height:' + S + 'px',
+      discStyle: 'position:absolute;inset:0;border-radius:50%;border:3px solid #A58A67;box-sizing:border-box;background:radial-gradient(circle at 48% 46%,#1B4467 0%,#14344F 38%,#0C2540 72%,#0A1E34 100%);box-shadow:0 18px 44px rgba(0,0,0,.5),inset 0 0 0 5px rgba(10,30,52,.85),inset 0 0 0 6px rgba(208,179,134,.35)',
+      ticksStyle: 'position:absolute;inset:0;border-radius:50%;background:repeating-conic-gradient(from -1deg,#D0B386 0deg 2deg,transparent 2deg 30deg),repeating-conic-gradient(from -.25deg,rgba(208,179,134,.65) 0deg .5deg,transparent .5deg 3deg);-webkit-mask:radial-gradient(circle closest-side,transparent 90%,#000 90.3%,#000 96%,transparent 96.3%);mask:radial-gradient(circle closest-side,transparent 90%,#000 90.3%,#000 96%,transparent 96.3%);pointer-events:none',
+      ring1Style: 'position:absolute;inset:9%;border-radius:50%;border:1px solid rgba(208,179,134,.4);pointer-events:none',
+      ring2Style: 'position:absolute;inset:' + (50 - 0.205 * 100) + '%;border-radius:50%;border:1px dashed rgba(165,138,103,.55);pointer-events:none',
+      letterN: L('top:' + (big ? 12 : 8) + 'px;left:50%;transform:translateX(-50%)'),
+      letterS: L('bottom:' + (big ? 12 : 8) + 'px;left:50%;transform:translateX(-50%)'),
+      letterL: L('right:' + (big ? 14 : 9) + 'px;top:50%;transform:translateY(-50%)'),
+      letterO: L('left:' + (big ? 14 : 9) + 'px;top:50%;transform:translateY(-50%)'),
+      needleStyle: 'position:absolute;inset:0;pointer-events:none;transform:rotate(' + this.state.angle + 'deg);transition:transform .62s cubic-bezier(.21,.8,.22,1)',
+      hubStyle: 'position:absolute;left:50%;top:50%;width:' + (S * 0.07).toFixed(1) + 'px;height:' + (S * 0.07).toFixed(1) + 'px;transform:translate(-50%,-50%);border-radius:50%;background:#0D2945;border:2px solid #D0B386;box-sizing:border-box;box-shadow:0 0 0 3px rgba(10,30,52,.8)',
+      stripStyle: 'display:flex;align-items:center;justify-content:space-between;gap:16px;padding:' + (big ? '16px 20px' : '12px 14px') + ';border-radius:16px;border:1px solid rgba(165,138,103,.55);background:rgba(17,40,63,.88)',
+      stripNamePx: big ? 20 : 16,
+      selFull: m.full,
+      selId: m.id,
+      selMode: ok ? 'o nome cabe no compartimento' : 'sigla no compartimento; nome completo ao selecionar'
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -163,7 +163,7 @@ test("Assistente abre OmniStudy, Markdown elimina asteriscos e histórico fica c
   const omniCode = fs.readFileSync("public/claude-export/omnistudy-ai.js", "utf8");
 
   // 1. Atalho Assistente abre o OmniStudy
-  assert.match(assistantCode, /⚡ Omni/);
+  assert.match(assistantCode, /⚡ O Arquiteto/);
   assert.match(assistantCode, /window\.QBOmniStudy\.openStudio\('tutor'\)/);
 
   // 2. Formatação de Markdown no Omni sem falha de asteriscos
