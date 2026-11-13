@@ -1,0 +1,25 @@
+/* Admin · tokens do design system (fonte única das cores do modo admin).
+   Camada 1: primitivos. Camada 2: semânticos, nomeados como na pesquisa-base (background, card, foreground, primary, border, ring, feedback).
+   Os arquivos admin-*.css devem usar var(--qbds-*), nunca hexadecimais. Prefixo --qbds- para não colidir com os --qb-* já existentes. */
+:root.qb-admin-experience{
+  /* primitivos */
+  --qbds-navy-900:#0A1E34;--qbds-navy-700:#173653;--qbds-navy-600:#1E4466;
+  --qbds-bronze:#A58A67;--qbds-gold:#D0B386;--qbds-gold-bright:#FFE5B6;
+  --qbds-cream:#F1E8D5;--qbds-cream-2:#E9DEC9;--qbds-sand:#C9BEA8;--qbds-sand-2:#B79F78;
+  --qbds-crimson:#A92E3A;          /* preenchimentos (texto branco sobre ele: 6,7:1) */
+  --qbds-crimson-ui:#E8727C;       /* bordas, aros e traços sobre marinho: ≥3:1 (o vinho puro dava 2,5:1) */
+  /* semânticos */
+  --qbds-background:var(--qbds-navy-900);
+  --qbds-card:var(--qbds-navy-700);
+  --qbds-card-raised:var(--qbds-navy-600);
+  --qbds-foreground:var(--qbds-cream);
+  --qbds-foreground-2:var(--qbds-cream-2);
+  --qbds-muted-foreground:var(--qbds-sand);
+  --qbds-kicker:var(--qbds-sand-2);
+  --qbds-primary:var(--qbds-gold);
+  --qbds-primary-foreground:var(--qbds-navy-900);
+  --qbds-border:var(--qbds-bronze);
+  --qbds-ring:var(--qbds-gold);
+  --qbds-selected:var(--qbds-crimson-ui);
+  --qbds-accent-fill:var(--qbds-crimson);
+}

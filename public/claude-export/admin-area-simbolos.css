@@ -6,7 +6,7 @@
 }
 :root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sym] .qb-radial-node-icon svg{display:block;width:1em;height:1em}
 :root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sigla-on] .qb-radial-node-label{
-  font-weight:700!important;letter-spacing:.08em;font-size:clamp(13px,1.6vw,16px)!important;color:#D0B386!important;
+  font-weight:700!important;letter-spacing:.08em;font-size:clamp(13px,1.6vw,16px)!important;color:var(--qbds-gold)!important;
 }
 :root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sym]:is(:hover,:focus-visible,.is-focused):not(:disabled){
   width:clamp(150px,36%,232px)!important;z-index:6!important;
