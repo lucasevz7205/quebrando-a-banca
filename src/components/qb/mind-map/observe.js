@@ -72,6 +72,12 @@ export function observeMindMap(frame) {
             : false;
         }
       }
+      /* Ao fechar o conceito o foco volta para um botão, nunca para o <select>: em tablets e navegadores de carro,
+         focar o select abre a lista de conceitos sem o aluno pedir. */
+      function returnFocus(){
+        const target=next.querySelector("[data-map-open]")||next.querySelector("[data-map-stage]");
+        if(target){if(!target.hasAttribute("tabindex")&&target.tagName!=="BUTTON")target.setAttribute("tabindex","-1");target.focus({preventScroll:true});}
+      }
       function select(path, zoom = true, expand = false) {
         lastPath = nodes.has(path) ? path : "root";
         chooser.value = lastPath;
@@ -155,7 +161,7 @@ export function observeMindMap(frame) {
         if (!button) return;
         if (button.hasAttribute("data-map-close")) {
           reveal.hide();
-          chooser.focus({preventScroll:true});
+          returnFocus();
           return;
         }
         if (button.dataset.mapMode === "list") showList();
@@ -194,7 +200,7 @@ export function observeMindMap(frame) {
       function keydown(event) {
         if(event.key === "Escape" && reveal.active) {
           reveal.hide();
-          chooser.focus({preventScroll:true});
+          returnFocus();
           event.preventDefault();
         }
       }
