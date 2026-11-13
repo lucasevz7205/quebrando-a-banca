@@ -11,7 +11,7 @@ const bgCss=fs.readFileSync("public/claude-export/ambient-background.css","utf8"
 const sw=fs.readFileSync("public/sw.js","utf8");
 
 test("tela Estudar preserva scroll nativo do iframe em dispositivos com touch",()=>{
-  assert.match(route,/srcDoc=\{account\.markup\}/);
+  assert.match(route,/srcDoc=\{frameMarkup\}/);
   assert.match(route,/scrolling="yes"/);
   assert.match(route,/overflowY: "auto", WebkitOverflowScrolling: "touch", touchAction: "auto"/);
   assert.match(route,/height: preview \? "calc\(100dvh - 3\.5rem\)" : "100dvh"/);
@@ -47,7 +47,7 @@ test("fundo decorativo não intercepta gesto de rolagem ou captura cliques",()=>
 });
 
 test("nova versão PWA permite revalidar arquivos alterados sem tocar respostas",()=>{
-  assert.match(sw,/const CACHE_NAME = "qb-static-axon-v9"/);
+  assert.match(sw,/const CACHE_NAME = "qb-static-axon-v10"/);
   assert.match(sw,/url\.pathname\.startsWith\("\/claude-export\/"\)/);
   assert.match(sw,/fetch\(request, \{ cache: "no-cache" \}\)/);
   assert.doesNotMatch(route,/localStorage\.clear\(\)|indexedDB\.deleteDatabase\(/);
