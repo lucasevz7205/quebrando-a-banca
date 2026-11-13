@@ -1,8 +1,7 @@
 // Cena das telas de entrada (12/11/2026): vídeo em loop atrás de um véu escuro e
 // de um cartão de vidro. Só no login, cadastro e MFA — nunca durante o estudo.
 // prefers-reduced-motion pausa o vídeo no primeiro quadro.
-const VIDEO =
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260815_034306_165449ef-7d2e-4e81-850f-1939c5cb442d.mp4";
+const VIDEO = "/claude-export/login-720.mp4"; // 720p, ~0,4 MB (original 13 MB)
 
 function syncReducedMotion(v) {
   if (!v || typeof window === "undefined" || !window.matchMedia) return;
