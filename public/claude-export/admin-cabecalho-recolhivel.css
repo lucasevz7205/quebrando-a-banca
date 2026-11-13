@@ -1,0 +1,33 @@
+/* PDF cabecalho-recolhivel: recolher SOMENTE a faixa superior de controles. O logo, a espada e o friso permanecem. */
+:root.qb-admin-experience header.top.qb-app-header.qb-cabecalho-recolhido .qb-header-utilities > *:not(.qb-cabecalho-toggle){
+  display:none!important;
+}
+:root.qb-admin-experience .qb-cabecalho-toggle{
+  display:inline-flex!important;align-items:center;justify-content:center;gap:6px;
+  padding:6px 12px;border-radius:999px;cursor:pointer;
+  border:1px solid rgba(165,138,103,.7);
+  background:rgba(10,30,52,.82);color:#E9DEC9;
+  font:600 12px/1 system-ui,sans-serif;
+  white-space:nowrap;
+  min-height:34px;
+  order:999!important;
+  touch-action:manipulation!important;
+}
+:root.qb-admin-experience .qb-cabecalho-toggle:focus-visible{
+  outline:2px solid #D0B386;outline-offset:2px;
+}
+:root.qb-admin-experience .qb-cabecalho-toggle::after{
+  content:"▴";font-size:11px;transition:transform .25s ease;
+}
+:root.qb-admin-experience header.top.qb-app-header.qb-cabecalho-recolhido .qb-cabecalho-toggle::after{
+  transform:rotate(180deg);
+}
+/* Eliminar a sobra de recuo lateral que existiria ao esconder os botões. */
+:root.qb-admin-experience header.top.qb-app-header.qb-cabecalho-recolhido .qb-header-utilities{
+  padding-left:0!important;
+  justify-content:center!important;
+}
+/* Respeitar o comportamento original de rolagem e as áreas de toque. */
+@media(prefers-reduced-motion:reduce){
+  :root.qb-admin-experience .qb-cabecalho-toggle::after{transition:none!important;}
+}
