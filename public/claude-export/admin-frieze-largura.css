@@ -1,0 +1,20 @@
+/* PROTÓTIPO — largura intermediária do friso (tablets em paisagem, 971 a 1280 px).
+   Faz as sete abas caberem sem cortar "Simulado". Sobrescreve apenas o necessário.
+   Não altera dados, rotas nem eventos. */
+@media (min-width:971px) and (max-width:1280px){
+  :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav{
+    padding:11px 12px 12px!important;
+  }
+  :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button{
+    flex:1 1 auto!important;
+    min-width:0!important;
+    padding:6px 6px!important;
+    gap:5px!important;
+    font-size:13px!important;
+    letter-spacing:-0.01em!important;
+  }
+  :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .qb-nav-orb,
+  :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .qb-nav-orb > span{
+    width:17px!important;height:17px!important;flex-basis:17px!important;
+  }
+}
