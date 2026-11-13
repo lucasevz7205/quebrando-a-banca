@@ -1,0 +1,62 @@
+/* Quebrando a Banca · Treinar · símbolos por matéria
+ * Admin somente. Nunca altera os IDs, eventos, estatísticas ou perguntas.
+ * Nomes reais permanecem disponíveis em title, aria-label e data-train-name.
+ */
+:root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sym] .qb-radial-node-icon{
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  flex:0 0 auto!important;width:1.15em!important;height:1.15em!important;
+  margin:0 auto!important;font-size:clamp(19px,2.6vw,26px)!important;
+  line-height:0!important;color:#E3C59A!important;
+}
+:root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sym] .qb-radial-node-icon svg{
+  display:block!important;width:1em!important;height:1em!important;
+  overflow:visible!important;stroke:currentColor!important;
+}
+:root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sigla-on] .qb-radial-node-label{
+  font-weight:750!important;letter-spacing:.07em!important;
+  font-size:clamp(12px,1.5vw,15px)!important;
+  color:#D0B386!important;white-space:nowrap!important;
+}
+:root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sym]:is(:hover,:focus-visible,.is-focused,.qb-astro-selected):not(:disabled){
+  width:clamp(152px,36%,232px)!important;
+  max-width:calc(100% - 8px)!important;z-index:10!important;
+  translate:var(--qb-shift,0px) 0!important;
+  transform:translate(-50%,-50%) scale(1)!important;
+  border-radius:22px!important;
+  padding:10px 12px!important;min-height:0!important;
+  background:radial-gradient(circle at 50% 38%,rgba(41,76,100,.97),rgba(10,29,49,.97) 90%)!important;
+  border:1px solid rgba(221,178,110,.8)!important;
+  box-shadow:0 0 0 1px rgba(66,96,118,.6),0 0 18px rgba(217,160,85,.40),inset 0 0 12px rgba(230,181,100,.13)!important;
+}
+:root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sym]:is(:hover,:focus-visible,.is-focused,.qb-astro-selected):not(:disabled) .qb-radial-node-label{
+  display:block!important;max-width:100%!important;
+  font-size:0!important;line-height:0!important;
+  -webkit-line-clamp:unset!important;overflow:visible!important;
+  white-space:normal!important;
+}
+:root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sym]:is(:hover,:focus-visible,.is-focused,.qb-astro-selected):not(:disabled) .qb-radial-node-label::after{
+  content:attr(data-qb-full)!important;display:block!important;
+  font:750 clamp(11px,1.25vw,13px)/1.22 system-ui,sans-serif!important;
+  letter-spacing:0!important;color:#FBF1DA!important;
+  overflow-wrap:break-word!important;text-align:center!important;
+  white-space:normal!important;
+}
+:root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sym]:is(:hover,:focus-visible,.is-focused,.qb-astro-selected):not(:disabled) .qb-radial-node-caption{
+  white-space:normal!important;max-width:19ch!important;
+}
+@media(max-width:500px){
+  :root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sym]:not([data-qb-sigla-on]) .qb-radial-node-label{
+    font-size:11px!important;
+  }
+  :root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sym]:is(:hover,:focus-visible,.is-focused,.qb-astro-selected):not(:disabled){
+    width:clamp(138px,43%,202px)!important;padding:7px 9px!important;
+  }
+  :root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sym]:is(:hover,:focus-visible,.is-focused,.qb-astro-selected):not(:disabled) .qb-radial-node-label{
+    font-size:0!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  :root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sym]{
+    transition:none!important;animation:none!important;
+  }
+}
