@@ -1,0 +1,11 @@
+/* Refinamentos do astrolábio fornecidos no PDF. Carregar após admin-astrolabe-unified.css. */
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node-caption,
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node-label{
+  font-size:max(10px,var(--qb-astro-min,10px))!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-astro-needles path[stroke="#9B4442"]{
+  stroke:#A69277!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node:is(:hover,:focus-visible,.is-focused,.qb-admin-pressed,.qb-astro-selected):not(:disabled)::before{
+  animation-duration:2.6s!important;
+}
