@@ -1,0 +1,9 @@
+/* Símbolos de matéria nos radiais de área, apenas administrador. */
+:root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sym] .qb-radial-node-icon{display:block!important;width:1em;height:1em;margin:0 auto;font-size:clamp(19px,2.6vw,26px)!important;line-height:0!important;color:#E3C59A!important}
+:root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sym] .qb-radial-node-icon svg{display:block;width:1em;height:1em}
+:root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sigla-on] .qb-radial-node-label{font-weight:700!important;letter-spacing:.08em;font-size:clamp(13px,1.6vw,16px)!important;color:#D0B386!important}
+:root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sym]:is(:hover,:focus-visible,.is-focused):not(:disabled){width:clamp(150px,36%,232px)!important;z-index:6!important;translate:var(--qb-shift,0px) 0;transform:translate(-50%,-50%) scale(1)!important;border-radius:22px!important;padding:8px 12px!important;min-height:0!important}
+:root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sym]:is(:hover,:focus-visible,.is-focused):not(:disabled) .qb-radial-node-label{font-size:0!important;display:block!important;-webkit-line-clamp:unset!important;max-width:100%}
+:root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sym]:is(:hover,:focus-visible,.is-focused):not(:disabled) .qb-radial-node-label::after{content:attr(data-qb-full);display:block;font-size:12.5px;line-height:1.2;font-weight:700;letter-spacing:0;color:#FBF1DA;overflow-wrap:break-word}
+@media(max-width:500px){:root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sym]:not([data-qb-sigla-on]) .qb-radial-node-label{font-size:11px!important}}
+@media(prefers-reduced-motion:reduce){:root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sym]{transition:none!important}}
