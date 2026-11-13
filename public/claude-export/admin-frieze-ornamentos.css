@@ -1,0 +1,4 @@
+/* Patch friso-ornamentos.pdf: mantém o perfil afinado e acrescenta a esfera armilar superior e a rosa dos ventos de 32 rumos. Substitui visualmente o v4. */
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav::before{
+  background:url("/claude-export/admin-frieze-navigation-v5.svg") center/100% 100% no-repeat!important;
+}
