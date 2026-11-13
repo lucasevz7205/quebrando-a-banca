@@ -84,21 +84,22 @@
 :root.qb-admin-experience .qb-map3-bar button:hover{border-color:#D0B386;background:rgba(208,179,134,.16)}
 :root.qb-admin-experience .qb-map3 button:focus-visible{outline:2px solid #D0B386;outline-offset:2px}
 
-/* Núcleo do mapa: disco azul com anel tracejado e título em dourado (formato do mockup). */
-:root.qb-admin-experience .qb-map3-origin{
-  --core:clamp(88px,24%,116px);
-  width:var(--core);height:var(--core);max-width:none;box-sizing:border-box;
-  display:flex;align-items:center;justify-content:center;text-align:center;
-  transform:translate(-50%,-50%);border-radius:50%;padding:12px;
-  border:1.6px solid #D0B386;background:radial-gradient(circle at 50% 40%,#1E4466,#173653 70%);
-  color:#D0B386;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:clamp(8.5px,1.1vw,10.5px);line-height:1.25;
-  white-space:normal;overflow:hidden;text-overflow:clip;position:absolute;
-  box-shadow:0 0 0 4px rgba(208,179,134,.1),0 8px 22px rgba(0,0,0,.4);
+/* Núcleo do mapa: placa azul com anel tracejado e título em dourado (formato do mockup).
+   Fica dentro do invólucro do nó (abaixo da esfera 3D), junto do botão de ramos, sem cobrir a esfera. */
+:root.qb-admin-experience .qb-map3-node-actions > .qb-map3-origin{
+  position:relative;transform:none;box-sizing:border-box;
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;
+  max-width:min(300px,55vw);min-width:110px;padding:10px 16px;
+  border-radius:18px;border:1.6px solid #D0B386;text-align:center;
+  background:radial-gradient(circle at 50% 30%,#1E4466,#173653 72%);
+  color:#D0B386;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  font-size:clamp(9.5px,1.15vw,11.5px);line-height:1.3;white-space:normal;overflow:hidden;text-overflow:clip;
+  box-shadow:0 0 0 3px rgba(208,179,134,.1),0 8px 20px rgba(0,0,0,.4);
 }
-:root.qb-admin-experience .qb-map3-origin::before{
-  content:"";position:absolute;inset:5px;border-radius:50%;border:1px dashed rgba(208,179,134,.45);pointer-events:none;
+:root.qb-admin-experience .qb-map3-node-actions > .qb-map3-origin::before{
+  content:"";position:absolute;inset:4px;border-radius:14px;border:1px dashed rgba(208,179,134,.45);pointer-events:none;
 }
-:root.qb-admin-experience .qb-map3-origin[aria-pressed="true"]{border-color:#A92E3A;box-shadow:0 0 0 3px rgba(169,46,58,.35),0 8px 22px rgba(0,0,0,.4)}
+:root.qb-admin-experience .qb-map3-node-actions > .qb-map3-origin[aria-pressed="true"]{border-color:#A92E3A;box-shadow:0 0 0 3px rgba(169,46,58,.35),0 8px 20px rgba(0,0,0,.4)}
 /* Núcleo das telas de lista e de flashcards */
 :root.qb-admin-experience .m-centro.qb-topic-hub{
   position:relative;text-align:center;padding:18px 20px;border-radius:22px;
@@ -111,3 +112,11 @@
 :root.qb-admin-experience .m-centro.qb-topic-hub > span{color:#B79F78;letter-spacing:.14em}
 :root.qb-admin-experience .m-centro.qb-topic-hub > strong{color:#D0B386;font-family:Georgia,"Times New Roman",serif;text-transform:uppercase;letter-spacing:.06em}
 :root.qb-admin-experience .m-centro.qb-topic-hub > small{color:#C9BEA8}
+
+/* Botão de abrir e fechar ramos do nó, no mesmo padrão */
+:root.qb-admin-experience .qb-map3-labels .qb-map3-branch-toggle{
+  border:1px solid rgba(165,138,103,.85);background:#173653;color:#D0B386;border-radius:10px;
+}
+:root.qb-admin-experience .qb-map3-labels .qb-map3-branch-toggle[aria-expanded="true"]{background:#1E4466;border-color:#D0B386}
+:root.qb-admin-experience .qb-map3-labels .qb-map3-branch-toggle:hover,
+:root.qb-admin-experience .qb-map3-labels .qb-map3-branch-toggle:focus-visible{border-color:#D0B386;background:rgba(208,179,134,.2);outline:2px solid #D0B386;outline-offset:2px}
