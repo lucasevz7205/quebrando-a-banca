@@ -100,6 +100,10 @@
   content:"";position:absolute;inset:4px;border-radius:14px;border:1px dashed rgba(208,179,134,.45);pointer-events:none;
 }
 :root.qb-admin-experience .qb-map3-node-actions > .qb-map3-origin[aria-pressed="true"]{border-color:#A92E3A;box-shadow:0 0 0 3px rgba(169,46,58,.35),0 8px 20px rgba(0,0,0,.4)}
+/* A placa do núcleo fica centrada no nó (a esfera 3D da raiz some no admin); o deslocamento compensa o botão de ramos ao lado. */
+:root.qb-admin-experience .qb-map3-labels .qb-map3-node-actions:has(> .qb-map3-origin){
+  transform:translate(calc(-50% + 17px),-50%);
+}
 /* Núcleo das telas de lista e de flashcards */
 :root.qb-admin-experience .m-centro.qb-topic-hub{
   position:relative;text-align:center;padding:18px 20px;border-radius:22px;
