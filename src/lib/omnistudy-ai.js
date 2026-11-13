@@ -104,6 +104,20 @@ const OmniStudyInput = z.discriminatedUnion("task", [
     tentativa: z.string().min(3).max(2000),
   }),
   z.object({
+    /* reformulação de cartão de revisão ativa (12/11/2026) */
+    task: z.literal("curate-card"),
+    topico: z.string().max(300).optional().default(""),
+    card: z.object({
+      tema: z.string().max(300).optional().default(""),
+      q: z.string().min(2).max(2000),
+      a: z.array(z.string().max(1000)).max(20).default([]),
+      src: z.string().max(400).optional().default(""),
+    }),
+    issueType: z.enum(["pergunta_vaga", "resposta_errada", "mais_de_um_conceito", "resposta_longa", "falta_contexto", "outro"]).default("pergunta_vaga"),
+    userObservation: z.string().max(2000).optional().default(""),
+    referencia: z.string().max(10000).optional(),
+  }),
+  z.object({
     task: z.literal("curate-question"),
     question: z.object({
       id: z.string().max(120),
@@ -1020,6 +1034,55 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
       });
       return normalizeEvocacao(safeJsonParse(raw, {}), data.tentativa);
     }
+    if (data.task === "curate-card") {
+      const c = data.card;
+      const prompt = [
+        "Você reformula um cartão de revisão ativa (flashcard) de um estudante de concurso (Cebraspe, Câmara dos Deputados).",
+        `Tópico: "${data.topico}".`,
+        `CARTÃO ATUAL:\n- Tema: ${c.tema}\n- Pergunta: ${c.q}\n- Resposta: ${c.a.join(" | ")}\n- Fonte: ${c.src}`,
+        `PROBLEMA APONTADO PELO ESTUDANTE: ${data.issueType}${data.userObservation ? ` — ${data.userObservation}` : ""}`,
+        data.referencia
+          ? `MATERIAL DO TÓPICO (única fonte permitida para corrigir conteúdo):\n"""\n${data.referencia}\n"""`
+          : "Não há material do tópico. Não altere o conteúdo da resposta; só a formulação. Se a resposta parecer errada, diga isso no parecer em vez de corrigir de memória.",
+        "REGRAS DO CARTÃO (claude/Regras_de_Perguntas.md):",
+        "1. Uma resposta definida e conferível (número, prazo, artigo, nome, lista curta e fechada). Nada de \"explique\" ou \"comente\".",
+        "2. A pista está no enunciado: diga a matéria e o recorte; se for classificar, liste as opções na pergunta.",
+        "3. Lacunas (___) no lugar de \"cite\". Se a resposta é lista, diga quantos itens.",
+        "4. Um conceito por cartão. Se o cartão mistura conceitos, divida em até 3 cartões.",
+        "5. Termos e siglas definidos na própria pergunta; nada de metalinguagem solta (\"a pegadinha clássica\").",
+        "6. Citações entre aspas; contexto antes da pergunta.",
+        "7. Resposta: itens curtos, um por linha; o verso não é parágrafo.",
+        "8. Mantenha o que estava certo. Não acrescente conteúdo que não esteja no cartão ou no material.",
+        "Devolva 'cartoes' com 1 cartão (reformulação) ou de 2 a 3 (divisão: o primeiro substitui o atual), 'parecer' em uma frase e 'problemas' (o que estava errado no cartão original).",
+      ].join("\n\n");
+      const raw = await core.InvokeLLM({
+        prompt,
+        response_json_schema: {
+          type: "object",
+          properties: {
+            parecer: { type: "string" },
+            problemas: { type: "array", items: { type: "string" } },
+            cartoes: { type: "array", items: { type: "object", properties: {
+              tema: { type: "string" }, q: { type: "string" }, a: { type: "array", items: { type: "string" } }, src: { type: "string" } } } },
+          },
+          required: ["parecer", "cartoes"],
+        },
+      });
+      const r = safeJsonParse(raw, {});
+      const cartoes = (Array.isArray(r.cartoes) ? r.cartoes : []).slice(0, 3).map(x => ({
+        tema: String(x?.tema || c.tema || "").slice(0, 300),
+        q: String(x?.q || "").trim().slice(0, 2000),
+        a: (Array.isArray(x?.a) ? x.a : [x?.a]).map(v => String(v || "").trim()).filter(Boolean).slice(0, 12),
+        src: String(x?.src || c.src || "").slice(0, 400),
+      })).filter(x => x.q && x.a.length);
+      if (!cartoes.length) throw new Error("A IA não devolveu um cartão válido.");
+      return {
+        parecer: String(r.parecer || "").slice(0, 600),
+        problemas: (Array.isArray(r.problemas) ? r.problemas : []).map(String).slice(0, 6),
+        cartoes,
+      };
+    }
+
     if (data.task === "curate-question") {
       const q = data.question;
       const prompt = [

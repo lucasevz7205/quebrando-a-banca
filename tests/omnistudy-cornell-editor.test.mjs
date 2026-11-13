@@ -110,7 +110,7 @@ test("integração está conectada ao servidor autenticado e usa versão nova pu
  assert.match(shell,/omnistudy-cornell\.js\?v=1/);
  assert.match(shell,/omnistudy-cornell\.css\?v=1/);
  assert.match(shell,/omnistudy-ai\.js\?v=2/);
- assert.match(sw,/qb-static-axon-v[3-9]/);
+ assert.match(sw,/qb-static-axon-v(?:[3-9]|10)/);
  assert.match(sw,/omnistudy-cornell\.js\?v=1/);
  assert.match(sw,/omnistudy-ai\.js\?v=2/);
 });
@@ -163,7 +163,7 @@ test("Assistente abre OmniStudy, Markdown elimina asteriscos e histórico fica c
   const omniCode = fs.readFileSync("public/claude-export/omnistudy-ai.js", "utf8");
 
   // 1. Atalho Assistente abre o OmniStudy
-  assert.match(assistantCode, /⚡ Omni/);
+  assert.match(assistantCode, /⚡ O Arquiteto/);
   assert.match(assistantCode, /window\.QBOmniStudy\.openStudio\('tutor'\)/);
 
   // 2. Formatação de Markdown no Omni sem falha de asteriscos

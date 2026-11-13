@@ -57,14 +57,50 @@ function StudyScreen({ account }) {
   const legacy = user?.role === "admin" && account?.legacy;
   const preview = user?.role === "admin" && account?.preview === true;
   const accountId = preview || (user?.id && user.id === account?.userId) ? account.id : null;
+  // Tema cinematográfico exclusivo da sessão pessoal do administrador.
+  // Previews de contas de estudantes nunca recebem essa camada.
+  const adminExperience = user?.role === "admin" && !preview && (legacy || account?.userId === user?.id);
+  const frameMarkup = adminExperience && typeof account?.markup === "string"
+    ? account.markup
+        .replace(/data-qb-video-src="[^"]*"/, 'data-qb-video-src="https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/1af59e0ae_gemini_generated_video_FA7F3298.mp4"')
+        .replace('poster="/claude-export/ambient-poster.jpg"', 'poster="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/dc13890b5_gemini_generated_video_FA7F3298_frame.jpg"')
+        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=4"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=7"><script defer src="/claude-export/admin-art.js?v=5"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=2"><link rel="stylesheet" href="/claude-export/admin-frieze.css?v=2"><link rel="stylesheet" href="/claude-export/admin-frieze-revisao.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-largura.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-detalhes.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-afinado.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-ornamentos.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-unified.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-ajustes.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-base.css?v=1"><script defer src="/claude-export/admin-astrolabe-unified.js?v=2"></script><link rel="stylesheet" href="/claude-export/admin-scroll-fix.css?v=1"><link rel="stylesheet" href="/claude-export/admin-cabecalho-recolhivel.css?v=3"><script defer src="/claude-export/admin-cabecalho-recolhivel.js?v=3"></script><link rel="stylesheet" href="/claude-export/admin-treino-simbolos.css?v=1"><script defer src="/claude-export/admin-treino-simbolos.js?v=1"></script><link rel="stylesheet" href="/claude-export/admin-mapa-cartoes.css?v=5"><link rel="stylesheet" href="/claude-export/admin-estudo-padrao.css?v=2"><link rel="stylesheet" href="/claude-export/admin-subfriso.css?v=2"><link rel="stylesheet" href="/claude-export/admin-ajustes.css?v=1"><script defer src="/claude-export/admin-topo-compacto.js?v=1"></script><link rel="stylesheet" href="/claude-export/admin-area-simbolos.css?v=1"><script defer src="/claude-export/admin-area-simbolos.js?v=2"></script><link rel="stylesheet" href="/claude-export/admin-touch-scroll-guard.css?v=1"></body></html>')
+    : account?.markup;
   const frameRef = useRef(null);
   const [ready, setReady] = useState(false);
   const [frameVersion, setFrameVersion] = useState(0);
   const [error, setError] = useState("");
   const [updateAvailable, setUpdateAvailable] = useState(false);
+  const [moduleLoadError, setModuleLoadError] = useState(false);
+
+  // Vite/Rolldown may reject an outdated dynamic import after a publication.
+  // Never force-refresh a student who may have an unanswered question open.
+  useEffect(() => {
+    const onPreloadError = event => {
+      event.preventDefault();
+      setModuleLoadError(true);
+    };
+    window.addEventListener("vite:preloadError", onPreloadError);
+    return () => window.removeEventListener("vite:preloadError", onPreloadError);
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined" || !("serviceWorker" in navigator)) return;
+
+    // The Base44 preview/dev server continuously changes module versions.
+    // A production PWA service worker must not control that environment.
+    // Unregister ONLY our sw.js; never clear app data or other registrations.
+    if (import.meta.env.DEV || window.location.hostname.startsWith("preview-sandbox--")) {
+      navigator.serviceWorker.getRegistrations()
+        .then(registrations => Promise.all(registrations.filter(reg =>
+          [reg.active, reg.waiting, reg.installing].some(worker => {
+            try { return new URL(worker?.scriptURL).pathname === "/sw.js"; }
+            catch { return false; }
+          })
+        ).map(reg => reg.unregister())))
+        .catch(() => {});
+      return;
+    }
     let disposed = false;
     let registration = null;
     // Nunca interromper uma resposta em andamento: oferecer atualização manual.
@@ -149,12 +185,32 @@ function StudyScreen({ account }) {
 
   return (
     <main aria-label="Quebrando a Banca · Ambiente de estudo"
-      style={{ width: "100%", minHeight: "100dvh", background: "#0E0E10" }}>
+      style={{ width: "100%", minHeight: "100svh", background: "#0E0E10" }}>
       {preview && (
         <header className="flex min-h-14 flex-wrap items-center justify-between gap-2 border-b bg-white px-4 py-2 text-sm text-slate-900">
           <span><strong>{account.name}</strong> · Visualização administrativa · Somente leitura</span>
           <Link to="/contas" className="font-medium underline">Voltar a Contas</Link>
         </header>
+      )}
+      {moduleLoadError && (
+        <div role="alert" style={{
+          position: "fixed", zIndex: 120, bottom: 16, left: 16,
+          maxWidth: "calc(100vw - 32px)", border: "1px solid #b97054",
+          borderRadius: 10, padding: 12, background: "#fff",
+          color: "#8f2b24", boxShadow: "0 5px 24px #0006",
+          fontFamily: "system-ui, sans-serif", fontSize: 13
+        }}>
+          Um módulo do aplicativo não carregou. Suas respostas já salvas foram preservadas.
+          Atualize somente quando terminar a questão em andamento.
+          <button type="button" onClick={() => window.location.reload()}
+            style={{ marginLeft: 10, fontWeight: 700, textDecoration: "underline" }}>
+            Recarregar versão atual
+          </button>
+          <button type="button" onClick={() => setModuleLoadError(false)}
+            style={{ marginLeft: 10, textDecoration: "underline" }}>
+            Depois
+          </button>
+        </div>
       )}
       {updateAvailable && (
         <div role="status" style={{
@@ -191,11 +247,13 @@ function StudyScreen({ account }) {
         // The authenticated loader provides the shell for the current account.
         <iframe key={`${accountId || user?.id}:${frameVersion}`} ref={frameRef}
           title="Quebrando a Banca: Hoje, Edital, Treinar, Estudo, Simulado e Desempenho"
-          srcDoc={account.markup}
+          srcDoc={frameMarkup}
+          scrolling="yes"
           sandbox={preview ? "allow-scripts allow-popups allow-popups-to-escape-sandbox" : undefined}
           style={{
-            display: "block", width: "100%", height: preview ? "calc(100dvh - 3.5rem)" : "100dvh",
-            border: 0, borderRadius: 0, background: "#0E0E10"
+            display: "block", width: "100%", height: preview ? "calc(100svh - 3.5rem)" : "100svh",
+            border: 0, borderRadius: 0, background: "#0E0E10",
+            overflowY: "auto", WebkitOverflowScrolling: "touch", touchAction: "auto"
           }}
         />
       ) : (

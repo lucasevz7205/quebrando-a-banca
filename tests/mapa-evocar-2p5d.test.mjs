@@ -65,6 +65,13 @@ test('percurso de evocação e controles 2,5D ligados no mapa',()=>{
   assert.match(obs,/qb-map-tour-next/);
   assert.match(shell,/data-map-tour/);
   assert.match(shell,/data-map-camera="front"/);
-  assert.match(shell,/evocar:true/);
-  assert.match(shell,/map-evocar\.js\?v=1/);
+  assert.match(shell,/evocar:\(\(\)=>/);
+  assert.match(shell,/map-evocar\.js\?v=2/);
+});
+test('evocar pode ser desligado no mapa para navegação livre, e a escolha fica salva',()=>{
+  const shell=fs.readFileSync('src/components/qb/study-shell.html','utf8');
+  assert.match(shell,/data-map-evocar aria-pressed/);
+  assert.match(shell,/localStorage\.getItem\('qb-evocar'\)!=='0'/);
+  assert.match(shell,/localStorage\.setItem\('qb-evocar',S\.evocar\?'1':'0'\)/);
+  assert.match(shell,/if\(!S\.evocar\|\|!n\|\|!window\.QBMapEvocar\)\{mapDetail\.innerHTML=detail;return;\}/);
 });

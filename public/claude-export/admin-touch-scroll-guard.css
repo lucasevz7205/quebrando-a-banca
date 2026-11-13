@@ -1,0 +1,28 @@
+/* iPad/Safari: durante rolagem por toque, :hover pode ficar preso ao nó
+   atravessado pelo dedo. Impedir expansão e zoom em dispositivos sem hover real.
+   Teclado e mouse continuam com os efeitos originais. */
+@media (hover:none), (pointer:coarse) {
+ :root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sym]:is(:hover,.is-focused):not(:focus-visible),
+ :root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sym]:is(:hover,.is-focused,.qb-astro-selected):not(:focus-visible){
+   width:clamp(104px,22%,156px)!important;max-width:none!important;
+   min-height:74px!important;padding:5px 4px!important;border-radius:50%!important;
+   translate:0 0!important;transform:translate(-50%,-50%) scale(1)!important;
+   transition:background-color .15s ease,border-color .15s ease!important;
+ }
+ :root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sym]:is(:hover,.is-focused):not(:focus-visible) .qb-radial-node-label,
+ :root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sym]:is(:hover,.is-focused,.qb-astro-selected):not(:focus-visible) .qb-radial-node-label{
+   font-size:clamp(11px,1.5vw,14px)!important;line-height:1.15!important;
+   display:block!important;overflow:hidden!important;-webkit-line-clamp:2!important;
+ }
+ :root.qb-admin-experience .qb-area-hub .qb-area-node[data-qb-sym]:is(:hover,.is-focused):not(:focus-visible) .qb-radial-node-label::after,
+ :root.qb-admin-experience .qb-train-hub[data-train-screen="subjects"] .qb-train-node[data-qb-sym]:is(:hover,.is-focused,.qb-astro-selected):not(:focus-visible) .qb-radial-node-label::after{
+   content:none!important;display:none!important;
+ }
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node:is(:hover,.is-focused,.qb-admin-pressed,.qb-astro-selected):not(:focus-visible){
+   transform:translate(-50%,-50%) scale(1)!important;
+   filter:none!important;
+ }
+ :root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-radial-node:is(:hover,.is-focused,.qb-admin-pressed,.qb-astro-selected):not(:focus-visible)::before{
+   opacity:0!important;animation:none!important;box-shadow:none!important;
+ }
+}

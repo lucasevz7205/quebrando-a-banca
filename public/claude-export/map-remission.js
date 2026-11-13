@@ -28,11 +28,14 @@ function resolveQuestion({questionId,preferredTopicId=null,questions,index,revis
  const candidates=unique([
    preferredTopicId,question.topico,
    ...(info?.matchedIds||[]),info?.topicId,
-   ...[...(revisions?.entries?.()||[])].filter(([topic,rev])=>Array.isArray(rev?.questaoIds)&&rev.questaoIds.includes(id)).map(([topic])=>topic)
+   ...[...(revisions?.entries?.()||[])].filter(([topic,rev])=>
+     (Array.isArray(rev?.questaoIds)&&rev.questaoIds.includes(id)) ||
+     (rev?.topico && (rev.topico===question.topico || (info?.matchedIds||[]).includes(rev.topico) || info?.topicId===rev.topico))
+   ).map(([topic])=>topic)
  ]).filter(topicId=>hasMap(revisions,topicId));
  const ranked=[];
  function evaluate(topicId,rank){
-   const rev=revisions.get(topicId),topic=topics?.get(topicId);
+   const rev=revisions.get(topicId),topic=topics?.get(topicId)||topics?.get(rev?.topico);
    const decorated=decorate(topicId,rev,topic);
    const link=decorated?.questionLinks?.find(l=>l.id===id&&findPath(decorated.map,l.path));
    if(!link)return;
@@ -40,7 +43,7 @@ function resolveQuestion({questionId,preferredTopicId=null,questions,index,revis
    if(!node)return;
    const quality=labelFor(link.via);
    const explicit=quality==="editorial";
-   const own=question.topico===topicId;
+   const own=question.topico===topicId||question.topico===rev?.topico;
    const score=(explicit?1000:500)+(own?180:0)+(topicId===preferredTopicId?110:0)
      +(info?.topicId===topicId?30:0)+depth(node.path)*2-rank;
    ranked.push({status:"linked",topicId,path:node.path,title:node.title,nodeId:node.nodeId,

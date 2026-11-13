@@ -50,10 +50,13 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
   const spheres = new InstancedMesh(geometry, material, coords.length);
   spheres.frustumCulled = false; // visible instance slots are compacted on each branch toggle
   const computed = view.getComputedStyle(panel);
+  // No admin, a placa HTML substitui visualmente a esfera e o aro da raiz.
+  const rootHidden = doc.documentElement.classList.contains("qb-admin-experience");
+  const sphereScale = depth => depth === 0 ? (rootHidden ? .001 : .54) : depth === 1 ? .37 : .22;
   const colorFor = node => computed.getPropertyValue("--qb-node-" + (node.status || "sem-evidencia")).trim() || "#9da8c4";
   // Sem partículas decorativas: menos carga visual durante a evocação (11/11/2026).
   coords.forEach((node,i) => {
-    const scale = node.depth === 0 ? .54 : node.depth === 1 ? .37 : .22;
+    const scale = sphereScale(node.depth);
     spheres.setMatrixAt(i, new Matrix4().makeScale(scale,scale,scale).setPosition(world[i]));
     spheres.setColorAt(i, new Color(colorFor(node)));
   });
@@ -151,7 +154,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     for(let i=0;i<coords.length;i++){
       const node=coords[i];
       if(!visiblePaths.has(node.path))continue;
-      const scale=node.depth===0?.54:node.depth===1?.37:.22;
+      const scale=sphereScale(node.depth);
       spheres.setMatrixAt(slot,new Matrix4().makeScale(scale,scale,scale).setPosition(world[i]));
       spheres.setColorAt(slot,new Color(colorFor(node)));
       visibleSlots.push(i);
@@ -295,7 +298,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     const i = byPath.get(path);
     focus.visible = i !== undefined;
     if (focus.visible) {
-      const r = coords[i].depth === 0 ? .69 : coords[i].depth === 1 ? .52 : .35;
+      const r = coords[i].depth === 0 ? (rootHidden ? .001 : .69) : coords[i].depth === 1 ? .52 : .35;
       focus.setMatrixAt(0,new Matrix4().makeScale(r,r,r).setPosition(world[i]));
       focus.instanceMatrix.needsUpdate = true;
       focus.frustumCulled = false;

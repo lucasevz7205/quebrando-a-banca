@@ -1,0 +1,148 @@
+/* Friso Astro-Náutico, opção 3 aprovada em 12/11.
+   Aplica-se APENAS à sessão de administrador: mantém botões, eventos, estado e destinos.
+   O friso é desenhado com SVG transparente e CSS, não uma imagem de UI fictícia.
+*/
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav {
+  display:flex!important;position:relative!important;isolation:isolate!important;
+  flex-wrap:nowrap!important;align-items:stretch!important;
+  justify-content:space-between!important;
+  width:100%!important;max-width:none!important;
+  gap:0!important;padding:13px 22px 14px!important;margin:7px 0 2px!important;
+  border:1px solid rgba(160,128,90,.83)!important;
+  border-radius:37px!important;
+  background:linear-gradient(180deg,rgba(8,22,40,.91),rgba(5,15,29,.93) 49%,rgba(12,25,39,.92))!important;
+  box-shadow:0 0 0 1px rgba(25,34,40,.8),0 8px 23px rgba(0,0,0,.31),inset 0 1px 0 rgba(203,174,130,.18),inset 0 -2px 0 rgba(126,96,59,.35)!important;
+  -webkit-backdrop-filter:blur(14px)!important;backdrop-filter:blur(14px)!important;
+  overflow-x:auto!important;overflow-y:hidden!important;
+  scrollbar-width:none!important;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav::-webkit-scrollbar{display:none!important;}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav::before{
+  content:""!important;position:absolute!important;inset:0!important;z-index:0!important;
+  background:url("/claude-export/admin-frieze-navigation-v2.svg") center/100% 100% no-repeat!important;
+  opacity:.94!important;animation:none!important;transform:none!important;filter:none!important;
+  pointer-events:none!important;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav::after{display:none!important;}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .qb-nav-flow-canvas{
+  opacity:0!important;visibility:hidden!important;pointer-events:none!important;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button {
+  position:relative!important;isolation:isolate!important;z-index:1!important;
+  flex:1 0 auto!important;min-width:max-content!important;
+  min-height:58px!important;
+  padding:8px clamp(9px,1.45vw,22px)!important;
+  margin:0!important;gap:8px!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  border:0!important;border-left:1px solid rgba(173,142,99,.30)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:#E9DEC9!important;
+  box-shadow:none!important;text-shadow:0 1px 2px #050B15!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-weight:650!important;font-size:clamp(12px,1.1vw,15px)!important;
+  letter-spacing:0!important;white-space:nowrap!important;
+  transition:background .2s ease,color .2s ease,filter .2s ease!important;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button:first-of-type{
+  border-left:0!important;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button::before{
+  content:"";position:absolute;z-index:-1;inset:5px 3px;border-radius:22px;
+  background:transparent;opacity:0;pointer-events:none;transition:opacity .2s ease,background .2s ease;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button::after {
+  content:"";position:absolute;bottom:6px;left:50%;
+  width:0;height:2px;transform:translateX(-50%);
+  border-radius:8px;background:linear-gradient(90deg,transparent,#D04D4C,#E6BA74,#D04D4C,transparent)!important;
+  box-shadow:0 0 8px rgba(210,77,75,.48)!important;opacity:0!important;
+  transition:width .22s ease,opacity .22s ease!important;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button:is(:hover,:focus-visible){
+  color:#FFF4DB!important;background:rgba(46,62,75,.36)!important;
+  filter:brightness(1.07)!important;transform:none!important;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button[aria-current="page"]{
+  color:#FFE5B6!important;border-left-color:rgba(173,142,99,.25)!important;
+  background:linear-gradient(180deg,rgba(139,83,45,.20),rgba(87,42,29,.19))!important;
+  box-shadow:inset 0 1px 0 rgba(214,169,104,.25),inset 0 -1px 0 rgba(161,78,51,.25)!important;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button[aria-current="page"]::before{
+  opacity:1!important;
+  border:1px solid rgba(194,150,88,.48);
+  box-shadow:0 0 13px rgba(185,111,62,.22),inset 0 0 12px rgba(160,111,60,.09);
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button[aria-current="page"]::after{
+  width:64%!important;opacity:1!important;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .qb-nav-orb{
+  position:relative!important;display:inline-flex!important;
+  align-items:center!important;justify-content:center!important;
+  width:19px!important;height:19px!important;flex:0 0 19px!important;
+  color:#C6A077!important;box-shadow:none!important;border:none!important;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .qb-nav-orb svg{
+  display:none!important;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .qb-nav-orb > span{
+  display:block!important;
+  width:19px!important;height:19px!important;flex:0 0 19px!important;
+  font-size:0!important;line-height:0!important;color:transparent!important;
+  background-position:center!important;background-repeat:no-repeat!important;
+  background-size:contain!important;filter:drop-shadow(0 0 2px rgba(219,164,94,.23));
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav #tab-portal .qb-nav-orb > span{background-image:url("/claude-export/nav-portal-mini.svg")!important;}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav #tab-painel .qb-nav-orb > span{background-image:url("/claude-export/nav-painel-mini.svg")!important;}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav #tab-edital .qb-nav-orb > span{background-image:url("/claude-export/nav-edital-mini.svg")!important;}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav #tab-treinar .qb-nav-orb > span{background-image:url("/claude-export/nav-treinar-mini.svg")!important;}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav #tab-estudo .qb-nav-orb > span{background-image:url("/claude-export/nav-estudo-mini.svg")!important;}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav #tab-simulado .qb-nav-orb > span{background-image:url("/claude-export/nav-simulado-mini.svg")!important;}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav #tab-historico .qb-nav-orb > span{background-image:url("/claude-export/nav-historico-mini.svg")!important;}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .count{
+  min-width:19px!important;height:19px!important;padding:1px 5px!important;
+  border-radius:8px!important;background:#23394A!important;border:1px solid rgba(185,149,95,.38)!important;
+  color:#F0D9AA!important;font:650 10px/1.1 system-ui,sans-serif!important;
+}
+:root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .count.hot{
+  background:#9E3539!important;color:white!important;border-color:#BD6060!important;
+}
+/* Os ícones do astrolábio são os mesmos do friso, porém mantêm os rótulos originais. */
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node-icon{
+  display:block!important;width:21px!important;height:21px!important;
+  margin:0 auto!important;font-size:0!important;line-height:0!important;
+  background-position:center!important;background-size:contain!important;background-repeat:no-repeat!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node[data-radial-module="painel"] .qb-radial-node-icon{background-image:url("/claude-export/nav-painel-mini.svg")!important;}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node[data-radial-module="edital"] .qb-radial-node-icon{background-image:url("/claude-export/nav-edital-mini.svg")!important;}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node[data-radial-module="treinar"] .qb-radial-node-icon{background-image:url("/claude-export/nav-treinar-mini.svg")!important;}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node[data-radial-module="estudo"] .qb-radial-node-icon{background-image:url("/claude-export/nav-estudo-mini.svg")!important;}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node[data-radial-module="simulado"] .qb-radial-node-icon{background-image:url("/claude-export/nav-simulado-mini.svg")!important;}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node[data-radial-module="historico"] .qb-radial-node-icon{background-image:url("/claude-export/nav-historico-mini.svg")!important;}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node-icon{text-shadow:none!important;}
+@media(max-width:970px){
+ :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav{
+  padding:8px 17px 9px!important;justify-content:flex-start!important;
+ }
+ :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button{
+  min-height:48px!important;padding:7px 12px!important;font-size:13px!important;
+ }
+}
+@media(max-width:560px){
+ :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav{
+  padding:6px 10px 7px!important;border-radius:19px!important;
+ }
+ :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button{
+  min-height:44px!important;gap:5px!important;padding:5px 10px!important;font-size:12px!important;
+ }
+ :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .qb-nav-orb,
+ :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav .qb-nav-orb > span{
+  width:16px!important;height:16px!important;flex-basis:16px!important;
+ }
+ :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node-icon{
+  width:17px!important;height:17px!important;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button,
+ :root.qb-admin-experience header.top.qb-app-header nav.tabs.qb-primary-nav > button::after{transition:none!important;}
+}

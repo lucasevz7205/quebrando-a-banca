@@ -30,7 +30,7 @@
   }
 
   function iaHTML(st) {
-    if (st.fase === "corrigindo") return '<p class="qb-evo-status" role="status">Omni corrigindo a sua evocação…</p>';
+    if (st.fase === "corrigindo") return '<p class="qb-evo-status" role="status">O Arquiteto corrigindo a sua evocação…</p>';
     if (st.erroIA) return '<p class="qb-evo-status qb-evo-falha" role="status">' + esc(st.erroIA) + "</p>";
     const r = st.ia;
     if (!r) return "";
@@ -41,7 +41,7 @@
           "<li>" + (e.trecho ? "“" + esc(e.trecho) + "”: " : "") + esc(e.problema) +
           (e.correcao ? '<br><span class="qb-evo-certo">Correto: ' + esc(e.correcao) + "</span>" : "") + "</li>").join("") + "</ul>"
       : "";
-    return '<div class="qb-evo-ia"><p><span class="pill ' + v[0] + '">Omni: ' + v[1] + "</span></p>" +
+    return '<div class="qb-evo-ia"><p><span class="pill ' + v[0] + '">O Arquiteto: ' + v[1] + "</span></p>" +
       '<p class="qb-evo-sua"><b>Sua evocação:</b> ' + marcarErros(st.resp, r.erros) + "</p>" +
       erros + li("Faltou", r.faltou) + li("Acertou", r.acertou) +
       (r.pergunta ? '<p class="qb-evo-pergunta"><b>Recupere:</b> ' + esc(r.pergunta) + "</p>" : "") +
@@ -58,7 +58,7 @@
         '<label class="qb-evo-label" for="qb-evo-resp">O que este conceito significa? Escreva de memória a regra, um exemplo e a pegadinha, se lembrar.</label>' +
         '<textarea id="qb-evo-resp" class="qb-evo-resp" data-evo-resp maxlength="2000" rows="4" placeholder="Sem olhar: escreva o que você lembra…">' + esc(st.resp) + "</textarea>" +
         '<div class="qb-evo-acoes">' +
-        (ctx.iaDisponivel ? '<button type="button" class="btn small" data-evo-ia ' + (st.fase === "corrigindo" ? "disabled" : "") + ">Corrigir com Omni</button>" : "") +
+        (ctx.iaDisponivel ? '<button type="button" class="btn small" data-evo-ia ' + (st.fase === "corrigindo" ? "disabled" : "") + ">Corrigir com O Arquiteto</button>" : "") +
         '<button type="button" class="btn ghost small" data-evo-ver>Comparar com a explicação</button>' +
         '<button type="button" class="btn ghost small" data-evo-nao>Não lembro</button></div>' +
         iaHTML(st) + "</section>";
@@ -91,7 +91,7 @@
         st.fase = "revelado";
       } catch (err) {
         st.fase = "escrever";
-        st.erroIA = "Omni indisponível agora (" + (err?.message || "sem conexão") + "). Compare você mesmo com a explicação.";
+        st.erroIA = "O Arquiteto indisponível agora (" + (err?.message || "sem conexão") + "). Compare você mesmo com a explicação.";
       }
       hooks.rerender();
     });

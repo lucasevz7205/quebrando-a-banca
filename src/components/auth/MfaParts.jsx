@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { AuthScene, GlassCard } from "./AuthScene";
 import { Check, ChevronsUpDown, Copy, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
@@ -28,9 +29,9 @@ export function useAppInfo() {
 // shows them returns <MfaScreen> in place of its own layout instead of nesting them in its card.
 export function MfaScreen({ children }) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background px-4 py-8">
-      <div className="w-full max-w-md bg-card rounded-2xl shadow-sm border border-border p-8">{children}</div>
-    </div>
+    <AuthScene>
+      <GlassCard className="p-8 text-card-foreground">{children}</GlassCard>
+    </AuthScene>
   );
 }
 

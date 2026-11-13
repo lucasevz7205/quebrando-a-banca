@@ -1,0 +1,156 @@
+/* 12/11/2026 · Astrolábio Estratégico
+   Apenas radial de entrada do administrador, com os seis botões reais.
+   A barra horizontal de navegação não é modificada nesta etapa.
+*/
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"]{
+  --astro-bronze:#887A68;
+  --astro-gold:#C6AC86;
+  --astro-dark:#0B233D;
+  overflow:visible!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  border:0!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-stage{
+  isolation:isolate;
+  width:min(100%,740px,74dvh)!important;
+  aspect-ratio:1;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-annulus{
+  display:block!important;
+  background:url("/claude-export/admin-astrolabe-v2.svg") center/100% 100% no-repeat!important;
+  opacity:1!important;
+  border-radius:50%!important;
+  z-index:0!important;
+  filter:drop-shadow(0 5px 17px rgba(0,9,25,.5))!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-annulus > div{display:none!important;}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-stage::before{
+  inset:5%;
+  background:radial-gradient(circle,rgba(13,57,96,.42),rgba(8,26,52,.19) 58%,transparent 76%)!important;
+  filter:blur(14px)!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-stage::after{display:none!important;}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-flow,
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-particles{
+  opacity:0!important;pointer-events:none!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-network .qb-radial-orbit{
+  stroke:#8193A2!important;stroke-width:.9!important;
+  stroke-dasharray:2 12!important;opacity:.26!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-network .qb-radial-link{
+  stroke:#768EA6!important;opacity:.16!important;filter:none!important;
+  animation:none!important;stroke-dasharray:2 14!important;stroke-dashoffset:0!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-network .qb-radial-sector{
+  stroke:#9CA9B0!important;opacity:.005!important;transition:opacity .2s ease!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-network .qb-radial-sector.is-focused{
+  opacity:.13!important;filter:drop-shadow(0 0 8px rgba(255,213,134,.40))!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-aura{
+  inset:29%!important;
+  background:radial-gradient(circle,rgba(31,85,126,.22),rgba(8,30,53,.15) 45%,transparent 75%)!important;
+  filter:blur(35px)!important;opacity:.45!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node{
+  --sector-color:#BEA789!important;
+  z-index:5!important;
+  width:clamp(93px,20%,156px)!important;
+  min-height:clamp(60px,12.5%,90px)!important;
+  gap:3px!important;
+  padding:7px 6px!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle at 50% 30%,rgba(20,47,75,.64),rgba(9,28,50,.33) 75%,transparent 100%)!important;
+  box-shadow:none!important;
+  color:#f6e8cb!important;
+  text-shadow:0 1px 2px #000!important;
+  transform:translate(-50%,-50%) scale(1)!important;
+  transition:transform .25s cubic-bezier(.18,.8,.25,1.2),filter .2s ease!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node::before{
+  inset:4% 7%!important;
+  border:1px solid transparent!important;
+  background:none!important;
+  z-index:0!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node::after{
+  bottom:3%!important;
+  background:#AD9B7F!important;
+  width:24%!important;height:2px!important;
+  box-shadow:0 0 7px #e2b56c88!important;opacity:.65!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node:is(:hover,:focus-visible,.is-focused,.qb-admin-pressed){
+  transform:translate(-50%,-50%) scale(1.105)!important;
+  border:0!important;
+  background:radial-gradient(circle,rgba(171,114,47,.29),rgba(20,23,29,.16) 80%,transparent)!important;
+  box-shadow:none!important;
+  filter:brightness(1.12) drop-shadow(0 0 7px rgba(246,203,128,.45))!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node:is(:hover,:focus-visible,.is-focused)::before{
+  border-color:rgba(247,208,136,.7)!important;
+  box-shadow:0 0 14px rgba(245,189,106,.48),inset 0 0 11px rgba(220,171,91,.24)!important;
+  animation:none!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node-icon{
+  color:#f2cf90!important;font-size:clamp(22px,3vw,28px)!important;
+  line-height:1!important;text-shadow:0 0 11px rgba(242,192,105,.55)!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node-label{
+  font-size:clamp(11px,1.3vw,14px)!important;
+  color:#fff3d7!important;
+  font-weight:700!important;
+  text-shadow:0 2px 5px #080b0e!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node-caption{
+  color:#d6c8aa!important;
+  font-size:clamp(8px,.88vw,9.5px)!important;
+  max-width:13ch!important;line-height:1.1!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-core{
+  width:clamp(125px,21%,178px)!important;
+  aspect-ratio:1!important;
+  z-index:4!important;
+  border:1.7px solid #B19B79!important;
+  box-shadow:0 0 0 1px #40576A,0 0 17px rgba(32,91,128,.38),inset 0 0 16px rgba(0,12,29,.75)!important;
+  background:radial-gradient(circle,rgba(15,41,68,.14),rgba(6,22,42,.73)),url("https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/ad2d13733_qb_admin_logo_rustico_aprovado.webp") center/79% 79% no-repeat,#0A2039!important;
+  animation:none!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-core > *{
+  position:absolute!important;
+  width:1px!important;height:1px!important;padding:0!important;
+  margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;
+  white-space:nowrap!important;border:0!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-overline{
+  color:#e3c696!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-top-status{
+  background:rgba(15,20,27,.68)!important;
+  border-color:rgba(221,175,103,.65)!important;color:#f7e5c5!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-top-status i{
+  background:#d7a45e!important;box-shadow:0 0 8px #e5b369!important;
+}
+:root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-footer{
+  border-top-color:rgba(216,172,101,.3)!important;
+}
+@media(max-width:760px){
+  :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-stage{width:min(100%,620px,73dvh)!important;}
+}
+@media(max-width:500px){
+  :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-stage{width:min(100%,440px)!important;}
+  :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node{
+    min-height:55px!important;width:clamp(67px,23%,111px)!important;padding:4px 3px!important;
+  }
+  :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node-icon{font-size:19px!important;}
+  :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node-label{font-size:10px!important;}
+  :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node-caption{display:none!important;}
+  :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-core{width:clamp(83px,28%,124px)!important;}
+}
+@media(prefers-reduced-motion:reduce){
+  :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node{transition:none!important;}
+  :root.qb-admin-experience .qb-radial-hub[data-radial-screen="menu"] .qb-radial-node:is(:hover,:focus-visible,.is-focused,.qb-admin-pressed){transform:translate(-50%,-50%)!important;}
+}

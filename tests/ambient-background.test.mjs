@@ -40,27 +40,28 @@ function fakePage({saved=null,reduced=false,saveData=false}={}){
     addEventListener(k,cb){listeners[k]=cb;}
   };
   const matchMedia=()=>({matches:reduced,addEventListener(k,cb){mediaListeners[k]=cb;}});
+  const windowObj={matchMedia,addEventListener(k,cb){listeners["window:"+k]=cb;}};
   vm.runInNewContext(js,{
     document:doc,
-    window:{matchMedia,addEventListener(k,cb){listeners["window:"+k]=cb;}},
+    window:windowObj,
     navigator:{connection:{saveData}},
     localStorage:{getItem(k){return stored[k]||null;},setItem(k,v){stored[k]=v;}}
   },{filename:"ambient-background.js"});
-  return {video,layer,toggle,doc,stored,listeners,mediaListeners};
+  return {video,layer,toggle,doc,stored,listeners,mediaListeners,windowObj};
 }
 
-test("O fundo usa exatamente o vídeo público do usuário e fica antes de TODA a UI",()=>{
-  const url="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260606_170109_f96e01a5-b0db-4274-b24d-8d97e99ec928.mp4";
+test("O fundo usa o vídeo do usuário recomprimido (720p) servido pelo próprio app e fica antes de TODA a UI",()=>{
+  const url="/claude-export/ambient-720.mp4";
   const background=shell.indexOf('id="qb-ambient-background"');
   const wrap=shell.indexOf('<div class="wrap">');
   const header=shell.indexOf('class="head-row qb-header-row"');
   assert.ok(background>0&&wrap>background&&header>wrap);
   assert.ok(shell.includes(url));
-  assert.match(shell,/data-qb-background-video data-qb-video-src="https:\/\/d8j0ntlcm91z4.cloudfront.net\/[^"]+" muted playsinline loop preload="none"/);
+  assert.match(shell,/data-qb-background-video data-qb-video-src="\/claude-export\/ambient-720\.mp4" muted playsinline loop preload="none"/);
   assert.match(shell,/poster="\/claude-export\/ambient-poster\.jpg"/);
   assert.match(shell,/id="qb-background-toggle"/);
-  assert.match(shell,/ambient-background\.css\?v=1/);
-  assert.match(shell,/ambient-background\.js\?v=1/);
+  assert.match(shell,/ambient-background\.css\?v=2/);
+  assert.match(shell,/ambient-background\.js\?v=2/);
   const img=fs.readFileSync("public/claude-export/ambient-poster.jpg");
   assert.equal(img[0],0xff);
   assert.equal(img[1],0xd8);
@@ -103,11 +104,34 @@ test("animação escolhida pelo estudante alterna para um quadro pausado",()=>{
   assert.equal(page.stored["qb-ambient-background-mode"],"motion");
 });
 
-test("sem preferência salva, o fundo começa estático e não baixa vídeo",()=>{
+test("sem preferência salva, o fundo das telas de escolha começa fluido",()=>{
   const page=fakePage();
-  assert.equal(page.video.playCalls,0);
-  assert.equal(page.video.loadCalls,0);
+  assert.equal(page.video.playCalls,1);
+  assert.equal(page.video.loadCalls,1);
+  assert.equal(page.doc.documentElement.dataset.qbAmbient,"motion");
+  assert.equal(page.toggle.textContent,"Fundo: animado");
+});
+
+test("modo foco pausa o vídeo na atividade e devolve o fundo fluido ao sair",()=>{
+  const page=fakePage({saved:"motion"});
+  assert.equal(page.video.playCalls,1);
+  const api=page.windowObj.QBAmbient;
+  assert.ok(api,"QBAmbient exposto para a página");
+  api.setFocus(true);
+  assert.equal(page.doc.documentElement.dataset.qbFoco,"1");
   assert.equal(page.doc.documentElement.dataset.qbAmbient,"still");
+  assert.equal(page.toggle.textContent,"Fundo: foco");
+  assert.equal(page.toggle.disabled,true);
+  assert.ok(page.video.pauseCalls>0);
+  page.toggle.handlers.click();                      // travado durante o foco
+  assert.equal(page.stored["qb-ambient-background-mode"],"motion");
+  api.setFocus(false);
+  assert.equal(page.doc.documentElement.dataset.qbFoco,undefined);
+  assert.equal(page.doc.documentElement.dataset.qbAmbient,"motion");
+  assert.equal(page.video.playCalls,2);
+  assert.equal(page.toggle.disabled,false);
+  assert.match(css,/data-qb-foco="1"\]\s*#qb-ambient-background \.qb-ambient-veil/);
+  assert.match(shell,/ambienteFoco\(\(S\.view==='treinar'&&!!S\.round\)\|\|\['mapa','cartoes','revisao','aprendizagem'\]\.includes\(S\.view\)\)/);
 });
 
 test("preferência estática impede download de vídeo e reaproveita a imagem",()=>{
@@ -128,6 +152,7 @@ test("acessibilidade e economia de dados respeitadas",()=>{
   assert.equal(reduced.toggle.textContent,"Fundo: estático");
   const saver=fakePage({saveData:true});
   assert.equal(saver.video.playCalls,0);
+  assert.equal(saver.toggle.textContent,"Fundo: estático");
   assert.equal(saver.toggle.textContent,"Fundo: estático");
   saver.toggle.handlers.click();
   assert.equal(saver.video.playCalls,1,"user can explicitly opt into animation");

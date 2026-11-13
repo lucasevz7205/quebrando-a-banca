@@ -97,7 +97,7 @@
     // Somente se o ID do nó é único nesse mapa.
     for(const question of q.values()){
       if (!eligible(question) || !question.mapaNoId || byId.get(question.mapaNoId)?.length!==1)continue;
-      if (question.topico===topicId || (topic?.caps||[]).includes(question.cap))
+      if (question.topico===topicId || question.topico===topic?.id || (topic?.caps||[]).includes(question.cap))
         connect(byId.get(question.mapaNoId)[0],question.id);
     }
     // Flashcards têm links exatos nó-pergunta, não links inferidos pelo texto.

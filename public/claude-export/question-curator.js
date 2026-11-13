@@ -298,7 +298,7 @@
           <div class="qb-curate-actions-bar">
             <div class="qb-curate-btn-group">
               <button type="button" class="qb-btn-ai-rephrase" id="qb-btn-ai-trigger" ${isAiLoading ? "disabled" : ""}>
-                ${isAiLoading ? "⏳ Analisando e Reformulando..." : "🤖 Reformular com IA (Omni)"}
+                ${isAiLoading ? "⏳ Analisando e Reformulando..." : "🤖 Reformular com IA (O Arquiteto)"}
               </button>
               <button type="button" class="qb-btn-flag-review" id="qb-btn-flag-review">🚩 Solicitar Revisão Editorial</button>
             </div>

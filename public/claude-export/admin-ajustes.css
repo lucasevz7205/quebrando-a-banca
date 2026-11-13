@@ -1,0 +1,7 @@
+/* Admin · ajustes de visibilidade v11. */
+/* No tema claro, o modo foco mantém o fundo perceptível sem perder contraste. */
+:root.qb-admin-experience[data-theme="light"][data-qb-foco="1"] #qb-ambient-background .qb-ambient-veil{
+  background:radial-gradient(ellipse at 50% 45%,rgba(244,243,238,.38),rgba(244,243,238,.58) 70%),rgba(244,243,238,.18)!important;
+}
+/* Preserva o elemento e o arquivo da espada para uso futuro. */
+:root.qb-admin-experience header.top.qb-app-header .qb-admin-sword-actual{display:none!important}

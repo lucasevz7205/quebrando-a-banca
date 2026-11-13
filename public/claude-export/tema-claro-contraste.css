@@ -1,0 +1,23 @@
+/* Contraste do tema claro nos hubs Axon (13/11/2026).
+ * Os textos dos hubs radiais foram desenhados para fundo escuro (#fbfcff, #b5c5f4,
+ * #c3cfec) e sumiam sobre o véu claro. Aqui, só no tema claro, o texto escurece
+ * (contraste ≥ 7:1 sobre #F8F9FC) e o véu abre um pouco para o vídeo aparecer.
+ * Os botões e pílulas dos hubs já têm fundo escuro próprio e não mudam.
+ * Carregado depois dos CSS Axon e radiais. */
+:root[data-theme="light"] .qb-radial-overline { color: #2f4585; }
+:root[data-theme="light"] .qb-radial-screen-title { color: #0f1830; text-shadow: none; }
+:root[data-theme="light"] .qb-area-intro { color: #36415c; }
+:root[data-theme="light"] #qb-ambient-background .qb-ambient-veil { background: rgba(248, 249, 252, .78); }
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) .qb-radial-overline { color: #2f4585; }
+  :root:not([data-theme]) .qb-radial-screen-title { color: #0f1830; text-shadow: none; }
+  :root:not([data-theme]) .qb-area-intro { color: #36415c; }
+  :root:not([data-theme]) #qb-ambient-background .qb-ambient-veil { background: rgba(248, 249, 252, .78); }
+}
+
+/* O modo foco continua com o véu quase opaco (ambient-background.css) */
+:root[data-theme="light"][data-qb-foco="1"] #qb-ambient-background .qb-ambient-veil { background: rgba(244, 243, 238, .97); }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme])[data-qb-foco="1"] #qb-ambient-background .qb-ambient-veil { background: rgba(244, 243, 238, .97); }
+}

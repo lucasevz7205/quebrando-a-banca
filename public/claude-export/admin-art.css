@@ -1,0 +1,235 @@
+/* Admin-only cinematic header. Only images have transparency; real controls remain clickable. */
+:root.qb-admin-experience header.top.qb-app-header {
+  width:100%!important;max-width:1440px!important;
+  padding-top:clamp(10px,1.7vw,22px)!important;
+  gap:8px!important;
+}
+:root.qb-admin-experience .qb-app-header .qb-header-kicker {
+  background:rgba(9,16,28,.24)!important;
+  border-color:rgba(228,184,111,.45)!important;
+  color:#f5e6c9!important;letter-spacing:.065em;
+}
+:root.qb-admin-experience .qb-app-header .qb-header-row,
+:root.qb-admin-experience body:has(.qb-radial-hub) .qb-app-header .qb-header-row {
+  position:relative!important;isolation:isolate!important;
+  display:flex!important;flex-direction:column!important;
+  flex-wrap:nowrap!important;align-items:stretch!important;
+  justify-content:center!important;gap:3px!important;
+  width:100%!important;min-height:0!important;margin:0!important;
+  padding:0 10px 7px!important;
+  border:0!important;border-radius:0!important;
+  background:transparent!important;box-shadow:none!important;
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+  overflow:visible!important;
+}
+:root.qb-admin-experience .qb-app-header .qb-header-row::before,
+:root.qb-admin-experience .qb-app-header .qb-header-row::after {display:none!important;}
+:root.qb-admin-experience .qb-app-header .qb-header-brand {
+  display:flex!important;position:relative!important;z-index:2;
+  flex:0 0 auto!important;justify-content:center!important;align-items:center!important;
+  min-width:0!important;width:100%!important;max-width:none!important;
+  margin:0!important;padding:0 10px!important;
+  background:transparent!important;border:0!important;box-shadow:none!important;
+}
+:root.qb-admin-experience .qb-app-header .qb-header-brand-mark,
+:root.qb-admin-experience .qb-app-header .qb-admin-laurel,
+:root.qb-admin-experience .qb-app-header .qb-admin-brand-sword-art,
+:root.qb-admin-experience .qb-app-header .qb-admin-brand-title-art,
+:root.qb-admin-experience .qb-app-header .qb-admin-visual-brand,
+:root.qb-admin-experience .qb-app-header .qb-admin-visual-sword {display:none!important;}
+:root.qb-admin-experience .qb-app-header .qb-admin-logo-actual {
+  display:block!important;flex:0 1 auto!important;object-fit:contain!important;
+  width:clamp(135px,18vw,210px)!important;max-width:95%!important;height:auto!important;
+  max-height:clamp(145px,19vw,230px)!important;
+  mix-blend-mode:normal!important;
+  -webkit-mask-image:none!important;mask-image:none!important;
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.6))!important;
+  pointer-events:none;
+}
+:root.qb-admin-experience .qb-app-header .qb-admin-sword-actual {
+  position:absolute!important;z-index:1!important;
+  display:block!important;left:-10px!important;bottom:-14px!important;
+  width:clamp(210px,27vw,360px)!important;height:auto!important;
+  max-height:205px;object-fit:contain;
+  object-position:bottom left;pointer-events:none;
+  mix-blend-mode:normal!important;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 88%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 88%,transparent 100%);
+  filter:drop-shadow(0 4px 9px rgba(0,0,0,.35));
+}
+:root.qb-admin-experience .qb-app-header .qb-study-brand-copy {
+  position:absolute!important; width:1px!important;height:1px!important;
+  padding:0!important;margin:-1px!important;overflow:hidden!important;
+  clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important;
+}
+/* Single, unobtrusive functional row below the full-width brand. */
+:root.qb-admin-experience .qb-app-header .qb-header-utilities {
+  position:relative!important;z-index:3!important;
+  display:block!important;flex:0 0 auto!important;min-width:0!important;
+  width:100%!important;max-width:none!important;
+  margin:0!important;padding:0 0 0 clamp(145px,19vw,255px)!important;
+  border:0!important;border-radius:0!important;
+  background:transparent!important;box-shadow:none!important;
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+}
+:root.qb-admin-experience .qb-app-header .qb-admin-controls {
+  width:100%;display:flex;flex-wrap:wrap;justify-content:flex-end;
+  align-items:center;gap:7px 14px;
+}
+:root.qb-admin-experience .qb-app-header .qb-admin-tools {
+  display:flex;align-items:center;justify-content:center;
+  flex-wrap:wrap;gap:6px;
+  padding:3px 0;background:transparent;border:0;box-shadow:none;
+}
+:root.qb-admin-experience .qb-app-header .qb-admin-tools + .qb-admin-tools {
+  border-left:1px solid rgba(220,183,117,.25);padding-left:13px;
+}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities :is(
+  .qb-utility-action,.qb-utility-countdown,#omni-pomo-pill,#omni-studio-trigger) {
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  gap:5px!important;min-height:34px!important;max-width:100%;
+  padding:6px 10px!important;
+  font:600 11px/1.2 "Sora",system-ui,sans-serif!important;
+  border:1px solid rgba(226,187,111,.40)!important;
+  border-radius:999px!important;
+  background:rgba(8,15,25,.36)!important;
+  color:#f7ead1!important;
+  box-shadow:none!important;white-space:nowrap;
+  text-shadow:0 1px 2px rgba(0,0,0,.45);
+  transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;
+}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities :is(
+  .qb-utility-action,#omni-pomo-pill,#omni-studio-trigger):is(:hover,:focus-visible) {
+  border-color:#f1c77d!important;background:rgba(128,84,36,.32)!important;
+  box-shadow:0 0 15px rgba(235,178,84,.25)!important;
+}
+:root.qb-admin-experience .qb-app-header .qb-utility-countdown {
+  font-size:0!important;letter-spacing:0!important;
+}
+:root.qb-admin-experience .qb-app-header .qb-utility-countdown * {display:none!important;}
+:root.qb-admin-experience .qb-app-header .qb-utility-countdown::after {
+  content:attr(data-qb-short);font:650 11px/1.2 "Sora",system-ui,sans-serif;
+  color:#f6e2b5;white-space:nowrap;
+}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities .qb-utility-countdown::before {
+  background:#dba95e;box-shadow:0 0 9px rgba(239,187,100,.55);
+}
+:root.qb-admin-experience .qb-app-header .qb-admin-tools-more {
+  position:relative;flex:0 0 auto;align-self:center;
+}
+:root.qb-admin-experience .qb-app-header .qb-admin-tools-more > summary {
+  list-style:none;cursor:pointer;
+  min-height:34px;padding:8px 12px;
+  display:flex;align-items:center;gap:7px;
+  border:1px solid rgba(226,187,111,.42);border-radius:999px;
+  background:rgba(8,15,25,.39);color:#f7ead1;
+  font:600 11px/1.2 "Sora",system-ui,sans-serif;
+}
+:root.qb-admin-experience .qb-app-header .qb-admin-tools-more > summary::-webkit-details-marker {display:none;}
+:root.qb-admin-experience .qb-app-header .qb-admin-tools-more > summary::after {content:"⌄";font-size:15px;line-height:0.5;}
+:root.qb-admin-experience .qb-app-header .qb-admin-tools-more[open] > summary {
+  border-color:#e6bc70;background:rgba(93,62,31,.60);
+}
+:root.qb-admin-experience .qb-app-header .qb-admin-tools-more-panel {
+  position:absolute;z-index:50;top:calc(100% + 8px);right:0;
+  width:max-content;min-width:155px;max-width:min(92vw,280px);
+  padding:10px;border:1px solid #bd914e8f;border-radius:13px;
+  background:rgba(12,19,30,.96);box-shadow:0 12px 34px rgba(0,0,0,.42);
+  display:flex;flex-direction:column;align-items:stretch;gap:6px;
+  -webkit-backdrop-filter:blur(15px);backdrop-filter:blur(15px);
+}
+:root.qb-admin-experience .qb-app-header .qb-admin-tools-more-panel > * {
+  width:100%;justify-content:center;min-width:0;
+}
+:root.qb-admin-experience .qb-app-header nav.tabs.qb-primary-nav {
+  margin:6px 0 0!important;
+  background:rgba(6,12,22,.51)!important;
+  border-color:rgba(209,159,77,.52)!important;
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+}
+/* Restore genuine "Topo: compacto" behavior, formerly cancelled by image layout overrides. */
+:root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-header-row {
+  display:flex!important;min-height:0!important;padding:0 8px 3px!important;
+  gap:0!important;
+}
+:root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-logo-actual {
+  width:clamp(82px,9vw,115px)!important;max-height:115px!important;
+}
+:root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-sword-actual {
+  width:clamp(100px,12vw,135px)!important;max-height:100px;
+  bottom:0!important;
+}
+:root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-header-utilities {
+  padding-left:clamp(100px,12vw,145px)!important;
+}
+:root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-header-utilities :is(
+ .qb-utility-action,.qb-utility-countdown,#omni-pomo-pill,#omni-studio-trigger) {
+  min-height:29px!important;padding:4px 8px!important;font-size:10px!important;
+}
+:root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-header-utilities .qb-utility-countdown {
+  font-size:0!important;
+}
+:root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-tools {
+  gap:4px;
+}
+@media(max-width:850px){
+ :root.qb-admin-experience .qb-app-header .qb-admin-logo-actual {width:clamp(130px,20vw,185px)!important;max-height:190px!important;}
+ :root.qb-admin-experience .qb-app-header .qb-admin-sword-actual {width:clamp(165px,24vw,265px)!important;}
+ :root.qb-admin-experience .qb-app-header .qb-header-utilities {padding-left:clamp(140px,24vw,230px)!important;}
+ :root.qb-admin-experience .qb-app-header .qb-admin-controls {gap:5px 10px;justify-content:center;}
+ :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-logo-actual {width:clamp(88px,12vw,120px)!important;max-height:120px!important;}
+}
+@media(max-width:560px){
+ :root.qb-admin-experience .qb-app-header .qb-header-kicker {font-size:8px!important;letter-spacing:.01em;}
+ :root.qb-admin-experience .qb-app-header .qb-header-row {padding:0 0 5px!important;}
+ :root.qb-admin-experience .qb-app-header .qb-header-brand {padding:0!important;}
+ :root.qb-admin-experience .qb-app-header .qb-admin-logo-actual {width:clamp(112px,27vw,136px)!important;max-height:140px!important;}
+ :root.qb-admin-experience .qb-app-header .qb-admin-sword-actual {width:130px!important;max-height:125px;bottom:-9px!important;}
+ :root.qb-admin-experience .qb-app-header .qb-header-utilities {padding-left:115px!important;}
+ :root.qb-admin-experience .qb-app-header .qb-admin-tools {padding:0!important;border:0!important;}
+ :root.qb-admin-experience .qb-app-header .qb-admin-controls {gap:5px!important;}
+ :root.qb-admin-experience .qb-app-header .qb-header-utilities :is(
+ .qb-utility-action,.qb-utility-countdown,#omni-pomo-pill,#omni-studio-trigger) {min-height:30px!important;padding:6px 8px!important;font-size:10px!important;}
+ :root.qb-admin-experience .qb-app-header .qb-utility-countdown::after {font-size:10px;}
+ :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-header-utilities {
+  padding-left:85px!important;
+ }
+ :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-logo-actual {width:78px!important;max-height:85px!important;}
+ :root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-sword-actual {width:85px!important;}
+}
+@media(prefers-reduced-motion:reduce){
+ :root.qb-admin-experience .qb-app-header .qb-header-utilities * {transition:none!important;animation:none!important;}
+}
+/* Preserve native children for AXON, sync and OmniStudy; reorder via CSS only. */
+:root.qb-admin-experience .qb-app-header .qb-header-utilities {
+  display:flex!important;flex-wrap:wrap!important;align-items:center!important;
+  justify-content:flex-end!important;gap:5px 8px!important;
+}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities > * {order:65;}
+/* O cronômetro 25:00 é redundante no topo administrativo.
+   Ocultar apenas o atalho visual; o Pomodoro interno permanece operacional. */
+:root.qb-admin-experience .qb-app-header .qb-header-utilities #omni-pomo-pill {display:none!important;}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities > #omni-studio-trigger {order:15;}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities > #countdown {order:20;}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities > #qb-sync-status {order:25;}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities > #qb-background-toggle {
+  order:40;margin-left:clamp(0px,1vw,11px)!important;
+}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities > #qb-cockpit-toggle {order:45;}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities > #theme-b {order:50;}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities > .qb-admin-tools-more {order:60;}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities > .qb-utility-action[data-motion-toggle] {order:55;}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities [hidden] {display:none!important;}
+:root.qb-admin-experience .qb-app-header .qb-header-utilities .qb-admin-tools-more-panel {
+  display:flex;flex-direction:column;align-items:stretch;gap:7px;
+}
+@media(max-width:850px){
+ :root.qb-admin-experience .qb-app-header .qb-header-utilities {
+  justify-content:center!important;gap:5px 7px!important;
+ }
+}
+@media(max-width:560px){
+ :root.qb-admin-experience .qb-app-header .qb-header-utilities > #qb-background-toggle {
+  margin-left:0!important;
+ }
+}

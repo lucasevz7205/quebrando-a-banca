@@ -1,0 +1,116 @@
+/* QB · v3: recolhe todos os comandos (inclusive OmniStudy) com prioridade
+   sobre as regras de display do tema; mantém a prova junto ao concurso.
+   Escopo: exclusivamente admin. Mantém friso, marca, espada e rolagem.
+*/
+/* As duas negações de IDs reforçam a especificidade contra seletores
+   :is(#omni-studio-trigger, ...) definidos na arte administrativa. */
+:root.qb-admin-experience header.top.qb-app-header.qb-cabecalho-recolhido .qb-header-utilities > *:not(.qb-cabecalho-toggle):not(#qb-x):not(#qb-y){
+  display:none!important;
+}
+:root.qb-admin-experience header.top.qb-app-header .qb-admin-examline{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:6px 10px!important;
+  width:100%!important;
+  min-width:0!important;
+  position:relative!important;
+  z-index:3!important;
+}
+:root.qb-admin-experience header.top.qb-app-header .qb-admin-examline > .qb-header-kicker{
+  display:inline-flex!important;
+  min-width:0!important;
+  flex:0 1 auto!important;
+  max-width:100%!important;
+  margin:0!important;
+}
+:root.qb-admin-experience header.top.qb-app-header .qb-admin-examline > #countdown{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex:0 0 auto!important;
+  gap:5px!important;
+  margin:0!important;
+  min-height:30px!important;
+  max-width:100%!important;
+  padding:6px 10px!important;
+  border:1px solid rgba(226,187,111,.48)!important;
+  border-radius:999px!important;
+  background:rgba(8,18,33,.56)!important;
+  color:#f7ead1!important;
+  font-size:0!important;
+  letter-spacing:0!important;
+  box-shadow:none!important;
+  white-space:nowrap!important;
+}
+:root.qb-admin-experience header.top.qb-app-header .qb-admin-examline > #countdown *{
+  display:none!important;
+}
+:root.qb-admin-experience header.top.qb-app-header .qb-admin-examline > #countdown::after{
+  content:attr(data-qb-short)!important;
+  font:650 11px/1.2 "Sora",system-ui,sans-serif!important;
+  letter-spacing:0!important;
+  color:#f6e2b5!important;
+  white-space:nowrap!important;
+}
+:root.qb-admin-experience header.top.qb-app-header .qb-admin-examline > #countdown::before{
+  background:#dba95e!important;
+  box-shadow:0 0 9px rgba(239,187,100,.5)!important;
+}
+/* O Cockpit continua independente: o prazo permanece acessível no topo. */
+:root.qb-admin-experience header.top.qb-app-header[data-cockpit="true"] .qb-admin-examline > .qb-header-kicker{
+  display:inline-flex!important;
+}
+:root.qb-admin-experience .qb-cabecalho-toggle{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:6px!important;
+  padding:6px 12px!important;
+  min-height:34px!important;
+  border-radius:999px!important;
+  cursor:pointer!important;
+  border:1px solid rgba(165,138,103,.7)!important;
+  background:rgba(10,30,52,.82)!important;
+  color:#E9DEC9!important;
+  font:600 12px/1 system-ui,sans-serif!important;
+  white-space:nowrap!important;
+  order:70!important;
+  touch-action:manipulation!important;
+}
+:root.qb-admin-experience .qb-cabecalho-toggle:focus-visible{
+  outline:2px solid #D0B386!important;
+  outline-offset:2px!important;
+}
+:root.qb-admin-experience .qb-cabecalho-toggle::after{
+  content:"▴"!important;
+  font-size:11px!important;
+  transition:transform .25s ease!important;
+}
+:root.qb-admin-experience header.top.qb-app-header.qb-cabecalho-recolhido .qb-cabecalho-toggle::after{
+  transform:rotate(180deg)!important;
+}
+:root.qb-admin-experience header.top.qb-app-header.qb-cabecalho-recolhido .qb-header-utilities{
+  padding-left:0!important;
+  justify-content:center!important;
+}
+@media(max-width:560px){
+  :root.qb-admin-experience header.top.qb-app-header .qb-admin-examline{
+    gap:5px!important;
+  }
+  :root.qb-admin-experience header.top.qb-app-header .qb-admin-examline > .qb-header-kicker{
+    font-size:8px!important;
+    white-space:normal!important;
+    overflow-wrap:anywhere!important;
+  }
+  :root.qb-admin-experience header.top.qb-app-header .qb-admin-examline > #countdown{
+    min-height:28px!important;
+    padding:5px 8px!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  :root.qb-admin-experience .qb-cabecalho-toggle::after{
+    transition:none!important;
+  }
+}

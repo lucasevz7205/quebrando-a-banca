@@ -50,6 +50,12 @@
 }
 .qb-map3-stage canvas, .qb-map3-labels { position: absolute; inset: 0; width: 100%; height: 100%; }
 .qb-map3-stage canvas { display: block; touch-action: none; cursor: grab; }
+/* No touchscreen, arrastar verticalmente com um dedo rola a página;
+   gestos horizontais e multitoque continuam disponíveis para o mapa 3D. */
+@media (pointer: coarse) {
+  .qb-map3-stage canvas { touch-action: pan-y; }
+  .qb-map3-stage { overscroll-behavior-y: auto; }
+}
 .qb-map3-stage canvas:active { cursor: grabbing; }
 .qb-map3-labels { pointer-events: none; }
 .qb-map3-tag {

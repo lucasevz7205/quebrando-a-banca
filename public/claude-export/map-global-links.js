@@ -59,7 +59,7 @@ function decorate(topicId,originalMap,originalCards=[],questions,topic){
  }
  map.ramos.forEach((n,i)=>walk(n,String(i)));
  const sourceQs=questions&&typeof questions.values==="function"?[...questions.values()]:[];
- const relevant=sourceQs.filter(q=>q?.id && (q.topico===topicId || (topic?.caps||[]).includes(q.cap)));
+ const relevant=sourceQs.filter(q=>q?.id && (q.topico===topicId || q.topico===topic?.id || (topic?.caps||[]).includes(q.cap)));
  const qLinks=[],qUnmatched=[],cardLinks=[],cardUnmatched=[];
  const prelinked=new Set(nodes.flatMap(x=>x.node.x?.questaoIds||[]));
  for(const q of relevant){
