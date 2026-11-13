@@ -53,6 +53,8 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
   /* Admin: o núcleo é a placa dourada (HTML) centrada no nó; a esfera raiz e o aro de foco ficam minúsculos para não duplicar a forma. */
   const rootHidden = doc.documentElement.classList.contains("qb-admin-experience");
   const sphereScale = depth => depth === 0 ? (rootHidden ? .001 : .54) : depth === 1 ? .37 : .22;
+  // Tokens do design system (só existem no admin); fora dele valem as cores originais.
+  const token = (name, fallback) => computed.getPropertyValue(name).trim() || fallback;
   const colorFor = node => computed.getPropertyValue("--qb-node-" + (node.status || "sem-evidencia")).trim() || "#9da8c4";
   // Sem partículas decorativas: menos carga visual durante a evocação (11/11/2026).
   coords.forEach((node,i) => {
@@ -69,7 +71,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
   const crossPairs=graph.links.map(([a,b])=>[byId.get(a),byId.get(b)]);
   function lineGeometry(pairs, crossLink = false) {
     const positions=[],colors=[];
-    const backdrop=new Color("#232d4e");
+    const backdrop=new Color(token("--qbds-map-backdrop", "#232d4e"));
     for(const [a,b] of pairs) {
       if(!byPath.has(a)||!byPath.has(b))continue;
       const source=coords[byPath.get(a)], target=coords[byPath.get(b)];
@@ -91,7 +93,7 @@ export function startMapScene(panel, graph, onSelect, onLost, expandedPaths = nu
     new LineDashedMaterial({vertexColors:true,dashSize:.28,gapSize:.16,transparent:true,opacity:.83}));
   cross.computeLineDistances();
   scene.add(hierarchy,cross);
-  const focus = new InstancedMesh(geometry, new MeshBasicMaterial({color: "#e2ddff", wireframe: true, transparent: true, opacity: .7}), 1);
+  const focus = new InstancedMesh(geometry, new MeshBasicMaterial({color: token("--qbds-map-focus", "#e2ddff"), wireframe: true, transparent: true, opacity: .7}), 1);
   focus.visible = false;
   scene.add(focus);
 

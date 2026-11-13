@@ -22,4 +22,12 @@
   --qbds-ring:var(--qbds-gold);
   --qbds-selected:var(--qbds-crimson-ui);
   --qbds-accent-fill:var(--qbds-crimson);
+
+  /* motor do mapa 3D e efeito de revelação: lidos pelos scripts (scene.js, axon-reveal.js).
+     Fora do admin estas variáveis não existem e os scripts usam as cores originais. */
+  --qbds-gold-rgb:208,179,134;
+  --qbds-gold-bright-rgb:255,229,182;
+  --qbds-bronze-rgb:165,138,103;
+  --qbds-map-backdrop:var(--qbds-navy-700);
+  --qbds-map-focus:var(--qbds-gold-bright);
 }

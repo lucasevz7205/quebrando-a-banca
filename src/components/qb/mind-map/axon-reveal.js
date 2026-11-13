@@ -15,6 +15,14 @@ export function createAxonReveal(stage, win) {
     dispose() {panel.hidden=true;panel.dataset.open="false";},
     get active(){return !panel.hidden;},
   };
+  // Cores do efeito vêm dos tokens do admin (tripla "r,g,b"); fora dele valem as originais.
+  let fxStyle = null; // lido uma vez por revelação, não a cada quadro
+  const fx = (name, fallback) => {
+    try {
+      fxStyle ||= win.getComputedStyle(win.document.documentElement);
+      return fxStyle.getPropertyValue(name).trim() || fallback;
+    } catch { return fallback; }
+  };
   const reduce = win.matchMedia("(prefers-reduced-motion: reduce)");
   let frame = 0, closing = 0, serial = 0, active = false;
   const cancelFrame = () => { if (frame) win.cancelAnimationFrame(frame); frame = 0; };
@@ -71,9 +79,11 @@ export function createAxonReveal(stage, win) {
     const progress = ease(Math.min(1,t));
     const halo = Math.sin(Math.PI * Math.min(1,t));
     // A diffused light pulse expands from the point that was clicked.
+    const glowA = fx("--qbds-gold-bright-rgb", "188,161,255"), glowB = fx("--qbds-bronze-rgb", "90,105,219");
+    const dotA = fx("--qbds-gold-rgb", "150,169,255"), dotB = fx("--qbds-gold-bright-rgb", "198,150,255"), trail = fx("--qbds-bronze-rgb", "170,152,250");
     const glow = context.createRadialGradient(size.x,size.y,1,size.x,size.y,Math.max(28,130+190*t));
-    glow.addColorStop(0,"rgba(188,161,255,"+(0.26*halo)+")");
-    glow.addColorStop(.5,"rgba(90,105,219,"+(0.09*halo)+")");
+    glow.addColorStop(0,"rgba("+glowA+","+(0.26*halo)+")");
+    glow.addColorStop(.5,"rgba("+glowB+","+(0.09*halo)+")");
     glow.addColorStop(1,"rgba(0,0,0,0)");
     context.fillStyle=glow;
     context.beginPath();context.arc(size.x,size.y,130+190*t,0,Math.PI*2);context.fill();
@@ -84,11 +94,11 @@ export function createAxonReveal(stage, win) {
       const x=p.ox+(p.tx-p.ox)*progress+Math.cos(curl)*orbit;
       const y=p.oy+(p.ty-p.oy)*progress+Math.sin(curl)*orbit;
       const opacity=p.alpha*(.62+halo*.38)*(1-Math.max(0,(t-.80)*3.7));
-      const blue=i%6<3 ? "150,169,255" : "198,150,255";
+      const blue=i%6<3 ? dotA : dotB;
       context.fillStyle="rgba("+blue+","+(opacity*.94)+")";
       context.beginPath();context.arc(x,y,p.size*(1+.35*halo),0,Math.PI*2);context.fill();
       if(i%7===0 && halo>.06) {
-        context.strokeStyle="rgba(170,152,250,"+(opacity*.30*halo)+")";
+        context.strokeStyle="rgba("+trail+","+(opacity*.30*halo)+")";
         context.beginPath();context.moveTo(x,y);
         context.lineTo(x-Math.cos(curl)*8*halo,y-Math.sin(curl)*8*halo);
         context.stroke();
@@ -97,6 +107,7 @@ export function createAxonReveal(stage, win) {
     context.restore();
   }
   function show(origin, key = "") {
+    fxStyle = null;
     const turn=++serial;
     if(closing){win.clearTimeout(closing);closing=0;}
     clear();
