@@ -1,6 +1,7 @@
 /* QB · cabeçalho recolhível v2 (somente administrador).
- * Preserva o mesmo elemento #countdown, os observadores de atualização,
- * o botão Cockpit original e os controles de sincronização/OmniStudy.
+ * Preserva o #countdown e aguarda o #qb-sync-status antes de movê-lo:
+ * offline-sync.js insere seus controles relativamente ao prazo da prova.
+ * Mantém o botão Cockpit e todas as ações originais de OmniStudy.
  */
 (function () {
   "use strict";
@@ -10,7 +11,9 @@
   function placeCountdown(header){
     const countdown=header.querySelector("#countdown");
     const kicker=header.querySelector(".qb-header-kicker");
-    if(!countdown||!kicker)return;
+    // O prazo só sai da faixa original APÓS offline-sync.js montar o status.
+    // Caso contrário a sincronização pode usar uma referência fora do pai.
+    if(!countdown||!kicker||!header.querySelector("#qb-sync-status"))return false;
     // O cabeçalho usa flex-direction:column. A linha compartilhada mantém
     // concurso e prazo lado a lado sem alterar a estrutura de todo o header.
     let line=header.querySelector(".qb-admin-examline");
@@ -24,6 +27,7 @@
     if(kicker.parentElement!==line)line.appendChild(kicker);
     // Mover, nunca clonar: updateCounts e a observação da data seguem vivos.
     if(countdown.parentElement!==line)line.appendChild(countdown);
+    return true;
   }
 
   function mount(header){
@@ -49,7 +53,15 @@
       });
       utilities.append(btn);
     }
-    placeCountdown(header);
+    if(placeCountdown(header))return;
+    // Observe somente os filhos da faixa e pare assim que a sincronização
+    // aparecer. Não instale um observador global permanente, que prejudica
+    // a fluidez da rolagem no Safari do iPad.
+    const observer=new MutationObserver(()=>{
+      if(!header.isConnected){observer.disconnect();return;}
+      if(placeCountdown(header))observer.disconnect();
+    });
+    observer.observe(utilities,{childList:true});
   }
 
   function scan(){
