@@ -1303,5 +1303,10 @@
       "defeito": "a diagnosticar; não presumir erro",
       "fonteVerificada": false
     }
-  ]
+  ],
+  "auditoriaUsuario": {
+    "inventarioAprovado": true,
+    "aprovadoEm": "2026-11-13",
+    "escopo": "autorizacao para prosseguir com triagem e propostas; nao valida fontes ou gabaritos"
+  }
 }
