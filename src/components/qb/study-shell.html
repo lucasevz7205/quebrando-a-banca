@@ -824,6 +824,22 @@ function ambienteFoco(on){
 function render(force){
   const ae=document.activeElement;
   if(!force && ae && ae.dataset && (ae.dataset.nota||ae.dataset.cresp||ae.dataset.learnDraft||ae.id?.startsWith('learn-'))){ S.pendingRender=true; updateCounts(); return; }
+  /* Mapa com conceito aberto (13/11/2026): toda gravação (evocação, avaliação de cartão, resposta)
+     faz o banco emitir um onSnapshot, e render() reconstruía a tela inteira do mapa, fechando o
+     painel do conceito. Enquanto o painel estiver aberto, a reconstrução é adiada e acontece sozinha
+     quando ele fecha. Ações do usuário usam render(true) e não são adiadas. */
+  const conceitoAberto=()=>!!document.querySelector('#main [data-map-concept]:not([hidden])');
+  if(!force && S.view==='mapa' && conceitoAberto()){
+    S.pendingRender=true; updateCounts();
+    if(!S.mapaAdiado){
+      S.mapaAdiado=setInterval(()=>{
+        if(S.view==='mapa' && conceitoAberto())return;
+        clearInterval(S.mapaAdiado); S.mapaAdiado=null;
+        if(S.pendingRender)render();
+      },1500);
+    }
+    return;
+  }
   S.pendingRender=false;
   updateCounts();
   /* Modo foco do fundo: atividade (rodada, revisão, mapa, flashcards, OmniStudy)
