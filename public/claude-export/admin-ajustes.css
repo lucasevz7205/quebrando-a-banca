@@ -1,0 +1,13 @@
+/* Admin · ajustes de visibilidade. */
+
+/* 1) Modo foco no tema claro: o véu era quase opaco (96%) e apagava o fundo e o contraste do conteúdo.
+      Agora é translúcido, com leve escurecimento nas bordas para o centro respirar. */
+:root.qb-admin-experience[data-theme="light"][data-qb-foco="1"] #qb-ambient-background .qb-ambient-veil{
+  background:
+    radial-gradient(ellipse at 50% 45%,rgba(244,243,238,.38),rgba(244,243,238,.58) 70%),
+    rgba(244,243,238,.18)!important;
+}
+
+/* 2) Espada à esquerda do topo: oculta no admin. O arquivo da imagem e o elemento (.qb-admin-sword-actual)
+      continuam no app, guardados para usos futuros; para voltar a mostrá-la, remova esta regra. */
+:root.qb-admin-experience header.top.qb-app-header .qb-admin-sword-actual{display:none!important}
