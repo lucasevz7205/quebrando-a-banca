@@ -14,7 +14,7 @@ test("tela Estudar preserva scroll nativo do iframe em dispositivos com touch",(
   assert.match(route,/srcDoc=\{frameMarkup\}/);
   assert.match(route,/scrolling="yes"/);
   assert.match(route,/overflowY: "auto", WebkitOverflowScrolling: "touch", touchAction: "auto"/);
-  assert.match(route,/height: preview \? "calc\(100dvh - 3\.5rem\)" : "100dvh"/);
+  assert.match(route,/height: preview \? "calc\(100svh - 3\.5rem\)" : "100svh"/);
   assert.doesNotMatch(route,/onTouchMove=\{/);
   assert.doesNotMatch(route,/touchAction: "none"/);
 });
