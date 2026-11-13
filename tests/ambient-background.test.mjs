@@ -50,14 +50,14 @@ function fakePage({saved=null,reduced=false,saveData=false}={}){
   return {video,layer,toggle,doc,stored,listeners,mediaListeners,windowObj};
 }
 
-test("O fundo usa exatamente o vídeo público do usuário e fica antes de TODA a UI",()=>{
-  const url="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260606_170109_f96e01a5-b0db-4274-b24d-8d97e99ec928.mp4";
+test("O fundo usa o vídeo do usuário recomprimido (720p) servido pelo próprio app e fica antes de TODA a UI",()=>{
+  const url="/claude-export/ambient-720.mp4";
   const background=shell.indexOf('id="qb-ambient-background"');
   const wrap=shell.indexOf('<div class="wrap">');
   const header=shell.indexOf('class="head-row qb-header-row"');
   assert.ok(background>0&&wrap>background&&header>wrap);
   assert.ok(shell.includes(url));
-  assert.match(shell,/data-qb-background-video data-qb-video-src="https:\/\/d8j0ntlcm91z4.cloudfront.net\/[^"]+" muted playsinline loop preload="none"/);
+  assert.match(shell,/data-qb-background-video data-qb-video-src="\/claude-export\/ambient-720\.mp4" muted playsinline loop preload="none"/);
   assert.match(shell,/poster="\/claude-export\/ambient-poster\.jpg"/);
   assert.match(shell,/id="qb-background-toggle"/);
   assert.match(shell,/ambient-background\.css\?v=2/);

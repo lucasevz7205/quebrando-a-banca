@@ -14,7 +14,7 @@
     const reduce=window.matchMedia("(prefers-reduced-motion: reduce)");
     /* fluido por padrão nas telas de escolha (12/11/2026): o modo foco já aquieta o fundo
      * durante treino, revisão, mapa e flashcards, então a animação fica para a navegação.
-     * Com economia de dados ligada, o padrão continua estático (o MP4 tem 58 MB). */
+     * Com economia de dados ligada, o padrão continua estático (o MP4 recomprimido tem ~2 MB). */
     let mode="motion";
     try{if(navigator.connection&&navigator.connection.saveData)mode="still";}catch(_){ }
     let unavailable=false;
@@ -29,7 +29,7 @@
     video.preload="none"; // static mode uses the local poster without fetching the MP4
     function frame(){
       // A paused frame remains visible after playback; fresh static sessions
-      // use the local poster without requesting the 58 MB MP4.
+      // use the local poster without requesting the ~2 MB MP4.
       if(video.readyState<1 || video.readyState>=2 || video.currentTime>.04 || (mode==="motion"&&!reduce.matches))return;
       try{
         const at=Number.isFinite(video.duration)?Math.min(.12,video.duration*.02):.12;
@@ -55,7 +55,7 @@
         return;
       }
       // Attach the remote source lazily: users choosing a static background
-      // never request the 58 MB video, only the local JPG poster.
+      // never request the video, only the local JPG poster.
       if(!video.src){
         const source=video.dataset.qbVideoSrc;
         if(!source){unavailable=true;paint();return;}
