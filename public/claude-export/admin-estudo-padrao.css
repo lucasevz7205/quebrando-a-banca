@@ -1,0 +1,47 @@
+/* Padrão visual do admin para Mapas, Flashcards e Questões: mesmos botões, filtros, cartões, etiquetas e foco.
+   Só aparência. O alvo é o conteúdo do #main que tenha mapa, flashcard, núcleo ou item de questão. */
+:root.qb-admin-experience{
+  --qb-std-navy:#0A1E34;--qb-std-navy2:#173653;--qb-std-bronze:#A58A67;--qb-std-gold:#D0B386;--qb-std-cream:#F1E8D5;--qb-std-crimson:#A92E3A;
+}
+:root.qb-admin-experience #main:has(.qb-map3,.qb-flashcard,.m-centro.qb-topic-hub,.item) :is(.btn,button.lnk,.seg button){min-height:44px}
+:root.qb-admin-experience #main:has(.qb-map3,.qb-flashcard,.m-centro.qb-topic-hub,.item) .btn:not(.ghost){
+  border:1.5px solid #D0B386;background:rgba(208,179,134,.16);color:#F1E8D5;box-shadow:none;
+}
+:root.qb-admin-experience #main:has(.qb-map3,.qb-flashcard,.m-centro.qb-topic-hub,.item) .btn:not(.ghost):hover:not(:disabled){background:rgba(208,179,134,.28)}
+:root.qb-admin-experience #main:has(.qb-map3,.qb-flashcard,.m-centro.qb-topic-hub,.item) .btn.ghost{
+  border:1px solid rgba(165,138,103,.6);background:rgba(23,54,83,.9);color:#E9DEC9;
+}
+:root.qb-admin-experience #main:has(.qb-map3,.qb-flashcard,.m-centro.qb-topic-hub,.item) .btn.ghost:hover:not(:disabled){border-color:#D0B386;color:#F1E8D5;background:rgba(30,68,102,.9)}
+:root.qb-admin-experience #main:has(.qb-map3,.qb-flashcard,.m-centro.qb-topic-hub,.item) :is(.btn,button,select,textarea,input,summary):focus-visible{outline:2px solid #D0B386;outline-offset:2px}
+:root.qb-admin-experience #main:has(.qb-map3,.qb-flashcard,.m-centro.qb-topic-hub,.item) button.lnk{color:#D0B386}
+:root.qb-admin-experience #main:has(.qb-map3,.qb-flashcard,.m-centro.qb-topic-hub,.item) .filters{
+  border:1px solid rgba(165,138,103,.5);border-radius:16px;background:rgba(17,40,63,.9);color:#E9DEC9;
+}
+:root.qb-admin-experience #main:has(.qb-map3,.qb-flashcard,.m-centro.qb-topic-hub,.item) :is(.filters select,.filters input[type="text"],.qb-map3-footer select){
+  background:#0A1E34;border:1.5px solid #A58A67;color:#F1E8D5;border-radius:10px;min-height:44px;
+}
+:root.qb-admin-experience #main:has(.qb-map3,.qb-flashcard,.m-centro.qb-topic-hub,.item) .notice{
+  border:1px solid rgba(165,138,103,.5);background:rgba(17,40,63,.9);color:#E9DEC9;border-radius:14px;
+}
+:root.qb-admin-experience #main:has(.qb-map3,.qb-flashcard,.m-centro.qb-topic-hub,.item) :is(.tag,.pill){
+  border:1px solid rgba(165,138,103,.6);background:rgba(23,54,83,.8);color:#D0B386;font-weight:700;letter-spacing:.06em;
+}
+/* Questões */
+:root.qb-admin-experience #main .item{
+  border:1.5px solid #A58A67;border-radius:20px;
+  background:linear-gradient(160deg,rgba(23,54,83,.95),rgba(10,30,52,.96));
+  box-shadow:inset 0 1px 0 rgba(208,179,134,.2),0 12px 30px rgba(0,0,0,.35);color:#E9DEC9;
+}
+:root.qb-admin-experience #main .item .item-num{color:#D0B386}
+:root.qb-admin-experience #main .item .statement{font-family:Georgia,"Times New Roman",serif;color:#F1E8D5}
+:root.qb-admin-experience #main .item .statement .lbl{color:#B79F78;letter-spacing:.14em}
+:root.qb-admin-experience #main .item .answers :is(.bubble,.qb-mc-choice,.blank):not(.picked):not(.key){
+  border:1.5px solid #A58A67;background:rgba(23,54,83,.9);color:#F1E8D5;
+}
+:root.qb-admin-experience #main .item .answers :is(.bubble,.qb-mc-choice,.blank).picked{border-color:#D0B386;background:rgba(208,179,134,.18);color:#F1E8D5}
+:root.qb-admin-experience #main .item .answers :is(.bubble,.qb-mc-choice,.blank):focus-visible{outline:2px solid #D0B386;outline-offset:2px}
+:root.qb-admin-experience #main .item .just{border-top:1px dashed rgba(208,179,134,.5)}
+:root.qb-admin-experience #main .item .just textarea{background:#0A1E34;border:1.5px solid #A58A67;color:#F1E8D5}
+:root.qb-admin-experience #main .item .just label,
+:root.qb-admin-experience #main .item .conf-q{color:#E9DEC9}
+@media(prefers-reduced-motion:reduce){:root.qb-admin-experience #main .item *{transition:none!important}}

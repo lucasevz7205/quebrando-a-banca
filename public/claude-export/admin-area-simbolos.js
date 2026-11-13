@@ -58,9 +58,20 @@
     return "";
   }
 
+  // Matéria do nó: nas matérias o id é "m:SIGLA"; nos assuntos ("t:ID") vale a matéria da tela aberta.
+  function matterOf(node) {
+    const it = node.dataset.areaItem || "";
+    if (it.startsWith("t:")) return idFrom(node.closest(".qb-area-hub")?.querySelector(".qb-radial-screen-title")?.textContent);
+    if (it.startsWith("m:") && P[it.slice(2).toUpperCase()]) return it.slice(2).toUpperCase();
+    return idFrom(node.dataset.areaName);
+  }
+
   function decorate(node) {
-    const id = idFrom(node.dataset.areaName);
+    const id = matterOf(node);
     if (!id || !P[id]) return;
+    const isTopic = (node.dataset.areaItem || "").startsWith("t:");
+    const num = isTopic ? ((node.dataset.areaName || "").match(/^([0-9][0-9.]*)\s*·/) || [])[1] : "";
+    const sigla = num || id;
     const icon = node.querySelector(".qb-radial-node-icon");
     const label = node.querySelector(".qb-radial-node-label");
     if (!icon || !label) return;
@@ -74,7 +85,7 @@
     const had = node.hasAttribute("data-qb-sigla-on");
     if (had) node.removeAttribute("data-qb-sigla-on");
     const ok = fits(node.dataset.qbShort, label, node);
-    const target = ok ? node.dataset.qbShort : id;
+    const target = ok ? node.dataset.qbShort : sigla;
     if (label.textContent !== target) label.textContent = target;
     if (!ok) node.setAttribute("data-qb-sigla-on", "");
   }
