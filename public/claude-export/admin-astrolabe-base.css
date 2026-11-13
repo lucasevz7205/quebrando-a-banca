@@ -1,0 +1,20 @@
+/* PDF astrolabio-direcoes: direções N/L/S/O, graduações e numerais sobre disco sem textos repetidos. Admin apenas. */
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro .qb-astro-disc{
+  background:
+    url("/claude-export/admin-astrolabe-direcoes.svg") center/100% 100% no-repeat,
+    url("/claude-export/admin-astrolabe-base.svg") center/100% 100% no-repeat!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro[data-radial-screen="menu"] .qb-radial-core-eyebrow,
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro[data-radial-screen="menu"] .qb-radial-core-sub,
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro[data-radial-screen="menu"] .qb-radial-core strong,
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro[data-radial-screen="menu"] .qb-radial-core-orb{
+  display:none!important;
+}
+:root.qb-admin-experience .qb-radial-hub.qb-admin-astro[data-radial-screen="menu"] .qb-radial-core{
+  width:clamp(64px,19%,92px)!important;
+}
+@media(max-width:760px){
+  :root.qb-admin-experience .qb-radial-hub.qb-admin-astro[data-radial-screen="menu"] [data-radial-stage]{
+    width:min(100%,380px)!important;
+  }
+}
