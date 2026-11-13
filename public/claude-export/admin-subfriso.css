@@ -1,5 +1,6 @@
 /* Subfriso de navegação admin: abas secundárias em escala menor que o friso principal. */
 :root.qb-admin-experience #qb-radial-return{display:none!important}
+:root.qb-admin-experience #qb-cockpit-toggle{display:none!important}
 :root.qb-admin-experience .qb-tab-shell > .subnav.qb-header-tabs{
 position:relative!important;display:flex!important;flex-wrap:nowrap!important;align-items:stretch!important;gap:0!important;width:100%;box-sizing:border-box;
 overflow-x:auto;scrollbar-width:none;padding:0!important;border-radius:14px!important;
