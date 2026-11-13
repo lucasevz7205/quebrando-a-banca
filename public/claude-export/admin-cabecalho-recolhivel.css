@@ -1,7 +1,10 @@
-/* QB · v2: recolhe só os comandos, com o prazo da prova junto ao concurso.
+/* QB · v3: recolhe todos os comandos (inclusive OmniStudy) com prioridade
+   sobre as regras de display do tema; mantém a prova junto ao concurso.
    Escopo: exclusivamente admin. Mantém friso, marca, espada e rolagem.
 */
-:root.qb-admin-experience header.top.qb-app-header.qb-cabecalho-recolhido .qb-header-utilities > *:not(.qb-cabecalho-toggle){
+/* As duas negações de IDs reforçam a especificidade contra seletores
+   :is(#omni-studio-trigger, ...) definidos na arte administrativa. */
+:root.qb-admin-experience header.top.qb-app-header.qb-cabecalho-recolhido .qb-header-utilities > *:not(.qb-cabecalho-toggle):not(#qb-x):not(#qb-y){
   display:none!important;
 }
 :root.qb-admin-experience header.top.qb-app-header .qb-admin-examline{
@@ -73,7 +76,7 @@
   color:#E9DEC9!important;
   font:600 12px/1 system-ui,sans-serif!important;
   white-space:nowrap!important;
-  order:999!important;
+  order:70!important;
   touch-action:manipulation!important;
 }
 :root.qb-admin-experience .qb-cabecalho-toggle:focus-visible{
