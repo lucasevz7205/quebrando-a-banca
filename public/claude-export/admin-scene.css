@@ -1,7 +1,7 @@
 /* Identidade cinematográfica administrativa: todos os fundos derivam dos vídeos aprovados.
    Não tocar no fundo global nem nos outros perfis. */
 :root.qb-admin-experience {
-  --qb-scene-image:url("https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/98e13314a_gemini_generated_video_362B7BA6_at3.jpg");
+  --qb-scene-image:url("https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/dc13890b5_gemini_generated_video_FA7F3298_frame.jpg");
 }
 :root.qb-admin-experience #qb-ambient-background {
   background-color:#090d15!important;
