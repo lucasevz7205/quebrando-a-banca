@@ -1,0 +1,1307 @@
+{
+  "geradoEm": "2026-11-13",
+  "escopo": "snapshot de codigo; conferir banco ativo antes de qualquer alteracao",
+  "summary": [
+    {
+      "topico": "rf-2-1",
+      "questoesProtegidas": 20,
+      "questoesElegiveis": 0,
+      "cartoesElegiveis": 16
+    },
+    {
+      "topico": "rf-2-2",
+      "questoesProtegidas": 20,
+      "questoesElegiveis": 0,
+      "cartoesElegiveis": 16
+    },
+    {
+      "topico": "rf-2-3",
+      "questoesProtegidas": 20,
+      "questoesElegiveis": 0,
+      "cartoesElegiveis": 17
+    },
+    {
+      "topico": "rf-2-4",
+      "questoesProtegidas": 20,
+      "questoesElegiveis": 0,
+      "cartoesElegiveis": 16
+    },
+    {
+      "topico": "rf-2-5",
+      "questoesProtegidas": 20,
+      "questoesElegiveis": 0,
+      "cartoesElegiveis": 19
+    },
+    {
+      "topico": "rf-2-6",
+      "questoesProtegidas": 20,
+      "questoesElegiveis": 0,
+      "cartoesElegiveis": 18
+    },
+    {
+      "topico": "rf-2-7",
+      "questoesProtegidas": 20,
+      "questoesElegiveis": 0,
+      "cartoesElegiveis": 18
+    },
+    {
+      "topico": "rf-2-8",
+      "questoesProtegidas": 20,
+      "questoesElegiveis": 0,
+      "cartoesElegiveis": 19
+    }
+  ],
+  "rows": [
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@0",
+      "tema": "Quem gera o texto?",
+      "pergunta": "Um sistema gera legendas enquanto o orador fala. Qual é o processo e o que faltaria para caracterizar degravação?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@1",
+      "tema": "De onde se parte?",
+      "pergunta": "Um ASR processa a gravação de uma audiência. Quais dois rótulos descrevem essa operação?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@2",
+      "tema": "O que se faz com o texto?",
+      "pergunta": "A revisão humana só pode partir de texto automático?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@3",
+      "tema": "O que se faz com o texto?",
+      "pergunta": "Qual é a diferença entre corrigir uma palavra mal reconhecida e corrigir uma afirmação do orador?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@4",
+      "tema": "Limpa ou editada",
+      "pergunta": "Quando uma repetição merece ser preservada na versão limpa?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@5",
+      "tema": "Limpa ou editada",
+      "pergunta": "Como as aulas nomeiam o registro de oralidade reduzida?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@6",
+      "tema": "Quem gera o texto?",
+      "pergunta": "Uma legenda automática registra “deferido” onde o orador disse “indeferido”.\n\nPor que uma saída de ASR deve ser tratada como hipótese?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@7",
+      "tema": "Quem gera o texto?",
+      "pergunta": "Uma audiência é legendada ao vivo e seu arquivo é transcrito novamente no dia seguinte.\n\nComo classificar o ASR que processa um arquivo gravado?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@8",
+      "tema": "De onde se parte?",
+      "pergunta": "Uma equipe converte a trilha sonora de uma sessão arquivada em vídeo em texto.\n\nQual elemento da entrada caracteriza a degravação?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@9",
+      "tema": "De onde se parte?",
+      "pergunta": "Dois profissionais recebem a mesma gravação; um digita do zero, outro corrige um rascunho de ASR.\n\nO uso de ASR impede chamar o trabalho de degravação assistida?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@10",
+      "tema": "O que se faz com o texto?",
+      "pergunta": "Um revisor compara uma nota digitada manualmente com a gravação original.\n\nUma transcrição manual também admite revisão humana?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@11",
+      "tema": "O que se faz com o texto?",
+      "pergunta": "O orador cita “Recife”; o sistema escreve “Resende”, e a gravação permite identificar a cidade.\n\nQual limite separa correção de reconhecimento e alteração de conteúdo?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@12",
+      "tema": "Literal",
+      "pergunta": "Uma transcrição destinada a estudar hesitações registra pausas e repetições relevantes.\n\nO que orienta a preservação de marcas da oralidade?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@13",
+      "tema": "Literal",
+      "pergunta": "O orador diz “foram vinte, corrijo, trinta participantes”.\n\nComo representar uma autocorreção explícita em registro literal?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@14",
+      "tema": "Limpa ou editada",
+      "pergunta": "Um “né” incidental é retirado de uma versão limpa sem modificar a informação.\n\nPor que o rótulo “limpa” exige conhecer a convenção adotada?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-1",
+      "id": "rf-2-1@15",
+      "tema": "Limpa ou editada",
+      "pergunta": "“Apoio a proposta, salvo o artigo terceiro” não equivale a “apoio a proposta”.\n\nQue teste deve preceder a exclusão de um trecho na versão limpa?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@0",
+      "tema": "Da captação à hipótese",
+      "pergunta": "Em que ordem ocorrem preparação de áudio, ASR e pós-edição?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@1",
+      "tema": "Preparar áudio",
+      "pergunta": "Qual diferença operacional há entre VAD e diarização?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@2",
+      "tema": "Triagem",
+      "pergunta": "Como tratar uma negação de alta confiança em trecho de votação?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@3",
+      "tema": "Produzir hipótese",
+      "pergunta": "Como validar que o rótulo “Falante 2” corresponde à deputada que consta da pauta?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@4",
+      "tema": "Validação",
+      "pergunta": "Que decisões deixam uma correção auditável?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@5",
+      "tema": "Correção recorrente",
+      "pergunta": "Uma correção em uma sessão altera automaticamente o modelo para as seguintes?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@6",
+      "tema": "Preparar áudio",
+      "pergunta": "O áudio tem ruído e um intervalo em que o microfone ficou desligado.\n\nQual é o limite de preparar um áudio incompleto?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@7",
+      "tema": "Preparar áudio",
+      "pergunta": "Um componente marca os intervalos 00:10–00:18 e 00:25–00:40 como contendo fala.\n\nO que a VAD fornece antes da transcrição?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@8",
+      "tema": "Produzir hipótese",
+      "pergunta": "O sistema produz um texto fluente em poucos segundos, sem revisão.\n\nO que diferencia uma hipótese automática de uma versão validada?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@9",
+      "tema": "Produzir hipótese",
+      "pergunta": "A transcrição alterna os rótulos “Falante 1” e “Falante 2”.\n\nComo passar de “Falante 2” ao nome de uma pessoa?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@10",
+      "tema": "Triagem",
+      "pergunta": "Um trecho de baixa confiança contém um bordão; outro, de alta confiança, contém o número de uma proposição.\n\nQuais dois fatores devem orientar a priorização da revisão?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@11",
+      "tema": "Triagem",
+      "pergunta": "O áudio diz “não aprovo”, enquanto a hipótese registra “aprovo” com alta confiança.\n\nPor que conferir uma negação mesmo com alta confiança?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@12",
+      "tema": "Validação",
+      "pergunta": "Uma nota foi pontuada e recebeu correção ortográfica, mas não foi comparada ao áudio.\n\nPor que a revisão ortográfica não basta para validar a nota?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@13",
+      "tema": "Validação",
+      "pergunta": "A equipe registra a versão anterior, a nova redação e o minuto de uma correção.\n\nPara que servem versão e marca temporal na revisão?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@14",
+      "tema": "Correção recorrente",
+      "pergunta": "O mesmo nome de comissão aparece incorreto em várias sessões.\n\nO que deve vir entre detectar recorrência e escolher uma correção técnica?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-2",
+      "id": "rf-2-2@15",
+      "tema": "Correção recorrente",
+      "pergunta": "Um revisor corrige um nome e o acrescenta ao glossário da equipe.\n\nAcrescentar um nome ao glossário equivale a retreinar o ASR?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@0",
+      "tema": "WER",
+      "pergunta": "Qual é a WER para 40 palavras na referência, com 2 substituições, 1 omissão e 1 inserção?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@1",
+      "tema": "WER",
+      "pergunta": "Como uma hipótese pode produzir WER superior a 100%?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@2",
+      "tema": "CER e DER",
+      "pergunta": "Quando CER e DER ajudam a responder perguntas diferentes?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@3",
+      "tema": "CER e DER",
+      "pergunta": "Uma fala aparece com as palavras corretas, porém atribuída a outra pessoa. Que dimensão falhou?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@4",
+      "tema": "Fidelidade e completude",
+      "pergunta": "Por que trocar “rejeitado” por “aprovado” é mais grave que um erro tipográfico sem efeito de sentido?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@5",
+      "tema": "Legibilidade e sincronismo",
+      "pergunta": "Qual critério adicional importa em uma legenda com texto correto exibido tarde demais?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@6",
+      "tema": "Legibilidade e sincronismo",
+      "pergunta": "Por que a inserção de uma vírgula pode alterar o sentido e deixar a WER de palavras inalterada?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@7",
+      "tema": "Fidelidade e completude",
+      "pergunta": "A fala condiciona o apoio a uma emenda, mas a versão registra apenas o apoio.\n\nComo uma omissão pode comprometer fidelidade e completude?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@8",
+      "tema": "Fidelidade e completude",
+      "pergunta": "Em uma nota de mil palavras, “rejeitado” foi substituído por “aprovado”.\n\nPor que um erro lexical isolado pode ser crítico?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@9",
+      "tema": "Legibilidade e sincronismo",
+      "pergunta": "As legendas estão corretas, mas chegam vinte segundos depois da fala.\n\nQual dimensão falha quando a legenda correta chega atrasada?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@10",
+      "tema": "Legibilidade e sincronismo",
+      "pergunta": "Dois textos têm as mesmas palavras, mas usam vírgulas que produzem leituras diferentes.\n\nComo a pontuação pode escapar da WER e ainda alterar o sentido?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@11",
+      "tema": "WER",
+      "pergunta": "Uma referência de 80 palavras apresenta, no alinhamento, 4 substituições, 2 exclusões e 2 inserções.\n\nQual é a WER de 4S, 2D e 2I para 80 palavras de referência?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@12",
+      "tema": "WER",
+      "pergunta": "Um alinhamento com referência de 10 palavras contabiliza 12 inserções, sem substituições ou exclusões.\n\nComo inserções tornam possível WER superior a 100%?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@13",
+      "tema": "CER e DER",
+      "pergunta": "Uma avaliação deseja separar grafia das palavras e atribuição temporal de quem falou.\n\nQual distinção separa CER e DER?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@14",
+      "tema": "CER e DER",
+      "pergunta": "As mesmas palavras e a mesma ordem foram mantidas, mas os rótulos externos de dois falantes foram trocados.\n\nUma WER textual zero garante autoria correta?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@15",
+      "tema": "Crítico, maior e menor",
+      "pergunta": "Duas notas têm a mesma quantidade de erros: uma erra um bordão, outra o resultado de uma deliberação.\n\nPor que notas com igual WER podem ter riscos diferentes?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-3",
+      "id": "rf-2-3@16",
+      "tema": "Crítico, maior e menor",
+      "pergunta": "A fala menciona o PL 315, e a nota registra o PL 351, existente e sobre tema diferente.\n\nO que torna crítica a troca de um número de proposição?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@0",
+      "tema": "Identificação do turno",
+      "pergunta": "Por que o rótulo “Falante 1” não basta para publicar um nome?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@1",
+      "tema": "Identificação do turno",
+      "pergunta": "Onde registrar uma mudança da pessoa que preside a sessão?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@2",
+      "tema": "Ocorrência de plenário",
+      "pergunta": "O que a marcação “(Pausa.)” comunica?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@3",
+      "tema": "Limitação técnica",
+      "pergunta": "O áudio encobre parte de uma fala. Como manter fidelidade e facilitar conferência?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@4",
+      "tema": "Fronteiras de blocos",
+      "pergunta": "Por que trechos de trabalho podem se sobrepor e o que conferir na junção?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@5",
+      "tema": "Limitação técnica",
+      "pergunta": "Como as duas aulas tratam marcações de áudio e de plenário?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@6",
+      "tema": "Identificação da sessão",
+      "pergunta": "Uma nota identifica a comissão e a data, mas seus turnos não têm indicação de orador.\n\nO cabeçalho da sessão basta para identificar os autores das falas?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@7",
+      "tema": "Identificação da sessão",
+      "pergunta": "Uma pergunta é seguida de resposta e, depois, de um esclarecimento do primeiro orador.\n\nPor que a sequência dos turnos deve permanecer reconhecível?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@8",
+      "tema": "Identificação do turno",
+      "pergunta": "O sistema entrega “Orador 1”; a equipe dispõe de vídeo e lista de presença para conferir o segmento.\n\nQual evidência deve sustentar a identificação de um turno?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@9",
+      "tema": "Identificação do turno",
+      "pergunta": "O vice-presidente assume a condução da sessão durante a ausência do presidente.\n\nQuem deve ser identificado quando a presidência muda durante a sessão?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@10",
+      "tema": "Ocorrência de plenário",
+      "pergunta": "O registro intercala a marca “(Pausa.)” entre dois turnos.\n\nComo distinguir indicação editorial de conteúdo verbal?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@11",
+      "tema": "Ocorrência de plenário",
+      "pergunta": "Há manifestação audível no plenário, mas não é possível reconhecer a pessoa nem entender as palavras.\n\nO que registrar quando se confirma a intervenção, mas não suas palavras?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@12",
+      "tema": "Limitação técnica",
+      "pergunta": "Uma falha de captação atinge o intervalo 12:10–12:14 da gravação.\n\nComo tornar verificável um trecho prejudicado pela captação?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@13",
+      "tema": "Limitação técnica",
+      "pergunta": "Uma aula exemplifica colchetes para indicar limitação técnica; outra relata o padrão observado nas notas examinadas.\n\nComo usar convenções diferentes apresentadas pelas duas aulas?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@14",
+      "tema": "Fronteiras de blocos",
+      "pergunta": "Dois arquivos usados pelos revisores compartilham os últimos cinco segundos do primeiro bloco.\n\nQue risco a sobreposição de blocos cria na consolidação?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-4",
+      "id": "rf-2-4@15",
+      "tema": "Fronteiras de blocos",
+      "pergunta": "Uma frase começa no fim do bloco A e termina no início do bloco B.\n\nO que conferir quando uma frase atravessa a divisão de blocos?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@0",
+      "tema": "TN e ITN",
+      "pergunta": "Qual é a direção da TN para síntese e qual é a direção da ITN no ASR?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@1",
+      "tema": "Preservação semântica",
+      "pergunta": "Por que a palavra «segundo» não vira sempre «2º»?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@2",
+      "tema": "Preservação semântica",
+      "pergunta": "Como preservar a aproximação em «uns dois mil»?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@3",
+      "tema": "Remissões e formas reduzidas",
+      "pergunta": "Como escrever «artigo dez, parágrafo nono, inciso doze, alínea b»?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@4",
+      "tema": "Grafia de números",
+      "pergunta": "Quais são as exceções à grafia por extenso de números e percentuais na redação normativa?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@5",
+      "tema": "Grafia de números",
+      "pergunta": "Qual critério geral o manual administrativo da Câmara usa para escrever numerais?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@6",
+      "tema": "Remissões e formas reduzidas",
+      "pergunta": "Como o gênero afeta a expansão de uma sigla na primeira ocorrência?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@7",
+      "tema": "Remissões e formas reduzidas",
+      "pergunta": "Classifique «PLP», «art.» e «km».",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@8",
+      "tema": "Validação",
+      "pergunta": "Que diferença há entre «12 por cento» por «12%» e «art. 165» por «art. 155»?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@9",
+      "tema": "TN e ITN",
+      "pergunta": "Um sintetizador recebe “2026” e prepara “dois mil e vinte e seis” para pronúncia.\n\nQual direção caracteriza TN para síntese?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@10",
+      "tema": "TN e ITN",
+      "pergunta": "Após o ASR reconhecer “doze vírgula cinco por cento”, o sistema apresenta “12,5%”.\n\nO que a ITN preserva ao converter um percentual?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@11",
+      "tema": "Preservação semântica",
+      "pergunta": "O texto reconhecido contém “segundo o relator, a sessão terminou”.\n\nPor que “segundo o relator” não deve virar “2º o relator”?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@12",
+      "tema": "Preservação semântica",
+      "pergunta": "A gravação cita o artigo 155, mas o texto normalizado apresenta “art. 165”.\n\nPor que “art. 165” não normaliza fielmente “artigo 155”?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@13",
+      "tema": "Grafia de números",
+      "pergunta": "A equipe prepara uma nota de fala e também uma minuta normativa.\n\nQual escolha vem antes da padronização numérica?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@14",
+      "tema": "Grafia de números",
+      "pergunta": "Uma minuta inclui uma data e o número de uma lei.\n\nA regra de números por extenso da LC 95 admite exceções?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@15",
+      "tema": "Remissões e formas reduzidas",
+      "pergunta": "Uma referência reúne artigo, parágrafo, inciso e alínea.\n\nComo se distinguem inciso, alínea e item na articulação normativa?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@16",
+      "tema": "Remissões e formas reduzidas",
+      "pergunta": "O texto contém “PEC”, “art.” e “km”.\n\nComo classificar PEC, art. e km?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@17",
+      "tema": "Estratégias automáticas",
+      "pergunta": "Um normalizador neural produz uma referência coerente com o assunto, porém diferente da fala.\n\nPor que um modelo contextual ainda precisa de conferência?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-5",
+      "id": "rf-2-5@18",
+      "tema": "Validação",
+      "pergunta": "A fala diz “uns dois mil participantes”, e a versão apresenta “2.000 participantes”.\n\nQue informação se perde ao retirar “uns” de uma quantidade aproximada?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@0",
+      "tema": "Entrada e conversão",
+      "pergunta": "Quem gera os toques e quem os converte em texto no CAT clássico?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@1",
+      "tema": "Entrada e conversão",
+      "pergunta": "O que distingue CAT clássico de ASR pela entrada?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@2",
+      "tema": "Diagnóstico de tradução",
+      "pergunta": "Que diferença existe entre um trecho não traduzido e outro mal traduzido?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@3",
+      "tema": "Reprodução e alinhamento",
+      "pergunta": "O que o alinhamento forçado recebe e entrega?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@4",
+      "tema": "Reprodução e alinhamento",
+      "pergunta": "Que problema o retrocesso automático ajuda a evitar?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@5",
+      "tema": "Intervenções humanas",
+      "pergunta": "Se o editor recebe um rótulo incorreto da diarização, quem valida a atribuição?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@6",
+      "tema": "Formatos",
+      "pergunta": "Qual formato você escolheria para legenda temporizada e qual pode guardar metadados estruturados?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@7",
+      "tema": "Estado do texto",
+      "pergunta": "Que diferença há entre a saída ao vivo e o registro validado?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@8",
+      "tema": "Entrada e conversão",
+      "pergunta": "Uma profissional ouve a sessão e registra combinações num teclado de estenotipia.\n\nQual entrada distingue CAT estenotípico clássico de ASR?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@9",
+      "tema": "Entrada e conversão",
+      "pergunta": "Uma sequência encontra correspondência no dicionário e produz uma palavra inadequada à fala.\n\nUma entrada encontrada no dicionário garante palavra correta?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@10",
+      "tema": "Diagnóstico de tradução",
+      "pergunta": "A saída apresenta um código estenotípico onde deveria haver uma palavra.\n\nO que caracteriza um segmento não traduzido?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@11",
+      "tema": "Diagnóstico de tradução",
+      "pergunta": "O CAT exibe uma palavra comum, porém incompatível com o trecho ouvido.\n\nPor que revisar palavras aparentemente normais numa saída CAT?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@12",
+      "tema": "Reprodução e alinhamento",
+      "pergunta": "Ao retomar, o editor volta dois segundos e reproduz novamente o fim da frase.\n\nPor que o retrocesso automático não exige duplicar o texto?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@13",
+      "tema": "Reprodução e alinhamento",
+      "pergunta": "Um editor recebe a gravação e uma transcrição pronta e estima o tempo de cada palavra.\n\nQuais entradas e saída caracterizam o alinhamento forçado?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@14",
+      "tema": "Intervenções humanas",
+      "pergunta": "Após conferir o vídeo, a equipe troca o nome do responsável por um turno sem editar suas palavras.\n\nComo corrigir autoria preservando as palavras confirmadas?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@15",
+      "tema": "Intervenções humanas",
+      "pergunta": "Uma alteração registra o responsável e preserva o vínculo com o minuto correspondente.\n\nO que a rastreabilidade permite verificar depois de uma edição?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@16",
+      "tema": "Estado do texto",
+      "pergunta": "O público acompanha texto em tempo real antes da revisão final da sessão.\n\nO texto exibido ao vivo já é necessariamente o registro validado?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-6",
+      "id": "rf-2-6@17",
+      "tema": "Formatos",
+      "pergunta": "Uma exportação oferece legendas temporizadas e outra inclui campos de orador e confiança.\n\nComo distinguir formato de legenda e estrutura de metadados?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@0",
+      "tema": "Desenhos",
+      "pergunta": "O que dá independência à dupla revisão?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@1",
+      "tema": "Revisão em dupla",
+      "pergunta": "Qual é a função da dupla revisão, da auditoria amostral e do SLA?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@2",
+      "tema": "Como selecionar",
+      "pergunta": "Quando vale separar Plenário e comissões em estratos?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@3",
+      "tema": "Como selecionar",
+      "pergunta": "É possível estimar a taxa do lote inspecionando apenas os trechos de baixa confiança?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@4",
+      "tema": "Como interpretar",
+      "pergunta": "O que significa encontrar zero erros em 60 trechos sorteados?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@5",
+      "tema": "Indicador e objetivo",
+      "pergunta": "Entrega observada de 96,5%, meta de 98% e contrato com ajuste por descumprimento correspondem a quê?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@6",
+      "tema": "Como interpretar",
+      "pergunta": "Por que contar erros críticos à parte da WER?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@7",
+      "tema": "Auditoria de amostras",
+      "pergunta": "Qual a diferença entre auditoria de qualidade e trilha de auditoria?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@8",
+      "tema": "Desenhos",
+      "pergunta": "Beatriz revisa a versão já corrigida por André.\n\nO que caracteriza a revisão sequencial?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@9",
+      "tema": "Desenhos",
+      "pergunta": "Dois revisores recebem a gravação e trabalham sem ver as escolhas um do outro.\n\nQuando se comparam os resultados numa revisão independente?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@10",
+      "tema": "Calibração",
+      "pergunta": "Dois revisores divergem sobre um número e voltam ao trecho da gravação.\n\nQual deve ser a base da conciliação de uma divergência?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@11",
+      "tema": "Calibração",
+      "pergunta": "Os revisores concordam numa palavra que ambos ouviram incorretamente.\n\nDois revisores concordarem prova que acertaram?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@12",
+      "tema": "Como selecionar",
+      "pergunta": "Uma equipe sorteia trechos de todas as sessões; outra escolhe apenas segmentos de baixa confiança.\n\nComo distinguir amostra aleatória e seleção por risco?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@13",
+      "tema": "Como selecionar",
+      "pergunta": "A auditoria separa sessões por qualidade de áudio e sorteia trechos em cada grupo.\n\nQual é a sequência da amostragem estratificada?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@14",
+      "tema": "Como interpretar",
+      "pergunta": "A auditoria não encontra erros nos sessenta trechos sorteados.\n\nO que se pode concluir de sessenta trechos sem erros detectados?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@15",
+      "tema": "Como interpretar",
+      "pergunta": "O relatório tem baixa WER geral e uma troca no resultado de uma votação.\n\nPor que acompanhar erros críticos além da WER?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@16",
+      "tema": "Indicador e objetivo",
+      "pergunta": "O objetivo é entregar 98% das notas no prazo; o resultado medido foi 96,5%.\n\nQuais valores representam SLI e SLO nesse caso?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-7",
+      "id": "rf-2-7@17",
+      "tema": "Acordo",
+      "pergunta": "Um acordo exige entrega em duas horas, mas é necessário definir quando o relógio começa.\n\nQue definição falta num prazo sem marco inicial?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@0",
+      "tema": "Três sentidos",
+      "pergunta": "O que distingue vocabulário do reconhecedor, vocabulário técnico e vocabulário de indexação?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@1",
+      "tema": "Termos raros",
+      "pergunta": "Por que subpalavras ajudam com palavras raras sem assegurar acerto?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@2",
+      "tema": "Pós-processamento e contexto",
+      "pergunta": "Em que momento atuam a lista de substituições e o reforço de frases?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@3",
+      "tema": "Adaptação e ajuste fino",
+      "pergunta": "Que dado permite adaptar um modelo de linguagem parlamentar? E qual é o dado do ajuste fino supervisionado do ASR descrito na aula?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@4",
+      "tema": "End-to-end",
+      "pergunta": "O que distingue fusão superficial e reordenação?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@5",
+      "tema": "End-to-end",
+      "pergunta": "O que acontece com a contribuição do modelo externo na fusão superficial se o peso for zero?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@6",
+      "tema": "Risco do reforço",
+      "pergunta": "O que é falso viés e como mitigá-lo?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@7",
+      "tema": "Ciclo do glossário",
+      "pergunta": "Por que medir separadamente WER geral e erros em entidades?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@8",
+      "tema": "Ciclo do glossário",
+      "pergunta": "Uma comissão mudou de nome. Como atualizar a adaptação?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@9",
+      "tema": "Três sentidos",
+      "pergunta": "Uma equipe mantém tokens do ASR, um glossário de comissões e um tesauro de assuntos.\n\nQuais três sentidos de vocabulário devem ser separados?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@10",
+      "tema": "Termos raros",
+      "pergunta": "Um nome novo não possui entrada num sistema baseado em palavras de léxico fechado.\n\nEm que contexto um nome ausente caracteriza OOV?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@11",
+      "tema": "Termos raros",
+      "pergunta": "Um reconhecedor usa subpalavras para representar um nome pouco frequente.\n\nPor que subpalavras não eliminam todos os erros em nomes raros?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@12",
+      "tema": "Pós-processamento e contexto",
+      "pergunta": "Após a transcrição, uma regra substitui a grafia recorrente de uma sigla.\n\nComo localizar o pós-processamento no fluxo?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@13",
+      "tema": "Pós-processamento e contexto",
+      "pergunta": "Antes da sessão, nomes da pauta são fornecidos como lista de frases a um serviço que aceita esse recurso.\n\nUma lista contextual exige necessariamente retreinar o modelo?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@14",
+      "tema": "Adaptação e ajuste fino",
+      "pergunta": "Há um corpus de debates escritos e outro de gravações com transcrições conferidas.\n\nQue dados distinguem adaptação de linguagem e ajuste supervisionado de ASR?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@15",
+      "tema": "End-to-end",
+      "pergunta": "A busca combina o escore do ASR com λ vezes o escore de um modelo externo.\n\nO que zera quando λ é zero na combinação descrita?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@16",
+      "tema": "End-to-end",
+      "pergunta": "Um módulo recebe cinco hipóteses fixas e apenas as ordena por uma nova pontuação.\n\nQual limite tem uma reordenação restrita a candidatos fixos?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@17",
+      "tema": "Risco do reforço",
+      "pergunta": "Depois de aumentar o peso de uma sigla, ela passa a surgir também em áudios que não a contêm.\n\nComo detectar o efeito indesejado de um reforço contextual?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    },
+    {
+      "tipo": "cartao",
+      "topico": "rf-2-8",
+      "id": "rf-2-8@18",
+      "tema": "Ciclo do glossário",
+      "pergunta": "Uma comissão muda de nome e o glossário é atualizado após conferência nos registros institucionais.\n\nO que fazer depois de atualizar um nome no glossário?",
+      "defeito": "a diagnosticar; não presumir erro",
+      "fonteVerificada": false
+    }
+  ]
+}
