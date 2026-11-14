@@ -1,0 +1,38 @@
+/* Typography. Cinzel / Cormorant Garamond are Google substitutes for the reference lettering. */
+:root{
+  --font-display:'Cinzel','Trajan Pro',Georgia,serif;          /* brand + ceremonial titles, caps */
+  --font-serif:'Cormorant Garamond',Georgia,serif;             /* subtitles, motto, italic flourishes */
+  --font-heading:Georgia,'Cormorant Garamond',serif;           /* content headings in study areas */
+  --font-body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --fs-display:56px;   --fs-display-sm:36px;
+  --fs-h1:32px; --fs-h2:24px; --fs-h3:20px;
+  --fs-body-lg:18px; --fs-body:16px; --fs-label:14px; --fs-caption:13px; --fs-overline:12px;
+
+  --lh-tight:1.15; /* @kind font */
+  --lh-heading:1.25; /* @kind font */
+  --lh-body:1.6; /* @kind font */
+  --lh-ui:1.4; /* @kind font */
+  --fw-regular:400; /* @kind font */
+  --fw-medium:500; /* @kind font */
+  --fw-semibold:600; /* @kind font */
+  --fw-bold:700; /* @kind font */
+
+  --tracking-display:.04em; /* @kind font */     /* Cinzel caps */
+  --tracking-subtitle:.32em; /* @kind font */    /* "A  A S C E N S Ã O" */
+  --tracking-overline:.16em; /* @kind font */    /* section labels, short only */
+  --tracking-body:0; /* @kind font */
+
+  --measure:68ch; /* @kind font */               /* long reading line */
+
+  /* Semantic */
+  --type-brand:var(--fw-semibold) var(--fs-display)/var(--lh-tight) var(--font-display); /* @kind font */
+  --type-h1:var(--fw-regular) var(--fs-h1)/var(--lh-heading) var(--font-heading); /* @kind font */
+  --type-h2:var(--fw-regular) var(--fs-h2)/var(--lh-heading) var(--font-heading); /* @kind font */
+  --type-h3:var(--fw-semibold) var(--fs-h3)/var(--lh-heading) var(--font-body); /* @kind font */
+  --type-body:var(--fw-regular) var(--fs-body)/var(--lh-body) var(--font-body); /* @kind font */
+  --type-reading:var(--fw-regular) var(--fs-body-lg)/1.65 var(--font-body); /* @kind font */
+  --type-label:var(--fw-medium) var(--fs-label)/var(--lh-ui) var(--font-body); /* @kind font */
+  --type-caption:var(--fw-regular) var(--fs-caption)/var(--lh-ui) var(--font-body); /* @kind font */
+}

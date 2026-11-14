@@ -1,0 +1,25 @@
+<!-- @dsCard group="Components" viewport="700x430" name="Core controls" subtitle="Button, IconButton, Badge, ProgressBar, Panel, Icon" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{padding:24px;min-height:100vh}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const DS = window.QuebrandoABancaDesignSystem_3e4054;
+
+const { Button, IconButton, Badge, ProgressBar, Panel, Icon } = DS;
+const Row = ({children}) => <div style={{display:'flex',gap:10,flexWrap:'wrap',alignItems:'center'}}>{children}</div>;
+function App(){return(<div style={{display:'flex',flexDirection:'column',gap:18}}>
+<Row><Button iconRight="arrow-right">Confirmar resposta</Button><Button variant="secondary" icon="bookmark">Revisar</Button><Button variant="ghost">Pular</Button><Button variant="crimson">Iniciar</Button></Row>
+<Row><Button size="sm">Pequeno</Button><Button size="lg">Grande</Button><Button loading>Salvando</Button><Button disabled>Indisponível</Button></Row>
+<Row><IconButton icon="search" label="Buscar"/><IconButton icon="bell" label="Notificações" count={1}/><IconButton icon="chart-column" label="Desempenho"/><IconButton icon="focus" label="Modo foco" pressed/><IconButton icon="zoom-in" label="Aproximar" variant="outline"/><IconButton icon="locate-fixed" label="Centralizar" variant="solid"/><IconButton icon="x" label="Fechar" size="sm"/></Row>
+<Row><Badge tone="gold">CEBRASPE · 2023</Badge><Badge tone="correct">Acertou</Badge><Badge tone="incorrect">Errou</Badge><Badge tone="no-evidence">Sem evidência</Badge><Badge tone="attention">Pegadinha</Badge><Badge tone="neutral" icon="clock">12 min</Badge><Badge tone="crimson" icon={null}>Novo</Badge></Row>
+<div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16}}>
+<Panel padding={16} style={{display:'flex',flexDirection:'column',gap:12}}><ProgressBar value={0.2} label="Questão" valueText="4 de 20"/><ProgressBar value={0.68} label="Constitucional" tone="correct"/></Panel>
+<Panel variant="ornate" padding={16} style={{display:'flex',alignItems:'center',gap:12}}><Icon name="trophy" size={28} color="var(--qb-gold-bright)"/><div><div style={{font:'600 13px/1.2 var(--font-display)',letterSpacing:'.1em'}}>MARCO</div><div style={{font:'400 13px/1.4 var(--font-body)',color:'var(--text-muted)'}}>Panel · ornate</div></div></Panel>
+</div></div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

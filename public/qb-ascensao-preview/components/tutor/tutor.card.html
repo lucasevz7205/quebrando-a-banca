@@ -1,0 +1,17 @@
+<!-- @dsCard group="Components" viewport="600x640" name="Tutor" subtitle="TutorPanel — contextual, honest demo state" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{padding:24px;min-height:100vh}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const DS = window.QuebrandoABancaDesignSystem_3e4054;
+
+const { TutorPanel } = DS;
+function App(){const [m,setM]=React.useState([{role:'user',text:'Por que a Q 0412 está certa?'},{role:'tutor',text:'Porque o art. 60, § 5º, veda que matéria de PEC rejeitada ou prejudicada seja objeto de nova proposta na mesma sessão legislativa. Não há exceção por maioria — isso vale para projetos de lei (art. 67).',refs:[{id:'lf',label:'Limites formais',kind:'concept'},{id:'q',label:'Q 0412',kind:'question'}]}]);
+return <TutorPanel style={{height:592}} contextLabel="Q 0412 · Limites formais" messages={m} suggestions={['Explique com um exemplo','Qual a pegadinha?','Gerar 3 flashcards']} onSend={t=>setM([...m,{role:'user',text:t}])}/>;}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>
