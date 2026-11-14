@@ -1,0 +1,21 @@
+<!-- @dsCard group="Components" viewport="760x560" name="Study session" subtitle="StudySessionHeader, CognitiveAlertBanner" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{padding:24px;min-height:100vh}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const DS = window.QuebrandoABancaDesignSystem_3e4054;
+
+const { StudySessionHeader, CognitiveAlertBanner, Button } = DS;
+function App(){const [f,setF]=React.useState(false);return(<div style={{display:'flex',flexDirection:'column',gap:14}}>
+<StudySessionHeader subject="Direito Constitucional" topic="Processo legislativo — emendas" current={4} total={20} elapsed={754} focusMode={f} onToggleFocus={()=>setF(!f)} onTogglePause={()=>{}} onBack={()=>{}} style={{borderRadius:14,border:'var(--border-hairline)'}}/>
+<CognitiveAlertBanner tone="fatigue" title="52 minutos sem pausa" onDismiss={()=>{}} actions={<><Button size="sm">Pausar 5 min</Button><Button size="sm" variant="ghost">Continuar</Button></>}>Uma pausa curta ajuda a manter a precisão nas próximas questões.</CognitiveAlertBanner>
+<CognitiveAlertBanner tone="trap" title="Palavras absolutas no enunciado">“Sempre”, “somente” e “vedado” costumam inverter o gabarito.</CognitiveAlertBanner>
+<CognitiveAlertBanner tone="attention" title="3 erros seguidos neste subtema">Vale revisitar o nó “Limites formais” antes de continuar.</CognitiveAlertBanner>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

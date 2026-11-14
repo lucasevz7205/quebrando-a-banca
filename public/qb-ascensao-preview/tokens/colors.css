@@ -1,0 +1,77 @@
+/* Quebrando a Banca — color tokens.
+   Core six verified in the existing Base44 app CSS. Cinematic extension = visual estimates from the brand art. */
+:root{
+  /* Core (confirmed) */
+  --qb-navy-deep:#0A1E34;
+  --qb-navy-raised:#173653;
+  --qb-bronze:#A58A67;
+  --qb-gold:#D0B386;
+  --qb-ivory:#F1E8D5;
+  --qb-crimson:#A92E3A;
+
+  /* Cinematic extension (estimated from references) */
+  --qb-obsidian:#080A0F;
+  --qb-midnight:#101C2D;
+  --qb-steel-blue:#344E70;
+  --qb-moonlight:#C8D9EA;
+  --qb-gold-bright:#F2C76E;
+  --qb-gold-shadow:#87541F;
+  --qb-ribbon-red:#B91522;
+  --qb-ribbon-highlight:#E43B35;
+  --qb-stone:#8C8278;
+  --qb-parchment:#E9DDC7;
+
+  /* Derived interface steps (oklch-harmonised with the core) */
+  --qb-navy-hover:#1E4166;      /* raised + hover */
+  --qb-navy-pressed:#122C46;
+  --qb-ivory-muted:#BDB19C;     /* 5.9:1 on navy-raised, 8.0:1 on navy-deep */
+  --qb-crimson-hover:#BE3744;
+  --qb-crimson-pressed:#8E2531;
+  --qb-gold-hover:#DCC39A;
+  --qb-gold-pressed:#BFA073;
+
+  /* Learning states — never decorative red; always pair with icon + text */
+  --qb-patina:#7CC4A4;          /* correct · 6.1:1 on navy-raised, 8.2:1 on canvas */
+  --qb-ember:#EE8A7C;           /* incorrect · 5.1:1 on navy-raised — fails on navy-hover; keep state text off hover fills */
+  --qb-ash:#ABA298;             /* no evidence / not attempted · 4.9:1 on navy-raised */
+
+  /* ---------- Semantic aliases ---------- */
+  --canvas:var(--qb-navy-deep);
+  --surface:var(--qb-navy-raised);
+  --surface-hover:var(--qb-navy-hover);
+  --surface-sunken:var(--qb-midnight);
+  --surface-deep:var(--qb-obsidian);
+  --surface-glass:rgba(10,30,52,.72);
+  --surface-paper:var(--qb-ivory);           /* rare light reading surface (flashcard verso, print) */
+
+  --text-primary:var(--qb-ivory);
+  --text-secondary:var(--qb-parchment);
+  --text-muted:var(--qb-ivory-muted);
+  --text-accent:var(--qb-gold);
+  --text-on-paper:var(--qb-navy-deep);
+  --text-on-accent:var(--qb-navy-deep);
+  --text-on-crimson:var(--qb-ivory);
+
+  --border:rgba(165,138,103,.38);            /* bronze hairline */
+  --border-strong:var(--qb-bronze);
+  --border-accent:var(--qb-gold);
+  --divider:rgba(165,138,103,.22);
+
+  --accent:var(--qb-gold);
+  --accent-hover:var(--qb-gold-hover);
+  --accent-pressed:var(--qb-gold-pressed);
+  --accent-hero:var(--qb-gold-bright);
+  --alert:var(--qb-crimson);
+  --focus:var(--qb-gold-bright);
+
+  --state-correct:var(--qb-patina);
+  --state-correct-bg:rgba(124,196,164,.14);
+  --state-incorrect:var(--qb-ember);
+  --state-incorrect-bg:rgba(238,138,124,.14);
+  --state-progress:var(--qb-gold-bright);
+  --state-progress-track:rgba(208,179,134,.18);
+  --state-no-evidence:var(--qb-ash);
+  --state-no-evidence-bg:rgba(171,162,152,.12);
+  --state-attention:var(--qb-gold-bright);
+  --state-attention-bg:rgba(242,199,110,.12);
+}

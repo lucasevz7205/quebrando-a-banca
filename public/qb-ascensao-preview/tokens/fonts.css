@@ -1,0 +1,2 @@
+/* Fonts intentionally not included: use safe system fallbacks until font licensing is confirmed. */
+:root{--font-fallback-brand:Georgia,serif;--font-fallback-body:system-ui,-apple-system,"Segoe UI",sans-serif}

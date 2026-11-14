@@ -1,0 +1,30 @@
+:root{
+  --space-unit:4px;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-6:24px;
+  --space-8:32px; --space-12:48px; --space-16:64px; --space-24:96px;
+
+  --radius-xs:6px;
+  --radius-sm:8px;
+  --radius-control:12px;     /* buttons, inputs (10–14) */
+  --radius-card:18px;        /* cards, panels (16–20) */
+  --radius-emblem:22%;       /* rounded-square emblem plaques */
+  --radius-pill:999px;
+  --radius-round:50%;
+
+  --touch-min:44px; /* @kind spacing */
+  --control-h-sm:36px; /* @kind spacing */
+  --control-h-md:44px; /* @kind spacing */
+  --control-h-lg:52px; /* @kind spacing */
+
+  --content-max:1240px; /* @kind spacing */
+  --reading-max:720px; /* @kind spacing */
+  --header-h:72px; /* @kind spacing */
+  --header-h-compact:56px; /* @kind spacing */
+
+  --bp-tablet:640px; /* @kind other */
+  --bp-desktop:1024px; /* @kind other */
+  --z-header:20; /* @kind other */
+  --z-drawer:40; /* @kind other */
+  --z-overlay:50; /* @kind other */
+  --z-toast:60; /* @kind other */
+}

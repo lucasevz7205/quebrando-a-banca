@@ -1,0 +1,19 @@
+/* Brand imagery as classes so URLs resolve relative to this stylesheet for any consumer. */
+.qb-img{background-repeat:no-repeat;background-position:center;background-size:cover}
+.qb-scene-night{background-image:url('../assets/scenes/ascension-night.jpg')}
+.qb-scene-day{background-image:url('../assets/scenes/ascension-day.jpg')}
+.qb-scene-sunset{background-image:url('../assets/scenes/citadel-sunset.png')}
+.qb-scene-sword-ribbon{background-image:url('../assets/scenes/header-sword-ribbon.png')}
+.qb-artifact-disc{background-image:url('../assets/artifacts/bronze-disc.jpg')}
+.qb-emblem-soldado{background-image:url('../assets/emblems/emblem-soldado.png')}
+.qb-emblem-sabio{background-image:url('../assets/emblems/emblem-sabio.png')}
+.qb-emblem-estrategista{background-image:url('../assets/emblems/emblem-estrategista.png')}
+.qb-emblem-ascensao{background-image:url('../assets/emblems/emblem-ascensao.png')}
+.qb-logo-app-icon{background-image:url('../assets/logo/app-icon.png')}
+.qb-logo-vertical{background-image:url('../assets/logo/logo-vertical-transparent.png')}
+.qb-logo-wordmark-laurel{background-image:url('../assets/logo/wordmark-laurel-transparent.png')}
+.qb-logo-q-full{background-image:url('../assets/logo/logo-q-sword-full.jpg')}
+.qb-mark-mountain{background-image:url('../assets/logo/mark-mountain-transparent.png')}
+.qb-mark-sword{background-image:url('../assets/logo/mark-sword-transparent.png')}
+.qb-mark-mountain-ribbon{background-image:url('../assets/logo/mark-mountain-ribbon-transparent.png')}
+.qb-mark-q-sword{background-image:url('../assets/logo/mark-q-sword-transparent.png')}
