@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { observeMindMap } from "@/components/qb/mind-map/observe";
 import { observeStudyMotion } from "@/components/qb/motion/study-motion";
 import StudyOnboarding from "@/components/qb/StudyOnboarding";
+import AscensaoStudyApp from "@/components/qb/ascensao/AscensaoStudyApp";
+import "@/styles/qb-ascensao.css";
 import { base44 } from "@/api/base44Client";
 import { streamStudyAssistant } from "@/lib/assistant-ai";
 import { useAuth } from "@/lib/AuthContext";
@@ -57,6 +59,7 @@ function StudyScreen({ account }) {
   const legacy = user?.role === "admin" && account?.legacy;
   const preview = user?.role === "admin" && account?.preview === true;
   const accountId = preview || (user?.id && user.id === account?.userId) ? account.id : null;
+  const [uiMode, setUiMode] = useState("ascensao");
   // Tema cinematográfico exclusivo da sessão pessoal do administrador.
   // Previews de contas de estudantes nunca recebem essa camada.
   const adminExperience = user?.role === "admin" && !preview && (legacy || account?.userId === user?.id);
@@ -179,13 +182,92 @@ function StudyScreen({ account }) {
     return () => { stopMap(); stopMotion(); };
   }, [ready, preview, accountId, frameVersion]);
 
+  const listAscensaoDocuments = useCallback(
+    async (collection) => {
+      if (legacy) {
+        return listDocuments(legacyStorage, { collection });
+      }
+      if (preview) {
+        return listStudyPreview({ data: { accountId, args: { collection } } });
+      }
+      return accessStudyAccount({ data: { action: "list", accountId, args: { collection } } });
+    },
+    [legacy, preview, accountId]
+  );
+
+  const writeAscensaoDocument = useCallback(
+    async (args) => {
+      if (preview) throw new Error("Conta em visualização somente leitura.");
+      if (legacy) {
+        return writeDocument(legacyStorage, args);
+      }
+      return accessStudyAccount({ data: { action: "write", accountId, args } });
+    },
+    [legacy, preview, accountId]
+  );
+
+  const askAscensaoTutor = useCallback(async (question, context) => {
+    let accumulated = "";
+    const text = await askAssistantLLM({ question, context }, (delta) => {
+      accumulated += delta;
+    });
+    return text || accumulated;
+  }, []);
+
+  const correctAscensaoFlashcard = useCallback(async (args) => {
+    return correctFlashcardWithAI({ data: args });
+  }, []);
+
   if (!legacy && !accountId) {
     return <StudyOnboarding key={user?.id} pending={account?.pending} logout={logout} />;
+  }
+
+  if (uiMode === "ascensao") {
+    return (
+      <main aria-label="Quebrando a Banca · Ambiente de estudo">
+        {preview && (
+          <header className="flex min-h-14 flex-wrap items-center justify-between gap-2 border-b bg-white px-4 py-2 text-sm text-slate-900">
+            <span><strong>{account.name}</strong> · Visualização administrativa · Somente leitura</span>
+            <Link to="/contas" className="font-medium underline">Voltar a Contas</Link>
+          </header>
+        )}
+        <AscensaoStudyApp
+          listDocumentsFn={listAscensaoDocuments}
+          writeDocumentFn={writeAscensaoDocument}
+          askTutorFn={askAscensaoTutor}
+          correctFlashcardFn={correctAscensaoFlashcard}
+          onSwitchClassic={() => setUiMode("classic")}
+          readOnlyPreview={preview}
+          userName={account?.name || user?.name || "Estudante"}
+        />
+      </main>
+    );
   }
 
   return (
     <main aria-label="Quebrando a Banca · Ambiente de estudo"
       style={{ width: "100%", minHeight: "100svh", background: "#0E0E10" }}>
+      <button
+        type="button"
+        onClick={() => setUiMode("ascensao")}
+        style={{
+          position: "fixed",
+          zIndex: 130,
+          bottom: 16,
+          right: 16,
+          padding: "8px 14px",
+          borderRadius: 999,
+          border: "1px solid rgba(208,179,134,.6)",
+          background: "#0A1E34",
+          color: "#F2C76E",
+          fontWeight: 600,
+          fontSize: 13,
+          cursor: "pointer",
+          boxShadow: "0 8px 24px rgba(0,0,0,.45)",
+        }}
+      >
+        Nova interface Ascensão
+      </button>
       {preview && (
         <header className="flex min-h-14 flex-wrap items-center justify-between gap-2 border-b bg-white px-4 py-2 text-sm text-slate-900">
           <span><strong>{account.name}</strong> · Visualização administrativa · Somente leitura</span>
