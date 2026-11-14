@@ -1,10 +1,8 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { observeMindMap } from "@/components/qb/mind-map/observe";
 import { observeStudyMotion } from "@/components/qb/motion/study-motion";
 import StudyOnboarding from "@/components/qb/StudyOnboarding";
-import AscensaoStudyApp from "@/components/qb/ascensao/AscensaoStudyApp";
-import "@/styles/qb-ascensao.css";
 import { base44 } from "@/api/base44Client";
 import { streamStudyAssistant } from "@/lib/assistant-ai";
 import { useAuth } from "@/lib/AuthContext";
@@ -59,7 +57,6 @@ function StudyScreen({ account }) {
   const legacy = user?.role === "admin" && account?.legacy;
   const preview = user?.role === "admin" && account?.preview === true;
   const accountId = preview || (user?.id && user.id === account?.userId) ? account.id : null;
-  const [uiMode, setUiMode] = useState("ascensao");
   // Tema cinematográfico exclusivo da sessão pessoal do administrador.
   // Previews de contas de estudantes nunca recebem essa camada.
   const adminExperience = user?.role === "admin" && !preview && (legacy || account?.userId === user?.id);
@@ -67,7 +64,7 @@ function StudyScreen({ account }) {
     ? account.markup
         .replace(/data-qb-video-src="[^"]*"/, 'data-qb-video-src="https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/1af59e0ae_gemini_generated_video_FA7F3298.mp4"')
         .replace('poster="/claude-export/ambient-poster.jpg"', 'poster="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/dc13890b5_gemini_generated_video_FA7F3298_frame.jpg"')
-        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=4"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=7"><script defer src="/claude-export/admin-art.js?v=5"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=2"><link rel="stylesheet" href="/claude-export/admin-frieze.css?v=2"><link rel="stylesheet" href="/claude-export/admin-frieze-revisao.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-largura.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-detalhes.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-afinado.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-ornamentos.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-unified.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-ajustes.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-base.css?v=1"><script defer src="/claude-export/admin-astrolabe-unified.js?v=2"></script><link rel="stylesheet" href="/claude-export/admin-scroll-fix.css?v=1"><link rel="stylesheet" href="/claude-export/admin-cabecalho-recolhivel.css?v=3"><script defer src="/claude-export/admin-cabecalho-recolhivel.js?v=3"></script><link rel="stylesheet" href="/claude-export/admin-treino-simbolos.css?v=1"><script defer src="/claude-export/admin-treino-simbolos.js?v=1"></script><link rel="stylesheet" href="/claude-export/admin-mapa-cartoes.css?v=5"><link rel="stylesheet" href="/claude-export/admin-estudo-padrao.css?v=2"><link rel="stylesheet" href="/claude-export/admin-subfriso.css?v=2"><link rel="stylesheet" href="/claude-export/admin-ajustes.css?v=1"><script defer src="/claude-export/admin-topo-compacto.js?v=1"></script><link rel="stylesheet" href="/claude-export/admin-area-simbolos.css?v=1"><script defer src="/claude-export/admin-area-simbolos.js?v=2"></script><link rel="stylesheet" href="/claude-export/admin-touch-scroll-guard.css?v=1"></body></html>')
+        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=4"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=7"><link rel="stylesheet" href="/claude-export/admin-tokens.css?v=3"><script defer src="/claude-export/admin-art.js?v=5"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=2"><link rel="stylesheet" href="/claude-export/admin-frieze.css?v=2"><link rel="stylesheet" href="/claude-export/admin-frieze-revisao.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-largura.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-detalhes.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-afinado.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-ornamentos.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-unified.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-ajustes.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-base.css?v=1"><script defer src="/claude-export/admin-astrolabe-unified.js?v=2"></script><link rel="stylesheet" href="/claude-export/admin-scroll-fix.css?v=1"><link rel="stylesheet" href="/claude-export/admin-cabecalho-recolhivel.css?v=3"><script defer src="/claude-export/admin-cabecalho-recolhivel.js?v=3"></script><link rel="stylesheet" href="/claude-export/admin-treino-simbolos.css?v=1"><script defer src="/claude-export/admin-treino-simbolos.js?v=1"></script><link rel="stylesheet" href="/claude-export/admin-mapa-cartoes.css?v=7"><link rel="stylesheet" href="/claude-export/admin-estudo-padrao.css?v=3"><link rel="stylesheet" href="/claude-export/admin-subfriso.css?v=3"><link rel="stylesheet" href="/claude-export/admin-ajustes.css?v=1"><script defer src="/claude-export/admin-topo-compacto.js?v=1"></script><link rel="stylesheet" href="/claude-export/admin-area-simbolos.css?v=2"><script defer src="/claude-export/admin-area-simbolos.js?v=2"></script><link rel="stylesheet" href="/claude-export/admin-touch-scroll-guard.css?v=1"></body></html>')
     : account?.markup;
   const frameRef = useRef(null);
   const [ready, setReady] = useState(false);
@@ -182,92 +179,13 @@ function StudyScreen({ account }) {
     return () => { stopMap(); stopMotion(); };
   }, [ready, preview, accountId, frameVersion]);
 
-  const listAscensaoDocuments = useCallback(
-    async (collection) => {
-      if (legacy) {
-        return listDocuments(legacyStorage, { collection });
-      }
-      if (preview) {
-        return listStudyPreview({ data: { accountId, args: { collection } } });
-      }
-      return accessStudyAccount({ data: { action: "list", accountId, args: { collection } } });
-    },
-    [legacy, preview, accountId]
-  );
-
-  const writeAscensaoDocument = useCallback(
-    async (args) => {
-      if (preview) throw new Error("Conta em visualização somente leitura.");
-      if (legacy) {
-        return writeDocument(legacyStorage, args);
-      }
-      return accessStudyAccount({ data: { action: "write", accountId, args } });
-    },
-    [legacy, preview, accountId]
-  );
-
-  const askAscensaoTutor = useCallback(async (question, context) => {
-    let accumulated = "";
-    const text = await askAssistantLLM({ question, context }, (delta) => {
-      accumulated += delta;
-    });
-    return text || accumulated;
-  }, []);
-
-  const correctAscensaoFlashcard = useCallback(async (args) => {
-    return correctFlashcardWithAI({ data: args });
-  }, []);
-
   if (!legacy && !accountId) {
     return <StudyOnboarding key={user?.id} pending={account?.pending} logout={logout} />;
-  }
-
-  if (uiMode === "ascensao") {
-    return (
-      <main aria-label="Quebrando a Banca · Ambiente de estudo">
-        {preview && (
-          <header className="flex min-h-14 flex-wrap items-center justify-between gap-2 border-b bg-white px-4 py-2 text-sm text-slate-900">
-            <span><strong>{account.name}</strong> · Visualização administrativa · Somente leitura</span>
-            <Link to="/contas" className="font-medium underline">Voltar a Contas</Link>
-          </header>
-        )}
-        <AscensaoStudyApp
-          listDocumentsFn={listAscensaoDocuments}
-          writeDocumentFn={writeAscensaoDocument}
-          askTutorFn={askAscensaoTutor}
-          correctFlashcardFn={correctAscensaoFlashcard}
-          onSwitchClassic={() => setUiMode("classic")}
-          readOnlyPreview={preview}
-          userName={account?.name || user?.name || "Estudante"}
-        />
-      </main>
-    );
   }
 
   return (
     <main aria-label="Quebrando a Banca · Ambiente de estudo"
       style={{ width: "100%", minHeight: "100svh", background: "#0E0E10" }}>
-      <button
-        type="button"
-        onClick={() => setUiMode("ascensao")}
-        style={{
-          position: "fixed",
-          zIndex: 130,
-          bottom: 16,
-          right: 16,
-          padding: "8px 14px",
-          borderRadius: 999,
-          border: "1px solid rgba(208,179,134,.6)",
-          background: "#0A1E34",
-          color: "#F2C76E",
-          fontWeight: 600,
-          fontSize: 13,
-          cursor: "pointer",
-          boxShadow: "0 8px 24px rgba(0,0,0,.45)",
-        }}
-      >
-        Nova interface Ascensão
-      </button>
       {preview && (
         <header className="flex min-h-14 flex-wrap items-center justify-between gap-2 border-b bg-white px-4 py-2 text-sm text-slate-900">
           <span><strong>{account.name}</strong> · Visualização administrativa · Somente leitura</span>
