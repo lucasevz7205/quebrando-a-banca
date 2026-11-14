@@ -492,6 +492,7 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/vacinacao.js?v=1"></script>
 <link rel="stylesheet" href="/claude-export/vacinacao.css?v=1">
 <script src="/claude-export/question-links.js"></script>
+<script src="/claude-export/sim-composicao.js?v=1"></script>
 <script src="/claude-export/map-origin.js"></script>
 <script src="/claude-export/map-mastery.js?v=2"></script>
 <script src="/claude-export/cohesion-links.js?v=1"></script>
@@ -3501,7 +3502,31 @@ function simSigla(cap){
 function simBlueprint(){const c=S.cfg.get('simulado');return (c&&c.obj&&c.obj.blocos)?c.obj:SIM_DEF.obj}
 function domingos(){const d=new Date();const off=(7-d.getDay())%7;const p=new Date(d);p.setDate(d.getDate()+off);return {hoje:d.getDay()===0,prox:p.toLocaleDateString('pt-BR')}}
 function simLS(k,v){if(S.studyAccount)return null;try{if(v===undefined)return JSON.parse(localStorage.getItem('sim:'+k)||'null');if(v===null)localStorage.removeItem('sim:'+k);else localStorage.setItem('sim:'+k,JSON.stringify(v))}catch(e){return null}}
+/* Regra de 22/11/2026: só tópicos já vistos, cota por incidência da banca, seleção determinística (sim-composicao.js).
+ * Antes dessa data (e se o módulo não carregar) vale a regra anterior, sem mudança. */
+function simRegraNova(){return !!(window.QBSimComposicao&&hojeISO()>=window.QBSimComposicao.REGRA_DESDE)}
+function simMontarIncidencia(){
+  const idx=indiceQuestoes(),usados=new Set();
+  for(const h of S.sims||[])for(const it of (h.itens||[]))usados.add(it.qid);
+  return window.QBSimComposicao.compor({blueprint:simBlueprint(),topicos:[...S.ed.values()],questoes:[...S.q.values()],
+    topicoDe:q=>{const i=idx.byQuestion.get(q.id);return i?i.topicId:null},
+    visto:t=>statusDe(t).ef!=='nao',real:q=>/^BANCA/i.test(q.cap||''),
+    elegivel:q=>!foraQ(q)&&!['bloqueado','aguardando-revisao-humana'].includes(q.statusEditorial),
+    usados,semente:hojeISO()});
+}
+function simPlanoHtml(){
+  if(!simRegraNova()||!S.q.size)return '';
+  const r=simMontarIncidencia();
+  const linhas=r.falta.map(f=>`<tr><td>${esc(f.nome)}</td><td class="num">${f.tem}/${f.pedido}</td><td>${f.semTopicoVisto?'nenhum tópico visto na matéria':f.plano.map(p=>esc(p.titulo)+' <b>+'+p.gerar+'</b>').join('; ')}</td></tr>`).join('');
+  return `<h2 class="section-title" id="qb-sim-plano">Composição por incidência (regra de 22/11)</h2>
+  <p class="rule">Só entram itens de tópicos já vistos; dentro de cada matéria, a cota do tópico segue 1 + os itens reais da banca ligados a ele. A seleção é a mesma para a data de hoje: a prévia e o início do simulado coincidem. Itens do Arquiteto só contam depois da sua revisão humana.</p>
+  ${linhas?`<div class="tbl-wrap"><table class="narrow"><thead><tr><th>Matéria</th><th class="num">Itens</th><th>Faltam (gerar com o Arquiteto, "inédito Claude")</th></tr></thead><tbody>${linhas}</tbody></table></div>`:`<div class="notice">Todas as matérias fecham a cota com itens já existentes.</div>`}`;
+}
 function simMontar(){
+  if(simRegraNova())return simMontarIncidencia();
+  return simMontarLegado();
+}
+function simMontarLegado(){
   const bp=simBlueprint(), porMat=new Map();
   for(const q of S.q.values()){if(q.foraNivel)continue;const s=simSigla(q.cap);if(!porMat.has(s))porMat.set(s,[]);porMat.get(s).push(q)}
   const usados=new Set();for(const h of S.sims||[])for(const it of (h.itens||[]))usados.add(it.qid);
@@ -3537,6 +3562,7 @@ function viewSimulado(){
   <div class="tbl-wrap"><table class="narrow"><thead><tr><th>Matéria</th><th class="num">Itens</th><th class="num">No banco</th></tr></thead><tbody>
   ${bp.blocos.map(b=>`<tr class="qr-m"><td><b>${b.prova} · ${esc(b.nome)}</b> <span class="ref">corte ${b.corte} pts</span></td><td class="num">${tot(b)}</td><td></td></tr>`+b.mats.map(([s,n,q])=>{const t=[...S.q.values()].filter(x=>simSigla(x.cap)===s).length;return `<tr><td style="padding-left:24px">${esc(n)}</td><td class="num">${q}</td><td class="num ${t<q?'neg':''}">${t}</td></tr>`}).join('')).join('')}
   </tbody></table></div>
+  ${simPlanoHtml()}
 /* QB_LEGACY_BEGIN */  <p class="rule">Fonte da distribuição: total de 90 + 90 itens e cortes de 18 e 27 pontos estão no edital (itens 7.1 e 8.11.6). A divisão por matéria é <b>estimativa</b>: LP (26) e LI (10) seguem a numeração do bloco de Nível superior da prova Cebraspe da Câmara de 08/03/2026 já cadastrado no Caderno; as demais matérias são classificação provisória do Claude, a substituir pela incidência do portal MentoriaAA quando ela for registrada. Só entram itens dos tópicos já estudados (os que estão no Caderno), em rodízio entre capítulos, com prioridade para itens reais da banca e itens ainda não usados em simulados. Matérias com falta de itens aparecem em vermelho e são completadas com o que houver.</p>/* QB_LEGACY_END */
   <details class="why"><summary>Antes de começar (opcional): 5 minutos de escrita sobre as preocupações</summary><p>Escreva livremente o que te preocupa nesta prova. Escrever logo antes da prova melhorou as notas, sobretudo de quem fica ansioso (Ramirez e Beilock, 2011). O texto não é salvo. Depois, use 30 segundos para olhar a prova inteira e planejar o tempo (Willingham).</p><div class="note"><textarea id="sim-exp" style="min-height:90px" placeholder="O que me preocupa nesta prova é…"></textarea></div></details>
   <div class="row"><button class="btn" id="sim-obj">Começar objetiva (300 min)</button><button class="btn ghost" id="sim-disc">Começar discursiva (180 min)</button></div>
@@ -3606,12 +3632,12 @@ function toastSim(t){const el=$('#toast');if(!el)return;el.textContent=t;el.hidd
 function hojeISO(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 function wireSim(){
   const go=(k,v)=>{simLS(k,v);render(true)};
-  const o=$('#sim-obj');if(o)o.addEventListener('click',()=>{const {itens,falta}=simMontar();if(falta.length)toastSim('Faltam itens em: '+falta.map(f=>f.s.toUpperCase()+' ('+f.tem+'/'+f.pedido+')').join(', '));go('obj',{inicio:Date.now(),min:SIM_DEF.obj.min,itens,pos:0,data:hojeISO()})});
+  const o=$('#sim-obj');if(o)o.addEventListener('click',()=>{const {itens,falta}=simMontar();if(falta.length)toastSim('Faltam itens em: '+falta.map(f=>f.s.toUpperCase()+' ('+f.tem+'/'+f.pedido+')').join(', '));go('obj',{inicio:Date.now(),min:SIM_DEF.obj.min,itens,faltas:falta,regra:simRegraNova()?'incidencia-2026-11-22':'legado',pos:0,data:hojeISO()})});
   const d=$('#sim-disc');if(d)d.addEventListener('click',()=>go('disc',{inicio:Date.now(),min:SIM_DEF.disc.min,itens:simSorteioDisc(),data:hojeISO()}));
   document.querySelectorAll('[data-sim-m]').forEach(b=>b.addEventListener('click',()=>{const s=simLS('obj');const it=s.itens[s.pos||0];const m=b.dataset.simM;if(it.marcada&&!it.prim)it.prim=it.marcada;if(it.marcada===m){it.marcada=null;it.conf=null;go('obj',s);return}if(it.prim&&it.prim!==m)it.trocas=(it.trocas||0)+1;it.marcada=m;it.conf=null;if(m==='B'&&(s.pos||0)<s.itens.length-1)s.pos=(s.pos||0)+1;go('obj',s)}));
   document.querySelectorAll('[data-sim-conf]').forEach(b=>b.addEventListener('click',()=>{const s=simLS('obj');const it=s.itens[s.pos||0];it.conf=+b.dataset.simConf;if((s.pos||0)<s.itens.length-1)s.pos=(s.pos||0)+1;go('obj',s);window.scrollTo({top:0})}));
   document.querySelectorAll('[data-sim-ir]').forEach(b=>b.addEventListener('click',()=>{const s=simLS('obj');const k=+b.dataset.simIr;if(k<0||k>=s.itens.length)return;s.pos=k;go('obj',s);window.scrollTo({top:0})}));
-  const e=$('#sim-entregar');if(e)e.addEventListener('click',()=>{const s=simLS('obj');const br=s.itens.filter(x=>!x.marcada).length;if(br&&!confirm(br+' itens sem marcação contarão como branco. Entregar?'))return;s.fim=true;s.fimEm=Date.now();const {p}=simPontos(s);const id=s.data+'-obj-'+s.inicio;if(S.db)enqueue(()=>S.db.doc('simulados/'+id).set({tipo:'obj',data:s.data,inicio:new Date(s.inicio).toISOString(),minutos:Math.round((s.fimEm-s.inicio)/6e4),p1:p.P1,p2:p.P2,itens:s.itens.map(x=>Object.assign({qid:x.qid,prova:x.prova,mat:x.mat,marcada:x.marcada||'B',conf:x.conf||null},x.prim&&x.prim!==(x.marcada||'B')?{prim:x.prim}:{}))}));go('obj',s)});
+  const e=$('#sim-entregar');if(e)e.addEventListener('click',()=>{const s=simLS('obj');const br=s.itens.filter(x=>!x.marcada).length;if(br&&!confirm(br+' itens sem marcação contarão como branco. Entregar?'))return;s.fim=true;s.fimEm=Date.now();const {p}=simPontos(s);const id=s.data+'-obj-'+s.inicio;if(S.db)enqueue(()=>S.db.doc('simulados/'+id).set({tipo:'obj',data:s.data,inicio:new Date(s.inicio).toISOString(),minutos:Math.round((s.fimEm-s.inicio)/6e4),p1:p.P1,p2:p.P2,regra:s.regra||'legado',faltas:(s.faltas||[]).map(f=>({s:f.s,pedido:f.pedido,tem:f.tem})),itens:s.itens.map(x=>Object.assign({qid:x.qid,prova:x.prova,mat:x.mat,marcada:x.marcada||'B',conf:x.conf||null},x.prim&&x.prim!==(x.marcada||'B')?{prim:x.prim}:{}))}));go('obj',s)});
   const c=$('#sim-cancelar');if(c)c.addEventListener('click',()=>{if(confirm('Cancelar o simulado em andamento? As marcações serão perdidas.'))go('obj',null)});
   document.querySelectorAll('[data-sim-or]').forEach(b=>b.addEventListener('click',()=>{const s=simLS('obj');const it=s.itens[+b.dataset.simOr];if(!it)return;it.origem=it.origem===b.dataset.val?null:b.dataset.val;go('obj',s)}));
   const f=$('#sim-fechar');if(f)f.addEventListener('click',()=>{const s=simLS('obj');if(s&&S.db&&s.itens.some(x=>x.origem)){const id=s.data+'-obj-'+s.inicio;const origens=s.itens.map((x,k)=>x.origem?{i:k,qid:x.qid,origem:x.origem}:null).filter(Boolean);enqueue(()=>S.db.doc('simulados/'+id).update({origensErros:origens}))}go('obj',null)});
