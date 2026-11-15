@@ -1,7 +1,7 @@
 (() => {
 const { BrandHeader, StudySessionHeader, Flashcard, Panel, AchievementEmblem, Button } = window.QuebrandoABancaDesignSystem_3e4054;
 
-function FlashcardSession({ cards, setCards, elapsed, paused, onTogglePause, go }) {
+function FlashcardSession({ cards, setCards, elapsed, paused, onTogglePause, go, backTo }) {
   const D = window.QB_DATA;
   const { idx, flipped, ratings } = cards;
   const done = idx >= D.flashcards.length;
@@ -18,11 +18,11 @@ function FlashcardSession({ cards, setCards, elapsed, paused, onTogglePause, go 
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <BrandHeader variant="compact" floating={false} onExit={() => go('dashboard')}>
+      <BrandHeader variant="compact" floating={false} onExit={() => go(backTo || 'dashboard')}>
         <span className="qb-overline">Revisão espaçada</span>
         <span style={{ font: '400 16px/1.2 var(--font-heading)', color: 'var(--text-primary)' }}>Processo legislativo</span>
       </BrandHeader>
-      <StudySessionHeader subject="Flashcards · Direito Constitucional" topic="Processo legislativo" unit="Cartão" current={Math.min(idx + 1, D.flashcards.length)} total={D.flashcards.length} elapsed={elapsed} paused={paused} onTogglePause={onTogglePause} onBack={() => go('dashboard')} />
+      <StudySessionHeader subject="Flashcards · Direito Constitucional" topic="Processo legislativo" unit="Cartão" current={Math.min(idx + 1, D.flashcards.length)} total={D.flashcards.length} elapsed={elapsed} paused={paused} onTogglePause={onTogglePause} onBack={() => go(backTo || 'dashboard')} />
       <main style={{ width: '100%', maxWidth: 720, margin: '0 auto', padding: '40px 16px', display: 'flex', flexDirection: 'column', gap: 16 }}>
         {done ? (
           <Panel variant="ornate" padding={32} style={{ display: 'flex', gap: 28, alignItems: 'center', flexWrap: 'wrap' }}>

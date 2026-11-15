@@ -1,0 +1,22 @@
+<!-- @dsCard group="Components" viewport="1200x760" name="Planning" subtitle="WeekCalendar, TaskCard, RescheduleActions (preview/undo), CycleConfigurator" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{padding:24px;min-height:100vh}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const DS = window.QuebrandoABancaDesignSystem_3e4054;
+
+const { WeekCalendar, RescheduleActions, CycleConfigurator, Panel } = DS;
+const mk=(id,date,type,num,title,status,auto)=>({id,date,subject:'Direito Administrativo',topicNum:num,title,type,minutes:type==='flashcards'?15:40,status,auto});
+const days=['DOM','SEG','TER','QUA','QUI','SEX','SÁB'].map((w,i)=>{const date='2026-11-'+String(8+i).padStart(2,'0');return {date,weekday:w,dayNum:8+i,tasks:[mk('a'+i,date,'estudo','10.1','Licitações públicas',i<6?(i%2?'done':'late'):'pending'),mk('b'+i,date,'revisao','10.6','Papel do fiscalizador',i<6?'done':'pending',true),mk('c'+i,date,'questoes','4.2','Tempos e modos verbais','pending'),mk('d'+i,date,'flashcards','1','Interpretação de textos','pending'),mk('e'+i,date,'discursiva',null,'Discursiva semanal','pending')],autoReviews:1};});
+function App(){const [p,setP]=React.useState({action:'late',description:'trazer 3 atividades atrasadas para hoje',skipped:1,changes:[{id:'a0',title:'10.1 Licitações públicas',from:'dom 08/11 (atrasada)',to:'sáb 14/11'},{id:'a2',title:'10.1 Licitações públicas',from:'ter 10/11 (atrasada)',to:'sáb 14/11'}]});return(<div style={{display:'flex',flexDirection:'column',gap:14}}>
+<RescheduleActions dayLabel="sáb 14/11" counts={{late:3,day:5,week:12}} preview={p} onCancel={()=>setP(null)} onConfirm={()=>setP(null)} onPreview={()=>{}} onEdit={()=>{}}/>
+<Panel padding={12}><WeekCalendar days={days} today="2026-11-14" selectedDate="2026-11-14" weekLabel="08/11 a 14/11 · semana atual" previews={p?{a0:'→ sáb 14/11',a2:'→ sáb 14/11'}:{}}/></Panel>
+<CycleConfigurator hours={[2,3,3,3,3,3,5]} cycle={[{subjectId:'dc',name:'Direito Constitucional',minutes:90},{subjectId:'lp',name:'Língua Portuguesa',minutes:60}]} available={[{id:'ti',name:'TI e Dados'}]}/>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

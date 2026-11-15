@@ -58,38 +58,49 @@ One product surface: the **study web app** (dashboard, questions, mind map, flas
 ---
 
 ## Components (`window.QuebrandoABancaDesignSystem_3e4054`)
-Source-defined (owner's guide §5):
-- **BrandHeader** — full + compact study header (`components/navigation/`)
-- **HeroAscension** — cinematic day/night/sunset banner (`components/brand/`)
-- **RadialNavigation** — radial dashboard with progress seal + list fallback (`components/navigation/`)
-- **StudySessionHeader** — subject, topic, progress, timer, focus (`components/study/`)
-- **QuestionCard** — CEBRASPE Certo/Errado + confidence + remission (`components/questions/`)
-- **AnswerActionBar** — confirm / review / skip / loading / next (`components/questions/`)
-- **FeedbackDrawer** — gabarito, fundamento, trap mechanism, link to node (`components/questions/`)
-- **MindMapCanvas** — pan/zoom/expand radial map, focus path, list fallback (`components/mindmap/`)
-- **ConceptPanel** — node content, connections, active review, sources, return bar (`components/mindmap/`)
-- **Flashcard** — front/back, self-rating, intervals, origin (`components/flashcards/`)
-- **CognitiveAlertBanner** — fatigue / attention / trap / info, non-diagnostic (`components/study/`)
-- **AchievementEmblem** — Soldado, Sábio, Estrategista, Ascensão with explicit rules (`components/brand/`)
-- *DesignSystemGallery* — realised as this project's Design System tab (cards in `guidelines/` and each component folder), not as a component.
+**v1 (owner's guide §5):** BrandHeader · HeroAscension · RadialNavigation · StudySessionHeader · QuestionCard · AnswerActionBar · FeedbackDrawer · MindMapCanvas · ConceptPanel · Flashcard · CognitiveAlertBanner · AchievementEmblem. *DesignSystemGallery* = this project's Design System tab.
+
+**v2 (module coverage from the reference screenshots — see `docs/ATUALIZACAO-V2.md`):**
+- `navigation/` — **MainNav** (Menu principal, Planejamento + Hoje, Edital, Treinar, Estudo, Simulado, Desempenho; amplo/compacto/recolhido) · **GlobalToolbar** (O Arquiteto, estado de sincronização, Modo foco, Preferências › Fundo e Tema, Ferramentas, recolher) · **Tabs** · **PageHeader**
+- `data/` — **StatCard** · **SelectField** · **SearchField** · **LineChart** · **BarChart** · **EmptyState**
+- `edital/` — **EditalTree** (+ TopicRow, StatusTag, subjectStats) · **HeatmapGrid** (+ HeatmapCell, heatTier) · **HeatmapLegend** · **SubjectRadial**
+- `planning/` — **WeekCalendar** · **TaskCard** · **RescheduleActions** (preview → aplicar/cancelar → desfazer) · **CycleConfigurator**
+- `simulado/` — **CompositionTable** · **QuestionNavigator** · **ExamTimer**
+- `architect/` — **ArchitectStudio** (O Arquiteto) · **ArchitectLauncher** · **SocraticChat** · **FeynmanLab** · **CornellNotebook** · **ScannerFlashcards** · **PomodoroAudio**
+- `feedback/` — **ConfirmDialog** · **ToastStack**
+
+**v3 (Treinar radial, barra superior, seletor de assuntos — see `docs/ATUALIZACAO-V3.md` and `docs/CONTRATOS-NAVEGACAO.md`):**
+- `navigation/` — **TrainingRadial** (matéria → assunto → Treinar / Mapa Mental / Revisão Ativa / O Arquiteto; emits `{ subjectId, topicId, action, nodeId }`; lista alternativa) · **GlobalToolbar** simplified (no "Topo")
+- `study/` — **StudyTopicPicker** (hierarchical searchable combobox; replaces long selects)
+
+**v4 (Desempenho — see `docs/DESEMPENHO-V4.md`):**
+- `performance/` — **PerformanceMetricCard** (indicator with formula, breakdown, comparison, empty/pending states) · **PerformancePeriodSelector** (day or range) · **PerformanceTrendChart** (accuracy over time, gaps for days without records, previous-period overlay, keyboard + data table) · **PerformancePriorityPanel** (evidence-based priorities) · **SubjectPerformanceExplorer** (Matéria → Assunto → Tópico with contextual actions)
 
 ### Intentional additions
-- **Icon** — wrapper for the Lucide glyph set (needed by every component).
-- **Button**, **IconButton**, **Badge**, **Panel**, **ProgressBar** (`components/core/`) — primitives the spec's components are built from (actions, header tools, state labels, card surface, progress "N de M").
-- **BrandLogo** — single API for the supplied lockups/marks (horizontal, wordmark, vertical, app icon, reduced marks).
-- **TutorPanel** (`components/tutor/`) — the brief lists an AI tutor as a core interface but the guide defines no component; needed for the tutor screen with honest demo state.
+- **Icon**, **Button**, **IconButton**, **Badge**, **Panel**, **ProgressBar** (`core/`) — primitives the module components are built from.
+- **BrandLogo** — single API for the supplied lockups/marks. Main brand = "Quebrando a Banca" only; "A Ascensão" is reserved for the future student-evolution journey (`subtitle` prop, `vertical` art).
+- **TutorPanel** (`tutor/`) — compact conversation embed, now titled "O Arquiteto". The module itself is ArchitectStudio.
+
+### Accessibility & responsiveness rules (all modules)
+- State is never colour-only: heat bands have a legend + % + aria-label; study status uses icon + text; sync, late tasks, bank shortage, timers use icon + text.
+- Accuracy band (heat) and study status are separate dimensions with separate tokens (`--heat-*` vs `--status-*`).
+- Keyboard: Tabs (←/→), radial nodes and heat cells are buttons, dialogs close on Esc, focus ring = gold bright.
+- Narrow screens: MainNav scrolls horizontally and hides labels < 760px; Radial navigators switch to lists; WeekCalendar scrolls horizontally; grids use auto-fit.
+- Honesty: "Dados demonstrativos", "Simulação", "Definição pendente", "Título não disponível nos arquivos".
 
 ## UI kits
-- `ui_kits/app/` — study app click-through: Welcome, Dashboard, Questões, Mapa, Flashcards, Tutor. See its README.
+- `ui_kits/app/` — full study platform click-through (Menu principal, Planejamento Hoje/Semana/Ciclos, Edital Lista/Mapa de calor/Radial, Treinar, Estudo, Simulado, Desempenho, O Arquiteto, sessão de questões, sessão de flashcards, boas-vindas). See its README.
 
 ## Index
 - `styles.css` — entry; imports `tokens/*.css` + `components/components.css`.
-- `tokens/` — `fonts.css` (@font-face, self-hosted woff2), `colors.css`, `typography.css`, `spacing.css`, `effects.css` (shadows, gradients, motion), `assets.css` (image classes: `.qb-img .qb-scene-night`, `.qb-emblem-sabio`, `.qb-mark-q-sword`…), `base.css`.
+- `tokens/` — `fonts.css` (@font-face, self-hosted woff2), `colors.css`, `typography.css`, `spacing.css`, `effects.css` (shadows, gradients, motion), `data-viz.css` (heat bands, study status, chart series), `assets.css` (image classes: `.qb-img .qb-scene-night`, `.qb-emblem-sabio`, `.qb-mark-q-sword`…), `base.css`.
 - `fonts/` — Cinzel, Cormorant Garamond, Inter, JetBrains Mono (Google Fonts, latin subset).
-- `components/` — `core/`, `brand/`, `navigation/`, `study/`, `questions/`, `mindmap/`, `flashcards/`, `tutor/` (each: `.jsx`, `.d.ts`, `.prompt.md`, one `*.card.html`); `components.css` for hover/focus/active states.
+- `components/` — `core/`, `brand/`, `navigation/`, `data/`, `edital/`, `planning/`, `simulado/`, `architect/`, `feedback/`, `study/`, `questions/`, `mindmap/`, `flashcards/`, `tutor/` (each: `.jsx`, `.d.ts`, `.prompt.md`, one `*.card.html`); `components.css` + `modules.css` for hover/focus/active states.
 - `guidelines/` — foundation specimen cards (Colors, Type, Spacing, Brand).
 - `assets/` — `logo/`, `emblems/`, `scenes/`, `artifacts/`, `icons/` (Lucide SVGs), `reference/` (original brand sheet + header example).
 - `ui_kits/app/` — product recreation.
+- `docs/ATUALIZACAO-V2.md` — v2 change list, reference → implementation matrix, functional/simulated/integration status.
+- `docs/ATUALIZACAO-V3.md` — v3 report (what changed, what works in the demo, what needs real integration) · `docs/CONTRATOS-NAVEGACAO.md` — events, identifiers and cross-reference contracts.
 - `thumbnail.html`, `SKILL.md`.
 
 ## Caveats

@@ -1,0 +1,20 @@
+<!-- @dsCard group="Components" viewport="760x640" name="StudyTopicPicker" subtitle="Seletor hierárquico pesquisável (combobox)" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{padding:24px;min-height:100vh}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { StudyTopicPicker } = window.QuebrandoABancaDesignSystem_3e4054;
+const T=(id,num,title)=>({id,num,title,status:'studying',correct:0,wrong:0,blank:0});
+const subjects=[
+{id:'lp',name:'Língua Portuguesa',short:'LP',block:'P1',icon:'feather',topics:[T('lp-1','1','Compreensão e interpretação de textos de gêneros variados'),T('lp-2','2',null),T('lp-4.2','4.2','Emprego de tempos e modos verbais')]},
+{id:'da',name:'Direito Administrativo e Administração Pública',short:'DA',block:'P1',icon:'building-2',topics:[T('da-10.1','10.1','Licitações públicas: conceitos, princípios, modalidades e procedimentos'),T('da-10.6','10.6','Papel do fiscalizador do contrato')]},
+{id:'ti',name:'Tecnologia da Informação e Dados',short:'TI',block:'P1',icon:'database',topics:[T('ti-3','3','Ferramentas de comunicação e colaboração: correio eletrônico, internet e aplicativos'),T('ti-4.2','4.2','Noções de vírus, worms e programas maliciosos')]}];
+function App(){const [v,setV]=React.useState('da-10.6');const [r,setR]=React.useState(['lp-1']);
+return <div style={{maxWidth:460}}><StudyTopicPicker label="Assunto do mapa" subjects={subjects} value={v} counts={{'da-10.6':1,'lp-1':2}} recents={r} onSelect={s=>{setV(s.topicId);setR(x=>[s.topicId,...x.filter(i=>i!==s.topicId)].slice(0,3));}}/></div>;}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

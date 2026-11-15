@@ -6,7 +6,7 @@ export interface TutorMessage {
 }
 
 /**
- * Contextual AI-tutor conversation panel with explicit demo labelling, context chip, suggestion chips and remission references.
+ * Compact "O Arquiteto" conversation panel (global quick access; the full studio is ArchitectStudio) with explicit demo labelling, context chip, suggestion chips and remission references.
  * @startingPoint section="Tutor" subtitle="Contextual tutor chat with honest demo state" viewport="560x620"
  */
 export interface TutorPanelProps {
@@ -22,7 +22,7 @@ export interface TutorPanelProps {
   thinking?: boolean;
   onRef?: (id: string) => void;
   onClose?: () => void;
-  /** default 'Tutor' */
+  /** default 'O Arquiteto' */
   title?: string;
   style?: React.CSSProperties;
 }

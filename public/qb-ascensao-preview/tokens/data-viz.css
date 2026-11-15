@@ -1,0 +1,19 @@
+/* Data-visualisation tokens: accuracy heat tiers, study status, chart series.
+   Heat tier (accuracy band) and study status are DIFFERENT dimensions — never share colours across them. */
+:root{
+  --heat-1-bg:#EE8A7C; --heat-1-fg:#0A1E34; --heat-1-border:#EE8A7C;                 /* < 60% */
+  --heat-2-bg:rgba(238,138,124,.18); --heat-2-fg:#F1E8D5; --heat-2-border:#EE8A7C;    /* 60–<75% */
+  --heat-3-bg:rgba(208,179,134,.2); --heat-3-fg:#F1E8D5; --heat-3-border:#D0B386;     /* 75–<85% */
+  --heat-4-bg:rgba(124,196,164,.2); --heat-4-fg:#F1E8D5; --heat-4-border:#7CC4A4;     /* 85–<90% */
+  --heat-5-bg:#7CC4A4; --heat-5-fg:#0A1E34; --heat-5-border:#7CC4A4;                  /* ≥ 90% */
+  --heat-none-bg:#101C2D; --heat-none-fg:#BDB19C; --heat-none-border:rgba(171,162,152,.45); /* sem respostas */
+
+  --status-not-started:#ABA298;
+  --status-studying:#F2C76E;
+  --status-reviewing:#C8D9EA;
+  --status-mastered:#7CC4A4;
+
+  --viz-1:#F2C76E; --viz-2:#C8D9EA; --viz-3:#7CC4A4; --viz-4:#EE8A7C;
+  --viz-grid:rgba(165,138,103,.18); /* @kind color */
+  --viz-area:rgba(242,199,110,.14); /* @kind color */
+}

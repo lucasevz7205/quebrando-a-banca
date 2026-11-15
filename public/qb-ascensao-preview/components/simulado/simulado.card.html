@@ -1,0 +1,19 @@
+<!-- @dsCard group="Components" viewport="1000x560" name="Simulado" subtitle="CompositionTable, QuestionNavigator, ExamTimer" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{padding:24px;min-height:100vh}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const DS = window.QuebrandoABancaDesignSystem_3e4054;
+
+const { CompositionTable, QuestionNavigator, ExamTimer, Panel } = DS;
+function App(){const [i,setI]=React.useState(3);const [f,setF]=React.useState('all');const items=[{answer:'C'},{answer:'E',flagged:true},{answer:'B'},{},{answer:'C'},{},{},{flagged:true},{},{}];return(<div style={{display:'grid',gridTemplateColumns:'minmax(0,1.6fr) minmax(0,1fr)',gap:16,alignItems:'start'}}>
+<Panel><CompositionTable blocks={[{block:'P1',label:'Conhecimentos básicos',subjects:[{name:'Língua Portuguesa',planned:20,available:64},{name:'Língua Inglesa',planned:10,available:6},{name:'Direito Administrativo',planned:25,available:112,official:true}]},{block:'P2',label:'Conhecimentos específicos',subjects:[{name:'Fala, Transcrição e IA',planned:25,available:18}]}]}/></Panel>
+<Panel style={{display:'flex',flexDirection:'column',gap:16}}><ExamTimer remaining={754} total={1000}/><ExamTimer remaining={80} total={1000} label="Discursiva"/><QuestionNavigator items={items} current={i} onGo={setI} filter={f} onFilter={setF}/></Panel>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

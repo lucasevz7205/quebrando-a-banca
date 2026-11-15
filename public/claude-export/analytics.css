@@ -207,3 +207,29 @@
 @media (max-width:360px) {
   #main .qb-analytics-kpis {grid-template-columns:1fr;}
 }
+
+/* V4: divulgações nativas para manter o acesso por toque e teclado. */
+.qb-perf-disclosure {border-top:1px solid var(--line);padding:4px 0;overflow-wrap:anywhere;}
+.qb-perf-disclosure > summary {
+  min-height:44px;
+  padding:10px 6px;
+  cursor:pointer;
+  font-weight:650;
+  color:var(--ink);
+}
+.qb-perf-disclosure > summary:focus-visible {outline:2px solid var(--pen);outline-offset:2px;}
+.qb-perf-disclosure small {display:block;color:var(--muted);font-size:14px;font-weight:400;}
+.qb-perf-disclosure li {margin-block:8px;}
+.qb-perf-disclosure button {min-height:44px;max-width:100%;white-space:normal;}
+
+.qb-history-period-compare {
+  margin-block:12px;
+  padding:12px;
+  color:var(--ink);
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:12px;
+  font-size:14px;
+}
+.qb-history-period-compare :is(h4,p) {margin:0;}
+.qb-history-period-compare p {margin-top:6px;}

@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components" viewport="1000x820" name="Navigation" subtitle="BrandHeader (full + compact), RadialNavigation" -->
+<!-- @dsCard group="Components" viewport="1100x700" name="Navigation" subtitle="GlobalToolbar, MainNav (amplo/compacto/recolhido), Tabs, PageHeader, BrandHeader, RadialNavigation" -->
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="../../styles.css">
 <style>body{padding:24px;min-height:100vh}</style>
@@ -10,12 +10,16 @@
 <script type="text/babel">
 const DS = window.QuebrandoABancaDesignSystem_3e4054;
 
-const { BrandHeader, RadialNavigation, StudySessionHeader } = DS;
-const items=[{id:'inicio',label:'Início',icon:'house'},{id:'mapas',label:'Mapas',icon:'network'},{id:'questoes',label:'Questões',icon:'list-checks'},{id:'flash',label:'Flashcards',icon:'layers'}];
-function App(){const [a,setA]=React.useState('inicio');return(<div style={{display:'flex',flexDirection:'column',gap:18}}>
-<BrandHeader items={items} activeId={a} onNavigate={setA} notifications={1} user={{name:'Lucas',initials:'LM'}}/>
-<BrandHeader variant="compact" onExit={()=>{}}><span className="qb-overline">Sessão de questões</span><span style={{font:'400 16px/1.2 var(--font-heading)'}}>Processo legislativo</span></BrandHeader>
-<RadialNavigation size={480} center={{value:0.42,overline:'Edital',label:'Analista Legislativo'}} activeId="questoes" items={[{id:'questoes',label:'Questões',icon:'list-checks',meta:'20 hoje'},{id:'mapa',label:'Mapas mentais',icon:'network',meta:'3 em foco'},{id:'flash',label:'Flashcards',icon:'layers',meta:'38 pendentes'},{id:'tutor',label:'Tutor',icon:'message-circle',meta:'Demonstração'},{id:'rev',label:'Revisão',icon:'history',meta:'12 itens'}]}/>
+const { GlobalToolbar, MainNav, Tabs, PageHeader, BrandLogo, RadialNavigation, Button } = DS;
+const items=[{id:'home',label:'Menu principal',icon:'house'},{id:'plan',label:'Planejamento',icon:'calendar-days',quick:{id:'hoje',label:'Hoje'}},{id:'edital',label:'Edital',icon:'scroll-text'},{id:'train',label:'Treinar',icon:'target',count:18},{id:'study',label:'Estudo',icon:'book-open'},{id:'sim',label:'Simulado',icon:'graduation-cap'},{id:'perf',label:'Desempenho',icon:'chart-column'}];
+function Toolbar(){const [f,setF]=React.useState(false);const [b,setB]=React.useState('dynamic');const [th,setTh]=React.useState('dark');return <GlobalToolbar focusMode={f} onFocusMode={setF} background={b} onBackground={setB} theme={th} onTheme={setTh} tools={[{id:'p',label:'Pomodoro',icon:'timer'}]} onArchitect={()=>{}} onCollapse={()=>{}}/>;}
+function App(){const [a,setA]=React.useState('plan');const [t,setT]=React.useState('hoje');return(<div style={{display:'flex',flexDirection:'column',gap:16}}>
+<Toolbar/>
+<MainNav items={items} activeId={a} activeQuick="hoje" onNavigate={setA}/>
+<MainNav items={items} activeId={a} onNavigate={setA} compact leading={<BrandLogo variant="mark" size={24}/>}/>
+<MainNav items={items} activeId="edital" collapsed leading={<BrandLogo variant="mark" size={24}/>}/>
+<PageHeader overline="Planejamento · dados demonstrativos" title="Planejamento" description="Tarefas do dia, semana e ciclo." actions={<Tabs value={t} onChange={setT} items={[{id:'hoje',label:'Hoje',icon:'calendar'},{id:'semana',label:'Semana',icon:'calendar-days'},{id:'ciclos',label:'Ciclos',icon:'repeat'}]}/>}/>
+<Tabs variant="underline" value="d" items={[{id:'d',label:'Análise diária'},{id:'h',label:'Análise histórica'},{id:'m',label:'Método'}]}/>
 </div>);}
 ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
 </script></body></html>

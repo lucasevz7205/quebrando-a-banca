@@ -7,9 +7,13 @@
   const shift=(v,k)=>{const [y,m,d]=v.split('-').map(Number);return dateKey(new Date(y,m-1,d+k,12))};
   const short=v=>{const [y,m,d]=String(v).split('-');return d+'/'+m};
   const rounds=S=>S.rodadas||[];
-  function analyze(S,day){
-    const x={day,items:0,c:0,e:0,b:0,sure:0,sureC:0,rounds:0,roundMinutes:0,tasks:0,done:0,taskMinutes:0,cardRatings:0,simCount:0,simPoints:0,subjects:new Map()};
-    const capMap=new Map();for(const t of S.ed?.values()||[])for(const cap of t.caps||[])if(!capMap.has(cap))capMap.set(cap,t.materia||'Outros');
+  function analyze(S,day,{includeAnswers=false}={}){
+    const x={day,items:0,c:0,e:0,b:0,sure:0,sureC:0,rounds:0,roundMinutes:0,tasks:0,done:0,taskMinutes:0,cardRatings:0,simCount:0,simPoints:0,subjects:new Map(),answers:[]};
+    const capMap=new Map(), sharedCaps=new Set();
+    for(const t of S.ed?.values()||[])for(const cap of new Set(t.caps||[])){
+      if(capMap.has(cap))sharedCaps.add(cap);
+      else capMap.set(cap,t);
+    }
     for(const r of rounds(S)){
       if(dateKey(r.inicio)!==day)continue;
       let has=0;
@@ -17,7 +21,14 @@
         if(!['C','E','B'].includes(item.marcada)||!['C','E'].includes(item.gabarito))continue;
         const q=S.q?.get(item.qid);
         if(q?.foraNivel||q?.foraEdital||q?.anulado)continue;
-        const sub=capMap.get(q?.cap||r.cap)||q?.materia||(r.capNome||'Outros').split(' · ')[0];
+        const cap=q?.cap||r.cap;
+        const sub=capMap.get(cap)?.materia||q?.materia||(r.capNome||'Outros').split(' · ')[0];
+        if(includeAnswers){
+          const topic=S.ed?.get(q?.topico)||(!sharedCaps.has(cap)&&capMap.get(cap));
+          const name=topic?.titulo||q?.capNome||cap||'Sem assunto vinculado';
+          const result=item.marcada==='B'?'b':item.marcada===item.gabarito?'c':'e';
+          x.answers.push({day,qid:item.qid,name,matter:topic?.materia||q?.materia||sub,topicId:topic?.id||cap||name,result,given:item.marcada,confidence:item.conf});
+        }
         let z=x.subjects.get(sub);if(!z){z={name:sub,n:0,c:0,e:0,b:0};x.subjects.set(sub,z)}
         has++;x.items++;z.n++;
         if(item.marcada==='B'){x.b++;z.b++;}
@@ -66,8 +77,11 @@
     const marks=pts.map(p=>`${p===latest?`<circle class="qb-dot-halo" cx="${p[0]}" cy="${p[1]}" r="12" aria-hidden="true"/>`:''}<circle class="qb-dot" cx="${p[0]}" cy="${p[1]}" r="5.4"><title>${short(p[2].day)} · ${pct(p[2].c,p[2].c+p[2].e)} · ${p[2].items} questões</title></circle>`).join('');
     const recentSummary=recent?`<div class="qb-chart-latest"><strong>${pct(recent.c,recent.c+recent.e)}</strong><span>Último dia com respostas<br><b>${short(recent.day)} · ${recent.c}/${recent.c+recent.e} acertos</b></span></div>`:'';
     const description=recent?`Último dia com respostas: ${short(recent.day)}, ${pct(recent.c,recent.c+recent.e)} de acertos.`:'Sem respostas registradas no período.';
+    const dataTable='<details class="qb-perf-disclosure"><summary>Dados da evolução diária</summary><div class="tbl-wrap"><table><thead><tr><th>Dia</th><th>Acertos</th><th>Erros</th><th>Em branco</th><th>Precisão</th></tr></thead><tbody>'
+      +a.map(v=>'<tr><td>'+short(v.day)+'</td><td>'+v.c+'</td><td>'+v.e+'</td><td>'+v.b+'</td><td>'+pct(v.c,v.c+v.e)+'</td></tr>').join('')
+      +'</tbody></table></div></details>';
     const labels=a.map((v,i)=>i%3===1||i===13?`<text class="qb-da" x="${x(i)}" y="${h-14}" text-anchor="middle">${short(v.day)}</text>`:'').join('');
-    return `<section class="qb-analytics-card"><div class="qb-analytics-head"><div><span>EVOLUÇÃO DE ACERTOS</span><h3>Precisão diária</h3></div><small>14 dias</small></div><p class="qb-chart-sub">Resultados das rodadas de treino, sem misturar notas de simulados.</p><div class="qb-chart-screen">${recentSummary}<div class="qb-chart-plot" tabindex="0" role="region" aria-label="Gráfico de precisão diária"><svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Precisão de acertos nas rodadas por dia. ${esc(description)}"><defs><linearGradient id="qb-daily-grad" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b9bbff" stop-opacity=".42"/><stop offset="1" stop-color="#626bc0" stop-opacity=".02"/></linearGradient></defs>${grid}${area?`<path fill="url(#qb-daily-grad)" d="${area}"/>`:''}${line?`<path class="qb-daily-line" d="${line}"/>`:''}${marks}${labels}</svg></div></div>${pts.length<2?'<p class="qb-chart-sub">A curva aparecerá com resultados de pelo menos dois dias.</p>':''}</section>`;
+    return `<section class="qb-analytics-card"><div class="qb-analytics-head"><div><span>EVOLUÇÃO DE ACERTOS</span><h3>Precisão diária</h3></div><small>14 dias</small></div><p class="qb-chart-sub">Resultados das rodadas de treino, sem misturar notas de simulados.</p><div class="qb-chart-screen">${recentSummary}<div class="qb-chart-plot" tabindex="0" role="region" aria-label="Gráfico de precisão diária"><svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Precisão de acertos nas rodadas por dia. ${esc(description)}"><defs><linearGradient id="qb-daily-grad" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b9bbff" stop-opacity=".42"/><stop offset="1" stop-color="#626bc0" stop-opacity=".02"/></linearGradient></defs>${grid}${area?`<path fill="url(#qb-daily-grad)" d="${area}"/>`:''}${line?`<path class="qb-daily-line" d="${line}"/>`:''}${marks}${labels}</svg></div></div>${dataTable}${pts.length<2?'<p class="qb-chart-sub">A curva aparecerá com resultados de pelo menos dois dias.</p>':''}</section>`;
   }
   function compact(S,day){
     const selected=analyze(S,day), series=trend(S,day,7);
@@ -97,18 +111,49 @@
       </div>
     </section>`;
   }
+  const outcome={c:'Acerto',e:'Erro',b:'Em branco'};
+  function answerList(S,answers,title='Questões do período'){
+    if(!answers.length)return '<section class="qb-analytics-card"><h3>'+esc(title)+'</h3><p>Sem respostas neste recorte.</p></section>';
+    const order={e:0,b:1,c:2};
+    const rows=[...answers].sort((a,b)=>b.day.localeCompare(a.day)||order[a.result]-order[b.result]);
+    return '<section class="qb-analytics-card"><details class="qb-perf-disclosure"><summary>'+esc(title)+' · '+rows.length+(rows.length===1?' tentativa':' tentativas')+'</summary>'
+      +'<p class="qb-chart-sub">Até 30 tentativas recentes, com erros e brancos primeiro no mesmo dia.</p>'
+      +rows.slice(0,30).map(a=>{
+        const q=S.q?.get(a.qid);
+        const conf=[1,2,3].includes(Number(a.confidence))?' · confiança '+Number(a.confidence):'';
+        return '<details class="qb-perf-disclosure"><summary><span>'+esc(q?.enunciado||'Enunciado indisponível')+'</span><small>'+esc(short(a.day)+' · '+a.name+' · '+outcome[a.result])+'</small></summary><p>Resposta: '+esc(a.result==='b'?'Em branco':a.given)+conf+'</p>'
+          +(q?'<button type="button" class="btn ghost small" data-qcard="'+esc(q.id)+'">Revisar questão</button>':'')+'</details>';
+      }).join('')+'</details></section>';
+  }
+  function explorer(answers){
+    const subjects=new Map();
+    for(const a of answers){
+      if(!subjects.has(a.matter))subjects.set(a.matter,new Map());
+      const topics=subjects.get(a.matter);
+      if(!topics.has(a.topicId))topics.set(a.topicId,{name:a.name,c:0,e:0,b:0});
+      topics.get(a.topicId)[a.result]++;
+    }
+    const counts=v=>pct(v.c,v.c+v.e)+' · '+v.c+' C · '+v.e+' E · '+v.b+' em branco';
+    return [...subjects].sort(([a],[b])=>a.localeCompare(b,'pt-BR')).map(([matter,topics])=>{
+      const values=[...topics.values()];
+      const total={c:0,e:0,b:0};
+      for(const v of values){ total.c+=v.c;total.e+=v.e;total.b+=v.b; }
+      return '<details class="qb-perf-disclosure"><summary><span>'+esc(matter)+'</span><small>'+esc(counts(total))+'</small></summary>'
+        +'<ul>'+values.map(value=>'<li><strong>'+esc(value.name)+'</strong><small>'+esc(counts(value))+'</small></li>').join('')+'</ul></details>';
+    }).join('');
+  }
   function render(S,now){
     if(!S.insightsDay)S.insightsDay=now();
-    const d=S.insightsDay,x=analyze(S,d),pr=analyze(S,shift(d,-1)),t=trend(S,d,7),weekC=t.reduce((s,v)=>s+v.c,0),weekN=t.reduce((s,v)=>s+v.c+v.e,0);
+    const d=S.insightsDay,x=analyze(S,d,{includeAnswers:true}),pr=analyze(S,shift(d,-1)),t=trend(S,d,7),weekC=t.reduce((s,v)=>s+v.c,0),weekN=t.reduce((s,v)=>s+v.c+v.e,0);
     const delta=(x.c+x.e)&&(pr.c+pr.e)?Math.round(100*x.c/(x.c+x.e)-100*pr.c/(pr.c+pr.e)):null;
     const kpis=[['Itens julgados',x.items,`${x.rounds} rodadas · ${x.b} em branco`],['Taxa de acerto',pct(x.c,x.c+x.e),`${x.c} certos · ${x.e} errados`],['Nota líquida',`${x.c-x.e>0?'+':''}${x.c-x.e}`,'+1 certo · −1 errado'],['Certeza calibrada',pct(x.sureC,x.sure),`${x.sure} com confiança máxima`],['Tarefas concluídas',`${x.done}/${x.tasks}`,'Do calendário do dia'],['Flashcards avaliados',x.cardRatings,'Avaliações registradas']];
-    const subjects=[...x.subjects.values()].sort((a,b)=>b.n-a.n).slice(0,20).map(v=>`<div class="qb-subject-analytic"><div><b>${esc(v.name)}</b><small>${v.c} certas · ${v.e} erradas · ${v.b} em branco</small></div><div class="qb-subject-meter"><span><i style="width:${v.c+v.e?100*v.c/(v.c+v.e):0}%"></i></span><b>${pct(v.c,v.c+v.e)}</b></div></div>`).join('');
+    const subjects=explorer(x.answers);
     const rec=advice(x).map((a,i)=>`<div class="qb-analytic-advice"><em>0${i+1}</em><div><b>${esc(a[0])}</b><p>${esc(a[1])}</p></div></div>`).join('');
     return `<div class="wrap qb-analytics"><section class="qb-analytics-intro qb-page-hero" aria-label="Análise diária"><div class="qb-page-hero-copy"><span class="qb-page-kicker">ANÁLISE DIÁRIA · QUEBRANDO A BANCA</span><h2>Seu desempenho, em números</h2><p>Diagnósticos gerados automaticamente a partir do que você realmente fez.</p></div><div class="qb-analytics-filter"><label for="qb-insights-date">Data</label><input id="qb-insights-date" type="date" value="${esc(d)}"/><button type="button" class="btn ghost small" id="qb-insights-today">Hoje</button></div></section>
       <div class="qb-analytics-kpis">${kpis.map(([l,v,n])=>`<div class="qb-analytic-kpi"><small>${esc(l)}</small><strong>${esc(v)}</strong><span>${esc(n)}</span></div>`).join('')}</div>
       <div class="qb-analytics-columns">${graph(S,d)}<section class="qb-analytics-card qb-analytic-recommendations"><div class="qb-analytics-head"><div><span>PRIORIDADES</span><h3>O que fazer agora</h3></div></div>${rec}<div class="qb-analytic-foot">Média dos últimos 7 dias: <b>${pct(weekC,weekN)}</b>${delta===null?'':` · Ante o dia anterior: <b>${delta>0?'+':''}${delta} p.p.</b>`}</div></section></div>
-      <div class="qb-analytics-columns qb-analytics-secondary"><section class="qb-analytics-card"><div class="qb-analytics-head"><div><span>DISCIPLINAS</span><h3>Acertos por matéria</h3></div></div>${subjects||'<p class="qb-chart-sub">Sem respostas registradas nesta data.</p>'}</section><section class="qb-analytics-card"><div class="qb-analytics-head"><div><span>REGISTROS DO DIA</span><h3>Execução</h3></div></div><div class="qb-analytics-facts"><div><span>Rodadas de treino</span><b>${x.rounds}</b></div><div><span>Duração das rodadas encerradas</span><b>${x.roundMinutes} min</b></div><div><span>Tempo registrado em tarefas</span><b>${x.taskMinutes} min</b></div><div><span>Simulados realizados</span><b>${x.simCount}</b></div>${x.simCount?`<div><span>Nota líquida nos simulados objetivos</span><b>${x.simPoints}</b></div>`:''}</div><p class="qb-chart-sub">Tempos de fontes diferentes não são somados, para evitar dupla contagem.</p></section></div><p class="qb-analytics-note">Dados de rodadas, tarefas, cartões e simulados. O diário foi retirado da análise. Questões respondidas em simulados são exibidas separadamente.</p></div>`;
+      <div class="qb-analytics-columns qb-analytics-secondary"><section class="qb-analytics-card"><div class="qb-analytics-head"><div><span>DISCIPLINAS</span><h3>Desempenho por matéria e assunto</h3></div></div>${subjects||'<p class="qb-chart-sub">Sem respostas registradas nesta data.</p>'}</section><section class="qb-analytics-card"><div class="qb-analytics-head"><div><span>REGISTROS DO DIA</span><h3>Execução</h3></div></div><div class="qb-analytics-facts"><div><span>Rodadas de treino</span><b>${x.rounds}</b></div><div><span>Duração das rodadas encerradas</span><b>${x.roundMinutes} min</b></div><div><span>Tempo registrado em tarefas</span><b>${x.taskMinutes} min</b></div><div><span>Simulados realizados</span><b>${x.simCount}</b></div>${x.simCount?`<div><span>Nota líquida nos simulados objetivos</span><b>${x.simPoints}</b></div>`:''}</div><p class="qb-chart-sub">Tempos de fontes diferentes não são somados, para evitar dupla contagem.</p></section></div>${answerList(S,x.answers,"Questões do dia")}<p class="qb-analytics-note">Dados de rodadas, tarefas, cartões e simulados. O diário foi retirado da análise. Questões respondidas em simulados são exibidas separadamente.</p></div>`;
   }
   function wire(S,rerender,now){const i=document.getElementById('qb-insights-date');if(i)i.addEventListener('change',()=>{if(/^\d{4}-\d{2}-\d{2}$/.test(i.value)){S.insightsDay=i.value;rerender(true)}});const b=document.getElementById('qb-insights-today');if(b)b.addEventListener('click',()=>{S.insightsDay=now();rerender(true)})}
-  window.QBInsights={analyze,trend,advice,compact,render,wire};
+  window.QBInsights={analyze,trend,advice,compact,render,wire,answerList};
 })();

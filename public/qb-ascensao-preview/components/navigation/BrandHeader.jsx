@@ -43,15 +43,15 @@ export function BrandHeader({ variant = 'full', items = [], activeId, onNavigate
   }
 
   return (
-    <header ref={ref} style={{ ...shell, height: 'var(--header-h)', gap: narrow ? 8 : 16, padding: narrow ? '0 8px 0 0' : '0 12px 0 0' }}>
+    <header ref={ref} style={{ ...shell, height: 'var(--header-h)', padding: '0 12px 0 0' }}>
       {showArt && (
         <div className="qb-img qb-scene-sword-ribbon" aria-hidden="true" style={{ width: 200, alignSelf: 'stretch', backgroundPosition: '20% 40%', WebkitMaskImage: 'linear-gradient(90deg,#000 55%,transparent)', maskImage: 'linear-gradient(90deg,#000 55%,transparent)', flexShrink: 0, marginRight: -40 }} />
       )}
-      <div style={{ display: 'flex', alignItems: 'center', gap: narrow ? 8 : 16, paddingLeft: showArt ? 0 : (narrow ? 12 : 16), flexShrink: 0 }}>
-        {!showArt && <BrandLogo variant="mark" mark="q-sword" size={narrow ? 26 : 32} />}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 16, paddingLeft: showArt ? 0 : 16, flexShrink: 0 }}>
+        {!showArt && <BrandLogo variant="mark" mark="q-sword" size={32} />}
         {showArt && <Divider />}
         <span style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-          <span style={{ font: narrow ? '600 16px/1 var(--font-serif)' : '600 24px/1 var(--font-serif)', color: 'var(--qb-ivory)', whiteSpace: 'nowrap' }}>Quebrando a Banca</span>
+          <span style={{ font: '600 24px/1 var(--font-serif)', color: 'var(--qb-ivory)', whiteSpace: 'nowrap' }}>Quebrando a Banca</span>
         </span>
       </div>
       {!narrow && items.length > 0 && (
@@ -64,13 +64,13 @@ export function BrandHeader({ variant = 'full', items = [], activeId, onNavigate
         </nav>
       )}
       <div style={{ flex: 1 }} />
-      {!narrow && <Divider />}
-      <div style={{ display: 'flex', alignItems: 'center', gap: narrow ? 2 : 4 }}>
-        {!narrow && <IconButton icon="search" label="Buscar" onClick={onSearch} />}
+      <Divider />
+      <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+        <IconButton icon="search" label="Buscar" onClick={onSearch} />
         <IconButton icon="bell" label="Notificações" count={notifications} onClick={onNotifications} />
         {!narrow && <IconButton icon="chart-column" label="Desempenho" onClick={onStats} />}
         {narrow && items.length > 0 && <IconButton icon="menu" label="Menu" />}
-        <button onClick={onProfile} aria-label={user ? `Perfil de ${user.name}` : 'Perfil'} className="qb-iconbtn qb-iconbtn--round" style={{ marginLeft: narrow ? 0 : 4 }}>
+        <button onClick={onProfile} aria-label={user ? `Perfil de ${user.name}` : 'Perfil'} className="qb-iconbtn qb-iconbtn--round" style={{ marginLeft: 4 }}>
           {user && user.initials
             ? <span style={{ width: 38, height: 38, borderRadius: '50%', border: '1.5px solid var(--qb-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', font: '600 14px/1 var(--font-display)', color: 'var(--qb-gold)', background: 'var(--qb-navy-raised)' }}>{user.initials}</span>
             : <Icon name="circle-user" size={30} />}

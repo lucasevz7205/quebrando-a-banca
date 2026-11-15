@@ -9,7 +9,7 @@ function Welcome({ onEnter }) {
       <div aria-hidden="true" style={{ position: 'absolute', inset: 0, zIndex: -1, background: 'linear-gradient(90deg,rgba(10,30,52,.97) 0%,rgba(10,30,52,.9) 32%,rgba(10,30,52,.4) 60%,rgba(10,30,52,.1) 100%),linear-gradient(180deg,rgba(10,30,52,0) 60%,rgba(10,30,52,.8) 100%)' }} />
       <main style={{ width: '100%', maxWidth: 1240, margin: '0 auto', padding: 'clamp(24px,5vw,64px)' }}>
         <div style={{ maxWidth: 440, display: 'flex', flexDirection: 'column', gap: 28 }}>
-          <BrandLogo variant="vertical" size={220} style={{ marginLeft: -16 }} />
+          <BrandLogo variant="q-full" size={170} style={{ marginLeft: -24 }} />
           <p style={{ font: 'italic 500 22px/1.35 var(--font-serif)', color: 'var(--qb-parchment)' }}>Conhecimento · Estratégia · Disciplina · Conquista</p>
           <form onSubmit={e => { e.preventDefault(); onEnter(); }} style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             <label style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>

@@ -1,0 +1,35 @@
+<!-- @dsCard group="Components" viewport="1100x1180" name="Performance (Desempenho)" subtitle="PerformanceMetricCard, PerformancePeriodSelector, PerformanceTrendChart, PerformancePriorityPanel, SubjectPerformanceExplorer" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{padding:24px;min-height:100vh}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { PerformanceMetricCard, PerformancePeriodSelector, PerformanceTrendChart, PerformancePriorityPanel, SubjectPerformanceExplorer, Panel, Badge } = window.QuebrandoABancaDesignSystem_3e4054;
+const GR=[{id:'day',label:'Diário'},{id:'week',label:'Semanal'},{id:'month',label:'Mensal'}];
+const data=[['08/11',90,19],['09/11',0,0],['10/11',107,22],['11/11',125,24],['12/11',5,1],['13/11',135,24],['14/11',205,42]].map(([l,c,w])=>({key:l,label:l,correct:c,wrong:w,blank:0}));
+const prev=[[51,13],[0,0],[70,17],[98,21],[60,14],[119,20],[82,14]].map(([c,w],i)=>({key:'p'+i,label:'',correct:c,wrong:w}));
+const nodes=[{id:'dc',level:'subject',name:'Direito Constitucional e Regimento Interno',code:'DC',icon:'landmark',subjectId:'dc',correct:40,wrong:9,blank:1,children:[
+{id:'dc-1',level:'topic',code:'1',name:'Título não disponível nos arquivos',untitled:true,subjectId:'dc',topicId:'dc-1',correct:19,wrong:3,actions:['architect']},
+{id:'dc:2',level:'group',code:'2',name:'Regimento Interno da Câmara dos Deputados',subjectId:'dc',correct:21,wrong:6,blank:1,children:[
+{id:'dc-2a',level:'topic',code:'2a',name:'Processo legislativo',subjectId:'dc',topicId:'dc-2a',correct:3,wrong:2,actions:['train','mindmap','review','architect']},
+{id:'dc-2b',level:'topic',code:'2b',name:'Título não disponível nos arquivos',untitled:true,subjectId:'dc',topicId:'dc-2b',correct:18,wrong:4,blank:1,actions:['architect']},
+{id:'dc-2c',level:'topic',code:'2c',name:'Título não disponível nos arquivos',untitled:true,subjectId:'dc',topicId:'dc-2c',correct:0,wrong:0,actions:['architect']}]}]},
+{id:'li',level:'subject',name:'Língua Inglesa',code:'LI',icon:'globe',subjectId:'li',correct:0,wrong:0,children:[{id:'li-1',level:'topic',code:'1',name:'Título não disponível nos arquivos',untitled:true,subjectId:'li',topicId:'li-1',correct:0,wrong:0,actions:['architect']}]}];
+function App(){const [g,setG]=React.useState('day');const [d,setD]=React.useState({date:'2026-11-14'});return(<div style={{display:'flex',flexDirection:'column',gap:14}}>
+<div style={{display:'flex',gap:10,alignItems:'center',flexWrap:'wrap'}}><PerformancePeriodSelector mode="day" value={d} min="2026-11-01" max="2026-11-14" today="2026-11-14" onChange={setD}/><Badge tone="neutral" icon="info">Dados demonstrativos</Badge></div>
+<div style={{display:'grid',gridTemplateColumns:'repeat(4,minmax(0,1fr))',gap:10}}>
+<PerformanceMetricCard label="Itens julgados" icon="list-checks" value={248} breakdown={[{label:'acertos',value:205,tone:'correct'},{label:'erros',value:42,tone:'incorrect'},{label:'em branco',value:1}]} formula="acertos + erros + brancos"/>
+<PerformanceMetricCard label="Taxa de acerto" icon="target" tone="correct" value="83%" detail="205 de 247 respostas válidas" formula="acertos ÷ (acertos + erros)" comparison={{delta:-2,label:'−2 p.p. vs. 13/11'}} method="Itens em branco não entram no denominador."/>
+<PerformanceMetricCard label="Tarefas concluídas" icon="calendar" state="empty" stateText="Sem tarefas planejadas" formula="concluídas ÷ planejadas no período"/>
+<PerformanceMetricCard label="Calibração da confiança" icon="scale" state="pending" formula="Aguardando fórmula formal e registros de confiança."/></div>
+<div style={{display:'grid',gridTemplateColumns:'minmax(0,1.5fr) minmax(0,1fr)',gap:14,alignItems:'start'}}>
+<PerformanceTrendChart height={220} subtitle="08/11 a 14/11 · todas as matérias" granularity={g} granularities={GR} onGranularity={setG} data={data} previous={prev} previousLabel="01/11 a 07/11"/>
+<PerformancePriorityPanel basis="Base: 08/11 a 14/11" items={[{id:'a',kind:'Erros recorrentes',tone:'incorrect',title:'DA 10.1 — Licitações públicas',reason:'9 erros em 3 dias do período · 14 de 23 válidas corretas',action:{label:'Abrir assunto',icon:'chevrons-down'}},{id:'b',kind:'Pendências vencidas',tone:'attention',title:'1 tarefa vencida',reason:'Planejada até 14/11 e não concluída',action:{label:'Reorganizar planejamento',icon:'calendar-clock'}}]}/></div>
+<SubjectPerformanceExplorer nodes={nodes} description="Dados demonstrativos · somente treino" reveal={{subjectId:'dc',topicId:'dc-2a',token:1}}/>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>
