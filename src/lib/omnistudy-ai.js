@@ -369,12 +369,12 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
         transcript,
       ].join("\n");
 
-      // Opt-in estrito: sem GEMINI_API_KEY e QB_TUTOR_PROVIDER=gemini, nada muda.
+      // Opt-in estrito: QB_TUTOR_PROVIDER=gemini habilita a chave cadastrada como Arquiteto.
       // Se o Gemini falhar, NÃO recorrer à Base44, evitando créditos inesperados.
       const provider = secrets.get("QB_TUTOR_PROVIDER") === "gemini" ? "gemini" : "base44";
       if (provider === "gemini") {
         return invokeGeminiTutor({
-          apiKey: secrets.get("GEMINI_API_KEY"),
+          apiKey: secrets.get("Arquiteto") || secrets.get("ARQUITETO") || secrets.get("GEMINI_API_KEY"),
           model: secrets.get("QB_GEMINI_MODEL") || DEFAULT_TUTOR_GEMINI_MODEL,
           prompt,
         });
