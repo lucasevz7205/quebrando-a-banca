@@ -1,6 +1,8 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { requireUser } from "@/lib/auth-middleware";
+import { secrets } from "base44:runtime";
+import { invokeGeminiTutor, DEFAULT_TUTOR_GEMINI_MODEL } from "@/lib/gemini-tutor";
 import { normalizeCornellReview } from "@/lib/cornell-review";
 import {
   cornellToMindMapStructure,
@@ -330,7 +332,9 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
   .validator(OmniStudyInput)
   .handler(async ({ context, data }) => {
     const core = context.getBase44().asServiceRole.integrations?.Core;
-    if (typeof core?.InvokeLLM !== "function") {
+    // Somente o chat do Arquiteto pode optar pelo Gemini. Todos os demais recursos
+    // permanecem na integração Base44, sem alterar sua lógica ou créditos.
+    if (data.task !== "tutor-chat" && typeof core?.InvokeLLM !== "function") {
       throw new Error("Integração InvokeLLM do Base44 não disponível neste ambiente.");
     }
 
@@ -365,6 +369,19 @@ export const invokeOmniStudyAI = createServerFn({ method: "POST" })
         transcript,
       ].join("\n");
 
+      // Opt-in estrito: sem GEMINI_API_KEY e QB_TUTOR_PROVIDER=gemini, nada muda.
+      // Se o Gemini falhar, NÃO recorrer à Base44, evitando créditos inesperados.
+      const provider = secrets.get("QB_TUTOR_PROVIDER") === "gemini" ? "gemini" : "base44";
+      if (provider === "gemini") {
+        return invokeGeminiTutor({
+          apiKey: secrets.get("GEMINI_API_KEY"),
+          model: secrets.get("QB_GEMINI_MODEL") || DEFAULT_TUTOR_GEMINI_MODEL,
+          prompt,
+        });
+      }
+      if (typeof core?.InvokeLLM !== "function") {
+        throw new Error("Integração InvokeLLM do Base44 não disponível neste ambiente.");
+      }
       const reply = await core.InvokeLLM({ prompt });
       return {
         reply: typeof reply === "string" ? reply : JSON.stringify(reply),
