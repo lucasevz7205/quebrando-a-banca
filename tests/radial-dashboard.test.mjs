@@ -73,10 +73,10 @@ test("navegação radial integra-se ao app sem substituir a barra superior",()=>
    assert.match(shell,new RegExp('id="tab-'+name+'"'));
  }
  assert.match(shell,/id="qb-radial-return-action"/);
- assert.match(shell,/radial-dashboard\.css\?v=1/);
- assert.match(shell,/radial-dashboard\.js\?v=2/);
+ assert.match(shell,/radial-dashboard\.css\?v=2/);
+ assert.match(shell,/radial-dashboard\.js\?v=3/);
  assert.match(shell,/radial-annulus\.css\?v=1/);
- assert.match(shell,/radial-axon-flow\.js\?v=1/);
+ assert.match(shell,/radial-axon-flow\.js\?v=2/);
  assert.match(shell,/view:'portal', radialSection:null/);
  assert.match(shell,/let v='portal',entrySection=null/);
  assert.match(shell,/function openPortal\(section=null,push=true,focus=true\)/);

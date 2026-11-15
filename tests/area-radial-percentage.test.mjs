@@ -77,7 +77,7 @@ test("cada matéria usa os mesmos capítulos e a mesma regra do Histórico",()=>
 });
 test("shell liga as cinco áreas superiores ao radial sem quebrar treinar e a navegação antiga",()=>{
  for(const tab of ["painel","edital","estudo","historico","simulado"])assert.match(files.shell,new RegExp("'"+tab+"'"));
- assert.match(files.shell,/area-radial\.js\?v=1/);
+ assert.match(files.shell,/area-radial\.js\?v=2/);
  assert.match(files.shell,/area-radial\.css\?v=1/);
  assert.match(files.shell,/radial=\['painel','edital','estudo','historico','simulado'\]/);
  assert.match(files.shell,/S.areaHub=radialArea\?\{area:radialArea,level:'main',matter:null,tool:null,page:0\}:null/);

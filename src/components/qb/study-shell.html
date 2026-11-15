@@ -433,9 +433,9 @@ details.diario .feed{margin-top:10px}
 </style>
 <link rel="stylesheet" href="/claude-export/experience.css">
 <link rel="stylesheet" href="/claude-export/weekly.css?v=2">
-<link rel="stylesheet" href="/claude-export/analytics.css?v=4">
+<link rel="stylesheet" href="/claude-export/analytics.css?v=5">
 <link rel="stylesheet" href="/claude-export/page-hero.css">
-<link rel="stylesheet" href="/claude-export/top-nav.css">
+<link rel="stylesheet" href="/claude-export/top-nav.css?v=2">
 <link rel="stylesheet" href="/claude-export/traps.css">
 <link rel="stylesheet" href="/claude-export/study-motion.css">
 <link rel="stylesheet" href="/claude-export/study-detail.css?v=3">
@@ -462,9 +462,10 @@ details.diario .feed{margin-top:10px}
         <button type="button" class="theme-b qb-utility-action" id="qb-logout">Sair</button>
       </div>
     </div>
-    <nav class="tabs qb-primary-nav" aria-label="Navegação principal">
+    <button type="button" id="qb-nav-toggle" aria-expanded="false" aria-controls="qb-primary-nav" hidden>Seções</button>
+    <nav id="qb-primary-nav" class="tabs qb-primary-nav" aria-label="Navegação principal">
       <button id="tab-portal" class="qb-radial-nav-item" data-view="portal">Menu principal</button>
-      <button id="tab-painel" data-view="painel">Hoje</button>
+      <button id="tab-painel" data-view="painel">Planejamento</button>
       <button id="tab-edital" data-view="edital">Edital</button>
       <button id="tab-treinar" data-view="treinar">Treinar <span class="count" id="cnt-hoje">0</span></button>
       <button id="tab-estudo" data-view="estudo">Estudo</button>
@@ -485,7 +486,7 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/study-batch-ui.js?v=1"></script>
 <link rel="stylesheet" href="/claude-export/study-batch-ui.css?v=1">
 <script src="/claude-export/planner.js?v=6"></script>
-<script src="/claude-export/insights.js?v=3"></script>
+<script src="/claude-export/insights.js?v=4"></script>
 <script src="/claude-export/assistant.js?v=4"></script>
 <script src="/claude-export/strategies.js"></script>
 <script src="/claude-export/learning.js"></script>
@@ -515,14 +516,14 @@ details.diario .feed{margin-top:10px}
 <link rel="stylesheet" href="/claude-export/glass-iris.css?v=1">
 <link rel="stylesheet" href="/claude-export/ambient-background.css?v=2">
 <script src="/claude-export/ambient-background.js?v=2" defer></script>
-<link rel="stylesheet" href="/claude-export/radial-dashboard.css?v=1">
+<link rel="stylesheet" href="/claude-export/radial-dashboard.css?v=2">
 <link rel="stylesheet" href="/claude-export/radial-annulus.css?v=1">
 <link rel="stylesheet" href="/claude-export/training-radial.css?v=1">
 <link rel="stylesheet" href="/claude-export/area-radial.css?v=1">
-<script src="/claude-export/radial-axon-flow.js?v=1"></script>
-<script src="/claude-export/training-radial.js?v=2"></script>
-<script src="/claude-export/area-radial.js?v=1"></script>
-<script src="/claude-export/radial-dashboard.js?v=2"></script>
+<script src="/claude-export/radial-axon-flow.js?v=2"></script>
+<script src="/claude-export/training-radial.js?v=3"></script>
+<script src="/claude-export/area-radial.js?v=2"></script>
+<script src="/claude-export/radial-dashboard.js?v=3"></script>
 <link rel="stylesheet" href="/claude-export/axon-shell.css?v=1">
 <link rel="stylesheet" href="/claude-export/tema-claro-contraste.css?v=1">
 <script src="/claude-export/axon-shell.js?v=1"></script>
@@ -530,13 +531,13 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/question-curator.js?v=2"></script>
 <link rel="stylesheet" href="/claude-export/mindmap-studio.css?v=14">
 <script src="/claude-export/mindmap-studio.js?v=17"></script>
-<link rel="stylesheet" href="/claude-export/omnistudy-ai.css?v=14">
+<link rel="stylesheet" href="/claude-export/omnistudy-ai.css?v=15">
 <link rel="stylesheet" href="/claude-export/omnistudy-cornell.css?v=12">
 <script src="/claude-export/omnistudy-cornell.js?v=16" defer></script>
 <script src="/claude-export/tutor-context.js?v=2" defer></script>
 <script src="/claude-export/map-evocar.js?v=2" defer></script>
 <script src="/claude-export/card-curator.js?v=2" defer></script>
-<script src="/claude-export/omnistudy-ai.js?v=28" defer></script>
+<script src="/claude-export/omnistudy-ai.js?v=29" defer></script>
 <script>
 (function(){
 const S = {
@@ -766,13 +767,28 @@ function sectionIntro(v){
   const info=SECTION_INTROS[v]; if(!info) return '';
   return '<section class="qb-section-intro qb-page-hero" aria-label="Cabeçalho da seção"><div class="qb-page-hero-copy"><span class="qb-section-kicker">'+info[0]+' · QUEBRANDO A BANCA</span><h2>'+info[1]+'</h2><p>'+info[2]+'</p></div></section>';
 }
+const navToggle=$('#qb-nav-toggle');
+const sectionNames={portal:'Menu principal',painel:'Planejamento',edital:'Edital',treinar:'Treinar',estudo:'Estudo',simulado:'Simulado',historico:'Desempenho'};
+navToggle.hidden=false;
+function setNavExpanded(expanded){
+  navToggle.setAttribute('aria-expanded',String(expanded));
+}
+navToggle.addEventListener('click',()=>setNavExpanded(navToggle.getAttribute('aria-expanded')==='false'));
+navToggle.parentElement.addEventListener('keydown',event=>{
+  if(event.key!=='Escape'||navToggle.getAttribute('aria-expanded')!=='true')return;
+  if(!event.target.closest('#qb-primary-nav, #qb-nav-toggle'))return;
+  event.preventDefault();
+  setNavExpanded(false);
+  navToggle.focus();
+});
 function syncNavigation(active){
-  for(const id of ['portal','painel','edital','treinar','estudo','simulado','historico']){
+  for(const id of Object.keys(sectionNames)){
     const button=$('#tab-'+id);
     if(!button)continue;
     if(id===active)button.setAttribute('aria-current','page');
     else button.removeAttribute('aria-current');
   }
+  navToggle.textContent='Seções · '+(sectionNames[active]||sectionNames.portal);
   const back=$('#qb-radial-return');
   if(back)back.hidden=S.view==='portal';
 }
@@ -808,7 +824,16 @@ document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('clic
   const v=b.dataset.view;
   if(v==='treinar'&&!S.round)S.trRadial=null;
   const radial=['painel','edital','estudo','historico','simulado'].includes(v)?v:null;
+  const wasOpen=navToggle.getAttribute('aria-expanded')==='true';
   setView(v,true,radial);
+  setNavExpanded(false);
+  if(wasOpen&&navToggle.getClientRects().length){
+    const heading=$('#main h2');
+    if(heading){
+      heading.tabIndex=-1;
+      heading.focus();
+    }else navToggle.focus();
+  }
 }));
 $('#qb-radial-return-action')?.addEventListener('click',()=>openPortal(null));
 /* tema: automático → escuro → claro (preferência guardada neste navegador) */

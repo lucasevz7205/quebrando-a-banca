@@ -122,9 +122,9 @@ test("passagem do mouse e teclado destacam o setor correto e a seleção usa o f
  assert.equal(calls.at(-1),"dispose");
 });
 test("menu agora mantém fluxo e vídeo sem reiniciar a animação em atualizações de dados",()=>{
- assert.match(shell,/radial-axon-flow\.js\?v=1/);
+ assert.match(shell,/radial-axon-flow\.js\?v=2/);
  assert.match(shell,/radial-annulus\.css\?v=1/);
- assert.match(shell,/radial-dashboard\.js\?v=2/);
+ assert.match(shell,/radial-dashboard\.js\?v=3/);
  assert.match(shell,/const screen=S\.radialSection\|\|'menu'/);
  assert.match(shell,/main\.querySelector\('\.qb-radial-hub'\)\?\.dataset\.radialScreen===screen/);
  assert.match(shell,/radialCleanup\?\.\(\)/);

@@ -40,7 +40,7 @@
     let onScreen=true;
 
     function resize(){
-      const rect=stage.getBoundingClientRect();
+      const rect=idle.getBoundingClientRect?.()||stage.getBoundingClientRect();
       const ratio=Math.min(win.devicePixelRatio||1,1.5);
       const w=Math.max(1,Math.round(rect.width*ratio)),h=Math.max(1,Math.round(rect.height*ratio));
       if(w===dimensions.w*dimensions.ratio && h===dimensions.h*dimensions.ratio)return;
@@ -86,6 +86,7 @@
       if(disposed||(!root.isConnected&&root.isConnected!==undefined)){dispose();return;}
       if(!active())return;
       if(now-lastTime>31){lastTime=now;resize();draw(now/1000);}
+      if(!dimensions.w||!dimensions.h)return;
       raf=win.requestAnimationFrame(loop);
     }
     function sync(){
@@ -95,12 +96,13 @@
         ctx.clearRect(0,0,dimensions.w,dimensions.h);
         return;
       }
-      if(!raf)raf=win.requestAnimationFrame(loop);
+      if(!raf&&dimensions.w&&dimensions.h)raf=win.requestAnimationFrame(loop);
     }
     function focus(index){
       focusIndex=Number.isInteger(index)?index:-1;
     }
     function select(button,go){
+      if(!dimensions.w||!dimensions.h){go();return;}
       if(disposed||reduced.matches||!tx){go();return;}
       // Same seeded AXON particle morph used on the 3D map, now travelling
       // through the living annulus and collapsing into its central hub.
@@ -185,7 +187,7 @@
     const intersection=win.IntersectionObserver
       ?new win.IntersectionObserver(entries=>{onScreen=!!entries[0]?.isIntersecting;sync();}):null;
     intersection?.observe(root);
-    const observer=win.ResizeObserver?new win.ResizeObserver(resize):null;
+    const observer=win.ResizeObserver?new win.ResizeObserver(()=>{resize();sync();}):null;
     observer?.observe(stage);
     const onResize=()=>{resize();sync();};
     win.addEventListener("resize",onResize);

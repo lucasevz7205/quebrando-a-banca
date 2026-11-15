@@ -124,8 +124,8 @@ test("Estúdio Cognitivo OmniStudy AI 2.0 integra Tutor Socrático, Feynman, Cor
   const omniCss = fs.readFileSync("public/claude-export/omnistudy-ai.css", "utf8");
   const omniServer = fs.readFileSync("src/lib/omnistudy-ai.js", "utf8");
 
-  assert.match(shell, /omnistudy-ai\.css\?v=1[34]/);
-  assert.match(shell, /omnistudy-ai\.js\?v=28/);
+  assert.match(shell, /omnistudy-ai\.css\?v=15/);
+  assert.match(shell, /omnistudy-ai\.js\?v=29/);
   assert.match(shell, /omnistudy-cornell\.js\?v=16/);
   assert.match(estudiarRoute, /invokeOmniStudyAI/);
   assert.match(omniServer, /middleware\(\[requireUser\]\)/);

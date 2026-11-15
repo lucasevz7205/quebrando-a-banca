@@ -64,7 +64,7 @@ function StudyScreen({ account }) {
     ? account.markup
         .replace(/data-qb-video-src="[^"]*"/, 'data-qb-video-src="https://media.base44.com/videos/public/6aef9673577cba58a2c91a3c/1af59e0ae_gemini_generated_video_FA7F3298.mp4"')
         .replace('poster="/claude-export/ambient-poster.jpg"', 'poster="https://media.base44.com/images/public/6aef9673577cba58a2c91a3c/dc13890b5_gemini_generated_video_FA7F3298_frame.jpg"')
-        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=4"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=7"><link rel="stylesheet" href="/claude-export/admin-tokens.css?v=3"><script defer src="/claude-export/admin-art.js?v=5"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=2"><link rel="stylesheet" href="/claude-export/admin-frieze.css?v=2"><link rel="stylesheet" href="/claude-export/admin-frieze-revisao.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-largura.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-detalhes.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-afinado.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-ornamentos.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-unified.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-ajustes.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-base.css?v=1"><script defer src="/claude-export/admin-astrolabe-unified.js?v=2"></script><link rel="stylesheet" href="/claude-export/admin-scroll-fix.css?v=1"><link rel="stylesheet" href="/claude-export/admin-cabecalho-recolhivel.css?v=3"><script defer src="/claude-export/admin-cabecalho-recolhivel.js?v=3"></script><link rel="stylesheet" href="/claude-export/admin-treino-simbolos.css?v=1"><script defer src="/claude-export/admin-treino-simbolos.js?v=1"></script><link rel="stylesheet" href="/claude-export/admin-mapa-cartoes.css?v=7"><link rel="stylesheet" href="/claude-export/admin-estudo-padrao.css?v=3"><link rel="stylesheet" href="/claude-export/admin-subfriso.css?v=3"><link rel="stylesheet" href="/claude-export/admin-ajustes.css?v=1"><script defer src="/claude-export/admin-topo-compacto.js?v=1"></script><link rel="stylesheet" href="/claude-export/admin-area-simbolos.css?v=2"><script defer src="/claude-export/admin-area-simbolos.js?v=2"></script><link rel="stylesheet" href="/claude-export/admin-touch-scroll-guard.css?v=1"></body></html>')
+        .replace("</body></html>", '<link rel="stylesheet" href="/claude-export/admin-theme.css?v=1"><script defer src="/claude-export/admin-theme.js?v=4"></script><link rel="stylesheet" href="/claude-export/admin-art.css?v=7"><script defer src="/claude-export/admin-art.js?v=5"></script><link rel="stylesheet" href="/claude-export/admin-scene.css?v=2"><link rel="stylesheet" href="/claude-export/admin-frieze.css?v=2"><link rel="stylesheet" href="/claude-export/admin-frieze-revisao.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-largura.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-detalhes.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-afinado.css?v=1"><link rel="stylesheet" href="/claude-export/admin-frieze-ornamentos.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-unified.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-ajustes.css?v=1"><link rel="stylesheet" href="/claude-export/admin-astrolabe-base.css?v=1"><script defer src="/claude-export/admin-astrolabe-unified.js?v=2"></script><link rel="stylesheet" href="/claude-export/admin-scroll-fix.css?v=1"><link rel="stylesheet" href="/claude-export/admin-cabecalho-recolhivel.css?v=4"><script defer src="/claude-export/admin-cabecalho-recolhivel.js?v=4"></script><link rel="stylesheet" href="/claude-export/admin-treino-simbolos.css?v=1"><script defer src="/claude-export/admin-treino-simbolos.js?v=1"></script><link rel="stylesheet" href="/claude-export/admin-mapa-cartoes.css?v=7"><link rel="stylesheet" href="/claude-export/admin-estudo-padrao.css?v=3"><link rel="stylesheet" href="/claude-export/admin-subfriso.css?v=3"><link rel="stylesheet" href="/claude-export/admin-ajustes.css?v=1"><script defer src="/claude-export/admin-topo-compacto.js?v=1"></script><link rel="stylesheet" href="/claude-export/admin-area-simbolos.css?v=2"><script defer src="/claude-export/admin-area-simbolos.js?v=2"></script><link rel="stylesheet" href="/claude-export/admin-touch-scroll-guard.css?v=1"></body></html>')
     : account?.markup;
   const frameRef = useRef(null);
   const [ready, setReady] = useState(false);
@@ -72,6 +72,27 @@ function StudyScreen({ account }) {
   const [error, setError] = useState("");
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [moduleLoadError, setModuleLoadError] = useState(false);
+
+  useEffect(() => {
+    const viewport = window.visualViewport;
+    const frame = frameRef.current;
+    if (!viewport || !frame) return;
+    const compact = window.matchMedia("(max-width:820px), (max-width:960px) and (pointer:coarse)");
+    const resize = () => {
+      if (compact.matches && viewport.scale === 1 && window.innerHeight - viewport.height > 80) {
+        frame.style.setProperty("--qb-keyboard-height", `${Math.floor(viewport.height)}px`);
+      } else {
+        frame.style.removeProperty("--qb-keyboard-height");
+      }
+    };
+    viewport.addEventListener("resize", resize);
+    compact.addEventListener("change", resize);
+    resize();
+    return () => {
+      viewport.removeEventListener("resize", resize);
+      compact.removeEventListener("change", resize);
+    };
+  }, [ready, frameVersion]);
 
   // Vite/Rolldown may reject an outdated dynamic import after a publication.
   // Never force-refresh a student who may have an unanswered question open.
@@ -252,6 +273,7 @@ function StudyScreen({ account }) {
           sandbox={preview ? "allow-scripts allow-popups allow-popups-to-escape-sandbox" : undefined}
           style={{
             display: "block", width: "100%", height: preview ? "calc(100svh - 3.5rem)" : "100svh",
+            maxHeight: preview ? "calc(var(--qb-keyboard-height, 100svh) - 3.5rem)" : "var(--qb-keyboard-height, 100svh)",
             border: 0, borderRadius: 0, background: "#0E0E10",
             overflowY: "auto", WebkitOverflowScrolling: "touch", touchAction: "auto"
           }}

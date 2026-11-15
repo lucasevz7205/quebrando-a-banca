@@ -153,3 +153,57 @@
 @media(max-width:820px){.qb-analytics-columns,.qb-analytics-secondary{grid-template-columns:1fr;}}
 @media(max-width:680px){.qb-analytics-intro{flex-direction:column;align-items:stretch;padding:20px;}.qb-analytics-filter{align-self:flex-start;}.qb-analytics-kpis{grid-template-columns:repeat(2,minmax(0,1fr));}.qb-analytic-kpi{padding:15px 13px;}.qb-analytic-kpi strong{font-size:24px;}.qb-analytics-card{padding:17px 15px;}.qb-analytics-intro h2{font-size:24px;}.qb-analytics-head h3{font-size:17px;}.qb-subject-analytic{grid-template-columns:minmax(0,1.2fr) minmax(110px,1fr);}.qb-chat-panel{bottom:9px;right:9px;width:calc(100vw - 18px);height:calc(100dvh - 18px);}}
 @media(prefers-reduced-motion:reduce){.qb-dot,.qb-chat-launch{transition:none;}}
+
+@media (max-width:820px), (max-width:960px) and (pointer:coarse) {
+  #main :is(.qb-analytics-card,.qb-analytic-kpi,.qb-history-filters,.qb-chart-screen,.qb-history-chart,.tbl-wrap) {
+    min-width:0;
+    max-width:100%;
+  }
+  #main :is(.qb-analytic-kpi small,.qb-analytic-kpi span,.qb-chart-sub,.qb-analytic-advice p,.qb-subject-analytic small,.qb-history-filters label,.qb-history-main td>small,.qb-history-compare-row small,.qb-analytics-note) {
+    font-size:14px;
+    overflow-wrap:anywhere;
+  }
+  #main .qb-analytic-kpi strong {font-size:clamp(20px,6vw,28px);}
+  :root[data-theme="dark"] #main .qb-analytic-kpi {
+    background:var(--qb-mobile-deep);
+    border-color:var(--qb-mobile-edge);
+  }
+  :root[data-theme="dark"] #main .qb-analytic-kpi strong {color:var(--qb-mobile-text);}
+  :root[data-theme="dark"] #qb-chat-launch {
+    background:var(--qb-mobile-panel);
+    color:var(--qb-mobile-text);
+    border:1px solid var(--qb-mobile-accent);
+  }
+  #main :is(.qb-history-filters,.qb-history-chart-head,.qb-analytics-filter) :is(.seg,button,input,select) {
+    min-height:44px;
+    max-width:100%;
+    font-size:16px;
+  }
+  #main :is(.qb-history-filters,.qb-history-chart-head,.qb-analytics-filter) .seg {
+    flex-wrap:wrap;
+  }
+  #main :is(.qb-history-compare-row,.qb-history-more>summary) {min-height:44px;}
+  #main .qb-history-chart {grid-auto-columns:minmax(76px,1fr);}
+  #main .qb-history-chart>button :is(strong,small) {font-size:14px;white-space:normal;}
+  #main .qb-history-compare {max-height:none;}
+  #main .qb-chart-plot {overflow-x:auto;max-width:100%;}
+  #main .qb-chart-plot svg {min-width:560px;}
+  #main .qb-chart-plot .qb-da {font-size:21px;}
+  #main :is(.item,.qb-flashcard) :is(.statement,.cq,.ca) {
+    font-size:17px;
+    overflow-wrap:anywhere;
+  }
+  #main :is([data-ans],[data-conf],[data-origem],#next,.qb-flashcard button) {
+    min-height:44px;
+    max-width:100%;
+    white-space:normal;
+    overflow-wrap:anywhere;
+  }
+  #main :is(.answers,.conf-opts) {flex-wrap:wrap;}
+  #main :is(#cert-txt,#just-txt,.qb-flashcard textarea),
+  #qb-chat-form input {font-size:16px;}
+  #qb-chat-form :is(input,button),#qb-chat-close {min-height:44px;}
+}
+@media (max-width:360px) {
+  #main .qb-analytics-kpis {grid-template-columns:1fr;}
+}
