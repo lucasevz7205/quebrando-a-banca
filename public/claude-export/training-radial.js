@@ -260,8 +260,9 @@ function wire(container,handlers={}){
     if(flow?.select)flow.select(node,proceed);
     else proceed();
   }
-  section.addEventListener("pointerover",e=>highlight(nodeFrom(e.target)));
+  section.addEventListener("pointerover",e=>{if(e.pointerType!=="touch")highlight(nodeFrom(e.target));});
   section.addEventListener("pointerout",e=>{
+    if(e.pointerType==="touch")return;
     const node=nodeFrom(e.target);
     if(node&&!node.contains(e.relatedTarget))highlight(nodeFrom(e.relatedTarget));
   });

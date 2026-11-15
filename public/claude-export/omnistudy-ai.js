@@ -797,6 +797,7 @@
     return { currentSubject: curSubject, currentTopic: curTopic, chat, catalog };
   }
 
+  let studioOpener;
   function openStudio(tab) {
     syncContestContext(appState());
     if (tab) state.activeTab = tab;
@@ -804,6 +805,7 @@
     if (detected) state.subject = detected;
     const backdrop = document.getElementById("omni-drawer-backdrop");
     if (backdrop) {
+      if (!backdrop.classList.contains("open")) studioOpener = document.activeElement;
       backdrop.classList.add("open");
       renderStudioTabs();
       renderStudioBody();
@@ -812,7 +814,11 @@
 
   function closeStudio() {
     const backdrop = document.getElementById("omni-drawer-backdrop");
-    if (backdrop) backdrop.classList.remove("open");
+    if (backdrop?.classList.contains("open")) {
+      backdrop.classList.remove("open");
+      studioOpener?.focus({preventScroll:true});
+      studioOpener = null;
+    }
   }
 
   function renderStudioTabs() {
@@ -1774,7 +1780,7 @@
     backdrop.id = "omni-drawer-backdrop";
     backdrop.className = "omni-drawer-backdrop";
     backdrop.innerHTML = `
-      <aside class="omni-drawer" role="dialog" aria-label="O Arquiteto">
+      <aside id="omni-drawer" class="omni-drawer" role="dialog" aria-label="O Arquiteto">
         <header class="omni-drawer-header">
           <div class="omni-drawer-title">
             <span class="omni-badge">O Arquiteto</span>

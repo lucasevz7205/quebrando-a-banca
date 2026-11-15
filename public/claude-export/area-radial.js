@@ -140,8 +140,9 @@ function wire(container,config,handlers={}){
    if(ring?.select)ring.select(node,go);
    else go();
  }
- section.addEventListener("pointerover",e=>focus(nodeFrom(e.target)));
+ section.addEventListener("pointerover",e=>{if(e.pointerType!=="touch")focus(nodeFrom(e.target));});
  section.addEventListener("pointerout",e=>{
+    if(e.pointerType==="touch")return;
    const prev=nodeFrom(e.target);
    if(prev&&!prev.contains(e.relatedTarget))focus(nodeFrom(e.relatedTarget));
  });

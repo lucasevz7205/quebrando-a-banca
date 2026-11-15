@@ -155,8 +155,9 @@
       const id=segment?.dataset?.ringSector;
       return id===undefined?null:root.querySelector('.qb-radial-node[data-radial-index="'+id+'"]');
     }
-    root.addEventListener("pointerover",event=>highlight(nodeFrom(event.target)));
+    root.addEventListener("pointerover",event=>{if(event.pointerType!=="touch")highlight(nodeFrom(event.target));});
     root.addEventListener("pointerout",event=>{
+    if(event.pointerType==="touch")return;
       const current=nodeFrom(event.target);
       if(current&&!current.contains?.(event.relatedTarget))highlight(nodeFrom(event.relatedTarget));
     });

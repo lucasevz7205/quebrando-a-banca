@@ -193,12 +193,14 @@
 @media (max-width: 650px) {
   .qb { display: block; }
   .qb-side { position: static; width: 100%; padding: 16px; gap: 14px; border-right: 0; border-bottom: 1px solid var(--line); }
-  .qb-side nav { flex-direction: row; overflow: auto; }
-  .qb-side nav a { white-space: nowrap; font-size: 12px; padding: 8px; }
-  .qb-side .qb-eyebrow, .qb-private, .qb-side > button { display: none; }
+  .qb-side nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .qb-side nav a { min-height: 44px; font-size: 14px; padding: 8px; overflow-wrap: anywhere; }
+  .qb-side nav a svg { flex-shrink: 0; }
+  .qb-side .qb-eyebrow, .qb-private { display: none; }
+  .qb-side > button { min-height: 44px; }
   .qb-brand br { display: none; }
   .qb-main { margin: 0; width: 100%; padding: 0 16px 32px; }
-  .qb-top { height: 56px; font-size: 10px; }
+  .qb-top { height: auto; min-height: 56px; flex-wrap: wrap; gap: 6px; font-size: 14px; }
   .qb h1 { font-size: 30px; }
   .qb-card { padding: 18px; }
   .qb-stats { gap: 10px; }

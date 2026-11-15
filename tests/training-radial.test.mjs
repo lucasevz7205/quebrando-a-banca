@@ -181,7 +181,7 @@ test("hover e foco mostram métricas específicas no centro sem mudar o históri
 });
 test("navegação da aplicação conduz matéria → assunto → treino real e preserva o modo clássico",()=>{
  assert.match(shell,/training-radial\.css\?v=1/);
- assert.match(shell,/training-radial\.js\?v=2/);
+ assert.match(shell,/training-radial\.js\?v=3/);
  assert.match(shell,/trRadial:null/);
  assert.match(shell,/function treinoRadialDados\(/);
  assert.match(shell,/onMatter:id=>\{S\.trRadial=\{matter:id,page:0,setup:false,classic:false\}/);

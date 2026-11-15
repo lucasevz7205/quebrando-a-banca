@@ -45,13 +45,14 @@
       btn.addEventListener("click",()=>{
         const collapsed=header.classList.toggle("qb-cabecalho-recolhido");
         btn.setAttribute("aria-expanded",String(!collapsed));
-        btn.textContent=collapsed?"Expandir":"Recolher";
+        btn.textContent=collapsed?"Mostrar controles":"Recolher controles";
         if(collapsed){
           const submenu=utilities.querySelector(".qb-admin-tools-more");
           if(submenu)submenu.open=false;
         }
       });
       utilities.append(btn);
+      if(window.matchMedia("(max-width:820px), (max-width:960px) and (pointer:coarse)").matches)btn.click();
     }
     if(placeCountdown(header))return;
     // Observe somente os filhos da faixa e pare assim que a sincronização
