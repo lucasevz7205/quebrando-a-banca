@@ -32,3 +32,10 @@
 
 ## Dependência do protótipo
 `ui_kits/app/index.html` carrega React/Babel via unpkg (CDN). A prévia exige rede; não deve ser tomada como prova de funcionamento offline.
+
+
+## Patch v4
+
+A prévia em `/qb-ascensao-preview/ui_kits/app/index.html?view=performance` passa a usar o pacote Design System v4, com os contratos e notas das versões 2 a 4 disponíveis em `public/qb-ascensao-preview/docs/`. O manifesto SHA256 deste diretório registra o import original (v1). Os dados do UI kit são sintéticos e pertencem apenas à prévia.
+
+No ambiente real de estudo, Desempenho reutiliza os registros de rodadas e o vínculo de questões com flashcards. A análise diária mostra a abertura por matéria e assunto e disponibiliza os dados do gráfico em tabela. A lista de questões mostra até 30 tentativas recentes no recorte diário ou histórico, respeitando os filtros existentes. Quando as duas datas são informadas, o histórico compara a precisão com os dias imediatamente anteriores de mesma duração, se ambos os períodos tiverem respostas válidas. O cálculo de acerto consolidado, as regras de revisão e a persistência permanecem sob responsabilidade dos serviços atuais.

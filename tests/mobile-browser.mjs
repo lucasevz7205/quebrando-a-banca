@@ -9,6 +9,11 @@ const shell = fs.readFileSync("src/components/qb/study-shell.html", "utf8");
 const admin = route.match(/'<link rel="stylesheet" href="\/claude-export\/admin-theme[^']+'/)[0].slice(1, -1);
 const origin = "https://qb-mobile.test";
 const types = { css: "text/css", js: "text/javascript", svg: "image/svg+xml", json: "application/json" };
+const localDay = offset => {
+  const date = new Date();
+  date.setDate(date.getDate() + offset);
+  return date.toLocaleDateString("sv-SE");
+};
 const sizes = [[320, 740], [360, 780], [375, 812], [390, 844], [430, 932], [768, 1024]];
 
 async function open(browser, viewport, isAdmin, touch = true) {
@@ -129,6 +134,13 @@ for (const [name, engine] of [["Chromium",chromium],["WebKit",webkit]]) {
           assert.ok((await date.boundingBox()).height>=44);
           if (width===320&&!landscape) await checkScroll(context,page,frame,name);
           if (name==="Chromium"&&width===390&&!landscape) {
+            const subjects=frame.locator(".qb-perf-disclosure").filter({hasText:"Matéria de teste"});
+            await subjects.locator(":scope > summary").tap();
+            assert.ok(await subjects.getByText("Assunto de teste",{exact:true}).isVisible());
+            const dailyAnswers=frame.locator(".qb-perf-disclosure").filter({has:frame.getByText("Questões do dia · 1 tentativa",{exact:true})}).first();
+            await dailyAnswers.locator(":scope > summary").tap();
+            await dailyAnswers.getByText("Uma afirmação para testar os controles em tela estreita.").tap();
+            assert.equal(await dailyAnswers.locator("[data-qcard]").getAttribute("data-qcard"),"local-1");
             await screenshot(page,"390-desempenho");
             const launch=frame.locator("#qb-chat-launch");
             await launch.tap();
@@ -143,7 +155,12 @@ for (const [name, engine] of [["Chromium",chromium],["WebKit",webkit]]) {
             await frame.locator(".qb-history-dates summary").tap();
             await frame.locator("#evo-de").waitFor();
             await noOverflow(frame,"history filters");
+            assert.equal(await frame.getByText("Questões do período · 3 tentativas",{exact:true}).count(),1);
             await screenshot(page,"390-historico");
+            await frame.locator("#evo-de").fill(localDay(-1));
+            await frame.locator("#evo-ate").fill(localDay(0));
+            assert.match(await frame.locator(".qb-history-period-compare").innerText(),/\+100 p\.p\./);
+            assert.equal(await frame.getByText("Questões do período · 1 tentativa",{exact:true}).count(),1);
             await frame.locator("[data-sub=metodo]").tap();
             await noOverflow(frame,"method");
             await toggle.tap();

@@ -433,7 +433,7 @@ details.diario .feed{margin-top:10px}
 </style>
 <link rel="stylesheet" href="/claude-export/experience.css">
 <link rel="stylesheet" href="/claude-export/weekly.css?v=2">
-<link rel="stylesheet" href="/claude-export/analytics.css?v=5">
+<link rel="stylesheet" href="/claude-export/analytics.css?v=6">
 <link rel="stylesheet" href="/claude-export/page-hero.css">
 <link rel="stylesheet" href="/claude-export/top-nav.css?v=2">
 <link rel="stylesheet" href="/claude-export/traps.css">
@@ -486,7 +486,7 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/study-batch-ui.js?v=1"></script>
 <link rel="stylesheet" href="/claude-export/study-batch-ui.css?v=1">
 <script src="/claude-export/planner.js?v=6"></script>
-<script src="/claude-export/insights.js?v=4"></script>
+<script src="/claude-export/insights.js?v=5"></script>
 <script src="/claude-export/assistant.js?v=4"></script>
 <script src="/claude-export/strategies.js"></script>
 <script src="/claude-export/learning.js"></script>
@@ -1552,14 +1552,14 @@ function qbCurve(pts){
   return p;
 }
 
-function sessoesHistoricas(){
+function sessoesHistoricas(de=S.evoDe,ate=S.evoAte){
   const materias=new Map(), assuntos=new Map(), comparacao=new Map(), sessoes=[];
   for(const rodada of S.rodadas){
     if(!Number.isFinite(Date.parse(rodada.inicio))) continue;
     const dia=diaDe(rodada.inicio);
-    const dentro=(!S.evoDe||dia>=S.evoDe)&&(!S.evoAte||dia<=S.evoAte);
+    const dentro=(!de||dia>=de)&&(!ate||dia<=ate);
     const contagem={c:0,e:0,b:0,n:0};
-    const nomes=new Set();
+    const nomes=new Set(),tentativas=[];
     for(const item of rodada.itens||[]){
       const questao=S.q.get(item.qid);
       const multiple=alternativasDe(questao).length>0;
@@ -1579,12 +1579,13 @@ function sessoesHistoricas(){
         comparacao.set(cap,a);
       }
       if(S.evoCap&&S.evoCap!==cap) continue;
+      tentativas.push({day:dia,qid:item.qid,name:nome,result:resultado,given:item.marcada,confidence:item.conf});
       nomes.add(nome);
       contagem.n++;
       contagem[resultado]++;
     }
     if(contagem.n){
-      sessoes.push({rodada,dia,periodo:bucketEvo(dia),nomes:[...nomes],...contagem});
+      sessoes.push({rodada,dia,periodo:bucketEvo(dia),nomes:[...nomes],tentativas,...contagem});
     }
   }
   sessoes.sort((a,b)=>Date.parse(b.rodada.inicio)-Date.parse(a.rodada.inicio));
@@ -1607,6 +1608,25 @@ function viewComparacaoHistorica(comparacao,assuntos,materias){
   return `<div class="qb-history-compare" role="group" aria-label="Aproveitamento por assunto">${linhas}</div>`;
 }
 
+function comparacaoPeriodosHistoricos(sessoes){
+  const {evoDe:de,evoAte:ate}=S;
+  if(!de||!ate||de>ate||!sessoes.length)return '';
+  const anteriorAte=addDias(de,-1);
+  const anteriorDe=addDias(anteriorAte,-difDias(de,ate));
+  const anteriores=sessoesHistoricas(anteriorDe,anteriorAte).sessoes;
+  if(!anteriores.length)return '';
+  const precisao=grupo=>{
+    const [certas,validas]=grupo.reduce(([c,n],sessao)=>[c+sessao.c,n+sessao.c+sessao.e],[0,0]);
+    return validas?certas/validas:null;
+  };
+  const atual=precisao(sessoes),anterior=precisao(anteriores);
+  if(atual===null||anterior===null)return '';
+  const delta=Math.round((atual-anterior)*100);
+  return `<div class="qb-history-period-compare"><h4>Precisão entre períodos</h4>
+    <p><strong>Atual</strong> · ${ddmm(de)} a ${ddmm(ate)} · ${fmtPct(atual)}</p>
+    <p><strong>Anterior</strong> · ${ddmm(anteriorDe)} a ${ddmm(anteriorAte)} · ${fmtPct(anterior)}</p>
+    <p class="qb-analytics-note">Diferença de ${delta>0?'+':''}${delta} p.p. · somente respostas válidas, com os mesmos filtros de matéria e assunto.</p></div>`;
+}
 function viewSessoesHistoricas(){
   const {materias,assuntos,comparacao,sessoes}=sessoesHistoricas();
   const comparar=S.evoGrafico==='assuntos';
@@ -1651,6 +1671,7 @@ function viewSessoesHistoricas(){
       ${comparar?'':`<div class="seg" role="group" aria-label="Agrupar por">${[['d','Dia'],['s','Semana'],['m','Mês']].map(([k,t])=>`<button type="button" data-evoper="${k}" aria-pressed="${S.evoPer===k}">${t}</button>`).join('')}</div>`}
       <details class="qb-history-dates" ${S.evoDe||S.evoAte?'open':''}><summary>Filtrar datas</summary><div><label>De<input type="date" id="evo-de" value="${esc(S.evoDe)}"></label><label>Até<input type="date" id="evo-ate" value="${esc(S.evoAte)}"></label><button type="button" class="lnk" id="evo-limpa">Limpar datas</button></div></details>
     </div>
+    ${comparacaoPeriodosHistoricos(sessoes)}
     <div class="qb-history-chart-head">
       <div class="seg" role="group" aria-label="Visualização do gráfico"><button type="button" data-evo-grafico="tempo" aria-pressed="${!comparar}">Por período</button><button type="button" data-evo-grafico="assuntos" aria-pressed="${comparar}">Comparar assuntos</button></div>
       ${comparar?`<div class="seg" role="group" aria-label="Ordenar assuntos"><button type="button" data-evo-ordem="menor" aria-pressed="${S.evoOrdem==='menor'}">Menor %</button><button type="button" data-evo-ordem="maior" aria-pressed="${S.evoOrdem==='maior'}">Maior %</button></div>`:
@@ -1662,7 +1683,7 @@ function viewSessoesHistoricas(){
     <div class="qb-history-list-head"><h4>Sessões de treino <span>${exibidas.length}</span></h4>${faixa?`<button type="button" class="lnk" data-evo-faixa="">Limpar seleção · ${lblEvo(faixa)}</button>`:''}</div>
     ${rows?`<div class="tbl-wrap"><table aria-label="Sessões de treino filtradas"><thead><tr><th>Data</th><th>Assunto</th><th class="num" title="Acertos">C</th><th class="num" title="Erros">E</th><th class="num" title="Em branco">B</th><th class="num">% acerto</th></tr></thead><tbody>${rows}</tbody></table></div>`:'<p class="qb-analytics-note">Nenhuma sessão neste recorte.</p>'}
     ${paginas>1?`<nav class="qb-history-pages" aria-label="Páginas de sessões"><button type="button" class="btn ghost small" data-evo-pagina="${pagina-1}" ${pagina===0?'disabled':''}>Anterior</button><span>${inicio+1}–${Math.min(inicio+porPagina,exibidas.length)} de ${exibidas.length}</span><button type="button" class="btn ghost small" data-evo-pagina="${pagina+1}" ${pagina===paginas-1?'disabled':''}>Próxima</button></nav>`:''}
-  </section>`;
+  </section>`+(window.QBInsights?.answerList(S,exibidas.flatMap(s=>s.tentativas))||'');
 }
 function viewHistorico(){
   const cs=caps(), st=estatisticas(), h=hoje();
