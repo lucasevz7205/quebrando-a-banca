@@ -13,7 +13,7 @@ export async function invokeGeminiTutor({
   timeoutMs = 30000,
 }) {
   if (typeof apiKey !== "string" || !apiKey.trim()) {
-    throw new Error("Chave Gemini ausente. Configure GEMINI_API_KEY nos segredos da Base44.");
+    throw new Error("Chave Gemini ausente. Confira o segredo Arquiteto (ou ARQUITETO/GEMINI_API_KEY) na Base44.");
   }
   if (typeof prompt !== "string" || !prompt.trim() || prompt.length > 100000) {
     throw new Error("Contexto do tutor inválido ou excessivamente longo.");
