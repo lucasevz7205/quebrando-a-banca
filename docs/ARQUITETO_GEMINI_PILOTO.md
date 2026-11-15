@@ -5,7 +5,7 @@ Implementação opcional de provedor externo **somente para** `task: "tutor-chat
 
 - O código e as regras `TUTOR_RULES`/quatro modos (Socrático, Examinador CEBRASPE, Feynman simples, Desafio) são preservados.
 - `QB_TUTOR_PROVIDER` ausente ou diferente de `gemini` => serviço original `Core.InvokeLLM`.
-- `QB_TUTOR_PROVIDER=gemini` => API Gemini `generateContent`, via servidor e segredo `GEMINI_API_KEY`.
+- `QB_TUTOR_PROVIDER=gemini` => API Gemini `generateContent`, via servidor e segredo `Arquiteto` (alternativamente `ARQUITETO` ou `GEMINI_API_KEY`).
 - Erros, ausência da chave, quota e timeout da API Gemini **não** disparam `InvokeLLM` Base44 automaticamente.
 - Outras tarefas do Omni (Feynman evaluate, curadoria, geração, Cornell, etc.) **continuam usando Base44** e podem consumir créditos de integração.
 - Não altera entidades, schemas, respostas, progresso, remissões, material, UI ou usuários.
@@ -18,7 +18,7 @@ Implementação opcional de provedor externo **somente para** `task: "tutor-chat
 ## Segredos: configurar exclusivamente na Base44, nunca no HTML/repositório/chat
 No painel do app, abrir configurações dos **segredos/variáveis de ambiente do backend**:
 1. Criar uma chave Gemini no Google AI Studio (projeto de teste, acompanhar quotas e faturamento).
-2. Configurar `GEMINI_API_KEY=<chave>` nos segredos do app.
+2. Configurar o segredo `Arquiteto` com o valor da chave no backend. A integração também reconhece `ARQUITETO` (quando o painel exigir nomes em maiúsculas) e `GEMINI_API_KEY` para compatibilidade.
 3. Usar `QB_TUTOR_PROVIDER=gemini` **somente quando aprovado o início do teste**.
 4. Opcional: `QB_GEMINI_MODEL=gemini-3.5-flash-lite` (padrão já configurado no código).
 5. Para voltar imediatamente ao modelo Base44, alterar `QB_TUTOR_PROVIDER=base44` ou remover esse segredo.
@@ -36,7 +36,7 @@ A chave jamais vai para `VITE_*` nem para o navegador. A solicitação vai do se
 ## Checklist de homologação
 - [x] Testes do adaptador 7/7 (mock; sem gastar créditos externos).
 - [x] `npm run build` passou com `base44:runtime`.
-- [ ] Usuário cria e instala a chave da API em segredos do backend.
+- [ ] Confirmar que o segredo `Arquiteto` ou `ARQUITETO` está registrado no backend e disponível para o aplicativo correto.
 - [ ] Publicar a alteração de código e só depois ativar `QB_TUTOR_PROVIDER=gemini`.
 - [ ] Testar conversa real autenticada em cada um dos 4 modos e comparar com respostas anteriores.
 - [ ] Confirmar no painel de uso da API Google que houve chamada e que não houve nova chamada `InvokeLLM` para `tutor-chat`.
