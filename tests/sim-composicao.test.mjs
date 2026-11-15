@@ -10,7 +10,7 @@ const mk=(t,n,real=0)=>Array.from({length:n},(_,i)=>({id:`${t}-q${String(i).padS
 const base=(over={})=>({blueprint:bp,topicos,
  questoes:[...mk("pl-1",20,6),...mk("pl-2",20,0),...mk("pl-3",20,0),...mk("pl-4",20,0)],
  topicoDe:q=>q.t,visto:t=>t.id!=="pl-3",real:q=>q.real,elegivel:()=>true,usados:new Set(),semente:"2026-11-22",...over});
-test("regra vale a partir de 22/11/2026",()=>assert.equal(REGRA_DESDE,"2026-11-22"));
+test("regra vale a partir de 15/11/2026",()=>assert.equal(REGRA_DESDE,"2026-11-15"));
 test("repartir soma o total e desempata por id",()=>{
  const r=repartir(10,[{id:"b",w:1},{id:"a",w:1},{id:"c",w:1}]);
  assert.equal([...r.values()].reduce((a,b)=>a+b,0),10);assert.equal(r.get("a"),4);

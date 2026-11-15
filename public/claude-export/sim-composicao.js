@@ -10,7 +10,7 @@
   else root.QBSimComposicao = api;
 })(typeof window !== "undefined" ? window : globalThis, function () {
   "use strict";
-  const REGRA_DESDE = "2026-11-22";
+  const REGRA_DESDE = "2026-11-15";
 
   function semente(texto) {
     let h = 1779033703 ^ texto.length;
