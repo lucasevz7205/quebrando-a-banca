@@ -1,0 +1,24 @@
+<!-- @dsCard group="Components" viewport="760x760" name="TrainingRadial" subtitle="Matéria → assunto → ação, com alternativa em lista" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{padding:24px;min-height:100vh}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { TrainingRadial } = window.QuebrandoABancaDesignSystem_3e4054;
+const T=(id,num,title,c,w)=>({id,num,title,status:'studying',correct:c,wrong:w,blank:0});
+const subjects=[
+{id:'lp',name:'Língua Portuguesa',short:'LP',block:'P1',icon:'feather',topics:[T('lp-1','1','Compreensão e interpretação de textos',22,6),T('lp-2','2',null,0,0),T('lp-4.2','4.2','Emprego de tempos e modos verbais',9,8)]},
+{id:'dc',name:'Direito Constitucional e Regimento Interno',short:'DC',block:'P1',icon:'landmark',topics:[T('dc-1','1',null,14,3),T('dc-2a','2a',null,18,12),T('dc-3','3',null,0,0),T('dc-4','4',null,30,4)]},
+{id:'da',name:'Direito Administrativo',short:'DA',block:'P1',icon:'building-2',topics:[T('da-10.1','10.1','Licitações públicas',16,9),T('da-10.6','10.6','Papel do fiscalizador do contrato',7,7)]},
+{id:'cp',name:'Ciência Política',short:'Ciência Política',block:'P2',icon:'vote',topics:[T('cp-3','3','Sistemas e formas de governo',0,0)]}];
+function App(){const [sel,setSel]=React.useState({subjectId:'dc',topicId:null});const [last,setLast]=React.useState(null);
+return(<div style={{display:'flex',flexDirection:'column',gap:12}}>
+<TrainingRadial subjects={subjects} value={sel} onChange={setSel} pending={{'dc-2a':3}} onAction={setLast} linkInfo={(s,t,a)=>a==='mindmap'&&t!=='dc-2a'?{available:false,note:'Sem vínculo'}:{nodeId:a==='mindmap'?'pl':undefined}}/>
+<code style={{font:'400 12px/1.4 var(--font-mono)',color:'var(--text-muted)',textAlign:'center'}}>{last?JSON.stringify(last):'onAction → { subjectId, topicId, action, nodeId }'}</code>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

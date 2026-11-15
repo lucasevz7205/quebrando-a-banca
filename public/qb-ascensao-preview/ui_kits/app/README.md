@@ -1,20 +1,20 @@
-# UI kit — Quebrando a Banca: A Ascensão (study app)
+# UI kit — Quebrando a Banca (plataforma de estudos)
 
-Click-through recreation of the learning platform, composed only from the design-system components (`window.QuebrandoABancaDesignSystem_3e4054`).
+Click-through of the full platform, composed only from design-system components (`window.QuebrandoABancaDesignSystem_3e4054`). All data is demonstrative (`data.js`, `data-edital.js`) and every screen computes metrics through `metrics.js`.
 
-**Source note:** the only existing product UI provided was the "Exemplo de dashboard superior" strip on the brand sheet (`assets/reference/dashboard-header-reference.png`) plus the component/behaviour spec in `uploads/CLAUDE_DESIGN_SYSTEM.md`. Screens are therefore composed from that spec — not traced from production screenshots. Replace with real screens when available.
-
-## Flow
-1. **Welcome** (`?view=welcome`, or click the profile avatar) — full night scene, vertical emblem, e-mail + Entrar.
-2. **Dashboard** (default) — `BrandHeader`, sunset `HeroAscension`, `RadialNavigation` (list fallback < 500px), plan of the day, performance bars, milestone emblems.
-3. **Questões** — compact header, `StudySessionHeader`, `QuestionCard` → confidence → `AnswerActionBar` confirm → `FeedbackDrawer`. Keys: **C / E** answer, **Enter** confirm/next. After an error a factual `CognitiveAlertBanner` appears. Focus-mode toggle hides chrome.
-4. **Mapa** — `MindMapCanvas` + `ConceptPanel`. Opened from a question it shows "Voltar à questão Q 0412" and returns with state preserved.
-5. **Flashcards** — `Flashcard` flip (Space) → rate → next; completion panel with Sábio emblem progress.
-6. **Tutor** — context panel + `TutorPanel` with canned demo replies to the three suggestions.
+## Screens (`?view=` to deep-link)
+- `dashboard` — Menu principal: sunset banner, separate indicators (acertos, cobertura, volume, tarefas), radial shortcuts incl. O Arquiteto, Hoje list, milestones.
+- `plan` — Planejamento: Hoje / Semana / Ciclos; panorama; reschedule with preview/undo; week navigation (3 demo weeks); hours + cycle sequence.
+- `edital` — Lista (tree, filters, Evocar antes de ler, contextual actions) / Mapa de calor / Radial.
+- `train` — Treinar: TrainingRadial (matéria → assunto → 4 ações) as the main selector, plus suggested round, pending items, weakest topics. Every action goes through `QB_NAV.resolve` (`links.js`); no link → `nolink` state with safe return.
+- `study` — Estudo: Mapas mentais (StudyTopicPicker + MindMapCanvas + ConceptPanel; node → related questions) / Flashcards decks → `flashcards` session.
+- `simulado` — Preparação / Histórico; objective exam, discursive, result.
+- `performance` — Análise diária / histórica / Método (v4: filtros, indicadores, evolução, prioridades, explorer por matéria, questões do período — ver `docs/DESEMPENHO-V4.md`).
+- `questions`, `flashcards` — focused sessions (v1), with O Arquiteto launcher keeping context.
+- `welcome` — boas-vindas (avatar → sair).
+- **O Arquiteto** — global: chip in the toolbar, floating launcher, topic actions in the edital, task panel, Treinar.
 
 ## Files
-- `index.html` — loads styles, bundle, `data.js`, then the screens.
-- `data.js` — demo content (CF/88 arts. 60, 62, 66, 67), illustrative metrics.
-- `AppShell.jsx` · `Welcome.jsx` · `Dashboard.jsx` · `QuestionSession.jsx` · `MindMapScreen.jsx` · `FlashcardSession.jsx` · `TutorScreen.jsx` · `App.jsx` (view state, timer, cross-screen remission).
+`index.html` · `data.js` · `data-edital.js` · `metrics.js` · `links.js` (identifiers + navigation service) · `Shell.jsx` (toolbar + nav + background + Arquiteto layer) · `Welcome.jsx` · `Dashboard.jsx` · `PlanScreen.jsx` · `EditalScreen.jsx` · `TrainStudy.jsx` · `MindMapScreen.jsx` · `SimuladoScreen.jsx` · `PerformanceScreen.jsx` · `QuestionSession.jsx` · `FlashcardSession.jsx` · `App.jsx`.
 
-All AI/SRS behaviour is simulated and labelled "Demonstração".
+See `docs/ATUALIZACAO-V3.md`, `docs/CONTRATOS-NAVEGACAO.md` and `docs/ATUALIZACAO-V2.md` for the reference → implementation matrix and what is functional / simulated / pending integration.

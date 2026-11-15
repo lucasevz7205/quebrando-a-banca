@@ -1,0 +1,20 @@
+<!-- @dsCard group="Components" viewport="1180x760" name="O Arquiteto" subtitle="ArchitectStudio (Socrático, Feynman, Cornell, Flashcards 3D e Scanner, Pomodoro e Áudio), ArchitectLauncher" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{padding:24px;min-height:100vh}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const DS = window.QuebrandoABancaDesignSystem_3e4054;
+
+const { ArchitectStudio, ArchitectLauncher } = DS;
+const SUBJ=[{id:'lp',name:'Língua Portuguesa',short:'LP',block:'P1',icon:'feather',topics:[{id:'a',num:'1',title:'Compreensão e interpretação de textos',status:'reviewing',correct:17,wrong:4},{id:'b',num:'4.1',status:'studying',correct:6,wrong:5},{id:'c',num:'4.2',title:'Emprego de tempos e modos verbais',status:'mastered',correct:28,wrong:2},{id:'d',num:'5.1',status:'not-started',correct:0,wrong:0},{id:'e',num:'5.2',status:'studying',correct:9,wrong:8}]},{id:'da',name:'Direito Administrativo',short:'DA',block:'P1',icon:'building-2',topics:[{id:'f',num:'10.1',title:'Licitações públicas',status:'studying',correct:15,wrong:4},{id:'g',num:'10.6',title:'Papel do fiscalizador do contrato',status:'reviewing',correct:22,wrong:3},{id:'h',num:'11',status:'not-started',correct:0,wrong:0}]}];
+function App(){const [ctx,setCtx]=React.useState({subjectId:'da',topicId:'g',origin:'questão Q 0412'});const [q,setQ]=React.useState(true);return(<div style={{paddingBottom:40}}>
+<ArchitectStudio mode="inline" subjects={SUBJ} context={ctx} onContextChange={setCtx} deck={[{front:'Quem determina a regularização de faltas na execução?',back:'O fiscal do contrato (Lei 14.133/2021, art. 117, § 1º).'}]} style={{height:700}}/>
+<ArchitectLauncher open={q} onOpenChange={setQ} contextLabel="questão Q 0412 · DA 10.6"/>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

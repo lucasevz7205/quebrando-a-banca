@@ -19,7 +19,7 @@ function Bubble({ m, onRef }) {
   );
 }
 
-export function TutorPanel({ messages = [], onSend, suggestions = [], contextLabel, demo = true, thinking = false, onRef, onClose, title = 'Tutor', style }) {
+export function TutorPanel({ messages = [], onSend, suggestions = [], contextLabel, demo = true, thinking = false, onRef, onClose, title = 'O Arquiteto', style }) {
   const [text, setText] = React.useState('');
   const listRef = React.useRef(null);
   React.useEffect(() => { if (listRef.current) listRef.current.scrollTop = listRef.current.scrollHeight; }, [messages.length, thinking]);

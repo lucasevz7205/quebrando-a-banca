@@ -24,7 +24,7 @@ function SessionSummary({ answers, go }) {
   );
 }
 
-function QuestionSession({ session, setSession, elapsed, paused, onTogglePause, go }) {
+function QuestionSession({ session, setSession, elapsed, paused, onTogglePause, go, backTo }) {
   const qs = window.QB_DATA.questions;
   const { idx, answers, drawer, focus, bannerDismissed } = session;
   const done = idx >= qs.length;
@@ -52,12 +52,12 @@ function QuestionSession({ session, setSession, elapsed, paused, onTogglePause, 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       {!focus && (
-        <BrandHeader variant="compact" floating={false} onExit={() => go('dashboard')}>
+        <BrandHeader variant="compact" floating={false} onExit={() => go(backTo || 'dashboard')}>
           <span className="qb-overline">Sessão de questões</span>
           <span style={{ font: '400 16px/1.2 var(--font-heading)', color: 'var(--text-primary)' }}>Processo legislativo</span>
         </BrandHeader>
       )}
-      <StudySessionHeader subject="Direito Constitucional" topic="Processo legislativo — emendas e medidas provisórias" current={Math.min(idx + 1, qs.length)} total={qs.length} elapsed={elapsed} paused={paused} onTogglePause={onTogglePause} focusMode={focus} onToggleFocus={() => patch({ focus: !focus })} onBack={() => go('dashboard')} />
+      <StudySessionHeader subject="Direito Constitucional" topic="Processo legislativo — emendas e medidas provisórias" current={Math.min(idx + 1, qs.length)} total={qs.length} elapsed={elapsed} paused={paused} onTogglePause={onTogglePause} focusMode={focus} onToggleFocus={() => patch({ focus: !focus })} onBack={() => go(backTo || 'dashboard')} />
       <div style={{ position: 'relative', flex: 1, display: 'flex', flexDirection: 'column' }}>
         <main style={{ width: '100%', maxWidth: 820, margin: '0 auto', padding: '28px 16px', display: 'flex', flexDirection: 'column', gap: 16 }}>
           {done ? <SessionSummary answers={answers} go={go} /> : (

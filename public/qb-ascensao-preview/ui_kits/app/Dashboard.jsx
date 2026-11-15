@@ -1,65 +1,51 @@
 (() => {
-const { HeroAscension, RadialNavigation, Panel, ProgressBar, AchievementEmblem, Button, Icon, Badge } = window.QuebrandoABancaDesignSystem_3e4054;
+const { HeroAscension, RadialNavigation, Panel, AchievementEmblem, Button, Badge, StatCard, TaskCard } = window.QuebrandoABancaDesignSystem_3e4054;
 
-function PlanItem({ icon, title, meta, done, onClick }) {
+function Dashboard({ go, openArchitect }) {
+  const M = window.QB_METRICS, P = window.QB_PLAN;
+  const tot = M.totals(window.QB_EDITAL.subjects);
+  const todayTasks = P.weeks[0].filter(t => t.date === P.today);
+  const done = todayTasks.filter(t => t.status === 'done').length;
+  const late = Object.values(P.weeks).flat().filter(t => t.status === 'late').length;
   return (
-    <button onClick={onClick} className="qb-radial__row" style={{ background: 'transparent', minHeight: 60 }}>
-      <span style={{ width: 36, height: 36, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: `1px solid ${done ? 'var(--state-correct)' : 'rgba(208,179,134,.55)'}`, color: done ? 'var(--state-correct)' : 'var(--qb-gold)', flexShrink: 0 }}>
-        <Icon name={done ? 'check' : icon} size={18} />
-      </span>
-      <span style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 2 }}>
-        <span style={{ font: '500 15px/1.3 var(--font-body)', textDecoration: done ? 'line-through' : 'none', color: done ? 'var(--text-muted)' : 'var(--text-primary)' }}>{title}</span>
-        <span style={{ font: '400 13px/1.3 var(--font-body)', color: 'var(--text-muted)' }}>{done ? 'Concluído' : meta}</span>
-      </span>
-      {!done && <Icon name="chevron-right" size={18} color="var(--text-muted)" />}
-    </button>
-  );
-}
-
-function Dashboard({ go, progress }) {
-  const answered = progress.answered;
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-      <HeroAscension scene="sunset" height={260} focal="right" eyebrow={window.QB_DATA.exam} title="A Ascensão continua" subtitle="Hoje: processo legislativo — 5 questões e 5 flashcards.">
-        <Button iconRight="arrow-right" onClick={() => go('questions')}>{answered ? 'Continuar sessão' : 'Iniciar sessão'}</Button>
-        <Button variant="secondary" icon="network" onClick={() => go('map')}>Abrir mapa do tema</Button>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+      <HeroAscension scene="sunset" height={220} focal="right" eyebrow="Câmara dos Deputados · Analista Legislativo" title="Sua preparação continua" subtitle={'Hoje: ' + todayTasks.length + ' tarefas planejadas · próximo simulado em ' + window.QB_SIM.next.label + '.'}>
+        <Button iconRight="arrow-right" onClick={() => go('plan', 'hoje')}>Ver o plano de hoje</Button>
+        <Button variant="secondary" icon="target" onClick={() => go('train')}>Treinar agora</Button>
       </HeroAscension>
-      <div className="qb-dash-grid">
-        <Panel style={{ display: 'flex', flexDirection: 'column', gap: 8, alignItems: 'center' }} padding="24px 16px 28px">
-          <div style={{ alignSelf: 'stretch', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 8px' }}>
-            <h2 style={{ font: 'var(--type-h2)' }}>Sua jornada</h2>
-            <Badge tone="neutral" icon="info">Dados de demonstração</Badge>
-          </div>
-          <RadialNavigation size={500} onSelect={go}
-            center={{ value: 0.42, overline: 'Edital', label: 'Analista Legislativo' }}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}><Badge tone="neutral" icon="info">Dados demonstrativos</Badge><span style={{ font: '400 12px/1.3 var(--font-body)', color: 'var(--text-muted)' }}>Métricas acumuladas do edital (treino). Simulados ficam separados.</span></div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 12 }}>
+        <StatCard label="Taxa de acertos" icon="target" tone="correct" value={M.pct(tot.accuracy)} detail={tot.correct + ' de ' + tot.valid + ' respostas válidas'} note="acertos ÷ (acertos + erros). Brancos fora." onClick={() => go('performance')} />
+        <StatCard label="Cobertura do edital" icon="scroll-text" value={M.pct(tot.coverage)} detail={tot.studied + ' de ' + tot.total + ' tópicos com estudo iniciado'} note="Tópico coberto = status diferente de Não iniciado." onClick={() => go('edital')} />
+        <StatCard label="Questões respondidas" icon="list-checks" value={tot.answered} detail={tot.blank + ' em branco incluídas'} onClick={() => go('performance')} />
+        <StatCard label="Tarefas de hoje" icon="calendar" value={done + '/' + todayTasks.length} detail={late ? late + ' atrasadas (últimos 14 dias)' : 'Nenhuma atrasada'} warning={late ? 'Há tarefas atrasadas' : null} onClick={() => go('plan', 'hoje')} />
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,460px),1fr))', gap: 20, alignItems: 'start' }}>
+        <Panel padding="20px 16px 24px" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+          <h2 style={{ font: 'var(--type-h2)', alignSelf: 'flex-start', padding: '0 8px' }}>Atalhos</h2>
+          <RadialNavigation size={480} onSelect={id => id === 'architect' ? openArchitect() : go(id)}
+            center={{ value: tot.coverage / 100, overline: 'Cobertura', label: tot.studied + ' de ' + tot.total + ' tópicos' }}
             items={[
-              { id: 'questions', label: 'Questões', icon: 'list-checks', meta: `${5 - answered} restantes` },
-              { id: 'map', label: 'Mapas mentais', icon: 'network', meta: '2 nós com erro' },
-              { id: 'flashcards', label: 'Flashcards', icon: 'layers', meta: `${5 - progress.cards} pendentes` },
-              { id: 'tutor', label: 'Tutor', icon: 'message-circle', meta: 'Demonstração' },
-              { id: 'dashboard', label: 'Revisão', icon: 'history', meta: '12 itens' },
+              { id: 'train', label: 'Treinar', icon: 'target', meta: late + ' pendências' },
+              { id: 'edital', label: 'Edital', icon: 'scroll-text', meta: tot.total + ' tópicos' },
+              { id: 'study', label: 'Estudo', icon: 'book-open', meta: 'Mapas e cartões' },
+              { id: 'simulado', label: 'Simulado', icon: 'graduation-cap', meta: window.QB_SIM.next.date.slice(8) + '/11' },
+              { id: 'performance', label: 'Desempenho', icon: 'chart-column', meta: M.pct(tot.accuracy) + ' acertos' },
+              { id: 'architect', label: 'O Arquiteto', icon: 'sparkles', meta: 'Simulação' },
             ]} />
         </Panel>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-          <Panel style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            <h2 style={{ font: 'var(--type-h2)', marginBottom: 8 }}>Plano de hoje</h2>
-            <PlanItem icon="list-checks" title="Questões · Emendas e MPs" meta="5 itens Cebraspe · ~10 min" done={answered >= 5} onClick={() => go('questions')} />
-            <PlanItem icon="layers" title="Flashcards · Processo legislativo" meta="5 cartões · ~5 min" done={progress.cards >= 5} onClick={() => go('flashcards')} />
-            <PlanItem icon="network" title="Revisar nó “Limites formais”" meta="2 erros recentes" onClick={() => go('map', { node: 'lf' })} />
-          </Panel>
-          <Panel style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            <h2 style={{ font: 'var(--type-h2)' }}>Desempenho por tema</h2>
-            <ProgressBar value={0.68} label="Direito Constitucional" tone="correct" />
-            <ProgressBar value={0.54} label="Regimento Interno da Câmara" tone="correct" />
-            <ProgressBar value={0.31} label="Língua Portuguesa" tone="correct" />
-            <span style={{ font: 'var(--type-caption)', color: 'var(--text-muted)' }}>Percentual de acertos nos últimos 30 dias.</span>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+          <Panel style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}><h2 style={{ font: 'var(--type-h2)' }}>Hoje</h2><button className="qb-linkbtn" onClick={() => go('plan', 'hoje')}>Planejamento completo</button></div>
+            {todayTasks.slice(0, 4).map(t => <TaskCard key={t.id} task={t} onClick={() => go('plan', 'hoje')} />)}
+            <span style={{ font: '400 13px/1 var(--font-body)', color: 'var(--text-muted)' }}>+ {todayTasks.length - 4} tarefas</span>
           </Panel>
           <Panel variant="ornate" style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-            <h2 style={{ font: '600 15px/1.2 var(--font-display)', letterSpacing: '.12em', color: 'var(--qb-gold)' }}>MARCOS DA ASCENSÃO</h2>
+            <h2 style={{ font: '600 14px/1.2 var(--font-display)', letterSpacing: '.12em', color: 'var(--qb-gold)' }}>MARCOS</h2>
             <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8 }}>
-              <AchievementEmblem variant="soldado" state="earned" size={80} rule="7 dias seguidos" style={{ width: 110 }} />
-              <AchievementEmblem variant="sabio" state="in-progress" progress={0.6} size={80} rule="200 flashcards" style={{ width: 110 }} />
-              <AchievementEmblem variant="estrategista" state="locked" size={80} rule="1 simulado completo" style={{ width: 110 }} />
+              <AchievementEmblem variant="soldado" state="earned" size={76} rule="7 dias seguidos" style={{ width: 110 }} />
+              <AchievementEmblem variant="sabio" state="in-progress" progress={0.6} size={76} rule="200 flashcards" style={{ width: 110 }} />
+              <AchievementEmblem variant="estrategista" state="in-progress" progress={1 / 3} size={76} rule="3 simulados completos (1/3)" style={{ width: 110 }} />
             </div>
           </Panel>
         </div>

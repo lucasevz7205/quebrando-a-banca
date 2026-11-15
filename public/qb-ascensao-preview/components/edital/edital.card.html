@@ -1,0 +1,22 @@
+<!-- @dsCard group="Components" viewport="1000x720" name="Edital" subtitle="EditalTree + TopicRow, HeatmapGrid + HeatmapLegend, SubjectRadial" -->
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{padding:24px;min-height:100vh}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const DS = window.QuebrandoABancaDesignSystem_3e4054;
+
+const { EditalTree, HeatmapGrid, HeatmapLegend, SubjectRadial, Panel } = DS;
+const SUBJ=[{id:'lp',name:'Língua Portuguesa',short:'LP',block:'P1',icon:'feather',topics:[{id:'a',num:'1',title:'Compreensão e interpretação de textos',status:'reviewing',correct:17,wrong:4},{id:'b',num:'4.1',status:'studying',correct:6,wrong:5},{id:'c',num:'4.2',title:'Emprego de tempos e modos verbais',status:'mastered',correct:28,wrong:2},{id:'d',num:'5.1',status:'not-started',correct:0,wrong:0},{id:'e',num:'5.2',status:'studying',correct:9,wrong:8}]},{id:'da',name:'Direito Administrativo',short:'DA',block:'P1',icon:'building-2',topics:[{id:'f',num:'10.1',title:'Licitações públicas',status:'studying',correct:15,wrong:4},{id:'g',num:'10.6',title:'Papel do fiscalizador do contrato',status:'reviewing',correct:22,wrong:3},{id:'h',num:'11',status:'not-started',correct:0,wrong:0}]}];
+function App(){const [sel,setSel]=React.useState('g');const [open,setOpen]=React.useState(['da']);return(<div style={{display:'grid',gridTemplateColumns:'minmax(0,1.2fr) minmax(0,1fr)',gap:16,alignItems:'start'}}>
+<div style={{display:'flex',flexDirection:'column',gap:14}}>
+<Panel style={{display:'flex',flexDirection:'column',gap:12}}><HeatmapGrid subjects={SUBJ} selectedTopicId={sel} onSelect={(s,t)=>{setSel(t);setOpen(o=>[...o,s]);}}/><HeatmapLegend/></Panel>
+<EditalTree subjects={SUBJ} expanded={open} onToggle={id=>setOpen(o=>o.includes(id)?o.filter(x=>x!==id):[...o,id])} highlightId={sel} groupTitles={{'da:10':'Licitações e contratos'}}/></div>
+<Panel padding={12}><SubjectRadial subjects={SUBJ} size={400} summary={{accuracy:79,correct:97,wrong:26,valid:123,answered:123,coverage:75,studied:6,total:8}} onOpenList={()=>{}}/></Panel>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>
