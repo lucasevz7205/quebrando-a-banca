@@ -1,0 +1,4769 @@
+{
+  "exportado_em": "2026-11-15T12:54:51.465Z",
+  "finalidade": "Análise de resultado de simulado pelo Claude",
+  "simulado": {
+    "tipo": "obj",
+    "data": "2026-11-15",
+    "inicio": "2026-11-15T11:53:16.378Z",
+    "minutos": 53,
+    "p1": 60,
+    "p2": 66,
+    "regra": "legado",
+    "faltas": [],
+    "itens": [
+      {
+        "qid": "b26ns-017",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "lp55-32",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "lp54-28",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "lp41-63",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "lp57-05",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "mmgan-lp-4-2-mwdnv1so-01",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lp6-23",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "lp56-25",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "lp6-17",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "mmgan-lp-6-1-mwf0sbn9-01",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "mmgan-lp-6-2-mwf0y3o8-01",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "b26ns-005",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "lp55-27",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "lp54-29",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "lp41-48",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "lp57-06",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lp42-22",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lp6-24",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "lp56-16",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "lp6-22",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "B",
+        "conf": null
+      },
+      {
+        "qid": "mmgan-lp-6-1-mwf0saxh-01",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lp6-08",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "b26plf-009",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lp55-03",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lp54-24",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lp41-49",
+        "prova": "P1",
+        "mat": "lp",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "b26ns-027",
+        "prova": "P1",
+        "mat": "li",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "b26ns-029",
+        "prova": "P1",
+        "mat": "li",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "b26ns-032",
+        "prova": "P1",
+        "mat": "li",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "li1-01",
+        "prova": "P1",
+        "mat": "li",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "li1-02",
+        "prova": "P1",
+        "mat": "li",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "li1-03",
+        "prova": "P1",
+        "mat": "li",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "b26ns-033",
+        "prova": "P1",
+        "mat": "li",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "b26ns-034",
+        "prova": "P1",
+        "mat": "li",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "b26ns-035",
+        "prova": "P1",
+        "mat": "li",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "b26plf-029",
+        "prova": "P1",
+        "mat": "li",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "b26tec-140",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "da6-42",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "cx-ap82-04-c",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "ap81-17",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "da102-14",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "da43-18",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "da41-05",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "da42-19",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "da2-49",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "da44-04",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "da106-16",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "da7-02",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "da12-07",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "ap84-27",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "da101-02",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "da5-28",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "B",
+        "conf": null
+      },
+      {
+        "qid": "da102-13",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "da107-01",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "da102-46",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "da102-25",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "jur-da34-01",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "b26plf-073",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "da6-50",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "cx-ap82-09-c",
+        "prova": "P1",
+        "mat": "da",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "b26ns-068",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "dc11-42",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "dc23-39",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "dc24-35",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "jur-dc5-08",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "dc1-26",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "cx-dc13-16-c",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "dc14-18",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "dc12-12",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "dc15-08",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "dc25-01",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "dc22-02",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "dc73-01",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "dc74-01",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "jur-dc2b-01",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "dc81-06",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "b26plf-049",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "dc11-34",
+        "prova": "P1",
+        "mat": "dc",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "b26tec-155",
+        "prova": "P1",
+        "mat": "ti",
+        "marcada": "B",
+        "conf": null
+      },
+      {
+        "qid": "ti52-18",
+        "prova": "P1",
+        "mat": "ti",
+        "marcada": "C",
+        "conf": 1
+      },
+      {
+        "qid": "ti3-01",
+        "prova": "P1",
+        "mat": "ti",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "ti11-40",
+        "prova": "P1",
+        "mat": "ti",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "ti12-03",
+        "prova": "P1",
+        "mat": "ti",
+        "marcada": "B",
+        "conf": null
+      },
+      {
+        "qid": "ti41-08",
+        "prova": "P1",
+        "mat": "ti",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "mmgan-ti-2-mwf7ixrg-06",
+        "prova": "P1",
+        "mat": "ti",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "ti14-25",
+        "prova": "P1",
+        "mat": "ti",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "ti53-19",
+        "prova": "P1",
+        "mat": "ti",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "ti13-01",
+        "prova": "P1",
+        "mat": "ti",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "ti42-11",
+        "prova": "P1",
+        "mat": "ti",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "ti6-26",
+        "prova": "P1",
+        "mat": "ti",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "pl21b-02",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "pl21-03",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "pl31-39",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "pl11-01",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "b26plf-057",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "pl21-ym-091",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 1
+      },
+      {
+        "qid": "pl21-33",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "pl31-18",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "pl11-07",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "b26tec-102",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "pl21-ym-100",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "pl21-39",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "pl31-21",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "pl11-05",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "pl21-ym-057",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "pl21-17",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "pl31-25",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "B",
+        "conf": null,
+        "prim": "E"
+      },
+      {
+        "qid": "pl11-06",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "pl21-ym-029",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "pl21-24",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "pl31-29",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "pl11-08",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "pl21b-04",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "pl21-04",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "pl31-31",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "pl11-10",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "pl21b-03",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "pl21-40",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "pl31-26",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "pl11-11",
+        "prova": "P2",
+        "mat": "pl",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lg2-06",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "b26plf-041",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "lg1-13",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "lg2-13",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "b26plf-042",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "B",
+        "conf": null
+      },
+      {
+        "qid": "lg1-01",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "lg2-17",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "B",
+        "conf": null
+      },
+      {
+        "qid": "lg1-03",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "lg2-30",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lg1-08",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lg2-27",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lg1-07",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "lg2-28",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lg1-19",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "lg2-24",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "lg1-16",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "lg2-09",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lg1-15",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lg2-19",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "lg1-17",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "lg2-21",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "lg1-02",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "lg2-12",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "lg1-11",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "lg2-22",
+        "prova": "P2",
+        "mat": "lg",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "RF-2.8-R08",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "c25-11",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "c0-18",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "c14-13",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "RF-2.4-R08",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "c13-09",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "RF-2.7-R02",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "E",
+        "conf": 2
+      },
+      {
+        "qid": "c15-13",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "c16-15",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "c12-11",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "B",
+        "conf": null
+      },
+      {
+        "qid": "c11-14",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "RF-2.1-R08",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "RF-2.2-R11",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "RF-2.6-R18",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "c17-05",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "RF-2.3-R02",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "c18-01",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "RF-2.8-R17",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "c25-12",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "c0-14",
+        "prova": "P2",
+        "mat": "rf",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "cp9qc-14",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "CP-2-02",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "cp9-30",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "cp00-03",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "b26ns-083",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "B",
+        "conf": null
+      },
+      {
+        "qid": "cp9qc-04",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "CP-2-28",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "cp9-08",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "cp00-05",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "C",
+        "conf": 2
+      },
+      {
+        "qid": "b26ns-082",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "B",
+        "conf": null
+      },
+      {
+        "qid": "cp9qc-13",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "CP-2-11",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "cp9-04",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "E",
+        "conf": 3
+      },
+      {
+        "qid": "cp00-20",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "C",
+        "conf": 3
+      },
+      {
+        "qid": "cp9qc-15",
+        "prova": "P2",
+        "mat": "cp",
+        "marcada": "E",
+        "conf": 2
+      }
+    ],
+    "id": "2026-11-15-obj-1794743596378"
+  },
+  "itens_detalhados": [
+    {
+      "numero": 1,
+      "qid": "b26ns-017",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26ns-017",
+        "materia": "lp",
+        "topico": "lp-1",
+        "cap": "BANCA-LP",
+        "tema": "F7 · lp-1",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Texto de apoio: “O secretário-geral da UIP, Martin Chungong, defendeu o engajamento ativo de homens como parte da solução.” Assertiva: Infere-se do texto que a UIP defende a proteção masculina às mulheres como medida concreta para a garantia de representação igualitária nos espaços de poder, o que sugere o enraizamento do posicionamento machista na sociedade.",
+        "comentario": "O secretário-geral da UIP defendeu “o engajamento ativo de homens como parte da solução”, não proteção masculina; o texto não sugere machismo da UIP. Vacina: Ao ver “infere-se... o que sugere”, confira se a premissa está no texto com as mesmas palavras e se a conclusão é necessária."
+      }
+    },
+    {
+      "numero": 2,
+      "qid": "lp55-32",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp55-32",
+        "materia": "lp",
+        "cap": "LP-5.5",
+        "tema": "Sujeito composto posposto",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Na frase “Foi aprovado o requerimento e a emenda do relator”, a concordância está correta, ainda que o sujeito seja composto.",
+        "comentario": "O sujeito composto vem depois da locução verbal, que pode concordar com o núcleo mais próximo, “o requerimento” (Foi aprovado), ou com todos (Foram aprovados). Anteposto, só caberia o plural."
+      }
+    },
+    {
+      "numero": 3,
+      "qid": "lp54-28",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp54-28",
+        "materia": "lp",
+        "cap": "LP-5.4",
+        "tema": "Vírgula depois do “mas”",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Em “Mas, sem dúvida, devemos tentar”, a supressão apenas da vírgula empregada após “dúvida” manteria a correção gramatical do período.",
+        "comentario": "Sem a segunda vírgula, sobra “Mas, sem dúvida devemos tentar”: a primeira vírgula fica sozinha depois do “mas”, o que é vedado. As duas vírgulas do par saem juntas ou ficam juntas."
+      }
+    },
+    {
+      "numero": 4,
+      "qid": "lp41-63",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp41-63",
+        "materia": "lp",
+        "cap": "LP-4.1",
+        "tema": "Concessão → adversativa",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Texto de apoio: “Embora o prazo fosse curto, a comissão concluiu o parecer.” Assertiva: O período seria reescrito corretamente e sem alteração de sentido como “O prazo era curto, embora a comissão tenha concluído o parecer.”",
+        "comentario": "Trocou-se a oração que recebe o conector: o sentido inverteu. Versão correta: “O prazo era curto, mas a comissão concluiu o parecer.”"
+      }
+    },
+    {
+      "numero": 5,
+      "qid": "lp57-05",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp57-05",
+        "materia": "lp",
+        "topico": "lp-5-7",
+        "cap": "LP-5.7",
+        "tema": "Topônimo",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Em “Os pesquisadores referiram-se à Roma dos césares”, o acento grave justifica-se porque o topônimo, determinado por “dos césares”, passa a admitir artigo.",
+        "comentario": "Certo. Topônimo determinado ganha artigo."
+      }
+    },
+    {
+      "numero": 6,
+      "qid": "mmgan-lp-4-2-mwdnv1so-01",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "mmgan-lp-4-2-mwdnv1so-01",
+        "materia": "lp",
+        "topico": "lp-4-2",
+        "cap": "LP-4.2",
+        "tema": "Correlação Verbal e Condicionais",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "No período 'Se a equipe preparar o cronograma com antecedência, nós podemos iniciar a execução na próxima semana', o uso do verbo 'podemos', no presente do indicativo, em correlação com o futuro do subjuntivo na oração subordinada, está em conformidade com a norma culta padrão, dado o valor prospectivo do enunciado.",
+        "comentario": "O uso do presente do indicativo com valor de futuro é uma construção aceita quando o contexto é prospectivo, sendo comum em textos técnicos e legislativos para indicar condições viáveis."
+      }
+    },
+    {
+      "numero": 7,
+      "qid": "lp6-23",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp6-23",
+        "materia": "Língua Portuguesa",
+        "topico": "lp-6-4",
+        "cap": "LP-6.4",
+        "tema": "Elocução no pretérito",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Situação hipotética: O discurso direto “Ele disse: ‘Espero que venham.’” foi convertido em “Ele disse que esperava que viessem”. Assertiva: A conversão está correta, pois, com o verbo de elocução no pretérito, o presente do subjuntivo passa para o imperfeito do subjuntivo.",
+        "comentario": "Com verbo de elocução no pretérito (“disse que”), as conversões de tempo valem; a fonte traz o par “Espero que venham” → “disse que esperava que viessem”."
+      }
+    },
+    {
+      "numero": 8,
+      "qid": "lp56-25",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "erro",
+      "questao": {
+        "id": "lp56-25",
+        "materia": "lp",
+        "cap": "LP-5.6",
+        "tema": "Pagar",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Em “O Tesouro pagou o reajuste aos servidores”, a substituição de “aos servidores” por lhes — O Tesouro pagou-lhes o reajuste — manteria a correção gramatical.",
+        "comentario": "Com “pagar”, a coisa é objeto direto e a pessoa é objeto indireto (lhes)."
+      }
+    },
+    {
+      "numero": 9,
+      "qid": "lp6-17",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp6-17",
+        "materia": "Língua Portuguesa",
+        "topico": "lp-6-3",
+        "cap": "LP-6.3",
+        "tema": "Passiva e foco",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Situação hipotética: A oração “A Câmara aprovou o projeto” foi reescrita como “O projeto foi aprovado pela Câmara”. Assertiva: A reescrita mantém o sentido referencial, embora o foco mude, pois o paciente passa a ser o tópico.",
+        "comentario": "A conversão preserva o sentido referencial, mas muda o foco: o paciente vira tópico. Afirmar “mesma ênfase” tenderia a ser errado; o item não o faz."
+      }
+    },
+    {
+      "numero": 10,
+      "qid": "mmgan-lp-6-1-mwf0sbn9-01",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "mmgan-lp-6-1-mwf0sbn9-01",
+        "materia": "lp",
+        "topico": "lp-6-1",
+        "cap": "LP-6.1",
+        "tema": "Posição do Adjetivo",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Ao se realizar a reescrita de uma frase, a alteração da posição do adjetivo em relação ao substantivo nunca causa modificação de sentido, dado que a função sintática do adjetivo permanece inalterada.",
+        "comentario": "O item é falso ao afirmar que a alteração da posição nunca causa mudança de sentido. Exemplos como 'grande homem' versus 'homem grande' provam que a posição altera o valor semântico."
+      }
+    },
+    {
+      "numero": 11,
+      "qid": "mmgan-lp-6-2-mwf0y3o8-01",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "mmgan-lp-6-2-mwf0y3o8-01",
+        "materia": "lp",
+        "topico": "lp-6-2",
+        "cap": "LP-6.2",
+        "tema": "Regência - Aspirar",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "A reescrita da oração 'Ele aspira ao cargo de diretor', ao substituir o verbo 'aspirar' pelo sentido de 'desejar', permanece gramaticalmente correta se for alterada para 'Ele deseja ao cargo de diretor'.",
+        "comentario": "O verbo 'desejar' é transitivo direto, não regendo preposição. A forma correta seria 'Ele deseja o cargo de diretor'."
+      }
+    },
+    {
+      "numero": 12,
+      "qid": "b26ns-005",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26ns-005",
+        "materia": "lp",
+        "topico": "lp-1",
+        "cap": "BANCA-LP",
+        "tema": "F7 · lp-1",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Texto de apoio: “Em casos como esse, trocar palavras difíceis por outras mais fáceis não será a primeira preocupação.” Assertiva: Segundo o texto, apesar de a Linguagem Simples ir além da mera seleção vocabular, o cuidado com essa seleção varia conforme a complexidade do gênero textual e do público-alvo, indo de importante, passando a secundário, até ser considerado irrelevante.",
+        "comentario": "O texto diz apenas que, em texto técnico para especialistas, trocar palavras difíceis “não será a primeira preocupação”; nada indica que a escolha vocabular se torne irrelevante. Vacina: Ao ver uma gradação que termina em extremo (irrelevante, nenhum, total), confira se o texto chega até esse ponto."
+      }
+    },
+    {
+      "numero": 13,
+      "qid": "lp55-27",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp55-27",
+        "materia": "lp",
+        "cap": "LP-5.5",
+        "tema": "Particípio",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Na frase “Dado as circunstâncias, a votação foi adiada”, a forma “Dado” está correta por se tratar de expressão invariável, como “haja vista”.",
+        "comentario": "“Dado” é particípio com valor de adjetivo e concorda com o substantivo: “Dadas as circunstâncias”. “Haja vista” é que é fixa."
+      }
+    },
+    {
+      "numero": 14,
+      "qid": "lp54-29",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "erro",
+      "questao": {
+        "id": "lp54-29",
+        "materia": "lp",
+        "cap": "LP-5.4",
+        "tema": "Vírgula depois do “mas”",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Em “Mas, sem dúvida, devemos tentar”, a supressão das duas vírgulas que isolam “sem dúvida” preservaria a correção gramatical do período.",
+        "comentario": "“Sem dúvida” é adjunto adverbial curto (duas palavras): as vírgulas são facultativas, desde que retiradas em par. Resultado correto: “Mas sem dúvida devemos tentar.”"
+      }
+    },
+    {
+      "numero": 15,
+      "qid": "lp41-48",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp41-48",
+        "materia": "lp",
+        "cap": "LP-4.1",
+        "tema": "Mediação",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Texto de apoio: “O jovem envidou todos os esforços para conquistar o amor da garota.” Assertiva: A relação entre as orações é de causalidade.",
+        "comentario": "É relação de mediação (meio → fim). Versão correta: “… a relação é de mediação: meio e fim.”"
+      }
+    },
+    {
+      "numero": 16,
+      "qid": "lp57-06",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp57-06",
+        "materia": "lp",
+        "topico": "lp-5-7",
+        "cap": "LP-5.7",
+        "tema": "Horas",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "No trecho “A reunião começou às dez horas”, a ocorrência do acento grave justifica-se pela fusão da preposição 'a' (exigida pelo verbo começar) com o artigo definido feminino plural 'as' que acompanha o numeral indicador de horas.",
+        "comentario": "O item está correto. Conforme a norma culta, a crase ocorre diante de horas determinadas quando estas são precedidas por preposição e admitirem o artigo. No caso, o verbo 'começar' exige a preposição 'a' e o substantivo/numeral 'horas' admite o artigo 'as'. A fusão é obrigatória."
+      }
+    },
+    {
+      "numero": 17,
+      "qid": "lp42-22",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp42-22",
+        "materia": "Língua Portuguesa",
+        "cap": "LP-4.2",
+        "tema": "Presente do indicativo com valor de futuro",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "No memorando interno «Amanhã apresento o relatório preliminar ao plenário», a forma verbal simples “apresento”, embora pertença ao presente do indicativo, exerce valor semântico prospectivo equivalente a uma ação futura tida como certa pelo enunciador.",
+        "comentario": "Item CERTO. Trata-se do clássico presente com valor de futuro (ou presente prospectivo), no qual uma forma verbal simples no presente do indicativo, apoiada por adjunto adverbial de tempo futuro («Amanhã»), denota uma ação futura próxima e decidida."
+      }
+    },
+    {
+      "numero": 18,
+      "qid": "lp6-24",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp6-24",
+        "materia": "Língua Portuguesa",
+        "topico": "lp-6-4",
+        "cap": "LP-6.4",
+        "tema": "Elocução no presente",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Situação hipotética: O discurso direto “O relator diz: ‘Aprovo o texto.’” foi convertido em “O relator diz que aprovava o texto”. Assertiva: A conversão está correta, pois o presente do discurso direto passa sempre para o imperfeito no discurso indireto.",
+        "comentario": "As conversões de tempo valem quando o verbo de elocução está no pretérito; com verbo de elocução no presente (“diz que”), os tempos se mantêm. Versão correta: “O relator diz que aprova o texto.”"
+      }
+    },
+    {
+      "numero": 19,
+      "qid": "lp56-16",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp56-16",
+        "materia": "lp",
+        "cap": "LP-5.6",
+        "tema": "Lembrar",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "A frase “O presidente lembrou do compromisso assumido na reunião” está de acordo com a norma-padrão.",
+        "comentario": "Regra do tudo ou nada: “lembrou o compromisso” ou “lembrou-se do compromisso”. Preposição sem pronome é erro."
+      }
+    },
+    {
+      "numero": 20,
+      "qid": "lp6-22",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "B",
+      "conf": null,
+      "resultado": "branco",
+      "questao": {
+        "id": "lp6-22",
+        "materia": "Língua Portuguesa",
+        "topico": "lp-6-3",
+        "cap": "LP-6.3",
+        "tema": "Desenvolver reduzida",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Situação hipotética: A oração “Faltando assessores, o gabinete suspendeu o atendimento” foi reescrita como “Quando faltaram assessores, o gabinete suspendeu o atendimento”. Assertiva: A reescrita mantém o valor de causa da oração reduzida de gerúndio.",
+        "comentario": "Ao desenvolver a reduzida, o conector deve ter o valor correto: gerúndio de causa pede “como” ou “porque”; “quando” introduz tempo. Versão correta: “Como faltaram assessores, o gabinete suspendeu o atendimento.”"
+      }
+    },
+    {
+      "numero": 21,
+      "qid": "mmgan-lp-6-1-mwf0saxh-01",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "mmgan-lp-6-1-mwf0saxh-01",
+        "materia": "lp",
+        "topico": "lp-6-1",
+        "cap": "LP-6.1",
+        "tema": "Léxico: Denotação × Conotação",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "A denotação refere-se ao sentido literal ou dicionarizado de uma palavra, ao passo que a conotação envolve o sentido figurado, podendo o valor semântico de um termo ser alterado conforme a situação comunicativa.",
+        "comentario": "O enunciado reflete fielmente a definição contida no nó lp61-r2-1 do mapa mental, estabelecendo corretamente a distinção entre denotação e conotação."
+      }
+    },
+    {
+      "numero": 22,
+      "qid": "lp6-08",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp6-08",
+        "materia": "Língua Portuguesa",
+        "topico": "lp-6-2",
+        "cap": "LP-6.2",
+        "tema": "Onde com lugar",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Texto de apoio: “A cidade em que nasceu o relator é pequena.” Assertiva: A substituição de “em que” por “onde” mantém a correção gramatical e o sentido do trecho.",
+        "comentario": "O antecedente “a cidade” indica lugar, e “onde” é adequado nesse caso (“a cidade onde”, “o país onde” são exemplos da fonte). A troca mantém correção e sentido."
+      }
+    },
+    {
+      "numero": 23,
+      "qid": "b26plf-009",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "erro",
+      "questao": {
+        "id": "b26plf-009",
+        "materia": "lp",
+        "topico": "lp-5-5",
+        "cap": "BANCA-LP",
+        "tema": "F10 · lp-5-5",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Texto de apoio: “A Comissão de Segurança Pública da Câmara dos Deputados aprovou projeto de lei com medidas para tornar mais rápido o atendimento telefônico em casos de emergência por engasgo.” Assertiva: Na oração “para tornar mais rápido o atendimento telefônico em casos de emergência por engasgo” (primeiro parágrafo), a flexão da forma verbal “tornar” no plural — tornarem — prejudicaria tanto a correção gramatical quanto o sentido original do texto.",
+        "comentario": "O infinitivo pode flexionar-se concordando com “medidas” (sujeito implícito), o que é gramatical e mantém o sentido; a flexão do infinitivo é facultativa nesse caso. Vacina: Ao ver proposta de flexionar o infinitivo, verifique se há sujeito plural possível; flexão facultativa não prejudica a correção."
+      }
+    },
+    {
+      "numero": 24,
+      "qid": "lp55-03",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp55-03",
+        "materia": "lp",
+        "cap": "LP-5.5",
+        "tema": "Haver × existir",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Em “havia múltiplas diferenças nas crenças religiosas”, a substituição de “havia” por existia manteria o sentido, mas prejudicaria a correção gramatical.",
+        "comentario": "“Existir” é pessoal e concordaria com o sujeito plural: “existiam múltiplas diferenças”. O singular seria erro."
+      }
+    },
+    {
+      "numero": 25,
+      "qid": "lp54-24",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp54-24",
+        "materia": "lp",
+        "cap": "LP-5.4",
+        "tema": "Dois-pontos ↔ vírgula",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Em “A comissão adotou um só critério: o da precedência regimental.”, os dois-pontos poderiam ser substituídos por vírgula, mantidos a correção e o sentido do período.",
+        "comentario": "Aposto explicativo também é separado por vírgula. É o caso do item TJ-PA 2020 da aula (“…demandas diárias: a culinária”), em que a troca por vírgula foi julgada certa."
+      }
+    },
+    {
+      "numero": 26,
+      "qid": "lp41-49",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lp41-49",
+        "materia": "lp",
+        "cap": "LP-4.1",
+        "tema": "Retomada",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Texto de apoio: “Novas pesquisas, porém, revelam que o problema é muito mais grave do que se supunha. A mais recente, elaborada pelo Instituto Paulo Montenegro e pela ONG Ação Educativa, mostrou que 38% dos estudantes do ensino superior no país simplesmente ‘não dominam habilidades básicas de leitura e escrita’. O Indicador de Analfabetismo Funcional, que resulta desse trabalho, não mede capacidades complexas.” Assertiva: A expressão “desse trabalho” é um recurso de coesão que retoma a informação anterior “Indicador de Analfabetismo Funcional”.",
+        "comentario": "“desse trabalho” retoma a pesquisa (“A mais recente, elaborada pelo Instituto…”); o Indicador é o que resulta dela."
+      }
+    },
+    {
+      "numero": 27,
+      "qid": "b26ns-027",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26ns-027",
+        "materia": "li",
+        "topico": "li-1",
+        "cap": "BANCA-LI",
+        "tema": "F3 · li-1",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Texto de apoio: “Obviously, the drafter who less frequently inquires about the client’s desires will have greater latitude to exercise discretion and accordingly can play more of an ‘advocacy’ role in shaping the legislation...” Assertiva: The fragment of a sentence “greater latitude to exercise discretion” (second sentence of the second paragraph) can be, without this changing the original meaning of the text, replaced with “greater possibilities to be discreet”.",
+        "comentario": "“latitude to exercise discretion” = liberdade para decidir por julgamento próprio; “discreet” = reservado, discreto (falso cognato de “discretion”). Vacina: Ao ver discretion × discreet (e outros pares parecidos), confira o sentido no contexto: discretion é poder de decisão."
+      }
+    },
+    {
+      "numero": 28,
+      "qid": "b26ns-029",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26ns-029",
+        "materia": "li",
+        "topico": "li-1",
+        "cap": "BANCA-LI",
+        "tema": "V1 · li-1",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Texto de apoio: “However, the relationship between drafter and text is the furthest thing from a technical, value-neutral enterprise.” Assertiva: The text confronts the idea of neutrality of those whose work is to write texts that may become law.",
+        "comentario": "O texto afirma que a relação entre redator e texto é “the furthest thing from a technical, value-neutral enterprise”. Vacina: Ao ver paráfrase em inglês (confronts neutrality = not value-neutral), compare sentido, não palavras."
+      }
+    },
+    {
+      "numero": 29,
+      "qid": "b26ns-032",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26ns-032",
+        "materia": "li",
+        "topico": "li-1",
+        "cap": "BANCA-LI",
+        "tema": "V1 · li-1",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Texto de apoio: “Little attention has been devoted to legislation’s point of origin — the legislative drafting process. Such commentary as has been offered is essentially technical in nature. However, the relationship between drafter and text is the furthest thing from a technical, value-neutral enterprise.” Assertiva: It is correct to conclude from the first paragraph of the text that its author believes that not much has been explored about the true nature of legislative drafters’ work, which is not merely technical and impartial.",
+        "comentario": "Primeiro parágrafo: “Little attention has been devoted...”; o que se comentou é técnico; a relação redator-texto não é técnica nem neutra. Vacina: Ao ver “it is correct to conclude”, confira se cada parte da paráfrase tem correspondente no parágrafo indicado."
+      }
+    },
+    {
+      "numero": 30,
+      "qid": "li1-01",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "li1-01",
+        "materia": "li",
+        "cap": "LI-1",
+        "tema": "Ideia explícita",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Texto de apoio: “Committee reports rarely make headlines, yet they shape most of the laws a parliament passes. Before a bill reaches the floor, committee staff gather evidence, hear experts and propose amendments. Members often rely on these reports because they lack the time to examine every clause themselves. Critics argue that this dependence gives unelected advisers too much influence; supporters reply that the final vote still belongs to elected representatives.” Assertiva: According to the text, legislators frequently depend on committee reports since they do not have enough time to scrutinize each provision of a bill.",
+        "comentario": "Certo. Paráfrase fiel (V1) do terceiro período: “Members often rely on these reports because they lack the time to examine every clause themselves.” “Rely on” = “depend on”; “examine every clause” = “scrutinize each provision”; “often” = “frequently”."
+      }
+    },
+    {
+      "numero": 31,
+      "qid": "li1-02",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "li1-02",
+        "materia": "li",
+        "cap": "LI-1",
+        "tema": "Vocabulário",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Texto de apoio: “Committee reports rarely make headlines, yet they shape most of the laws a parliament passes. Before a bill reaches the floor, committee staff gather evidence, hear experts and propose amendments. Members often rely on these reports because they lack the time to examine every clause themselves. Critics argue that this dependence gives unelected advisers too much influence; supporters reply that the final vote still belongs to elected representatives.” Assertiva: In the first sentence of the text, the word “rarely” could be replaced with “seldom” without changing the meaning of the sentence.",
+        "comentario": "Certo. “Rarely” e “seldom” são sinônimos (raramente) e ocupam a mesma posição antes do verbo: “Committee reports seldom make headlines”. Cuidado com falsos sinônimos que a banca usa nesse tipo de item, como “rather” (bastante, preferivelmente), que mudaria o sentido."
+      }
+    },
+    {
+      "numero": 32,
+      "qid": "li1-03",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "li1-03",
+        "materia": "li",
+        "cap": "LI-1",
+        "tema": "Extrapolação",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Texto de apoio: “Committee reports rarely make headlines, yet they shape most of the laws a parliament passes. Before a bill reaches the floor, committee staff gather evidence, hear experts and propose amendments. Members often rely on these reports because they lack the time to examine every clause themselves. Critics argue that this dependence gives unelected advisers too much influence; supporters reply that the final vote still belongs to elected representatives.” Assertiva: The author of the text concludes that unelected advisers have excessive influence on the legislative process.",
+        "comentario": "Errado. Extrapolação (F7): a ideia de influência excessiva é atribuída aos críticos (“Critics argue that…”), e o texto apresenta logo em seguida a resposta dos defensores (“supporters reply that…”). O autor expõe as duas posições e não conclui por nenhuma. Vacina: pergunte quem diz aquilo no texto antes de atribuir a opinião ao autor."
+      }
+    },
+    {
+      "numero": 33,
+      "qid": "b26ns-033",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26ns-033",
+        "materia": "li",
+        "topico": "li-1",
+        "cap": "BANCA-LI",
+        "tema": "V1 · li-1",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Texto de apoio: “...the way they sometimes approached technology was at times comical―at times frightening.” Assertiva: The negative way some legislators reacted to technology sometimes scared the author of the text.",
+        "comentario": "O autor diz que a forma como os legisladores lidavam com a tecnologia era “at times comical—at times frightening”. Vacina: Ao ver “sometimes scared”, procure o equivalente no texto (at times frightening) antes de julgar exagero."
+      }
+    },
+    {
+      "numero": 34,
+      "qid": "b26ns-034",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26ns-034",
+        "materia": "li",
+        "topico": "li-2",
+        "cap": "BANCA-LI",
+        "tema": "F3 · li-2",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Texto de apoio: “Has the legislature, as an institution or in part, resisted technology based changes?” Assertiva: The verb tense used in the survey question presented in the first sentence of the text indicates that there was no specific point in time respondents had to consider in their answers.",
+        "comentario": "O present perfect (“Has the legislature... resisted”) liga o passado ao presente: o período a considerar vai até o momento da pesquisa, havendo, portanto, referência temporal (o agora). Vacina: Ao ver present perfect, lembre que ele ancora o período no presente; tempo “não especificado” não é ausência de referência temporal."
+      }
+    },
+    {
+      "numero": 35,
+      "qid": "b26ns-035",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "erro",
+      "questao": {
+        "id": "b26ns-035",
+        "materia": "li",
+        "topico": "li-1",
+        "cap": "BANCA-LI",
+        "tema": "F6 · li-1",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Texto de apoio: “I spent 9 years working with legislators and senior staff... I also saw an older legislative drafter become befuddled and angry when he was forced to start using the ‘track changes’ and ‘comment’ functions on Microsoft Word rather than marking up a bill with his beloved red pencil.” Assertiva: When conducting his survey, the author met an older drafter who did not want to change the way he worked with bills and red pencils.",
+        "comentario": "O episódio do redator com o lápis vermelho ocorreu nos 9 anos em que o autor trabalhou com o Legislativo de Massachusetts, não durante a pesquisa; e o redator foi forçado a mudar. Vacina: Ao ver “when/while” ligando dois fatos do texto, confira se eles ocorreram mesmo no mesmo momento."
+      }
+    },
+    {
+      "numero": 36,
+      "qid": "b26plf-029",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26plf-029",
+        "materia": "li",
+        "topico": "li-1",
+        "cap": "BANCA-LI",
+        "tema": "F7 · li-1",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Texto de apoio: “Police officers spend a great deal of time spying on the populace to unmask political opposition; crime against citizens is less of a concern.” Assertiva: It is correct to infer from the first paragraph of the text that investigating common crimes committed against citizens is not part of the police’s duties in autocratic nations.",
+        "comentario": "O texto diz que o crime contra cidadãos “is less of a concern”: é preocupação menor, não ausente. Vacina: Ao ver “not part of”, “never”, confira se o texto disse só “less”."
+      }
+    },
+    {
+      "numero": 37,
+      "qid": "b26tec-140",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "erro",
+      "questao": {
+        "id": "b26tec-140",
+        "materia": "da",
+        "topico": "da-10-2",
+        "cap": "BANCA-DA",
+        "tema": "F9 · da-10-2",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "O inadimplemento das obrigações fiscais e comerciais é de responsabilidade do contratado e tal conduta implica restrição à regularização e ao uso das obras e das edificações, inclusive perante o registro de imóveis.",
+        "comentario": "Lei 14.133/2021, art. 121, caput e §1º: os encargos são de responsabilidade do contratado (parte certa), mas sua inadimplência não pode restringir a regularização e o uso das obras, inclusive perante o registro de imóveis (parte errada). Vacina: Ao ver duas afirmações ligadas por 'e', julgue cada uma: a inadimplência do contratado não onera o objeto nem restringe o uso da obra."
+      }
+    },
+    {
+      "numero": 38,
+      "qid": "da6-42",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "da6-42",
+        "materia": "da",
+        "topico": "da-6-5",
+        "cap": "DA-6",
+        "tema": "Risco integral: sem excludentes",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Acerca das causas excludentes e atenuantes da responsabilidade civil do Estado, julgue o item a seguir.\nO Brasil adota, como regra, a teoria do risco integral, que admite causas excludentes da responsabilidade do Estado.",
+        "comentario": "Errado (dupla falha). A regra no Brasil é o risco ADMINISTRATIVO; e o risco integral, justamente, NÃO admite excludentes."
+      }
+    },
+    {
+      "numero": 39,
+      "qid": "cx-ap82-04-c",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "cx-ap82-04-c",
+        "materia": "da",
+        "cap": "AP-8.2",
+        "tema": "Contraste: arranjo institucional × ambiente institucional",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Segundo Pires e Gomide, o arranjo institucional, e não o ambiente institucional, define quem participa de uma política, qual o seu objeto e objetivos e como os atores se relacionam; o ambiente institucional são as regras gerais do sistema político.",
+        "comentario": "Ambiente institucional: regras gerais (sistema político, controles, representação). Arranjo institucional: regras específicas de uma política ou projeto (atores, objeto, formas de relação)."
+      }
+    },
+    {
+      "numero": 40,
+      "qid": "ap81-17",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "ap81-17",
+        "materia": "da",
+        "cap": "AP-8.1",
+        "tema": "Cidadão-cliente",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "No modelo da Nova Governança Pública, o cidadão é tratado essencialmente como cliente, cuja satisfação deve ser maximizada pela competição entre prestadores de serviços.",
+        "comentario": "Cidadão-cliente e competição são da Nova Gestão Pública. Na NGovP, o cidadão é parceiro."
+      }
+    },
+    {
+      "numero": 41,
+      "qid": "da102-14",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "erro",
+      "questao": {
+        "id": "da102-14",
+        "materia": "da",
+        "topico": "da-10-3",
+        "cap": "DA-10.3",
+        "tema": "Alterações",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Acerca das alterações dos contratos, julgue o item a seguir.\nNas alterações unilaterais, o contratado é obrigado a aceitar acréscimos ou supressões de até 25% do valor inicial atualizado do contrato e, no caso de reforma de edifício ou de equipamento, acréscimos de até 50%.",
+        "comentario": "Certo. Art. 125."
+      }
+    },
+    {
+      "numero": 42,
+      "qid": "da43-18",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "da43-18",
+        "materia": "da",
+        "topico": "da-4-3",
+        "cap": "DA-4.3",
+        "tema": "Rito sumário",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "A opção do servidor, até o último dia do prazo para defesa, configura sua boa-fé e converte-se automaticamente em pedido de exoneração do outro cargo.",
+        "comentario": "Certo. Art. 133, § 5º."
+      }
+    },
+    {
+      "numero": 43,
+      "qid": "da41-05",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "da41-05",
+        "materia": "da",
+        "topico": "da-4-1",
+        "cap": "DA-4.1",
+        "tema": "Súmulas",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Segundo a Súmula Vinculante 5 do STF, a falta de defesa técnica por advogado no processo administrativo disciplinar ofende a Constituição.",
+        "comentario": "Errado. Versão correta: “Segundo a Súmula Vinculante 5 do STF, a falta de defesa técnica por advogado no processo administrativo disciplinar não ofende a Constituição.”"
+      }
+    },
+    {
+      "numero": 44,
+      "qid": "da42-19",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "da42-19",
+        "materia": "da",
+        "topico": "da-4-2",
+        "cap": "DA-4.2",
+        "tema": "Dosimetria",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "As penalidades de advertência e de suspensão prescrevem em três e em cinco anos, respectivamente.",
+        "comentario": "Errado. Versão correta: “Os registros das penalidades de advertência e de suspensão são cancelados após três e cinco anos de efetivo exercício, respectivamente, se o servidor não praticar nova infração (art. 131); isso não se confunde com a prescrição da ação disciplinar.”"
+      }
+    },
+    {
+      "numero": 45,
+      "qid": "da2-49",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "erro",
+      "questao": {
+        "id": "da2-49",
+        "materia": "da",
+        "cap": "DA-2",
+        "tema": "Vinculado × discricionário: ambos sob controle de legalidade",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Os atos administrativos vinculados e discricionários distinguem-se quanto à margem de liberdade conferida à administração na apreciação do motivo e do objeto, sendo ambos igualmente submetidos ao controle de legalidade pelo Poder Judiciário.",
+        "comentario": "Certo. A distinção está na margem de escolha sobre motivo e objeto (onde mora o mérito). O controle de legalidade alcança qualquer ato. No discricionário, o Judiciário não reavalia a conveniência, mas verifica a lei, a razoabilidade e a proporcionalidade."
+      }
+    },
+    {
+      "numero": 46,
+      "qid": "da44-04",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "da44-04",
+        "materia": "da",
+        "topico": "da-4-4",
+        "cap": "DA-4.4",
+        "tema": "Deveres",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "É dever do administrado expor os fatos conforme a verdade, proceder com lealdade, urbanidade e boa-fé, não agir de modo temerário e prestar as informações solicitadas.",
+        "comentario": "Certo. Art. 4º."
+      }
+    },
+    {
+      "numero": 47,
+      "qid": "da106-16",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "da106-16",
+        "materia": "da",
+        "topico": "da-10-6",
+        "cap": "DA-10.6",
+        "tema": "Papel do fiscal do contrato",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Acerca da atuação do fiscal do contrato na Lei 14.133/2021, julgue o item a seguir.\nA contratação de terceiro para auxiliar a fiscalização transfere a ele a responsabilidade do fiscal pela fiscalização do contrato.",
+        "comentario": "Errado. A contratação de terceiro não exime o fiscal da responsabilidade (art. 117, § 4º, II). Versão correta: “A contratação de terceiro não exime de responsabilidade o fiscal do contrato.”"
+      }
+    },
+    {
+      "numero": 48,
+      "qid": "da7-02",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "da7-02",
+        "materia": "da",
+        "cap": "DA-7",
+        "tema": "Dolo",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Para fins de configuração de ato de improbidade administrativa, o dolo é caracterizado como a vontade livre e consciente de se alcançar resultado ilícito tipificado na Lei de Improbidade Administrativa.",
+        "comentario": "Literalidade do art. 1º, § 2º, que acrescenta: não basta a voluntariedade do agente."
+      }
+    },
+    {
+      "numero": 49,
+      "qid": "da12-07",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "erro",
+      "questao": {
+        "id": "da12-07",
+        "materia": "da",
+        "topico": "da-1-2",
+        "cap": "DA-1.2",
+        "tema": "Teoria do órgão",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "No que concerne aos órgãos públicos, assinale a opção correta: de acordo com a teoria da imputação volitiva, os órgãos públicos não possuem personalidade jurídica própria, de modo que a atuação funcional de seus agentes é imputada diretamente à pessoa jurídica que os integra.",
+        "comentario": "O item está correto. A teoria do órgão (ou da imputação volitiva) estabelece que o órgão não é sujeito de direitos e obrigações, mas sim um centro de competências dentro da estrutura estatal. Assim, o ato praticado pelo agente público, no exercício de suas funções, é considerado um ato da própria pessoa jurídica a que o órgão está vinculado (União, estado, município, etc.). Conforme a doutrina, a vontade do órgão é a vontade do Estado."
+      }
+    },
+    {
+      "numero": 50,
+      "qid": "ap84-27",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "ap84-27",
+        "materia": "da",
+        "topico": "da-8-4",
+        "cap": "AP-8.4",
+        "tema": "6Es",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "A respeito de aspectos da administração geral, julgue o seguinte item.\nO conceito de eficácia possui ênfase nos métodos e procedimentos, enquanto o de eficiência dá enfoque ao alcance de resultados.",
+        "comentario": "Errado. Inverteu. Versão correta: “O conceito de eficácia tem ênfase no alcance de resultados, enquanto o de eficiência dá enfoque aos métodos e procedimentos.”"
+      }
+    },
+    {
+      "numero": 51,
+      "qid": "da101-02",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "da101-02",
+        "materia": "da",
+        "topico": "da-10-1",
+        "cap": "DA-10.1",
+        "tema": "Conceito e abrangência",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Com base na Lei 14.133/2021, julgue o item a seguir.\nA Lei 14.133/2021 não se aplica às contratações relativas à gestão da dívida pública e às operações de crédito.",
+        "comentario": "Certo. São exclusões expressas do art. 3º."
+      }
+    },
+    {
+      "numero": 52,
+      "qid": "da5-28",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "B",
+      "conf": null,
+      "resultado": "branco",
+      "questao": {
+        "id": "da5-28",
+        "materia": "da",
+        "cap": "DA-5",
+        "tema": "Decreto autônomo",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Compete privativamente ao Presidente da República dispor, mediante decreto, sobre a extinção de funções ou cargos públicos, quando vagos, competência que pode ser delegada aos ministros de Estado.",
+        "comentario": "CF, art. 84, VI, b, e parágrafo único. Cargo ocupado só se extingue por lei."
+      }
+    },
+    {
+      "numero": 53,
+      "qid": "da102-13",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "da102-13",
+        "materia": "da",
+        "topico": "da-10-4",
+        "cap": "DA-10.4",
+        "tema": "Formalização",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Acerca da convocação para assinatura do contrato, julgue o item a seguir.\nA recusa injustificada do vencedor em assinar o contrato não gera consequências, pois a Administração pode simplesmente convocar o segundo colocado.",
+        "comentario": "Errado. A recusa injustificada caracteriza descumprimento total da obrigação: o vencedor decai do direito e fica sujeito a sanções (art. 90, § 5º). Versão correta: “A recusa injustificada sujeita o vencedor à perda do direito à contratação e às sanções legais.”"
+      }
+    },
+    {
+      "numero": 54,
+      "qid": "da107-01",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "erro",
+      "questao": {
+        "id": "da107-01",
+        "materia": "da",
+        "topico": "da-10-7",
+        "cap": "DA-10.7",
+        "tema": "Estudo técnico preliminar e termo de referência",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "O regime de contratação semi-integrada impõe a elaboração e desenvolvimento do projeto executivo por parte do contratado, sendo obrigatória a licitação por preço global.",
+        "comentario": "Certo. A contratação semi-integrada é o regime de contratação de obras e serviços de engenharia em que o contratado é responsável por elaborar e desenvolver o projeto executivo, assim como toda a execução das obras e serviços de engenharia, fornecimento dos bens ou prestação dos serviços especiais e realização da montagem, teste, pré-operação e as das demais operações necessárias e suficientes para a entrega final do objeto (art. 6°, XXXIII da NLLC). Nesse tipo de regime de execução, a licitação será por preço global, nos termos do art. 46, § 9°."
+      }
+    },
+    {
+      "numero": 55,
+      "qid": "da102-46",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "da102-46",
+        "materia": "da",
+        "topico": "da-10-2",
+        "cap": "DA-10.2",
+        "tema": "Contratos administrativos",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Como condição para prorrogação dos contratos, deverá ser feita a verificação quanto a regularidade fiscal do contratado, bem como a emissão de certidões negativas de inidoneidade, de impedimento e de débitos trabalhistas.",
+        "comentario": "Certo. Antes de formalizar ou prorrogar o prazo de vigência do contrato, a administração deverá verificar a regularidade fiscal do contratado, consultar o Cadastro Nacional de Empresas Inidôneas e Suspensas (Ceis) e o Cadastro Nacional de Empresas Punidas (Cnep), emitir as certidões negativas de inidoneidade, de impedimento e de débitos trabalhistas e juntá-las ao respectivo processo (art. 91, § 4°)."
+      }
+    },
+    {
+      "numero": 56,
+      "qid": "da102-25",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "da102-25",
+        "materia": "da",
+        "topico": "da-10-5",
+        "cap": "DA-10.5",
+        "tema": "Planejamento",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "À luz da Lei nº 14.133/2021, acerca das etapas que antecedem a publicação do edital, julgue o item a seguir: Após a conclusão da fase preparatória e a devida instrução do processo licitatório, este deve ser encaminhado ao órgão de assessoramento jurídico da administração para a realização do controle prévio de legalidade mediante análise jurídica.",
+        "comentario": "O item está correto. De acordo com o art. 53 da Lei nº 14.133/2021, ao final da fase preparatória, o processo licitatório seguirá para o órgão de assessoramento jurídico da Administração, que realizará controle prévio de legalidade mediante análise jurídica da contratação."
+      }
+    },
+    {
+      "numero": 57,
+      "qid": "jur-da34-01",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "jur-da34-01",
+        "materia": "da",
+        "cap": "JUR-DA3.4",
+        "tema": "Direito adquirido a regime jurídico após o RJU (RE 590.880)",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Segundo o STF, os servidores federais regidos pela CLT antes da Lei nº 8.112/1990 têm direito adquirido a manter as vantagens do regime celetista após a transposição para o Regime Jurídico Único, razão pela qual a Justiça do Trabalho permanece competente para julgar as parcelas remuneratórias posteriores a essa lei.",
+        "comentario": "Errado. No RE 590.880/CE, o STF lembrou que a transposição para o regime estatutário extinguiu os contratos de trabalho e que não há direito adquirido a regime jurídico. A competência da Justiça do Trabalho cessa quanto às parcelas posteriores à Lei 8.112/1990."
+      }
+    },
+    {
+      "numero": 58,
+      "qid": "b26plf-073",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26plf-073",
+        "materia": "da",
+        "topico": "da-11",
+        "cap": "BANCA-DA",
+        "tema": "V1 · da-11",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "O acesso às informações pessoais relativas à intimidade, à vida privada, à honra e à imagem restringe-se a agentes públicos legalmente autorizados e à pessoa a que tais informações se refiram, independentemente de classificação de sigilo e pelo prazo máximo de 100 anos a contar da sua data de produção.",
+        "comentario": "Art. 31, § 1º, I, da Lei 12.527/2011: as informações pessoais têm acesso restrito a agentes legalmente autorizados e à pessoa a que se referem, independentemente de classificação e pelo prazo máximo de 100 anos. Vacina: Ao ver informação pessoal na LAI, lembre: sem classificação, até 100 anos, acesso do titular e de agentes autorizados."
+      }
+    },
+    {
+      "numero": 59,
+      "qid": "da6-50",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "da6-50",
+        "materia": "da",
+        "topico": "da-6-5",
+        "cap": "DA-6",
+        "tema": "Tabeliães e registradores (Tema 777)",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Acerca da ação regressiva do Estado contra o agente causador do dano, julgue o item a seguir.\nO Estado responde pelos danos causados por tabeliães e registradores e deve ajuizar ação regressiva contra o responsável nos casos de dolo ou culpa, sob pena de improbidade administrativa.",
+        "comentario": "Certo. STF, Tema 777 (RE 842.846): o Estado responde objetivamente pelos atos de notários e registradores, com dever de regresso nos casos de dolo ou culpa, sob pena de improbidade."
+      }
+    },
+    {
+      "numero": 60,
+      "qid": "cx-ap82-09-c",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "erro",
+      "questao": {
+        "id": "cx-ap82-09-c",
+        "materia": "da",
+        "cap": "AP-8.2",
+        "tema": "Contraste: MROSC × regimes de OS e OSCIP",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "A Lei 13.019/2014 (MROSC) disciplina termos de colaboração, termos de fomento e acordos de cooperação, e não os contratos de gestão com OS nem os termos de parceria com OSCIP, que seguem leis próprias.",
+        "comentario": "MROSC, art. 3º: exclui contratos de gestão (Lei 9.637) e termos de parceria (Lei 9.790), cumpridos os requisitos dessas leis."
+      }
+    },
+    {
+      "numero": 61,
+      "qid": "b26ns-068",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26ns-068",
+        "materia": "dc",
+        "topico": "dc-5",
+        "cap": "BANCA-DC",
+        "tema": "V1 · dc-5",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "A sustação, pelo Congresso Nacional, de portaria normativa editada por ministro de Estado, em razão de violação ao princípio da legalidade, configura um tipo de controle legislativo, político e externo da administração pública.",
+        "comentario": "CF, art. 49, V: compete exclusivamente ao Congresso sustar os atos normativos do Poder Executivo que exorbitem do poder regulamentar; é controle legislativo (político), externo, ainda que motivado por ilegalidade. Vacina: Ao ver sustação de ato normativo pelo Congresso, lembre art. 49, V: controle legislativo externo, mesmo quando o motivo é ilegalidade."
+      }
+    },
+    {
+      "numero": 62,
+      "qid": "dc11-42",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "dc11-42",
+        "materia": "dc",
+        "cap": "DC-1.1",
+        "tema": "Neoconstitucionalismo: marcos",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Segundo a doutrina, o marco histórico do neoconstitucionalismo na Europa é o constitucionalismo do pós-guerra, como a Lei Fundamental de Bonn, ao passo que, no Brasil, esse marco é a Constituição de 1988 e o processo de redemocratização que ela ajudou a protagonizar.",
+        "comentario": "Para Barroso, o marco histórico europeu é o pós-guerra (Alemanha 1949, Itália 1947) e o brasileiro é a CF/88 com a redemocratização. O pós-positivismo é o marco filosófico."
+      }
+    },
+    {
+      "numero": 63,
+      "qid": "dc23-39",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "dc23-39",
+        "materia": "dc",
+        "cap": "DC-2.3",
+        "tema": "Nacionalidade × cidadania",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Situação hipotética: Ana, brasileira nata de cinco anos de idade, reside no Brasil. Assertiva: Ana possui nacionalidade brasileira, mas não é cidadã, pois a cidadania, em sentido estrito, corresponde ao gozo dos direitos políticos.",
+        "comentario": "A nacionalidade decorre do nascimento (art. 12, I, a). A cidadania depende do alistamento eleitoral (art. 14), impossível aos cinco anos. Criança brasileira tem nacionalidade, não tem cidadania."
+      }
+    },
+    {
+      "numero": 64,
+      "qid": "dc24-35",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "dc24-35",
+        "materia": "dc",
+        "cap": "DC-2.4",
+        "tema": "Português equiparado",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Julgue os itens a seguir segundo a Constituição Federal. Situação hipotética: existe tratado celebrado entre Brasil e Portugal conferindo ampla reciprocidade de direitos entre os seus nacionais. Assertiva: um cidadão português que resida há nove meses no Brasil possui o direito de se alistar como eleitor no Brasil.",
+        "comentario": "A CF (art. 12, § 1º) exige residência permanente e reciprocidade; o tratado de reciprocidade (Decreto 3.927/2001, art. 17) exige ainda 3 anos de residência habitual e requerimento para o gozo dos direitos políticos. Nove meses não bastam. Versão correta: “Havendo reciprocidade, o português com residência permanente no Brasil pode alistar-se como eleitor, mas o tratado exige três anos de residência habitual e requerimento; nove meses de residência não bastam.”"
+      }
+    },
+    {
+      "numero": 65,
+      "qid": "jur-dc5-08",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "erro",
+      "questao": {
+        "id": "jur-dc5-08",
+        "materia": "dc",
+        "cap": "JUR-DC5",
+        "tema": "Natureza do parecer do relator especial (ADPF 637)",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Situação hipotética: O Regimento Interno de uma Assembleia Legislativa prevê que, esgotado sem parecer o prazo da comissão, o Presidente da Casa designa relator especial para opinar sobre a proposição. Assertiva: Conforme o STF, a norma é válida porque o parecer do relator especial tem natureza vinculante, o que preserva a vontade da comissão omissa.",
+        "comentario": "Errado. Na ADPF 637/SP, o STF manteve a norma, mas porque o parecer é meramente opinativo e instrutório (não vincula) e a deliberação continua com o Plenário, além de a matéria ser interna corporis. O erro está em 'vinculante'."
+      }
+    },
+    {
+      "numero": 66,
+      "qid": "dc1-26",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "dc1-26",
+        "materia": "dc",
+        "cap": "DC-1",
+        "tema": "Classificação quanto ao modo de elaboração",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Quanto ao modo de elaboração, a CF/88 é dogmática, porque foi elaborada de uma só vez por um órgão constituinte, que sistematizou as ideias fundamentais da teoria política e do direito dominantes naquele momento.",
+        "comentario": "'elaborada de uma só vez por um órgão constituinte' é a definição de Constituição dogmática, que é sempre escrita. A histórica nasce da lenta formação de costumes (ex.: a inglesa)."
+      }
+    },
+    {
+      "numero": 67,
+      "qid": "cx-dc13-16-c",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "cx-dc13-16-c",
+        "materia": "dc",
+        "cap": "DC-1.3",
+        "tema": "Contraste: norma programática × eficácia plena (educação básica)",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Para o STF (Tema 548), o direito de crianças de até cinco anos à educação infantil em creche e pré-escola decorre de norma de eficácia plena e aplicabilidade imediata, e não de norma programática.",
+        "comentario": "STF, RE 1.008.166 (Tema 548): educação básica é direito exigível de imediato. Programáticas são as que fixam fins e programas do Estado (art. 3º, por exemplo)."
+      }
+    },
+    {
+      "numero": 68,
+      "qid": "dc14-18",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "dc14-18",
+        "materia": "dc",
+        "cap": "DC-1.4",
+        "tema": "Hierarquia das normas",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Não há hierarquia entre lei complementar e decreto autônomo, quando este for validamente editado.",
+        "comentario": "De fato, não há hierarquia entre lei complementar e decreto autônomo. Ambos são normas primárias, situando-se logo abaixo da Constituição na pirâmide de Kelsen."
+      }
+    },
+    {
+      "numero": 69,
+      "qid": "dc12-12",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "erro",
+      "questao": {
+        "id": "dc12-12",
+        "materia": "dc",
+        "cap": "DC-1.2",
+        "tema": "Estrutura e elementos",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "São denominados elementos limitativos das Constituições aqueles que visam assegurar a defesa da Constituição e do Estado Democrático de Direito.",
+        "comentario": "Esse é o conceito de elementos de estabilização constitucional, segundo José Afonso da Silva. Questão errada."
+      }
+    },
+    {
+      "numero": 70,
+      "qid": "dc15-08",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "dc15-08",
+        "materia": "dc",
+        "cap": "DC-1.5",
+        "tema": "Poder constituinte",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Acerca da teoria da Constituição e sua classificação, bem como do poder constituinte, julgue o item a seguir. Não há possibilidade jurídica de pedido de declaração de inconstitucionalidade pelo Supremo Tribunal Federal (STF) de norma oriunda do poder constituinte originário, uma vez que a tese de que há hierarquia entre normas constitucionais originárias, dando azo à declaração de inconstitucionalidade de umas em face de outras, é incompossível com o sistema de Constituição rígida.",
+        "comentario": "É exatamente isso. Trata-se de entendimento do Supremo Tribunal Federal existente no julgamento da ADI 815 (Rel. Min. Moreira Alves, j. 28/03/1996): A tese de que há hierarquia entre normas constitucionais originárias dando azo à declaração de inconstitucionalidade de umas em face de outras e incompossível com o sistema de Constituição rígida. […]"
+      }
+    },
+    {
+      "numero": 71,
+      "qid": "dc25-01",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "dc25-01",
+        "materia": "dc",
+        "cap": "DC-2.5",
+        "tema": "Partidos",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "É livre a criação, fusão, incorporação e extinção de partidos políticos, resguardados a soberania nacional, o regime democrático, o pluripartidarismo e os direitos fundamentais da pessoa humana.",
+        "comentario": "Art. 17, caput."
+      }
+    },
+    {
+      "numero": 72,
+      "qid": "dc22-02",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "dc22-02",
+        "materia": "dc",
+        "cap": "DC-2.2",
+        "tema": "Renda básica familiar",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "A Constituição assegura a todo residente no país, brasileiro ou estrangeiro, renda básica universal, independentemente de situação de vulnerabilidade social.",
+        "comentario": "O parágrafo único do art. 6º (EC 114/2021) garante renda básica FAMILIAR a todo BRASILEIRO em situação de VULNERABILIDADE social, por programa permanente de transferência de renda, observada a legislação fiscal e orçamentária. O item erra em três pontos: universal, residente/estrangeiro e dispensa da vulnerabilidade."
+      }
+    },
+    {
+      "numero": 73,
+      "qid": "dc73-01",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "dc73-01",
+        "materia": "dc",
+        "cap": "DC-7.3",
+        "tema": "Exercício",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "O Deputado pode encaminhar, diretamente e sem intermediação, pedidos escritos de informação a Ministro de Estado.",
+        "comentario": "Art. 226, II: o encaminhamento é feito por meio da Mesa."
+      }
+    },
+    {
+      "numero": 74,
+      "qid": "dc74-01",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "dc74-01",
+        "materia": "dc",
+        "cap": "DC-7.4",
+        "tema": "Serviços",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Os serviços administrativos da Câmara dos Deputados reger-se-ão por regulamentos especiais aprovados pela Mesa, que não integram o Regimento Interno.",
+        "comentario": "Art. 262: aprovados pelo Plenário e considerados partes integrantes do Regimento; a Mesa dirige os serviços."
+      }
+    },
+    {
+      "numero": 75,
+      "qid": "jur-dc2b-01",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "jur-dc2b-01",
+        "materia": "dc",
+        "cap": "JUR-DC2b",
+        "tema": "Depósito judicial e direito adquirido a índice (Tema 1.016)",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Segundo o STF, como a relação entre o depositante e a instituição depositária de um depósito judicial tem natureza estatutária, não há direito adquirido a determinado índice de correção monetária, e o depósito é corrigido pela legislação vigente ao longo da custódia, sem os expurgos inflacionários dos planos econômicos.",
+        "comentario": "Certo. É a tese do Tema 1.016 da repercussão geral (RE 1.141.156/RJ): o depósito judicial é figura processual de direito público, de relação estatutária, e não contratual como a caderneta de poupança. Por isso não há direito adquirido a índice, e o Judiciário não pode substituir o índice legal. O STF reformou a decisão do STJ, que admitia os expurgos."
+      }
+    },
+    {
+      "numero": 76,
+      "qid": "dc81-06",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "dc81-06",
+        "materia": "dc",
+        "cap": "DC-8.1",
+        "tema": "Local",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "As sessões conjuntas realizam-se exclusivamente no Plenário do Senado Federal.",
+        "comentario": "Realizam-se no Plenário da Câmara dos Deputados, salvo escolha prévia de outro local devidamente anunciado. O “exclusivamente” também torna o item errado."
+      }
+    },
+    {
+      "numero": 77,
+      "qid": "b26plf-049",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26plf-049",
+        "materia": "dc",
+        "topico": "dc-4",
+        "cap": "BANCA-DC",
+        "tema": "V4 · dc-4",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "A aplicação da penalidade de cassação de aposentadoria ou disponibilidade de servidor é compatível com o caráter contributivo e solidário do regime próprio de previdência dos servidores públicos.",
+        "comentario": "O STF (ADPF 418, 2020) firmou que a cassação de aposentadoria é constitucional, mesmo com o regime contributivo e solidário (art. 40 da CF). Vacina: Ao ver cassação de aposentadoria × regime contributivo, lembre que o STF a considera compatível."
+      }
+    },
+    {
+      "numero": 78,
+      "qid": "dc11-34",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "dc11-34",
+        "materia": "dc",
+        "cap": "DC-1.1",
+        "tema": "Sentidos de Constituição",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Julgue o item subsecutivo, acerca da República Federativa do Brasil. A Constituição é instituto multifuncional que engloba entre seus objetivos a limitação do poder e a conformação e legitimação da ordem política.",
+        "comentario": "A Constituição é considerada um instituto multifuncional porque cumpre múltiplas funções. Ela determina a organização político-jurídica do Estado (conformação e legitimação da ordem política) e estabelece a limitação do poder estatal. Questão correta."
+      }
+    },
+    {
+      "numero": 79,
+      "qid": "b26tec-155",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "B",
+      "conf": null,
+      "resultado": "branco",
+      "questao": {
+        "id": "b26tec-155",
+        "materia": "ti",
+        "topico": "ti-8-2",
+        "cap": "BANCA-TI",
+        "tema": "sem armadilha · ti-8-2",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Dados da tabela: número de observações 12; valor mínimo 42; primeiro quartil 48; segundo quartil 53; terceiro quartil 62; valor máximo 70. Assertiva: O intervalo interquartil dos dados é igual a 14 e mede a dispersão da região central da distribuição associada ao 25.º e ao 75.º percentis.",
+        "comentario": "IQR = Q3 − Q1 = 62 − 48 = 14; mede a dispersão dos 50% centrais, entre os percentis 25 e 75 (base do box plot). Vacina: Ao ver intervalo interquartil, calcule Q3 − Q1 e lembre que ele mede os 50% centrais."
+      }
+    },
+    {
+      "numero": 80,
+      "qid": "ti52-18",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "C",
+      "conf": 1,
+      "resultado": "erro",
+      "questao": {
+        "id": "ti52-18",
+        "materia": "ti",
+        "cap": "TI-5.2",
+        "tema": "Meios-termos · semissupervisionado",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "O aprendizado semissupervisionado combina o aprendizado supervisionado com o aprendizado por reforço: parte dos exemplos traz rótulos, e a outra parte é avaliada por recompensas recebidas pelo agente ao interagir com o ambiente.",
+        "comentario": "'a outra parte é avaliada por recompensas recebidas pelo agente' está errado. O semissupervisionado combina poucos dados rotulados com muitos não rotulados; não há recompensa nem agente."
+      }
+    },
+    {
+      "numero": 81,
+      "qid": "ti3-01",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "ti3-01",
+        "materia": "ti",
+        "cap": "TI-3",
+        "tema": "E-mail",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "O webmail é acessado pelo navegador e não exige instalação de programa no computador do usuário.",
+        "comentario": "Conceito de webmail."
+      }
+    },
+    {
+      "numero": 82,
+      "qid": "ti11-40",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "ti11-40",
+        "materia": "ti",
+        "cap": "TI-1.1",
+        "tema": "Revisão e proteção",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Ativado o Controlar Alterações, os demais usuários ficam impedidos de editar o documento até que o autor aceite as revisões.",
+        "comentario": "Controlar Alterações só registra; quem impede é Restringir Edição."
+      }
+    },
+    {
+      "numero": 83,
+      "qid": "ti12-03",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "B",
+      "conf": null,
+      "resultado": "branco",
+      "questao": {
+        "id": "ti12-03",
+        "materia": "ti",
+        "cap": "TI-1.2",
+        "tema": "Referência",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "No Microsoft Excel, ao editar uma fórmula em uma célula e selecionar uma referência, o uso da tecla F4 permite alternar ciclicamente o tipo de referência entre relativa, absoluta e mista.",
+        "comentario": "O item está correto. No Microsoft Excel, ao selecionar uma referência de célula durante a edição (na barra de fórmulas ou dentro da célula), a tecla F4 funciona como um ciclo para alternar o estilo da referência: de relativa (ex: A1) para absoluta (ex: $A$1), passando pelas referências mistas (ex: A$1 ou $A1). A referência utilizada é o guia oficial de atalhos e funcionalidades de planilhas eletrônicas do MS-Excel."
+      }
+    },
+    {
+      "numero": 84,
+      "qid": "ti41-08",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "ti41-08",
+        "materia": "ti",
+        "cap": "TI-4.1",
+        "tema": "Vírus",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "O time bomb permanece latente até uma data previamente programada.",
+        "comentario": "Definição."
+      }
+    },
+    {
+      "numero": 85,
+      "qid": "mmgan-ti-2-mwf7ixrg-06",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "mmgan-ti-2-mwf7ixrg-06",
+        "materia": "ti",
+        "topico": "ti-2",
+        "cap": "TI-2",
+        "tema": "Arquiteturas OSI e TCP/IP",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "O modelo TCP/IP, diferentemente do modelo OSI, não contempla as camadas de sessão e apresentação como níveis independentes em sua estrutura de camadas.",
+        "comentario": "A questão aponta corretamente a diferença estrutural entre o modelo OSI (7 camadas) e o TCP/IP (4 camadas) quanto à ausência das camadas de sessão e apresentação no TCP/IP."
+      }
+    },
+    {
+      "numero": 86,
+      "qid": "ti14-25",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "ti14-25",
+        "materia": "ti",
+        "cap": "TI-1.4",
+        "tema": "Compartilhamento",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Definir data de expiração e senha em um link de compartilhamento é recurso disponível no plano gratuito do OneDrive.",
+        "comentario": "Exige assinatura Microsoft 365."
+      }
+    },
+    {
+      "numero": 87,
+      "qid": "ti53-19",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "ti53-19",
+        "materia": "ti",
+        "cap": "TI-5.3",
+        "tema": "Pré-teste · GAN",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "Nas GANs, a rede discriminadora produz as amostras sintéticas, e a rede geradora avalia se essas amostras são reais ou falsas.",
+        "comentario": "Papéis invertidos: a geradora cria as amostras e a discriminadora tenta distinguir reais de falsas, num jogo min-max."
+      }
+    },
+    {
+      "numero": 88,
+      "qid": "ti13-01",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "ti13-01",
+        "materia": "ti",
+        "cap": "TI-1.3",
+        "tema": "Transição × Animação",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "Considerando os recursos de apresentação de slides do Microsoft PowerPoint, assinale a opção correta: a transição de slides refere-se ao efeito visual que ocorre no movimento de um slide para outro durante a exibição da apresentação.",
+        "comentario": "O item está correto. De acordo com o suporte oficial da Microsoft, a transição de slides é o efeito visual que ocorre quando se avança ou retrocede de um slide para outro durante uma apresentação. Versão correta: 'A transição de slides consiste no efeito visual aplicado à alternância entre dois slides durante a execução de uma apresentação'."
+      }
+    },
+    {
+      "numero": 89,
+      "qid": "ti42-11",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "ti42-11",
+        "materia": "ti",
+        "cap": "TI-4.2",
+        "tema": "Antispyware",
+        "prova": "P1",
+        "gabarito": "C",
+        "enunciado": "O antispyware é destinado a detectar e remover programas espiões como keyloggers.",
+        "comentario": "Definição."
+      }
+    },
+    {
+      "numero": 90,
+      "qid": "ti6-26",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "ti6-26",
+        "materia": "ti",
+        "cap": "TI-6",
+        "tema": "Portaria 227 · perfis",
+        "prova": "P1",
+        "gabarito": "E",
+        "enunciado": "A Portaria DG nº 227/2025 admite, mediante parecer favorável do CETIA, sistemas de IA que avaliem servidores com base em traços de personalidade.",
+        "comentario": "O art. 15 veda sistemas que avaliem perfis por traços de personalidade ou comportamento e que gerem resultados discriminatórios."
+      }
+    },
+    {
+      "numero": 91,
+      "qid": "pl21b-02",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl21b-02",
+        "materia": "Processo Legislativo e Regimentos",
+        "topico": "pl-2-1",
+        "cap": "PL-2.1B",
+        "tema": "Questão de Ordem: Prazo e Uso da Palavra",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Nenhum Deputado poderá exceder o prazo de três minutos para formular questão de ordem, nem falar sobre a mesma mais de uma vez.",
+        "comentario": "Item CERTO. Paráfrase fiel e literal do § 2º do art. 95 do RICD: «Nenhum Deputado poderá exceder o prazo de três minutos para formular questão de ordem, nem falar sobre a mesma mais de uma vez»."
+      }
+    },
+    {
+      "numero": 92,
+      "qid": "pl21-03",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl21-03",
+        "materia": "pl",
+        "cap": "PL-2.1",
+        "tema": "Composição",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Situação hipotética: no meio da legislatura, dez Deputados deixaram o partido A e se filiaram ao partido B. Assertiva: nesse caso, o número de vagas do partido B nas Comissões Permanentes deverá ser recalculado para refletir sua nova bancada.",
+        "comentario": "Art. 26, § 4º: mudanças de filiação não alteram a composição; as vagas seguem o resultado final das eleições e ficam inalteradas durante a legislatura."
+      }
+    },
+    {
+      "numero": 93,
+      "qid": "pl31-39",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl31-39",
+        "materia": "pl",
+        "cap": "PL-3.1",
+        "tema": "Arquivamento",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Com base no Regimento Comum do Congresso Nacional (Resolução nº 1/1970-CN), julgue o item. O parecer da Comissão Mista no sentido do arquivamento da proposição será considerado pela rejeição.",
+        "comentario": "Parágrafo único do art. 16."
+      }
+    },
+    {
+      "numero": 94,
+      "qid": "pl11-01",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "erro",
+      "questao": {
+        "id": "pl11-01",
+        "materia": "pl",
+        "cap": "PL-1.1",
+        "tema": "Abreviado",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "À luz do Regimento Interno da Câmara dos Deputados (RICD), no que tange às competências legislativas das Comissões, assinale a opção correta: Compete às Comissões, em caráter terminativo, discutir e votar proposições, dispensada a competência do Plenário, salvo se houver recurso de um décimo dos membros da Casa, nos termos previstos no art. 24, II, do RICD.",
+        "comentario": "O item está correto. Conforme o art. 24, inciso II, do RICD, as Comissões possuem competência para discutir e votar projetos de lei, dispensada a competência do Plenário, ressalvadas as hipóteses constitucionais ou regimentais de recurso ao Plenário por um décimo dos membros da Casa."
+      }
+    },
+    {
+      "numero": 95,
+      "qid": "b26plf-057",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26plf-057",
+        "materia": "pl",
+        "topico": "pl-1-5",
+        "cap": "BANCA-PL",
+        "tema": "sem armadilha · pl-1-5",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Projeto de lei de iniciativa popular deve ser encaminhado à Câmara dos Deputados, subscrito por, no mínimo, um por cento do eleitorado nacional, distribuído por pelo menos cinco estados, com não menos de três décimos por cento dos eleitores de cada um deles.",
+        "comentario": "Literalidade do art. 61, § 2º, da CF: apresentação à Câmara de projeto subscrito por, no mínimo, 1% do eleitorado nacional, distribuído por pelo menos cinco estados, com não menos de 0,3% dos eleitores de cada um. Vacina: Ao ver iniciativa popular, confira os números 1% / 5 estados / 0,3% e a Casa (Câmara)."
+      }
+    },
+    {
+      "numero": 96,
+      "qid": "pl21-ym-091",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 1,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl21-ym-091",
+        "materia": "Processo Legislativo e Regimentos",
+        "topico": "pl-2-1",
+        "cap": "PL-2.1B",
+        "tema": "Discussão",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "A discussão de proposição com todos os pareceres favoráveis só pode ser iniciada por orador que a combata, falando a favor número igual de oradores.",
+        "comentario": "CERTO. Art. 172, § 3º."
+      }
+    },
+    {
+      "numero": 97,
+      "qid": "pl21-33",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl21-33",
+        "materia": "pl",
+        "cap": "PL-2.1",
+        "tema": "Composição",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Conforme o Regimento Interno da Câmara dos Deputados, com a redação dada pela Resolução nº 33/2026, os membros da Mesa, inclusive o Presidente da Câmara, podem integrar Comissão Permanente ou Temporária, sendo-lhes permitido presidi-la.",
+        "comentario": "Art. 14, § 7º (Res. 33/2026): os membros da Mesa podem integrar comissão, EXCETO o Presidente, e é vedado exercerem a Presidência ou a Vice-Presidência da comissão."
+      }
+    },
+    {
+      "numero": 98,
+      "qid": "pl31-18",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl31-18",
+        "materia": "pl",
+        "cap": "PL-3.1",
+        "tema": "Sessões solenes",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Com base no Regimento Comum do Congresso Nacional (Resolução nº 1/1970-CN), julgue o item. As sessões solenes do Congresso Nacional exigem a presença mínima de um sexto da composição de cada Casa, e nelas não serão admitidas questões de ordem.",
+        "comentario": "Sessões solenes realizam-se com qualquer número. A segunda parte (sem questões de ordem) está correta."
+      }
+    },
+    {
+      "numero": 99,
+      "qid": "pl11-07",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl11-07",
+        "materia": "pl",
+        "cap": "PL-1.1",
+        "tema": "Abreviado",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "No RICD, a mera interposição do recurso assinado por um décimo dos membros da Casa leva obrigatoriamente o projeto ao Plenário.",
+        "comentario": "Versão correta: “O recurso assinado por um décimo dos membros da Casa precisa ser provido por decisão do Plenário para que a matéria seja discutida e votada pelo Plenário.” (art. 132, § 2º; o art. 58, § 4º prevê recurso ‘improvido’). Atenção: a CF, art. 58, § 2º, I, só fala em ‘recurso de um décimo’."
+      }
+    },
+    {
+      "numero": 100,
+      "qid": "b26tec-102",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26tec-102",
+        "materia": "pl",
+        "topico": "pl-1-5",
+        "cap": "BANCA-PL",
+        "tema": "sem armadilha · pl-1-5",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "A legitimidade para a iniciativa das propostas de emendas à CF é mais ampla que a das medidas provisórias.",
+        "comentario": "PEC: 1/3 da Câmara ou do Senado, PR ou mais da metade das assembleias (art. 60); MP: só o PR (art. 62). Vacina: Ao comparar iniciativas, lembre: MP é exclusiva do PR; a PEC tem três legitimados."
+      }
+    },
+    {
+      "numero": 101,
+      "qid": "pl21-ym-100",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl21-ym-100",
+        "materia": "Processo Legislativo e Regimentos",
+        "topico": "pl-2-1",
+        "cap": "PL-2.1B",
+        "tema": "Encerramento",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "O encerramento da discussão dá-se por ausência de oradores, decurso dos prazos ou deliberação do Plenário.",
+        "comentario": "CERTO. Art. 178."
+      }
+    },
+    {
+      "numero": 102,
+      "qid": "pl21-39",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl21-39",
+        "materia": "pl",
+        "cap": "PL-2.1",
+        "tema": "Pareceres divergentes",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Nos termos do Regimento Interno da Câmara dos Deputados, caso as comissões de mérito emitam pareceres divergentes, a proposição perderá seu caráter de apreciação conclusiva, devendo o projeto ser submetido à deliberação do Plenário.",
+        "comentario": "Conforme o art. 24, inciso II, alínea 'g', do RICD, a competência das comissões para apreciar projetos de forma conclusiva é afastada quando houver pareceres divergentes entre as comissões de mérito. Nesses casos, a matéria deixa de ser apreciada conclusivamente e deve seguir o rito ordinário de deliberação pelo Plenário. Não há o mecanismo de 'prevalência' de um parecer sobre o outro, mas sim a perda da natureza conclusiva da tramitação."
+      }
+    },
+    {
+      "numero": 103,
+      "qid": "pl31-21",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "erro",
+      "questao": {
+        "id": "pl31-21",
+        "materia": "pl",
+        "cap": "PL-3.1",
+        "tema": "Avulsos",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Com base no Regimento Comum do Congresso Nacional (Resolução nº 1/1970-CN), julgue o item. Os avulsos das matérias constantes da Ordem do Dia da sessão conjunta serão distribuídos aos Congressistas com a antecedência mínima de 48 horas.",
+        "comentario": "O art. 33 fixa antecedência mínima de 24 horas. As 48 horas são o limite de adiamento da votação (art. 40)."
+      }
+    },
+    {
+      "numero": 104,
+      "qid": "pl11-05",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl11-05",
+        "materia": "pl",
+        "cap": "PL-1.1",
+        "tema": "Abreviado",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Considerando as disposições do Regimento Interno da Câmara dos Deputados (RICD) acerca da tramitação conclusiva nas Comissões, julgue o item a seguir: Caso um projeto de lei tenha sido aprovado em caráter conclusivo pelas Comissões, o recurso para que a matéria seja apreciada pelo Plenário deverá ser interposto por, no mínimo, um décimo dos membros da Casa, no prazo de cinco sessões após a publicação da decisão na imprensa oficial.",
+        "comentario": "O item está correto. Conforme o art. 58, § 1º, do RICD, as Comissões possuem competência para apreciar e votar proposições, dispensada a competência do Plenário, exceto se houver recurso assinado por um décimo dos membros da Casa, interposto no prazo de cinco sessões, contadas a partir da publicação do despacho ou da decisão final da Comissão (art. 132, § 2º)."
+      }
+    },
+    {
+      "numero": 105,
+      "qid": "pl21-ym-057",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl21-ym-057",
+        "materia": "Processo Legislativo e Regimentos",
+        "topico": "pl-2-1",
+        "cap": "PL-2.1B",
+        "tema": "Apreciação preliminar",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Reconhecidas pelo Plenário a constitucionalidade e a juridicidade, essas preliminares podem ser reapreciadas se houver recurso.",
+        "comentario": "ERRADO. Art. 147: não podem ser novamente arguidas em contrário. Versão correta: “Reconhecidas pelo Plenário a constitucionalidade e a juridicidade, essas preliminares não podem ser novamente arguidas em contrário.”"
+      }
+    },
+    {
+      "numero": 106,
+      "qid": "pl21-17",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl21-17",
+        "materia": "pl",
+        "cap": "PL-2.1",
+        "tema": "Ausências",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "O autor de proposição não poderá ser dela Relator, ainda que como substituto ou parcial.",
+        "comentario": "Art. 43, parágrafo único."
+      }
+    },
+    {
+      "numero": 107,
+      "qid": "pl31-25",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "B",
+      "conf": null,
+      "prim": "E",
+      "resultado": "branco",
+      "questao": {
+        "id": "pl31-25",
+        "materia": "pl",
+        "cap": "PL-3.1",
+        "tema": "Líder da Minoria",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Com base no Regimento Comum do Congresso Nacional (Resolução nº 1/1970-CN), julgue o item. A escolha do Líder da Minoria no Congresso Nacional é feita a cada dois anos e recai sempre sobre um Deputado Federal.",
+        "comentario": "A escolha é anual e alterna entre Senadores e Deputados Federais."
+      }
+    },
+    {
+      "numero": 108,
+      "qid": "pl11-06",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl11-06",
+        "materia": "pl",
+        "cap": "PL-1.1",
+        "tema": "Abreviado",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Contra a apreciação conclusiva de projeto de lei pelas Comissões, o recurso ao Plenário pode ser apresentado no prazo de dez sessões, assinado por um terço dos membros da Casa.",
+        "comentario": "Versão correta: “O recurso deve ser apresentado em cinco sessões, assinado por, pelo menos, um décimo dos membros da Casa.” (art. 58, §§ 1º e 3º)."
+      }
+    },
+    {
+      "numero": 109,
+      "qid": "pl21-ym-029",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "erro",
+      "questao": {
+        "id": "pl21-ym-029",
+        "materia": "Processo Legislativo e Regimentos",
+        "topico": "pl-2-1",
+        "cap": "PL-2.1B",
+        "tema": "Requerimentos",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "O requerimento de retirada de proposição constante da Ordem do Dia pode ser verbal ou escrito e depende de deliberação do Plenário.",
+        "comentario": "ERRADO. Art. 117, VI: requerimentos sujeitos a deliberação do Plenário são ESCRITOS. Versão correta: “O requerimento de retirada de proposição constante da Ordem do Dia deve ser escrito e depende de deliberação do Plenário.”"
+      }
+    },
+    {
+      "numero": 110,
+      "qid": "pl21-24",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl21-24",
+        "materia": "pl",
+        "cap": "PL-2.1",
+        "tema": "Apreciação",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "É terminativo o parecer da Comissão de Constituição e Justiça e de Cidadania quanto à constitucionalidade ou juridicidade da matéria e o da Comissão de Finanças e Tributação sobre a adequação financeira ou orçamentária da proposição.",
+        "comentario": "Art. 54, I e II."
+      }
+    },
+    {
+      "numero": 111,
+      "qid": "pl31-29",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl31-29",
+        "materia": "pl",
+        "cap": "PL-3.1",
+        "tema": "Composição",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Com base no Regimento Comum do Congresso Nacional (Resolução nº 1/1970-CN), julgue o item. Ressalvados os casos previstos no Regimento, as Comissões Mistas compõem-se de onze Senadores e onze Deputados, incluindo-se sempre um representante da Minoria, se a proporcionalidade não lhe der representação.",
+        "comentario": "Texto do art. 10, caput."
+      }
+    },
+    {
+      "numero": 112,
+      "qid": "pl11-08",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl11-08",
+        "materia": "pl",
+        "cap": "PL-1.1",
+        "tema": "Sumário",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Com base nas disposições da Constituição Federal de 1988 acerca do processo legislativo, julgue o item a seguir: A solicitação de urgência para a apreciação de projeto de lei, nos termos do art. 64, § 1º, da CF, é uma prerrogativa constitucional restrita ao Presidente da República, aplicável exclusivamente a projetos de sua iniciativa.",
+        "comentario": "A assertiva está correta. Conforme o art. 64, § 1º, da CF, o Presidente da República pode solicitar urgência para projetos de lei de sua iniciativa, forçando o trâmite célere nas casas legislativas. A restrição é taxativa quanto ao autor da iniciativa e ao tipo de projeto."
+      }
+    },
+    {
+      "numero": 113,
+      "qid": "pl21b-04",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl21b-04",
+        "materia": "Processo Legislativo e Regimentos",
+        "topico": "pl-2-1",
+        "cap": "PL-2.1B",
+        "tema": "Proposições: Retirada com Parecer Favorável",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Proposição que já tenha recebido parecer favorável de ao menos uma Comissão pode ser retirada pelo Autor mediante simples despacho do Presidente da Câmara.",
+        "comentario": "Item ERRADO. Conforme determina o art. 104, § 1º do RICD: «Se a proposição tiver parecer favorável, de mérito ou conclusivo, de pelo menos uma Comissão, caberá ao Plenário deliberar sobre o requerimento de retirada». O despacho simples do Presidente só cabe quando a proposição não tiver parecer, tiver parecer contrário ou apenas de admissibilidade (art. 114, VIII)."
+      }
+    },
+    {
+      "numero": 114,
+      "qid": "pl21-04",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "erro",
+      "questao": {
+        "id": "pl21-04",
+        "materia": "pl",
+        "cap": "PL-2.1",
+        "tema": "Composição",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Ao Deputado é sempre assegurado o direito de integrar, como titular, pelo menos uma Comissão, ainda que sem legenda partidária, exceto se for membro da Mesa.",
+        "comentario": "Art. 26, § 3º: direito assegurado 'salvo se membro da Mesa'."
+      }
+    },
+    {
+      "numero": 115,
+      "qid": "pl31-31",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl31-31",
+        "materia": "pl",
+        "cap": "PL-3.1",
+        "tema": "Relator",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Com base no Regimento Comum do Congresso Nacional (Resolução nº 1/1970-CN), julgue o item. O Relator da matéria sujeita ao exame de Comissão Mista é designado pelo Presidente do Senado Federal.",
+        "comentario": "Compete ao Presidente da Comissão Mista designar o Relator."
+      }
+    },
+    {
+      "numero": 116,
+      "qid": "pl11-10",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "erro",
+      "questao": {
+        "id": "pl11-10",
+        "materia": "pl",
+        "cap": "PL-1.1",
+        "tema": "Sumário",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "De acordo com o Regimento Interno da Câmara dos Deputados, no rito de tramitação de proposições em regime de urgência, a Câmara dos Deputados dispõe de 10 dias para apreciar as emendas oferecidas pelo Senado Federal.",
+        "comentario": "O item está correto. Conforme o art. 204, inciso II, do RICD, quando a proposição tramita em regime de urgência, a Câmara dos Deputados terá o prazo de dez dias para apreciar as emendas oferecidas pelo Senado Federal. Versão correta: A Câmara dos Deputados dispõe de 10 dias para apreciar as emendas do Senado Federal em regime de urgência."
+      }
+    },
+    {
+      "numero": 117,
+      "qid": "pl21b-03",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl21b-03",
+        "materia": "Processo Legislativo e Regimentos",
+        "topico": "pl-2-1",
+        "cap": "PL-2.1B",
+        "tema": "Ata da Sessão: Quórum da Última Sessão",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "A ata da última sessão, ao encerrar-se a sessão legislativa, será redigida em resumo e submetida a discussão e aprovação, presente qualquer número de Deputados.",
+        "comentario": "Item CERTO. Trata-se de uma exceção real às regras gerais de quórum de deliberação. Nos termos do art. 97, § 3º do RICD: «A ata da última sessão, ao encerrar-se a sessão legislativa, será redigida em resumo e submetida a discussão e aprovação, presente qualquer número de Deputados»."
+      }
+    },
+    {
+      "numero": 118,
+      "qid": "pl21-40",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl21-40",
+        "materia": "pl",
+        "cap": "PL-2.1",
+        "tema": "Urgência",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "A tramitação de projeto de lei em regime de urgência afasta a apreciação conclusiva pelas comissões.",
+        "comentario": "Urgência é exceção expressa do art. 24, II, h."
+      }
+    },
+    {
+      "numero": 119,
+      "qid": "pl31-26",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl31-26",
+        "materia": "pl",
+        "cap": "PL-3.1",
+        "tema": "Prerrogativas do Líder",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Com base no Regimento Comum do Congresso Nacional (Resolução nº 1/1970-CN), julgue o item. Ao Líder é lícito usar da palavra para comunicação urgente sempre que julgar necessário, em qualquer fase da sessão, pelo prazo de até dez minutos.",
+        "comentario": "Uma única vez, pelo prazo máximo de 5 minutos."
+      }
+    },
+    {
+      "numero": 120,
+      "qid": "pl11-11",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "pl11-11",
+        "materia": "pl",
+        "cap": "PL-1.1",
+        "tema": "Sumário",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Com base no Regimento Interno da Câmara dos Deputados (RICD) acerca da tramitação em regime de urgência, julgue o item a seguir: Os prazos da urgência constitucional não correm nos períodos de recesso do Congresso Nacional, sendo vedada, ainda, a aplicação do rito de urgência aos projetos de código.",
+        "comentario": "O item está correto. Conforme o art. 204, § 2º, do RICD, o prazo do regime de urgência não corre durante o recesso parlamentar. Ademais, o § 1º do mesmo artigo exclui expressamente os projetos de código do rito de urgência constitucional."
+      }
+    },
+    {
+      "numero": 121,
+      "qid": "lg2-06",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg2-06",
+        "materia": "lg",
+        "cap": "LG-2",
+        "tema": "Número",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Em Os anais registram o debate, a forma plural do substantivo não indica pluralidade de publicações, pois se trata de nome usado apenas no plural.",
+        "comentario": "Certo. Nomes só usados no plural (anais, núpcias, pêsames) podem designar coisa única. Número gramatical não é quantidade real."
+      }
+    },
+    {
+      "numero": 122,
+      "qid": "b26plf-041",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "b26plf-041",
+        "materia": "lg",
+        "topico": "lg-12",
+        "cap": "BANCA-LG",
+        "tema": "F7 · lg-12",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Considere as seguintes proposições de determinado deputado: A: “Se eu não voto favorável à matéria, serei punido pela legenda.”; B: “Se sou punido pela legenda, posso decepcionar os eleitores.”; C: “Vou votar favorável à matéria.”. Com base no argumento cujas premissas sejam as proposições A, B e C, é correto concluir que os eleitores não poderão ficar decepcionados.",
+        "comentario": "De A (¬V → P) e C (V) nada se conclui sobre P (falácia da negação do antecedente); logo não se conclui nada sobre a decepção dos eleitores. Vacina: Ao ver premissa que nega o antecedente de uma condicional, lembre que ela não permite negar o consequente."
+      }
+    },
+    {
+      "numero": 123,
+      "qid": "lg1-13",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "erro",
+      "questao": {
+        "id": "lg1-13",
+        "materia": "lg",
+        "cap": "LG-1",
+        "tema": "Referente e significado",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "O significado saussuriano corresponde ao objeto extralinguístico a que a palavra se aplica, razão pela qual a mudança do objeto implica a mudança do significado.",
+        "comentario": "O significado é conceito, entidade psíquica interna ao signo. O objeto extralinguístico é o referente, que não integra o signo saussuriano. Pegadinha: fundir significado e referente."
+      }
+    },
+    {
+      "numero": 124,
+      "qid": "lg2-13",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg2-13",
+        "materia": "lg",
+        "cap": "LG-2",
+        "tema": "Tempo",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "No modelo de Reichenbach, o pretérito mais-que-perfeito localiza o evento antes de um momento de referência que, por sua vez, é anterior ao momento da fala.",
+        "comentario": "Certo. ME → MR → MF: passado anterior a outro passado. É a análise consensual do modelo."
+      }
+    },
+    {
+      "numero": 125,
+      "qid": "b26plf-042",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "B",
+      "conf": null,
+      "resultado": "branco",
+      "questao": {
+        "id": "b26plf-042",
+        "materia": "lg",
+        "topico": "lg-12",
+        "cap": "BANCA-LG",
+        "tema": "F6 · lg-12",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Considere o conjunto universo dos deputados e os predicados a seguir: p(x): x é favorável à matéria. q(x): x vota favorável. Nesse caso, a frase “Existe deputado que não é favorável à matéria e sua votação não é favorável.” pode ser escrita, em representação simbólica, como ∃ x ¬(p(x) → q(x)).",
+        "comentario": "¬(p → q) equivale a p ∧ ¬q (é favorável e não vota favorável); a frase pede ∃x (¬p(x) ∧ ¬q(x)). Vacina: Ao ver ¬(p → q), traduza para “p e não q” e compare com a frase."
+      }
+    },
+    {
+      "numero": 126,
+      "qid": "lg1-01",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg1-01",
+        "materia": "lg",
+        "cap": "LG-1",
+        "tema": "Linguagem, língua e fala",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Para Saussure, a linguagem é multiforme e heteróclita e abrange tanto a língua, sistema social e convencional, quanto a fala, ato individual de utilização desse sistema.",
+        "comentario": "É a tríade saussuriana: linguagem (faculdade ampla, física, fisiológica e psíquica), língua (parte social, sistema partilhado pela comunidade) e fala (execução individual). O objeto da linguística, para Saussure, é a língua."
+      }
+    },
+    {
+      "numero": 127,
+      "qid": "lg2-17",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "B",
+      "conf": null,
+      "resultado": "branco",
+      "questao": {
+        "id": "lg2-17",
+        "materia": "lg",
+        "cap": "LG-2",
+        "tema": "Modo",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Em Provavelmente haverá quórum, exprime-se modalidade epistêmica; em O orador deve dirigir-se à Mesa, modalidade deôntica.",
+        "comentario": "Certo. Epistêmica: grau de certeza. Deôntica: obrigação, permissão, proibição."
+      }
+    },
+    {
+      "numero": 128,
+      "qid": "lg1-03",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg1-03",
+        "materia": "lg",
+        "cap": "LG-1",
+        "tema": "Signo: significante e significado",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "O signo linguístico, segundo Saussure, une uma coisa do mundo a um nome, de modo que o significado de uma palavra corresponde ao objeto que ela designa.",
+        "comentario": "O signo une um conceito (significado) a uma imagem acústica (significante), e não uma coisa a um nome. O objeto do mundo é o referente, que fica fora do signo saussuriano."
+      }
+    },
+    {
+      "numero": 129,
+      "qid": "lg2-30",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg2-30",
+        "materia": "lg",
+        "cap": "LG-2",
+        "tema": "Número",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Em O Deputado só poderá falar nos termos do Regimento, o substantivo no singular, precedido de artigo definido, tem leitura genérica e alcança todos os deputados.",
+        "comentario": "Certo. Singular genérico, padrão do texto normativo."
+      }
+    },
+    {
+      "numero": 130,
+      "qid": "lg1-08",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg1-08",
+        "materia": "lg",
+        "cap": "LG-1",
+        "tema": "Arbitrariedade e motivação",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Na teoria saussuriana, “dezenove” é signo relativamente motivado, pois remete a “dez” e “nove”, ao passo que “vinte” é absolutamente arbitrário, já que nada em sua forma remete a outros termos da língua.",
+        "comentario": "Saussure distingue o arbitrário absoluto do relativo. A motivação relativa vem das relações internas do sistema (composição, derivação), e não de semelhança com a coisa: “dez” e “nove” continuam arbitrários."
+      }
+    },
+    {
+      "numero": 131,
+      "qid": "lg2-27",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg2-27",
+        "materia": "lg",
+        "cap": "LG-2",
+        "tema": "Pessoa",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Em A gente só pede que a Mesa distribua as cópias, o verbo está na terceira pessoa do singular, embora a expressão a gente designe um grupo que inclui o falante.",
+        "comentario": "Certo. Forma de 3ª do singular, sentido de 1ª do plural."
+      }
+    },
+    {
+      "numero": 132,
+      "qid": "lg1-07",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg1-07",
+        "materia": "lg",
+        "cap": "LG-1",
+        "tema": "Arbitrariedade",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Saussure reconheceu as onomatopeias e as interjeições como objeções decisivas ao princípio da arbitrariedade, razão pela qual o restringiu às palavras de origem erudita.",
+        "comentario": "Saussure tratou essas objeções como secundárias: são pouco numerosas, já parcialmente convencionais e variam de uma língua para outra (o latido do cão não é transcrito igual em toda parte). O princípio é mantido para o sistema como um todo."
+      }
+    },
+    {
+      "numero": 133,
+      "qid": "lg2-28",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg2-28",
+        "materia": "lg",
+        "cap": "LG-2",
+        "tema": "Aspecto",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Segundo o teste das classes de Vendler, Debateram por duas horas descreve uma atividade, ao passo que Redigiu o parecer em duas horas descreve um processo culminado.",
+        "comentario": "Certo. Por + duração = atividade (sem ponto final natural); em + prazo = processo culminado (accomplishment)."
+      }
+    },
+    {
+      "numero": 134,
+      "qid": "lg1-19",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg1-19",
+        "materia": "lg",
+        "cap": "LG-1",
+        "tema": "Linguagem, língua e fala",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "O termo linguagem restringe-se aos sistemas verbais, de modo que gestos, sinais de trânsito e códigos visuais não constituem linguagem.",
+        "comentario": "Linguagem, em sentido amplo, é a capacidade de comunicar por sistemas de signos, verbais ou não verbais. Saussure inclusive previa a semiologia como ciência geral dos signos, da qual a linguística seria parte."
+      }
+    },
+    {
+      "numero": 135,
+      "qid": "lg2-24",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg2-24",
+        "materia": "lg",
+        "cap": "LG-2",
+        "tema": "Papéis semânticos",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Em O apagão interrompeu a reunião, o sujeito exerce o papel de agente, já que desencadeia o evento descrito pelo verbo.",
+        "comentario": "Errado. Agente pede intenção (teste do de propósito). Força ou evento sem intenção é causa."
+      }
+    },
+    {
+      "numero": 136,
+      "qid": "lg1-16",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg1-16",
+        "materia": "lg",
+        "cap": "LG-1",
+        "tema": "Denotação e conotação",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "A conotação é recurso exclusivo dos textos literários, de modo que não ocorre em discursos parlamentares nem em textos técnicos.",
+        "comentario": "A conotação aparece em qualquer gênero: discursos, editoriais, publicidade, conversa cotidiana. Textos técnicos e oficiais tendem à denotação, mas isso é preferência, não impossibilidade. Pegadinha: o “exclusivo”."
+      }
+    },
+    {
+      "numero": 137,
+      "qid": "lg2-09",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg2-09",
+        "materia": "lg",
+        "cap": "LG-2",
+        "tema": "Pessoa",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Embora leve o verbo à terceira pessoa, o pronome de tratamento Vossa Excelência designa, no sentido, a pessoa com quem se fala.",
+        "comentario": "Certo. É 3ª pessoa na concordância e 2ª no sentido (MRPR 4.1.1). O item traz as duas metades."
+      }
+    },
+    {
+      "numero": 138,
+      "qid": "lg1-15",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg1-15",
+        "materia": "lg",
+        "cap": "LG-1",
+        "tema": "Denotação e conotação",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Na formulação de Hjelmslev, retomada por Barthes, há conotação quando um signo inteiro, formado por expressão e conteúdo, passa a funcionar como plano da expressão de um novo conteúdo.",
+        "comentario": "É a definição de semiótica conotativa: o primeiro sistema (denotativo) torna-se significante de um segundo sentido. Barthes usou o esquema para analisar mitos e publicidade."
+      }
+    },
+    {
+      "numero": 139,
+      "qid": "lg2-19",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg2-19",
+        "materia": "lg",
+        "cap": "LG-2",
+        "tema": "Aspecto",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "As formas falou e falava diferem quanto ao tempo verbal, já que apenas a primeira situa o fato no passado.",
+        "comentario": "Errado. As duas são passado; diferem no aspecto (perfectivo × imperfectivo). Aspecto não é dêitico; tempo é."
+      }
+    },
+    {
+      "numero": 140,
+      "qid": "lg1-17",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg1-17",
+        "materia": "lg",
+        "cap": "LG-1",
+        "tema": "Significação e valor",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Para Saussure, o valor de um termo resulta de suas relações com os demais termos do sistema, razão pela qual palavras de línguas diferentes podem ter significação próxima e, ainda assim, valores distintos.",
+        "comentario": "É o caso de mouton (francês) e sheep (inglês): o inglês tem também mutton para a carne servida à mesa, o que recorta o campo de outro modo. O valor é dado pela posição no sistema, não só pelo conceito."
+      }
+    },
+    {
+      "numero": 141,
+      "qid": "lg2-21",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg2-21",
+        "materia": "lg",
+        "cap": "LG-2",
+        "tema": "Aspecto",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Em relatório, a troca de O relator tem pedido adiamentos por O relator pediu adiamentos manteria o sentido, pois ambas as formas indicam fato passado concluído.",
+        "comentario": "Errado. O perfeito composto indica repetição ou continuidade até o presente (= vem pedindo)."
+      }
+    },
+    {
+      "numero": 142,
+      "qid": "lg1-02",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg1-02",
+        "materia": "lg",
+        "cap": "LG-1",
+        "tema": "Linguagem, língua e fala",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Na dicotomia saussuriana, a língua corresponde ao ato individual de vontade e inteligência do falante, ao passo que a fala constitui o produto social depositado no cérebro de cada membro da comunidade.",
+        "comentario": "Papéis invertidos. A língua é social e independe do indivíduo, que não pode criá-la nem modificá-la sozinho; a fala é individual e momentânea. Pegadinha clássica de troca de termos."
+      }
+    },
+    {
+      "numero": 143,
+      "qid": "lg2-12",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg2-12",
+        "materia": "lg",
+        "cap": "LG-2",
+        "tema": "Tempo",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "O tempo verbal coincide necessariamente com o tempo cronológico do fato, razão pela qual uma forma de presente do indicativo sempre se refere a fato simultâneo ao momento da fala.",
+        "comentario": "Errado. A sessão começa amanhã: presente com sentido de futuro. Há ainda presente histórico, habitual e atemporal."
+      }
+    },
+    {
+      "numero": 144,
+      "qid": "lg1-11",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg1-11",
+        "materia": "lg",
+        "cap": "LG-1",
+        "tema": "Referente e referência",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "No triângulo semiótico de Ogden e Richards, a relação entre o símbolo e o referente é indireta, pois passa pela referência, isto é, pelo pensamento que os relaciona.",
+        "comentario": "Por isso o lado símbolo–referente costuma ser desenhado com linha pontilhada. A palavra não toca a coisa diretamente; o vínculo é mediado pelo conceito."
+      }
+    },
+    {
+      "numero": 145,
+      "qid": "lg2-22",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "lg2-22",
+        "materia": "lg",
+        "cap": "LG-2",
+        "tema": "Papéis semânticos",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "O sujeito de uma oração desempenha sempre o papel semântico de agente, isto é, de quem pratica a ação.",
+        "comentario": "Errado. Sujeito é função; agente é papel. Em A sessão foi aberta o sujeito é paciente; em A chuva atrasou a sessão, causa."
+      }
+    },
+    {
+      "numero": 146,
+      "qid": "RF-2.8-R08",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "erro",
+      "questao": {
+        "id": "RF-2.8-R08",
+        "materia": "Reconhecimento de Fala, Transcrição e IA",
+        "topico": "rf-2-8",
+        "cap": "RF-2.8",
+        "tema": "Lista lexical",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Situação hipotética: Após a transcrição, uma regra substitui a grafia recorrente de uma sigla.\n\nAssertiva: A substituição posterior prova que os pesos do reconhecedor foram atualizados.",
+        "comentario": "O pós-processamento lexical opera sobre uma hipótese já produzida. Uma troca textual posterior não demonstra que o decodificador tenha reconhecido originalmente a forma corrigida. O erro consiste em: atribuir ao reconhecimento uma correção aplicada somente depois. Versão correta: “A substituição posterior não prova atualização dos pesos do reconhecedor.”"
+      }
+    },
+    {
+      "numero": 147,
+      "qid": "c25-11",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "c25-11",
+        "materia": "Reconhecimento de Fala, Transcrição e IA",
+        "topico": "rf-2-5",
+        "cap": "RF-2.5",
+        "tema": "ITN × avaliação",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "A normalização do texto para o cálculo da WER e a normalização inversa de texto são a mesma operação, designada por nomes diferentes.",
+        "comentario": "Errado. A primeira uniformiza hipótese e referência (tira pontuação e maiúsculas); a segunda dá ao texto a forma escrita convencional."
+      }
+    },
+    {
+      "numero": 148,
+      "qid": "c0-18",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "c0-18",
+        "materia": "rf",
+        "cap": "0",
+        "tema": "Métricas",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Situação hipotética: Um sistema leva 6 minutos para transcrever um áudio de 3 minutos. Assertiva: Nessa situação, o RTF é igual a 2, o que indica processamento mais lento que a duração do áudio e inviabiliza seu uso contínuo em tempo real.",
+        "comentario": "RTF = tempo de processamento ÷ duração do áudio = 6 ÷ 3 = 2. Acima de 1, o sistema processa mais devagar do que a fala dura; para operar em tempo real, o RTF precisa ser de no máximo 1."
+      }
+    },
+    {
+      "numero": 149,
+      "qid": "c14-13",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "c14-13",
+        "materia": "rf",
+        "cap": "1.4",
+        "tema": "DER",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Situação hipotética: Em trecho de audiência pública com 800 segundos de fala na referência, um sistema apresentou 16 segundos de falso alarme, 24 segundos de fala perdida e 40 segundos de confusão de falante. Assertiva: Nessa situação, a DER do trecho é de 10%.",
+        "comentario": "DER = (16 + 24 + 40) ÷ 800 = 80 ÷ 800 = 10%."
+      }
+    },
+    {
+      "numero": 150,
+      "qid": "RF-2.4-R08",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "RF-2.4-R08",
+        "materia": "Reconhecimento de Fala, Transcrição e IA",
+        "topico": "rf-2-4",
+        "cap": "RF-2.4",
+        "tema": "Presidência em exercício",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Situação hipotética: O vice-presidente assume a condução da sessão durante a ausência do presidente.\n\nAssertiva: As intervenções do vice no período devem ser atribuídas ao presidente titular para manter uniforme o cabeçalho.",
+        "comentario": "O registro da presidência acompanha quem exerce a função em cada intervalo. A titularidade habitual do cargo não resolve sozinha a autoria de uma intervenção. O erro consiste em: atribuir ao titular todas as falas da presidência. Versão correta: “As intervenções devem ser atribuídas à pessoa que efetivamente presidiu o período.”"
+      }
+    },
+    {
+      "numero": 151,
+      "qid": "c13-09",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "c13-09",
+        "materia": "rf",
+        "cap": "1.3",
+        "tema": "Ganhos",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "As frases \"O senhor votou a favor.\" e \"O senhor votou a favor?\" contêm as mesmas palavras, de modo que a distinção entre elas, marcada pela entonação, é exemplo de informação prosódica que um LLM restrito à transcrição pode perder.",
+        "comentario": "Prosódia: entonação, ritmo, acento e pausas. Na fala, o que separa a pergunta da afirmação é a entonação."
+      }
+    },
+    {
+      "numero": 152,
+      "qid": "RF-2.7-R02",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "RF-2.7-R02",
+        "materia": "Reconhecimento de Fala, Transcrição e IA",
+        "topico": "rf-2-7",
+        "cap": "RF-2.7",
+        "tema": "Sequencial",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Situação hipotética: Beatriz revisa a versão já corrigida por André.\n\nAssertiva: A participação de dois profissionais torna esse procedimento independente, mesmo com acesso às correções anteriores.",
+        "comentario": "Na revisão sequencial, o segundo profissional trabalha a partir da versão recebida da etapa anterior. Isso favorece continuidade, mas difere de duas avaliações feitas sem acesso às decisões recíprocas. O erro consiste em: chamar de independente qualquer revisão com duas pessoas. Versão correta: “Dois profissionais não tornam a revisão independente quando o segundo usa as decisões anteriores.”"
+      }
+    },
+    {
+      "numero": 153,
+      "qid": "c15-13",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "c15-13",
+        "materia": "rf",
+        "cap": "1.5",
+        "tema": "Pistas",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Como a pontuação é fenômeno exclusivamente gramatical, os sistemas de pontuação automática dispensam qualquer informação extraída do áudio.",
+        "comentario": "Pausas, entonação e velocidade de fala são pistas usadas desde os primeiros estudos, e a combinação com as pistas lexicais é a abordagem preferida. Pegadinhas: \"exclusivamente\" e \"qualquer\"."
+      }
+    },
+    {
+      "numero": 154,
+      "qid": "c16-15",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "c16-15",
+        "materia": "rf",
+        "cap": "1.6",
+        "tema": "Vocabulário parlamentar",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Em remissões normativas, como a menção a artigos e parágrafos, o erro de reconhecimento de um número é falha de pouca gravidade, pois não altera o sentido geral do discurso.",
+        "comentario": "Um dígito trocado muda a norma citada (artigo 155 × 165). Para a WER é um erro como outro; para o registro, não."
+      }
+    },
+    {
+      "numero": 155,
+      "qid": "c12-11",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "B",
+      "conf": null,
+      "resultado": "branco",
+      "questao": {
+        "id": "c12-11",
+        "materia": "rf",
+        "cap": "1.2",
+        "tema": "Atenção",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "O avanço do Listen, Attend and Spell sobre a CTC consistiu em produzir o texto sem supor independência entre os caracteres, por meio de um decodificador com atenção que considera o que já foi escrito.",
+        "comentario": "A CTC supõe independência condicional entre as saídas; o decodificador com atenção é autorregressivo e consulta o próprio histórico, além do áudio inteiro, por atenção."
+      }
+    },
+    {
+      "numero": 156,
+      "qid": "c11-14",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "c11-14",
+        "materia": "rf",
+        "cap": "1.1",
+        "tema": "HMM-GMM e DNN-HMM",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Ao substituir a GMM por uma rede neural profunda, o modelo híbrido DNN-HMM passou a dispensar o HMM, já que a DNN incorpora a modelagem temporal da fala.",
+        "comentario": "No híbrido, a DNN entra só no lugar da GMM, para avaliar o som de cada quadro. O HMM continua cuidando do tempo, e o léxico e o modelo de linguagem continuam separados. Por isso o híbrido não é end-to-end. Memória útil: o híbrido troca o G pelo D; o H fica."
+      }
+    },
+    {
+      "numero": 157,
+      "qid": "RF-2.1-R08",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "erro",
+      "questao": {
+        "id": "RF-2.1-R08",
+        "materia": "Reconhecimento de Fala, Transcrição e IA",
+        "topico": "rf-2-1",
+        "cap": "RF-2.1",
+        "tema": "Manual ou assistida",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Situação hipotética: Dois profissionais recebem a mesma gravação; um digita do zero, outro corrige um rascunho de ASR.\n\nAssertiva: A degravação assistida termina necessariamente com a geração do rascunho pelo reconhecedor.",
+        "comentario": "A produção manual digita a partir da escuta. A assistida usa uma primeira hipótese automática, que continua sujeita a conferência. O erro consiste em: confundir auxílio computacional com ausência de intervenção humana. Versão correta: “A degravação assistida pode incluir revisão humana depois da geração do rascunho.”"
+      }
+    },
+    {
+      "numero": 158,
+      "qid": "RF-2.2-R11",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "RF-2.2-R11",
+        "materia": "Reconhecimento de Fala, Transcrição e IA",
+        "topico": "rf-2-2",
+        "cap": "RF-2.2",
+        "tema": "Trecho crítico",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Situação hipotética: O áudio diz “não aprovo”, enquanto a hipótese registra “aprovo” com alta confiança.\n\nAssertiva: A omissão de “não” pode inverter a posição do orador apesar do escore alto.",
+        "comentario": "Palavras curtas e números podem decidir o sentido de uma declaração. A confiança atribuída pelo sistema não determina a gravidade da eventual troca. O caso respeita esse critério."
+      }
+    },
+    {
+      "numero": 159,
+      "qid": "RF-2.6-R18",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "RF-2.6-R18",
+        "materia": "Reconhecimento de Fala, Transcrição e IA",
+        "topico": "rf-2-6",
+        "cap": "RF-2.6",
+        "tema": "Estado do texto",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "No fluxo de degravação e revisão de registros de sessões parlamentares, a disponibilização pública de um texto em tempo real (transcrição simultânea) confere a este a condição imediata e definitiva de versão editorial oficial do órgão.",
+        "comentario": "A exibição de textos em tempo real, comum na cobertura de sessões, constitui ferramenta de transparência ou auxílio ao acompanhamento, mas não se confunde com a versão editorial definitiva. A validação editorial exige etapas de revisão, cotejamento, normalização e homologação por autoridade competente, previstas nos manuais de degravação e redação legislativa. A disponibilidade pública imediata não exime o texto das etapas posteriores de controle de qualidade e correção gramatical/formal."
+      }
+    },
+    {
+      "numero": 160,
+      "qid": "c17-05",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "c17-05",
+        "materia": "rf",
+        "cap": "1.7",
+        "tema": "Endpointing",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Detecção de atividade de voz e endpointing são sinônimos, pois ambos decidem que a fala do orador terminou.",
+        "comentario": "VAD pergunta \"há fala agora?\"; endpointing pergunta \"a fala acabou?\"."
+      }
+    },
+    {
+      "numero": 161,
+      "qid": "RF-2.3-R02",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "RF-2.3-R02",
+        "materia": "Reconhecimento de Fala, Transcrição e IA",
+        "topico": "rf-2-3",
+        "cap": "RF-2.3",
+        "tema": "Fidelidade e completude",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Situação hipotética: A fala condiciona o apoio a uma emenda, mas a versão registra apenas o apoio.\n\nAssertiva: Uma versão mais curta é necessariamente mais fiel, pois reduz a chance de haver palavras erradas.",
+        "comentario": "Fidelidade exige correspondência de sentido com a fala; completude verifica se o conteúdo necessário foi registrado. Um texto curto e elegante pode omitir uma condição decisiva. O erro consiste em: tomar fluência textual por fidelidade. Versão correta: “A fidelidade depende da correspondência com a fala, não de reduzir a extensão do texto.”"
+      }
+    },
+    {
+      "numero": 162,
+      "qid": "c18-01",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "c18-01",
+        "materia": "rf",
+        "cap": "1.8",
+        "tema": "Conceitos",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Pesos abertos e código aberto são expressões equivalentes, pois ambas significam que o modelo pode ser baixado e executado localmente.",
+        "comentario": "Pesos abertos: parâmetros publicados. Código aberto: código-fonte sob licença aberta. Podem não coincidir."
+      }
+    },
+    {
+      "numero": 163,
+      "qid": "RF-2.8-R17",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "RF-2.8-R17",
+        "materia": "Reconhecimento de Fala, Transcrição e IA",
+        "topico": "rf-2-8",
+        "cap": "RF-2.8",
+        "tema": "Risco do reforço",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Situação hipotética: Depois de aumentar o peso de uma sigla, ela passa a surgir também em áudios que não a contêm.\n\nAssertiva: As inclusões indevidas mostram a necessidade de avaliar trechos negativos além dos que contêm a sigla.",
+        "comentario": "Reforço excessivo pode favorecer um termo não pronunciado. Avaliar o efeito exige testar tanto ocorrências desejadas quanto trechos em que o termo não aparece. O caso respeita esse critério."
+      }
+    },
+    {
+      "numero": 164,
+      "qid": "c25-12",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "c25-12",
+        "materia": "Reconhecimento de Fala, Transcrição e IA",
+        "topico": "rf-2-5",
+        "cap": "RF-2.5",
+        "tema": "Idioma",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "A normalização inversa é dependente do idioma, e línguas com flexão de gênero e número, como o português, impõem dificuldades adicionais à tarefa.",
+        "comentario": "Certo. Ex.: \"duas mil e quinhentas\", \"primeira\", \"um\"/\"uma\"."
+      }
+    },
+    {
+      "numero": 165,
+      "qid": "c0-14",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "c0-14",
+        "materia": "rf",
+        "cap": "0",
+        "tema": "Métricas",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Situação hipotética: A referência de um trecho tem 5 palavras. O sistema reconheceu corretamente as 5, mas, em seguida, acrescentou 6 palavras que não foram ditas. Assertiva: Nessa situação, a WER do trecho é de 120%.",
+        "comentario": "WER = (S + D + I) ÷ N = (0 + 0 + 6) ÷ 5 = 120%. Como as inserções entram no numerador sem aumentar N (palavras da referência), a WER pode passar de 100%."
+      }
+    },
+    {
+      "numero": 166,
+      "qid": "cp9qc-14",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "cp9qc-14",
+        "materia": "cp",
+        "cap": "CP-9-QC",
+        "tema": "Locke e propriedade",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "De acordo com a teoria política de John Locke, a propriedade já existe no estado de natureza e, sendo instituição anterior à sociedade, é direito natural do indivíduo, não podendo ser violado pelo Estado.",
+        "comentario": "Para Locke, a propriedade nasce do trabalho ainda no estado de natureza; o governo é criado para protegê-la, e não pode tomá-la sem consentimento."
+      }
+    },
+    {
+      "numero": 167,
+      "qid": "CP-2-02",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "CP-2-02",
+        "materia": "cp",
+        "topico": "cp-2",
+        "cap": "CP-2",
+        "tema": "Monarquia constitucional",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Um país mantém a sucessão hereditária da chefia de Estado, mas sua Constituição limita os poderes do titular.\n\nA limitação constitucional das prerrogativas do monarca é compatível com a preservação da forma monárquica.",
+        "comentario": "A forma monárquica admite limites constitucionais ao poder do monarca, como nas monarquias constitucionais."
+      }
+    },
+    {
+      "numero": 168,
+      "qid": "cp9-30",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "cp9-30",
+        "materia": "cp",
+        "cap": "CP-9",
+        "tema": "Mann",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Na distinção de Michael Mann, o poder infraestrutural do Estado corresponde à sua capacidade de penetrar a sociedade e implementar decisões em todo o território, diferentemente do poder despótico, que é a capacidade de decidir sem negociar com os grupos sociais.",
+        "comentario": "Mann, “The autonomous power of the state” (1984). Incremento do tutor."
+      }
+    },
+    {
+      "numero": 169,
+      "qid": "cp00-03",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "cp00-03",
+        "materia": "cp",
+        "cap": "CP-00",
+        "tema": "Arendt: política e liberdade",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Na perspectiva de Hannah Arendt, a política existe quando se constitui um espaço público em que indivíduos livres e iguais deliberam, sendo a palavra o único meio legítimo de persuasão, razão pela qual a política se identifica com a prática da liberdade.",
+        "comentario": "Correto. É a vertente filosófica (liberdade/bem comum) que o LDI opõe à vertente weberiana (luta/dominação). Em Arendt, a deliberação pressupõe que as preferências possam mudar diante dos argumentos, e a liberdade plena exige igualdade de acesso à palavra."
+      }
+    },
+    {
+      "numero": 170,
+      "qid": "b26ns-083",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "B",
+      "conf": null,
+      "resultado": "branco",
+      "questao": {
+        "id": "b26ns-083",
+        "materia": "cp",
+        "topico": "cp-3",
+        "cap": "BANCA-CP",
+        "tema": "sem armadilha · cp-3",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "O neocorporativismo caracteriza-se por práticas de concertação social entre capital e trabalho arbitradas pelo Estado.",
+        "comentario": "Neocorporativismo: intermediação de interesses por concertação tripartite (Estado, capital e trabalho), com o Estado arbitrando (Schmitter; Lehmbruch). Tópico do edital aproximado. Vacina: Ao ver neocorporativismo, associe concertação tripartite com arbitragem estatal."
+      }
+    },
+    {
+      "numero": 171,
+      "qid": "cp9qc-04",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "cp9qc-04",
+        "materia": "cp",
+        "cap": "CP-9-QC",
+        "tema": "Liberalismo no Brasil",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Na sociedade brasileira do século XIX, o liberalismo, filosofia política voltada para garantir o direito da propriedade e da liberdade, era princípio que garantia também a existência da escravidão.",
+        "comentario": "No Império, o liberalismo brasileiro conviveu com a escravidão: o escravizado era tratado como propriedade, e a defesa da propriedade servia para mantê-la (as 'ideias fora do lugar', de Roberto Schwarz). Gabarito do tutor; confirme no QC."
+      }
+    },
+    {
+      "numero": 172,
+      "qid": "CP-2-28",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "CP-2-28",
+        "materia": "cp",
+        "topico": "cp-2",
+        "cap": "CP-2",
+        "tema": "Mainwaring e Shugart · variação",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Dois países presidencialistas atribuem poderes legislativos diferentes ao presidente e têm sistemas partidários distintos.\n\nNa crítica de Mainwaring e Shugart a Linz, essas diferenças ajudam a explicar por que os riscos do presidencialismo podem variar entre os países.",
+        "comentario": "Os autores destacam que os poderes presidenciais e a configuração partidária condicionam os efeitos atribuídos ao presidencialismo."
+      }
+    },
+    {
+      "numero": 173,
+      "qid": "cp9-08",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "cp9-08",
+        "materia": "cp",
+        "cap": "CP-9",
+        "tema": "Locke",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Para John Locke, no estado de natureza os homens vivem em guerra de todos contra todos, razão pela qual transferem integralmente seus direitos a um soberano absoluto, contra o qual não cabe resistência.",
+        "comentario": "Isso descreve Hobbes. Versão correta: “Para John Locke, o estado de natureza é relativamente pacífico, com direitos naturais à vida, à liberdade e aos bens; o contrato cria um governo limitado, e os cidadãos podem resistir ao governo que viole esses direitos.”"
+      }
+    },
+    {
+      "numero": 174,
+      "qid": "cp00-05",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "cp00-05",
+        "materia": "cp",
+        "cap": "CP-00",
+        "tema": "Schmitter: política e conflito",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Para Philippe Schmitter, uma ação social só adquire caráter político quando é controversa, envolvendo conflito de interesses ou atitudes, e quando os atores reconhecem reciprocamente limites às próprias demandas, de modo que o conflito seja canalizado sem a destruição de nenhuma das partes.",
+        "comentario": "São exatamente as duas condições de Schmitter. A política não elimina o conflito: transforma-o em formas não destrutivas. Atenção: nem toda ação social é política; sem controvérsia ou sem limitação recíproca das demandas, não há situação política."
+      }
+    },
+    {
+      "numero": 175,
+      "qid": "b26ns-082",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "B",
+      "conf": null,
+      "resultado": "branco",
+      "questao": {
+        "id": "b26ns-082",
+        "materia": "cp",
+        "topico": "cp-3",
+        "cap": "BANCA-CP",
+        "tema": "F3 · cp-3",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "O corporativismo estrutura-se de forma articulada com as democracias sociais de inspiração keneysiana, surgidas após a Segunda Guerra Mundial.",
+        "comentario": "O corporativismo clássico (estatal) liga-se a regimes autoritários do entreguerras; é o neocorporativismo (corporativismo societal, Schmitter) que se articula às social-democracias keynesianas do pós-guerra. Tópico do edital aproximado. Vacina: Ao ver corporativismo × neocorporativismo, lembre: estatal e autoritário × societal e social-democrata do pós-guerra."
+      }
+    },
+    {
+      "numero": 176,
+      "qid": "cp9qc-13",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "cp9qc-13",
+        "materia": "cp",
+        "cap": "CP-9-QC",
+        "tema": "Cidadania × nacionalidade",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Para fins de definição de quem será membro desse estado, o conceito de cidadania é equivalente aos conceitos de nacionalidade ou naturalidade.",
+        "comentario": "Nacionalidade é o vínculo jurídico com o Estado (define o povo); naturalidade é o local de nascimento; cidadania é o gozo dos direitos políticos. Versão correta: “Cidadania não equivale a nacionalidade nem a naturalidade: nacionalidade é o vínculo jurídico com o Estado, naturalidade é o lugar de nascimento e cidadania é a titularidade de direitos políticos.”"
+      }
+    },
+    {
+      "numero": 177,
+      "qid": "CP-2-11",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "CP-2-11",
+        "materia": "cp",
+        "topico": "cp-2",
+        "cap": "CP-2",
+        "tema": "Tipologia de Aristóteles",
+        "prova": "P2",
+        "gabarito": "C",
+        "enunciado": "Aristóteles classifica os governos pelo número de governantes e pela finalidade do exercício do poder.\n\nA politeia designa o governo de muitos orientado ao bem comum na classificação aristotélica.",
+        "comentario": "Na tipologia aristotélica apresentada na apostila, a politeia é a forma pura do governo de muitos, voltada ao bem comum."
+      }
+    },
+    {
+      "numero": 178,
+      "qid": "cp9-04",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "E",
+      "conf": 3,
+      "resultado": "acerto",
+      "questao": {
+        "id": "cp9-04",
+        "materia": "cp",
+        "cap": "CP-9",
+        "tema": "Povo × população",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Situação hipotética: Um engenheiro italiano mora no Brasil há dez anos, com visto permanente, e não se naturalizou. Assertiva: Na teoria do Estado, esse engenheiro integra o povo brasileiro, pois povo e população são conceitos sinônimos, ambos referidos aos habitantes do território.",
+        "comentario": "Povo é o conjunto dos nacionais (vínculo jurídico de nacionalidade); população abrange todos os que estão no território, inclusive estrangeiros. Versão correta: “Esse engenheiro integra a população, mas não o povo brasileiro, pois povo designa os ligados ao Estado pelo vínculo da nacionalidade, ao passo que população abrange todos os que estão no território.”"
+      }
+    },
+    {
+      "numero": 179,
+      "qid": "cp00-20",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3,
+      "resultado": "erro",
+      "questao": {
+        "id": "cp00-20",
+        "materia": "cp",
+        "cap": "CP-00",
+        "tema": "Almond e Verba: cultura política",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Na tipologia de Almond e Verba, a cultura política paroquial caracteriza-se por participação política ativa, elevado interesse cívico e alta confiança dos cidadãos nas instituições democráticas nacionais.",
+        "comentario": "Essa descrição é da cultura PARTICIPATIVA. A paroquial tem baixíssima participação e orientação voltada às autoridades locais; a de sujeição (súdita) tem participação limitada e postura sobretudo receptiva diante do sistema. O estudo comparou EUA, Grã-Bretanha, Alemanha, Itália e México."
+      }
+    },
+    {
+      "numero": 180,
+      "qid": "cp9qc-15",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "E",
+      "conf": 2,
+      "resultado": "acerto",
+      "questao": {
+        "id": "cp9qc-15",
+        "materia": "cp",
+        "cap": "CP-9-QC",
+        "tema": "Federalismo brasileiro (governadores)",
+        "prova": "P2",
+        "gabarito": "E",
+        "enunciado": "Texto de apoio: Celina Souza (1998): “Os estados no Brasil sempre tiveram considerável poder político, embora nem sempre correspondentes recursos financeiros. [...] Com a democratização não foi mais possível represar o poder dos governadores”. Assertiva: Os governadores recorrem geralmente aos fóruns intergovernamentais para pressionar o presidente da República a mudar a legislação contrária ao interesses dos estados.",
+        "comentario": "No Brasil, os fóruns intergovernamentais formais são frágeis; os governadores atuam sobretudo por meio das bancadas estaduais no Congresso e da negociação direta. Gabarito do tutor; confirme no QC. Versão correta: “Os governadores recorrem geralmente às bancadas estaduais no Congresso, e não a fóruns intergovernamentais, para mudar legislação contrária aos interesses dos estados.”"
+      }
+    }
+  ]
+}

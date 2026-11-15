@@ -1,0 +1,1274 @@
+{
+  "tipo": "obj",
+  "data": "2026-11-15",
+  "inicio": "2026-11-15T11:53:16.378Z",
+  "minutos": 53,
+  "p1": 60,
+  "p2": 66,
+  "regra": "legado",
+  "faltas": [],
+  "itens": [
+    {
+      "qid": "b26ns-017",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "lp55-32",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "lp54-28",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "lp41-63",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "lp57-05",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "mmgan-lp-4-2-mwdnv1so-01",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lp6-23",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "lp56-25",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "lp6-17",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "mmgan-lp-6-1-mwf0sbn9-01",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "mmgan-lp-6-2-mwf0y3o8-01",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "b26ns-005",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "lp55-27",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "lp54-29",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "lp41-48",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "lp57-06",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lp42-22",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lp6-24",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "lp56-16",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "lp6-22",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "B",
+      "conf": null
+    },
+    {
+      "qid": "mmgan-lp-6-1-mwf0saxh-01",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lp6-08",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "b26plf-009",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lp55-03",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lp54-24",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lp41-49",
+      "prova": "P1",
+      "mat": "lp",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "b26ns-027",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "b26ns-029",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "b26ns-032",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "li1-01",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "li1-02",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "li1-03",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "b26ns-033",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "b26ns-034",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "b26ns-035",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "b26plf-029",
+      "prova": "P1",
+      "mat": "li",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "b26tec-140",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "da6-42",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "cx-ap82-04-c",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "ap81-17",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "da102-14",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "da43-18",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "da41-05",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "da42-19",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "da2-49",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "da44-04",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "da106-16",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "da7-02",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "da12-07",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "ap84-27",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "da101-02",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "da5-28",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "B",
+      "conf": null
+    },
+    {
+      "qid": "da102-13",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "da107-01",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "da102-46",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "da102-25",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "jur-da34-01",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "b26plf-073",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "da6-50",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "cx-ap82-09-c",
+      "prova": "P1",
+      "mat": "da",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "b26ns-068",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "dc11-42",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "dc23-39",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "dc24-35",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "jur-dc5-08",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "dc1-26",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "cx-dc13-16-c",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "dc14-18",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "dc12-12",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "dc15-08",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "dc25-01",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "dc22-02",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "dc73-01",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "dc74-01",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "jur-dc2b-01",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "dc81-06",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "b26plf-049",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "dc11-34",
+      "prova": "P1",
+      "mat": "dc",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "b26tec-155",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "B",
+      "conf": null
+    },
+    {
+      "qid": "ti52-18",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "C",
+      "conf": 1
+    },
+    {
+      "qid": "ti3-01",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "ti11-40",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "ti12-03",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "B",
+      "conf": null
+    },
+    {
+      "qid": "ti41-08",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "mmgan-ti-2-mwf7ixrg-06",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "ti14-25",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "ti53-19",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "ti13-01",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "ti42-11",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "ti6-26",
+      "prova": "P1",
+      "mat": "ti",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "pl21b-02",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "pl21-03",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "pl31-39",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "pl11-01",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "b26plf-057",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "pl21-ym-091",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 1
+    },
+    {
+      "qid": "pl21-33",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "pl31-18",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "pl11-07",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "b26tec-102",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "pl21-ym-100",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "pl21-39",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "pl31-21",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "pl11-05",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "pl21-ym-057",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "pl21-17",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "pl31-25",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "B",
+      "conf": null,
+      "prim": "E"
+    },
+    {
+      "qid": "pl11-06",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "pl21-ym-029",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "pl21-24",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "pl31-29",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "pl11-08",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "pl21b-04",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "pl21-04",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "pl31-31",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "pl11-10",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "pl21b-03",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "pl21-40",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "pl31-26",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "pl11-11",
+      "prova": "P2",
+      "mat": "pl",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lg2-06",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "b26plf-041",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "lg1-13",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "lg2-13",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "b26plf-042",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "B",
+      "conf": null
+    },
+    {
+      "qid": "lg1-01",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "lg2-17",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "B",
+      "conf": null
+    },
+    {
+      "qid": "lg1-03",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "lg2-30",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lg1-08",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lg2-27",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lg1-07",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "lg2-28",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lg1-19",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "lg2-24",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "lg1-16",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "lg2-09",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lg1-15",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lg2-19",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "lg1-17",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "lg2-21",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "lg1-02",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "lg2-12",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "lg1-11",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "lg2-22",
+      "prova": "P2",
+      "mat": "lg",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "RF-2.8-R08",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "c25-11",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "c0-18",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "c14-13",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "RF-2.4-R08",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "c13-09",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "RF-2.7-R02",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 2
+    },
+    {
+      "qid": "c15-13",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "c16-15",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "c12-11",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "B",
+      "conf": null
+    },
+    {
+      "qid": "c11-14",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "RF-2.1-R08",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "RF-2.2-R11",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "RF-2.6-R18",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "c17-05",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "RF-2.3-R02",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "c18-01",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "RF-2.8-R17",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "c25-12",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "c0-14",
+      "prova": "P2",
+      "mat": "rf",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "cp9qc-14",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "CP-2-02",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "cp9-30",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "cp00-03",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "b26ns-083",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "B",
+      "conf": null
+    },
+    {
+      "qid": "cp9qc-04",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "CP-2-28",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "cp9-08",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "cp00-05",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 2
+    },
+    {
+      "qid": "b26ns-082",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "B",
+      "conf": null
+    },
+    {
+      "qid": "cp9qc-13",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "CP-2-11",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "cp9-04",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "E",
+      "conf": 3
+    },
+    {
+      "qid": "cp00-20",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "C",
+      "conf": 3
+    },
+    {
+      "qid": "cp9qc-15",
+      "prova": "P2",
+      "mat": "cp",
+      "marcada": "E",
+      "conf": 2
+    }
+  ],
+  "id": "2026-11-15-obj-1794743596378"
+}
