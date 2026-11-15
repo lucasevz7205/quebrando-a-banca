@@ -80,6 +80,8 @@ test("Arquiteto preserva regras pedagógicas e modo Base44 por padrão", () => {
   assert.match(source, /TUTOR_RULES/);
   for (const mode of ["socratic", "exam", "simple", "challenge"]) assert.match(source, new RegExp(mode + ":"));
   assert.match(source, /secrets\.get\("QB_TUTOR_PROVIDER"\) === "gemini"/);
+  assert.match(source, /secrets\.get\("Arquiteto"\)/);
+  assert.match(source, /secrets\.get\("ARQUITETO"\)/);
   assert.match(source, /const reply = await core\.InvokeLLM\(\{ prompt \}\)/);
   assert.match(source, /return invokeGeminiTutor/);
 });
