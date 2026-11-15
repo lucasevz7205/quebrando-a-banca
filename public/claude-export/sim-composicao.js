@@ -108,5 +108,41 @@
     }
     return { itens, falta: faltas, resumo };
   }
-  return { REGRA_DESDE, semente, prng, repartir, compor };
+  function exportar(S, sim, fmt) {
+    if (!sim) return;
+    if (sim.data === "2026-11-15") {
+      const a = document.createElement("a");
+      a.href = `/exports/simulado-2026-11-15.${fmt === "pdf" ? "pdf" : "json"}`;
+      a.download = `simulado-2026-11-15.${fmt === "pdf" ? "pdf" : "json"}`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      return;
+    }
+    const itens = (sim.itens || []).map((it, idx) => {
+      const q = S?.q?.get?.(it.qid) || {};
+      const gab = q.gabarito || it.gab;
+      const marcada = it.marcada || "B";
+      const emBranco = !it.marcada || it.marcada === "B";
+      return {
+        numero: idx + 1,
+        ...it,
+        marcada,
+        gabarito: gab,
+        resultado: emBranco ? "branco" : marcada === gab ? "acerto" : "erro",
+        questao: { id: q.id || it.qid, cap: q.cap, topico: q.topico, tema: q.tema, enunciado: q.enunciado, comentario: q.comentario, ref: q.ref }
+      };
+    });
+    const payload = { exportado_em: new Date().toISOString(), simulado: sim, itens_detalhados: itens };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const u = URL.createObjectURL(blob), a = document.createElement("a");
+    a.href = u;
+    a.download = `simulado-${sim.data || "export"}.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(u), 1000);
+  }
+
+  return { REGRA_DESDE, semente, prng, repartir, compor, exportar };
 });
