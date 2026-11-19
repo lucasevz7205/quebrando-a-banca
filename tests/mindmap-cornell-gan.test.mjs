@@ -582,3 +582,32 @@ test("Falha do Arquiteto não cria questões simuladas", async () => {
   assert.equal(studio.studioState.ganBatches.size, 0);
   assert.equal(S.q.size, 0);
 });
+
+test("Pacote com vários nós salva somente as automáticas e mostra o assunto sem expor os itens", async () => {
+  const { S, studio, window, writtenDocs } = createSandbox();
+  const draft = studio.ensureDraft(S, "pl-1");
+  const [first, second] = draft.ramos;
+  const allocations = [{ nodeId: first.id, count: 1 }, { nodeId: second.id, count: 1 }];
+  window.QBBridge = { ask: async (action, payload) => {
+    assert.equal(action, "omniStudyAI");
+    assert.deepEqual(payload.allocations, allocations);
+    return { questions: [
+      { mapaNoId: first.id, mapaNoTitulo: first.t, enunciado: "Enunciado automático do primeiro ramo.", ganConfrontation: { statusConfronto: "aprovada_gan", eligibleForAutoApproval: true } },
+      { mapaNoId: second.id, mapaNoTitulo: second.t, enunciado: "Enunciado pendente do segundo ramo.", ganConfrontation: { statusConfronto: "aprovada_gan", eligibleForAutoApproval: false } },
+    ] };
+  } };
+  const batch = await studio.generateQuestionsWithGan(S, "pl-1", { allocations });
+  assert.equal(batch.savedAutomatically, 1);
+  assert.equal(S.q.size, 1);
+  assert.ok(writtenDocs.has("questoes/" + batch.questions[0].savedId));
+  assert.deepEqual(Array.from(S.rv.get("pl-1").mapa.ramos[0].x.questaoIds), [batch.questions[0].savedId]);
+  assert.equal(S.rv.get("pl-1").cartoes.length, 1);
+  assert.equal(batch.questions[1].savedId, undefined);
+  assert.equal(S.r.size, 0);
+  studio.studioState.ganOpen = true;
+  const panel = studio.studioHTML(S);
+  assert.match(panel, /Processo Legislativo Constitucional/);
+  assert.match(panel, /2 de 2 questões geradas/);
+  assert.doesNotMatch(panel, /Enunciado automático do primeiro ramo/);
+  assert.match(panel, /Enunciado pendente do segundo ramo/);
+});

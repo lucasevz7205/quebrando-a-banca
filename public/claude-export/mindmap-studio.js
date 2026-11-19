@@ -1037,9 +1037,9 @@
       ? [
           `Título Cornell: ${linkedCornell.title || ""}`,
           `Pistas: ${(linkedCornell.cues || []).join(" | ")}`,
+          linkedCornell.referenceText ? `Fonte: ${linkedCornell.referenceText}` : "",
           `Notas: ${linkedCornell.notes || ""}`,
           `Síntese: ${linkedCornell.summary || ""}`,
-          linkedCornell.referenceText ? `Fonte: ${linkedCornell.referenceText}` : "",
         ]
           .filter(Boolean)
           .join("\n")
@@ -1071,6 +1071,7 @@
       id: global.crypto.randomUUID(),
     };
     studioState.ganBatches.set(topicId, batch);
+    await saveAutomaticGanQuestions(S, topicId, batch);
     return batch;
   }
 
@@ -1165,9 +1166,14 @@
   async function saveAutomaticGanQuestions(S, topicId, batch) {
     const indices = automaticGanIndices(batch);
     if (!indices.length) return;
-    const result = await incorporateGanQuestions(S, topicId, indices);
-    batch.savedAutomatically = (batch.savedAutomatically || 0) + result.savedCount;
-    batch.autoSaveFailed = false;
+    try {
+      const result = await incorporateGanQuestions(S, topicId, indices);
+      batch.savedAutomatically = (batch.savedAutomatically || 0) + result.savedCount;
+      batch.autoSaveFailed = false;
+    } catch (error) {
+      batch.autoSaveFailed = true;
+      throw new Error("Falha ao salvar as questões automáticas. " + (error.message || ""));
+    }
   }
 
   /* ==========================================================================
@@ -1398,7 +1404,7 @@
           ＋ Criar Mapa do Zero
         </button>
         <button type="button" class="qb-mm-btn ${studioState.ganOpen ? "qb-mm-btn-gan" : ""}" id="qb-mm-toggle-gan">
-          ⚔️ Gerar Questões do Mapa (GAN)
+          Gerar questões do mapa
         </button>
         ${undoCount ? `<button type="button" class="qb-mm-btn" id="qb-mm-undo">↩ Desfazer (${undoCount})</button>` : ""}
       </div>
@@ -2076,7 +2082,7 @@
       studioState.statusMsg = progress;
       rerender();
       try {
-        studioState.statusMsg = await action();
+        studioState.statusMsg = await action() || "";
       } catch (error) {
         studioState.statusMsg = error.message || "Falha no processamento das questões.";
       } finally {
@@ -2084,26 +2090,16 @@
         rerender();
       }
     }
-    async function saveAutomatic(batch) {
-      try {
-        await saveAutomaticGanQuestions(S, topicId, batch);
-        return "";
-      } catch (error) {
-        batch.autoSaveFailed = true;
-        throw new Error("Falha ao salvar as questões automáticas. " + (error.message || ""));
-      }
-    }
     ganRun?.addEventListener("click", () => {
       const allocations = readAllocation();
       if (studioState.editorOpen) syncDomInputsToDraft(S, topicId);
       return runGanAction(async () => {
-        const batch = await generateQuestionsWithGan(S, topicId, { ...studioState.ganConfig, allocations });
-        return saveAutomatic(batch);
+        await generateQuestionsWithGan(S, topicId, { ...studioState.ganConfig, allocations });
       }, "O Arquiteto está gerando e revisando as questões…");
     });
 
     document.getElementById("qb-mm-gan-retry")?.addEventListener("click", () =>
-      runGanAction(() => saveAutomatic(studioState.ganBatches.get(topicId)), "Salvando questões no Treinar…")
+      runGanAction(() => saveAutomaticGanQuestions(S, topicId, studioState.ganBatches.get(topicId)), "Salvando questões no Treinar…")
     );
 
     function approveGanQuestions(indices) {
