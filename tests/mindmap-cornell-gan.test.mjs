@@ -23,6 +23,7 @@ function createSandbox() {
     },
     Date,
     Math,
+    crypto: globalThis.crypto,
   };
   window.window = window;
   vm.runInNewContext(studioCode, window, { filename: "mindmap-studio.js" });
@@ -258,7 +259,7 @@ test("Geração de questões a partir do Mapa Mental confronta Gerador × Discri
 
   // 2. Executa geração e incorporação no ambiente de estudo: apenas as aprovadas/refinadas entram no banco!
   studio.studioState.ganBatches.set("da-2", ganResult);
-  const inc = studio.incorporateGanQuestions(S, "da-2");
+  const inc = await studio.incorporateGanQuestions(S, "da-2");
   assert.equal(inc.savedCount, 2); // Item bloqueado pela GAN NÃO é incorporado!
   assert.equal(S.q.size, 2);
 
@@ -545,3 +546,39 @@ O veto é sempre formal e expresso; silêncio do Presidente no prazo de 15 dias 
   }
 });
 
+
+test("GAN aplica cotas exatas por nó e exige escore estritamente acima de 90 com revisão fundamentada", () => {
+  const evidence = "O prazo previsto na regra é de quarenta e cinco dias.";
+  const map = { ramos: [{ id: "prazo", t: "Prazo", x: { e: evidence } }, { id: "efeitos", t: "Efeitos" }] };
+  const record = {
+    mapaNoId: "prazo", enunciado: "O prazo é de quarenta e cinco dias de acordo com a regra.",
+    gabarito: "C", mecanismo: "V1", trechoDecisivo: "quarenta e cinco dias",
+    comentario: "A regra expressamente determina esse prazo.",
+  };
+  const judgment = { index: 0, scoreRealismo: 91, gabaritoDiscriminador: "C",
+    veredicto: "APROVADA", evidenciaFonte: evidence };
+  const assess = (decisions, item = record) => normalizeGanConfrontation([item], decisions, map).questions[0];
+  assert.equal(assess([judgment]).ganConfrontation.eligibleForAutoApproval, true);
+  assert.equal(assess([{ ...judgment, scoreRealismo: 90 }]).ganConfrontation.eligibleForAutoApproval, false);
+  assert.equal(assess([{ ...judgment, evidenciaFonte: "Citação que não consta na fonte." }]).ganConfrontation.eligibleForAutoApproval, false);
+  assert.equal(assess([{ ...judgment, index: 1 }]).ganConfrontation.statusConfronto, "divergencia_bloqueada");
+  assert.equal(assess([{ ...judgment, gabaritoDiscriminador: "E" }]).ganConfrontation.eligibleForAutoApproval, false);
+  assert.equal(assess([{ ...judgment, veredicto: "REFINAR", itemRefinado: { ...record, enunciado: "O prazo da regra corresponde a quarenta e cinco dias." } }]).ganConfrontation.eligibleForAutoApproval, false);
+  assert.throws(() => assess([judgment], { ...record, mapaNoId: "inexistente" }));
+  const batch = normalizeGanConfrontation([
+    record,
+    { ...record, enunciado: "Aplica-se o prazo de quarenta e cinco dias neste caso." },
+    { ...record, mapaNoId: "efeitos", enunciado: "Os efeitos decorrem após quarenta e cinco dias neste caso." },
+  ], [judgment, { ...judgment, index: 1 }, { ...judgment, index: 2 }], map, {
+    nodeCounts: new Map([["prazo", 1], ["efeitos", 1]]),
+  });
+  assert.deepEqual(batch.questions.map(q => q.mapaNoId), ["prazo", "efeitos"]);
+});
+
+test("Falha do Arquiteto não cria questões simuladas", async () => {
+  const { S, studio, window } = createSandbox();
+  window.QBBridge = { ask: async () => { throw new Error("Arquiteto indisponível"); } };
+  await assert.rejects(studio.generateQuestionsWithGan(S, "pl-1"), /indisponível/);
+  assert.equal(studio.studioState.ganBatches.size, 0);
+  assert.equal(S.q.size, 0);
+});

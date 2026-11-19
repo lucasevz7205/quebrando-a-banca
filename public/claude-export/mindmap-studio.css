@@ -505,10 +505,15 @@
   box-shadow: var(--shadow-1);
 }
 
-#qb-mm-gan-panel h3,
-#qb-mm-gan-panel .qb-mm-gan-card p {
-  color: var(--ink) !important;
+#qb-mm-gan-panel h3 { color: var(--ink); }
+
+#qb-mm-gan-panel :is(.qb-mm-gan-card, .qb-mm-gan-versus) {
+  background: var(--paper);
+  border-color: var(--line);
 }
+
+#qb-mm-gan-panel .qb-mm-gan-versus strong { color: var(--pen); }
+.qb-mm-gan-statement { margin: 0; font-size: 13.5px; line-height: 1.5; }
 
 #qb-mm-gan-panel .qb-mm-panel-head p,
 .qb-mm-gan-allocation p {

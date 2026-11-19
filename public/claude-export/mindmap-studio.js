@@ -39,7 +39,7 @@
     drafts: new Map(),      // topicId -> map object being edited
     undoStack: new Map(),   // topicId -> array of JSON snapshots
     openDetails: new Set(), // node paths with expanded pedagogical details
-    ganBatches: new Map(),  // topicId -> { questions, summary, formato, targetNodeId, count }
+    ganBatches: new Map(),  // topicId -> generated questions and save state
     ganConfig: { formato: "ce", count: 4 },
     ganAllocations: new Map(),
   };
@@ -1027,7 +1027,7 @@
     const topicTitle = topic?.titulo || map.centro || topicId;
     const formato = options.formato || studioState.ganConfig.formato || "ce";
     const count = Number(options.count || studioState.ganConfig.count || 4);
-    const targetNodeId = text(options.targetNodeId ?? studioState.ganConfig.targetNodeId, 120);
+    const targetNodeId = text(options.targetNodeId, 120);
 
     const cornellNotes = loadSavedCornellNotes();
     const linkedCornell = map.origemCornell?.noteId
@@ -1075,14 +1075,15 @@
   }
 
   const questionKey = value => text(value, 1600).normalize("NFKC").toLowerCase().replace(/\s+/g, " ");
-  const canSaveGanQuestion = q => !q.savedId && q.ganConfrontation?.statusConfronto !== "divergencia_bloqueada";
+  const canSaveGanQuestion = q => !q.savedId && !q.duplicateOrMissingNode && ["aprovada_gan", "refinada_gan"].includes(q.ganConfrontation?.statusConfronto);
   const automaticGanIndices = batch => batch.questions.flatMap((q, idx) =>
     canSaveGanQuestion(q) && q.ganConfrontation?.eligibleForAutoApproval === true ? [idx] : []
   );
 
   async function incorporateGanQuestions(S, topicId, selectedIndices = null) {
     const batch = studioState.ganBatches.get(topicId);
-    if (!batch || !S.db || batch.saving) return { savedCount: 0, questionIds: [] };
+    if (!batch || batch.saving) return { savedCount: 0, questionIds: [] };
+    if (!S.db) throw new Error("Banco de estudo indisponível.");
     batch.saving = true;
     try {
       const save = async () => {
@@ -1094,17 +1095,20 @@
         const cap = topic?.caps?.[0] || "MM-" + safeTopic.toUpperCase();
         const { list } = enumerateMapNodes(map);
         const nodeById = new Map(list.map(entry => [entry.id, entry.node]));
-        const existing = new Set([...S.q.values()].filter(q => q.topico === topicId || q.cap === cap)
-          .map(q => questionKey(q.enunciado)));
+        const existing = new Map([...S.q.values()].filter(q => q.topico === topicId || q.cap === cap)
+          .map(q => [questionKey(q.enunciado), q.id]));
         const records = [];
 
         batch.questions.forEach((q, idx) => {
           if (!canSaveGanQuestion(q) || (selectedIndices && !selectedIndices.includes(idx))) return;
           const key = questionKey(q.enunciado);
           const target = nodeById.get(q.mapaNoId);
-          if (!target || existing.has(key)) return;
-          existing.add(key);
           const id = "mmgan-" + safeTopic + "-" + (batch.id ||= global.crypto.randomUUID()) + "-" + (idx + 1);
+          if (!target || (existing.has(key) && existing.get(key) !== id)) {
+            q.duplicateOrMissingNode = true;
+            return;
+          }
+          existing.set(key, id);
           records.push({
             q, target,
             record: {
@@ -1164,9 +1168,6 @@
     const result = await incorporateGanQuestions(S, topicId, indices);
     batch.savedAutomatically = (batch.savedAutomatically || 0) + result.savedCount;
     batch.autoSaveFailed = false;
-    batch.questions.forEach((q, idx) => {
-      if (indices.includes(idx) && !q.savedId) q.duplicateOrMissingNode = true;
-    });
   }
 
   /* ==========================================================================
@@ -1514,8 +1515,8 @@
       ? `<section class="qb-mm-panel" id="qb-mm-gan-panel" aria-label="Gerador de Questões do Mapa Mental com Confronto GAN">
           <div class="qb-mm-panel-head">
             <div>
-              <h3>⚔️ Geração de Questões a partir do Mapa Mental · Confronto GAN</h3>
-              <p>O <b>Agente Gerador</b> formula questões inéditas a partir dos seus ramos, subtópicos e rótulos, e o <b>Agente Discriminador Cego (GAN)</b> tenta quebrá-las sem ver o gabarito, auditando univocidade, fidelidade ao mapa e armadilhas antes da aprovação.</p>
+              <h3>Gerar questões do mapa</h3>
+              <p>Questões com escore acima de 90% entram no Treinar quando a revisão cega confirma o gabarito e a evidência no material.</p>
             </div>
           </div>
 
@@ -1586,10 +1587,10 @@
                           ${q.mecanismo ? `<span class="qb-mm-node-badge">Mecanismo: ${esc(q.mecanismo)}</span>` : ""}
                           <span class="qb-mm-node-badge">Gabarito: ${esc(q.gabarito)} · Revisão cega: ${esc(gan.discriminatorKey || "sem gabarito")}</span>
                         </div>
-                        <p style="margin:0;font-size:13.5px;line-height:1.5;color:#f8fafc"><b>Item ${idx + 1}.</b> ${esc(q.enunciado)}</p>
+                        <p class="qb-mm-gan-statement"><b>Item ${idx + 1}.</b> ${esc(q.enunciado)}</p>
                         ${
                           Array.isArray(q.alternativas) && q.alternativas.length
-                            ? `<div style="font-size:12.5px;color:#cbd5e1;display:flex;flex-direction:column;gap:4px">${q.alternativas
+                            ? `<div style="font-size:12.5px;display:flex;flex-direction:column;gap:4px">${q.alternativas
                                 .map(o => `<div><b>${esc(o.letra)})</b> ${esc(o.texto)}</div>`)
                                 .join("")}</div>`
                             : ""
@@ -1605,7 +1606,7 @@
                           </div>
                         </div>
                         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-                          <small style="color:#94a3b8"><b>Comentário final:</b> ${esc(q.comentario)}</small>
+                          <small><b>Comentário final:</b> ${esc(q.comentario)}</small>
                           ${
                             q.savedId
                               ? `<span class="qb-mm-gan-pill">✓ Incorporada ao nó (${esc(q.savedId)})</span>`
