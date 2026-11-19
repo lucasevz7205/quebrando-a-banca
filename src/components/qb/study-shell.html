@@ -528,8 +528,8 @@ details.diario .feed{margin-top:10px}
 <script src="/claude-export/axon-shell.js?v=1"></script>
 <link rel="stylesheet" href="/claude-export/question-curator.css?v=1">
 <script src="/claude-export/question-curator.js?v=2"></script>
-<link rel="stylesheet" href="/claude-export/mindmap-studio.css?v=15">
-<script src="/claude-export/mindmap-studio.js?v=18"></script>
+<link rel="stylesheet" href="/claude-export/mindmap-studio.css?v=16">
+<script src="/claude-export/mindmap-studio.js?v=19"></script>
 <link rel="stylesheet" href="/claude-export/omnistudy-ai.css?v=14">
 <link rel="stylesheet" href="/claude-export/omnistudy-cornell.css?v=12">
 <script src="/claude-export/omnistudy-cornell.js?v=16" defer></script>
@@ -2559,11 +2559,12 @@ function viewMapa(){
   const ramos=(m.ramos||[]).map((r,i)=>{const cor=`var(--qb-map-${((r.cor||i+1)-1)%8+1})`;return `<section class="m-ramo" style="--mc:${cor}"><span class="qb-map-branch" aria-hidden="true">RAMO ${String(i+1).padStart(2,'0')}</span><ul class="m-raiz">${no(r,cor,String(i))}</ul></section>`}).join('');
   return `<div class="wrap" style="gap:14px;max-width:1100px">
     <div class="filters"><select id="mapa-top" aria-label="Tópico">${ids.map(id=>{const td=edDeMapa(id),tit=S.ed.get(id)?td.titulo:(S.rv.get(id)?.titulo||td.titulo||'');return `<option value="${esc(id)}" ${id===S.mapaId?'selected':''}>${esc(lblT(td)||id)} · ${esc(tit)}</option>`;}).join('')}</select>
+      ${window.QBMindMapStudio?.ganButtonHTML()||""}
       <label class="check"><input type="checkbox" id="evocar" ${S.evocar?'checked':''}> Evocar antes de ler</label>
       <button class="btn ghost small" data-mtodos="1">Abrir tudo</button><button class="btn ghost small" data-mtodos="0">Fechar tudo</button>
       ${S.mapaBack?.kind==='flashcard'?'<button class="btn ghost small" data-voltar-flash="1">Voltar ao flashcard</button>':S.mapaBack?.kind==='question'?'<button class="btn ghost small" data-voltar-questao="1">← Voltar à questão</button>':''}
       ${((S.rv.get(S.mapaId)||{}).cartoes||[]).length?`<button class="lnk" data-ir-cart="${esc(S.mapaId)}">Revisão ativa · ${(S.rv.get(S.mapaId).cartoes||[]).length}</button>`:''}${mapasRelacionados.map(id=>`<button class="lnk" data-ir-mapa="${esc(id)}">Mapa: ${esc((S.rv.get(id)||S.ed.get(id)||{}).titulo||id)}</button>`).join('')}</div>
-    ${window.QBMindMapStudio?window.QBMindMapStudio.studioHTML(S):''}
+    ${window.QBMindMapStudio?window.QBMindMapStudio.studioHTML(S,{showGanButton:false}):''}
     ${S.mapaFocus?.topicId===S.mapaId?`<div class="qb-map-remission-banner" role="status" aria-live="polite">
       <strong>${S.mapaFocus.path?'Conceito localizado: '+esc(S.mapaFocus.title||'nó selecionado'):'Mapa do capítulo aberto'}</strong>
       <span>${S.mapaFocus.path?(S.mapaFocus.confidence==='editorial'?'Vínculo explícito por ID/caminho do nó.':S.mapaFocus.confidence==='sugerido'?'Correspondência sugerida; confira o conteúdo antes de assumir como origem exata.':'Associação conceitual automática; confira a correspondência com a questão.'):'A questão pertence ao capítulo, mas ainda não há correspondência verificável com um nó específico. Nenhum nó foi atribuído artificialmente.'}</span>

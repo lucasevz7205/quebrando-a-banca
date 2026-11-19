@@ -499,6 +499,7 @@
 
 /* Controles do pacote no vocabulário visual do ambiente de estudo. */
 #qb-mm-gan-panel {
+  scroll-margin-block-start: 1rem;
   background: var(--surface);
   border-color: var(--line);
   color: var(--ink);

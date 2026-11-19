@@ -611,3 +611,14 @@ test("Pacote com vários nós salva somente as automáticas e mostra o assunto s
   assert.doesNotMatch(panel, /Enunciado automático do primeiro ramo/);
   assert.match(panel, /Enunciado pendente do segundo ramo/);
 });
+
+test("Atalho do Arquiteto aparece junto ao seletor de assunto sem repetir o botão no estúdio", () => {
+  const { S, studio } = createSandbox();
+  assert.match(shellCode, /id="mapa-top"[^\n]+\n[^\n]+ganButtonHTML/);
+  assert.match(studio.ganButtonHTML(), /Gerar questões com O Arquiteto/);
+  assert.match(studio.ganButtonHTML(), /aria-expanded="false"/);
+  assert.doesNotMatch(studio.studioHTML(S, { showGanButton: false }), /id="qb-mm-toggle-gan"/);
+  studio.studioState.ganOpen = true;
+  assert.match(studio.ganButtonHTML(), /aria-expanded="true"/);
+  assert.match(studio.studioHTML(S, { showGanButton: false }), /id="qb-mm-gan-panel" tabindex="-1"/);
+});

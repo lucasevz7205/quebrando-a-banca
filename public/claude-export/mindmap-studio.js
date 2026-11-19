@@ -1370,7 +1370,14 @@
     </div>`;
   }
 
-  function studioHTML(S) {
+  function ganButtonHTML() {
+    return `<button type="button" class="btn small" id="qb-mm-toggle-gan"
+      aria-expanded="${studioState.ganOpen}" aria-controls="qb-mm-gan-panel">
+      ${studioState.ganOpen ? "Fechar gerador" : "Gerar questões com O Arquiteto"}
+    </button>`;
+  }
+
+  function studioHTML(S, { showGanButton = true } = {}) {
     if (!S) return "";
     const { withMap, withoutMap, all } = allTopicOptions(S);
     const activeId = S.mapaId || withMap[0]?.id || withoutMap[0]?.id || "mapa-autoral-1";
@@ -1403,9 +1410,7 @@
         <button type="button" class="qb-mm-btn" id="qb-mm-create-scratch">
           ＋ Criar Mapa do Zero
         </button>
-        <button type="button" class="qb-mm-btn ${studioState.ganOpen ? "qb-mm-btn-gan" : ""}" id="qb-mm-toggle-gan">
-          Gerar questões do mapa
-        </button>
+        ${showGanButton ? ganButtonHTML() : ""}
         ${undoCount ? `<button type="button" class="qb-mm-btn" id="qb-mm-undo">↩ Desfazer (${undoCount})</button>` : ""}
       </div>
     </section>`;
@@ -1518,7 +1523,7 @@
       : "";
 
     const ganPanel = studioState.ganOpen
-      ? `<section class="qb-mm-panel" id="qb-mm-gan-panel" aria-label="Gerador de Questões do Mapa Mental com Confronto GAN">
+      ? `<section class="qb-mm-panel" id="qb-mm-gan-panel" tabindex="-1" aria-label="Gerador de Questões do Mapa Mental com Confronto GAN">
           <div class="qb-mm-panel-head">
             <div>
               <h3>Gerar questões do mapa</h3>
@@ -1680,7 +1685,7 @@
       </div>
     </div>`;
 
-    return toolbar + statusBanner + editorPanel + ganPanel + geminiModalHTML;
+    return toolbar + statusBanner + ganPanel + editorPanel + geminiModalHTML;
   }
 
   function syncDomInputsToDraft(S, topicId) {
@@ -1827,6 +1832,14 @@
       studioState.ganOpen = !studioState.ganOpen;
       studioState.statusMsg = "";
       rerender();
+      const button = document.getElementById("qb-mm-toggle-gan");
+      if (!studioState.ganOpen) {
+        button?.focus();
+        return;
+      }
+      const panel = document.getElementById("qb-mm-gan-panel");
+      panel?.focus({ preventScroll: true });
+      panel?.scrollIntoView({ block: "start" });
     });
 
     document.getElementById("qb-mm-create-scratch")?.addEventListener("click", () => {
@@ -2230,6 +2243,7 @@
     ingestGeminiNotebook,
     allTopicOptions,
     studioHTML,
+    ganButtonHTML,
     wire,
   };
 })(typeof window !== "undefined" ? window : globalThis);
