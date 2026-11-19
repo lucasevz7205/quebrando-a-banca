@@ -45,6 +45,19 @@
     });
   }
 
+  // Retry transient read failures; never repeat writes that might duplicate study progress.
+  async function readWithRetry(args) {
+    let lastError;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try { return await ask("list", args); }
+      catch (error) {
+        lastError = error;
+        if (attempt < 2) await new Promise(resolve => setTimeout(resolve, 700 * (attempt + 1)));
+      }
+    }
+    throw lastError;
+  }
+
   async function refresh(collection) {
     if (updating.has(collection)) return;
     const subs = listeners.get(collection);
@@ -52,7 +65,7 @@
     updating.add(collection);
     try {
       for (const entry of subs) {
-        const docs = await ask("list", {
+        const docs = await readWithRetry({
           collection,
           order: entry.order,
           direction: entry.direction,
@@ -78,7 +91,7 @@
         const entry = { callback, onError, order: sort, direction, max };
         if (!listeners.has(name)) listeners.set(name, new Set());
         listeners.get(name).add(entry);
-        ask("list", { collection: name, order: sort, direction, limit: max })
+        readWithRetry({ collection: name, order: sort, direction, limit: max })
           .then(docs => callback({ docs: docs.map(item => ({ id: item.id, data: () => item })) }))
           .catch(error => { if (onError) onError(error); else console.error("Base44", error); });
         return () => listeners.get(name)?.delete(entry);
