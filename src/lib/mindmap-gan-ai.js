@@ -301,8 +301,9 @@ export function cornellToMindMapStructure(note, options = {}) {
 
 export function normalizeGanConfrontation(generatorItems, discriminatorItems, map, options = {}) {
   const format = options.formato === "multipla_escolha" ? "multipla_escolha" : "ce";
-  const { nodes, ids } = enumerateNodes(map || {});
-  const fallbackNodeId = nodes[0]?.id || "r1";
+  const { nodes, ids, duplicated } = enumerateNodes(map || {});
+  const limits = options.nodeCounts;
+  const used = new Map();
   const nodeTitleById = new Map(nodes.map(n => [n.id, asText(n.node?.t, 160) || n.id]));
 
   const genList = Array.isArray(generatorItems) ? generatorItems : [];
@@ -312,18 +313,20 @@ export function normalizeGanConfrontation(generatorItems, discriminatorItems, ma
 
   const discList = Array.isArray(discriminatorItems) ? discriminatorItems : [];
   const discByIndex = new Map();
-  discList.forEach((d, idx) => {
-    const key = Number.isInteger(Number(d?.index)) ? Number(d.index) : idx;
-    discByIndex.set(key, d);
+  discList.forEach(d => {
+    if (!Number.isInteger(d?.index) || d.index < 0) return;
+    discByIndex.set(d.index, discByIndex.has(d.index) ? null : d);
   });
 
   const seenStatements = new Set();
   const questions = [];
 
-  genList.slice(0, 10).forEach((rawQ, idx) => {
-    const disc = discByIndex.get(idx) || discList[idx] || {};
-    const requestedNodeId = asText(rawQ?.mapaNoId, 120);
-    const mapaNoId = ids.has(requestedNodeId) ? requestedNodeId : fallbackNodeId;
+  genList.slice(0, options.count ?? 10).forEach((rawQ, idx) => {
+    const disc = discByIndex.get(idx) || {};
+    const mapaNoId = asText(rawQ?.mapaNoId, 120);
+    if (!ids.has(mapaNoId) || duplicated.has(mapaNoId)) return;
+    const nodeUsed = used.get(mapaNoId) || 0;
+    if (limits && nodeUsed >= (limits.get(mapaNoId) || 0)) return;
     const nodeTitle = nodeTitleById.get(mapaNoId) || "Conceito do Mapa";
 
     const genStatement = asText(rawQ?.enunciado, 1600);
@@ -333,13 +336,17 @@ export function normalizeGanConfrontation(generatorItems, discriminatorItems, ma
     const genThesis = asText(rawQ?.teseGerador || rawQ?.comentario, 800);
 
     const discKey = asText(disc?.gabaritoDiscriminador || disc?.gabaritoCalculado, 16).toUpperCase();
-    const discVerdict = asText(disc?.veredicto || "APROVADA", 30).toUpperCase();
+    const discVerdict = asText(disc?.veredicto, 30).toUpperCase();
     const discCritique = asText(
       disc?.criticaAdversaria || disc?.parecer || "Item auditado em revisão cega pelo Discriminador GAN.",
       1200
     );
-    const rawScore = Number(disc?.scoreRealismo ?? disc?.score ?? 85);
-    const ganScore = Number.isFinite(rawScore) ? Math.max(0, Math.min(100, Math.round(rawScore))) : 85;
+    const rawScore = disc.scoreRealismo;
+    const ganScore = Number.isFinite(rawScore) && rawScore >= 0 && rawScore <= 100 ? rawScore : null;
+    const flawsDetected = Array.isArray(disc.falhasDetectadas)
+      ? disc.falhasDetectadas.map(f => asText(f, 120)).filter(Boolean)
+      : [];
+    const normalize = value => asText(value, 14000).normalize("NFKC").toLowerCase().replace(/\s+/g, " ");
 
     const validKeys = format === "multipla_escolha" ? ["A", "B", "C", "D", "E"] : ["C", "E"];
     const blindKeyMatch = validKeys.includes(genKey) && genKey === discKey;
@@ -356,7 +363,7 @@ export function normalizeGanConfrontation(generatorItems, discriminatorItems, ma
       asText(refined.enunciado, 1600).length >= 25 &&
       validKeys.includes(asText(refined.gabarito, 10).toUpperCase());
 
-    if (!blindKeyMatch || discVerdict === "REFINAR" || discVerdict === "REJEITADA" || ganScore < 65) {
+    if (!blindKeyMatch || discVerdict !== "APROVADA" || ganScore === null || ganScore < 65 || flawsDetected.length) {
       if (hasValidRefined) {
         finalStatement = asText(refined.enunciado, 1600);
         finalKey = asText(refined.gabarito, 10).toUpperCase();
@@ -365,15 +372,16 @@ export function normalizeGanConfrontation(generatorItems, discriminatorItems, ma
           finalAlternatives = refined.alternativas;
         }
         statusConfronto = "refinada_gan";
-      } else if (!blindKeyMatch || discVerdict === "REJEITADA") {
+      } else if (!blindKeyMatch || discVerdict !== "APROVADA" || ganScore === null || ganScore < 65 || flawsDetected.length) {
         statusConfronto = "divergencia_bloqueada";
       }
     }
 
-    if (finalStatement.length < 20 || seenStatements.has(finalStatement.toLowerCase())) {
+    const statementKey = normalize(finalStatement);
+    if (finalStatement.length < 20 || seenStatements.has(statementKey)) {
       return;
     }
-    seenStatements.add(finalStatement.toLowerCase());
+
 
     let mecanismo = genMechanism;
     if (format === "ce") {
@@ -382,6 +390,17 @@ export function normalizeGanConfrontation(generatorItems, discriminatorItems, ma
     } else {
       mecanismo = "";
     }
+
+    const decisive = asText(rawQ?.trechoDecisivo, 240);
+    const evidence = asText(disc.evidenciaFonte, 600);
+    const sourceNode = nodes.find(n => n.id === mapaNoId)?.node;
+    const evidenceInSource = evidence.length >= 18 && [sourceNode?.x?.e, sourceNode?.n, options.cornellContext]
+      .some(source => normalize(source).includes(normalize(evidence)));
+    const eligibleForAutoApproval =
+      statusConfronto === "aprovada_gan" && ganScore > 90 &&
+      decisive.length >= 6 && statementKey.includes(normalize(decisive)) &&
+      genCommentary.length >= 20 && evidenceInSource &&
+      (format !== "ce" || (mecanismo === genMechanism && (genKey !== "E" || asText(rawQ?.correcaoMinima).length >= 10)));
 
     const record = {
       enunciado: finalStatement,
@@ -393,20 +412,20 @@ export function normalizeGanConfrontation(generatorItems, discriminatorItems, ma
       mapaNoId,
       mapaNoTitulo: nodeTitle,
       ...(mecanismo ? { mecanismo } : {}),
-      trechoDecisivo: asText(rawQ?.trechoDecisivo, 240),
+      trechoDecisivo: decisive,
+      ...(evidenceInSource ? { evidenciaFonte: evidence } : {}),
       correcaoMinima: asText(rawQ?.correcaoMinima, 400),
       ganConfrontation: {
         version: "qb-gan-1.0",
         statusConfronto,
-        ganScore: statusConfronto === "refinada_gan" ? Math.max(ganScore, 78) : ganScore,
+        ganScore,
+        eligibleForAutoApproval,
         blindKeyMatch,
         generatorKey: genKey,
-        discriminatorKey: discKey || genKey,
+        discriminatorKey: discKey,
         generatorThesis: genThesis || `Item formulado sobre "${nodeTitle}" (${mecanismo || format}).`,
         discriminatorCritique: discCritique,
-        flawsDetected: Array.isArray(disc?.falhasDetectadas)
-          ? disc.falhasDetectadas.map(f => asText(f, 120)).filter(Boolean)
-          : [],
+        flawsDetected,
         wasRefined: statusConfronto === "refinada_gan",
       },
     };
@@ -423,6 +442,8 @@ export function normalizeGanConfrontation(generatorItems, discriminatorItems, ma
       record.formato = "multipla_escolha";
     }
 
+    seenStatements.add(statementKey);
+    used.set(mapaNoId, nodeUsed + 1);
     questions.push(record);
   });
 
