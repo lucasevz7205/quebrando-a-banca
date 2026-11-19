@@ -149,8 +149,11 @@ test("integração servidor e interface realmente invoca IA antes de salvar o ma
  assert.match(studioCode,/studioState\.drafts\.set\(selectedTopic, clone\(imported\.mapa\)\)/);
  assert.match(studioCode,/SALVAR MAPA MENTAL/);
  assert.match(studioCode,/Nenhum mapa foi substituído/);
- assert.match(shell,/mindmap-studio\.js\?v=17/);
- assert.match(sw,/mindmap-studio\.js\?v=17/);
+ for (const extension of ["js", "css"]) {
+  const asset = shell.match(new RegExp('(/claude-export/mindmap-studio\\.' + extension + '\\?v=\\d+)'))?.[1];
+  assert.ok(asset);
+  assert.ok(sw.includes(asset));
+ }
 });
 
 test("salvamento é adiado e preserva revisão antiga até aprovação explícita",()=>{
