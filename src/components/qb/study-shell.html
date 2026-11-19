@@ -2559,7 +2559,7 @@ function viewMapa(){
   const ramos=(m.ramos||[]).map((r,i)=>{const cor=`var(--qb-map-${((r.cor||i+1)-1)%8+1})`;return `<section class="m-ramo" style="--mc:${cor}"><span class="qb-map-branch" aria-hidden="true">RAMO ${String(i+1).padStart(2,'0')}</span><ul class="m-raiz">${no(r,cor,String(i))}</ul></section>`}).join('');
   return `<div class="wrap" style="gap:14px;max-width:1100px">
     <div class="filters"><select id="mapa-top" aria-label="Tópico">${ids.map(id=>{const td=edDeMapa(id),tit=S.ed.get(id)?td.titulo:(S.rv.get(id)?.titulo||td.titulo||'');return `<option value="${esc(id)}" ${id===S.mapaId?'selected':''}>${esc(lblT(td)||id)} · ${esc(tit)}</option>`;}).join('')}</select>
-      ${window.QBMindMapStudio?.ganButtonHTML()||""}
+      ${window.QBMindMapStudio?.ganButtonHTML?.()||""}
       <label class="check"><input type="checkbox" id="evocar" ${S.evocar?'checked':''}> Evocar antes de ler</label>
       <button class="btn ghost small" data-mtodos="1">Abrir tudo</button><button class="btn ghost small" data-mtodos="0">Fechar tudo</button>
       ${S.mapaBack?.kind==='flashcard'?'<button class="btn ghost small" data-voltar-flash="1">Voltar ao flashcard</button>':S.mapaBack?.kind==='question'?'<button class="btn ghost small" data-voltar-questao="1">← Voltar à questão</button>':''}
