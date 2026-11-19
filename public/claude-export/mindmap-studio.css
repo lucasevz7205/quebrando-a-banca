@@ -495,3 +495,57 @@
   transform: translateY(-1px);
 }
 
+
+
+/* Controles do pacote no vocabulário visual do ambiente de estudo. */
+#qb-mm-gan-panel {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+  box-shadow: var(--shadow-1);
+}
+
+#qb-mm-gan-panel h3,
+#qb-mm-gan-panel .qb-mm-gan-card p {
+  color: var(--ink) !important;
+}
+
+#qb-mm-gan-panel .qb-mm-panel-head p,
+.qb-mm-gan-allocation p {
+  color: var(--muted);
+}
+
+.qb-mm-gan-settings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+  gap: 12px;
+}
+
+#qb-mm-gan-panel .qb-mm-select {
+  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+.qb-mm-gan-nodes {
+  max-block-size: 16rem;
+  overflow: auto;
+}
+
+.qb-mm-gan-node {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 4rem;
+  gap: 12px;
+  align-items: center;
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.qb-mm-gan-node span { overflow-wrap: anywhere; }
+
+.qb-mm-gan-actions, .qb-mm-gan-result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+}

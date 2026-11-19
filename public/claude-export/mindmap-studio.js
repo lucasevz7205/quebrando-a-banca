@@ -40,11 +40,8 @@
     undoStack: new Map(),   // topicId -> array of JSON snapshots
     openDetails: new Set(), // node paths with expanded pedagogical details
     ganBatches: new Map(),  // topicId -> { questions, summary, formato, targetNodeId, count }
-    ganConfig: {
-      formato: "ce",
-      count: 4,
-      targetNodeId: "",
-    },
+    ganConfig: { formato: "ce", count: 4 },
+    ganAllocations: new Map(),
   };
 
   let appRef = null; // { S, render, setView, enqueue, toast }
@@ -1021,118 +1018,6 @@
     return nextRev;
   }
 
-  /* ==========================================================================
-     LOCAL DETERMINISTIC GAN ENGINE (When Offline or in Unit Tests) + BRIDGE CALL
-     ========================================================================== */
-  function buildLocalGanBatch(map, options = {}) {
-    const format = options.formato === "multipla_escolha" ? "multipla_escolha" : "ce";
-    const count = Math.max(1, Math.min(8, Number(options.count) || 4));
-    const { list } = enumerateMapNodes(map);
-    const pool = options.targetNodeId
-      ? list.filter(item => item.id === options.targetNodeId || item.path.startsWith(
-          (list.find(x => x.id === options.targetNodeId)?.path || "___") + "."
-        ))
-      : list;
-    const targetPool = pool.length ? pool : list;
-    if (!targetPool.length) {
-      throw new Error("Adicione ao menos 1 ramo ao mapa mental antes de gerar questões.");
-    }
-
-    const mechanisms = ["F3", "V1", "F5", "F1", "V4", "F4"];
-    const questions = [];
-
-    for (let i = 0; i < count; i++) {
-      const entry = targetPool[i % targetPool.length];
-      const n = entry.node;
-      const baseExp = text(n.x?.e || n.n || n.t, 600);
-      const baseTrap = text(n.x?.trap || `Confusão conceitual sobre ${n.t}`, 400);
-      const baseEx = text(n.x?.ex || "", 300);
-      const src = text(n.x?.src || map.autor || "Mapa Mental do Estudante", 240);
-      const isTrue = i % 2 === 1;
-      const mec = format === "ce" ? (isTrue ? (i % 4 === 1 ? "V1" : "V4") : mechanisms[i % mechanisms.length]) : "";
-
-      if (format === "ce") {
-        const statement = isTrue
-          ? `No âmbito de ${map.centro}, quanto a "${n.t}", ${baseExp.charAt(0).toLowerCase() + baseExp.slice(1).replace(/\.$/, "")}${baseEx ? `, aplicando-se inclusive na hipótese de ${baseEx.charAt(0).toLowerCase() + baseEx.slice(1).replace(/\.$/, "")}` : ""}.`
-          : `Acerca de ${map.centro}, especificamente no que tange a "${n.t}", aplica-se de forma irrestrita e sem exceções a equiparação integral entre esse instituto e os demais ramos do tema, dispensando-se os requisitos específicos (${baseExp.slice(0, 120).replace(/\.$/, "")}).`;
-
-        const gabarito = isTrue ? "C" : "E";
-        const wasRefined = i === 2; // Simula refinamento adversarial no 3º item quando local
-        questions.push({
-          enunciado: statement,
-          gabarito,
-          mecanismo: mec,
-          tema: n.t,
-          mapaNoId: entry.id,
-          mapaNoTitulo: n.t,
-          trechoDecisivo: isTrue ? n.t : "de forma irrestrita e sem exceções",
-          correcaoMinima: isTrue
-            ? "O item está correto e fiel ao nó do mapa mental."
-            : `Para tornar o item correto: observar que em "${n.t}", ${baseExp}`,
-          comentario: `${isTrue ? "CERTO" : "ERRADO"} (${mec}). Conforme estruturado no nó "${n.t}" do mapa mental (${src}): ${baseExp} ${baseTrap ? `Armadilha mapeada: ${baseTrap}` : ""}`,
-          ganConfrontation: {
-            version: "qb-gan-1.0",
-            statusConfronto: wasRefined ? "refinada_gan" : "aprovada_gan",
-            ganScore: isTrue ? 93 : wasRefined ? 88 : 91,
-            blindKeyMatch: true,
-            generatorKey: gabarito,
-            discriminatorKey: gabarito,
-            generatorThesis: `Item ancorado no nó "${n.t}" (${entry.id}) testando ${mec} (${isTrue ? "paráfrase fiel do conceito" : "distorção de escopo/conceito"}).`,
-            discriminatorCritique: wasRefined
-              ? `Discriminador Cego confirmou gabarito ${gabarito} e refinou a redação para eliminar pista lexical e reforçar a precisão sobre "${n.t}".`
-              : `Discriminador Cego resolveu o item sem acesso ao gabarito, cravou "${gabarito}" por unanimidade e validou a aderência estrita ao nó "${n.t}".`,
-            flawsDetected: wasRefined ? ["Ajuste de calibragem lexical pós-confronto"] : [],
-            wasRefined,
-          },
-        });
-      } else {
-        const correctLetter = ["A", "B", "C", "D", "E"][i % 5];
-        const alternatives = ["A", "B", "C", "D", "E"].map((letra, k) => ({
-          letra,
-          texto:
-            letra === correctLetter
-              ? `${baseExp} (${n.t}).`
-              : `Afirmação incorreta (${k + 1}): inverte a regra de "${n.t}" ao desconsiderar seus requisitos específicos no mapa.`,
-        }));
-        questions.push({
-          formato: "multipla_escolha",
-          enunciado: `Tendo como referência a estrutura conceitual de ${map.centro}, assinale a alternativa correta acerca de "${n.t}":`,
-          gabarito: correctLetter,
-          alternativas: alternatives,
-          tema: n.t,
-          mapaNoId: entry.id,
-          mapaNoTitulo: n.t,
-          comentario: `Alternativa correta: ${correctLetter}. De acordo com o nó "${n.t}" (${entry.id}): ${baseExp}`,
-          ganConfrontation: {
-            version: "qb-gan-1.0",
-            statusConfronto: "aprovada_gan",
-            ganScore: 90,
-            blindKeyMatch: true,
-            generatorKey: correctLetter,
-            discriminatorKey: correctLetter,
-            generatorThesis: `Questão A–E vinculada ao nó "${n.t}" com 4 distratores baseados nas armadilhas do tema.`,
-            discriminatorCritique: `Discriminador Cego validou a alternativa ${correctLetter} como única correta e descartou ambiguidade nos distratores.`,
-            flawsDetected: [],
-            wasRefined: false,
-          },
-        });
-      }
-    }
-
-    return {
-      questions,
-      summary: {
-        total: questions.length,
-        aprovadasDireto: questions.filter(q => q.ganConfrontation.statusConfronto === "aprovada_gan").length,
-        refinadasPelaGan: questions.filter(q => q.ganConfrontation.statusConfronto === "refinada_gan").length,
-        bloqueadasPorDivergencia: 0,
-        mediaScoreGan: Math.round(
-          questions.reduce((acc, q) => acc + q.ganConfrontation.ganScore, 0) / questions.length
-        ),
-      },
-    };
-  }
-
   async function generateQuestionsWithGan(S, topicId, options = {}) {
     const map = ensureDraft(S, topicId);
     if (!map || !Array.isArray(map.ramos) || !map.ramos.length) {
@@ -1147,7 +1032,7 @@
     const cornellNotes = loadSavedCornellNotes();
     const linkedCornell = map.origemCornell?.noteId
       ? cornellNotes.find(n => n.id === map.origemCornell.noteId)
-      : cornellNotes[0];
+      : cornellNotes.find(n => n.topicId === topicId);
     const cornellContext = linkedCornell
       ? [
           `Título Cornell: ${linkedCornell.title || ""}`,
@@ -1160,106 +1045,128 @@
           .join("\n")
       : "";
 
-    let result = null;
-    if (global.QBBridge && typeof global.QBBridge.ask === "function" && !options.forceLocal) {
-      try {
-        result = await global.QBBridge.ask("omniStudyAI", {
-          task: "mindmap-gan-questions",
-          topicId,
-          topicTitle,
-          formato,
-          count,
-          targetNodeId,
-          mapa: map,
-          cornellContext,
-        });
-      } catch (_err) {
-        result = buildLocalGanBatch(map, { formato, count, targetNodeId });
-      }
-    } else {
-      result = buildLocalGanBatch(map, { formato, count, targetNodeId });
+    if (typeof global.QBBridge?.ask !== "function") {
+      throw new Error("O Arquiteto está indisponível neste ambiente.");
+    }
+    const allocations = options.allocations || [];
+    const result = await global.QBBridge.ask("omniStudyAI", {
+      task: "mindmap-gan-questions",
+      topicId,
+      topicTitle,
+      formato,
+      count,
+      targetNodeId,
+      ...(allocations.length ? { allocations } : {}),
+      mapa: map,
+      cornellContext: cornellContext.slice(0, 12000),
+    });
+    if (!Array.isArray(result?.questions) || !result.questions.length) {
+      throw new Error("Nenhuma questão passou pela validação estrutural da GAN.");
     }
 
     const batch = {
       ...result,
-      formato,
-      targetNodeId,
-      count,
-      generatedAt: new Date().toISOString(),
+      topicTitle,
+      count: allocations.length ? allocations.reduce((total, node) => total + node.count, 0) : count,
+      id: global.crypto.randomUUID(),
     };
     studioState.ganBatches.set(topicId, batch);
     return batch;
   }
 
-  function incorporateGanQuestions(S, topicId, selectedIndices = null) {
+  const questionKey = value => text(value, 1600).normalize("NFKC").toLowerCase().replace(/\s+/g, " ");
+  const canSaveGanQuestion = q => !q.savedId && q.ganConfrontation?.statusConfronto !== "divergencia_bloqueada";
+  const automaticGanIndices = batch => batch.questions.flatMap((q, idx) =>
+    canSaveGanQuestion(q) && q.ganConfrontation?.eligibleForAutoApproval === true ? [idx] : []
+  );
+
+  async function incorporateGanQuestions(S, topicId, selectedIndices = null) {
     const batch = studioState.ganBatches.get(topicId);
-    if (!batch || !Array.isArray(batch.questions) || !batch.questions.length) {
-      return { savedCount: 0, questionIds: [] };
-    }
-    const map = ensureDraft(S, topicId);
-    const topic = S?.ed?.get(topicId) || { id: topicId, titulo: map.centro || topicId };
-    const safeTopic = slugId(topicId, "topico").slice(0, 28);
-    const cap = (Array.isArray(topic.caps) && topic.caps[0]) || `MM-${safeTopic.toUpperCase()}`;
+    if (!batch || !S.db || batch.saving) return { savedCount: 0, questionIds: [] };
+    batch.saving = true;
+    try {
+      const save = async () => {
+        const map = clone(ensureDraft(S, topicId));
+        const topic = S.ed?.get(topicId);
+        const revision = S.rv?.get(topicId);
+        const title = topic?.titulo || revision?.titulo || map.centro || topicId;
+        const safeTopic = slugId(topicId, "topico").slice(0, 28);
+        const cap = topic?.caps?.[0] || "MM-" + safeTopic.toUpperCase();
+        const { list } = enumerateMapNodes(map);
+        const nodeById = new Map(list.map(entry => [entry.id, entry.node]));
+        const existing = new Set([...S.q.values()].filter(q => q.topico === topicId || q.cap === cap)
+          .map(q => questionKey(q.enunciado)));
+        const records = [];
 
-    if (S.ed && S.ed.has(topicId) && (!Array.isArray(topic.caps) || !topic.caps.length)) {
-      topic.caps = [cap];
-      S.ed.set(topicId, topic);
-      if (S.db && typeof S.db.doc === "function") {
-        const upEdital = () => S.db.doc("edital/" + topicId).update({ caps: [cap] });
-        if (appRef?.enqueue) appRef.enqueue(upEdital);
-        else upEdital();
-      }
-    }
+        batch.questions.forEach((q, idx) => {
+          if (!canSaveGanQuestion(q) || (selectedIndices && !selectedIndices.includes(idx))) return;
+          const key = questionKey(q.enunciado);
+          const target = nodeById.get(q.mapaNoId);
+          if (!target || existing.has(key)) return;
+          existing.add(key);
+          const id = "mmgan-" + safeTopic + "-" + (batch.id ||= global.crypto.randomUUID()) + "-" + (idx + 1);
+          records.push({
+            q, target,
+            record: {
+              ...q,
+              id,
+              topico: topicId,
+              cap,
+              capNome: title,
+              ordem: S.q.size + records.length + 1,
+              origem: "inédito Codex",
+              ref: "Mapa Mental «" + map.centro + "» · Nó «" + q.mapaNoTitulo + "»",
+              statusEditorial: "aprovada-confronto-gan",
+            },
+          });
+        });
 
-    const { list } = enumerateMapNodes(map);
-    const nodeById = new Map(list.map(entry => [entry.id, entry.node]));
-    const fallbackNode = list[0]?.node || null;
+        if (!records.length) return { savedCount: 0, questionIds: [], cap };
 
-    const toSave = batch.questions.filter((q, idx) => {
-      if (Array.isArray(selectedIndices)) return selectedIndices.includes(idx);
-      return q.ganConfrontation?.statusConfronto !== "divergencia_bloqueada";
-    });
-
-    const savedIds = [];
-    const stamp = Date.now().toString(36);
-
-    toSave.forEach((q, idx) => {
-      if (q.savedId && S.q?.has(q.savedId)) return;
-      const qid = `mmgan-${safeTopic}-${stamp}-${String(idx + 1).padStart(2, "0")}`;
-      const record = {
-        ...q,
-        id: qid,
-        topico: topicId,
-        cap,
-        capNome: topic.titulo || map.centro || topicId,
-        ordem: (S.q ? S.q.size : 0) + idx + 1,
-        origem: "inédito Codex · Mapa Mental + Confronto GAN",
-        ref: `Mapa Mental "${map.centro}" · Nó "${q.mapaNoTitulo || q.mapaNoId}" · GAN Score ${q.ganConfrontation?.ganScore || 90}/100`,
-        statusEditorial: "aprovada-confronto-gan",
+        if (topic && !topic.caps?.length) {
+          await S.db.doc("edital/" + topicId).update({ caps: [cap] });
+          S.ed.set(topicId, { ...topic, caps: [cap] });
+        }
+        for (const { record, target } of records) {
+          await S.db.doc("questoes/" + record.id).set(record);
+          target.x ||= { e: target.t };
+          target.x.questaoIds = [...new Set([...(target.x.questaoIds || []), record.id])];
+        }
+        const nextRev = { ...revision, id: topicId, titulo: title, mapa: map, atualizadoEm: new Date().toISOString() };
+        if (revision) await S.db.doc("revisao/" + topicId).update({ mapa: map, atualizadoEm: nextRev.atualizadoEm });
+        else await S.db.doc("revisao/" + topicId).set(nextRev);
+        studioState.drafts.set(topicId, clone(map));
+        S.rv.set(topicId, nextRev);
+        for (const { q, record } of records) {
+          S.q.set(record.id, record);
+          q.savedId = record.id;
+        }
+        return { savedCount: records.length, questionIds: records.map(({ record }) => record.id), cap };
       };
 
-      if (S.q) S.q.set(qid, record);
-      q.savedId = qid;
-      savedIds.push(qid);
-
-      const targetNode = nodeById.get(q.mapaNoId) || fallbackNode;
-      if (targetNode) {
-        targetNode.x = targetNode.x || { e: `Conceito de ${targetNode.t}.` };
-        targetNode.x.questaoIds = [...new Set([...(targetNode.x.questaoIds || []), qid])];
-      }
-
-      if (S.db && typeof S.db.doc === "function") {
-        const writeQ = () => S.db.doc("questoes/" + qid).set(record);
-        if (appRef?.enqueue) appRef.enqueue(writeQ);
-        else writeQ();
-      }
-    });
-
-    if (savedIds.length) {
-      saveMapToEnvironment(S, topicId, map, { skipUndo: true });
+      if (!appRef?.enqueue) return await save();
+      let result;
+      let failure;
+      await appRef.enqueue(async () => {
+        try { result = await save(); }
+        catch (error) { failure = error; }
+      });
+      if (failure) throw failure;
+      return result;
+    } finally {
+      batch.saving = false;
     }
+  }
 
-    return { savedCount: savedIds.length, questionIds: savedIds, cap };
+  async function saveAutomaticGanQuestions(S, topicId, batch) {
+    const indices = automaticGanIndices(batch);
+    if (!indices.length) return;
+    const result = await incorporateGanQuestions(S, topicId, indices);
+    batch.savedAutomatically = (batch.savedAutomatically || 0) + result.savedCount;
+    batch.autoSaveFailed = false;
+    batch.questions.forEach((q, idx) => {
+      if (indices.includes(idx) && !q.savedId) q.duplicateOrMissingNode = true;
+    });
   }
 
   /* ==========================================================================
@@ -1468,6 +1375,11 @@
     const { list: flatNodes } = enumerateMapNodes(draft);
     const undoCount = (studioState.undoStack.get(activeId) || []).length;
     const ganBatch = studioState.ganBatches.get(activeId);
+    const allocation = studioState.ganAllocations.get(activeId);
+    const allocated = flatNodes.reduce((sum, node) => sum + (allocation?.get(node.id) || 0), 0);
+    const pending = ganBatch?.questions.filter(q => canSaveGanQuestion(q) && !q.ganConfrontation?.eligibleForAutoApproval).length || 0;
+    const blocked = ganBatch?.questions.filter(q => q.ganConfrontation?.statusConfronto === "divergencia_bloqueada").length || 0;
+    const skipped = ganBatch?.questions.filter(q => q.duplicateOrMissingNode).length || 0;
 
     const toolbar = `<section class="qb-mm-studio-bar" aria-label="Estúdio de Mapas Mentais e Confronto GAN">
       <div class="qb-mm-studio-bar-title">
@@ -1607,44 +1519,54 @@
             </div>
           </div>
 
-          <div class="qb-mm-cornell-bar">
-            <label style="font-size:12px;color:#cbd5e1">Escopo do Mapa:
-              <select class="qb-mm-select" id="qb-mm-gan-node" style="width:auto;min-width:210px;margin-left:6px">
-                <option value="">Mapa Mental Completo (${flatNodes.length} nós)</option>
-                ${flatNodes.map(n => `<option value="${esc(n.id)}" ${studioState.ganConfig.targetNodeId === n.id ? "selected" : ""}>${"› ".repeat(n.depth)}${esc(n.title)}</option>`).join("")}
+          <div class="qb-mm-gan-settings">
+            <label class="qb-mm-field">Formato
+              <select class="qb-mm-select" id="qb-mm-gan-format" ${studioState.busy ? "disabled" : ""}>
+                <option value="ce" ${studioState.ganConfig.formato === "ce" ? "selected" : ""}>Certo / Errado (Cebraspe)</option>
+                <option value="multipla_escolha" ${studioState.ganConfig.formato === "multipla_escolha" ? "selected" : ""}>Múltipla escolha (A–E)</option>
               </select>
             </label>
-            <label style="font-size:12px;color:#cbd5e1">Formato:
-              <select class="qb-mm-select" id="qb-mm-gan-format" style="width:auto;margin-left:6px">
-                <option value="ce" ${studioState.ganConfig.formato === "ce" ? "selected" : ""}>Certo / Errado (CEBRASPE · F1–F10 / V1–V4)</option>
-                <option value="multipla_escolha" ${studioState.ganConfig.formato === "multipla_escolha" ? "selected" : ""}>Múltipla Escolha (A–E)</option>
+            <label class="qb-mm-field">Quantidade no mapa inteiro
+              <select class="qb-mm-select" id="qb-mm-gan-count" ${studioState.busy || allocated ? "disabled" : ""}>
+                ${Array.from({ length: 8 }, (_, i) => i + 1).map(n => `<option value="${n}" ${studioState.ganConfig.count === n ? "selected" : ""}>${n}</option>`).join("")}
               </select>
             </label>
-            <label style="font-size:12px;color:#cbd5e1">Quantidade:
-              <select class="qb-mm-select" id="qb-mm-gan-count" style="width:auto;margin-left:6px">
-                ${[3, 4, 6, 8].map(n => `<option value="${n}" ${Number(studioState.ganConfig.count) === n ? "selected" : ""}>${n} questões</option>`).join("")}
-              </select>
-            </label>
-            <button type="button" class="qb-mm-btn qb-mm-btn-gan" id="qb-mm-gan-run" ${studioState.busy ? "disabled" : ""}>
-              ${studioState.busy ? "⏳ Confrontando Gerador × Discriminador GAN..." : "⚔️ Gerar e Confrontar na GAN"}
+          </div>
+          <details class="why qb-mm-gan-allocation" ${allocated ? "open" : ""}>
+            <summary>Distribuir questões por ramo ou nó</summary>
+            <p>Defina até 8 questões por pacote. Zero deixa o nó fora da seleção.</p>
+            <div class="qb-mm-gan-nodes">
+              ${flatNodes.map(n => `<label class="qb-mm-gan-node">
+                <span>${"› ".repeat(n.depth)}${esc(n.title)}</span>
+                <select class="qb-mm-select" data-mm-gan-count="${esc(n.id)}" aria-label="Questões para ${esc(n.title)}" ${studioState.busy ? "disabled" : ""}>
+                  ${Array.from({ length: 9 }, (_, i) => `<option value="${i}" ${(allocation?.get(n.id) || 0) === i ? "selected" : ""}>${i}</option>`).join("")}
+                </select>
+              </label>`).join("")}
+            </div>
+          </details>
+          <div class="qb-mm-gan-actions">
+            <button type="button" class="btn" id="qb-mm-gan-run" ${studioState.busy || allocated > 8 || ganBatch?.autoSaveFailed ? "disabled" : ""}>
+              ${studioState.busy ? "Processando…" : "Gerar pacote com o Arquiteto"}
             </button>
+            <span class="pill" id="qb-mm-gan-total" aria-live="polite">${allocated || studioState.ganConfig.count} de 8 no pacote</span>
           </div>
 
           ${
             ganBatch && Array.isArray(ganBatch.questions)
-              ? `<div class="qb-mm-cornell-bar" style="justify-content:space-between">
-                  <div>
-                    <strong style="color:#6ee7b7">Resultado do Confronto GAN:</strong>
-                    <span style="font-size:12.5px;margin-left:8px">${ganBatch.summary?.aprovadasDireto || 0} aprovadas por unanimidade cega · ${ganBatch.summary?.refinadasPelaGan || 0} refinadas após crítica adversária · Score médio GAN: <b>${ganBatch.summary?.mediaScoreGan || 90}/100</b></span>
-                  </div>
-                  <button type="button" class="qb-mm-btn qb-mm-btn-primary" id="qb-mm-gan-save-all">
-                    ＋ Incorporar Todas ao Banco e Vincular aos Nós do Mapa
-                  </button>
+              ? `<div class="notice qb-mm-gan-result" role="status">
+                  <strong>${esc(ganBatch.topicTitle)}</strong>
+                  <span>${ganBatch.questions.length} de ${ganBatch.count} questões geradas · ${ganBatch.savedAutomatically || 0} adicionadas automaticamente ao Treinar</span>
+                  ${pending ? `<span>${pending} aguardando sua aprovação</span>` : ""}
+                  ${blocked ? `<span>${blocked} bloqueadas pela revisão cega</span>` : ""}
+                  ${skipped ? `<span>${skipped} descartadas por duplicidade ou nó indisponível</span>` : ""}
+                  ${ganBatch.autoSaveFailed ? `<button type="button" class="btn ghost" id="qb-mm-gan-retry" ${studioState.busy ? "disabled" : ""}>Tentar salvar novamente</button>` : ""}
+                  ${pending ? `<button type="button" class="btn ghost" id="qb-mm-gan-save-all" ${studioState.busy ? "disabled" : ""}>Aprovar questões pendentes</button>` : ""}
                 </div>
                 <div class="qb-mm-tree-editor">
                   ${ganBatch.questions
                     .map((q, idx) => {
                       const gan = q.ganConfrontation || {};
+                      if (gan.eligibleForAutoApproval) return "";
                       const pillClass =
                         gan.statusConfronto === "refinada_gan"
                           ? "refined"
@@ -1653,16 +1575,16 @@
                           : "";
                       const pillLabel =
                         gan.statusConfronto === "refinada_gan"
-                          ? `⚡ REFINADA PELA GAN · Score ${gan.ganScore || 88}/100`
+                          ? `⚡ REFINADA PELA GAN · Score ${gan.ganScore ?? "—"}/100`
                           : gan.statusConfronto === "divergencia_bloqueada"
                           ? `⚠ DIVERGÊNCIA DETECTADA PELA GAN`
-                          : `✓ APROVADA PELA GAN · Score ${gan.ganScore || 92}/100`;
+                          : `✓ APROVADA PELA GAN · Score ${gan.ganScore ?? "—"}/100`;
                       return `<article class="qb-mm-gan-card" data-mm-gan-item="${idx}">
                         <div class="qb-mm-gan-badges">
                           <span class="qb-mm-gan-pill ${pillClass}">${esc(pillLabel)}</span>
                           <span class="qb-mm-node-badge">Nó do Mapa: ${esc(q.mapaNoTitulo || q.mapaNoId)}</span>
                           ${q.mecanismo ? `<span class="qb-mm-node-badge">Mecanismo: ${esc(q.mecanismo)}</span>` : ""}
-                          <span class="qb-mm-node-badge">Gabarito: ${esc(q.gabarito)} (Gerador: ${esc(gan.generatorKey || q.gabarito)} × Discriminador Cego: ${esc(gan.discriminatorKey || q.gabarito)})</span>
+                          <span class="qb-mm-node-badge">Gabarito: ${esc(q.gabarito)} · Revisão cega: ${esc(gan.discriminatorKey || "sem gabarito")}</span>
                         </div>
                         <p style="margin:0;font-size:13.5px;line-height:1.5;color:#f8fafc"><b>Item ${idx + 1}.</b> ${esc(q.enunciado)}</p>
                         ${
@@ -1687,7 +1609,7 @@
                           ${
                             q.savedId
                               ? `<span class="qb-mm-gan-pill">✓ Incorporada ao nó (${esc(q.savedId)})</span>`
-                              : `<button type="button" class="qb-mm-btn qb-mm-btn-small qb-mm-btn-primary" data-mm-gan-save-one="${idx}">＋ Salvar Questão no Nó</button>`
+                              : canSaveGanQuestion(q) ? `<button type="button" class="btn ghost" data-mm-gan-save-one="${idx}" ${studioState.busy ? "disabled" : ""}>Aprovar questão</button>` : ""
                           }
                         </div>
                       </article>`;
@@ -2120,53 +2042,86 @@
       rerender();
     });
 
-    // Controles do gerador GAN
-    document.getElementById("qb-mm-gan-node")?.addEventListener("change", e => {
-      studioState.ganConfig.targetNodeId = e.target.value;
-    });
+    const ganRun = document.getElementById("qb-mm-gan-run");
+    const fullCount = document.getElementById("qb-mm-gan-count");
+    const ganTotal = document.getElementById("qb-mm-gan-total");
+    const nodeInputs = [...document.querySelectorAll("[data-mm-gan-count]")];
+    function readAllocation() {
+      return nodeInputs.map(input => ({
+        nodeId: input.getAttribute("data-mm-gan-count"), count: Number(input.value),
+      })).filter(node => node.count > 0);
+    }
+    function updateAllocation() {
+      const allocations = readAllocation();
+      const total = allocations.reduce((sum, node) => sum + node.count, 0);
+      studioState.ganAllocations.set(topicId, new Map(allocations.map(node => [node.nodeId, node.count])));
+      fullCount.disabled = studioState.busy || total > 0;
+      ganRun.disabled = studioState.busy || total > 8 || !!studioState.ganBatches.get(topicId)?.autoSaveFailed;
+      ganTotal.textContent = total > 8 ? total + " selecionadas. O limite é 8."
+        : (total || studioState.ganConfig.count) + " de 8 no pacote";
+    }
+    nodeInputs.forEach(input => input.addEventListener("change", updateAllocation));
     document.getElementById("qb-mm-gan-format")?.addEventListener("change", e => {
       studioState.ganConfig.formato = e.target.value;
     });
-    document.getElementById("qb-mm-gan-count")?.addEventListener("change", e => {
-      studioState.ganConfig.count = Number(e.target.value) || 4;
+    fullCount?.addEventListener("change", e => {
+      studioState.ganConfig.count = Number(e.target.value);
+      updateAllocation();
     });
 
-    document.getElementById("qb-mm-gan-run")?.addEventListener("click", async () => {
+    async function runGanAction(action, progress) {
       if (studioState.busy) return;
-      if (studioState.editorOpen) {
-        const updated = syncDomInputsToDraft(S, topicId);
-        saveMapToEnvironment(S, topicId, updated);
-      }
       studioState.busy = true;
-      studioState.statusMsg = "Executando Confronto GAN: Agente Gerador criando itens do mapa × Agente Discriminador auditando às cegas...";
+      studioState.statusMsg = progress;
       rerender();
       try {
-        await generateQuestionsWithGan(S, topicId, studioState.ganConfig);
-        studioState.statusMsg = "Confronto GAN concluído! Confira o dossiê Gerador × Discriminador e incorpore as questões aprovadas.";
-      } catch (err) {
-        studioState.statusMsg = "Falha no Confronto GAN: " + (err?.message || "verifique o mapa mental.");
+        studioState.statusMsg = await action();
+      } catch (error) {
+        studioState.statusMsg = error.message || "Falha no processamento das questões.";
       } finally {
         studioState.busy = false;
         rerender();
       }
+    }
+    async function saveAutomatic(batch) {
+      try {
+        await saveAutomaticGanQuestions(S, topicId, batch);
+        return "";
+      } catch (error) {
+        batch.autoSaveFailed = true;
+        throw new Error("Falha ao salvar as questões automáticas. " + (error.message || ""));
+      }
+    }
+    ganRun?.addEventListener("click", () => {
+      const allocations = readAllocation();
+      if (studioState.editorOpen) syncDomInputsToDraft(S, topicId);
+      return runGanAction(async () => {
+        const batch = await generateQuestionsWithGan(S, topicId, { ...studioState.ganConfig, allocations });
+        return saveAutomatic(batch);
+      }, "O Arquiteto está gerando e revisando as questões…");
     });
 
+    document.getElementById("qb-mm-gan-retry")?.addEventListener("click", () =>
+      runGanAction(() => saveAutomatic(studioState.ganBatches.get(topicId)), "Salvando questões no Treinar…")
+    );
+
+    function approveGanQuestions(indices) {
+      return runGanAction(async () => {
+        const { savedCount } = await incorporateGanQuestions(S, topicId, indices);
+        return savedCount ? savedCount + " questão(ões) adicionada(s) ao Treinar."
+          : "As questões já estão no Treinar ou o nó foi removido.";
+      }, "Salvando questões no Treinar…");
+    }
+
     document.getElementById("qb-mm-gan-save-all")?.addEventListener("click", () => {
-      const res = incorporateGanQuestions(S, topicId);
-      studioState.statusMsg = `${res.savedCount} questão(ões) aprovadas pela GAN incorporadas ao banco (capítulo ${res.cap}) e vinculadas aos nós do mapa mental!`;
-      if (helpers.toast) helpers.toast(`${res.savedCount} questões GAN salvas no mapa e no Treinar.`);
-      rerender();
+      const { questions } = studioState.ganBatches.get(topicId);
+      return approveGanQuestions(questions.flatMap((q, idx) =>
+        canSaveGanQuestion(q) && !q.ganConfrontation?.eligibleForAutoApproval ? [idx] : []
+      ));
     });
 
     document.querySelectorAll("[data-mm-gan-save-one]").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const idx = Number(btn.getAttribute("data-mm-gan-save-one"));
-        const res = incorporateGanQuestions(S, topicId, [idx]);
-        studioState.statusMsg = res.savedCount
-          ? `Questão ${idx + 1} salva no banco e vinculada diretamente ao nó do mapa mental!`
-          : "Questão já estava incorporada.";
-        rerender();
-      });
+      btn.addEventListener("click", () => approveGanQuestions([Number(btn.getAttribute("data-mm-gan-save-one"))]));
     });
   }
 
@@ -2271,7 +2226,6 @@
     removeCrossLink,
     saveMapToEnvironment,
     undoDraft,
-    buildLocalGanBatch,
     generateQuestionsWithGan,
     incorporateGanQuestions,
     openFromCornell,
