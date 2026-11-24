@@ -1,0 +1,2619 @@
+{
+  "status": "candidate-only",
+  "editorial": {
+    "candidates": [
+      {
+        "id": "pilot-dns-dhcp-duel",
+        "concept": "TI-2:dns-dhcp",
+        "type": "duel",
+        "title": "Duelo: DNS × DHCP",
+        "prompt": "Qual é a diferença decisiva entre resolver o nome de um site e atribuir automaticamente um endereço IP a um computador? Identifique o protocolo de cada função.",
+        "explanation": "DNS resolve nomes de domínio. DHCP atribui endereços IP e outros parâmetros de configuração. A diferença decisiva é resolver um nome versus configurar a conexão do dispositivo.",
+        "reference": "Comentários dos itens ti2-40 e ti2-41 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais.",
+        "material": "fonte-ti-redes",
+        "sourceItems": [
+          "ti2-40",
+          "ti2-41"
+        ],
+        "originalVersion": "2026-11-08.1",
+        "status": "candidate",
+        "source": {
+          "sourceId": "docs/learning-pilot-catalog.json",
+          "version": "sha256:d5800620f6e1258923a2aa0c531f8c46021b971f4c7bd9ead20c8cbb59db8032",
+          "locator": "0"
+        }
+      },
+      {
+        "id": "pilot-dns-dhcp-recall",
+        "concept": "TI-2:dns-dhcp",
+        "type": "recall",
+        "title": "Evocação: DNS × DHCP",
+        "prompt": "Qual é a diferença decisiva entre resolver o nome de um site e atribuir automaticamente um endereço IP a um computador? Identifique o protocolo de cada função.",
+        "explanation": "DNS resolve nomes de domínio. DHCP atribui endereços IP e outros parâmetros de configuração. A diferença decisiva é resolver um nome versus configurar a conexão do dispositivo.",
+        "reference": "Comentários dos itens ti2-40 e ti2-41 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais.",
+        "material": "fonte-ti-redes",
+        "sourceItems": [
+          "ti2-40",
+          "ti2-41"
+        ],
+        "originalVersion": "2026-11-08.1",
+        "status": "candidate",
+        "source": {
+          "sourceId": "docs/learning-pilot-catalog.json",
+          "version": "sha256:d5800620f6e1258923a2aa0c531f8c46021b971f4c7bd9ead20c8cbb59db8032",
+          "locator": "1"
+        }
+      },
+      {
+        "id": "pilot-dns-dhcp-pretest",
+        "concept": "TI-2:dns-dhcp",
+        "type": "pretest",
+        "title": "Antes da explicação: DNS × DHCP",
+        "prompt": "Qual é a diferença decisiva entre resolver o nome de um site e atribuir automaticamente um endereço IP a um computador? Identifique o protocolo de cada função.",
+        "explanation": "DNS resolve nomes de domínio. DHCP atribui endereços IP e outros parâmetros de configuração. A diferença decisiva é resolver um nome versus configurar a conexão do dispositivo.",
+        "reference": "Comentários dos itens ti2-40 e ti2-41 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais.",
+        "material": "fonte-ti-redes",
+        "sourceItems": [
+          "ti2-40",
+          "ti2-41"
+        ],
+        "originalVersion": "2026-11-08.1",
+        "status": "candidate",
+        "source": {
+          "sourceId": "docs/learning-pilot-catalog.json",
+          "version": "sha256:d5800620f6e1258923a2aa0c531f8c46021b971f4c7bd9ead20c8cbb59db8032",
+          "locator": "2"
+        }
+      },
+      {
+        "id": "pilot-tcp-udp-duel",
+        "concept": "TI-2:tcp-udp",
+        "type": "duel",
+        "title": "Duelo: TCP × UDP",
+        "prompt": "Compare TCP e UDP: qual oferece mecanismos de entrega ordenada e qual não retransmite por si só um datagrama perdido?",
+        "explanation": "TCP fornece mecanismos de entrega ordenada, controle de fluxo e retransmissão. UDP não estabelece conexão nem oferece por si mesmo retransmissão dos datagramas perdidos. Uma aplicação pode implementar seus próprios mecanismos.",
+        "reference": "Comentários dos itens ti2-35 e ti2-36 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais.",
+        "material": "fonte-ti-redes",
+        "sourceItems": [
+          "ti2-35",
+          "ti2-36"
+        ],
+        "originalVersion": "2026-11-08.1",
+        "status": "candidate",
+        "source": {
+          "sourceId": "docs/learning-pilot-catalog.json",
+          "version": "sha256:d5800620f6e1258923a2aa0c531f8c46021b971f4c7bd9ead20c8cbb59db8032",
+          "locator": "4"
+        }
+      },
+      {
+        "id": "pilot-tcp-udp-recall",
+        "concept": "TI-2:tcp-udp",
+        "type": "recall",
+        "title": "Evocação: TCP × UDP",
+        "prompt": "Compare TCP e UDP: qual oferece mecanismos de entrega ordenada e qual não retransmite por si só um datagrama perdido?",
+        "explanation": "TCP fornece mecanismos de entrega ordenada, controle de fluxo e retransmissão. UDP não estabelece conexão nem oferece por si mesmo retransmissão dos datagramas perdidos. Uma aplicação pode implementar seus próprios mecanismos.",
+        "reference": "Comentários dos itens ti2-35 e ti2-36 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais.",
+        "material": "fonte-ti-redes",
+        "sourceItems": [
+          "ti2-35",
+          "ti2-36"
+        ],
+        "originalVersion": "2026-11-08.1",
+        "status": "candidate",
+        "source": {
+          "sourceId": "docs/learning-pilot-catalog.json",
+          "version": "sha256:d5800620f6e1258923a2aa0c531f8c46021b971f4c7bd9ead20c8cbb59db8032",
+          "locator": "5"
+        }
+      },
+      {
+        "id": "pilot-tcp-udp-pretest",
+        "concept": "TI-2:tcp-udp",
+        "type": "pretest",
+        "title": "Antes da explicação: TCP × UDP",
+        "prompt": "Compare TCP e UDP: qual oferece mecanismos de entrega ordenada e qual não retransmite por si só um datagrama perdido?",
+        "explanation": "TCP fornece mecanismos de entrega ordenada, controle de fluxo e retransmissão. UDP não estabelece conexão nem oferece por si mesmo retransmissão dos datagramas perdidos. Uma aplicação pode implementar seus próprios mecanismos.",
+        "reference": "Comentários dos itens ti2-35 e ti2-36 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais.",
+        "material": "fonte-ti-redes",
+        "sourceItems": [
+          "ti2-35",
+          "ti2-36"
+        ],
+        "originalVersion": "2026-11-08.1",
+        "status": "candidate",
+        "source": {
+          "sourceId": "docs/learning-pilot-catalog.json",
+          "version": "sha256:d5800620f6e1258923a2aa0c531f8c46021b971f4c7bd9ead20c8cbb59db8032",
+          "locator": "6"
+        }
+      },
+      {
+        "id": "pilot-simplex-duplex-duel",
+        "concept": "TI-2:duplex",
+        "type": "duel",
+        "title": "Duelo: Simplex × half-duplex × full-duplex",
+        "prompt": "Qual critério distingue simplex, half-duplex e full-duplex: direção, alternância ou simultaneidade? Explique cada caso.",
+        "explanation": "Simplex permite comunicação em uma direção. Half-duplex permite as duas direções, alternadamente. Full-duplex permite transmissão e recepção simultâneas.",
+        "reference": "Comentários dos itens ti2-17 e ti2-18 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais.",
+        "material": "fonte-ti-redes",
+        "sourceItems": [
+          "ti2-17",
+          "ti2-18"
+        ],
+        "originalVersion": "2026-11-08.1",
+        "status": "candidate",
+        "source": {
+          "sourceId": "docs/learning-pilot-catalog.json",
+          "version": "sha256:d5800620f6e1258923a2aa0c531f8c46021b971f4c7bd9ead20c8cbb59db8032",
+          "locator": "8"
+        }
+      },
+      {
+        "id": "pilot-simplex-duplex-recall",
+        "concept": "TI-2:duplex",
+        "type": "recall",
+        "title": "Evocação: Simplex × half-duplex × full-duplex",
+        "prompt": "Qual critério distingue simplex, half-duplex e full-duplex: direção, alternância ou simultaneidade? Explique cada caso.",
+        "explanation": "Simplex permite comunicação em uma direção. Half-duplex permite as duas direções, alternadamente. Full-duplex permite transmissão e recepção simultâneas.",
+        "reference": "Comentários dos itens ti2-17 e ti2-18 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais.",
+        "material": "fonte-ti-redes",
+        "sourceItems": [
+          "ti2-17",
+          "ti2-18"
+        ],
+        "originalVersion": "2026-11-08.1",
+        "status": "candidate",
+        "source": {
+          "sourceId": "docs/learning-pilot-catalog.json",
+          "version": "sha256:d5800620f6e1258923a2aa0c531f8c46021b971f4c7bd9ead20c8cbb59db8032",
+          "locator": "9"
+        }
+      },
+      {
+        "id": "pilot-simplex-duplex-pretest",
+        "concept": "TI-2:duplex",
+        "type": "pretest",
+        "title": "Antes da explicação: Simplex × half-duplex × full-duplex",
+        "prompt": "Qual critério distingue simplex, half-duplex e full-duplex: direção, alternância ou simultaneidade? Explique cada caso.",
+        "explanation": "Simplex permite comunicação em uma direção. Half-duplex permite as duas direções, alternadamente. Full-duplex permite transmissão e recepção simultâneas.",
+        "reference": "Comentários dos itens ti2-17 e ti2-18 do banco de Redes de Computadores. Adaptação pedagógica, sem alteração dos gabaritos originais.",
+        "material": "fonte-ti-redes",
+        "sourceItems": [
+          "ti2-17",
+          "ti2-18"
+        ],
+        "originalVersion": "2026-11-08.1",
+        "status": "candidate",
+        "source": {
+          "sourceId": "docs/learning-pilot-catalog.json",
+          "version": "sha256:d5800620f6e1258923a2aa0c531f8c46021b971f4c7bd9ead20c8cbb59db8032",
+          "locator": "10"
+        }
+      }
+    ],
+    "excluded": [
+      {
+        "id": "pilot-dns-dhcp-variant",
+        "reason": "unreviewed-or-incomplete"
+      },
+      {
+        "id": "pilot-tcp-udp-variant",
+        "reason": "unreviewed-or-incomplete"
+      },
+      {
+        "id": "pilot-simplex-duplex-variant",
+        "reason": "unreviewed-or-incomplete"
+      }
+    ],
+    "approvedEdges": []
+  },
+  "questions": {
+    "candidates": [
+      {
+        "id": "RF-2.1-R09",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r1-3",
+        "concept": "O que se faz com o texto?",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "Revisar pressupõe uma versão a conferir, independentemente de sua origem manual ou automática. A pós-edição da hipótese de ASR é uma modalidade desse trabalho.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "0"
+        }
+      },
+      {
+        "id": "RF-2.1-R02",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r1-1",
+        "concept": "Quem gera o texto?",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "O reconhecimento automático transforma sinais de fala em uma hipótese textual. Fluência e boa ortografia não demonstram fidelidade ao áudio.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "1"
+        }
+      },
+      {
+        "id": "RF-2.1-R16",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r2-1-1",
+        "concept": "Autocorreção",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "Uma autocorreção explícita integra a sequência da fala. Em registro literal, a formulação inicial e a retificação podem ser relevantes.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "2"
+        }
+      },
+      {
+        "id": "RF-2.1-R07",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r1-2-1",
+        "concept": "Manual ou assistida",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "A produção manual digita a partir da escuta. A assistida usa uma primeira hipótese automática, que continua sujeita a conferência.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "3"
+        }
+      },
+      {
+        "id": "RF-2.1-R13",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r2-1",
+        "concept": "Literal",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "O registro literal conserva marcas da fala conforme a finalidade e as convenções adotadas. A escolha do produto deve anteceder a decisão de retirar hesitações.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "4"
+        }
+      },
+      {
+        "id": "RF-2.1-R04",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r1-1-1",
+        "concept": "Aplicação ao vivo",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "Tempo real descreve quando o processamento ocorre. A origem gravada da entrada permite também classificá-lo como degravação.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "5"
+        }
+      },
+      {
+        "id": "RF-2.1-R01",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r1-1",
+        "concept": "Quem gera o texto?",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "O reconhecimento automático transforma sinais de fala em uma hipótese textual. Fluência e boa ortografia não demonstram fidelidade ao áudio.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "6"
+        }
+      },
+      {
+        "id": "RF-2.1-R18",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r2-2",
+        "concept": "Limpa ou editada",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "Limpar a oralidade pode retirar tropeços sem função e organizar a pontuação. O alcance dessa intervenção depende do padrão editorial adotado.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "7"
+        }
+      },
+      {
+        "id": "RF-2.1-R11",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r1-3-1",
+        "concept": "Erro de reconhecimento",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "Corrigir reconhecimento significa recuperar o que foi dito. Corrigir o mérito da declaração pode atribuir ao orador algo que ele não afirmou.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "8"
+        }
+      },
+      {
+        "id": "RF-2.1-R20",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r2-2-1",
+        "concept": "Fronteira de fidelidade",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "A fidelidade limita a limpeza: não se eliminam ressalvas ou repetições que desempenhem função de sentido. Primeiro identifique a função, depois decida a intervenção.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "9"
+        }
+      },
+      {
+        "id": "RF-2.1-R06",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r1-2",
+        "concept": "De onde se parte?",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "A degravação é definida pelo ponto de partida gravado. O suporte pode conter áudio sozinho ou associado a vídeo.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "10"
+        }
+      },
+      {
+        "id": "RF-2.1-R03",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r1-1-1",
+        "concept": "Aplicação ao vivo",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "Tempo real descreve quando o processamento ocorre. A origem gravada da entrada permite também classificá-lo como degravação.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "11"
+        }
+      },
+      {
+        "id": "RF-2.1-R14",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r2-1",
+        "concept": "Literal",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "O registro literal conserva marcas da fala conforme a finalidade e as convenções adotadas. A escolha do produto deve anteceder a decisão de retirar hesitações.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "12"
+        }
+      },
+      {
+        "id": "RF-2.1-R17",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r2-2",
+        "concept": "Limpa ou editada",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "Limpar a oralidade pode retirar tropeços sem função e organizar a pontuação. O alcance dessa intervenção depende do padrão editorial adotado.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "13"
+        }
+      },
+      {
+        "id": "RF-2.1-R08",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r1-2-1",
+        "concept": "Manual ou assistida",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "A produção manual digita a partir da escuta. A assistida usa uma primeira hipótese automática, que continua sujeita a conferência.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "14"
+        }
+      },
+      {
+        "id": "RF-2.1-R12",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r1-3-1",
+        "concept": "Erro de reconhecimento",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "Corrigir reconhecimento significa recuperar o que foi dito. Corrigir o mérito da declaração pode atribuir ao orador algo que ele não afirmou.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "15"
+        }
+      },
+      {
+        "id": "RF-2.1-R05",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r1-2",
+        "concept": "De onde se parte?",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "A degravação é definida pelo ponto de partida gravado. O suporte pode conter áudio sozinho ou associado a vídeo.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "16"
+        }
+      },
+      {
+        "id": "RF-2.1-R15",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r2-1-1",
+        "concept": "Autocorreção",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "Uma autocorreção explícita integra a sequência da fala. Em registro literal, a formulação inicial e a retificação podem ser relevantes.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "17"
+        }
+      },
+      {
+        "id": "RF-2.1-R10",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r1-3",
+        "concept": "O que se faz com o texto?",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "Revisar pressupõe uma versão a conferir, independentemente de sua origem manual ou automática. A pós-edição da hipótese de ASR é uma modalidade desse trabalho.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "18"
+        }
+      },
+      {
+        "id": "RF-2.1-R19",
+        "topicId": "rf-2-1",
+        "mapNodeId": "rf-2-1-r2-2-1",
+        "concept": "Fronteira de fidelidade",
+        "reference": "Legislativo Facilitado, Etapa 10, pp. 3–9 · Estratégia, Aula 2, pp. 4–8",
+        "excerpt": "A fidelidade limita a limpeza: não se eliminam ressalvas ou repetições que desempenhem função de sentido. Primeiro identifique a função, depois decida a intervenção.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "19"
+        }
+      },
+      {
+        "id": "RF-2.2-R12",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r2-1-1",
+        "concept": "Trecho crítico",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "Palavras curtas e números podem decidir o sentido de uma declaração. A confiança atribuída pelo sistema não determina a gravidade da eventual troca.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "20"
+        }
+      },
+      {
+        "id": "RF-2.2-R05",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r1-2",
+        "concept": "Produzir hipótese",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "A saída do reconhecedor é uma hipótese. Sua validação exige confrontar o texto e as informações de contexto com a evidência disponível.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "21"
+        }
+      },
+      {
+        "id": "RF-2.2-R19",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r3-1-1",
+        "concept": "Atualizar glossário",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "Atualizar o glossário acrescenta uma referência lexical confirmada. A aplicação dessa referência ao reconhecimento depende da integração; corrigir o texto não altera automaticamente os pesos do ASR.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "22"
+        }
+      },
+      {
+        "id": "RF-2.2-R10",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r2-1",
+        "concept": "Triagem",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "A triagem prioriza trechos pelo risco e pelos sinais disponíveis. O escore de confiança ajuda a ordenar trabalho, mas não substitui a conferência de conteúdo sensível.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "23"
+        }
+      },
+      {
+        "id": "RF-2.2-R16",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r2-2-1",
+        "concept": "Trilha de revisão",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "A trilha de revisão preserva alterações, responsáveis e referências temporais úteis à conferência. Rastrear uma decisão permite reavaliá-la; não prova automaticamente que ela esteja correta.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "24"
+        }
+      },
+      {
+        "id": "RF-2.2-R07",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r1-2-1",
+        "concept": "Diarização",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "A diarização atribui segmentos a rótulos de falantes. Associar um rótulo a um nome exige evidência adicional, como conferência do vídeo ou da identificação da sessão.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "25"
+        }
+      },
+      {
+        "id": "RF-2.2-R04",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r1-1-1",
+        "concept": "Conceito: VAD",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "VAD detecta regiões de atividade vocal e auxilia a segmentação. Detectar fala não informa, por si só, a identidade civil do falante.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "26"
+        }
+      },
+      {
+        "id": "RF-2.2-R01",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r1-1",
+        "concept": "Preparar áudio",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "A preparação organiza o sinal para processamento, sem substituir a informação ausente. Uma etapa posterior não recupera necessariamente fala que não foi captada.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "27"
+        }
+      },
+      {
+        "id": "RF-2.2-R14",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r2-2",
+        "concept": "Validação",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "Validar é verificar a adequação da versão ao registro e ao padrão exigido. Corrigir ortografia não esgota a conferência de autoria, números e sentido.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "28"
+        }
+      },
+      {
+        "id": "RF-2.2-R03",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r1-1-1",
+        "concept": "Conceito: VAD",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "VAD detecta regiões de atividade vocal e auxilia a segmentação. Detectar fala não informa, por si só, a identidade civil do falante.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "29"
+        }
+      },
+      {
+        "id": "RF-2.2-R09",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r2-1",
+        "concept": "Triagem",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "A triagem prioriza trechos pelo risco e pelos sinais disponíveis. O escore de confiança ajuda a ordenar trabalho, mas não substitui a conferência de conteúdo sensível.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "30"
+        }
+      },
+      {
+        "id": "RF-2.2-R06",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r1-2",
+        "concept": "Produzir hipótese",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "A saída do reconhecedor é uma hipótese. Sua validação exige confrontar o texto e as informações de contexto com a evidência disponível.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "31"
+        }
+      },
+      {
+        "id": "RF-2.2-R17",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r3-1",
+        "concept": "Correção recorrente",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "Erros recorrentes permitem identificar necessidades de melhoria. A ação depende da causa: glossário, regra editorial, configuração ou treinamento são intervenções distintas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "32"
+        }
+      },
+      {
+        "id": "RF-2.2-R20",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r3-1-1",
+        "concept": "Atualizar glossário",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "Atualizar o glossário acrescenta uma referência lexical confirmada. A aplicação dessa referência ao reconhecimento depende da integração; corrigir o texto não altera automaticamente os pesos do ASR.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "33"
+        }
+      },
+      {
+        "id": "RF-2.2-R11",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r2-1-1",
+        "concept": "Trecho crítico",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "Palavras curtas e números podem decidir o sentido de uma declaração. A confiança atribuída pelo sistema não determina a gravidade da eventual troca.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "34"
+        }
+      },
+      {
+        "id": "RF-2.2-R15",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r2-2-1",
+        "concept": "Trilha de revisão",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "A trilha de revisão preserva alterações, responsáveis e referências temporais úteis à conferência. Rastrear uma decisão permite reavaliá-la; não prova automaticamente que ela esteja correta.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "35"
+        }
+      },
+      {
+        "id": "RF-2.2-R08",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r1-2-1",
+        "concept": "Diarização",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "A diarização atribui segmentos a rótulos de falantes. Associar um rótulo a um nome exige evidência adicional, como conferência do vídeo ou da identificação da sessão.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "36"
+        }
+      },
+      {
+        "id": "RF-2.2-R18",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r3-1",
+        "concept": "Correção recorrente",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "Erros recorrentes permitem identificar necessidades de melhoria. A ação depende da causa: glossário, regra editorial, configuração ou treinamento são intervenções distintas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "37"
+        }
+      },
+      {
+        "id": "RF-2.2-R13",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r2-2",
+        "concept": "Validação",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "Validar é verificar a adequação da versão ao registro e ao padrão exigido. Corrigir ortografia não esgota a conferência de autoria, números e sentido.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "38"
+        }
+      },
+      {
+        "id": "RF-2.2-R02",
+        "topicId": "rf-2-2",
+        "mapNodeId": "rf-2-2-r1-1",
+        "concept": "Preparar áudio",
+        "reference": "Legislativo Facilitado, Etapa 11, pp. 3–9 · Estratégia, Aula 2, pp. 8–12 e 36",
+        "excerpt": "A preparação organiza o sinal para processamento, sem substituir a informação ausente. Uma etapa posterior não recupera necessariamente fala que não foi captada.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "39"
+        }
+      },
+      {
+        "id": "RF-2.3-R15",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r2-2-1",
+        "concept": "Autoria",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "A WER textual convencional compara palavras, não identidades civis. Se a sequência verbal foi mantida e os nomes dos falantes são metadados externos, a troca de autoria pode escapar desse cálculo.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "40"
+        }
+      },
+      {
+        "id": "RF-2.3-R08",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r1-2-1",
+        "concept": "Pontuação de risco",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "A pontuação organiza relações de sentido e pode alterar o alcance de uma negação. Sua revisão exige contexto e escuta, e sua avaliação depende também do pré-processamento usado na métrica.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "41"
+        }
+      },
+      {
+        "id": "RF-2.3-R02",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r1-1",
+        "concept": "Fidelidade e completude",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "Fidelidade exige correspondência de sentido com a fala; completude verifica se o conteúdo necessário foi registrado. Um texto curto e elegante pode omitir uma condição decisiva.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "42"
+        }
+      },
+      {
+        "id": "RF-2.3-R13",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r2-2",
+        "concept": "CER e DER",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "CER avalia edições no nível de caracteres. DER avalia erros de diarização segundo o protocolo adotado, incluindo a atribuição temporal de falantes. As unidades e os objetos diferem.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "43"
+        }
+      },
+      {
+        "id": "RF-2.3-R19",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r3-1-1",
+        "concept": "Número de proposição",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "Números identificadores podem remeter a objetos distintos. Uma diferença gráfica pequena deve ser conferida pelo efeito da mudança sobre a referência.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "44"
+        }
+      },
+      {
+        "id": "RF-2.3-R10",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r2-1",
+        "concept": "Conceito: WER",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "WER soma substituições, exclusões e inserções e divide pelo número de palavras da referência. Antes do cálculo, fixe a tokenização e os critérios de comparação.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "45"
+        }
+      },
+      {
+        "id": "RF-2.3-R07",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r1-2-1",
+        "concept": "Pontuação de risco",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "A pontuação organiza relações de sentido e pode alterar o alcance de uma negação. Sua revisão exige contexto e escuta, e sua avaliação depende também do pré-processamento usado na métrica.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "46"
+        }
+      },
+      {
+        "id": "RF-2.3-R04",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r1-1-1",
+        "concept": "Inversão",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "A troca de um termo pode inverter uma decisão inteira. A contagem lexical do erro não expressa sozinha a gravidade institucional.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "47"
+        }
+      },
+      {
+        "id": "RF-2.3-R17",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r3-1",
+        "concept": "Crítico, maior e menor",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "A severidade decorre do efeito do erro sobre o produto e seus usos. Critérios explícitos ajudam revisores a distinguir falhas críticas, maiores e menores com consistência.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "48"
+        }
+      },
+      {
+        "id": "RF-2.3-R06",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r1-2",
+        "concept": "Legibilidade e sincronismo",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "Legibilidade trata da compreensão do texto; sincronismo relaciona sua apresentação ao momento da fala. As duas dimensões devem ser avaliadas separadamente.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "49"
+        }
+      },
+      {
+        "id": "RF-2.3-R12",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r2-1-1",
+        "concept": "WER acima de 100%",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "Inserções acrescentam erros sem aumentar o número de palavras da referência. Por isso a WER pode superar 100%; não se deve truncá-la como se fosse uma proporção de palavras de referência erradas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "50"
+        }
+      },
+      {
+        "id": "RF-2.3-R09",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r2-1",
+        "concept": "Conceito: WER",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "WER soma substituições, exclusões e inserções e divide pelo número de palavras da referência. Antes do cálculo, fixe a tokenização e os critérios de comparação.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "51"
+        }
+      },
+      {
+        "id": "RF-2.3-R20",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r3-1-1",
+        "concept": "Número de proposição",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "Números identificadores podem remeter a objetos distintos. Uma diferença gráfica pequena deve ser conferida pelo efeito da mudança sobre a referência.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "52"
+        }
+      },
+      {
+        "id": "RF-2.3-R03",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r1-1-1",
+        "concept": "Inversão",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "A troca de um termo pode inverter uma decisão inteira. A contagem lexical do erro não expressa sozinha a gravidade institucional.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "53"
+        }
+      },
+      {
+        "id": "RF-2.3-R14",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r2-2",
+        "concept": "CER e DER",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "CER avalia edições no nível de caracteres. DER avalia erros de diarização segundo o protocolo adotado, incluindo a atribuição temporal de falantes. As unidades e os objetos diferem.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "54"
+        }
+      },
+      {
+        "id": "RF-2.3-R18",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r3-1",
+        "concept": "Crítico, maior e menor",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "A severidade decorre do efeito do erro sobre o produto e seus usos. Critérios explícitos ajudam revisores a distinguir falhas críticas, maiores e menores com consistência.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "55"
+        }
+      },
+      {
+        "id": "RF-2.3-R11",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r2-1-1",
+        "concept": "WER acima de 100%",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "Inserções acrescentam erros sem aumentar o número de palavras da referência. Por isso a WER pode superar 100%; não se deve truncá-la como se fosse uma proporção de palavras de referência erradas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "56"
+        }
+      },
+      {
+        "id": "RF-2.3-R01",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r1-1",
+        "concept": "Fidelidade e completude",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "Fidelidade exige correspondência de sentido com a fala; completude verifica se o conteúdo necessário foi registrado. Um texto curto e elegante pode omitir uma condição decisiva.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "57"
+        }
+      },
+      {
+        "id": "RF-2.3-R16",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r2-2-1",
+        "concept": "Autoria",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "A WER textual convencional compara palavras, não identidades civis. Se a sequência verbal foi mantida e os nomes dos falantes são metadados externos, a troca de autoria pode escapar desse cálculo.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "58"
+        }
+      },
+      {
+        "id": "RF-2.3-R05",
+        "topicId": "rf-2-3",
+        "mapNodeId": "rf-2-3-r1-2",
+        "concept": "Legibilidade e sincronismo",
+        "reference": "Legislativo Facilitado, Etapa 12, pp. 3–10 · Estratégia, Aula 2, pp. 12–16 e 37",
+        "excerpt": "Legibilidade trata da compreensão do texto; sincronismo relaciona sua apresentação ao momento da fala. As duas dimensões devem ser avaliadas separadamente.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "59"
+        }
+      },
+      {
+        "id": "RF-2.4-R18",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r3-1",
+        "concept": "Fronteiras de blocos",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "A divisão do trabalho em blocos exige conferir a transição entre eles. Sobreposição pode ajudar a escuta, mas o texto consolidado não deve duplicar o mesmo segmento de fala.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "60"
+        }
+      },
+      {
+        "id": "RF-2.4-R11",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r2-1-1",
+        "concept": "Manifestação ou aparte",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "Uma intervenção identificável pode ser transcrita e atribuída. Quando só se confirma a ocorrência, a marcação não deve inventar seu conteúdo ou autor.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "61"
+        }
+      },
+      {
+        "id": "RF-2.4-R05",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r1-2",
+        "concept": "Identificação do turno",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "A identificação do turno vincula o segmento a quem efetivamente falou. Rótulos automáticos precisam ser resolvidos com evidências, não com a posição de um nome numa lista.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "62"
+        }
+      },
+      {
+        "id": "RF-2.4-R16",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r2-2-1",
+        "concept": "Convenções das aulas",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "As aulas apresentam exemplos e observações com escopos próprios. Um sinal gráfico exemplificado num material não deve virar exigência universal de todas as notas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "63"
+        }
+      },
+      {
+        "id": "RF-2.4-R02",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r1-1",
+        "concept": "Identificação da sessão",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "A identificação da sessão situa o registro: órgão, reunião e dados exigidos pelo padrão editorial. Esse cabeçalho não substitui a atribuição de cada fala.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "64"
+        }
+      },
+      {
+        "id": "RF-2.4-R13",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r2-2",
+        "concept": "Limitação técnica",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "Uma limitação técnica deve ficar visível conforme o padrão adotado. A marca temporal auxilia a localizar o problema, mas não transforma uma inferência em fala comprovada.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "65"
+        }
+      },
+      {
+        "id": "RF-2.4-R10",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r2-1",
+        "concept": "Ocorrência de plenário",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "Uma ocorrência de plenário é registrada conforme a convenção e a evidência. A indicação de uma pausa ou manifestação não é uma fala atribuída ao orador.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "66"
+        }
+      },
+      {
+        "id": "RF-2.4-R07",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r1-2-1",
+        "concept": "Presidência em exercício",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "O registro da presidência acompanha quem exerce a função em cada intervalo. A titularidade habitual do cargo não resolve sozinha a autoria de uma intervenção.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "67"
+        }
+      },
+      {
+        "id": "RF-2.4-R20",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r3-1-1",
+        "concept": "Junção",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "A conferência das bordas verifica continuidade, autoria e integridade. Não basta unir arquivos por ordem numérica quando uma frase atravessa o corte.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "68"
+        }
+      },
+      {
+        "id": "RF-2.4-R09",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r2-1",
+        "concept": "Ocorrência de plenário",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "Uma ocorrência de plenário é registrada conforme a convenção e a evidência. A indicação de uma pausa ou manifestação não é uma fala atribuída ao orador.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "69"
+        }
+      },
+      {
+        "id": "RF-2.4-R15",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r2-2-1",
+        "concept": "Convenções das aulas",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "As aulas apresentam exemplos e observações com escopos próprios. Um sinal gráfico exemplificado num material não deve virar exigência universal de todas as notas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "70"
+        }
+      },
+      {
+        "id": "RF-2.4-R12",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r2-1-1",
+        "concept": "Manifestação ou aparte",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "Uma intervenção identificável pode ser transcrita e atribuída. Quando só se confirma a ocorrência, a marcação não deve inventar seu conteúdo ou autor.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "71"
+        }
+      },
+      {
+        "id": "RF-2.4-R03",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r1-1-1",
+        "concept": "Corpo do registro",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "O corpo do registro acompanha o andamento dos trabalhos e delimita os turnos. Reorganizar por assunto pode alterar a sequência documentada.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "72"
+        }
+      },
+      {
+        "id": "RF-2.4-R06",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r1-2",
+        "concept": "Identificação do turno",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "A identificação do turno vincula o segmento a quem efetivamente falou. Rótulos automáticos precisam ser resolvidos com evidências, não com a posição de um nome numa lista.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "73"
+        }
+      },
+      {
+        "id": "RF-2.4-R17",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r3-1",
+        "concept": "Fronteiras de blocos",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "A divisão do trabalho em blocos exige conferir a transição entre eles. Sobreposição pode ajudar a escuta, mas o texto consolidado não deve duplicar o mesmo segmento de fala.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "74"
+        }
+      },
+      {
+        "id": "RF-2.4-R01",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r1-1",
+        "concept": "Identificação da sessão",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "A identificação da sessão situa o registro: órgão, reunião e dados exigidos pelo padrão editorial. Esse cabeçalho não substitui a atribuição de cada fala.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "75"
+        }
+      },
+      {
+        "id": "RF-2.4-R14",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r2-2",
+        "concept": "Limitação técnica",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "Uma limitação técnica deve ficar visível conforme o padrão adotado. A marca temporal auxilia a localizar o problema, mas não transforma uma inferência em fala comprovada.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "76"
+        }
+      },
+      {
+        "id": "RF-2.4-R04",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r1-1-1",
+        "concept": "Corpo do registro",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "O corpo do registro acompanha o andamento dos trabalhos e delimita os turnos. Reorganizar por assunto pode alterar a sequência documentada.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "77"
+        }
+      },
+      {
+        "id": "RF-2.4-R19",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r3-1-1",
+        "concept": "Junção",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "A conferência das bordas verifica continuidade, autoria e integridade. Não basta unir arquivos por ordem numérica quando uma frase atravessa o corte.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "78"
+        }
+      },
+      {
+        "id": "RF-2.4-R08",
+        "topicId": "rf-2-4",
+        "mapNodeId": "rf-2-4-r1-2-1",
+        "concept": "Presidência em exercício",
+        "reference": "Legislativo Facilitado, Etapa 13, pp. 3–10 · Estratégia, Aula 2, pp. 16–20 e 38",
+        "excerpt": "O registro da presidência acompanha quem exerce a função em cada intervalo. A titularidade habitual do cargo não resolve sozinha a autoria de uma intervenção.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "79"
+        }
+      },
+      {
+        "id": "RF-2.5-R01",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r1-1-1",
+        "concept": "TN na síntese",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "A normalização textual para síntese transforma representações escritas em formas pronunciáveis. O sentido da conversão é o critério decisivo para distingui-la da ITN.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "80"
+        }
+      },
+      {
+        "id": "RF-2.5-R14",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r2-2-1",
+        "concept": "Remissões normativas",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "A identificação das unidades normativas usa convenções diferentes: artigo e parágrafo, inciso, alínea e item não têm o mesmo padrão de numeração.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "81"
+        }
+      },
+      {
+        "id": "RF-2.5-R08",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r1-2-2",
+        "concept": "Erro irrecuperável",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "A normalização pode padronizar uma referência, mas deve conservar qual objeto foi citado. Uma troca de dígitos muda o dispositivo, mesmo que a saída permaneça bem formada.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "82"
+        }
+      },
+      {
+        "id": "RF-2.5-R19",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r3-2",
+        "concept": "Validação",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "A validação separa padronização gráfica de correção de reconhecimento. Glossários ajudam na grafia de termos confirmados; quantificadores de aproximação também carregam sentido.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "83"
+        }
+      },
+      {
+        "id": "RF-2.5-R05",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r1-2-1",
+        "concept": "Ambiguidade",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "A conversão depende da função que a palavra exerce. Em “segundo o relator”, o termo introduz uma referência à fonte da informação e não enumera uma posição.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "84"
+        }
+      },
+      {
+        "id": "RF-2.5-R16",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r2-2-2",
+        "concept": "Sigla, abreviação e símbolo",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "Sigla condensa uma denominação; abreviação reduz uma palavra; símbolo segue uma convenção de representação. Reconhecer a categoria evita padronizações indevidas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "85"
+        }
+      },
+      {
+        "id": "RF-2.5-R13",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r2-2-1",
+        "concept": "Remissões normativas",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "A identificação das unidades normativas usa convenções diferentes: artigo e parágrafo, inciso, alínea e item não têm o mesmo padrão de numeração.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "86"
+        }
+      },
+      {
+        "id": "RF-2.5-R10",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r2-1",
+        "concept": "Grafia de números",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "Antes de padronizar números, identifique o gênero e o manual aplicável. Convenções administrativas, redação normativa e transcrição da oralidade têm finalidades distintas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "87"
+        }
+      },
+      {
+        "id": "RF-2.5-R03",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r1-1-2",
+        "concept": "ITN no reconhecimento",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "A normalização textual inversa converte formas reconhecidas da fala em grafias convencionais. O resultado deve conservar valor, unidade e alcance da expressão.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "88"
+        }
+      },
+      {
+        "id": "RF-2.5-R12",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r2-1-2",
+        "concept": "Redação normativa",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "Na redação normativa, o art. 11, II, f, da LC 95 prevê números e percentuais por extenso, com exceções expressas. A leitura da regra exige conservar essas ressalvas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "89"
+        }
+      },
+      {
+        "id": "RF-2.5-R18",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r3-1",
+        "concept": "Estratégias automáticas",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "Regras explícitas tornam a transformação rastreável; modelos contextuais podem lidar com variações, mas suas saídas também exigem validação. A técnica não é garantia de fidelidade.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "90"
+        }
+      },
+      {
+        "id": "RF-2.5-R15",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r2-2-2",
+        "concept": "Sigla, abreviação e símbolo",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "Sigla condensa uma denominação; abreviação reduz uma palavra; símbolo segue uma convenção de representação. Reconhecer a categoria evita padronizações indevidas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "91"
+        }
+      },
+      {
+        "id": "RF-2.5-R06",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r1-2-1",
+        "concept": "Ambiguidade",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "A conversão depende da função que a palavra exerce. Em “segundo o relator”, o termo introduz uma referência à fonte da informação e não enumera uma posição.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "92"
+        }
+      },
+      {
+        "id": "RF-2.5-R09",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r2-1",
+        "concept": "Grafia de números",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "Antes de padronizar números, identifique o gênero e o manual aplicável. Convenções administrativas, redação normativa e transcrição da oralidade têm finalidades distintas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "93"
+        }
+      },
+      {
+        "id": "RF-2.5-R20",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r3-2",
+        "concept": "Validação",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "A validação separa padronização gráfica de correção de reconhecimento. Glossários ajudam na grafia de termos confirmados; quantificadores de aproximação também carregam sentido.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "94"
+        }
+      },
+      {
+        "id": "RF-2.5-R04",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r1-1-2",
+        "concept": "ITN no reconhecimento",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "A normalização textual inversa converte formas reconhecidas da fala em grafias convencionais. O resultado deve conservar valor, unidade e alcance da expressão.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "95"
+        }
+      },
+      {
+        "id": "RF-2.5-R17",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r3-1",
+        "concept": "Estratégias automáticas",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "Regras explícitas tornam a transformação rastreável; modelos contextuais podem lidar com variações, mas suas saídas também exigem validação. A técnica não é garantia de fidelidade.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "96"
+        }
+      },
+      {
+        "id": "RF-2.5-R07",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r1-2-2",
+        "concept": "Erro irrecuperável",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "A normalização pode padronizar uma referência, mas deve conservar qual objeto foi citado. Uma troca de dígitos muda o dispositivo, mesmo que a saída permaneça bem formada.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "97"
+        }
+      },
+      {
+        "id": "RF-2.5-R02",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r1-1-1",
+        "concept": "TN na síntese",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "A normalização textual para síntese transforma representações escritas em formas pronunciáveis. O sentido da conversão é o critério decisivo para distingui-la da ITN.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "98"
+        }
+      },
+      {
+        "id": "RF-2.5-R11",
+        "topicId": "rf-2-5",
+        "mapNodeId": "rf-2-5-r2-1-2",
+        "concept": "Redação normativa",
+        "reference": "Legislativo Facilitado, Etapa 14, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 20–23 do PDF",
+        "excerpt": "Na redação normativa, o art. 11, II, f, da LC 95 prevê números e percentuais por extenso, com exceções expressas. A leitura da regra exige conservar essas ressalvas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "99"
+        }
+      },
+      {
+        "id": "RF-2.6-R04",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r1-1-2",
+        "concept": "Dicionário",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "O dicionário associa toques ou sequências a formas textuais. A existência de uma entrada não garante que o toque tenha sido usado corretamente naquele contexto.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "100"
+        }
+      },
+      {
+        "id": "RF-2.6-R17",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r3-1",
+        "concept": "Estado do texto",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "Uma saída ao vivo pode servir ao acompanhamento e ainda ser provisória. A condição de registro validado depende das etapas editoriais adotadas pelo órgão.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "101"
+        }
+      },
+      {
+        "id": "RF-2.6-R11",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r2-1-2",
+        "concept": "Alinhamento forçado",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "O alinhamento forçado usa áudio e um texto já fornecido para estimar correspondências temporais. Ele não equivale, por definição, a produzir do zero a transcrição nem a validar o conteúdo dado.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "102"
+        }
+      },
+      {
+        "id": "RF-2.6-R02",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r1-1-1",
+        "concept": "Estenotipia",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "No CAT estenotípico clássico, a pessoa produz combinações de teclas. O software converte essa entrada em texto; isso difere de reconhecer diretamente o sinal acústico.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "103"
+        }
+      },
+      {
+        "id": "RF-2.6-R08",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r1-2-2",
+        "concept": "Mal traduzido",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "Um segmento mal traduzido já recebeu forma textual, mas essa forma não corresponde ao pretendido. O diagnóstico deve distinguir o que foi digitado, o mapeamento e a fala.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "104"
+        }
+      },
+      {
+        "id": "RF-2.6-R19",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r3-2",
+        "concept": "Formatos",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "SRT e WebVTT organizam legendas com tempos. XML e JSON podem estruturar dados adicionais conforme o esquema; o formato, sozinho, não garante a presença nem a correção dos metadados.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "105"
+        }
+      },
+      {
+        "id": "RF-2.6-R16",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r2-2-2",
+        "concept": "Rastreabilidade",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "Versões e referências ao áudio permitem localizar e reconstruir alterações. Esses recursos apoiam a auditoria sem substituir a validação do conteúdo.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "106"
+        }
+      },
+      {
+        "id": "RF-2.6-R13",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r2-2-1",
+        "concept": "Rótulos de orador",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "O editor permite corrigir rótulos de oradores a partir de conferência. A edição muda a atribuição registrada, não a sequência de palavras necessariamente.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "107"
+        }
+      },
+      {
+        "id": "RF-2.6-R06",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r1-2-1",
+        "concept": "Não traduzido",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "Um toque sem correspondência pode permanecer como código ou representação fonética. O problema é de ausência de tradução, e não necessariamente uma palavra já traduzida para outra incorreta.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "108"
+        }
+      },
+      {
+        "id": "RF-2.6-R15",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r2-2-2",
+        "concept": "Rastreabilidade",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "Versões e referências ao áudio permitem localizar e reconstruir alterações. Esses recursos apoiam a auditoria sem substituir a validação do conteúdo.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "109"
+        }
+      },
+      {
+        "id": "RF-2.6-R01",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r1-1-1",
+        "concept": "Estenotipia",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "No CAT estenotípico clássico, a pessoa produz combinações de teclas. O software converte essa entrada em texto; isso difere de reconhecer diretamente o sinal acústico.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "110"
+        }
+      },
+      {
+        "id": "RF-2.6-R18",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r3-1",
+        "concept": "Estado do texto",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "Uma saída ao vivo pode servir ao acompanhamento e ainda ser provisória. A condição de registro validado depende das etapas editoriais adotadas pelo órgão.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "111"
+        }
+      },
+      {
+        "id": "RF-2.6-R09",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r2-1-1",
+        "concept": "Atalho ou pedal",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "Atalhos ou pedais comandam a reprodução para facilitar a escuta durante a digitação. O retrocesso automático repete um trecho para recuperar contexto; não altera o áudio original.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "112"
+        }
+      },
+      {
+        "id": "RF-2.6-R12",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r2-1-2",
+        "concept": "Alinhamento forçado",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "O alinhamento forçado usa áudio e um texto já fornecido para estimar correspondências temporais. Ele não equivale, por definição, a produzir do zero a transcrição nem a validar o conteúdo dado.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "113"
+        }
+      },
+      {
+        "id": "RF-2.6-R03",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r1-1-2",
+        "concept": "Dicionário",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "O dicionário associa toques ou sequências a formas textuais. A existência de uma entrada não garante que o toque tenha sido usado corretamente naquele contexto.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "114"
+        }
+      },
+      {
+        "id": "RF-2.6-R07",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r1-2-2",
+        "concept": "Mal traduzido",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "Um segmento mal traduzido já recebeu forma textual, mas essa forma não corresponde ao pretendido. O diagnóstico deve distinguir o que foi digitado, o mapeamento e a fala.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "115"
+        }
+      },
+      {
+        "id": "RF-2.6-R20",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r3-2",
+        "concept": "Formatos",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "SRT e WebVTT organizam legendas com tempos. XML e JSON podem estruturar dados adicionais conforme o esquema; o formato, sozinho, não garante a presença nem a correção dos metadados.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "116"
+        }
+      },
+      {
+        "id": "RF-2.6-R10",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r2-1-1",
+        "concept": "Atalho ou pedal",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "Atalhos ou pedais comandam a reprodução para facilitar a escuta durante a digitação. O retrocesso automático repete um trecho para recuperar contexto; não altera o áudio original.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "117"
+        }
+      },
+      {
+        "id": "RF-2.6-R05",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r1-2-1",
+        "concept": "Não traduzido",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "Um toque sem correspondência pode permanecer como código ou representação fonética. O problema é de ausência de tradução, e não necessariamente uma palavra já traduzida para outra incorreta.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "118"
+        }
+      },
+      {
+        "id": "RF-2.6-R14",
+        "topicId": "rf-2-6",
+        "mapNodeId": "rf-2-6-r2-2-1",
+        "concept": "Rótulos de orador",
+        "reference": "Legislativo Facilitado, Etapa 15, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 24–27 do PDF",
+        "excerpt": "O editor permite corrigir rótulos de oradores a partir de conferência. A edição muda a atribuição registrada, não a sequência de palavras necessariamente.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "119"
+        }
+      },
+      {
+        "id": "RF-2.7-R07",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r1-2-2",
+        "concept": "Divergências",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "O padrão de divergências ajuda a localizar critérios pouco claros. Concordância entre revisores mede consistência entre decisões, mas não assegura correspondência com a fala.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "120"
+        }
+      },
+      {
+        "id": "RF-2.7-R20",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r3-2",
+        "concept": "Acordo",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "O acordo de nível de serviço estabelece compromissos e critérios de apuração, podendo prever tratamento do descumprimento. A meta isolada não resolve ambiguidades sobre início, fim e exceções da medição.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "121"
+        }
+      },
+      {
+        "id": "RF-2.7-R14",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r2-2-1",
+        "concept": "Amostra sem erros",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "Uma amostra sem erros mostra ausência de erros detectados nas unidades examinadas. O resultado não certifica que todas as unidades não examinadas estejam corretas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "122"
+        }
+      },
+      {
+        "id": "RF-2.7-R05",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r1-2-1",
+        "concept": "Conciliação",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "Conciliar é resolver diferenças com base na evidência e nas convenções adotadas. Uma maioria ou concordância não substitui a conferência da fala.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "123"
+        }
+      },
+      {
+        "id": "RF-2.7-R11",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r2-1-2",
+        "concept": "Estratificada",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "A amostragem estratificada separa o universo em grupos relevantes e seleciona dentro deles. A estimativa global precisa considerar o desenho, inclusive proporções diferentes dos grupos.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "124"
+        }
+      },
+      {
+        "id": "RF-2.7-R02",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r1-1-1",
+        "concept": "Sequencial",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "Na revisão sequencial, o segundo profissional trabalha a partir da versão recebida da etapa anterior. Isso favorece continuidade, mas difere de duas avaliações feitas sem acesso às decisões recíprocas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "125"
+        }
+      },
+      {
+        "id": "RF-2.7-R19",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r3-2",
+        "concept": "Acordo",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "O acordo de nível de serviço estabelece compromissos e critérios de apuração, podendo prever tratamento do descumprimento. A meta isolada não resolve ambiguidades sobre início, fim e exceções da medição.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "126"
+        }
+      },
+      {
+        "id": "RF-2.7-R16",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r2-2-2",
+        "concept": "Erros críticos",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "A contagem de falhas críticas complementa medidas agregadas. Um único erro sobre autoria ou resultado pode merecer ação mesmo quando a taxa lexical média é baixa.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "127"
+        }
+      },
+      {
+        "id": "RF-2.7-R09",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r2-1-1",
+        "concept": "Aleatória simples",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "A amostragem aleatória simples seleciona unidades do universo definido por sorteio segundo seu desenho. Examinar somente casos suspeitos responde a uma pergunta de risco diferente.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "128"
+        }
+      },
+      {
+        "id": "RF-2.7-R18",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r3-1",
+        "concept": "Indicador e objetivo",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "SLI é o indicador observado; SLO é o objetivo estabelecido para ele. Compará-los permite verificar cumprimento da meta sem confundir desempenho com exigência.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "129"
+        }
+      },
+      {
+        "id": "RF-2.7-R04",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r1-1-2",
+        "concept": "Independente",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "Na revisão independente, as decisões são produzidas antes de um revisor conhecer as do outro. A comparação vem depois e pode revelar divergências que exigem conciliação.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "130"
+        }
+      },
+      {
+        "id": "RF-2.7-R01",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r1-1-1",
+        "concept": "Sequencial",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "Na revisão sequencial, o segundo profissional trabalha a partir da versão recebida da etapa anterior. Isso favorece continuidade, mas difere de duas avaliações feitas sem acesso às decisões recíprocas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "131"
+        }
+      },
+      {
+        "id": "RF-2.7-R12",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r2-1-2",
+        "concept": "Estratificada",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "A amostragem estratificada separa o universo em grupos relevantes e seleciona dentro deles. A estimativa global precisa considerar o desenho, inclusive proporções diferentes dos grupos.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "132"
+        }
+      },
+      {
+        "id": "RF-2.7-R15",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r2-2-2",
+        "concept": "Erros críticos",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "A contagem de falhas críticas complementa medidas agregadas. Um único erro sobre autoria ou resultado pode merecer ação mesmo quando a taxa lexical média é baixa.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "133"
+        }
+      },
+      {
+        "id": "RF-2.7-R06",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r1-2-1",
+        "concept": "Conciliação",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "Conciliar é resolver diferenças com base na evidência e nas convenções adotadas. Uma maioria ou concordância não substitui a conferência da fala.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "134"
+        }
+      },
+      {
+        "id": "RF-2.7-R10",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r2-1-1",
+        "concept": "Aleatória simples",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "A amostragem aleatória simples seleciona unidades do universo definido por sorteio segundo seu desenho. Examinar somente casos suspeitos responde a uma pergunta de risco diferente.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "135"
+        }
+      },
+      {
+        "id": "RF-2.7-R03",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r1-1-2",
+        "concept": "Independente",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "Na revisão independente, as decisões são produzidas antes de um revisor conhecer as do outro. A comparação vem depois e pode revelar divergências que exigem conciliação.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "136"
+        }
+      },
+      {
+        "id": "RF-2.7-R13",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r2-2-1",
+        "concept": "Amostra sem erros",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "Uma amostra sem erros mostra ausência de erros detectados nas unidades examinadas. O resultado não certifica que todas as unidades não examinadas estejam corretas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "137"
+        }
+      },
+      {
+        "id": "RF-2.7-R08",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r1-2-2",
+        "concept": "Divergências",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "O padrão de divergências ajuda a localizar critérios pouco claros. Concordância entre revisores mede consistência entre decisões, mas não assegura correspondência com a fala.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "138"
+        }
+      },
+      {
+        "id": "RF-2.7-R17",
+        "topicId": "rf-2-7",
+        "mapNodeId": "rf-2-7-r3-1",
+        "concept": "Indicador e objetivo",
+        "reference": "Legislativo Facilitado, Etapa 16, pp. 2–9 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 27–31 do PDF",
+        "excerpt": "SLI é o indicador observado; SLO é o objetivo estabelecido para ele. Compará-los permite verificar cumprimento da meta sem confundir desempenho com exigência.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "139"
+        }
+      },
+      {
+        "id": "RF-2.8-R10",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r2-1-2",
+        "concept": "Prompt ou lista com reforço",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Listas de frases ou pistas contextuais podem favorecer termos plausíveis durante o reconhecimento, quando o sistema oferece esse recurso. Esse uso em execução difere de retreinamento.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "140"
+        }
+      },
+      {
+        "id": "RF-2.8-R03",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r1-2-1",
+        "concept": "Conceito: OOV",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Em um reconhecedor de léxico fechado, OOV indica termo fora do vocabulário considerado pelo sistema. A caracterização depende da unidade e da arquitetura usadas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "141"
+        }
+      },
+      {
+        "id": "RF-2.8-R17",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r3-1",
+        "concept": "Risco do reforço",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Reforço excessivo pode favorecer um termo não pronunciado. Avaliar o efeito exige testar tanto ocorrências desejadas quanto trechos em que o termo não aparece.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "142"
+        }
+      },
+      {
+        "id": "RF-2.8-R08",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r2-1-1",
+        "concept": "Lista lexical",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "O pós-processamento lexical opera sobre uma hipótese já produzida. Uma troca textual posterior não demonstra que o decodificador tenha reconhecido originalmente a forma corrigida.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "143"
+        }
+      },
+      {
+        "id": "RF-2.8-R14",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r2-3-1",
+        "concept": "Fusão superficial",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Na fusão superficial, uma pontuação externa de linguagem é combinada com a do ASR durante a busca. O peso controla sua contribuição na fórmula de combinação adotada.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "144"
+        }
+      },
+      {
+        "id": "RF-2.8-R05",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r1-2-2",
+        "concept": "Subpalavras",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Unidades menores podem compor nomes que não estavam armazenados como palavras inteiras. Essa possibilidade amplia a cobertura, mas não garante a seleção correta da sequência.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "145"
+        }
+      },
+      {
+        "id": "RF-2.8-R02",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r1-1",
+        "concept": "Três sentidos",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Vocabulário pode designar unidades de saída do reconhecedor, termos de uma área ou descritores usados na recuperação documental. Identificar a função evita tratar estruturas diferentes como equivalentes.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "146"
+        }
+      },
+      {
+        "id": "RF-2.8-R19",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r3-2",
+        "concept": "Ciclo do glossário",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "A manutenção do glossário combina coleta em fontes do domínio, confirmação e avaliação posterior. WER global e erros em entidades respondem a perguntas complementares sobre a qualidade.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "147"
+        }
+      },
+      {
+        "id": "RF-2.8-R12",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r2-2",
+        "concept": "Adaptação e ajuste fino",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Adaptar um modelo de linguagem pode usar textos do domínio. O ajuste fino supervisionado de reconhecimento de fala usa exemplos que relacionam áudio e transcrição para o objetivo de reconhecimento.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "148"
+        }
+      },
+      {
+        "id": "RF-2.8-R01",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r1-1",
+        "concept": "Três sentidos",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Vocabulário pode designar unidades de saída do reconhecedor, termos de uma área ou descritores usados na recuperação documental. Identificar a função evita tratar estruturas diferentes como equivalentes.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "149"
+        }
+      },
+      {
+        "id": "RF-2.8-R07",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r2-1-1",
+        "concept": "Lista lexical",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "O pós-processamento lexical opera sobre uma hipótese já produzida. Uma troca textual posterior não demonstra que o decodificador tenha reconhecido originalmente a forma corrigida.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "150"
+        }
+      },
+      {
+        "id": "RF-2.8-R04",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r1-2-1",
+        "concept": "Conceito: OOV",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Em um reconhecedor de léxico fechado, OOV indica termo fora do vocabulário considerado pelo sistema. A caracterização depende da unidade e da arquitetura usadas.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "151"
+        }
+      },
+      {
+        "id": "RF-2.8-R15",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r2-3-2",
+        "concept": "Reordenação",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "A reordenação compara hipóteses já produzidas e muda sua classificação. Uma reordenação restrita a um conjunto fixo só pode selecionar entre seus candidatos.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "152"
+        }
+      },
+      {
+        "id": "RF-2.8-R18",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r3-1",
+        "concept": "Risco do reforço",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Reforço excessivo pode favorecer um termo não pronunciado. Avaliar o efeito exige testar tanto ocorrências desejadas quanto trechos em que o termo não aparece.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "153"
+        }
+      },
+      {
+        "id": "RF-2.8-R09",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r2-1-2",
+        "concept": "Prompt ou lista com reforço",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Listas de frases ou pistas contextuais podem favorecer termos plausíveis durante o reconhecimento, quando o sistema oferece esse recurso. Esse uso em execução difere de retreinamento.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "154"
+        }
+      },
+      {
+        "id": "RF-2.8-R13",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r2-3-1",
+        "concept": "Fusão superficial",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Na fusão superficial, uma pontuação externa de linguagem é combinada com a do ASR durante a busca. O peso controla sua contribuição na fórmula de combinação adotada.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "155"
+        }
+      },
+      {
+        "id": "RF-2.8-R06",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r1-2-2",
+        "concept": "Subpalavras",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Unidades menores podem compor nomes que não estavam armazenados como palavras inteiras. Essa possibilidade amplia a cobertura, mas não garante a seleção correta da sequência.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "156"
+        }
+      },
+      {
+        "id": "RF-2.8-R16",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r2-3-2",
+        "concept": "Reordenação",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "A reordenação compara hipóteses já produzidas e muda sua classificação. Uma reordenação restrita a um conjunto fixo só pode selecionar entre seus candidatos.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "157"
+        }
+      },
+      {
+        "id": "RF-2.8-R11",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r2-2",
+        "concept": "Adaptação e ajuste fino",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "Adaptar um modelo de linguagem pode usar textos do domínio. O ajuste fino supervisionado de reconhecimento de fala usa exemplos que relacionam áudio e transcrição para o objetivo de reconhecimento.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "158"
+        }
+      },
+      {
+        "id": "RF-2.8-R20",
+        "topicId": "rf-2-8",
+        "mapNodeId": "rf-2-8-r3-2",
+        "concept": "Ciclo do glossário",
+        "reference": "Legislativo Facilitado, Etapa 17, pp. 2–8 do PDF · Estratégia Concursos, aula 2 – Degravação e Pós-processamento de Transcrições, pp. 31–34 do PDF",
+        "excerpt": "A manutenção do glossário combina coleta em fontes do domínio, confirmação e avaliação posterior. WER global e erros em entidades respondem a perguntas complementares sobre a qualidade.",
+        "originalEditorialStatus": "aguardando-revisao-humana",
+        "status": "candidate",
+        "source": {
+          "sourceId": "src/data/rf-questoes-revisao-2026-11-10.json",
+          "version": "sha256:308b47c7e2a64c69577b359623807a4ba289f1b59183a100d41266a1a0f46d06",
+          "locator": "159"
+        }
+      }
+    ],
+    "excluded": [],
+    "approvedEdges": []
+  },
+  "approvedEdges": [],
+  "approvedConcepts": []
+}

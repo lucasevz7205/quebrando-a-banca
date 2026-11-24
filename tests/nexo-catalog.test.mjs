@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import {extractMapCandidates,extractEditorialActivities,extractQuestionCandidates} from '../src/lib/nexo/catalog.js';
+const m={sourceId:'fixture',version:'v1',mapId:'map1',map:{ramos:[{id:'a',t:'Exact label',n:'note',f:[{id:'b',t:'Child'}]}],ligacoes:[['a','b','original label']]}};
+test('preserves original labels and no inferred semantic edges',()=>{const r=extractMapCandidates(m);assert.equal(r.concepts[0].label,'Exact label');assert.equal(r.structuralLinks[0].kind,'tree-placement');assert.equal(r.structuralLinks[1].label,'original label');assert.deepEqual(r.approvedEdges,[]);});
+test('missing or duplicate IDs rejected instead of fabricated',()=>{const r=extractMapCandidates({...m,map:{ramos:[{id:'a',t:'One'},{id:'a',t:'Two'},{t:'No id'}]}});assert.equal(r.concepts.length,0);assert.equal(r.unresolved.length,3);});
+test('unresolved crosslinks do not become edges',()=>{const r=extractMapCandidates({...m,map:{...m.map,ligacoes:[['a','unknown','relation']]}});assert.equal(r.structuralLinks.length,1);assert.equal(r.unresolved.length,1);});
+test('map identity prevents cross-topic ID collision',()=>{assert.notEqual(extractMapCandidates(m).concepts[0].id,extractMapCandidates({...m,mapId:'other'}).concepts[0].id);});
+test('extraction leaves originals untouched',()=>{const before=JSON.stringify(m);extractMapCandidates(m);assert.equal(JSON.stringify(m),before);});
+test('real repository inventory preserves original records and hashes',()=>{const root=new URL('../',import.meta.url);const read=p=>{const b=fs.readFileSync(new URL(p,root));return {sourceId:p,version:'sha256:'+createHash('sha256').update(b).digest('hex'),rows:JSON.parse(b)};};const a=read('docs/learning-pilot-catalog.json'),q=read('src/data/rf-questoes-revisao-2026-11-10.json');const stored=JSON.parse(fs.readFileSync(new URL('docs/nexo/source-inventory.json',root)));assert.deepEqual(stored.editorial,extractEditorialActivities(a));assert.deepEqual(stored.questions,extractQuestionCandidates(q));assert.equal(stored.approvedEdges.length,0);assert.equal(stored.approvedConcepts.length,0);for(const c of stored.editorial.candidates){assert.equal(c.explanation,a.rows[Number(c.source.locator)].explanation);assert.equal(c.status,'candidate');}for(const c of stored.questions.candidates){assert.equal(c.excerpt,q.rows[Number(c.source.locator)].textoFonte);assert.equal(c.status,'candidate');}});
+test('reserved or unreviewed editorial activity excluded',()=>{const r=extractEditorialActivities({sourceId:'s',version:'v',rows:[{id:'x',reviewed:false,reserved:true}]});assert.equal(r.candidates.length,0);});
+test('question missing exact map ID or evidence excluded',()=>{const r=extractQuestionCandidates({sourceId:'s',version:'v',rows:[{id:'x',ref:'ref'}]});assert.equal(r.candidates.length,0);});
+test('duplicates fail closed',()=>assert.throws(()=>extractQuestionCandidates({sourceId:'s',version:'v',rows:[{id:'x'},{id:'x'}]})));
