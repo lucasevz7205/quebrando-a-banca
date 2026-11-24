@@ -1,5 +1,8 @@
 // Regenerates a deterministic, non-approved inventory from checked-in sources.
 import fs from 'node:fs';
+import {URL} from 'node:url';
+import process from 'node:process';
+import console from 'node:console';
 import {createHash} from 'node:crypto';
 import {extractEditorialActivities,extractQuestionCandidates} from '../../src/lib/nexo/catalog.js';
 const root=new URL('../../',import.meta.url);

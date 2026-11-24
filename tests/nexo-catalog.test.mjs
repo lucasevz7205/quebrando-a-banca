@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {URL} from 'node:url';
 import {createHash} from 'node:crypto';
 import {extractMapCandidates,extractEditorialActivities,extractQuestionCandidates} from '../src/lib/nexo/catalog.js';
 const m={sourceId:'fixture',version:'v1',mapId:'map1',map:{ramos:[{id:'a',t:'Exact label',n:'note',f:[{id:'b',t:'Child'}]}],ligacoes:[['a','b','original label']]}};
